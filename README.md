@@ -1,6 +1,6 @@
 # VSISA – Virtual Simulator identification Signal Audio
 
-Identificateur de modes radio : **42 signaux simulés** pour apprendre à reconnaître ce qu'on entend et ce qu'on voit sur un récepteur ou un SDR.
+Identificateur de modes radio : **42 signaux simulés + 11 sons de l'espace en bonus** pour apprendre à reconnaître ce qu'on entend et ce qu'on voit sur un récepteur ou un SDR.
 
 **Ouvrir la page : https://ic3fr.github.io/VSISA/** · 13 langues : menu en haut de la page, ou lien direct avec `#en`, `#es`, `#de`… à la fin de l'adresse.
 
@@ -21,6 +21,7 @@ Identificateur de modes radio : **42 signaux simulés** pour apprendre à reconn
 - **Modes HF et curiosités** : WSPR, QRSS, texte dans le waterfall, VARA / Pactor / ARDOP, sondeur ionosphérique, radar transhorizon, parasites d'alimentation
 - **Diffusion et temps** : FM stéréo et RDS, DCF77
 - **Large bande** : OFDM, DSSS
+- **Bonus : sons de l'espace** : raie de l'hydrogène (1420 MHz), sursauts radio du Soleil, Jupiter (sursauts L et S), pulsar, échos de météores (GRAVES), sifflements VLF, chœur de l'aube, Spoutnik 1, effet Doppler d'un satellite, NOAA APT, écho de la Lune (EME)
 
 Les signaux radio (AM, FM, AIS, LoRa…) sont montrés comme sur l'écran d'un SDR, autour d'une fréquence intermédiaire simulée ; certains sont à échelle réduite ou accélérée (c'est indiqué en haut de l'écran).
 

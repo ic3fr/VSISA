@@ -41,7 +41,8 @@
 "Radiosondes, capteurs et objets connectés",
 "Modes HF et curiosités",
 "Diffusion et temps",
-"Large bande"
+"Large bande",
+"Bonus : sons de l'espace"
 ],
 "modes": {
 "406": {
@@ -468,6 +469,87 @@
 "t": "Étalement de spectre (DSSS) : GPS, Wi-Fi 802.11b",
 "h": "Les données sont mélangées à un code très rapide : l'énergie s'étale sur une grande largeur.",
 "l": "Une bosse large, à peine au-dessus du bruit ; le GPS est même sous le bruit et ne se voit pas sans traitement (fiches 22 et 23)."
+},
+"hline": {
+"nm": "Raie de l'hydrogène",
+"sh": "1420 MHz",
+"t": "Raie de l'hydrogène à 21 cm (1420,405 MHz)",
+"h": "L'hydrogène froid de la Voie lactée émet un souffle très faible sur 1420,405 MHz. Le mouvement des bras de la galaxie le décale par effet Doppler : on voit plusieurs petites bosses.",
+"l": "Presque rien dans le waterfall d'une seconde à l'autre : il faut moyenner longtemps pour voir les bosses sortir du bruit. Ici, regarde le spectre moyen à l'arrêt. Une parabole ou un cornet, un préampli et une clé SDR suffisent.",
+"n": "signal très exagéré"
+},
+"sun": {
+"nm": "Soleil",
+"sh": "sursauts",
+"t": "Soleil : sursauts radio de type III",
+"h": "Des électrons lancés par une éruption traversent la couronne du Soleil et la font émettre de plus en plus bas en fréquence à mesure qu'ils s'éloignent.",
+"l": "Des traits qui tombent en diagonale du haut vers le bas du spectre en moins d'une seconde, sur un fond de bruit solaire ; un « chhhh » qui enfle. De 10 à 400 MHz environ, aussi en ondes courtes vers 20 MHz."
+},
+"jupiter": {
+"nm": "Jupiter",
+"sh": "20 MHz",
+"t": "Jupiter : sursauts décamétriques (L et S)",
+"h": "Le champ magnétique de Jupiter et sa lune Io produisent des émissions puissantes entre 15 et 40 MHz : des sursauts L lents et des sursauts S très courts qui glissent vite vers le bas.",
+"l": "D'abord des vagues de souffle (L, comme le ressac), puis des salves de petits « pops » (S) en diagonales serrées. Vers 20,1 MHz la nuit, avec un simple dipôle, quand Io est bien placée."
+},
+"pulsar": {
+"nm": "Pulsar",
+"sh": "B0329+54",
+"t": "Pulsar PSR B0329+54",
+"h": "Une étoile à neutrons qui tourne sur elle-même balaie la Terre d'un faisceau radio, ici toutes les 0,714 s. Le gaz interstellaire retarde les basses fréquences : chaque impulsion arrive d'abord en haut du spectre.",
+"l": "Un « tic » régulier ; dans le waterfall, chaque impulsion est une courbe qui descend (la dispersion). Le vrai signal est sous le bruit : il faut une grande antenne et additionner les impulsions sur leur période.",
+"n": "signal très exagéré"
+},
+"meteor": {
+"nm": "Météores",
+"sh": "GRAVES",
+"t": "Échos de météores sur le radar GRAVES (143,050 MHz)",
+"h": "Le radar français GRAVES émet sans arrêt sur 143,050 MHz. Quand une étoile filante ionise l'air, sa traînée renvoie un peu de ce signal vers ton récepteur, pendant une fraction de seconde à quelques secondes.",
+"l": "En USB sur 143,049 MHz : des « ping » brefs vers 1000 Hz, parfois un écho qui glisse (la tête du météore, effet Doppler) ou qui dure. Bien plus nombreux pendant les essaims (Perséides, Géminides) (fiche 1)."
+},
+"whistler": {
+"nm": "Sifflements",
+"sh": "VLF",
+"t": "Sifflements VLF (whistlers)",
+"h": "Un éclair crée un claquement radio ; une partie suit les lignes du champ magnétique terrestre jusqu'à l'autre hémisphère et revient, les aigus en premier.",
+"l": "Un « tiouuu » qui descend de l'aigu au grave en une ou deux secondes, juste après un claquement ; des craquements (sferics) partout. Sous 10 kHz, avec un récepteur VLF loin des lignes électriques."
+},
+"chorus": {
+"nm": "Chœur de l'aube",
+"sh": "VLF",
+"t": "Chœur de l'aube (dawn chorus)",
+"h": "Pendant un orage magnétique, des électrons piégés dans la magnétosphère émettent de petites notes montantes, surtout au lever du jour.",
+"l": "Des gazouillis montants qui se chevauchent, comme des oiseaux, de 1 à 4 kHz environ. Même matériel que pour les sifflements."
+},
+"sputnik": {
+"nm": "Spoutnik 1",
+"sh": "1957",
+"t": "Spoutnik 1 (1957)",
+"h": "Le premier satellite artificiel émettait des bips d'environ 0,3 s sur 20,005 et 40,002 MHz, en alternance, pendant trois semaines.",
+"l": "Un trait coupé régulièrement : « bip… bip… », le son écouté dans le monde entier en octobre 1957 (reconstitution)."
+},
+"doppler": {
+"nm": "Effet Doppler",
+"sh": "satellite",
+"t": "Balise de satellite et effet Doppler",
+"h": "Un satellite en orbite basse s'approche puis s'éloigne : la fréquence reçue baisse pendant le passage, d'environ ±3 kHz à 145 MHz et ±10 kHz à 435 MHz.",
+"l": "Un trait qui descend en forme de S : lentement au début, vite quand le satellite passe au plus près, puis de nouveau lentement (fiche 34).",
+"n": "passage de 10 min ramené à 12 s"
+},
+"apt": {
+"nm": "NOAA APT",
+"sh": "137 MHz",
+"t": "Satellites NOAA : images APT (historique)",
+"h": "Une sous-porteuse de 2400 Hz modulée en amplitude par l'image, deux lignes par seconde, avec un top de synchro au début de chaque ligne. Arrêté en 2025 ; les Meteor-M émettent aujourd'hui en LRPT.",
+"l": "Un trait à 2400 Hz avec des bandes latérales qui changent avec l'image, et le fameux « tic-tac » deux fois par seconde (fiche 34)."
+},
+"eme": {
+"nm": "Écho de la Lune",
+"sh": "EME",
+"t": "Écho de la Lune (EME)",
+"h": "Un signal envoyé vers la Lune revient environ 2,5 s plus tard, énormément affaibli, un peu élargi et décalé par le Doppler.",
+"l": "On entend son propre « bip », puis son écho faible et un peu flou 2,5 s après. Les radioamateurs le font en CW ou en JT65, sur 144 MHz et plus (fiche 1).",
+"n": "écho très exagéré"
 }
 }
 }
