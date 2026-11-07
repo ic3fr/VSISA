@@ -2,7 +2,7 @@
 
 Identificateur de modes radio : **42 signaux simulés** pour apprendre à reconnaître ce qu'on entend et ce qu'on voit sur un récepteur ou un SDR.
 
-**Ouvrir la page : https://ic3fr.github.io/VSISA/**
+**Ouvrir la page : https://ic3fr.github.io/VSISA/** · 13 langues : menu en haut de la page, ou lien direct avec `#en`, `#es`, `#de`… à la fin de l'adresse.
 
 ## Ce qu'elle fait
 - Pour chaque signal : le **son**, le **spectre** et le **waterfall** en direct, l'**empreinte** complète du signal et une fiche (principe, aspect à l'écran, fiche du livre).
@@ -23,6 +23,28 @@ Identificateur de modes radio : **42 signaux simulés** pour apprendre à reconn
 - **Large bande** : OFDM, DSSS
 
 Les signaux radio (AM, FM, AIS, LoRa…) sont montrés comme sur l'écran d'un SDR, autour d'une fréquence intermédiaire simulée ; certains sont à échelle réduite ou accélérée (c'est indiqué en haut de l'écran).
+
+## 13 langues / 13 languages
+| | |
+|---|---|
+| 🇫🇷 Français | Identificateur de modes radio : 42 signaux simulés, son, spectre, waterfall, quiz. `#fr` |
+| 🇬🇧 English | Radio mode identifier: 42 simulated signals, sound, spectrum, waterfall, quiz. `#en` |
+| 🇪🇸 Español | Identificador de modos de radio: 42 señales simuladas, sonido, espectro, cascada, test. `#es` |
+| 🇩🇪 Deutsch | Funkbetriebsarten-Erkenner: 42 simulierte Signale, Ton, Spektrum, Wasserfall, Quiz. `#de` |
+| 🇳🇱 Nederlands | Radiomodus-herkenner: 42 gesimuleerde signalen, geluid, spectrum, waterval, quiz. `#nl` |
+| 🇨🇿 Čeština | Rozpoznávač rádiových druhů provozu: 42 simulovaných signálů, zvuk, spektrum, vodopád, kvíz. `#cs` |
+| 🇵🇹 Português | Identificador de modos de rádio: 42 sinais simulados, som, espetro, cascata, quiz. `#pt` |
+| 🇮🇹 Italiano | Identificatore di modi radio: 42 segnali simulati, suono, spettro, cascata, quiz. `#it` |
+| 🇵🇱 Polski | Rozpoznawacz emisji radiowych: 42 symulowane sygnały, dźwięk, widmo, wodospad, quiz. `#pl` |
+| 🇷🇺 Русский | Определитель видов радиосигналов: 42 смоделированных сигнала, звук, спектр, водопад, викторина. `#ru` |
+| 🇺🇦 Українська | Визначник видів радіосигналів: 42 змодельовані сигнали, звук, спектр, водоспад, вікторина. `#uk` |
+| 🇨🇳 中文 | 无线电模式识别器：42 种模拟信号，声音、频谱、瀑布图、测验。`#zh` |
+| 🇯🇵 日本語 | 無線モード識別器：42 種類のシミュレーション信号、音、スペクトラム、ウォーターフォール、クイズ。`#ja` |
+
+La langue est choisie automatiquement selon le navigateur ; le menu permet d'en changer.
+
+## Modifier la page
+`index.html` est construite par `python3 src/build.py` à partir de `src/template.html` et des fichiers de langue `src/i18n/<langue>.json`. Corrige une traduction dans le fichier de sa langue, puis relance la commande.
 
 ## Le livre
 Cette page accompagne la fiche « Visualiser un signal » du livre **OpenBookRadio** (guide d'écoute radio, gratuit). Les numéros de fiche affichés renvoient au livre.
