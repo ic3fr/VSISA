@@ -31,7 +31,9 @@
 "f1": "Señales simuladas en la página (12 000 muestras por segundo), según las señales de la ficha 5 bis del libro OpenBookRadio, más Olivia, FT4 y Feld Hell (ficha 26). Para las señales de radio (AM, FM, AIS, LoRa…) se ve la frecuencia intermedia simulada, como en la pantalla de un SDR; algunas están a escala reducida o acelerada, y se indica.",
 "f2": "El tiempo baja en la cascada y en la huella. Licencia CC BY-NC-SA 4.0, gratis, prohibida la venta.",
 "night": "Modo noche",
-"day": "Modo día"
+"day": "Modo día",
+"visits": "visitas",
+"plays": "escuchas"
 },
 "groups": [
 "Voz analógica",

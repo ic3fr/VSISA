@@ -2,6 +2,8 @@
 
 **English** · [Français](README.fr.md)
 
+[![Visits](https://abacus.jasoncameron.dev/get/ic3fr-vsisa/visits/shield?text=visits)](https://ic3fr.github.io/VSISA/) [![Plays](https://abacus.jasoncameron.dev/get/ic3fr-vsisa/plays/shield?text=plays)](https://ic3fr.github.io/VSISA/)
+
 Radio mode identifier: **78 simulated signals** (including 18 sounds from space and 7 shortwave curiosities as bonuses), with a red **night mode**, to learn to recognise what you hear and see on a receiver or an SDR.
 
 **Open the page: https://ic3fr.github.io/VSISA/** · 13 languages: menu at the top of the page, or a direct link ending in `#en`, `#fr`, `#de`…
@@ -47,6 +49,9 @@ Radio signals (AM, FM, AIS, LoRa…) are shown as on an SDR screen, around a sim
 | 🇯🇵 日本語 | 無線モード識別器：78 種類のシミュレーション信号、音、スペクトラム、ウォーターフォール、クイズ。`#ja` |
 
 The language is picked automatically from your browser; the menu lets you change it.
+
+## Counter
+The online page counts visits (once per browser session) and plays with [Abacus](https://v2.jasoncameron.dev/abacus), a free counting service with no cookies and no personal data stored. The totals are shown at the bottom of the page and in the badges above. The downloaded copy (offline) counts nothing.
 
 ## Editing the page
 `index.html` is built by `python3 src/build.py` from `src/template.html` and the language files `src/i18n/<language>.json`. Fix a translation in its language file, then run the command again.

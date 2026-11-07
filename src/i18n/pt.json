@@ -31,7 +31,9 @@
 "f1": "Sinais simulados na página (12 000 amostras por segundo), segundo os sinais da ficha 5 bis do livro OpenBookRadio, mais Olivia, FT4 e Feld Hell (ficha 26). Nos sinais de rádio (AM, FM, AIS, LoRa…) vê-se a frequência intermédia simulada, como no ecrã de um SDR; alguns estão em escala reduzida ou acelerada, como indicado.",
 "f2": "O tempo desce na cascata e na impressão. Licença CC BY-NC-SA 4.0, gratuito, proibida a venda.",
 "night": "Modo noite",
-"day": "Modo dia"
+"day": "Modo dia",
+"visits": "visitas",
+"plays": "audições"
 },
 "groups": [
 "Voz analógica",

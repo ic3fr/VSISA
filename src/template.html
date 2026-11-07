@@ -1,3 +1,4 @@
+<meta charset="utf-8">
 <title>Identificateur de modes radio</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -79,6 +80,7 @@ dd{margin:0;min-width:0}
 .readout{font-variant-numeric:tabular-nums;color:var(--accent)}
 footer{color:var(--muted);font-size:.8rem;border-top:1px solid var(--line);padding-top:12px;display:flex;flex-direction:column;gap:4px}
 footer p{margin:0;max-width:110ch}
+.stats{font:400 .78rem var(--f-mono);color:var(--muted);font-variant-numeric:tabular-nums}
 </style>
 
 <div class="wrap">
@@ -131,6 +133,7 @@ footer p{margin:0;max-width:110ch}
   <footer>
     <p id="tF1"></p>
     <p id="tF2"></p>
+    <p id="tStats" class="stats" hidden></p>
   </footer>
 </div>
 
@@ -142,6 +145,15 @@ const I18N = /*I18N*/{};
 const LANGS=[["fr","Français","fr-FR"],["en","English","en-GB"],["es","Español","es-ES"],["de","Deutsch","de-DE"],["nl","Nederlands","nl-NL"],["cs","Čeština","cs-CZ"],["pt","Português","pt-PT"],["it","Italiano","it-IT"],["pl","Polski","pl-PL"],["ru","Русский","ru-RU"],["uk","Українська","uk-UA"],["zh","中文","zh-CN"],["ja","日本語","ja-JP"]];
 let LG="fr", LOC="fr-FR";
 function t(k){ return (I18N[LG]&&I18N[LG].ui[k])||I18N.fr.ui[k]||k; }
+/* compteur de visites et d'écoutes : seulement sur la page en ligne (github.io), service Abacus sans cookie */
+const CNT_NS="ic3fr-vsisa", CNT_ON=/(^|\.)github\.io$/.test(location.hostname);
+let stV=null, stP=null;
+function showStats(){ const el=document.getElementById("tStats"); if(!el) return; if(stV==null){ el.hidden=true; return; }
+  const f=n=>Number(n).toLocaleString(LOC); el.hidden=false; el.textContent=f(stV)+" "+t("visits")+(stP!=null?" · "+f(stP)+" "+t("plays"):""); }
+function cnt(path){ return fetch("https://abacus.jasoncameron.dev/"+path).then(r=>r.ok?r.json():null).then(j=>j&&typeof j.value==="number"?j.value:null).catch(()=>null); }
+if(CNT_ON){ let seen=false; try{ seen=sessionStorage.getItem("vsisa-seen")==="1"; sessionStorage.setItem("vsisa-seen","1"); }catch(e){}
+  cnt((seen?"get/":"hit/")+CNT_NS+"/visits").then(v=>{ stV=v; showStats(); });
+  cnt("get/"+CNT_NS+"/plays").then(v=>{ if(v!=null){ stP=v; showStats(); } }); }
 
 /* ================= outils de synthèse ================= */
 const rnd=Math.random;
@@ -683,6 +695,7 @@ function play(){
   src=ctx.createBufferSource(); src.buffer=buf; src.loop=document.getElementById("loop").checked;
   gain=ctx.createGain(); gain.gain.value=document.getElementById("vol").value/100*0.8; src.connect(gain).connect(ctx.destination);
   const me=src; src.onended=()=>{ if(playing&&src===me&&!me.loop){ playing=false; fctx.putImageData(fpImage,0,0); restSpectrum(); } };
+  if(CNT_ON) cnt("hit/"+CNT_NS+"/plays").then(v=>{ if(v!=null){ stP=v; showStats(); } });
   t0=ctx.currentTime+0.05; src.start(t0); lastRow=0; playing=true; peak=null;
   const img=wctx.createImageData(W,WH); for(let y=0;y<WH;y++) paintRow(img,y,new Float32Array(W)); wctx.putImageData(img,0,0);
   requestAnimationFrame(tick);
@@ -724,7 +737,7 @@ function setLang(l){ if(!I18N[l]) l="fr"; LG=l; LOC=(LANGS.find(x=>x[0]===l)||LA
   const T={tTitle:"title",tLang:"lang",mystery:"mystery",play:"play",stop:"stop",tNoise:"noise",tVol:"volume",tLoop:"loop",tSpecwf:"specwf",tCursor:"cursor",tFoot:"footprint",tF1:"f1",tF2:"f2"};
   for(const id in T) document.getElementById(id).textContent=t(T[id]);
   document.getElementById("night").textContent=t(NIGHT?"day":"night");
-  document.title=t("title")+" · VSISA";
+  document.title=t("title")+" · VSISA"; showStats();
   try{ localStorage.setItem("idmr-lang",l); }catch(e){}
   if(location.hash.slice(1)!==l){ try{ history.replaceState(null,"","#"+l); }catch(e){} }
   buildAside();

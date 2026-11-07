@@ -2,6 +2,8 @@
 
 [English](README.md) · **Français**
 
+[![Visits](https://abacus.jasoncameron.dev/get/ic3fr-vsisa/visits/shield?text=visits)](https://ic3fr.github.io/VSISA/) [![Plays](https://abacus.jasoncameron.dev/get/ic3fr-vsisa/plays/shield?text=plays)](https://ic3fr.github.io/VSISA/)
+
 Identificateur de modes radio : **78 signaux simulés** (dont 18 sons de l'espace et 7 curiosités des ondes courtes en bonus), avec un **mode nuit** en nuances de rouge pour apprendre à reconnaître ce qu'on entend et ce qu'on voit sur un récepteur ou un SDR.
 
 **Ouvrir la page : https://ic3fr.github.io/VSISA/** · 13 langues : menu en haut de la page, ou lien direct avec `#en`, `#es`, `#de`… à la fin de l'adresse.
@@ -46,6 +48,9 @@ Les signaux radio (AM, FM, AIS, LoRa…) sont montrés comme sur l'écran d'un S
 | 🇯🇵 日本語 | 無線モード識別器：78 種類のシミュレーション信号、音、スペクトラム、ウォーターフォール、クイズ。`#ja` |
 
 La langue est choisie automatiquement selon le navigateur ; le menu permet d'en changer. Le bouton **Mode nuit** passe toute la page en nuances de rouge pour garder la vision de nuit (le choix est retenu).
+
+## Compteur
+La page en ligne compte les visites (une fois par session de navigateur) et les écoutes avec [Abacus](https://v2.jasoncameron.dev/abacus), un service de comptage gratuit, sans cookie et sans donnée personnelle conservée. Les totaux s'affichent en bas de la page et dans les badges ci-dessus. La copie téléchargée (hors ligne) ne compte rien.
 
 ## Modifier la page
 `index.html` est construite par `python3 src/build.py` à partir de `src/template.html` et des fichiers de langue `src/i18n/<langue>.json`. Corrige une traduction dans le fichier de sa langue, puis relance la commande.

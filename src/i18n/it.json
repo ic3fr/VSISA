@@ -31,7 +31,9 @@
 "f1": "Segnali simulati nella pagina (12 000 campioni al secondo), secondo i segnali della scheda 5 bis del libro OpenBookRadio, più Olivia, FT4 e Feld Hell (scheda 26). Per i segnali radio (AM, FM, AIS, LoRa…) si vede la frequenza intermedia simulata, come sullo schermo di un SDR; alcuni sono in scala ridotta o accelerata, come indicato.",
 "f2": "Il tempo scende nella cascata e nell'impronta. Licenza CC BY-NC-SA 4.0, gratuito, non vendere.",
 "night": "Modo notte",
-"day": "Modo giorno"
+"day": "Modo giorno",
+"visits": "visite",
+"plays": "ascolti"
 },
 "groups": [
 "Voce analogica",

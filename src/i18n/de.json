@@ -31,7 +31,9 @@
 "f1": "Im Browser simulierte Signale (12 000 Abtastwerte pro Sekunde), nach den Signalen von Blatt 5 bis des Buchs OpenBookRadio, dazu Olivia, FT4 und Feld Hell (Blatt 26). Bei Funksignalen (AM, FM, AIS, LoRa…) sieht man die simulierte Zwischenfrequenz wie auf einem SDR-Bildschirm; manche sind verkleinert oder beschleunigt, das ist angegeben.",
 "f2": "Die Zeit läuft im Wasserfall und im Abdruck nach unten. Lizenz CC BY-NC-SA 4.0, kostenlos, nicht verkaufen.",
 "night": "Nachtmodus",
-"day": "Tagmodus"
+"day": "Tagmodus",
+"visits": "Besuche",
+"plays": "Wiedergaben"
 },
 "groups": [
 "Analoge Sprache",

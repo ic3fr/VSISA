@@ -31,7 +31,9 @@
 "f1": "Signals simulated in the page (12,000 samples per second), based on the signals of sheet 5 bis of the OpenBookRadio book, plus Olivia, FT4 and Feld Hell (sheet 26). For radio signals (AM, FM, AIS, LoRa…), you see the simulated intermediate frequency, as on an SDR screen; some are scaled down or sped up, as stated.",
 "f2": "Time runs downwards in the waterfall and the footprint. CC BY-NC-SA 4.0 license, free, not for sale.",
 "night": "Night mode",
-"day": "Day mode"
+"day": "Day mode",
+"visits": "visits",
+"plays": "plays"
 },
 "groups": [
 "Analogue voice",

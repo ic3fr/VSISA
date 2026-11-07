@@ -31,7 +31,9 @@
 "f1": "Signály simulované přímo ve stránce (12 000 vzorků za sekundu) podle signálů listu 5 bis knihy OpenBookRadio, navíc Olivia, FT4 a Feld Hell (list 26). U rádiových signálů (AM, FM, AIS, LoRa…) je vidět simulovaný mezifrekvenční kmitočet jako na obrazovce SDR; některé jsou zmenšené nebo zrychlené, je to uvedeno.",
 "f2": "Čas ve vodopádu i v otisku běží dolů. Licence CC BY-NC-SA 4.0, zdarma, neprodávat.",
 "night": "Noční režim",
-"day": "Denní režim"
+"day": "Denní režim",
+"visits": "návštěv",
+"plays": "přehrání"
 },
 "groups": [
 "Analogový hlas",

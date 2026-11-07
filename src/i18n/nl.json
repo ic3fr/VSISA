@@ -31,7 +31,9 @@
 "f1": "Signalen gesimuleerd in de pagina (12 000 samples per seconde), naar de signalen van blad 5 bis van het boek OpenBookRadio, plus Olivia, FT4 en Feld Hell (blad 26). Bij radiosignalen (AM, FM, AIS, LoRa…) zie je de gesimuleerde middenfrequentie, zoals op een SDR-scherm; sommige zijn verkleind of versneld, dat staat erbij.",
 "f2": "De tijd loopt naar beneden in de waterval en de afdruk. Licentie CC BY-NC-SA 4.0, gratis, niet verkopen.",
 "night": "Nachtmodus",
-"day": "Dagmodus"
+"day": "Dagmodus",
+"visits": "bezoeken",
+"plays": "afspelingen"
 },
 "groups": [
 "Analoge spraak",

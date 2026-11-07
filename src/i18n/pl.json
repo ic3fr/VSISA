@@ -31,7 +31,9 @@
 "f1": "Sygnały symulowane na stronie (12 000 próbek na sekundę), według sygnałów karty 5 bis książki OpenBookRadio, plus Olivia, FT4 i Feld Hell (karta 26). W przypadku sygnałów radiowych (AM, FM, AIS, LoRa…) widać symulowaną częstotliwość pośrednią, jak na ekranie SDR; niektóre są w zmniejszonej skali lub przyspieszone, co jest zaznaczone.",
 "f2": "Czas w wodospadzie i odcisku płynie w dół. Licencja CC BY-NC-SA 4.0, za darmo, nie na sprzedaż.",
 "night": "Tryb nocny",
-"day": "Tryb dzienny"
+"day": "Tryb dzienny",
+"visits": "odwiedzin",
+"plays": "odtworzeń"
 },
 "groups": [
 "Głos analogowy",

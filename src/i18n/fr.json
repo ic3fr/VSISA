@@ -31,7 +31,9 @@
 "f1": "Signaux simulés dans la page (12 000 échantillons par seconde), d'après les signaux de la fiche 5 bis du livre OpenBookRadio, plus Olivia, FT4 et Feld Hell (fiche 26). Pour les signaux radio (AM, FM, AIS, LoRa…), on voit la fréquence intermédiaire simulée, comme sur l'écran d'un SDR ; certains sont à échelle réduite ou accélérée, c'est indiqué.",
 "f2": "Le temps descend dans le waterfall et dans l'empreinte. Licence CC BY-NC-SA 4.0, gratuit, ne pas vendre.",
 "night": "Mode nuit",
-"day": "Mode jour"
+"day": "Mode jour",
+"visits": "visites",
+"plays": "écoutes"
 },
 "groups": [
 "Voix analogique",
