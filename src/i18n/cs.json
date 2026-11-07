@@ -29,7 +29,9 @@
 "lang": "Jazyk",
 "signals": "Signály",
 "f1": "Signály simulované přímo ve stránce (12 000 vzorků za sekundu) podle signálů listu 5 bis knihy OpenBookRadio, navíc Olivia, FT4 a Feld Hell (list 26). U rádiových signálů (AM, FM, AIS, LoRa…) je vidět simulovaný mezifrekvenční kmitočet jako na obrazovce SDR; některé jsou zmenšené nebo zrychlené, je to uvedeno.",
-"f2": "Čas ve vodopádu i v otisku běží dolů. Licence CC BY-NC-SA 4.0, zdarma, neprodávat."
+"f2": "Čas ve vodopádu i v otisku běží dolů. Licence CC BY-NC-SA 4.0, zdarma, neprodávat.",
+"night": "Noční režim",
+"day": "Denní režim"
 },
 "groups": [
 "Analogový hlas",
@@ -42,7 +44,8 @@
 "KV druhy provozu a zajímavosti",
 "Vysílání a čas",
 "Široké pásmo",
-"Bonus: zvuky z vesmíru"
+"Bonus: zvuky z vesmíru",
+"Bonus: kuriozity krátkých vln"
 ],
 "modes": {
 "am": {
@@ -483,6 +486,192 @@
 "h": "Signál vyslaný k Měsíci se vrátí asi za 2,5 s, nesmírně zeslabený, trochu rozšířený a posunutý Dopplerem.",
 "l": "Slyšíš své vlastní „píp“ a za 2,5 s jeho slabou, trochu rozmazanou ozvěnu. Radioamatéři to dělají v CW nebo JT65, od 144 MHz výš (list 1).",
 "n": "ozvěna silně zveličena"
+},
+"msk144": {
+"nm": "MSK144",
+"sh": "meteory",
+"t": "MSK144: digitální provoz přes meteory",
+"h": "Dva tóny, 1000 a 2000 Hz, rychlostí 2000 Bd, v rámcích po 72 ms opakovaných bez přestávky: každá stopa meteoru propustí několik z nich.",
+"l": "Dávky 0,1 až 1 s, široké asi 2,4 kHz, které se objeví a zhasnou s „pípnutím“ meteoru. Na 50 a 144 MHz, s WSJT-X."
+},
+"jt65": {
+"nm": "JT65",
+"sh": "65 tónů",
+"t": "JT65: 65 tónů, velmi pomalé",
+"h": "Jeden synchronizační tón a 64 datových tónů 2,7 Hz od sebe (JT65A), 0,37 s na symbol, 47 s vysílání za minutu.",
+"l": "Žebřík drobných čárek na asi 180 Hz se synchronizační čárou, která se vrací stále na stejné místo. Používá se pro odraz od Měsíce (JT65B a C) a velmi slabé signály.",
+"n": "úryvek 20 s (vysílání trvá 47 s)"
+},
+"tetra": {
+"nm": "TETRA",
+"sh": "π/4-DQPSK",
+"t": "TETRA: profesionální digitální síť",
+"h": "Fázová modulace π/4-DQPSK s 18 000 symboly za sekundu, čtyři časové sloty, v kanálech 25 kHz.",
+"l": "Plný blok se zaoblenými boky, u základnové stanice stále přítomný; chraplavý šum. Šifrováno: nelze poslouchat (list 38).",
+"n": "zmenšeno"
+},
+"ndb": {
+"nm": "Maják NDB",
+"sh": "190–535 kHz",
+"t": "NDB: nesměrový radiomaják",
+"h": "Pevná nosná na dlouhých vlnách s morseovkovou značkou o dvou či třech písmenech vysílanou tónem (často 1020 Hz).",
+"l": "Pevná čára uprostřed a během značky dvě čárky po stranách. Zhruba 190 až 535 kHz, v SSB nebo CW (list 10)."
+},
+"vor": {
+"nm": "VOR",
+"sh": "108–118 MHz",
+"t": "VOR: všesměrový radiomaják",
+"h": "V AM: signál 30 Hz závislý na směru, pomocná nosná 9960 Hz kmitočtově modulovaná 30 Hz (reference) a morseovková značka na 1020 Hz.",
+"l": "V demodulovaném zvuku: hluboké bručení 30 Hz, široká vlnitá čára kolem 10 kHz a občas značka (list 15).",
+"n": "demodulovaný zvuk, měřítko ÷ 2"
+},
+"ils": {
+"nm": "ILS",
+"sh": "90 + 150 Hz",
+"t": "ILS: navádění na přistání (localizer)",
+"h": "V AM dva tóny 90 a 150 Hz; jejich poměr říká letadlu, zda je vlevo nebo vpravo od osy. Morseovková značka začíná písmenem I.",
+"l": "V demodulovaném zvuku: dvě velmi hluboké čáry na 90 a 150 Hz a značka na 1020 Hz. Mezi 108,1 a 112 MHz; sestupová rovina je kolem 330 MHz (list 15)."
+},
+"m10": {
+"nm": "Sondy M10 / M20",
+"sh": "Meteomodem",
+"t": "Radiosondy M10 a M20 (Meteomodem)",
+"h": "Jeden rámec za sekundu v rychlé FSK (asi 9600 Bd): širší než RS41. Ve Francii je vypouští Météo-France.",
+"l": "Každou sekundu široká dávka, která během letu pomalu ujíždí; mezi 400 a 406 MHz (list 18)."
+},
+"tpms": {
+"nm": "Pneumatiky (TPMS)",
+"sh": "433 MHz",
+"t": "Snímače tlaku v pneumatikách (TPMS)",
+"h": "Každé kolo občas vyšle dávku FSK o několika milisekundách: tlak, teplota, identifikátor.",
+"l": "Drobné samostatné dávky na 433,92 MHz (nebo 315 MHz), často po dvou, když projede auto. Dekóduje je rtl_433."
+},
+"als162": {
+"nm": "ALS162",
+"sh": "162 kHz",
+"t": "Časový signál ALS162 (Allouis, 162 kHz)",
+"h": "Nosná bývalého dlouhovlnného vysílání France Inter; čas je zakódován drobnými, neslyšitelnými fázovými modulacemi.",
+"l": "Pevná čára, ve Francii velmi silná, na začátku každé sekundy sotva rozšířená; ke čtení času je třeba dekodér (list 10)."
+},
+"wwv": {
+"nm": "WWV",
+"sh": "2,5–20 MHz",
+"t": "Časový signál WWV (Colorado)",
+"h": "V AM: každou sekundu „tik“ 5 ms na 1000 Hz, tón 500 nebo 600 Hz, časový kód na 100 Hz a hlas hlásící UTC.",
+"l": "V demodulovaném zvuku: čára na 500 Hz přerušená každou sekundu, tik na 1000 Hz a úplně dole kód na 100 Hz (list 10)."
+},
+"msf": {
+"nm": "MSF",
+"sh": "60 kHz",
+"t": "Časový signál MSF (Anthorn, 60 kHz)",
+"h": "Nosná se na začátku každé sekundy vypne na 0,1, 0,2 nebo 0,3 s podle bitů a na 0,5 s pro označení minuty.",
+"l": "Pevná čára s úplně černými mezerami každou sekundu, delšími než u DCF77 (list 10)."
+},
+"type2": {
+"nm": "Slunce typ II",
+"sh": "rázová vlna",
+"t": "Slunce: rádiová vzplanutí typu II",
+"h": "Rázová vlna výronu koronální hmoty nutí plazma vyzařovat pomalu stále níž, často ve dvou pásech (základní a dvojnásobný).",
+"l": "Dva rovnoběžné pásy šumu, které několik minut pozvolna klesají. Porovnej se vzplanutími typu III, která jsou mnohem rychlejší.",
+"n": "několik minut zkráceno na 6 s"
+},
+"tweeks": {
+"nm": "Tweeky",
+"sh": "VLF",
+"t": "Tweeky: noční VLF „pípnutí“",
+"h": "V noci se cvaknutí vzdáleného blesku odráží mezi zemí a ionosférou; kmitočty u mezního kmitočtu (kolem 1,7 kHz) dorazí poslední.",
+"l": "Malé „pípnutí“, které klesne a zastaví se kolem 1,7 kHz, někdy s ozvěnou na dvojnásobku; všude praskání. Pod 10 kHz, v noci."
+},
+"hiss": {
+"nm": "VLF šum",
+"sh": "hiss",
+"t": "VLF šum (hiss)",
+"h": "Širokopásmový šum elektronů v plazmasféře, který roste a klesá s magnetickou aktivitou.",
+"l": "Pás šumu od několika set Hz do několika kHz, bez vzoru, pomalu sílí a slábne."
+},
+"aurora": {
+"nm": "Rádiová polární záře",
+"sh": "Au",
+"t": "Šíření přes polární záři (Au)",
+"h": "Polární záře odráží VKV vlny, ale velmi rychle jimi třese: každý signál se rozprostře do několika set Hz.",
+"l": "CW se změní v drsný, jakoby šeptaný šum; tón už neslyšíš. Na 50 a 144 MHz, s anténou k severu při magnetických bouřích."
+},
+"galactic": {
+"nm": "Galaktický šum",
+"sh": "20–40 MHz",
+"t": "Šum Mléčné dráhy",
+"h": "Střed galaxie vyzařuje rádiový šum, který Karl Jansky objevil v roce 1932 kolem 20 MHz. Roste a klesá s otáčením Země.",
+"l": "Šum pozadí, který pomalu roste a zase klesá, každý den asi o 4 minuty dřív. Viditelný s obyčejným dipólem mezi 20 a 40 MHz.",
+"n": "den zkrácen na 12 s"
+},
+"cubesat": {
+"nm": "CubeSat",
+"sh": "9600 Bd",
+"t": "Telemetrie CubeSatu",
+"h": "Malé družice pravidelně vysílají svá měření (baterie, teploty) v FSK nebo GMSK rychlostí 1200 nebo 9600 Bd kolem 435–438 MHz.",
+"l": "Pravidelné dávky, které během přeletu Dopplerovým jevem pokaždé sklouznou o kus níž (list 34).",
+"n": "zmenšeno, přelet zrychlen"
+},
+"issfm": {
+"nm": "ISS v FM",
+"sh": "145,800 MHz",
+"t": "Vesmírná stanice (ISS): hlas v FM",
+"h": "Astronauti mluví se školami a radioamatéry v FM na 145,800 MHz. Stanice letí rychlostí 28 000 km/h: přijímaný kmitočet během přeletu klesne asi o 3,5 kHz.",
+"l": "Pás FM hlasu, který se během desetiminutového přeletu pomalu posouvá zprava doleva (list 34).",
+"n": "přelet 10 min zkrácen na 10 s"
+},
+"buzzer": {
+"nm": "UVB-76 „The Buzzer“",
+"sh": "4625 kHz",
+"t": "UVB-76, „The Buzzer“ (4625 kHz)",
+"h": "Ruská vojenská stanice, která už desítky let vysílá asi sekundové bzučení, zhruba 25krát za minutu, někdy přerušené hlasovou zprávou.",
+"l": "Pevná nosná a při každém bzučení sloupec hustých čar shora dolů. Snadno ji najdeš na 4625 kHz v USB."
+},
+"pip": {
+"nm": "„The Pip“",
+"sh": "3756 / 5448 kHz",
+"t": "„The Pip“: nekonečná pípnutí",
+"h": "Další ruský vojenský krátkovlnný maják, který dnem i nocí opakuje krátká pípnutí, někdy přerušená zprávami.",
+"l": "Pevná čára rozsekaná na velmi husté tečky; v uchu rychlé píp-píp-píp, které nikdy nepřestane.",
+"n": "přibližný rytmus"
+},
+"squeaky": {
+"nm": "„Squeaky Wheel“",
+"sh": "KV",
+"t": "„Squeaky Wheel“: vrzající kolo",
+"h": "Ruský vojenský krátkovlnný maják, pojmenovaný posluchači podle svého opakovaného zvukového vzoru.",
+"l": "Malý vzor dvou zvuků, z nichž jeden stoupá, opakovaný dokola: jako vrzající kolo.",
+"n": "přibližná napodobenina"
+},
+"codar": {
+"nm": "CODAR",
+"sh": "oceánský radar",
+"t": "CODAR: radary mořských proudů",
+"h": "Pobřežní radary jednou či dvakrát za sekundu přejedou pásmo kmitočtů, aby měřily proudy a vlny.",
+"l": "Pravidelné rovnoběžné úhlopříčky a opakované „swish“; kolem 4,5–5,5 MHz, 13 MHz a 25 MHz, často ve dne i v noci.",
+"n": "zmenšeno"
+},
+"stanag": {
+"nm": "STANAG 4285",
+"sh": "8-PSK",
+"t": "Vojenský modem STANAG 4285",
+"h": "Fázová modulace 8-PSK rychlostí 2400 Bd na nosné 1800 Hz, se zkušební sekvencí každých 107 ms pro sledování kanálu.",
+"l": "Plný blok asi 3 kHz; v uchu šum s pravidelným bzučením (list 35 bis)."
+},
+"link11": {
+"nm": "Link-11",
+"sh": "16 tónů",
+"t": "Link-11: námořní datové spojení",
+"h": "Šestnáct tónů od 605 do 2915 Hz vysílaných současně, každý fázově modulovaný 75krát za sekundu.",
+"l": "Hřeben pravidelných čar na 2,3 kHz a jedna čára trochu stranou; v uchu hudební bručení (list 35 bis)."
+},
+"numbers": {
+"nm": "Číselná stanice",
+"sh": "hlas",
+"t": "Číselná stanice",
+"h": "V pevný čas krátká volací melodie, pak hlas (často syntetický) čte skupiny pěti číslic, v AM nebo SSB.",
+"l": "Melodie v samostatných tónech, pak pravidelné skupiny slabik oddělené tichem (list 35 bis).",
+"n": "napodobený hlas, žádné skutečné číslice"
 }
 }
 }

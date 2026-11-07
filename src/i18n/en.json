@@ -29,7 +29,9 @@
 "lang": "Language",
 "signals": "Signals",
 "f1": "Signals simulated in the page (12,000 samples per second), based on the signals of sheet 5 bis of the OpenBookRadio book, plus Olivia, FT4 and Feld Hell (sheet 26). For radio signals (AM, FM, AIS, LoRa…), you see the simulated intermediate frequency, as on an SDR screen; some are scaled down or sped up, as stated.",
-"f2": "Time runs downwards in the waterfall and the footprint. CC BY-NC-SA 4.0 license, free, not for sale."
+"f2": "Time runs downwards in the waterfall and the footprint. CC BY-NC-SA 4.0 license, free, not for sale.",
+"night": "Night mode",
+"day": "Day mode"
 },
 "groups": [
 "Analogue voice",
@@ -42,7 +44,8 @@
 "HF modes and curiosities",
 "Broadcast and time",
 "Wideband",
-"Bonus: sounds from space"
+"Bonus: sounds from space",
+"Bonus: shortwave curiosities"
 ],
 "modes": {
 "am": {
@@ -484,6 +487,192 @@
 "h": "A signal sent to the Moon comes back about 2.5 s later, hugely weakened, slightly smeared and shifted by Doppler.",
 "l": "You hear your own \"beep\", then its faint, slightly blurred echo 2.5 s later. Radio amateurs do it in CW or JT65, on 144 MHz and above (sheet 1).",
 "n": "echo greatly exaggerated"
+},
+"msk144": {
+"nm": "MSK144",
+"sh": "meteors",
+"t": "MSK144: the meteor-scatter digital mode",
+"h": "Two tones, 1000 and 2000 Hz, at 2000 baud, in 72 ms frames repeated non-stop: each meteor trail lets a few of them through.",
+"l": "Bursts of 0.1 to 1 s, about 2.4 kHz wide, that appear and fade with the meteor's \"ping\". On 50 and 144 MHz, with WSJT-X."
+},
+"jt65": {
+"nm": "JT65",
+"sh": "65 tones",
+"t": "JT65: 65 tones, very slow",
+"h": "One sync tone and 64 data tones spaced 2.7 Hz (JT65A), 0.37 s per symbol, 47 s of transmission per minute.",
+"l": "A ladder of small lines over about 180 Hz, with a sync line that keeps returning to the same place. Used for Moon bounce (JT65B and C) and very weak signals.",
+"n": "20 s excerpt (a transmission lasts 47 s)"
+},
+"tetra": {
+"nm": "TETRA",
+"sh": "π/4-DQPSK",
+"t": "TETRA: professional digital network",
+"h": "π/4-DQPSK phase modulation at 18,000 symbols per second, four time-shared channels, in 25 kHz channels.",
+"l": "A full block with rounded edges, always there near a base station; a hoarse hiss. Encrypted: you cannot listen to it (sheet 38).",
+"n": "reduced scale"
+},
+"ndb": {
+"nm": "NDB beacon",
+"sh": "190–535 kHz",
+"t": "NDB: non-directional beacon",
+"h": "A fixed carrier on long wave, with a two- or three-letter Morse identifier sent on a tone (often 1020 Hz).",
+"l": "A fixed line in the centre and, during the identifier, two small lines on either side. Roughly 190 to 535 kHz, in SSB or CW (sheet 10)."
+},
+"vor": {
+"nm": "VOR",
+"sh": "108–118 MHz",
+"t": "VOR: omnidirectional radio range",
+"h": "In AM: a 30 Hz signal that depends on direction, a 9960 Hz subcarrier frequency-modulated at 30 Hz (the reference), and the Morse identifier on 1020 Hz.",
+"l": "In the demodulated sound: a low 30 Hz hum, a wide wavy line near 10 kHz, and the identifier now and then (sheet 15).",
+"n": "demodulated sound, scale ÷ 2"
+},
+"ils": {
+"nm": "ILS",
+"sh": "90 + 150 Hz",
+"t": "ILS: landing guidance (localizer)",
+"h": "In AM, two tones of 90 and 150 Hz; their ratio tells the aircraft whether it is left or right of the centreline. The Morse identifier starts with I.",
+"l": "In the demodulated sound: two very low lines at 90 and 150 Hz, and the identifier on 1020 Hz. Between 108.1 and 112 MHz; the glide slope is around 330 MHz (sheet 15)."
+},
+"m10": {
+"nm": "M10 / M20 sondes",
+"sh": "Meteomodem",
+"t": "M10 and M20 radiosondes (Meteomodem)",
+"h": "One frame per second, in fast FSK (about 9600 baud): wider than the RS41. Launched in France by Météo-France.",
+"l": "A wide burst every second that drifts slowly during the flight; between 400 and 406 MHz (sheet 18)."
+},
+"tpms": {
+"nm": "Tyres (TPMS)",
+"sh": "433 MHz",
+"t": "Tyre pressure sensors (TPMS)",
+"h": "Each wheel now and then sends an FSK burst of a few milliseconds: pressure, temperature, identifier.",
+"l": "Small isolated bursts on 433.92 MHz (or 315 MHz), often in pairs, as a car passes. Decoded by rtl_433."
+},
+"als162": {
+"nm": "ALS162",
+"sh": "162 kHz",
+"t": "ALS162 time signal (Allouis, 162 kHz)",
+"h": "The carrier of France Inter's former long-wave service; the time is coded by small, inaudible phase modulations.",
+"l": "A fixed line, very strong in France, barely widened at the start of each second; a decoder is needed to read the time (sheet 10)."
+},
+"wwv": {
+"nm": "WWV",
+"sh": "2.5–20 MHz",
+"t": "WWV time signal (Colorado)",
+"h": "In AM: a 5 ms \"tick\" at 1000 Hz every second, a 500 or 600 Hz tone, a time code on 100 Hz and a voice announcing UTC.",
+"l": "In the demodulated sound: a 500 Hz line broken every second, the 1000 Hz tick, and the code at the very bottom on 100 Hz (sheet 10)."
+},
+"msf": {
+"nm": "MSF",
+"sh": "60 kHz",
+"t": "MSF time signal (Anthorn, 60 kHz)",
+"h": "The carrier is switched off at the start of each second for 0.1, 0.2 or 0.3 s depending on the bits, and for 0.5 s to mark the minute.",
+"l": "A fixed line with complete black gaps every second, longer than with DCF77 (sheet 10)."
+},
+"type2": {
+"nm": "Sun type II",
+"sh": "shock wave",
+"t": "Sun: type II radio bursts",
+"h": "The shock wave of a coronal mass ejection makes the plasma emit lower and lower, slowly, often in two bands (the fundamental and its double).",
+"l": "Two parallel noise bands drifting down gently for several minutes. Compare with type III bursts, which are much faster.",
+"n": "several minutes squeezed into 6 s"
+},
+"tweeks": {
+"nm": "Tweeks",
+"sh": "VLF",
+"t": "Tweeks: the night-time VLF \"pings\"",
+"h": "At night, the click of distant lightning bounces between the ground and the ionosphere; frequencies near the cut-off (around 1.7 kHz) arrive last.",
+"l": "A small \"ping\" that falls and stops around 1.7 kHz, sometimes with an echo at double frequency; crackles everywhere. Below 10 kHz, at night."
+},
+"hiss": {
+"nm": "VLF hiss",
+"sh": "hiss",
+"t": "VLF hiss",
+"h": "Wideband noise produced by electrons in the plasmasphere, rising and falling with magnetic activity.",
+"l": "A band of hiss from a few hundred Hz to a few kHz, with no pattern, slowly swelling and fading."
+},
+"aurora": {
+"nm": "Radio aurora",
+"sh": "Au",
+"t": "Auroral propagation (Au)",
+"h": "The aurora reflects VHF waves but shakes them very fast: each signal is spread over several hundred Hz.",
+"l": "CW turns into a raspy hiss, as if whispered; you no longer hear a note. On 50 and 144 MHz, beaming north during magnetic storms."
+},
+"galactic": {
+"nm": "Galactic noise",
+"sh": "20–40 MHz",
+"t": "Noise from the Milky Way",
+"h": "The centre of the galaxy emits a radio hiss that Karl Jansky discovered in 1932 around 20 MHz. It rises and falls as the Earth turns.",
+"l": "A background noise that slowly rises then falls again, about 4 minutes earlier each day. Visible with a simple dipole between 20 and 40 MHz.",
+"n": "one day squeezed into 12 s"
+},
+"cubesat": {
+"nm": "CubeSat",
+"sh": "9600 bd",
+"t": "CubeSat telemetry",
+"h": "Small satellites regularly send their measurements (battery, temperatures) in FSK or GMSK at 1200 or 9600 baud, around 435–438 MHz.",
+"l": "Regular bursts sliding lower each time, by the Doppler effect, during the pass (sheet 34).",
+"n": "reduced scale, pass sped up"
+},
+"issfm": {
+"nm": "ISS on FM",
+"sh": "145.800 MHz",
+"t": "Space station (ISS): FM voice",
+"h": "Astronauts talk with schools and radio amateurs in FM on 145.800 MHz. The station flies at 28,000 km/h: the received frequency falls by about 3.5 kHz during the pass.",
+"l": "A band of FM voice slowly moving from right to left during the 10-minute pass (sheet 34).",
+"n": "10 min pass squeezed into 10 s"
+},
+"buzzer": {
+"nm": "UVB-76 \"The Buzzer\"",
+"sh": "4625 kHz",
+"t": "UVB-76, \"The Buzzer\" (4625 kHz)",
+"h": "A Russian military station that has sent, for decades, a buzz of about one second repeated about 25 times a minute, sometimes interrupted by a voice message.",
+"l": "A fixed carrier and, at each buzz, a column of tight lines from top to bottom. Easy to find on 4625 kHz in USB."
+},
+"pip": {
+"nm": "\"The Pip\"",
+"sh": "3756 / 5448 kHz",
+"t": "\"The Pip\": endless beeps",
+"h": "Another Russian military shortwave beacon, repeating short little beeps day and night, sometimes interrupted by messages.",
+"l": "A fixed line cut into very tight dots; to the ear, a fast pip-pip-pip that never stops.",
+"n": "approximate rhythm"
+},
+"squeaky": {
+"nm": "\"Squeaky Wheel\"",
+"sh": "HF",
+"t": "\"Squeaky Wheel\"",
+"h": "A Russian military shortwave beacon, named by listeners after its repeated sound pattern.",
+"l": "A small pattern of two sounds, one of them rising, repeated in a loop: like a squeaking wheel.",
+"n": "approximate imitation"
+},
+"codar": {
+"nm": "CODAR",
+"sh": "ocean radar",
+"t": "CODAR: ocean current radars",
+"h": "Coastal radars sweep a band of frequencies once or twice a second to measure currents and waves.",
+"l": "Regular parallel diagonals and a repeated \"swish\"; around 4.5–5.5 MHz, 13 MHz and 25 MHz, often day and night.",
+"n": "reduced scale"
+},
+"stanag": {
+"nm": "STANAG 4285",
+"sh": "8-PSK",
+"t": "STANAG 4285 military modem",
+"h": "8-PSK phase modulation at 2400 baud on an 1800 Hz carrier, with a probe sequence every 107 ms to track the channel.",
+"l": "A full block about 3 kHz wide; to the ear, a hiss with a regular buzz (sheet 35 bis)."
+},
+"link11": {
+"nm": "Link-11",
+"sh": "16 tones",
+"t": "Link-11: naval data link",
+"h": "Sixteen tones from 605 to 2915 Hz sent together, each phase-modulated 75 times per second.",
+"l": "A comb of regular lines over 2.3 kHz, plus one line a little apart; to the ear, a musical drone (sheet 35 bis)."
+},
+"numbers": {
+"nm": "Numbers station",
+"sh": "voice",
+"t": "Numbers station",
+"h": "At a fixed time, a short call melody, then a voice (often synthetic) reads groups of five digits, in AM or SSB.",
+"l": "The melody as separate notes, then regular groups of syllables separated by silences (sheet 35 bis).",
+"n": "imitated voice, no real digits"
 }
 }
 }

@@ -29,7 +29,9 @@
 "lang": "Język",
 "signals": "Sygnały",
 "f1": "Sygnały symulowane na stronie (12 000 próbek na sekundę), według sygnałów karty 5 bis książki OpenBookRadio, plus Olivia, FT4 i Feld Hell (karta 26). W przypadku sygnałów radiowych (AM, FM, AIS, LoRa…) widać symulowaną częstotliwość pośrednią, jak na ekranie SDR; niektóre są w zmniejszonej skali lub przyspieszone, co jest zaznaczone.",
-"f2": "Czas w wodospadzie i odcisku płynie w dół. Licencja CC BY-NC-SA 4.0, za darmo, nie na sprzedaż."
+"f2": "Czas w wodospadzie i odcisku płynie w dół. Licencja CC BY-NC-SA 4.0, za darmo, nie na sprzedaż.",
+"night": "Tryb nocny",
+"day": "Tryb dzienny"
 },
 "groups": [
 "Głos analogowy",
@@ -42,7 +44,8 @@
 "Emisje KF i ciekawostki",
 "Radiofonia i czas",
 "Szerokie pasmo",
-"Bonus: dźwięki z kosmosu"
+"Bonus: dźwięki z kosmosu",
+"Bonus: ciekawostki fal krótkich"
 ],
 "modes": {
 "am": {
@@ -483,6 +486,192 @@
 "h": "Sygnał wysłany w stronę Księżyca wraca po około 2,5 s, ogromnie osłabiony, nieco poszerzony i przesunięty przez Dopplera.",
 "l": "Słychać własne „pip”, a po 2,5 s jego słabe, nieco rozmyte echo. Krótkofalowcy robią to w CW lub JT65, od 144 MHz w górę (karta 1).",
 "n": "echo mocno przesadzone"
+},
+"msk144": {
+"nm": "MSK144",
+"sh": "meteory",
+"t": "MSK144: emisja cyfrowa do łączności przez meteory",
+"h": "Dwa tony, 1000 i 2000 Hz, 2000 bodów, w ramkach po 72 ms powtarzanych bez przerwy: każdy ślad meteoru przepuszcza kilka z nich.",
+"l": "Paczki od 0,1 do 1 s, szerokie na około 2,4 kHz, które pojawiają się i gasną z „pingiem” meteoru. Na 50 i 144 MHz, z WSJT-X."
+},
+"jt65": {
+"nm": "JT65",
+"sh": "65 tonów",
+"t": "JT65: 65 tonów, bardzo wolno",
+"h": "Jeden ton synchronizacji i 64 tony danych co 2,7 Hz (JT65A), 0,37 s na symbol, 47 s nadawania na minutę.",
+"l": "Drabinka drobnych kresek na około 180 Hz, z kreską synchronizacji, która wraca stale w to samo miejsce. Używana do odbić od Księżyca (JT65B i C) i bardzo słabych sygnałów.",
+"n": "fragment 20 s (emisja trwa 47 s)"
+},
+"tetra": {
+"nm": "TETRA",
+"sh": "π/4-DQPSK",
+"t": "TETRA: profesjonalna sieć cyfrowa",
+"h": "Modulacja fazy π/4-DQPSK, 18 000 symboli na sekundę, cztery szczeliny czasowe, w kanałach 25 kHz.",
+"l": "Pełny blok o zaokrąglonych bokach, stale obecny przy stacji bazowej; chrapliwy szum. Szyfrowane: nie da się słuchać (karta 38).",
+"n": "skala zmniejszona"
+},
+"ndb": {
+"nm": "Radiolatarnia NDB",
+"sh": "190–535 kHz",
+"t": "NDB: bezkierunkowa radiolatarnia",
+"h": "Stała nośna na falach długich ze znakiem Morse'a z dwóch lub trzech liter nadawanym tonem (często 1020 Hz).",
+"l": "Stała kreska pośrodku, a w czasie znaku dwie kreseczki po bokach. Około 190–535 kHz, w SSB lub CW (karta 10)."
+},
+"vor": {
+"nm": "VOR",
+"sh": "108–118 MHz",
+"t": "VOR: radiolatarnia ogólnokierunkowa",
+"h": "W AM: sygnał 30 Hz zależny od kierunku, podnośna 9960 Hz modulowana częstotliwościowo 30 Hz (odniesienie) i znak Morse'a na 1020 Hz.",
+"l": "W zdemodulowanym dźwięku: niskie buczenie 30 Hz, szeroka falująca kreska w okolicy 10 kHz i co jakiś czas znak (karta 15).",
+"n": "dźwięk zdemodulowany, skala ÷ 2"
+},
+"ils": {
+"nm": "ILS",
+"sh": "90 + 150 Hz",
+"t": "ILS: naprowadzanie do lądowania (localizer)",
+"h": "W AM dwa tony 90 i 150 Hz; ich stosunek mówi samolotowi, czy jest na lewo, czy na prawo od osi. Znak Morse'a zaczyna się od I.",
+"l": "W zdemodulowanym dźwięku: dwie bardzo niskie kreski na 90 i 150 Hz oraz znak na 1020 Hz. Między 108,1 a 112 MHz; ścieżka schodzenia około 330 MHz (karta 15)."
+},
+"m10": {
+"nm": "Sondy M10 / M20",
+"sh": "Meteomodem",
+"t": "Radiosondy M10 i M20 (Meteomodem)",
+"h": "Jedna ramka na sekundę w szybkim FSK (około 9600 bodów): szersza niż RS41. We Francji wypuszcza je Météo-France.",
+"l": "Co sekundę szeroka paczka, która powoli dryfuje w czasie lotu; między 400 a 406 MHz (karta 18)."
+},
+"tpms": {
+"nm": "Opony (TPMS)",
+"sh": "433 MHz",
+"t": "Czujniki ciśnienia w oponach (TPMS)",
+"h": "Każde koło od czasu do czasu wysyła paczkę FSK trwającą kilka milisekund: ciśnienie, temperatura, identyfikator.",
+"l": "Małe pojedyncze paczki na 433,92 MHz (lub 315 MHz), często parami, gdy przejeżdża samochód. Dekoduje je rtl_433."
+},
+"als162": {
+"nm": "ALS162",
+"sh": "162 kHz",
+"t": "Sygnał czasu ALS162 (Allouis, 162 kHz)",
+"h": "Nośna dawnych fal długich France Inter; czas jest kodowany małymi, niesłyszalnymi zmianami fazy.",
+"l": "Stała kreska, bardzo silna we Francji, ledwo poszerzona na początku każdej sekundy; do odczytu czasu potrzebny dekoder (karta 10)."
+},
+"wwv": {
+"nm": "WWV",
+"sh": "2,5–20 MHz",
+"t": "Sygnał czasu WWV (Kolorado)",
+"h": "W AM: co sekundę „tyk” 5 ms na 1000 Hz, ton 500 lub 600 Hz, kod czasu na 100 Hz i głos podający czas UTC.",
+"l": "W zdemodulowanym dźwięku: kreska na 500 Hz przerywana co sekundę, tyknięcie na 1000 Hz i kod na samym dole na 100 Hz (karta 10)."
+},
+"msf": {
+"nm": "MSF",
+"sh": "60 kHz",
+"t": "Sygnał czasu MSF (Anthorn, 60 kHz)",
+"h": "Nośna jest wyłączana na początku każdej sekundy na 0,1, 0,2 lub 0,3 s zależnie od bitów, a na 0,5 s dla oznaczenia minuty.",
+"l": "Stała kreska z całkiem czarnymi przerwami co sekundę, dłuższymi niż w DCF77 (karta 10)."
+},
+"type2": {
+"nm": "Słońce typ II",
+"sh": "fala uderzeniowa",
+"t": "Słońce: rozbłyski radiowe typu II",
+"h": "Fala uderzeniowa koronalnego wyrzutu masy sprawia, że plazma emituje powoli coraz niżej, często w dwóch pasmach (podstawowym i podwojonym).",
+"l": "Dwa równoległe pasma szumu, które przez kilka minut łagodnie opadają. Porównaj z typem III, znacznie szybszym.",
+"n": "kilka minut skrócone do 6 s"
+},
+"tweeks": {
+"nm": "Tweeki",
+"sh": "VLF",
+"t": "Tweeki: nocne „pingi” VLF",
+"h": "Nocą trzask odległego pioruna odbija się między ziemią a jonosferą; częstotliwości bliskie odcięcia (około 1,7 kHz) docierają ostatnie.",
+"l": "Małe „ping”, które opada i zatrzymuje się około 1,7 kHz, czasem z echem na podwójnej częstotliwości; wszędzie trzaski. Poniżej 10 kHz, nocą."
+},
+"hiss": {
+"nm": "Szum VLF",
+"sh": "hiss",
+"t": "Szum VLF (hiss)",
+"h": "Szeroki szum wytwarzany przez elektrony plazmasfery, rosnący i malejący z aktywnością magnetyczną.",
+"l": "Pasmo szumu od kilkuset Hz do kilku kHz, bez wzoru, powoli narastające i opadające."
+},
+"aurora": {
+"nm": "Zorza radiowa",
+"sh": "Au",
+"t": "Propagacja zorzowa (Au)",
+"h": "Zorza polarna odbija fale UKF, ale bardzo szybko nimi potrząsa: każdy sygnał rozmywa się na kilkaset Hz.",
+"l": "CW zmienia się w szorstki, jakby szeptany szum; nie słychać już tonu. Na 50 i 144 MHz, z anteną na północ podczas burz magnetycznych."
+},
+"galactic": {
+"nm": "Szum galaktyczny",
+"sh": "20–40 MHz",
+"t": "Szum Drogi Mlecznej",
+"h": "Centrum Galaktyki emituje szum radiowy, który Karl Jansky odkrył w 1932 roku około 20 MHz. Rośnie i maleje wraz z obrotem Ziemi.",
+"l": "Szum tła, który powoli rośnie i znów opada, każdego dnia około 4 minut wcześniej. Widoczny z prostym dipolem między 20 a 40 MHz.",
+"n": "jeden dzień skrócony do 12 s"
+},
+"cubesat": {
+"nm": "CubeSat",
+"sh": "9600 bd",
+"t": "Telemetria CubeSata",
+"h": "Małe satelity regularnie wysyłają pomiary (bateria, temperatury) w FSK lub GMSK 1200 lub 9600 bodów, w okolicy 435–438 MHz.",
+"l": "Regularne paczki, które za każdym razem schodzą trochę niżej przez efekt Dopplera, w czasie przelotu (karta 34).",
+"n": "skala zmniejszona, przelot przyspieszony"
+},
+"issfm": {
+"nm": "ISS w FM",
+"sh": "145,800 MHz",
+"t": "Stacja kosmiczna (ISS): głos w FM",
+"h": "Astronauci rozmawiają ze szkołami i krótkofalowcami w FM na 145,800 MHz. Stacja leci 28 000 km/h: odbierana częstotliwość spada w czasie przelotu o około 3,5 kHz.",
+"l": "Pasmo głosu FM, które w czasie 10-minutowego przelotu powoli przesuwa się z prawej na lewą (karta 34).",
+"n": "przelot 10 min skrócony do 10 s"
+},
+"buzzer": {
+"nm": "UVB-76 „The Buzzer”",
+"sh": "4625 kHz",
+"t": "UVB-76, „The Buzzer” (4625 kHz)",
+"h": "Rosyjska stacja wojskowa, która od dziesięcioleci nadaje około sekundowe brzęczenie, mniej więcej 25 razy na minutę, czasem przerywane komunikatem głosowym.",
+"l": "Stała nośna, a przy każdym brzęczeniu kolumna gęstych prążków z góry na dół. Łatwo ją znaleźć na 4625 kHz w USB."
+},
+"pip": {
+"nm": "„The Pip”",
+"sh": "3756 / 5448 kHz",
+"t": "„The Pip”: niekończące się piknięcia",
+"h": "Kolejna rosyjska wojskowa radiolatarnia krótkofalowa, która dzień i noc powtarza krótkie piknięcia, czasem przerywane komunikatami.",
+"l": "Stała kreska pocięta na bardzo gęste kropki; na słuch szybkie pip-pip-pip, które nigdy nie milknie.",
+"n": "rytm przybliżony"
+},
+"squeaky": {
+"nm": "„Squeaky Wheel”",
+"sh": "KF",
+"t": "„Squeaky Wheel”: skrzypiące koło",
+"h": "Rosyjska wojskowa radiolatarnia krótkofalowa, nazwana przez nasłuchowców od powtarzanego wzoru dźwięku.",
+"l": "Mały wzór dwóch dźwięków, z których jeden rośnie, powtarzany w pętli: jak skrzypiące koło.",
+"n": "przybliżona imitacja"
+},
+"codar": {
+"nm": "CODAR",
+"sh": "radar oceaniczny",
+"t": "CODAR: radary prądów morskich",
+"h": "Radary przybrzeżne raz lub dwa razy na sekundę przemiatają pasmo częstotliwości, by mierzyć prądy i fale.",
+"l": "Regularne równoległe przekątne i powtarzane „swish”; w okolicy 4,5–5,5 MHz, 13 MHz i 25 MHz, często dzień i noc.",
+"n": "skala zmniejszona"
+},
+"stanag": {
+"nm": "STANAG 4285",
+"sh": "8-PSK",
+"t": "Modem wojskowy STANAG 4285",
+"h": "Modulacja fazy 8-PSK, 2400 bodów, na nośnej 1800 Hz, z sekwencją testową co 107 ms do śledzenia kanału.",
+"l": "Pełny blok około 3 kHz; na słuch szum z regularnym brzęczeniem (karta 35 bis)."
+},
+"link11": {
+"nm": "Link-11",
+"sh": "16 tonów",
+"t": "Link-11: morskie łącze danych",
+"h": "Szesnaście tonów od 605 do 2915 Hz nadawanych razem, każdy modulowany fazowo 75 razy na sekundę.",
+"l": "Grzebień regularnych prążków na 2,3 kHz i jeden prążek nieco z boku; na słuch muzyczne buczenie (karta 35 bis)."
+},
+"numbers": {
+"nm": "Stacja numeryczna",
+"sh": "głos",
+"t": "Stacja numeryczna",
+"h": "O stałej porze krótka melodia wywoławcza, potem głos (często syntetyczny) czyta grupy po pięć cyfr, w AM lub SSB.",
+"l": "Melodia w osobnych nutach, potem regularne grupy sylab rozdzielone ciszą (karta 35 bis).",
+"n": "głos naśladowany, bez prawdziwych cyfr"
 }
 }
 }

@@ -13,6 +13,8 @@
   --f-mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
   color-scheme:dark;
 }
+html.night{--bg:#0a0000;--panel:#140202;--panel-2:#1e0404;--line:#3d0a08;--fg:#e2533f;--muted:#9c3428;--accent:#ff3b2f;--accent-ink:#140000;--ok:#ff8a6a;--bad:#c22a1c}
+html.night .screen{background:#000}
 *{box-sizing:border-box}
 html,body{background:var(--bg);color:var(--fg)}
 body{font-family:var(--f-body);font-size:15px;line-height:1.5;
@@ -85,6 +87,7 @@ footer p{margin:0;max-width:110ch}
     <div class="hdr-ctl">
       <label class="langlbl" for="lang"><span id="tLang">Langue</span>
         <select id="lang"></select></label>
+      <button class="btn" id="night" type="button" aria-pressed="false">Mode nuit</button>
       <button class="btn" id="mystery" type="button">Son mystère</button>
     </div>
   </header>
@@ -388,6 +391,94 @@ G.eme=()=>{ const N=Math.round(7.5*SR), x=Z(N), u=0.12, keyT=[[0.3,3],[0.3+4*u,1
   for(let i=0;i<N;i++){ const t=i/SR; x[i]=0.7*env(t)*Math.cos(TAU*1000*t); const e2=env(t-2.5); if(e2>0){ let s=0; for(const [f,p] of comps) s+=Math.cos(TAU*f*t+p); x[i]+=0.05*e2*s*(0.6+0.4*Math.sin(TAU*0.8*t)); } }
   return addNoise(x,0.03); };
 
+/* ---- signaux ajoutés : livre, espace, curiosités ---- */
+function morseKey(text,u,t0,f){ // liste de [début, fin] en secondes
+  const out=[]; let t=t0; for(const w of text.split(" ")){ for(const c of w){ for(const s of MORSE[c]){ const d=s==="."?u:3*u; out.push([t,t+d]); t+=d+u; } t+=2*u; } t+=4*u; } return {seg:out,end:t}; }
+function keyEnv(seg,t){ for(const [a,b] of seg) if(t>=a&&t<b) return Math.min(1,(t-a)/0.004,(b-t)/0.004); return 0; }
+G.msk144=()=>{ const N=6*SR, x=Z(N);
+  for(const [t0,d,a] of [[0.6,0.35,1],[2.4,1.1,0.8],[4.5,0.2,0.9]]){ const i0=Math.round(t0*SR), L=Math.round(d*SR); let ph=0, b=0;
+    for(let j=0;j<L;j++){ if(j%6===0) b=ri(2); ph+=TAU*(b?2000:1000)/SR; const t=j/SR; x[i0+j]+=a*Math.min(1,t/0.003)*Math.exp(-3*t/d)*Math.cos(ph); } }
+  return addNoise(x,0.06); };
+G.jt65=()=>{ const N=20*SR, x=Z(N), Ts=4096/11025, df=11025/4096, f0=1270.5; let ph=0, s=0, nx=0, k=0;
+  const sync=[]; for(let i=0;i<126;i++) sync.push(rnd()<0.5);
+  for(let i=Math.round(0.5*SR);i<N;i++){ if(i-Math.round(0.5*SR)>=nx){ s=sync[k%126]?0:2+ri(64); k++; nx+=Ts*SR; } ph+=TAU*(f0+df*s)/SR; x[i]=0.6*Math.cos(ph); }
+  return addNoise(x,0.2); };
+G.tetra=()=>{ const N=4*SR, re=Z(N), im=Z(N); let a=0, b=0, ph=0; const sps=2;
+  for(let i=0;i<N;i++){ if(i%sps===0){ ph+=Math.PI/4*(2*ri(4)+1); a=Math.cos(ph); b=Math.sin(ph); } re[i]=a; im[i]=b; }
+  const k=hannK(9), r=conv(re,k), q=conv(im,k), x=Z(N); for(let i=0;i<N;i++){ const p=TAU*FC*i/SR; x[i]=r[i]*Math.cos(p)-q[i]*Math.sin(p); }
+  return addNoise(x,0.03); };
+G.ndb=()=>{ const {seg,end}=morseKey("OB",0.1,0.3), N=Math.round((end+0.8)*SR), x=Z(N);
+  for(let i=0;i<N;i++){ const t=i/SR; x[i]=0.5*Math.cos(TAU*FC*t)+0.45*keyEnv(seg,t)*(Math.cos(TAU*(FC-1020)*t)+Math.cos(TAU*(FC+1020)*t)); }
+  return addNoise(x,0.02); };
+G.vor=()=>{ const N=5*SR, x=Z(N), {seg}=morseKey("OBR",0.06,1.5); let ph=0; // audio démodulé, échelle ÷ 2
+  for(let i=0;i<N;i++){ const t=i/SR; ph+=TAU*(4980+240*Math.cos(TAU*15*t))/SR; x[i]=0.5*Math.cos(TAU*15*t)+0.4*Math.cos(ph)+0.35*keyEnv(seg,t)*Math.cos(TAU*510*t); }
+  return addNoise(x,0.01); };
+G.ils=()=>{ const N=5*SR, x=Z(N), {seg}=morseKey("IOB",0.07,1.2);
+  for(let i=0;i<N;i++){ const t=i/SR; x[i]=0.4*Math.cos(TAU*90*t)+0.4*Math.cos(TAU*150*t)+0.35*keyEnv(seg,t)*Math.cos(TAU*1020*t); }
+  return addNoise(x,0.01); };
+G.m10=()=>{ const N=4*SR, x=Z(N), hk=hannK(4);
+  for(let s=0;s<4;s++){ const i0=Math.round((0.2+s)*SR), L=Math.round(0.11*SR), d=Z(L); let b=0; for(let j=0;j<L;j++){ if(j%Math.round(SR/4800)===0) b=ri(2)*2-1; d[j]=b; }
+    const sm=conv(d,hk), fi=Z(L); for(let j=0;j<L;j++) fi[j]=FC+300*s+1300*sm[j]; const y=fm(fi), r=ramp(L,0.002); for(let j=0;j<L;j++) x[i0+j]+=y[j]*r[j]; }
+  return addNoise(x,0.05); };
+G.tpms=()=>{ const N=4*SR, x=Z(N);
+  for(const t0 of [0.5,0.62,2.6]){ const i0=Math.round(t0*SR), L=Math.round(0.03*SR); let ph=0, b=0;
+    for(let j=0;j<L;j++){ if(j%3===0) b=ri(2); ph+=TAU*(FC+(b?900:-900))/SR; x[i0+j]+=Math.cos(ph)*Math.min(1,j/10,(L-j)/10); } }
+  return addNoise(x,0.04); };
+G.als162=()=>{ const N=6*SR, x=Z(N); let jit=0;
+  for(let i=0;i<N;i++){ const t=i/SR, f=t%1; if(i%Math.round(SR/400)===0) jit=(f<0.1||(f<0.2&&Math.floor(t)%2))?(rnd()<0.5?-1:1):0; x[i]=Math.cos(TAU*FC*t+0.25*jit); }
+  return addNoise(x,0.03); };
+G.wwv=()=>{ const N=6*SR, x=Z(N);
+  for(let i=0;i<N;i++){ const t=i/SR, f=t%1, s=Math.floor(t); let v=0;
+    if(f<0.005) v+=0.9*Math.sin(TAU*1000*t); if(f>0.03&&f<0.97) v+=0.3*Math.sin(TAU*500*t);
+    const bit=[0.2,0.5,0.8,0.2,0.5,0.2][s]; v+=(f<bit?0.25:0.06)*Math.sin(TAU*100*t); x[i]=v; }
+  return addNoise(x,0.02); };
+G.msf=()=>{ const N=6*SR, x=Z(N), offs=[0.5,0.1,0.2,0.1,0.3,0.1];
+  for(let i=0;i<N;i++){ const t=i/SR, s=Math.floor(t), f=t-s; x[i]=(f<offs[s]?0:1)*Math.cos(TAU*1000*t); }
+  return addNoise(x,0.02); };
+G.type2=()=>{ const N=6*SR, x=Z(N), lp=lpNoise(N,25); let p1=0, p2=0;
+  for(let i=0;i<N;i++){ const t=i/SR, f1=2600*Math.exp(-t/7), env=Math.min(1,t/0.4)*(0.6+0.4*Math.sin(TAU*1.3*t)); p1+=TAU*f1/SR; p2+=TAU*2*f1/SR;
+    x[i]=env*lp[i]*3*(Math.cos(p1)+0.7*Math.cos(p2)); }
+  return addNoise(x,0.2); };
+G.tweeks=()=>{ const N=6*SR, x=Z(N);
+  for(const t0 of [0.4,1.3,1.9,3.0,3.8,4.9]){ const i0=Math.round(t0*SR); x[i0]+=3; x[i0+1]-=2; let p1=0,p2=0; const L=Math.round(0.12*SR);
+    for(let j=0;j<L;j++){ const t=j/SR, f=1750/Math.sqrt(1-Math.exp(-t/0.012)*0.92); p1+=TAU*f/SR; p2+=TAU*2*f/SR; const e=Math.exp(-t/0.04); x[i0+j]+=0.6*e*Math.cos(p1)+0.25*e*Math.cos(p2); } }
+  for(let k=0;k<40;k++){ const i=ri(N-3), a=0.3+rnd(); x[i]+=a; x[i+1]-=a*0.5; }
+  return addNoise(x,0.04); };
+G.hiss=()=>{ const N=6*SR, x=Z(N), lp=lpNoise(N,6);
+  for(let i=0;i<N;i++){ const t=i/SR, env=0.6+0.4*Math.sin(TAU*0.25*t)*Math.sin(TAU*0.11*t+1); x[i]=env*3*lp[i]*Math.cos(TAU*1500*t); }
+  return addNoise(x,0.04); };
+G.aurora=()=>{ const {seg,end}=morseKey("CQ CQ",0.07,0.3), N=Math.round((end+0.4)*SR), lp=lpNoise(N,60), x=Z(N);
+  for(let i=0;i<N;i++){ const t=i/SR; x[i]=keyEnv(seg,t)*6*lp[i]*Math.cos(TAU*800*t); } return addNoise(x,0.05); };
+G.galactic=()=>{ const N=12*SR, x=Z(N); for(let i=0;i<N;i++){ const t=i/SR, l=0.15+0.25*Math.pow(Math.sin(Math.PI*t/12),2); x[i]=l*gauss(); }
+  const lp=lpNoise(N,2); for(let i=0;i<N;i++) x[i]+=0.05*lp[i]; return x; };
+G.cubesat=()=>{ const N=10*SR, x=Z(N), hk=hannK(6);
+  for(const t0 of [0.5,3.3,6.1,8.9]){ const i0=Math.round(t0*SR), L=Math.round(0.5*SR), d=Z(L); let b=0; for(let j=0;j<L;j++){ if(j%3===0) b=ri(2)*2-1; d[j]=b; }
+    const c=FC+1800*Math.tanh((5-t0)/2.5), sm=conv(d,hk), fi=Z(L); for(let j=0;j<L;j++) fi[j]=c+700*sm[j]; const y=fm(fi), r=ramp(L); for(let j=0;j<L;j++) x[i0+j]+=y[j]*r[j]; }
+  return addNoise(x,0.06); };
+G.issfm=()=>{ const N=10*SR, v=voice(N), fi=Z(N); for(let i=0;i<N;i++){ const t=i/SR; fi[i]=FC+1500*Math.tanh((5-t)/2)+1200*v[i]; }
+  const x=fm(fi); for(let i=0;i<N;i++){ const t=i/SR; if(t<0.3||t>9.7) x[i]=0; } return addNoise(x,0.08); };
+G.buzzer=()=>{ const N=Math.round(7.2*SR), x=Z(N); let ph=0;
+  for(let i=0;i<N;i++){ const t=i/SR, f=t%2.4; x[i]=0.15*Math.cos(TAU*1000*t); if(f<1.1){ ph+=TAU*25/SR; let s=0; for(let h=1;h<=60;h++) s+=Math.cos(h*ph)/Math.sqrt(h); x[i]+=0.08*s*Math.min(1,f/0.02,(1.1-f)/0.02); } }
+  return addNoise(x,0.05); };
+G.pip=()=>{ const N=5*SR, x=Z(N); for(let i=0;i<N;i++){ const t=i/SR, f=(t*9)%1; if(f<0.25) x[i]=Math.sin(Math.PI*f/0.25)*Math.cos(TAU*1000*t); } return addNoise(x,0.08); };
+G.squeaky=()=>{ const N=6*SR, x=Z(N); let ph=0;
+  for(let i=0;i<N;i++){ const t=i/SR, f=t%1; let fr=0, a=0; if(f<0.15){ fr=1100; a=1; } else if(f>0.2&&f<0.42){ fr=900+700*(f-0.2)/0.22; a=1; }
+    if(a){ ph+=TAU*fr/SR; x[i]=0.7*Math.cos(ph); } }
+  return addNoise(x,0.06); };
+G.codar=()=>{ const N=5*SR, x=Z(N); let ph=0; for(let i=0;i<N;i++){ const t=i/SR, f=1000+4000*((t*2)%1); ph+=TAU*f/SR; x[i]=0.7*Math.cos(ph); } return addNoise(x,0.1); };
+G.stanag=()=>{ const N=5*SR, sps=5, re=Z(N), im=Z(N), probe=[]; for(let k=0;k<80;k++) probe.push(ri(8)); let k=0, a=0, b=0;
+  for(let i=0;i<N;i++){ if(i%sps===0){ const pos=k%256, s=pos>=176?probe[pos-176]:ri(8); a=Math.cos(TAU*s/8); b=Math.sin(TAU*s/8); k++; } re[i]=a; im[i]=b; }
+  const hk=hannK(7), r=conv(re,hk), q=conv(im,hk), x=Z(N); for(let i=0;i<N;i++){ const p=TAU*1800*i/SR; x[i]=r[i]*Math.cos(p)-q[i]*Math.sin(p); }
+  for(let i=0;i<N;i++){ const t=i/SR; if(t<0.3||t>4.7) x[i]=0; } return addNoise(x,0.03); };
+G.link11=()=>{ const N=5*SR, x=Z(N), tones=[605]; for(let k=0;k<15;k++) tones.push(935+110*k); const fr=Math.round(SR/75), ph=tones.map(()=>rnd()*TAU);
+  for(let i=0;i<N;i++){ const t=i/SR; if(t<0.3||t>4.7) continue; if(i%fr===0) for(let k=1;k<tones.length;k++) ph[k]+=Math.PI/2*ri(4); let s=0; for(let k=0;k<tones.length;k++) s+=(k?1:1.6)*Math.cos(TAU*tones[k]*t+ph[k]); x[i]=s/8; }
+  return addNoise(x,0.03); };
+G.numbers=()=>{ const N=9*SR, x=Z(N), notes=[784,659,784,523,587,659];
+  for(let n=0;n<notes.length;n++){ const i0=Math.round((0.2+n*0.25)*SR), L=Math.round(0.22*SR); for(let j=0;j<L;j++) x[i0+j]+=0.5*Math.sin(Math.PI*j/L)*Math.sin(TAU*notes[n]*j/SR); }
+  const v=voice(Math.round(0.32*SR)); let t=2.2;
+  for(let g=0;g<3;g++){ for(let d=0;d<5;d++){ const i0=Math.round(t*SR), sh=0.8+rnd()*0.4; for(let j=0;j<v.length&&i0+j<N;j++){ const jj=Math.floor(j*sh)%v.length; x[i0+j]+=0.7*Math.abs(v[jj])*Math.sin(TAU*(260+40*d)*j/SR)+0.3*v[jj]*Math.sin(Math.PI*j/v.length); } t+=0.45; } t+=0.7; }
+  return addNoise(x,0.05); };
+
 /* ================= catalogue ================= */
 // [clé, nom court, repère, span Hz [a,b], nfft, lignes/s, options]
 // [id, -, -, span Hz [a,b], nfft, lignes/s, {gi: rubrique, scale}]
@@ -444,7 +535,32 @@ const LIST=[
  ["sputnik",0,0,[600, 1400],2048,40,{"gi":10}],
  ["doppler",0,0,[200, 1800],4096,16,{"gi":10}],
  ["apt",0,0,[0, 5000],1024,40,{"gi":10}],
- ["eme",0,0,[800, 1200],4096,30,{"gi":10}]
+ ["eme",0,0,[800, 1200],4096,30,{"gi":10}],
+ ["msk144",0,0,[0, 3000],512,48,{"gi": 2}],
+ ["jt65",0,0,[1240, 1480],16384,6,{"gi": 2}],
+ ["tetra",0,0,[0, 6000],512,40,{"gi": 2}],
+ ["ndb",0,0,[1700, 4300],2048,36,{"gi": 4}],
+ ["vor",0,0,[0, 5500],4096,30,{"gi": 4, "scale": 2}],
+ ["ils",0,0,[0, 1300],8192,20,{"gi": 4}],
+ ["m10",0,0,[0, 6000],512,48,{"gi": 6}],
+ ["tpms",0,0,[0, 6000],256,60,{"gi": 6}],
+ ["als162",0,0,[2800, 3200],2048,36,{"gi": 8}],
+ ["wwv",0,0,[0, 1300],4096,30,{"gi": 8}],
+ ["msf",0,0,[800, 1200],1024,40,{"gi": 8}],
+ ["type2",0,0,[0, 6000],512,40,{"gi": 10}],
+ ["tweeks",0,0,[0, 6000],256,60,{"gi": 10}],
+ ["hiss",0,0,[0, 6000],512,36,{"gi": 10}],
+ ["aurora",0,0,[300, 1300],2048,36,{"gi": 10}],
+ ["galactic",0,0,[0, 6000],1024,24,{"gi": 10}],
+ ["cubesat",0,0,[0, 6000],512,40,{"gi": 10}],
+ ["issfm",0,0,[0, 6000],1024,36,{"gi": 10}],
+ ["buzzer",0,0,[0, 3000],2048,36,{"gi": 11}],
+ ["pip",0,0,[600, 1400],1024,40,{"gi": 11}],
+ ["squeaky",0,0,[500, 2000],1024,40,{"gi": 11}],
+ ["codar",0,0,[0, 6000],512,48,{"gi": 11}],
+ ["stanag",0,0,[0, 4000],512,40,{"gi": 11}],
+ ["link11",0,0,[400, 3200],2048,36,{"gi": 11}],
+ ["numbers",0,0,[0, 3000],1024,36,{"gi": 11}]
 ];
 const MODES=LIST.map(([id,,,span,nfft,rps,o])=>{ o=o||{}; const fr=I18N.fr.modes[id];
   const mm=[...fr.l.matchAll(/fiches? ([^)]*)\)/g)], ref=mm.length?mm[mm.length-1][1]:"";
@@ -466,9 +582,15 @@ function spectrumRaw(sig,center,m){
     row[x]=10*Math.log10(p+1e-14); }
   return row;
 }
-const LUT=(()=>{ const stops=[[0,[2,8,24]],[.18,[11,42,74]],[.38,[26,95,180]],[.55,[63,169,245]],[.7,[155,231,255]],[.85,[255,224,138]],[1,[255,138,61]]];
+let NIGHT=false;
+const PALS={day:{bg:"#05080c",grid:"rgba(141,155,173,.18)",grid2:"rgba(141,155,173,.12)",lab:"rgba(141,155,173,.75)",peak:"rgba(225,231,239,.45)",f0:"rgba(242,181,68,.55)",f1:"rgba(242,181,68,.03)",line:"#f2b544",txt:"rgba(225,231,239,.85)",head:"rgba(242,181,68,.95)"},
+ night:{bg:"#050000",grid:"rgba(255,60,40,.16)",grid2:"rgba(255,60,40,.10)",lab:"rgba(200,60,45,.8)",peak:"rgba(255,110,90,.4)",f0:"rgba(255,40,20,.5)",f1:"rgba(255,40,20,.03)",line:"#ff3b2f",txt:"rgba(230,80,60,.9)",head:"rgba(255,60,40,.95)"}};
+function P(){ return NIGHT?PALS.night:PALS.day; }
+function makeLUT(stops){
   const t=new Uint8ClampedArray(256*3); for(let i=0;i<256;i++){ const v=i/255; let k=0; while(k<stops.length-2&&v>stops[k+1][0]) k++;
-    const [a,ca]=stops[k],[b,cb]=stops[k+1], u=(v-a)/(b-a); for(let c=0;c<3;c++) t[i*3+c]=ca[c]+(cb[c]-ca[c])*u; } return t; })();
+    const [a,ca]=stops[k],[b,cb]=stops[k+1], u=(v-a)/(b-a); for(let c=0;c<3;c++) t[i*3+c]=ca[c]+(cb[c]-ca[c])*u; } return t; }
+const LUT_DAY=makeLUT([[0,[2,8,24]],[.18,[11,42,74]],[.38,[26,95,180]],[.55,[63,169,245]],[.7,[155,231,255]],[.85,[255,224,138]],[1,[255,138,61]]]), LUT_NIGHT=makeLUT([[0,[0,0,0]],[.25,[30,0,0]],[.5,[110,4,0]],[.75,[210,25,10]],[.9,[255,70,40]],[1,[255,130,100]]]);
+let LUT=LUT_DAY;
 const DR=55;
 function norm(row){ const o=new Float32Array(W); for(let x=0;x<W;x++) o[x]=Math.min(1,Math.max(0,(row[x]-vmin)/DR)); return o; }
 function paintRow(img,y,row){ for(let x=0;x<W;x++){ const c=Math.round(row[x]*255)*3, p=(y*W+x)*4; img.data[p]=LUT[c]; img.data[p+1]=LUT[c+1]; img.data[p+2]=LUT[c+2]; img.data[p+3]=255; } }
@@ -495,19 +617,19 @@ function analyse(){
   const d=signal.length/SR; document.getElementById("dur").textContent=t("dur").replace("{s}",d.toLocaleString(LOC,{minimumFractionDigits:1,maximumFractionDigits:1}));
 }
 function drawSpectrum(row,label){
-  const H=sp.height; sctx.fillStyle="#05080c"; sctx.fillRect(0,0,W,H); sctx.font="400 10px 'IBM Plex Mono',monospace"; sctx.textAlign="left"; sctx.lineWidth=1;
-  for(let db=0;db>=-50;db-=10){ const y=Math.round(H-(db+DR)/DR*H)+.5; sctx.strokeStyle="rgba(141,155,173,.18)"; sctx.beginPath(); sctx.moveTo(0,y); sctx.lineTo(W,y); sctx.stroke(); sctx.fillStyle="rgba(141,155,173,.75)"; if(db<0) sctx.fillText(db+" dB",4,y-3); }
-  for(const t of ticks(current)){ const x=Math.round(t.p*W)+.5; sctx.strokeStyle="rgba(141,155,173,.12)"; sctx.beginPath(); sctx.moveTo(x,0); sctx.lineTo(x,H); sctx.stroke(); }
-  if(peak){ sctx.strokeStyle="rgba(225,231,239,.45)"; sctx.beginPath(); for(let x=0;x<W;x++){ const y=H-peak[x]*H; x?sctx.lineTo(x,y):sctx.moveTo(x,y);} sctx.stroke(); }
-  const g=sctx.createLinearGradient(0,0,0,H); g.addColorStop(0,"rgba(242,181,68,.55)"); g.addColorStop(1,"rgba(242,181,68,.03)");
+  const H=sp.height; sctx.fillStyle=P().bg; sctx.fillRect(0,0,W,H); sctx.font="400 10px 'IBM Plex Mono',monospace"; sctx.textAlign="left"; sctx.lineWidth=1;
+  for(let db=0;db>=-50;db-=10){ const y=Math.round(H-(db+DR)/DR*H)+.5; sctx.strokeStyle=P().grid; sctx.beginPath(); sctx.moveTo(0,y); sctx.lineTo(W,y); sctx.stroke(); sctx.fillStyle=P().lab; if(db<0) sctx.fillText(db+" dB",4,y-3); }
+  for(const t of ticks(current)){ const x=Math.round(t.p*W)+.5; sctx.strokeStyle=P().grid2; sctx.beginPath(); sctx.moveTo(x,0); sctx.lineTo(x,H); sctx.stroke(); }
+  if(peak){ sctx.strokeStyle=P().peak; sctx.beginPath(); for(let x=0;x<W;x++){ const y=H-peak[x]*H; x?sctx.lineTo(x,y):sctx.moveTo(x,y);} sctx.stroke(); }
+  const g=sctx.createLinearGradient(0,0,0,H); g.addColorStop(0,P().f0); g.addColorStop(1,P().f1);
   sctx.beginPath(); sctx.moveTo(0,H); for(let x=0;x<W;x++) sctx.lineTo(x,H-row[x]*H); sctx.lineTo(W,H); sctx.closePath(); sctx.fillStyle=g; sctx.fill();
-  sctx.beginPath(); for(let x=0;x<W;x++){ const y=H-row[x]*H; x?sctx.lineTo(x,y):sctx.moveTo(x,y);} sctx.strokeStyle="#f2b544"; sctx.lineWidth=1.5; sctx.stroke(); sctx.lineWidth=1;
-  if(label){ sctx.textAlign="right"; sctx.fillStyle="rgba(225,231,239,.8)"; sctx.fillText(label,W-6,13); }
+  sctx.beginPath(); for(let x=0;x<W;x++){ const y=H-row[x]*H; x?sctx.lineTo(x,y):sctx.moveTo(x,y);} sctx.strokeStyle=P().line; sctx.lineWidth=1.5; sctx.stroke(); sctx.lineWidth=1;
+  if(label){ sctx.textAlign="right"; sctx.fillStyle=P().txt; sctx.fillText(label,W-6,13); }
 }
 function restSpectrum(){ peak=null; if(avgRow) drawSpectrum(avgRow,t("avg")); }
 function blankWaterfall(msg){
   const img=wctx.createImageData(W,WH); for(let y=0;y<WH;y++){ const r=new Float32Array(W); for(let x=0;x<W;x++) r[x]=0.05+rnd()*0.08; paintRow(img,y,r); }
-  wctx.putImageData(img,0,0); wctx.fillStyle="rgba(225,231,239,.85)"; wctx.font="500 15px 'IBM Plex Sans',system-ui,sans-serif"; wctx.textAlign="center"; wctx.fillText(msg,W/2,WH/2+5);
+  wctx.putImageData(img,0,0); wctx.fillStyle=P().txt; wctx.font="500 15px 'IBM Plex Sans',system-ui,sans-serif"; wctx.textAlign="center"; wctx.fillText(msg,W/2,WH/2+5);
 }
 
 /* ================= règle des fréquences ================= */
@@ -576,7 +698,7 @@ function tick(){
       lastRow++; added++; last=row; }
     if(added===8) lastRow=target;
     if(last){ if(!peak) peak=Float32Array.from(last); else for(let x=0;x<W;x++) peak[x]=Math.max(last[x],peak[x]-0.006); drawSpectrum(last); }
-    const p=(src.loop?el%dur:Math.min(el,dur))/dur; fctx.putImageData(fpImage,0,0); fctx.fillStyle="rgba(242,181,68,.95)"; fctx.fillRect(0,Math.round(p*fp.height),W,2); }
+    const p=(src.loop?el%dur:Math.min(el,dur))/dur; fctx.putImageData(fpImage,0,0); fctx.fillStyle=P().head; fctx.fillRect(0,Math.round(p*fp.height),W,2); }
   requestAnimationFrame(tick);
 }
 
@@ -589,7 +711,7 @@ function tick(){
 });
 const aside=document.getElementById("modes");
 function buildAside(){ aside.textContent=""; aside.setAttribute("aria-label",t("signals"));
-  const cnt=document.createElement("p"); cnt.className="count"; cnt.textContent=t("count").replace("{n}",MODES.filter(m=>m.gi<10).length); aside.appendChild(cnt);
+  const cnt=document.createElement("p"); cnt.className="count"; cnt.textContent=MODES.length+" "+t("signals").toLocaleLowerCase(LOC); aside.appendChild(cnt);
   const groups=(I18N[LG]&&I18N[LG].groups)||I18N.fr.groups;
   groups.forEach((g,gi)=>{ const ms=MODES.filter(m=>m.gi===gi); if(!ms.length) return;
     const d=document.createElement("div"); d.className="group"; d.innerHTML=`<h2>${esc(g)}</h2><ul></ul>`;
@@ -601,6 +723,7 @@ function setLang(l){ if(!I18N[l]) l="fr"; LG=l; LOC=(LANGS.find(x=>x[0]===l)||LA
   const sel=document.getElementById("lang"); sel.value=l;
   const T={tTitle:"title",tLang:"lang",mystery:"mystery",play:"play",stop:"stop",tNoise:"noise",tVol:"volume",tLoop:"loop",tSpecwf:"specwf",tCursor:"cursor",tFoot:"footprint",tF1:"f1",tF2:"f2"};
   for(const id in T) document.getElementById(id).textContent=t(T[id]);
+  document.getElementById("night").textContent=t(NIGHT?"day":"night");
   document.title=t("title")+" · VSISA";
   try{ localStorage.setItem("idmr-lang",l); }catch(e){}
   if(location.hash.slice(1)!==l){ try{ history.replaceState(null,"","#"+l); }catch(e){} }
@@ -610,6 +733,11 @@ function setLang(l){ if(!I18N[l]) l="fr"; LG=l; LOC=(LANGS.find(x=>x[0]===l)||LA
     const d=signal.length/SR; document.getElementById("dur").textContent=t("dur").replace("{s}",d.toLocaleString(LOC,{minimumFractionDigits:1,maximumFractionDigits:1})); } }
 (function(){ const sel=document.getElementById("lang"); LANGS.forEach(([c,n])=>{ const o=document.createElement("option"); o.value=c; o.textContent=n; sel.appendChild(o); });
   sel.addEventListener("change",()=>setLang(sel.value)); })();
+function setNight(on){ NIGHT=!!on; LUT=NIGHT?LUT_NIGHT:LUT_DAY; document.documentElement.classList.toggle("night",NIGHT);
+  const b=document.getElementById("night"); b.textContent=t(NIGHT?"day":"night"); b.setAttribute("aria-pressed",String(NIGHT));
+  try{ localStorage.setItem("idmr-night",NIGHT?"1":"0"); }catch(e){}
+  if(current&&signal){ analyse(); if(!playing) blankWaterfall(t("press")); } }
+document.getElementById("night").addEventListener("click",()=>setNight(!NIGHT));
 document.getElementById("play").addEventListener("click",play);
 document.getElementById("stop").addEventListener("click",stop);
 document.getElementById("mystery").addEventListener("click",mystery);
@@ -624,7 +752,9 @@ if(!I18N[lg0]){ const nl=(navigator.language||"fr").slice(0,2).toLowerCase(); lg
 window.addEventListener("hashchange",()=>{ const h=location.hash.slice(1); if(I18N[h]&&h!==LG) setLang(h); });
 let start=MODES.find(m=>m.id==="psk31");
 try{ const s=localStorage.getItem("idmr-mode"); const f=MODES.find(m=>m.id===s); if(f) start=f; }catch(e){}
+try{ NIGHT=localStorage.getItem("idmr-night")==="1"; }catch(e){}
 setLang(lg0);
+setNight(NIGHT);
 select(start);
 })();
 </script>

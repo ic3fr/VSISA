@@ -29,7 +29,9 @@
 "lang": "Taal",
 "signals": "Signalen",
 "f1": "Signalen gesimuleerd in de pagina (12 000 samples per seconde), naar de signalen van blad 5 bis van het boek OpenBookRadio, plus Olivia, FT4 en Feld Hell (blad 26). Bij radiosignalen (AM, FM, AIS, LoRa…) zie je de gesimuleerde middenfrequentie, zoals op een SDR-scherm; sommige zijn verkleind of versneld, dat staat erbij.",
-"f2": "De tijd loopt naar beneden in de waterval en de afdruk. Licentie CC BY-NC-SA 4.0, gratis, niet verkopen."
+"f2": "De tijd loopt naar beneden in de waterval en de afdruk. Licentie CC BY-NC-SA 4.0, gratis, niet verkopen.",
+"night": "Nachtmodus",
+"day": "Dagmodus"
 },
 "groups": [
 "Analoge spraak",
@@ -42,7 +44,8 @@
 "HF-modi en curiosa",
 "Omroep en tijd",
 "Breedband",
-"Bonus: geluiden uit de ruimte"
+"Bonus: geluiden uit de ruimte",
+"Bonus: curiosa op kortegolf"
 ],
 "modes": {
 "am": {
@@ -484,6 +487,192 @@
 "h": "Een signaal naar de maan komt ongeveer 2,5 s later terug, enorm verzwakt, iets verbreed en verschoven door doppler.",
 "l": "Je hoort je eigen „piep” en 2,5 s later de zwakke, wat vage echo. Zendamateurs doen dit in CW of JT65, vanaf 144 MHz (blad 1).",
 "n": "echo sterk overdreven"
+},
+"msk144": {
+"nm": "MSK144",
+"sh": "meteoren",
+"t": "MSK144: de digitale modus voor meteoorscatter",
+"h": "Twee tonen, 1000 en 2000 Hz, met 2000 baud, in frames van 72 ms die zonder pauze herhaald worden: elk meteoorspoor laat er een paar door.",
+"l": "Salvo's van 0,1 tot 1 s, ongeveer 2,4 kHz breed, die met de „ping” van de meteoor opduiken en uitdoven. Op 50 en 144 MHz, met WSJT-X."
+},
+"jt65": {
+"nm": "JT65",
+"sh": "65 tonen",
+"t": "JT65: 65 tonen, heel traag",
+"h": "Eén synchronisatietoon en 64 datatonen op 2,7 Hz afstand (JT65A), 0,37 s per symbool, 47 s uitzending per minuut.",
+"l": "Een ladder van streepjes over ongeveer 180 Hz, met een synchronisatiestreep die steeds op dezelfde plek terugkomt. Gebruikt voor maanreflectie (JT65B en C) en heel zwakke signalen.",
+"n": "fragment van 20 s (een uitzending duurt 47 s)"
+},
+"tetra": {
+"nm": "TETRA",
+"sh": "π/4-DQPSK",
+"t": "TETRA: professioneel digitaal netwerk",
+"h": "Fasemodulatie π/4-DQPSK met 18 000 symbolen per seconde, vier tijdsloten, in kanalen van 25 kHz.",
+"l": "Een vol blok met afgeronde flanken, altijd aanwezig bij een basisstation; een schor geruis. Versleuteld: niet te beluisteren (blad 38).",
+"n": "verkleind"
+},
+"ndb": {
+"nm": "NDB-baken",
+"sh": "190–535 kHz",
+"t": "NDB: niet-gericht radiobaken",
+"h": "Een vaste draaggolf op langegolf, met een morseroepnaam van twee of drie letters op een toon (vaak 1020 Hz).",
+"l": "Een vaste streep in het midden en tijdens de roepnaam twee streepjes aan weerszijden. Ongeveer 190 tot 535 kHz, in SSB of CW (blad 10)."
+},
+"vor": {
+"nm": "VOR",
+"sh": "108–118 MHz",
+"t": "VOR: omnidirectioneel radiobaken",
+"h": "In AM: een richtingsafhankelijk signaal van 30 Hz, een hulpdraaggolf van 9960 Hz die met 30 Hz in frequentie gemoduleerd is (de referentie), en de morseroepnaam op 1020 Hz.",
+"l": "In het gedemoduleerde geluid: een laag gebrom op 30 Hz, een brede golvende streep rond 10 kHz en af en toe de roepnaam (blad 15).",
+"n": "gedemoduleerd geluid, schaal ÷ 2"
+},
+"ils": {
+"nm": "ILS",
+"sh": "90 + 150 Hz",
+"t": "ILS: landingsgeleiding (localizer)",
+"h": "In AM twee tonen van 90 en 150 Hz; hun verhouding vertelt het vliegtuig of het links of rechts van de as zit. De morseroepnaam begint met I.",
+"l": "In het gedemoduleerde geluid: twee heel lage strepen op 90 en 150 Hz en de roepnaam op 1020 Hz. Tussen 108,1 en 112 MHz; het glijpad zit rond 330 MHz (blad 15)."
+},
+"m10": {
+"nm": "Sondes M10 / M20",
+"sh": "Meteomodem",
+"t": "Radiosondes M10 en M20 (Meteomodem)",
+"h": "Eén frame per seconde in snelle FSK (ongeveer 9600 baud): breder dan de RS41. In Frankrijk opgelaten door Météo-France.",
+"l": "Elke seconde een breed salvo dat tijdens de vlucht langzaam verschuift; tussen 400 en 406 MHz (blad 18)."
+},
+"tpms": {
+"nm": "Banden (TPMS)",
+"sh": "433 MHz",
+"t": "Bandenspanningssensoren (TPMS)",
+"h": "Elk wiel zendt af en toe een FSK-salvo van enkele milliseconden: druk, temperatuur, identificatie.",
+"l": "Kleine losse salvo's op 433,92 MHz (of 315 MHz), vaak per twee, als er een auto voorbijrijdt. Gedecodeerd door rtl_433."
+},
+"als162": {
+"nm": "ALS162",
+"sh": "162 kHz",
+"t": "Tijdsignaal ALS162 (Allouis, 162 kHz)",
+"h": "De draaggolf van de vroegere langegolfzender van France Inter; de tijd is gecodeerd met kleine, onhoorbare fasemodulaties.",
+"l": "Een vaste streep, heel sterk in Frankrijk, aan het begin van elke seconde nauwelijks verbreed; je hebt een decoder nodig om de tijd te lezen (blad 10)."
+},
+"wwv": {
+"nm": "WWV",
+"sh": "2,5–20 MHz",
+"t": "Tijdsignaal WWV (Colorado)",
+"h": "In AM: elke seconde een „tik” van 5 ms op 1000 Hz, een toon van 500 of 600 Hz, een tijdcode op 100 Hz en een stem die UTC aankondigt.",
+"l": "In het gedemoduleerde geluid: een streep op 500 Hz die elke seconde onderbroken wordt, de tik op 1000 Hz en de code helemaal onderaan op 100 Hz (blad 10)."
+},
+"msf": {
+"nm": "MSF",
+"sh": "60 kHz",
+"t": "Tijdsignaal MSF (Anthorn, 60 kHz)",
+"h": "De draaggolf wordt aan het begin van elke seconde 0,1, 0,2 of 0,3 s uitgezet, afhankelijk van de bits, en 0,5 s om de minuut aan te geven.",
+"l": "Een vaste streep met elke seconde volledig zwarte gaten, langer dan bij DCF77 (blad 10)."
+},
+"type2": {
+"nm": "Zon type II",
+"sh": "schokgolf",
+"t": "Zon: radio-uitbarstingen van type II",
+"h": "De schokgolf van een coronale massa-ejectie laat het plasma langzaam steeds lager zenden, vaak in twee banden (de grondtoon en het dubbele).",
+"l": "Twee evenwijdige ruisbanden die enkele minuten lang rustig dalen. Vergelijk met type III, dat veel sneller is.",
+"n": "enkele minuten ingekort tot 6 s"
+},
+"tweeks": {
+"nm": "Tweeks",
+"sh": "VLF",
+"t": "Tweeks: de nachtelijke VLF-„pings”",
+"h": "'s Nachts kaatst de klik van een verre bliksem tussen aarde en ionosfeer heen en weer; frequenties bij de afsnijgrens (rond 1,7 kHz) komen het laatst aan.",
+"l": "Een kleine „ping” die daalt en rond 1,7 kHz stopt, soms met een echo op het dubbele; overal gekraak. Onder 10 kHz, 's nachts."
+},
+"hiss": {
+"nm": "VLF-ruis",
+"sh": "hiss",
+"t": "VLF-ruis (hiss)",
+"h": "Brede ruis van elektronen in de plasmasfeer, die stijgt en daalt met de magnetische activiteit.",
+"l": "Een band van ruis van enkele honderden Hz tot enkele kHz, zonder patroon, die langzaam aanzwelt en wegzakt."
+},
+"aurora": {
+"nm": "Radio-aurora",
+"sh": "Au",
+"t": "Aurorapropagatie (Au)",
+"h": "Het noorderlicht weerkaatst VHF-golven maar schudt ze heel snel door elkaar: elk signaal wordt over enkele honderden Hz uitgesmeerd.",
+"l": "CW wordt een schurend, als gefluisterd geruis; je hoort geen toon meer. Op 50 en 144 MHz, naar het noorden gericht tijdens magnetische stormen."
+},
+"galactic": {
+"nm": "Galactische ruis",
+"sh": "20–40 MHz",
+"t": "Ruis van de Melkweg",
+"h": "Het centrum van de Melkweg zendt een radiogeruis uit dat Karl Jansky in 1932 rond 20 MHz ontdekte. Het stijgt en daalt met de draaiing van de aarde.",
+"l": "Een achtergrondruis die langzaam stijgt en weer daalt, elke dag ongeveer 4 minuten vroeger. Zichtbaar met een eenvoudige dipool tussen 20 en 40 MHz.",
+"n": "een dag ingekort tot 12 s"
+},
+"cubesat": {
+"nm": "CubeSat",
+"sh": "9600 bd",
+"t": "CubeSat-telemetrie",
+"h": "Kleine satellieten zenden regelmatig hun metingen (batterij, temperaturen) in FSK of GMSK met 1200 of 9600 baud, rond 435–438 MHz.",
+"l": "Regelmatige salvo's die tijdens de overgang door het dopplereffect telkens wat lager liggen (blad 34).",
+"n": "verkleind, overgang versneld"
+},
+"issfm": {
+"nm": "ISS in FM",
+"sh": "145,800 MHz",
+"t": "Ruimtestation (ISS): spraak in FM",
+"h": "Astronauten praten met scholen en zendamateurs in FM op 145,800 MHz. Het station vliegt 28 000 km/u: de ontvangen frequentie daalt tijdens de overgang met ongeveer 3,5 kHz.",
+"l": "Een band FM-spraak die tijdens de overgang van 10 minuten langzaam van rechts naar links schuift (blad 34).",
+"n": "overgang van 10 min ingekort tot 10 s"
+},
+"buzzer": {
+"nm": "UVB-76 „The Buzzer”",
+"sh": "4625 kHz",
+"t": "UVB-76, „The Buzzer” (4625 kHz)",
+"h": "Een Russische militaire zender die al tientallen jaren een gezoem van ongeveer een seconde uitzendt, zo'n 25 keer per minuut, soms onderbroken door een gesproken bericht.",
+"l": "Een vaste draaggolf en bij elk gezoem een kolom dichte lijnen van boven naar beneden. Makkelijk te vinden op 4625 kHz in USB."
+},
+"pip": {
+"nm": "„The Pip”",
+"sh": "3756 / 5448 kHz",
+"t": "„The Pip”: eindeloze piepjes",
+"h": "Nog een Russisch militair kortegolfbaken, dat dag en nacht korte piepjes herhaalt, soms onderbroken door berichten.",
+"l": "Een vaste streep die in heel dichte puntjes gehakt is; in het oor een snel pip-pip-pip dat nooit stopt.",
+"n": "ritme benaderd"
+},
+"squeaky": {
+"nm": "„Squeaky Wheel”",
+"sh": "KG",
+"t": "„Squeaky Wheel”: het piepende wiel",
+"h": "Een Russisch militair kortegolfbaken, door luisteraars genoemd naar zijn herhaalde klankpatroon.",
+"l": "Een klein patroon van twee klanken, waarvan één stijgt, in een lus herhaald: als een piepend wiel.",
+"n": "benaderde nabootsing"
+},
+"codar": {
+"nm": "CODAR",
+"sh": "zeeradar",
+"t": "CODAR: radars voor zeestromingen",
+"h": "Kustradars zwiepen een- of tweemaal per seconde over een frequentieband om stromingen en golven te meten.",
+"l": "Regelmatige evenwijdige diagonalen en een herhaald „swish”; rond 4,5–5,5 MHz, 13 MHz en 25 MHz, vaak dag en nacht.",
+"n": "verkleind"
+},
+"stanag": {
+"nm": "STANAG 4285",
+"sh": "8-PSK",
+"t": "Militaire modem STANAG 4285",
+"h": "8-PSK-fasemodulatie met 2400 baud op een draaggolf van 1800 Hz, met elke 107 ms een testreeks om het kanaal te volgen.",
+"l": "Een vol blok van ongeveer 3 kHz; in het oor een geruis met een regelmatig gezoem (blad 35 bis)."
+},
+"link11": {
+"nm": "Link-11",
+"sh": "16 tonen",
+"t": "Link-11: datalink van de marine",
+"h": "Zestien tonen van 605 tot 2915 Hz tegelijk, elk 75 keer per seconde in fase gemoduleerd.",
+"l": "Een kam van regelmatige lijnen over 2,3 kHz, plus één lijn wat apart; in het oor een muzikaal gebrom (blad 35 bis)."
+},
+"numbers": {
+"nm": "Nummerstation",
+"sh": "stem",
+"t": "Nummerstation",
+"h": "Op een vast tijdstip een korte herkenningsmelodie, dan leest een (vaak synthetische) stem groepen van vijf cijfers voor, in AM of SSB.",
+"l": "De melodie als losse noten, dan regelmatige groepen lettergrepen met stiltes ertussen (blad 35 bis).",
+"n": "nagebootste stem, geen echte cijfers"
 }
 }
 }

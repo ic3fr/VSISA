@@ -1,6 +1,6 @@
 # VSISA – Virtual Simulator identification Signal Audio
 
-Identificateur de modes radio : **42 signaux simulés + 11 sons de l'espace en bonus** pour apprendre à reconnaître ce qu'on entend et ce qu'on voit sur un récepteur ou un SDR.
+Identificateur de modes radio : **78 signaux simulés** (dont 18 sons de l'espace et 7 curiosités des ondes courtes en bonus), avec un **mode nuit** en nuances de rouge pour apprendre à reconnaître ce qu'on entend et ce qu'on voit sur un récepteur ou un SDR.
 
 **Ouvrir la page : https://ic3fr.github.io/VSISA/** · 13 langues : menu en haut de la page, ou lien direct avec `#en`, `#es`, `#de`… à la fin de l'adresse.
 
@@ -13,15 +13,16 @@ Identificateur de modes radio : **42 signaux simulés + 11 sons de l'espace en b
 ## Les signaux
 - **Voix analogique** : AM, BLU / SSB, FM
 - **Télégraphie** : CW (Morse)
-- **Données** : RTTY, Packet APRS (AFSK 1200), PSK31, FT8, FT4, Olivia 8/250, Feld Hell, DMR / C4FM / NXDN / dPMR (4FSK), MT63, LoRa
+- **Données** : RTTY, Packet APRS (AFSK 1200), PSK31, FT8, FT4, Olivia 8/250, Feld Hell, DMR / C4FM / NXDN / dPMR (4FSK), MT63, LoRa, MSK144, JT65, TETRA
 - **Images** : SSTV (Martin M1), fax météo
-- **Aviation, marine et secours** : sirène ELT, balise 406 MHz, ADS-B, ACARS, AIS, NAVTEX, HFDL
+- **Aviation, marine et secours** : sirène ELT, balise 406 MHz, ADS-B, ACARS, AIS, NAVTEX, HFDL, balise NDB, VOR, ILS
 - **Appel, sous-tons et messagerie** : CTCSS, DTMF, Selcall CCIR, POCSAG / FLEX, ALE
-- **Radiosondes, capteurs et objets connectés** : radiosonde RS41, capteurs 433 MHz (OOK), Bluetooth (FHSS)
+- **Radiosondes, capteurs et objets connectés** : radiosondes RS41, M10 et M20, capteurs 433 MHz (OOK), capteurs de pneus (TPMS), Bluetooth (FHSS)
 - **Modes HF et curiosités** : WSPR, QRSS, texte dans le waterfall, VARA / Pactor / ARDOP, sondeur ionosphérique, radar transhorizon, parasites d'alimentation
-- **Diffusion et temps** : FM stéréo et RDS, DCF77
+- **Diffusion et temps** : FM stéréo et RDS, DCF77, ALS162, WWV, MSF
 - **Large bande** : OFDM, DSSS
-- **Bonus : sons de l'espace** : raie de l'hydrogène (1420 MHz), sursauts radio du Soleil, Jupiter (sursauts L et S), pulsar, échos de météores (GRAVES), sifflements VLF, chœur de l'aube, Spoutnik 1, effet Doppler d'un satellite, NOAA APT, écho de la Lune (EME)
+- **Bonus : sons de l'espace** : raie de l'hydrogène (1420 MHz), sursauts radio du Soleil (types II et III), Jupiter (sursauts L et S), pulsar, échos de météores (GRAVES), sifflements VLF, tweeks, souffle VLF, chœur de l'aube, aurore radio, bruit galactique, Spoutnik 1, effet Doppler d'un satellite, télémétrie de CubeSat, ISS en FM, NOAA APT, écho de la Lune (EME)
+- **Bonus : curiosités des ondes courtes** : UVB-76 « The Buzzer », « The Pip », « Squeaky Wheel », CODAR, STANAG 4285, Link-11, station de nombres (voix imitée)
 
 Les signaux radio (AM, FM, AIS, LoRa…) sont montrés comme sur l'écran d'un SDR, autour d'une fréquence intermédiaire simulée ; certains sont à échelle réduite ou accélérée (c'est indiqué en haut de l'écran).
 
@@ -42,7 +43,7 @@ Les signaux radio (AM, FM, AIS, LoRa…) sont montrés comme sur l'écran d'un S
 | 🇨🇳 中文 | 无线电模式识别器：42 种模拟信号，声音、频谱、瀑布图、测验。`#zh` |
 | 🇯🇵 日本語 | 無線モード識別器：42 種類のシミュレーション信号、音、スペクトラム、ウォーターフォール、クイズ。`#ja` |
 
-La langue est choisie automatiquement selon le navigateur ; le menu permet d'en changer.
+La langue est choisie automatiquement selon le navigateur ; le menu permet d'en changer. Le bouton **Mode nuit** passe toute la page en nuances de rouge pour garder la vision de nuit (le choix est retenu).
 
 ## Modifier la page
 `index.html` est construite par `python3 src/build.py` à partir de `src/template.html` et des fichiers de langue `src/i18n/<langue>.json`. Corrige une traduction dans le fichier de sa langue, puis relance la commande.

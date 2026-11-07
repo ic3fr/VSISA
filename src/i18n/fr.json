@@ -29,7 +29,9 @@
 "lang": "Langue",
 "signals": "Signaux",
 "f1": "Signaux simulés dans la page (12 000 échantillons par seconde), d'après les signaux de la fiche 5 bis du livre OpenBookRadio, plus Olivia, FT4 et Feld Hell (fiche 26). Pour les signaux radio (AM, FM, AIS, LoRa…), on voit la fréquence intermédiaire simulée, comme sur l'écran d'un SDR ; certains sont à échelle réduite ou accélérée, c'est indiqué.",
-"f2": "Le temps descend dans le waterfall et dans l'empreinte. Licence CC BY-NC-SA 4.0, gratuit, ne pas vendre."
+"f2": "Le temps descend dans le waterfall et dans l'empreinte. Licence CC BY-NC-SA 4.0, gratuit, ne pas vendre.",
+"night": "Mode nuit",
+"day": "Mode jour"
 },
 "groups": [
 "Voix analogique",
@@ -42,7 +44,8 @@
 "Modes HF et curiosités",
 "Diffusion et temps",
 "Large bande",
-"Bonus : sons de l'espace"
+"Bonus : sons de l'espace",
+"Bonus : curiosités des ondes courtes"
 ],
 "modes": {
 "406": {
@@ -550,6 +553,192 @@
 "h": "Un signal envoyé vers la Lune revient environ 2,5 s plus tard, énormément affaibli, un peu élargi et décalé par le Doppler.",
 "l": "On entend son propre « bip », puis son écho faible et un peu flou 2,5 s après. Les radioamateurs le font en CW ou en JT65, sur 144 MHz et plus (fiche 1).",
 "n": "écho très exagéré"
+},
+"msk144": {
+"nm": "MSK144",
+"sh": "météores",
+"t": "MSK144 : le numérique des météores",
+"h": "Deux tonalités, 1000 et 2000 Hz, à 2000 bauds, en trames de 72 ms répétées sans arrêt : chaque passage de météore en laisse passer quelques-unes.",
+"l": "Des salves de 0,1 à 1 s, d'environ 2,4 kHz de large, qui apparaissent puis s'éteignent avec le « ping » du météore. Sur 50 et 144 MHz, avec WSJT-X."
+},
+"jt65": {
+"nm": "JT65",
+"sh": "65 tons",
+"t": "JT65 : 65 tonalités, très lent",
+"h": "Une tonalité de synchro et 64 tonalités de données espacées de 2,7 Hz (JT65A), 0,37 s par symbole, 47 s d'émission par minute.",
+"l": "Une échelle de petits traits sur environ 180 Hz, avec un trait de synchro qui revient sans cesse au même endroit. Utilisé pour la réflexion sur la Lune (JT65B et C) et les signaux très faibles.",
+"n": "extrait de 20 s (une émission dure 47 s)"
+},
+"tetra": {
+"nm": "TETRA",
+"sh": "π/4-DQPSK",
+"t": "TETRA : réseau numérique professionnel",
+"h": "Une modulation de phase π/4-DQPSK à 18 000 symboles par seconde, quatre voies partagées dans le temps, sur des canaux de 25 kHz.",
+"l": "Un bloc plein aux flancs arrondis, présent en permanence près d'un relais ; un souffle rauque. Chiffré : on ne peut pas l'écouter (fiche 38).",
+"n": "échelle réduite"
+},
+"ndb": {
+"nm": "Balise NDB",
+"sh": "190–535 kHz",
+"t": "Balise NDB : radiophare non directionnel",
+"h": "Une porteuse fixe en grandes ondes, avec un indicatif Morse de deux ou trois lettres envoyé sur une tonalité (souvent 1020 Hz).",
+"l": "Un trait fixe au centre et, pendant l'indicatif, deux petits traits de chaque côté. Entre 190 et 535 kHz environ, en BLU ou CW (fiche 10)."
+},
+"vor": {
+"nm": "VOR",
+"sh": "108–118 MHz",
+"t": "VOR : radiophare omnidirectionnel",
+"h": "En AM, un signal à 30 Hz qui dépend de la direction, une sous-porteuse à 9960 Hz modulée en fréquence à 30 Hz (la référence), et l'indicatif Morse sur 1020 Hz.",
+"l": "Dans le son démodulé : un ronflement grave à 30 Hz, un trait large vers 10 kHz qui ondule, et l'indicatif de temps en temps (fiche 15).",
+"n": "son démodulé, échelle ÷ 2"
+},
+"ils": {
+"nm": "ILS",
+"sh": "90 + 150 Hz",
+"t": "ILS : guidage à l'atterrissage (localizer)",
+"h": "En AM, deux tonalités de 90 et 150 Hz ; leur rapport dit à l'avion s'il est à gauche ou à droite de l'axe. L'indicatif Morse commence par I.",
+"l": "Dans le son démodulé : deux traits très bas, à 90 et 150 Hz, et l'indicatif sur 1020 Hz. Entre 108,1 et 112 MHz ; le glide est vers 330 MHz (fiche 15)."
+},
+"m10": {
+"nm": "Sondes M10 / M20",
+"sh": "Meteomodem",
+"t": "Radiosondes M10 et M20 (Meteomodem)",
+"h": "Une trame par seconde, en FSK rapide (environ 9600 bauds) : plus large que la RS41. Elles sont lancées en France par Météo-France.",
+"l": "Une salve large toutes les secondes, qui dérive lentement pendant le vol ; entre 400 et 406 MHz (fiche 18)."
+},
+"tpms": {
+"nm": "Pneus (TPMS)",
+"sh": "433 MHz",
+"t": "Capteurs de pression des pneus (TPMS)",
+"h": "Chaque roue envoie de temps en temps une salve FSK de quelques millisecondes : pression, température, identifiant.",
+"l": "Des petites salves isolées sur 433,92 MHz (ou 315 MHz), souvent par deux, au passage d'une voiture. Décodées par rtl_433."
+},
+"als162": {
+"nm": "ALS162",
+"sh": "162 kHz",
+"t": "Signal horaire ALS162 (Allouis, 162 kHz)",
+"h": "La porteuse des anciennes grandes ondes de France Inter ; l'heure est codée par de petites modulations de phase, inaudibles.",
+"l": "Un trait fixe, très fort en France, à peine élargi au début de chaque seconde ; il faut un décodeur pour lire l'heure (fiche 10)."
+},
+"wwv": {
+"nm": "WWV",
+"sh": "2,5–20 MHz",
+"t": "Signal horaire WWV (Colorado)",
+"h": "En AM : un « tic » de 5 ms à 1000 Hz chaque seconde, une tonalité de 500 ou 600 Hz, un code horaire sur 100 Hz et une voix qui annonce l'heure UTC.",
+"l": "Dans le son démodulé : un trait à 500 Hz coupé à chaque seconde, le tic à 1000 Hz, et le code tout en bas à 100 Hz (fiche 10)."
+},
+"msf": {
+"nm": "MSF",
+"sh": "60 kHz",
+"t": "Signal horaire MSF (Anthorn, 60 kHz)",
+"h": "La porteuse est coupée au début de chaque seconde pendant 0,1, 0,2 ou 0,3 s selon les bits, et pendant 0,5 s pour marquer la minute.",
+"l": "Un trait fixe avec des trous noirs complets chaque seconde, plus longs qu'avec DCF77 (fiche 10)."
+},
+"type2": {
+"nm": "Soleil type II",
+"sh": "onde de choc",
+"t": "Soleil : sursauts radio de type II",
+"h": "L'onde de choc d'une éjection de masse coronale fait émettre le plasma de plus en plus bas, lentement, souvent en deux bandes (la fondamentale et son double).",
+"l": "Deux bandes de bruit parallèles qui descendent doucement pendant plusieurs minutes. À comparer avec les sursauts de type III, beaucoup plus rapides.",
+"n": "plusieurs minutes ramenées à 6 s"
+},
+"tweeks": {
+"nm": "Tweeks",
+"sh": "VLF",
+"t": "Tweeks : les « ping » de la nuit en VLF",
+"h": "La nuit, le claquement d'un éclair lointain rebondit entre le sol et l'ionosphère ; les fréquences proches de la coupure (vers 1,7 kHz) arrivent en dernier.",
+"l": "Un petit « ping » qui descend et s'arrête vers 1,7 kHz, avec parfois un écho au double ; des craquements partout. Sous 10 kHz, la nuit."
+},
+"hiss": {
+"nm": "Souffle VLF",
+"sh": "hiss",
+"t": "Souffle VLF (hiss)",
+"h": "Un bruit large émis par les électrons de la plasmasphère, qui monte et descend avec l'activité magnétique.",
+"l": "Une bande de souffle de quelques centaines de Hz à quelques kHz, sans motif, qui enfle et retombe lentement."
+},
+"aurora": {
+"nm": "Aurore radio",
+"sh": "Au",
+"t": "Propagation aurorale (Au)",
+"h": "Une aurore boréale renvoie les ondes VHF, mais en les agitant très vite : chaque signal est étalé sur plusieurs centaines de Hz.",
+"l": "La CW devient un souffle râpeux, comme chuchotée ; on n'entend plus de note. Sur 50 et 144 MHz, en visant le nord pendant les orages magnétiques."
+},
+"galactic": {
+"nm": "Bruit galactique",
+"sh": "20–40 MHz",
+"t": "Bruit de la Voie lactée",
+"h": "Le centre de la galaxie émet un souffle radio que Karl Jansky a découvert en 1932 vers 20 MHz. Il monte et baisse au rythme de la rotation de la Terre.",
+"l": "Un bruit de fond qui augmente lentement puis redescend, chaque jour environ 4 minutes plus tôt. Visible avec un simple dipôle entre 20 et 40 MHz.",
+"n": "une journée ramenée à 12 s"
+},
+"cubesat": {
+"nm": "CubeSat",
+"sh": "9600 bd",
+"t": "Télémétrie de CubeSat",
+"h": "Les petits satellites envoient régulièrement leurs mesures (batterie, températures) en FSK ou GMSK à 1200 ou 9600 bauds, vers 435–438 MHz.",
+"l": "Des salves régulières qui glissent vers le bas d'une fois sur l'autre, par effet Doppler, pendant le passage (fiche 34).",
+"n": "échelle réduite, passage accéléré"
+},
+"issfm": {
+"nm": "ISS en FM",
+"sh": "145,800 MHz",
+"t": "Station spatiale (ISS) : voix en FM",
+"h": "Les astronautes parlent avec des écoles et des radioamateurs en FM sur 145,800 MHz. La station file à 28 000 km/h : la fréquence reçue baisse d'environ 3,5 kHz pendant le passage.",
+"l": "Une bande de voix FM qui descend lentement de droite à gauche pendant les 10 minutes du passage (fiche 34).",
+"n": "passage de 10 min ramené à 10 s"
+},
+"buzzer": {
+"nm": "UVB-76 « The Buzzer »",
+"sh": "4625 kHz",
+"t": "UVB-76, « The Buzzer » (4625 kHz)",
+"h": "Une station militaire russe qui émet depuis des décennies un bourdonnement d'environ une seconde, répété environ 25 fois par minute, parfois interrompu par un message vocal.",
+"l": "Une porteuse fixe et, à chaque bourdonnement, une colonne de raies serrées de haut en bas. Facile à trouver sur 4625 kHz en USB."
+},
+"pip": {
+"nm": "« The Pip »",
+"sh": "3756 / 5448 kHz",
+"t": "« The Pip » : bips sans fin",
+"h": "Une autre balise militaire russe des ondes courtes, qui répète de petits bips brefs, jour et nuit, parfois interrompus par des messages.",
+"l": "Un trait fixe découpé en pointillés très serrés ; à l'oreille, un pip-pip-pip rapide qui ne s'arrête jamais.",
+"n": "rythme approché"
+},
+"squeaky": {
+"nm": "« Squeaky Wheel »",
+"sh": "OC",
+"t": "« Squeaky Wheel » : la roue qui grince",
+"h": "Une balise militaire russe des ondes courtes, nommée par les écouteurs d'après son motif sonore répété.",
+"l": "Un petit motif de deux sons, dont un qui monte, répété en boucle : comme une roue qui grince.",
+"n": "imitation approchée"
+},
+"codar": {
+"nm": "CODAR",
+"sh": "radar océan",
+"t": "CODAR : radars des courants marins",
+"h": "Des radars côtiers balaient une bande de fréquences, une ou deux fois par seconde, pour mesurer les courants et les vagues.",
+"l": "Des diagonales parallèles régulières, et un « swish » répété ; vers 4,5–5,5 MHz, 13 MHz et 25 MHz, souvent jour et nuit.",
+"n": "échelle réduite"
+},
+"stanag": {
+"nm": "STANAG 4285",
+"sh": "8-PSK",
+"t": "Modem militaire STANAG 4285",
+"h": "Une modulation de phase 8-PSK à 2400 bauds sur une porteuse de 1800 Hz, avec une séquence de test toutes les 107 ms pour suivre le canal.",
+"l": "Un bloc plein d'environ 3 kHz ; à l'oreille, un souffle avec un bourdonnement régulier (fiche 35 bis)."
+},
+"link11": {
+"nm": "Link-11",
+"sh": "16 tons",
+"t": "Link-11 : liaison de données navale",
+"h": "Seize tonalités de 605 à 2915 Hz émises ensemble, chacune modulée en phase 75 fois par seconde.",
+"l": "Un peigne de raies régulières sur 2,3 kHz, plus une raie un peu à l'écart ; à l'oreille, un ronflement musical (fiche 35 bis)."
+},
+"numbers": {
+"nm": "Station de nombres",
+"sh": "voix",
+"t": "Station de nombres",
+"h": "À heure fixe, une petite mélodie d'appel, puis une voix (souvent synthétique) lit des groupes de cinq chiffres, en AM ou en BLU.",
+"l": "La mélodie en notes isolées, puis des groupes de syllabes réguliers séparés par des silences (fiche 35 bis).",
+"n": "voix imitée, sans vrais chiffres"
 }
 }
 }

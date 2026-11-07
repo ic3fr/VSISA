@@ -29,7 +29,9 @@
 "lang": "Sprache",
 "signals": "Signale",
 "f1": "Im Browser simulierte Signale (12 000 Abtastwerte pro Sekunde), nach den Signalen von Blatt 5 bis des Buchs OpenBookRadio, dazu Olivia, FT4 und Feld Hell (Blatt 26). Bei Funksignalen (AM, FM, AIS, LoRa…) sieht man die simulierte Zwischenfrequenz wie auf einem SDR-Bildschirm; manche sind verkleinert oder beschleunigt, das ist angegeben.",
-"f2": "Die Zeit läuft im Wasserfall und im Abdruck nach unten. Lizenz CC BY-NC-SA 4.0, kostenlos, nicht verkaufen."
+"f2": "Die Zeit läuft im Wasserfall und im Abdruck nach unten. Lizenz CC BY-NC-SA 4.0, kostenlos, nicht verkaufen.",
+"night": "Nachtmodus",
+"day": "Tagmodus"
 },
 "groups": [
 "Analoge Sprache",
@@ -42,7 +44,8 @@
 "KW-Betriebsarten und Kuriositäten",
 "Rundfunk und Zeit",
 "Breitband",
-"Bonus: Klänge aus dem All"
+"Bonus: Klänge aus dem All",
+"Bonus: Kuriositäten der Kurzwelle"
 ],
 "modes": {
 "am": {
@@ -484,6 +487,192 @@
 "h": "Ein zum Mond gesendetes Signal kommt etwa 2,5 s später zurück, enorm geschwächt, etwas verbreitert und durch Doppler verschoben.",
 "l": "Man hört das eigene „Piep“ und 2,5 s später sein schwaches, leicht verwaschenes Echo. Funkamateure machen das in CW oder JT65, ab 144 MHz (Blatt 1).",
 "n": "Echo stark übertrieben"
+},
+"msk144": {
+"nm": "MSK144",
+"sh": "Meteore",
+"t": "MSK144: die Digitalbetriebsart für Meteorscatter",
+"h": "Zwei Töne, 1000 und 2000 Hz, mit 2000 Baud, in Rahmen von 72 ms ohne Pause wiederholt: jede Meteorspur lässt einige davon durch.",
+"l": "Pakete von 0,1 bis 1 s, etwa 2,4 kHz breit, die mit dem „Ping“ des Meteors erscheinen und verlöschen. Auf 50 und 144 MHz, mit WSJT-X."
+},
+"jt65": {
+"nm": "JT65",
+"sh": "65 Töne",
+"t": "JT65: 65 Töne, sehr langsam",
+"h": "Ein Synchronton und 64 Datentöne im Abstand von 2,7 Hz (JT65A), 0,37 s pro Symbol, 47 s Sendung pro Minute.",
+"l": "Eine Leiter kleiner Striche über etwa 180 Hz, mit einem Synchronstrich, der immer an dieselbe Stelle zurückkehrt. Für Mondreflexion (JT65B und C) und sehr schwache Signale.",
+"n": "Auszug von 20 s (eine Sendung dauert 47 s)"
+},
+"tetra": {
+"nm": "TETRA",
+"sh": "π/4-DQPSK",
+"t": "TETRA: professioneller Digitalfunk",
+"h": "Phasenmodulation π/4-DQPSK mit 18 000 Symbolen pro Sekunde, vier Zeitschlitze, in 25-kHz-Kanälen.",
+"l": "Ein voller Block mit runden Flanken, nahe einer Basisstation ständig da; ein raues Rauschen. Verschlüsselt: nicht abhörbar (Blatt 38).",
+"n": "verkleinert"
+},
+"ndb": {
+"nm": "NDB-Funkfeuer",
+"sh": "190–535 kHz",
+"t": "NDB: ungerichtetes Funkfeuer",
+"h": "Ein fester Träger auf Langwelle mit einer Morsekennung aus zwei oder drei Buchstaben, auf einem Ton gesendet (oft 1020 Hz).",
+"l": "Ein fester Strich in der Mitte und während der Kennung zwei kleine Striche links und rechts. Etwa 190 bis 535 kHz, in SSB oder CW (Blatt 10)."
+},
+"vor": {
+"nm": "VOR",
+"sh": "108–118 MHz",
+"t": "VOR: UKW-Drehfunkfeuer",
+"h": "In AM: ein richtungsabhängiges 30-Hz-Signal, ein mit 30 Hz frequenzmodulierter 9960-Hz-Hilfsträger (die Referenz) und die Morsekennung auf 1020 Hz.",
+"l": "Im demodulierten Ton: ein tiefes 30-Hz-Brummen, ein breiter, welliger Strich um 10 kHz und ab und zu die Kennung (Blatt 15).",
+"n": "demodulierter Ton, Maßstab ÷ 2"
+},
+"ils": {
+"nm": "ILS",
+"sh": "90 + 150 Hz",
+"t": "ILS: Landeführung (Localizer)",
+"h": "In AM zwei Töne von 90 und 150 Hz; ihr Verhältnis sagt dem Flugzeug, ob es links oder rechts der Achse ist. Die Morsekennung beginnt mit I.",
+"l": "Im demodulierten Ton: zwei sehr tiefe Striche bei 90 und 150 Hz und die Kennung auf 1020 Hz. Zwischen 108,1 und 112 MHz; der Gleitweg liegt um 330 MHz (Blatt 15)."
+},
+"m10": {
+"nm": "Sonden M10 / M20",
+"sh": "Meteomodem",
+"t": "Radiosonden M10 und M20 (Meteomodem)",
+"h": "Ein Rahmen pro Sekunde in schneller FSK (etwa 9600 Baud): breiter als die RS41. In Frankreich von Météo-France gestartet.",
+"l": "Jede Sekunde ein breites Paket, das während des Flugs langsam driftet; zwischen 400 und 406 MHz (Blatt 18)."
+},
+"tpms": {
+"nm": "Reifen (TPMS)",
+"sh": "433 MHz",
+"t": "Reifendrucksensoren (TPMS)",
+"h": "Jedes Rad sendet ab und zu ein FSK-Paket von einigen Millisekunden: Druck, Temperatur, Kennung.",
+"l": "Kleine einzelne Pakete auf 433,92 MHz (oder 315 MHz), oft paarweise, wenn ein Auto vorbeifährt. Von rtl_433 dekodiert."
+},
+"als162": {
+"nm": "ALS162",
+"sh": "162 kHz",
+"t": "Zeitsignal ALS162 (Allouis, 162 kHz)",
+"h": "Der Träger der früheren Langwelle von France Inter; die Zeit ist in kleinen, unhörbaren Phasenmodulationen codiert.",
+"l": "Ein fester Strich, in Frankreich sehr stark, am Anfang jeder Sekunde kaum verbreitert; zum Lesen der Zeit braucht man einen Dekoder (Blatt 10)."
+},
+"wwv": {
+"nm": "WWV",
+"sh": "2,5–20 MHz",
+"t": "Zeitsignal WWV (Colorado)",
+"h": "In AM: jede Sekunde ein 5-ms-„Tick“ auf 1000 Hz, ein 500- oder 600-Hz-Ton, ein Zeitcode auf 100 Hz und eine Stimme, die UTC ansagt.",
+"l": "Im demodulierten Ton: ein 500-Hz-Strich, jede Sekunde unterbrochen, der Tick auf 1000 Hz und ganz unten der Code auf 100 Hz (Blatt 10)."
+},
+"msf": {
+"nm": "MSF",
+"sh": "60 kHz",
+"t": "Zeitsignal MSF (Anthorn, 60 kHz)",
+"h": "Der Träger wird am Anfang jeder Sekunde je nach Bits für 0,1, 0,2 oder 0,3 s abgeschaltet, und für 0,5 s zur Minutenmarke.",
+"l": "Ein fester Strich mit vollständig schwarzen Lücken jede Sekunde, länger als bei DCF77 (Blatt 10)."
+},
+"type2": {
+"nm": "Sonne Typ II",
+"sh": "Stoßwelle",
+"t": "Sonne: Radiobursts vom Typ II",
+"h": "Die Stoßwelle eines koronalen Massenauswurfs lässt das Plasma langsam immer tiefer senden, oft in zwei Bändern (Grundwelle und Doppeltes).",
+"l": "Zwei parallele Rauschbänder, die über mehrere Minuten sanft nach unten wandern. Zum Vergleich: Typ-III-Bursts sind viel schneller.",
+"n": "mehrere Minuten auf 6 s verkürzt"
+},
+"tweeks": {
+"nm": "Tweeks",
+"sh": "VLF",
+"t": "Tweeks: die nächtlichen VLF-„Pings“",
+"h": "Nachts prallt der Knack eines fernen Blitzes zwischen Boden und Ionosphäre hin und her; Frequenzen nahe der Grenzfrequenz (um 1,7 kHz) kommen zuletzt an.",
+"l": "Ein kleines „Ping“, das abfällt und um 1,7 kHz endet, manchmal mit einem Echo bei der doppelten Frequenz; überall Knistern. Unter 10 kHz, nachts."
+},
+"hiss": {
+"nm": "VLF-Rauschen",
+"sh": "Hiss",
+"t": "VLF-Rauschen (Hiss)",
+"h": "Ein breites Rauschen der Elektronen in der Plasmasphäre, das mit der magnetischen Aktivität steigt und fällt.",
+"l": "Ein Rauschband von einigen hundert Hz bis einigen kHz, ohne Muster, das langsam anschwillt und abklingt."
+},
+"aurora": {
+"nm": "Radio-Aurora",
+"sh": "Au",
+"t": "Aurora-Ausbreitung (Au)",
+"h": "Ein Polarlicht reflektiert UKW-Wellen, schüttelt sie aber sehr schnell: jedes Signal wird über einige hundert Hz verteilt.",
+"l": "CW wird zu einem rauen, wie geflüsterten Rauschen; man hört keinen Ton mehr. Auf 50 und 144 MHz, Richtung Norden bei Magnetstürmen."
+},
+"galactic": {
+"nm": "Galaktisches Rauschen",
+"sh": "20–40 MHz",
+"t": "Rauschen der Milchstraße",
+"h": "Das Zentrum der Galaxis sendet ein Radiorauschen, das Karl Jansky 1932 um 20 MHz entdeckte. Es steigt und fällt mit der Erddrehung.",
+"l": "Ein Grundrauschen, das langsam steigt und wieder fällt, jeden Tag etwa 4 Minuten früher. Mit einem einfachen Dipol zwischen 20 und 40 MHz sichtbar.",
+"n": "ein Tag auf 12 s verkürzt"
+},
+"cubesat": {
+"nm": "CubeSat",
+"sh": "9600 Bd",
+"t": "CubeSat-Telemetrie",
+"h": "Kleinsatelliten senden regelmäßig ihre Messwerte (Batterie, Temperaturen) in FSK oder GMSK mit 1200 oder 9600 Baud um 435–438 MHz.",
+"l": "Regelmäßige Pakete, die während des Überflugs durch den Dopplereffekt jedes Mal etwas tiefer liegen (Blatt 34).",
+"n": "verkleinert, Überflug beschleunigt"
+},
+"issfm": {
+"nm": "ISS in FM",
+"sh": "145,800 MHz",
+"t": "Raumstation (ISS): Sprache in FM",
+"h": "Astronauten sprechen mit Schulen und Funkamateuren in FM auf 145,800 MHz. Die Station fliegt mit 28 000 km/h: die Empfangsfrequenz sinkt während des Überflugs um etwa 3,5 kHz.",
+"l": "Ein FM-Sprachband, das während des 10-minütigen Überflugs langsam von rechts nach links wandert (Blatt 34).",
+"n": "10-min-Überflug auf 10 s verkürzt"
+},
+"buzzer": {
+"nm": "UVB-76 „The Buzzer“",
+"sh": "4625 kHz",
+"t": "UVB-76, „The Buzzer“ (4625 kHz)",
+"h": "Ein russischer Militärsender, der seit Jahrzehnten ein etwa einsekündiges Summen sendet, etwa 25-mal pro Minute, manchmal unterbrochen von einer Sprachnachricht.",
+"l": "Ein fester Träger und bei jedem Summen eine Säule dichter Linien von oben nach unten. Leicht auf 4625 kHz in USB zu finden."
+},
+"pip": {
+"nm": "„The Pip“",
+"sh": "3756 / 5448 kHz",
+"t": "„The Pip“: endlose Pieptöne",
+"h": "Eine weitere russische Militärbake auf Kurzwelle, die Tag und Nacht kurze Pieptöne wiederholt, manchmal von Nachrichten unterbrochen.",
+"l": "Ein fester Strich, in sehr dichte Punkte zerhackt; im Ohr ein schnelles Pip-pip-pip ohne Ende.",
+"n": "Rhythmus angenähert"
+},
+"squeaky": {
+"nm": "„Squeaky Wheel“",
+"sh": "KW",
+"t": "„Squeaky Wheel“: das quietschende Rad",
+"h": "Eine russische Militärbake auf Kurzwelle, von Hörern nach ihrem wiederholten Klangmuster benannt.",
+"l": "Ein kleines Muster aus zwei Tönen, einer davon steigend, in Schleife wiederholt: wie ein quietschendes Rad.",
+"n": "angenäherte Nachahmung"
+},
+"codar": {
+"nm": "CODAR",
+"sh": "Meeresradar",
+"t": "CODAR: Radare für Meeresströmungen",
+"h": "Küstenradare überstreichen ein- oder zweimal pro Sekunde ein Frequenzband, um Strömungen und Wellen zu messen.",
+"l": "Regelmäßige parallele Diagonalen und ein wiederholtes „Swish“; um 4,5–5,5 MHz, 13 MHz und 25 MHz, oft Tag und Nacht.",
+"n": "verkleinert"
+},
+"stanag": {
+"nm": "STANAG 4285",
+"sh": "8-PSK",
+"t": "Militärmodem STANAG 4285",
+"h": "8-PSK-Phasenmodulation mit 2400 Baud auf einem 1800-Hz-Träger, mit einer Testsequenz alle 107 ms zur Kanalverfolgung.",
+"l": "Ein voller Block von etwa 3 kHz; im Ohr ein Rauschen mit regelmäßigem Summen (Blatt 35 bis)."
+},
+"link11": {
+"nm": "Link-11",
+"sh": "16 Töne",
+"t": "Link-11: Marine-Datenverbindung",
+"h": "Sechzehn Töne von 605 bis 2915 Hz gleichzeitig, jeder 75-mal pro Sekunde phasenmoduliert.",
+"l": "Ein Kamm regelmäßiger Linien über 2,3 kHz, dazu eine etwas abseits liegende Linie; im Ohr ein musikalisches Brummen (Blatt 35 bis)."
+},
+"numbers": {
+"nm": "Zahlensender",
+"sh": "Stimme",
+"t": "Zahlensender",
+"h": "Zu fester Zeit eine kurze Erkennungsmelodie, dann liest eine (oft synthetische) Stimme Gruppen von fünf Ziffern, in AM oder SSB.",
+"l": "Die Melodie als einzelne Töne, dann regelmäßige Silbengruppen mit Pausen dazwischen (Blatt 35 bis).",
+"n": "nachgeahmte Stimme, keine echten Ziffern"
 }
 }
 }
