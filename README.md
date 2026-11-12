@@ -4,7 +4,7 @@
 
 [![Visits](https://abacus.jasoncameron.dev/get/ic3fr-vsisa/visits/shield?text=visits)](https://ic3fr.github.io/VSISA/) [![Plays](https://abacus.jasoncameron.dev/get/ic3fr-vsisa/plays/shield?text=plays)](https://ic3fr.github.io/VSISA/)
 
-Radio mode identifier: **78 simulated signals** (including 18 sounds from space and 7 shortwave curiosities as bonuses), with a red **night mode**, to learn to recognise what you hear and see on a receiver or an SDR.
+Radio mode identifier: **78 simulated signals** (including 18 sounds from space and 7 shortwave curiosities as bonuses), with three **display modes** (day, red night mode, green phosphor like old computer screens), to learn to recognise what you hear and see on a receiver or an SDR.
 
 **Open the page: https://ic3fr.github.io/VSISA/** · **[📥 Download the OpenBookRadio book](https://github.com/ic3fr/OpenBookRadio/releases)** (free, PDF and EPUB) · 13 languages: menu at the top of the page, or a direct link ending in `#en`, `#fr`, `#de`…
 
@@ -12,7 +12,7 @@ Radio mode identifier: **78 simulated signals** (including 18 sounds from space 
 - For each signal: the **sound**, the live **spectrum** and **waterfall**, the full **footprint** of the signal, and a fact card (principle, what it looks like on screen, sheet number in the book).
 - **Mystery sound**: a random signal to identify among four answers, with a score.
 - Settings: added noise, volume, loop playback; the cursor shows the frequency.
-- **Night mode** button: the whole page turns to shades of red to keep your night vision (your choice is remembered).
+- **Display** menu: day, **night** (shades of red, to keep your night vision) or **green phosphor** (like old computer terminals, with scan lines); your choice is remembered.
 - A single HTML page, nothing to install, that works **offline**: download `index.html` and open it in a browser.
 
 ## The signals

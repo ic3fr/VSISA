@@ -35,7 +35,11 @@
 "visits": "visits",
 "plays": "plays",
 "book_dl": "Download the book",
-"book_dl2": "Download the OpenBookRadio book (free, PDF and EPUB, 13 languages)"
+"book_dl2": "Download the OpenBookRadio book (free, PDF and EPUB, 13 languages)",
+"display": "Display",
+"theme_day": "Day",
+"theme_night": "Night (red)",
+"theme_phos": "Green phosphor"
 },
 "groups": [
 "Analogue voice",

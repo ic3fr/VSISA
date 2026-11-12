@@ -35,7 +35,11 @@
 "visits": "次访问",
 "plays": "次收听",
 "book_dl": "下载本书",
-"book_dl2": "下载 OpenBookRadio 一书（免费，PDF 和 EPUB，13 种语言）"
+"book_dl2": "下载 OpenBookRadio 一书（免费，PDF 和 EPUB，13 种语言）",
+"display": "显示",
+"theme_day": "日间",
+"theme_night": "夜间（红色）",
+"theme_phos": "绿色荧光屏"
 },
 "groups": [
 "模拟语音",

@@ -2,7 +2,7 @@
 <title>Identificateur de modes radio</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=VT323&display=swap">
 <style>
 /* Layout : un panneau de récepteur. Liste des signaux à gauche, spectre + waterfall en direct au centre, empreinte + fiche en dessous. */
 :root{
@@ -16,6 +16,15 @@
 }
 html.night{--bg:#0a0000;--panel:#140202;--panel-2:#1e0404;--line:#3d0a08;--fg:#e2533f;--muted:#9c3428;--accent:#ff3b2f;--accent-ink:#140000;--ok:#ff8a6a;--bad:#c22a1c}
 html.night .screen{background:#000}
+html.phos{--bg:#010801;--panel:#031203;--panel-2:#052005;--line:#0e4a12;--fg:#39ff6a;--muted:#1fa83f;--accent:#7dff9a;--accent-ink:#011a04;--ok:#b6ffc6;--bad:#ffd84a;
+  --f-display:"VT323",ui-monospace,Menlo,Consolas,monospace;--f-body:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;color-scheme:dark}
+html.phos .screen{background:#000}
+html.phos body{text-shadow:0 0 4px rgba(57,255,106,.45)}
+html.phos h1,html.phos .now h2,html.phos .card h3{font-weight:400;letter-spacing:.03em}
+html.phos h1{font-size:clamp(2.1rem,5vw,3rem)}
+html.phos .btn,html.phos select,html.phos .mode,html.phos .ref,html.phos .screen,html.phos .card{border-radius:0}
+html.phos body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:50;background:repeating-linear-gradient(to bottom,rgba(0,0,0,0) 0,rgba(0,0,0,0) 2px,rgba(0,0,0,.22) 3px);box-shadow:inset 0 0 120px rgba(0,0,0,.65)}
+html.phos canvas{filter:drop-shadow(0 0 2px rgba(57,255,106,.35))}
 *{box-sizing:border-box}
 html,body{background:var(--bg);color:var(--fg)}
 body{font-family:var(--f-body);font-size:15px;line-height:1.5;
@@ -95,7 +104,8 @@ footer p{margin:0;max-width:110ch}
       <label class="langlbl" for="lang"><span id="tLang">Langue</span>
         <select id="lang"></select></label>
       <a class="btn book" id="tBook" href="https://github.com/ic3fr/OpenBookRadio/releases" target="_blank" rel="noopener">Télécharger le livre</a>
-      <button class="btn" id="night" type="button" aria-pressed="false">Mode nuit</button>
+      <label class="langlbl" for="theme"><span id="tTheme">Affichage</span>
+        <select id="theme"><option value="day">Jour</option><option value="night">Nuit (rouge)</option><option value="phos">Phosphore vert</option></select></label>
       <button class="btn" id="mystery" type="button">Son mystère</button>
     </div>
   </header>
@@ -601,14 +611,16 @@ function spectrumRaw(sig,center,m){
     row[x]=10*Math.log10(p+1e-14); }
   return row;
 }
-let NIGHT=false;
+let THEME="day";
 const PALS={day:{bg:"#05080c",grid:"rgba(141,155,173,.18)",grid2:"rgba(141,155,173,.12)",lab:"rgba(141,155,173,.75)",peak:"rgba(225,231,239,.45)",f0:"rgba(242,181,68,.55)",f1:"rgba(242,181,68,.03)",line:"#f2b544",txt:"rgba(225,231,239,.85)",head:"rgba(242,181,68,.95)"},
+ phos:{bg:"#000400",grid:"rgba(57,255,106,.16)",grid2:"rgba(57,255,106,.09)",lab:"rgba(57,255,106,.75)",peak:"rgba(182,255,198,.45)",f0:"rgba(57,255,106,.45)",f1:"rgba(57,255,106,.03)",line:"#39ff6a",txt:"rgba(125,255,154,.9)",head:"rgba(182,255,198,.95)"},
  night:{bg:"#050000",grid:"rgba(255,60,40,.16)",grid2:"rgba(255,60,40,.10)",lab:"rgba(200,60,45,.8)",peak:"rgba(255,110,90,.4)",f0:"rgba(255,40,20,.5)",f1:"rgba(255,40,20,.03)",line:"#ff3b2f",txt:"rgba(230,80,60,.9)",head:"rgba(255,60,40,.95)"}};
-function P(){ return NIGHT?PALS.night:PALS.day; }
+function P(){ return PALS[THEME]||PALS.day; }
 function makeLUT(stops){
   const t=new Uint8ClampedArray(256*3); for(let i=0;i<256;i++){ const v=i/255; let k=0; while(k<stops.length-2&&v>stops[k+1][0]) k++;
     const [a,ca]=stops[k],[b,cb]=stops[k+1], u=(v-a)/(b-a); for(let c=0;c<3;c++) t[i*3+c]=ca[c]+(cb[c]-ca[c])*u; } return t; }
 const LUT_DAY=makeLUT([[0,[2,8,24]],[.18,[11,42,74]],[.38,[26,95,180]],[.55,[63,169,245]],[.7,[155,231,255]],[.85,[255,224,138]],[1,[255,138,61]]]), LUT_NIGHT=makeLUT([[0,[0,0,0]],[.25,[30,0,0]],[.5,[110,4,0]],[.75,[210,25,10]],[.9,[255,70,40]],[1,[255,130,100]]]);
+const LUT_PHOS=makeLUT([[0,[0,0,0]],[.25,[0,22,4]],[.5,[0,90,20]],[.75,[30,200,70]],[.9,[90,255,130]],[1,[210,255,220]]]);
 let LUT=LUT_DAY;
 const DR=55;
 function norm(row){ const o=new Float32Array(W); for(let x=0;x<W;x++) o[x]=Math.min(1,Math.max(0,(row[x]-vmin)/DR)); return o; }
@@ -743,7 +755,8 @@ function setLang(l){ if(!I18N[l]) l="fr"; LG=l; LOC=(LANGS.find(x=>x[0]===l)||LA
   const sel=document.getElementById("lang"); sel.value=l;
   const T={tBook:"book_dl",tBook2:"book_dl2",tTitle:"title",tLang:"lang",mystery:"mystery",play:"play",stop:"stop",tNoise:"noise",tVol:"volume",tLoop:"loop",tSpecwf:"specwf",tCursor:"cursor",tFoot:"footprint",tF1:"f1",tF2:"f2"};
   for(const id in T) document.getElementById(id).textContent=t(T[id]);
-  document.getElementById("night").textContent=t(NIGHT?"day":"night");
+  document.getElementById("tTheme").textContent=t("display");
+  [["day","theme_day"],["night","theme_night"],["phos","theme_phos"]].forEach(([v,k])=>{ document.querySelector('#theme option[value="'+v+'"]').textContent=t(k); });
   document.title=t("title")+" · VSISA"; showStats();
   try{ localStorage.setItem("idmr-lang",l); }catch(e){}
   if(location.hash.slice(1)!==l){ try{ history.replaceState(null,"","#"+l); }catch(e){} }
@@ -753,11 +766,12 @@ function setLang(l){ if(!I18N[l]) l="fr"; LG=l; LOC=(LANGS.find(x=>x[0]===l)||LA
     const d=signal.length/SR; document.getElementById("dur").textContent=t("dur").replace("{s}",d.toLocaleString(LOC,{minimumFractionDigits:1,maximumFractionDigits:1})); } }
 (function(){ const sel=document.getElementById("lang"); LANGS.forEach(([c,n])=>{ const o=document.createElement("option"); o.value=c; o.textContent=n; sel.appendChild(o); });
   sel.addEventListener("change",()=>setLang(sel.value)); })();
-function setNight(on){ NIGHT=!!on; LUT=NIGHT?LUT_NIGHT:LUT_DAY; document.documentElement.classList.toggle("night",NIGHT);
-  const b=document.getElementById("night"); b.textContent=t(NIGHT?"day":"night"); b.setAttribute("aria-pressed",String(NIGHT));
-  try{ localStorage.setItem("idmr-night",NIGHT?"1":"0"); }catch(e){}
+function setTheme(th){ if(!PALS[th]) th="day"; THEME=th; LUT=th==="night"?LUT_NIGHT:th==="phos"?LUT_PHOS:LUT_DAY;
+  const h=document.documentElement; h.classList.toggle("night",th==="night"); h.classList.toggle("phos",th==="phos");
+  document.getElementById("theme").value=th;
+  try{ localStorage.setItem("idmr-theme",th); }catch(e){}
   if(current&&signal){ analyse(); if(!playing) blankWaterfall(t("press")); } }
-document.getElementById("night").addEventListener("click",()=>setNight(!NIGHT));
+document.getElementById("theme").addEventListener("change",e=>setTheme(e.target.value));
 document.getElementById("play").addEventListener("click",play);
 document.getElementById("stop").addEventListener("click",stop);
 document.getElementById("mystery").addEventListener("click",mystery);
@@ -772,9 +786,9 @@ if(!I18N[lg0]){ const nl=(navigator.language||"fr").slice(0,2).toLowerCase(); lg
 window.addEventListener("hashchange",()=>{ const h=location.hash.slice(1); if(I18N[h]&&h!==LG) setLang(h); });
 let start=MODES.find(m=>m.id==="psk31");
 try{ const s=localStorage.getItem("idmr-mode"); const f=MODES.find(m=>m.id===s); if(f) start=f; }catch(e){}
-try{ NIGHT=localStorage.getItem("idmr-night")==="1"; }catch(e){}
+try{ THEME=localStorage.getItem("idmr-theme")||(localStorage.getItem("idmr-night")==="1"?"night":"day"); }catch(e){}
 setLang(lg0);
-setNight(NIGHT);
+setTheme(THEME);
 select(start);
 })();
 </script>

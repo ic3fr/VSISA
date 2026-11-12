@@ -35,7 +35,11 @@
 "visits": "visitas",
 "plays": "audições",
 "book_dl": "Descarregar o livro",
-"book_dl2": "Descarregar o livro OpenBookRadio (gratuito, PDF e EPUB, 13 idiomas)"
+"book_dl2": "Descarregar o livro OpenBookRadio (gratuito, PDF e EPUB, 13 idiomas)",
+"display": "Visualização",
+"theme_day": "Dia",
+"theme_night": "Noite (vermelho)",
+"theme_phos": "Fósforo verde"
 },
 "groups": [
 "Voz analógica",

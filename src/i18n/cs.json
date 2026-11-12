@@ -35,7 +35,11 @@
 "visits": "návštěv",
 "plays": "přehrání",
 "book_dl": "Stáhnout knihu",
-"book_dl2": "Stáhnout knihu OpenBookRadio (zdarma, PDF a EPUB, 13 jazyků)"
+"book_dl2": "Stáhnout knihu OpenBookRadio (zdarma, PDF a EPUB, 13 jazyků)",
+"display": "Zobrazení",
+"theme_day": "Den",
+"theme_night": "Noc (červená)",
+"theme_phos": "Zelený fosfor"
 },
 "groups": [
 "Analogový hlas",

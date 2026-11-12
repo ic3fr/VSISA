@@ -35,7 +35,11 @@
 "visits": "odwiedzin",
 "plays": "odtworzeń",
 "book_dl": "Pobierz książkę",
-"book_dl2": "Pobierz książkę OpenBookRadio (za darmo, PDF i EPUB, 13 języków)"
+"book_dl2": "Pobierz książkę OpenBookRadio (za darmo, PDF i EPUB, 13 języków)",
+"display": "Wygląd",
+"theme_day": "Dzień",
+"theme_night": "Noc (czerwony)",
+"theme_phos": "Zielony luminofor"
 },
 "groups": [
 "Głos analogowy",

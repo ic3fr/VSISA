@@ -35,7 +35,11 @@
 "visits": "訪問",
 "plays": "再生",
 "book_dl": "本をダウンロード",
-"book_dl2": "OpenBookRadio の本をダウンロード（無料、PDF と EPUB、13 言語）"
+"book_dl2": "OpenBookRadio の本をダウンロード（無料、PDF と EPUB、13 言語）",
+"display": "表示",
+"theme_day": "昼",
+"theme_night": "夜（赤）",
+"theme_phos": "緑色リン光"
 },
 "groups": [
 "アナログ音声",

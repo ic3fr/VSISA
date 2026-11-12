@@ -35,7 +35,11 @@
 "visits": "Besuche",
 "plays": "Wiedergaben",
 "book_dl": "Buch herunterladen",
-"book_dl2": "Das Buch OpenBookRadio herunterladen (kostenlos, PDF und EPUB, 13 Sprachen)"
+"book_dl2": "Das Buch OpenBookRadio herunterladen (kostenlos, PDF und EPUB, 13 Sprachen)",
+"display": "Anzeige",
+"theme_day": "Tag",
+"theme_night": "Nacht (rot)",
+"theme_phos": "Grüner Phosphor"
 },
 "groups": [
 "Analoge Sprache",

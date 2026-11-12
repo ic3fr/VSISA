@@ -35,7 +35,11 @@
 "visits": "посещений",
 "plays": "прослушиваний",
 "book_dl": "Скачать книгу",
-"book_dl2": "Скачать книгу OpenBookRadio (бесплатно, PDF и EPUB, 13 языков)"
+"book_dl2": "Скачать книгу OpenBookRadio (бесплатно, PDF и EPUB, 13 языков)",
+"display": "Оформление",
+"theme_day": "День",
+"theme_night": "Ночь (красный)",
+"theme_phos": "Зелёный люминофор"
 },
 "groups": [
 "Аналоговый голос",
