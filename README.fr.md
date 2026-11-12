@@ -12,6 +12,7 @@ Identificateur de modes radio : **100 signaux simulés** (dont 18 sons de l'espa
 - Pour chaque signal : le **son**, le **spectre** et le **waterfall** en direct, l'**empreinte** complète du signal et une fiche (principe, aspect à l'écran, fiche du livre).
 - **Son mystère** : un signal au hasard, à reconnaître parmi quatre réponses, avec un score.
 - Réglages : bruit ajouté, volume, lecture en boucle ; le curseur affiche la fréquence.
+- En AM, BLU, FM et FM stéréo, on entend le **son démodulé**, comme sur un récepteur, avec une voix et une musique de synthèse (la FM stéréo est en vraie stéréo : au casque).
 - Une seule page HTML, sans installation, qui marche **hors ligne** : télécharge `index.html` et ouvre-la dans un navigateur.
 
 ## Les signaux

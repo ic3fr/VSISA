@@ -28,7 +28,7 @@
 "book": "Buch: Blatt {r}",
 "lang": "Sprache",
 "signals": "Signale",
-"f1": "Im Browser simulierte Signale (12 000 Abtastwerte pro Sekunde): die von Blatt 5 bis des Buchs OpenBookRadio, weitere Signale aus dem Buch und Bonus-Signale. Bei Funksignalen (AM, FM, AIS, LoRa…) sieht man die simulierte Zwischenfrequenz wie auf einem SDR-Bildschirm; manche sind verkleinert oder beschleunigt, das ist angegeben.",
+"f1": "Im Browser simulierte Signale (12 000 Abtastwerte pro Sekunde): die von Blatt 5 bis des Buchs OpenBookRadio, weitere Signale aus dem Buch und Bonus-Signale. Bei Funksignalen (AM, FM, AIS, LoRa…) sieht man die simulierte Zwischenfrequenz wie auf einem SDR-Bildschirm; manche sind verkleinert oder beschleunigt, das ist angegeben. Bei AM, SSB, FM, UKW-Stereo, ISS und Schwund hört man den demodulierten Ton wie aus dem Lautsprecher des Empfängers, der Bildschirm zeigt das Funksignal; die Stimme ist synthetisch und spricht keine echten Wörter.",
 "f2": "Die Zeit läuft im Wasserfall und im Abdruck nach unten. Lizenz CC BY-NC-SA 4.0, kostenlos, nicht verkaufen.",
 "night": "Nachtmodus",
 "day": "Tagmodus",
@@ -59,10 +59,16 @@
 ],
 "modes": {
 "am": {
-"sh": "Sprache",
+"sh": "Rundfunk",
 "t": "AM: Amplitudenmodulation",
 "h": "Die Stärke des Trägers folgt dem Ton: die Kurve „schwillt“ an und ab.",
-"l": "Ein fester Strich in der Mitte (der Träger), mit zwei gleichen Seitenbändern links und rechts. Etwa 6 bis 9 kHz breit. Rundfunk auf Kurz- und Mittelwelle, Flugfunk (Blätter 10 und 12)."
+"l": "Ein fester Strich in der Mitte (der Träger), mit zwei gleichen Seitenbändern links und rechts. Etwa 6 bis 9 kHz breit. Rundfunk auf Kurz- und Mittelwelle, Flugfunk (Blätter 10 und 12).",
+"r": [
+[
+"Hören",
+"Ein Jingle, dann der Moderator über Hintergrundmusik. Die beiden Seitenbänder sind spiegelbildlich: man sieht die Melodie, dann die Stimme auf beiden Seiten des Trägers."
+]
+]
 },
 "ssb": {
 "nm": "SSB / ESB",
@@ -74,7 +80,13 @@
 "sh": "Sprache",
 "t": "FM: Frequenzmodulation",
 "h": "Die Amplitude bleibt gleich; die Schwingungen rücken mit dem Ton zusammen oder auseinander.",
-"l": "Das Signal tanzt um seine Frequenz, breiter bei lautem Ton: 12,5 kHz pro Kanal bei Schmalband-FM (Handfunkgeräte, Relais), 200 kHz beim UKW-Rundfunk (Blätter 2 und 11)."
+"l": "Das Signal tanzt um seine Frequenz, breiter bei lautem Ton: 12,5 kHz pro Kanal bei Schmalband-FM (Handfunkgeräte, Relais), 200 kHz beim UKW-Rundfunk (Blätter 2 und 11).",
+"r": [
+[
+"Hören",
+"Am Ende das kurze „Kschh“: die Rauschsperre schließt, wenn der Sender aufhört."
+]
+]
 },
 "cw": {
 "t": "CW: Morse",
@@ -394,7 +406,13 @@
 "t": "UKW-Stereo und RDS",
 "h": "Der demodulierte Ton (Multiplex) enthält den L+R-Kanal, einen Pilotton bei 19 kHz, den L-R-Kanal um 38 kHz und RDS bei 57 kHz.",
 "l": "Von 0 bis 60 kHz nach der Demodulation: ein tiefer Block, ein feiner Strich bei 19 kHz, ein schwächerer Block in der Mitte und RDS ganz oben (Blatt 10).",
-"n": "Maßstab ÷ 20 zum Anhören"
+"n": "Maßstab ÷ 20; Stereoton",
+"r": [
+[
+"Hören",
+"Mit Kopfhörer: 4 s mono (der mittlere Block, L-R, verschwindet), dann 4 s stereo, die Melodie links und die Akkorde rechts."
+]
+]
 },
 "dcf77": {
 "t": "Zeitsignal DCF77 (77,5 kHz)",

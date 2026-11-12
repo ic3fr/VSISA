@@ -28,7 +28,7 @@
 "book": "Kniha: list {r}",
 "lang": "Jazyk",
 "signals": "Signály",
-"f1": "Signály simulované přímo ve stránce (12 000 vzorků za sekundu): signály listu 5 bis knihy OpenBookRadio, další signály z knihy a bonusy. U rádiových signálů (AM, FM, AIS, LoRa…) je vidět simulovaný mezifrekvenční kmitočet jako na obrazovce SDR; některé jsou zmenšené nebo zrychlené, je to uvedeno.",
+"f1": "Signály simulované přímo ve stránce (12 000 vzorků za sekundu): signály listu 5 bis knihy OpenBookRadio, další signály z knihy a bonusy. U rádiových signálů (AM, FM, AIS, LoRa…) je vidět simulovaný mezifrekvenční kmitočet jako na obrazovce SDR; některé jsou zmenšené nebo zrychlené, je to uvedeno. U AM, SSB, FM, FM sterea, ISS a úniku slyšíš demodulovaný zvuk jako z reproduktoru přijímače a obrazovka ukazuje rádiový signál; hlas je syntetický a neříká skutečná slova.",
 "f2": "Čas ve vodopádu i v otisku běží dolů. Licence CC BY-NC-SA 4.0, zdarma, neprodávat.",
 "night": "Noční režim",
 "day": "Denní režim",
@@ -59,10 +59,16 @@
 ],
 "modes": {
 "am": {
-"sh": "hlas",
+"sh": "rozhlas",
 "t": "AM: amplitudová modulace",
 "h": "Síla nosné sleduje zvuk: křivka se „nafukuje“ a „splaskává“.",
-"l": "Pevná čára uprostřed (nosná) a po obou stranách dvě stejná postranní pásma. Šířka asi 6 až 9 kHz. Rozhlas na krátkých a středních vlnách, letectví (listy 10 a 12)."
+"l": "Pevná čára uprostřed (nosná) a po obou stranách dvě stejná postranní pásma. Šířka asi 6 až 9 kHz. Rozhlas na krátkých a středních vlnách, letectví (listy 10 a 12).",
+"r": [
+[
+"Poslech",
+"Znělka a pak moderátor na hudebním podkladu. Obě postranní pásma jsou zrcadlová: po obou stranách nosné je vidět melodie a pak hlas."
+]
+]
 },
 "ssb": {
 "t": "SSB: jedno postranní pásmo",
@@ -73,7 +79,13 @@
 "sh": "hlas",
 "t": "FM: kmitočtová modulace",
 "h": "Amplituda zůstává stejná; kmity se se zvukem zhušťují nebo řídnou.",
-"l": "Signál tančí kolem svého kmitočtu, při hlasitém zvuku je širší: 12,5 kHz na kanál u úzkopásmové FM (vysílačky, převáděče), 200 kHz u rozhlasu FM (listy 2 a 11)."
+"l": "Signál tančí kolem svého kmitočtu, při hlasitém zvuku je širší: 12,5 kHz na kanál u úzkopásmové FM (vysílačky, převáděče), 200 kHz u rozhlasu FM (listy 2 a 11).",
+"r": [
+[
+"Poslech",
+"Na konci krátké „kšš“: squelch se zavře, když vysílač přestane vysílat."
+]
+]
 },
 "cw": {
 "t": "CW: Morseova abeceda",
@@ -393,7 +405,13 @@
 "t": "Rozhlas FM stereo a RDS",
 "h": "Demodulovaný zvuk (multiplex) obsahuje kanál L+R, pilot na 19 kHz, kanál L-R kolem 38 kHz a RDS na 57 kHz.",
 "l": "Od 0 do 60 kHz po demodulaci: hluboký blok, tenká čára na 19 kHz, slabší blok uprostřed a RDS úplně nahoře (list 10).",
-"n": "měřítko ÷ 20 pro poslech"
+"n": "měřítko ÷ 20; stereo zvuk",
+"r": [
+[
+"Poslech",
+"Se sluchátky: 4 s mono (prostřední blok L-R zmizí), pak 4 s stereo, melodie vlevo a akordy vpravo."
+]
+]
 },
 "dcf77": {
 "t": "Časový signál DCF77 (77,5 kHz)",

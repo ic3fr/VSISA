@@ -12,6 +12,7 @@ Radio mode identifier: **100 simulated signals** (including 18 sounds from space
 - For each signal: the **sound**, the live **spectrum** and **waterfall**, the full **footprint** of the signal, and a fact card (principle, what it looks like on screen, sheet number in the book).
 - **Mystery sound**: a random signal to identify among four answers, with a score.
 - Settings: added noise, volume, loop playback; the cursor shows the frequency.
+- For AM, SSB, FM and FM stereo you hear the **demodulated sound**, as from a receiver, with a synthetic voice and synthetic music (FM stereo is in real stereo: use headphones).
 - **Display** menu: day, **night** (shades of red, to keep your night vision) or **green, blue or amber phosphor** (like old computer terminals, with scan lines); your choice is remembered.
 - A single HTML page, nothing to install, that works **offline**: download `index.html` and open it in a browser.
 

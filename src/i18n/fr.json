@@ -28,7 +28,7 @@
 "book": "Livre : fiche {r}",
 "lang": "Langue",
 "signals": "Signaux",
-"f1": "Signaux simulés dans la page (12 000 échantillons par seconde) : ceux de la fiche 5 bis du livre OpenBookRadio, d'autres signaux du livre et des bonus. Pour les signaux radio (AM, FM, AIS, LoRa…), on voit la fréquence intermédiaire simulée, comme sur l'écran d'un SDR ; certains sont à échelle réduite ou accélérée, c'est indiqué.",
+"f1": "Signaux simulés dans la page (12 000 échantillons par seconde) : ceux de la fiche 5 bis du livre OpenBookRadio, d'autres signaux du livre et des bonus. Pour les signaux radio (AM, FM, AIS, LoRa…), on voit la fréquence intermédiaire simulée, comme sur l'écran d'un SDR ; certains sont à échelle réduite ou accélérée, c'est indiqué. Pour AM, BLU, FM, FM stéréo, ISS et fading, on entend le son démodulé, comme dans le haut-parleur du récepteur, et l'écran montre le signal radio ; la voix est une voix de synthèse qui ne dit pas de vrais mots.",
 "f2": "Le temps descend dans le waterfall et dans l'empreinte. Licence CC BY-NC-SA 4.0, gratuit, ne pas vendre.",
 "night": "Mode nuit",
 "day": "Mode jour",
@@ -67,10 +67,16 @@
 },
 "am": {
 "nm": "AM",
-"sh": "voix",
+"sh": "radio",
 "t": "AM : modulation d'amplitude",
 "h": "La force de la porteuse suit le son : la courbe « gonfle » et « dégonfle ».",
-"l": "Un trait fixe au centre (la porteuse), avec deux bandes latérales identiques de chaque côté. Environ 6 à 9 kHz de large. Radio en ondes courtes et petites ondes, aviation (fiches 10 et 12)."
+"l": "Un trait fixe au centre (la porteuse), avec deux bandes latérales identiques de chaque côté. Environ 6 à 9 kHz de large. Radio en ondes courtes et petites ondes, aviation (fiches 10 et 12).",
+"r": [
+[
+"Écoute",
+"Un jingle, puis l'animateur sur un fond musical. Les deux bandes latérales sont en miroir : on voit la mélodie, puis la voix, de chaque côté de la porteuse."
+]
+]
 },
 "ssb": {
 "nm": "BLU / SSB",
@@ -84,7 +90,13 @@
 "sh": "voix",
 "t": "FM : modulation de fréquence",
 "h": "L'amplitude reste fixe ; ce sont les oscillations qui se serrent ou s'écartent avec le son.",
-"l": "Le signal danse autour de sa fréquence, plus large quand le son est fort : 12,5 kHz par canal en FM étroite (talkies, relais), 200 kHz en radio FM (fiches 2 et 11)."
+"l": "Le signal danse autour de sa fréquence, plus large quand le son est fort : 12,5 kHz par canal en FM étroite (talkies, relais), 200 kHz en radio FM (fiches 2 et 11).",
+"r": [
+[
+"Écoute",
+"À la fin, le petit « kchh » : le squelch se ferme quand l'émetteur s'arrête."
+]
+]
 },
 "cw": {
 "nm": "CW",
@@ -454,7 +466,13 @@
 "t": "Radio FM stéréo et RDS",
 "h": "Le son démodulé (multiplex) contient la voie L+R, un pilote à 19 kHz, la voie L-R autour de 38 kHz et le RDS à 57 kHz.",
 "l": "Vu sur 0 à 60 kHz après la démodulation : un bloc grave, un trait fin à 19 kHz, un bloc plus faible au milieu et le RDS tout en haut (fiche 10).",
-"n": "échelle ÷ 20 pour l'écoute"
+"n": "échelle ÷ 20 ; son en stéréo",
+"r": [
+[
+"Écoute",
+"Au casque : 4 s en mono (le bloc du milieu, L-R, disparaît), puis 4 s en stéréo, la mélodie à gauche et les accords à droite."
+]
+]
 },
 "dcf77": {
 "nm": "DCF77",

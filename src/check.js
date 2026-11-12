@@ -16,7 +16,7 @@ function fft(re,im){ const n=re.length; for(let i=1,j=0;i<n;i++){ let b=n>>1; fo
 function psd(x){ const acc=new Float64Array(N/2); let c=0; for(let o=0;o+N<=x.length;o+=N/2){ const re=new Float64Array(N), im=new Float64Array(N); for(let i=0;i<N;i++) re[i]=x[o+i]*(0.5-0.5*Math.cos(2*Math.PI*i/N)); fft(re,im); for(let i=0;i<N/2;i++) acc[i]+=re[i]*re[i]+im[i]*im[i]; c++; } return acc; }
 function peaks(p,k){ const out=[]; const used=new Uint8Array(p.length); for(let n=0;n<k;n++){ let m=-1,mi=-1; for(let i=2;i<p.length-2;i++) if(!used[i]&&p[i]>m&&p[i]>=p[i-1]&&p[i]>=p[i+1]){ m=p[i]; mi=i; } if(mi<0) break; out.push([Math.round(mi*SR/N),m]); for(let i=Math.max(0,mi-8);i<Math.min(p.length,mi+9);i++) used[i]=1; } const top=out[0]?out[0][1]:1; return out.filter(o=>o[1]>top*0.02).map(o=>o[0]).sort((a,b)=>a-b); }
 const only=process.argv[3]; let bad=0;
-for(const m of MODES){ if(only&&!only.split(',').includes(m.id)) continue; let x; try{ x=Float64Array.from(G[m.id]()); }catch(e){ console.log(m.id,'ERREUR',e.message); bad++; continue; }
+for(const m of MODES){ if(only&&!only.split(',').includes(m.id)) continue; let x; try{ const r0=G[m.id](); if(r0&&r0.x){ for(const v of r0.a) if(!isFinite(v)) { console.log(m.id,"SON NaN"); bad++; break; } if(r0.a.length!==r0.x.length){ console.log(m.id,"SON LONGUEUR"); bad++; } } x=Float64Array.from(r0&&r0.x?r0.x:r0); }catch(e){ console.log(m.id,'ERREUR',e.message); bad++; continue; }
   let pk=0, nan=0; for(const v of x){ if(!isFinite(v)) nan++; pk=Math.max(pk,Math.abs(v)); }
   const fr=I18N.fr.modes[m.id]||{}; const langs=Object.keys(I18N).filter(l=>!(I18N[l].modes[m.id]&&I18N[l].modes[m.id].t&&I18N[l].modes[m.id].h&&I18N[l].modes[m.id].l));
   if(nan||langs.length||!fr.nm) bad++;

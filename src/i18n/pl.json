@@ -28,7 +28,7 @@
 "book": "Książka: karta {r}",
 "lang": "Język",
 "signals": "Sygnały",
-"f1": "Sygnały symulowane na stronie (12 000 próbek na sekundę): z karty 5 bis książki OpenBookRadio, inne sygnały z książki oraz bonusy. W przypadku sygnałów radiowych (AM, FM, AIS, LoRa…) widać symulowaną częstotliwość pośrednią, jak na ekranie SDR; niektóre są w zmniejszonej skali lub przyspieszone, co jest zaznaczone.",
+"f1": "Sygnały symulowane na stronie (12 000 próbek na sekundę): z karty 5 bis książki OpenBookRadio, inne sygnały z książki oraz bonusy. W przypadku sygnałów radiowych (AM, FM, AIS, LoRa…) widać symulowaną częstotliwość pośrednią, jak na ekranie SDR; niektóre są w zmniejszonej skali lub przyspieszone, co jest zaznaczone. W AM, SSB, FM, FM stereo, ISS i zanikach słychać zdemodulowany dźwięk jak z głośnika odbiornika, a ekran pokazuje sygnał radiowy; głos jest syntetyczny i nie mówi prawdziwych słów.",
 "f2": "Czas w wodospadzie i odcisku płynie w dół. Licencja CC BY-NC-SA 4.0, za darmo, nie na sprzedaż.",
 "night": "Tryb nocny",
 "day": "Tryb dzienny",
@@ -59,10 +59,16 @@
 ],
 "modes": {
 "am": {
-"sh": "głos",
+"sh": "radio",
 "t": "AM: modulacja amplitudy",
 "h": "Siła nośnej podąża za dźwiękiem: krzywa „puchnie” i „opada”.",
-"l": "Stała kreska pośrodku (nośna) i po obu stronach dwie jednakowe wstęgi boczne. Szerokość około 6–9 kHz. Radiofonia na falach krótkich i średnich, lotnictwo (karty 10 i 12)."
+"l": "Stała kreska pośrodku (nośna) i po obu stronach dwie jednakowe wstęgi boczne. Szerokość około 6–9 kHz. Radiofonia na falach krótkich i średnich, lotnictwo (karty 10 i 12).",
+"r": [
+[
+"Odsłuch",
+"Dżingiel, potem prezenter na tle muzyki. Obie wstęgi boczne są lustrzane: po obu stronach nośnej widać melodię, a potem głos."
+]
+]
 },
 "ssb": {
 "t": "SSB: jedna wstęga boczna",
@@ -73,7 +79,13 @@
 "sh": "głos",
 "t": "FM: modulacja częstotliwości",
 "h": "Amplituda się nie zmienia; to drgania zagęszczają się lub rozrzedzają z dźwiękiem.",
-"l": "Sygnał tańczy wokół swojej częstotliwości, szerszy przy głośnym dźwięku: 12,5 kHz na kanał w wąskim FM (krótkofalówki, przemienniki), 200 kHz w radiu FM (karty 2 i 11)."
+"l": "Sygnał tańczy wokół swojej częstotliwości, szerszy przy głośnym dźwięku: 12,5 kHz na kanał w wąskim FM (krótkofalówki, przemienniki), 200 kHz w radiu FM (karty 2 i 11).",
+"r": [
+[
+"Odsłuch",
+"Na końcu krótkie „kszsz”: blokada szumów zamyka się, gdy nadajnik przestaje nadawać."
+]
+]
 },
 "cw": {
 "t": "CW: Morse",
@@ -393,7 +405,13 @@
 "t": "Radio FM stereo i RDS",
 "h": "Zdemodulowany dźwięk (multipleks) zawiera kanał L+R, pilot 19 kHz, kanał L-R wokół 38 kHz i RDS na 57 kHz.",
 "l": "Od 0 do 60 kHz po demodulacji: niski blok, cienka kreska na 19 kHz, słabszy blok pośrodku i RDS na samej górze (karta 10).",
-"n": "skala ÷ 20 do odsłuchu"
+"n": "skala ÷ 20; dźwięk stereo",
+"r": [
+[
+"Odsłuch",
+"W słuchawkach: 4 s mono (środkowy blok L-R znika), potem 4 s stereo, melodia po lewej, akordy po prawej."
+]
+]
 },
 "dcf77": {
 "t": "Sygnał czasu DCF77 (77,5 kHz)",

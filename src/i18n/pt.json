@@ -28,7 +28,7 @@
 "book": "Livro: ficha {r}",
 "lang": "Idioma",
 "signals": "Sinais",
-"f1": "Sinais simulados na página (12 000 amostras por segundo): os da ficha 5 bis do livro OpenBookRadio, outros sinais do livro e bónus. Nos sinais de rádio (AM, FM, AIS, LoRa…) vê-se a frequência intermédia simulada, como no ecrã de um SDR; alguns estão em escala reduzida ou acelerada, como indicado.",
+"f1": "Sinais simulados na página (12 000 amostras por segundo): os da ficha 5 bis do livro OpenBookRadio, outros sinais do livro e bónus. Nos sinais de rádio (AM, FM, AIS, LoRa…) vê-se a frequência intermédia simulada, como no ecrã de um SDR; alguns estão em escala reduzida ou acelerada, como indicado. Em AM, BLU, FM, FM estéreo, ISS e desvanecimento ouve-se o som desmodulado, como no altifalante do recetor, e o ecrã mostra o sinal de rádio; a voz é sintética e não diz palavras reais.",
 "f2": "O tempo desce na cascata e na impressão. Licença CC BY-NC-SA 4.0, gratuito, proibida a venda.",
 "night": "Modo noite",
 "day": "Modo dia",
@@ -59,10 +59,16 @@
 ],
 "modes": {
 "am": {
-"sh": "voz",
+"sh": "rádio",
 "t": "AM: modulação de amplitude",
 "h": "A força da portadora segue o som: a curva «incha» e «desincha».",
-"l": "Um traço fixo no centro (a portadora), com duas bandas laterais iguais de cada lado. Cerca de 6 a 9 kHz de largura. Rádio em onda curta e onda média, aviação (fichas 10 e 12)."
+"l": "Um traço fixo no centro (a portadora), com duas bandas laterais iguais de cada lado. Cerca de 6 a 9 kHz de largura. Rádio em onda curta e onda média, aviação (fichas 10 e 12).",
+"r": [
+[
+"Escuta",
+"Um jingle e depois o locutor sobre um fundo musical. As duas bandas laterais são espelhadas: vê-se a melodia e depois a voz de cada lado da portadora."
+]
+]
 },
 "ssb": {
 "nm": "BLU / SSB",
@@ -74,7 +80,13 @@
 "sh": "voz",
 "t": "FM: modulação de frequência",
 "h": "A amplitude fica fixa; as oscilações aproximam-se ou afastam-se com o som.",
-"l": "O sinal dança à volta da sua frequência, mais largo quando o som é forte: 12,5 kHz por canal em FM estreita (walkie-talkies, repetidores), 200 kHz em rádio FM (fichas 2 e 11)."
+"l": "O sinal dança à volta da sua frequência, mais largo quando o som é forte: 12,5 kHz por canal em FM estreita (walkie-talkies, repetidores), 200 kHz em rádio FM (fichas 2 e 11).",
+"r": [
+[
+"Escuta",
+"No fim, o pequeno «kchh»: o squelch fecha quando o emissor para."
+]
+]
 },
 "cw": {
 "t": "CW: Morse",
@@ -394,7 +406,13 @@
 "t": "Rádio FM estéreo e RDS",
 "h": "O som desmodulado (multiplex) contém a via L+R, um piloto a 19 kHz, a via L-R à volta de 38 kHz e o RDS a 57 kHz.",
 "l": "Visto de 0 a 60 kHz depois da desmodulação: um bloco grave, um traço fino a 19 kHz, um bloco mais fraco no meio e o RDS lá em cima (ficha 10).",
-"n": "escala ÷ 20 para ouvir"
+"n": "escala ÷ 20; som estéreo",
+"r": [
+[
+"Escuta",
+"Com auscultadores: 4 s em mono (o bloco do meio, L-R, desaparece) e depois 4 s em estéreo, a melodia à esquerda e os acordes à direita."
+]
+]
 },
 "dcf77": {
 "t": "Sinal horário DCF77 (77,5 kHz)",

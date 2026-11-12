@@ -190,13 +190,6 @@ function smooth(a,w){ // moyenne glissante centrée
   for(let i=0;i<a.length+h;i++){ if(i<a.length) s+=a[i]; if(i-w>=0) s-=a[i-w]; const j=i-h; if(j>=0&&j<a.length) o[j]=s/w; } return o; }
 function hannK(n){ const w=Z(n); let s=0; for(let i=0;i<n;i++){ w[i]=0.5-0.5*Math.cos(TAU*(i+1)/(n+1)); s+=w[i]; } for(let i=0;i<n;i++) w[i]/=s; return w; }
 function conv(a,k){ const o=Z(a.length), h=Math.floor(k.length/2); for(let i=0;i<a.length;i++){ let s=0; for(let j=0;j<k.length;j++){ const q=i+j-h; if(q>=0&&q<a.length) s+=a[q]*k[j]; } o[i]=s; } return o; }
-function voice(n){
-  const t=tArr(n), syl=Z(n); for(let i=0;i<n;i++) syl[i]=Math.sin(TAU*2.2*t[i])>-0.2?1:0;
-  const sy=smooth(syl,Math.round(SR*0.04)); const v=Z(n); let ph=0, m=0;
-  for(let i=0;i<n;i++){ ph+=TAU*(140+30*Math.sin(TAU*0.7*t[i]))/SR; let s=0;
-    for(let k=1;k<=16;k++) s+=(1/k)*Math.sin(k*ph)*(1+0.6*Math.sin(TAU*(0.9+0.3*k)*t[i])); v[i]=s; if(Math.abs(s)>m) m=Math.abs(s); }
-  for(let i=0;i<n;i++) v[i]=sy[i]*v[i]/m; return v;
-}
 
 /* ================= FFT ================= */
 const fftCache={};
@@ -217,6 +210,76 @@ function ssb(msg,fc){ // bande latérale supérieure par signal analytique (Hilb
   for(let i=0;i<n;i++) im[i]=-im[i]; fft(re,im,P.rev); for(let i=0;i<n;i++){ re[i]/=n; im[i]=-im[i]/n; }
   const o=Z(msg.length); for(let i=0;i<msg.length;i++){ const p=TAU*fc*i/SR; o[i]=re[i]*Math.cos(p)-im[i]*Math.sin(p); } return o; }
 
+/* ---- voix et musique de synthèse (pour AM, BLU, FM, FM stéréo…) ---- */
+function lp2(x,fc,q){ q=q||0.7071; const w=TAU*fc/SR, al=Math.sin(w)/(2*q), c=Math.cos(w), a0=1+al, b0=(1-c)/2/a0, b1=(1-c)/a0, a1=-2*c/a0, a2=(1-al)/a0;
+  const y=Z(x.length); let x1=0,x2=0,y1=0,y2=0; for(let i=0;i<x.length;i++){ const v=b0*x[i]+b1*x1+b0*x2-a1*y1-a2*y2; x2=x1; x1=x[i]; y2=y1; y1=v; y[i]=v; } return y; }
+function hp2(x,fc,q){ q=q||0.7071; const w=TAU*fc/SR, al=Math.sin(w)/(2*q), c=Math.cos(w), a0=1+al, b0=(1+c)/2/a0, b1=-(1+c)/a0, a1=-2*c/a0, a2=(1-al)/a0;
+  const y=Z(x.length); let x1=0,x2=0,y1=0,y2=0; for(let i=0;i<x.length;i++){ const v=b0*x[i]+b1*x1+b0*x2-a1*y1-a2*y2; x2=x1; x1=x[i]; y2=y1; y1=v; y[i]=v; } return y; }
+function band(x,lo,hi){ return lp2(lp2(hp2(hp2(x,lo),lo),hi),hi); }
+function peakNorm(a,p){ let m=0; for(const v of a) if(Math.abs(v)>m) m=Math.abs(v); const k=(p||1)/(m||1); for(let i=0;i<a.length;i++) a[i]*=k; return a; }
+// Voix de synthèse à formants : syllabes inventées (consonne + voyelle), intonation qui descend dans la phrase.
+const VOW={a:[750,1180,2500],e:[480,1780,2520],i:[300,2250,2950],o:[480,840,2450],u:[330,780,2250],y:[290,1700,2150],E:[600,1650,2500]};
+function voice(n,opt){ opt=opt||{}; const f0b=opt.f0||115, fs=opt.fs||1, dur=n/SR;
+  const av=Z(n), an=Z(n), nf=Z(n).fill(3000), F1=Z(n), F2=Z(n), F3=Z(n), acc=Z(n), decl=Z(n).fill(1);
+  const CONS=["","","b","d","m","n","l","r","p","t","k","s","ch","f","v","z"], VW="aaeeiiouoyE";
+  const put=(a,b,fn)=>{ const i0=Math.max(0,Math.round(a*SR)), i1=Math.min(n,Math.round(b*SR)); for(let i=i0;i<i1;i++) fn(i,(i-i0)/Math.max(1,i1-i0)); };
+  let t=opt.syl?0.03:0.12, ph0=t, sylLeft=opt.syl||1e9;
+  const endPhrase=(t1)=>{ const a=ph0, b=t1, q=rnd()<0.2; put(a,b,(i,u)=>{ decl[i]=q?(0.95+0.25*u*u):(1.1-0.24*u); }); };
+  while(t<dur-0.14&&sylLeft>0){
+    const nsyl=opt.syl?sylLeft:1+ri(3);
+    for(let k=0;k<nsyl&&t<dur-0.14&&sylLeft>0;k++,sylLeft--){
+      const c=CONS[ri(CONS.length)], vv=VOW[VW[ri(VW.length)]].map(f=>f*fs), dv=0.085+rnd()*0.09, str=k===0?1:0.72; let dc=0;
+      if(c==="s"||c==="ch"||c==="f"||c==="z"){ dc=0.06+rnd()*0.04; const cf=c==="s"||c==="z"?4700:c==="ch"?2800:3600, am=c==="f"?0.18:0.42;
+        put(t,t+dc,(i,u)=>{ an[i]=am*Math.sin(Math.PI*u); nf[i]=cf; F1[i]=280; F2[i]=vv[1]; F3[i]=vv[2]; if(c==="z") av[i]=0.12; }); }
+      else if(c==="p"||c==="t"||c==="k"){ dc=0.055; const cf=c==="p"?900:c==="t"?3900:2100; put(t+0.035,t+0.052,(i,u)=>{ an[i]=0.6*(1-u); nf[i]=cf; F1[i]=300; F2[i]=vv[1]; F3[i]=vv[2]; }); }
+      else if(c==="b"||c==="d"||c==="v"){ dc=0.045; put(t,t+dc,(i,u)=>{ av[i]=0.16; F1[i]=240; F2[i]=c==="d"?1700:900; F3[i]=2500; if(c==="v"){ an[i]=0.08; nf[i]=3600; } }); }
+      else if(c){ dc=0.06; put(t,t+dc,(i,u)=>{ av[i]=c==="r"?0.22+0.14*Math.sin(TAU*27*i/SR):0.3; F1[i]=c==="l"?360:250; F2[i]=c==="m"?1050:c==="n"?1550:1250; F3[i]=2550; }); }
+      const a0=t+dc;
+      put(a0,a0+dv,(i,u)=>{ av[i]=str*Math.min(1,u/0.12)*(u>0.65?0.25+0.75*(1-u)/0.35:1); F1[i]=vv[0]; F2[i]=vv[1]; F3[i]=vv[2]; acc[i]=k===0?0.12*Math.sin(Math.PI*u):0; });
+      t=a0+dv;
+    }
+    if(opt.syl) break;
+    if(rnd()<0.32){ endPhrase(t); t+=0.28+rnd()*0.3; ph0=t; } else t+=0.035+rnd()*0.07;
+  }
+  if(!opt.syl) endPhrase(Math.min(dur,t));
+  // formants : on garde la dernière cible dans les silences, puis on lisse (coarticulation)
+  let l1=VOW.a[0],l2=VOW.a[1],l3=VOW.a[2]; for(let i=0;i<n;i++){ if(F1[i]) l1=F1[i]; else F1[i]=l1; if(F2[i]) l2=F2[i]; else F2[i]=l2; if(F3[i]) l3=F3[i]; else F3[i]=l3; }
+  const sm=(a,ms)=>{ const k=1-Math.exp(-1/(SR*ms/1000)); let s=a[0]; for(let i=0;i<n;i++){ s+=(a[i]-s)*k; a[i]=s; } };
+  sm(F1,18); sm(F2,22); sm(F3,25); sm(av,6); sm(an,2);
+  const x=Z(n), rs=[[0,0],[0,0],[0,0],[0,0]], BW=[90,120,170]; let ph=0, pu=0, jit=0;
+  const res=(st,inp,F,bw)=>{ const C=-Math.exp(-TAU*bw/SR), B=2*Math.exp(-Math.PI*bw/SR)*Math.cos(TAU*F/SR), A=1-B-C, y=A*inp+B*st[0]+C*st[1]; st[1]=st[0]; st[0]=y; return y; };
+  for(let i=0;i<n;i++){ if(i%240===0) jit=0.012*gauss();
+    const f0=f0b*decl[i]*(1+acc[i]+jit); ph+=f0/SR; if(ph>=1) ph-=1;
+    const u=ph<0.4?0.5*(1-Math.cos(Math.PI*ph/0.4)):ph<0.56?Math.cos(Math.PI*(ph-0.4)/0.32):0, g=(u-pu)*av[i]*8+av[i]*0.015*gauss(); pu=u;
+    let y=res(rs[0],g,F1[i],BW[0]); y=res(rs[1],y,F2[i],BW[1]); y=res(rs[2],y,F3[i],BW[2]);
+    const nz=res(rs[3],gauss()*an[i],nf[i],1400);
+    x[i]=y+nz*0.6; }
+  return peakNorm(hp2(x,90));
+}
+// Petite musique : la mineur, fa, do, sol ; basse, accords, mélodie, batterie. stereo = instant (s) où les instruments se séparent.
+function music(n,opt){ opt=opt||{}; const L=Z(n), R=Z(n), beat=60/112, st=opt.stereo==null?1e9:opt.stereo;
+  const prog=[[57,60,64],[53,57,60],[48,52,55],[55,59,62]], MEL=[76,null,72,74,76,79,76,null, 77,76,72,null,69,72,74,null, 76,79,84,79,76,null,72,74, 71,74,79,null,74,71,67,null];
+  const mf=m=>440*Math.pow(2,(m-69)/12); let pB=0,pL=0,pK=0; const pP=[0,0,0,0,0,0]; let hh=0, hp=0;
+  for(let i=0;i<n;i++){ const t=i/SR, b=t/beat, ci=Math.floor(b/2)%4, ch=prog[ci], e8=Math.floor(b*2), u8=(b*2-e8)*beat/2, ub=(b-Math.floor(b))*beat, bi=Math.floor(b)%4;
+    const sp=Math.min(1,Math.max(0,(t-st)/0.3));
+    const bf=mf(ch[0]-24+(e8%4===3?7:0)); pB+=bf/SR; const bass=(Math.sin(TAU*pB)+0.4*Math.sin(2*TAU*pB)+0.15*Math.sin(3*TAU*pB))*Math.exp(-u8*5)*0.42;
+    let pad=0; for(let k=0;k<3;k++){ const f=mf(ch[k]+12); pP[k]+=f/SR; pP[k+3]+=f*1.005/SR; for(let h=1;h<=5;h++) pad+=(Math.sin(TAU*h*pP[k])+Math.sin(TAU*h*pP[k+3]))/(h*h*0.7+0.3); }
+    pad*=0.03*Math.min(1,((b/2)%1)*beat*2/0.15);
+    const mn=MEL[e8%MEL.length]; let lead=0; if(mn){ const f=mf(mn)*(1+0.007*Math.sin(TAU*5.5*t)); pL+=f/SR; lead=(Math.sin(TAU*pL)+Math.sin(3*TAU*pL)/4+Math.sin(5*TAU*pL)/9)*Math.min(1,u8/0.012)*Math.exp(-u8*3.2)*0.34; }
+    let kick=0, sn=0; if(bi===0||bi===2){ const f=48+110*Math.exp(-ub*28); pK+=f/SR; kick=Math.sin(TAU*pK)*Math.exp(-ub*11)*0.75; } else { sn=(gauss()*0.5+Math.sin(TAU*190*ub))*Math.exp(-ub*16)*0.33; pK=0; }
+    const g=gauss(); hh=g-hp; hp=g; const hat=hh*Math.exp(-u8*70)*0.09*(e8%2?0.7:1);
+    const pl=0.5+0.42*sp, pr=1-pl;
+    L[i]=bass+kick+sn+lead*pl+pad*pr+hat*(0.5-0.3*sp); R[i]=bass+kick+sn+lead*pr+pad*pl+hat*(0.5+0.3*sp); }
+  return {L,R};
+}
+function mono(mu){ const m=Z(mu.L.length); for(let i=0;i<m.length;i++) m[i]=0.5*(mu.L[i]+mu.R[i]); return m; }
+function envDet(x,fc){ const n=x.length, I=Z(n), Q=Z(n); for(let i=0;i<n;i++){ const p=TAU*fc*i/SR; I[i]=x[i]*Math.cos(p); Q[i]=x[i]*Math.sin(p); }
+  const a=lp2(lp2(I,2800),2800), b=lp2(lp2(Q,2800),2800), e=Z(n); for(let i=0;i<n;i++) e[i]=Math.sqrt(a[i]*a[i]+b[i]*b[i]); return hp2(e,60); }
+function radioProgram(N,tVoice,f0){ // jingle, puis l'animateur sur un fond musical
+  const mu=mono(music(N)), v=voice(N,{f0:f0||108}), p=Z(N), iv=Math.round(tVoice*SR);
+  peakNorm(mu); for(let i=0;i<N;i++){ const t=i/SR, bed=t<tVoice-0.4?1:t<tVoice?1-0.8*(t-tVoice+0.4)/0.4:0.2; p[i]=bed*mu[i]+(i>=iv?0.95*v[i-iv]:0); }
+  return peakNorm(lp2(lp2(hp2(p,70),2600),2600)); }
+
 /* ================= générateurs ================= */
 function Synth(){ this.out=[]; this.ph=0; this.acc=0; }
 Synth.prototype.n=function(d){ const a=Math.round(this.acc), b=Math.round(this.acc+d*SR); this.acc+=d*SR; return b-a; };
@@ -228,9 +291,15 @@ const MORSE={A:".-",B:"-...",C:"-.-.",D:"-..",E:".",F:"..-.",G:"--.",H:"....",I:
 "0":"-----","1":".----","2":"..---","3":"...--","4":"....-","5":".....","6":"-....","7":"--...","8":"---..","9":"----."};
 
 const G={};
-G.am=()=>{ const N=4*SR, v=voice(N), x=Z(N); for(let i=0;i<N;i++) x[i]=(1+0.8*v[i])*Math.cos(TAU*FC*i/SR); return addNoise(x,0.01); };
-G.ssb=()=>{ const N=4*SR; return addNoise(ssb(voice(N),FC),0.01); };
-G.fm=()=>{ const N=4*SR, v=voice(N), fi=Z(N); for(let i=0;i<N;i++) fi[i]=FC+1800*v[i]; return addNoise(fm(fi),0.01); };
+G.am=()=>{ const N=8*SR, p=radioProgram(N,3.4,106), x=Z(N); for(let i=0;i<N;i++) x[i]=(1+0.8*p[i])*Math.cos(TAU*FC*i/SR); addNoise(x,0.01);
+  return {x, a:envDet(x,FC)}; };
+G.ssb=()=>{ const N=5*SR, v=band(voice(N,{f0:100}),300,2700); return {x:addNoise(ssb(v,FC),0.01), a:v}; };
+G.fm=()=>{ const N=5*SR, v=band(voice(N-Math.round(0.9*SR),{f0:124}),300,3000), fi=Z(N), a=Z(N), i0=Math.round(0.3*SR), i1=Math.round(4.45*SR);
+  for(let i=0;i<N;i++){ const j=i-i0; fi[i]=FC+2200*(j>=0&&j<v.length?v[j]:0); if(j>=0&&j<v.length) a[i]=v[j]; }
+  const x=fm(fi); for(let i=0;i<N;i++) if(i<Math.round(0.2*SR)||i>=i1) x[i]=0; // porteuse seulement pendant l'émission
+  const tail=lp2(Z(Math.round(0.13*SR)).map(()=>gauss()),4500); for(let k=0;k<tail.length;k++) a[i1+k]+=0.55*tail[k]*Math.min(1,k/30,(tail.length-k)/120); // « kchh » du squelch
+  for(let i=Math.round(0.2*SR);i<i1;i++) a[i]+=0.006*gauss();
+  return {x:addNoise(x,0.01), a}; };
 G.cw=()=>{
   const u=1.2/20, f=700, key=[]; const push=(v,d)=>{ const n=Math.round(d*SR); for(let i=0;i<n;i++) key.push(v); };
   push(0,0.2);
@@ -364,11 +433,11 @@ G.oth=()=>{ const N=4*SR, x=Z(N), L=Math.round(SR*0.012);
   for(let k=0;k<80;k++){ const a=Math.round(k*SR/20); for(let j=0;j<L&&a+j<N;j++){ const t=j/SR; x[a+j]+=Math.cos(TAU*(1000*t+4000*t*t/0.024*0.5+1500*t)); } }
   return addNoise(x,0.03); };
 G.parasites=()=>{ const N=4*SR, x=Z(N); let ph=0; for(let i=0;i<N;i++){ const t=i/SR; ph+=TAU*(450+15*Math.sin(TAU*0.2*t))/SR; let s=0; for(let h=1;h<14;h++) s+=(0.6/Math.pow(h,0.3))*Math.cos(h*ph); x[i]=s; } return addNoise(x,0.08); };
-G.mpx=()=>{ // multiplex FM à l'échelle 1/20 : 19 kHz → 950 Hz, 38 kHz → 1900 Hz, 57 kHz → 2850 Hz
-  const N=4*SR, x=Z(N), w=Z(N), d=Z(N); for(let i=0;i<N;i++){ w[i]=gauss(); d[i]=gauss(); }
-  const mono=smooth(w,9), diff=smooth(d,9), rds=Z(N); let rb=1; for(let i=0;i<N;i++){ if(i%Math.round(SR/59.4)===0) rb=ri(2)*2-1; rds[i]=rb; } const rs=smooth(rds,40);
-  for(let i=0;i<N;i++){ const t=i/SR; x[i]=mono[i]*(0.6+0.4*Math.sin(TAU*1.3*t))+0.1*Math.sin(TAU*950*t)+0.5*diff[i]*Math.sin(TAU*1900*t)+0.05*rs[i]*Math.sin(TAU*2850*t); }
-  return addNoise(x,0.002); };
+G.mpx=()=>{ // multiplex FM à l'échelle 1/20 : 19 kHz → 950 Hz, 38 kHz → 1900 Hz, 57 kHz → 2850 Hz ; son : gauche et droite
+  const N=8*SR, mu=music(N,{stereo:4}), sum=Z(N), dif=Z(N); for(let i=0;i<N;i++){ sum[i]=0.5*(mu.L[i]+mu.R[i]); dif[i]=0.5*(mu.L[i]-mu.R[i]); }
+  const S=lp2(lp2(sum,720),720), D=lp2(lp2(dif,720),720), rds=Z(N); let rb=1; for(let i=0;i<N;i++){ if(i%Math.round(SR/59.4)===0) rb=ri(2)*2-1; rds[i]=rb; } const rs=smooth(rds,40), x=Z(N);
+  for(let i=0;i<N;i++){ const t=i/SR; x[i]=S[i]+0.1*Math.sin(TAU*950*t)+2.2*D[i]*Math.sin(TAU*1900*t)+0.05*rs[i]*Math.sin(TAU*2850*t); }
+  return {x:addNoise(x,0.002), a:mu.L, aR:mu.R}; };
 G.dcf77=()=>{ const N=6*SR, x=Z(N); for(let i=0;i<N;i++){ const t=i/SR, s=Math.floor(t), ph=t-s; let env=1; if(s<5){ const len=(s%2?0.2:0.1); if(ph<len) env=0.15; } x[i]=env*Math.cos(TAU*1000*t); } return addNoise(x,0.01); };
 G.ofdm=()=>{ const N=4*SR, x=Z(N), K=60;
   for(let k=0;k<K;k++){ const fk=FC-2000+k*4000/K, p0=rnd()*TAU; let s=0; for(let i=0;i<N;i++){ if(i%(SR/40)===0) s=ri(2); x[i]+=Math.cos(TAU*fk*i/SR+p0+Math.PI*s)/K*4; } }
@@ -487,8 +556,8 @@ G.cubesat=()=>{ const N=10*SR, x=Z(N), hk=hannK(6);
   for(const t0 of [0.5,3.3,6.1,8.9]){ const i0=Math.round(t0*SR), L=Math.round(0.5*SR), d=Z(L); let b=0; for(let j=0;j<L;j++){ if(j%3===0) b=ri(2)*2-1; d[j]=b; }
     const c=FC+1800*Math.tanh((5-t0)/2.5), sm=conv(d,hk), fi=Z(L); for(let j=0;j<L;j++) fi[j]=c+700*sm[j]; const y=fm(fi), r=ramp(L); for(let j=0;j<L;j++) x[i0+j]+=y[j]*r[j]; }
   return addNoise(x,0.06); };
-G.issfm=()=>{ const N=10*SR, v=voice(N), fi=Z(N); for(let i=0;i<N;i++){ const t=i/SR; fi[i]=FC+1500*Math.tanh((5-t)/2)+1200*v[i]; }
-  const x=fm(fi); for(let i=0;i<N;i++){ const t=i/SR; if(t<0.3||t>9.7) x[i]=0; } return addNoise(x,0.08); };
+G.issfm=()=>{ const N=10*SR, v=band(voice(N,{f0:138,fs:1.06}),300,3000), fi=Z(N), a=Z(N); for(let i=0;i<N;i++){ const t=i/SR; fi[i]=FC+1500*Math.tanh((5-t)/2)+1200*v[i]; }
+  const x=fm(fi); for(let i=0;i<N;i++){ const t=i/SR; if(t<0.3||t>9.7) x[i]=0; else { const q=Math.min(1,Math.abs(t-5)/4.7); a[i]=v[i]+0.25*q*q*q*gauss(); } } return {x:addNoise(x,0.08), a:lp2(a,3200)}; };
 G.buzzer=()=>{ const N=Math.round(7.2*SR), x=Z(N); let ph=0;
   for(let i=0;i<N;i++){ const t=i/SR, f=t%2.4; x[i]=0.15*Math.cos(TAU*1000*t); if(f<1.1){ ph+=TAU*25/SR; let s=0; for(let h=1;h<=60;h++) s+=Math.cos(h*ph)/Math.sqrt(h); x[i]+=0.08*s*Math.min(1,f/0.02,(1.1-f)/0.02); } }
   return addNoise(x,0.05); };
@@ -507,8 +576,8 @@ G.link11=()=>{ const N=5*SR, x=Z(N), tones=[605]; for(let k=0;k<14;k++) tones.pu
   return addNoise(x,0.03); };
 G.numbers=()=>{ const N=9*SR, x=Z(N), notes=[784,659,784,523,587,659];
   for(let n=0;n<notes.length;n++){ const i0=Math.round((0.2+n*0.25)*SR), L=Math.round(0.22*SR); for(let j=0;j<L;j++) x[i0+j]+=0.5*Math.sin(Math.PI*j/L)*Math.sin(TAU*notes[n]*j/SR); }
-  const v=voice(Math.round(0.32*SR)); let t=2.2;
-  for(let g=0;g<3;g++){ for(let d=0;d<5;d++){ const i0=Math.round(t*SR), sh=0.8+rnd()*0.4; for(let j=0;j<v.length&&i0+j<N;j++){ const jj=Math.floor(j*sh)%v.length; x[i0+j]+=0.7*Math.abs(v[jj])*Math.sin(TAU*(260+40*d)*j/SR)+0.3*v[jj]*Math.sin(Math.PI*j/v.length); } t+=0.45; } t+=0.7; }
+  let t=2.2;
+  for(let g=0;g<3;g++){ for(let d=0;d<5;d++){ const i0=Math.round(t*SR), v=voice(Math.round(0.36*SR),{f0:205,fs:1.14,syl:1+ri(2)}); for(let j=0;j<v.length&&i0+j<N;j++) x[i0+j]+=0.75*v[j]; t+=0.48; } t+=0.7; }
   return addNoise(x,0.05); };
 
 /* ---- signaux ajoutés à la vérification du 12/11 ---- */
@@ -573,10 +642,10 @@ G.qrn=()=>{ const N=7*SR, x=Z(N); let t=0.3;
   while(t<6.7){ const i0=Math.round(t*SR), a=0.25+rnd()*rnd()*1.6, d=0.01+rnd()*0.12, L=Math.round(d*5*SR);
     for(let j=0;j<L&&i0+j<N;j++) x[i0+j]+=a*Math.exp(-j/SR/d)*gauss()*(rnd()<0.85?1:0); t+=0.08+rnd()*rnd()*1.4; }
   return addNoise(x,0.03); };
-G.fading=()=>{ const N=10*SR, v=voice(N), lp=smooth(lpNoise(N,4),4), s=Z(N), x=Z(N); // station AM (parole + musique), puis deux trajets : le creux se déplace
-  for(let i=0;i<N;i++){ const m=Math.max(-0.9,Math.min(0.9,0.35*v[i]+1.3*lp[i])); s[i]=(1+m)*Math.cos(TAU*FC*i/SR); }
+G.fading=()=>{ const N=10*SR, p=radioProgram(N,3.2,112), s=Z(N), x=Z(N); // deux trajets : le creux se déplace
+  for(let i=0;i<N;i++) s[i]=(1+0.8*p[i])*Math.cos(TAU*FC*i/SR);
   for(let i=4;i<N;i++){ const d=2+0.3*Math.sin(TAU*i/N), k=Math.floor(d), f=d-k; x[i]=s[i]+0.93*((1-f)*s[i-k]+f*s[i-k-1]); }
-  return addNoise(x,0.01); };
+  addNoise(x,0.01); return {x, a:envDet(x,FC)}; };
 G.plc=()=>{ const N=6*SR, x=Z(N), fs=[]; for(let f=150;f<5900;f+=150) if(f<2500||f>3400) fs.push(f); // encoche = bande radioamateur
   const ph=fs.map(()=>rnd()*TAU), gate=Z(N), sym=Math.round(SR/25); let t=0.2;
   while(t<5.8){ const d=0.03+rnd()*0.25, a=Math.round(t*SR), b=Math.min(N,Math.round((t+d)*SR)); for(let i=a;i<b;i++) gate[i]=Math.min(1,(i-a)/30,(b-i)/30); t+=d+0.02+rnd()*rnd()*0.5; }
@@ -753,10 +822,17 @@ let current=null, signal=null, fpImage=null, ctx=null, src=null, gain=null, t0=0
 let quiz=null, score={ok:0,n:0};
 const cache={};
 
+let AUD=null; // son entendu quand il diffère de ce que montre l'écran (son démodulé, stéréo)
+function norm08(a){ let pk=0; for(const v of a) if(Math.abs(v)>pk) pk=Math.abs(v); const k=0.8/(pk||1), o=Float32Array.from(a); for(let i=0;i<o.length;i++) o[i]*=k; return o; }
 function buildSignal(m){
-  if(!cache[m.id]){ const raw=Float32Array.from(G[m.id]()); let pk=0; for(const v of raw) if(Math.abs(v)>pk) pk=Math.abs(v); for(let i=0;i<raw.length;i++) raw[i]*=0.8/(pk||1); cache[m.id]=raw; }
-  const clean=cache[m.id], lvl=document.getElementById("noise").value/100*0.2, out=new Float32Array(clean.length);
-  for(let i=0;i<clean.length;i++) out[i]=clean[i]+lvl*gauss(); return out;
+  if(!cache[m.id]){ const r=G[m.id]();
+    if(r&&r.x){ let pk=0; for(const v of r.a) pk=Math.max(pk,Math.abs(v)); if(r.aR) for(const v of r.aR) pk=Math.max(pk,Math.abs(v)); const k=0.8/(pk||1), sc=a=>{ const o=Float32Array.from(a); for(let i=0;i<o.length;i++) o[i]*=k; return o; };
+      cache[m.id]={x:norm08(r.x), a:sc(r.a), aR:r.aR?sc(r.aR):null}; }
+    else cache[m.id]={x:norm08(r)}; }
+  const c=cache[m.id], lvl=document.getElementById("noise").value/100*0.2, out=new Float32Array(c.x.length);
+  for(let i=0;i<out.length;i++) out[i]=c.x[i]+lvl*gauss();
+  if(c.a){ const al=lvl*0.35, add=a=>{ const o=new Float32Array(a.length); for(let i=0;i<o.length;i++) o[i]=a[i]+al*gauss(); return o; }; AUD={L:add(c.a), R:c.aR?add(c.aR):null}; } else AUD=null;
+  return out;
 }
 function analyse(){
   const H=fp.height, rows=[]; for(let y=0;y<H;y++) rows.push(spectrumRaw(signal,Math.round((y+0.5)/H*signal.length),current));
@@ -829,9 +905,10 @@ function play(){
   if(!signal) return; stop();
   try{ ctx=ctx||new (window.AudioContext||window.webkitAudioContext)(); }catch(e){ return; }
   if(ctx.state==="suspended") ctx.resume();
-  let buf; try{ buf=ctx.createBuffer(1,signal.length,SR); buf.getChannelData(0).set(signal); }
-  catch(e){ const k=Math.max(2,Math.round(ctx.sampleRate/SR)), n=signal.length; buf=ctx.createBuffer(1,n*k,SR*k); const o=buf.getChannelData(0);
-    for(let i=0;i<n;i++){ const a=signal[i], b=signal[i+1<n?i+1:i]; for(let j=0;j<k;j++) o[i*k+j]=a+(b-a)*j/k; } }
+  const chans=AUD?(AUD.R?[AUD.L,AUD.R]:[AUD.L]):[signal], n=chans[0].length; let buf;
+  try{ buf=ctx.createBuffer(chans.length,n,SR); chans.forEach((c,ci)=>buf.getChannelData(ci).set(c)); }
+  catch(e){ const k=Math.max(2,Math.round(ctx.sampleRate/SR)); buf=ctx.createBuffer(chans.length,n*k,SR*k);
+    chans.forEach((c,ci)=>{ const o=buf.getChannelData(ci); for(let i=0;i<n;i++){ const a=c[i], b=c[i+1<n?i+1:i]; for(let j=0;j<k;j++) o[i*k+j]=a+(b-a)*j/k; } }); }
   src=ctx.createBufferSource(); src.buffer=buf; src.loop=document.getElementById("loop").checked;
   gain=ctx.createGain(); gain.gain.value=document.getElementById("vol").value/100*0.8; src.connect(gain).connect(ctx.destination);
   const me=src; src.onended=()=>{ if(playing&&src===me&&!me.loop){ playing=false; fctx.putImageData(fpImage,0,0); restSpectrum(); } };

@@ -28,7 +28,7 @@
 "book": "Boek: blad {r}",
 "lang": "Taal",
 "signals": "Signalen",
-"f1": "Signalen gesimuleerd in de pagina (12 000 samples per seconde): die van blad 5 bis van het boek OpenBookRadio, andere signalen uit het boek en bonussen. Bij radiosignalen (AM, FM, AIS, LoRa…) zie je de gesimuleerde middenfrequentie, zoals op een SDR-scherm; sommige zijn verkleind of versneld, dat staat erbij.",
+"f1": "Signalen gesimuleerd in de pagina (12 000 samples per seconde): die van blad 5 bis van het boek OpenBookRadio, andere signalen uit het boek en bonussen. Bij radiosignalen (AM, FM, AIS, LoRa…) zie je de gesimuleerde middenfrequentie, zoals op een SDR-scherm; sommige zijn verkleind of versneld, dat staat erbij. Bij AM, SSB, FM, FM-stereo, ISS en fading hoor je het gedemoduleerde geluid, zoals uit de luidspreker van de ontvanger, en toont het scherm het radiosignaal; de stem is synthetisch en zegt geen echte woorden.",
 "f2": "De tijd loopt naar beneden in de waterval en de afdruk. Licentie CC BY-NC-SA 4.0, gratis, niet verkopen.",
 "night": "Nachtmodus",
 "day": "Dagmodus",
@@ -59,10 +59,16 @@
 ],
 "modes": {
 "am": {
-"sh": "spraak",
+"sh": "omroep",
 "t": "AM: amplitudemodulatie",
 "h": "De sterkte van de draaggolf volgt het geluid: de curve „zwelt” op en af.",
-"l": "Een vaste streep in het midden (de draaggolf), met aan elke kant een gelijke zijband. Ongeveer 6 tot 9 kHz breed. Omroep op korte en middengolf, luchtvaart (bladen 10 en 12)."
+"l": "Een vaste streep in het midden (de draaggolf), met aan elke kant een gelijke zijband. Ongeveer 6 tot 9 kHz breed. Omroep op korte en middengolf, luchtvaart (bladen 10 en 12).",
+"r": [
+[
+"Luisteren",
+"Een jingle, daarna de presentator over achtergrondmuziek. De twee zijbanden zijn elkaars spiegelbeeld: je ziet de melodie en daarna de stem aan weerszijden van de draaggolf."
+]
+]
 },
 "ssb": {
 "nm": "SSB",
@@ -74,7 +80,13 @@
 "sh": "spraak",
 "t": "FM: frequentiemodulatie",
 "h": "De amplitude blijft gelijk; de trillingen komen met het geluid dichter bij elkaar of verder uiteen.",
-"l": "Het signaal danst rond zijn frequentie, breder bij luid geluid: 12,5 kHz per kanaal bij smalband-FM (portofoons, relais), 200 kHz bij FM-omroep (bladen 2 en 11)."
+"l": "Het signaal danst rond zijn frequentie, breder bij luid geluid: 12,5 kHz per kanaal bij smalband-FM (portofoons, relais), 200 kHz bij FM-omroep (bladen 2 en 11).",
+"r": [
+[
+"Luisteren",
+"Aan het eind de korte „ksjj”: de squelch sluit als de zender stopt."
+]
+]
 },
 "cw": {
 "t": "CW: morse",
@@ -394,7 +406,13 @@
 "t": "FM-stereo en RDS",
 "h": "Het gedemoduleerde geluid (multiplex) bevat het L+R-kanaal, een pilottoon op 19 kHz, het L-R-kanaal rond 38 kHz en RDS op 57 kHz.",
 "l": "Gezien van 0 tot 60 kHz na demodulatie: een laag blok, een dunne streep op 19 kHz, een zwakker blok in het midden en RDS helemaal bovenaan (blad 10).",
-"n": "schaal ÷ 20 om te beluisteren"
+"n": "schaal ÷ 20; stereogeluid",
+"r": [
+[
+"Luisteren",
+"Met koptelefoon: 4 s mono (het middelste blok, L-R, verdwijnt), daarna 4 s stereo, de melodie links en de akkoorden rechts."
+]
+]
 },
 "dcf77": {
 "t": "Tijdsignaal DCF77 (77,5 kHz)",

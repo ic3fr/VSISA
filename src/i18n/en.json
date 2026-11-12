@@ -28,7 +28,7 @@
 "book": "Book: sheet {r}",
 "lang": "Language",
 "signals": "Signals",
-"f1": "Signals simulated in the page (12,000 samples per second): those of sheet 5 bis of the OpenBookRadio book, other signals from the book, and bonuses. For radio signals (AM, FM, AIS, LoRa…), you see the simulated intermediate frequency, as on an SDR screen; some are scaled down or sped up, as stated.",
+"f1": "Signals simulated in the page (12,000 samples per second): those of sheet 5 bis of the OpenBookRadio book, other signals from the book, and bonuses. For radio signals (AM, FM, AIS, LoRa…), you see the simulated intermediate frequency, as on an SDR screen; some are scaled down or sped up, as stated. For AM, SSB, FM, FM stereo, ISS and fading, you hear the demodulated sound, as from the receiver's loudspeaker, while the screen shows the radio signal; the voice is a synthetic voice that says no real words.",
 "f2": "Time runs downwards in the waterfall and the footprint. CC BY-NC-SA 4.0 license, free, not for sale.",
 "night": "Night mode",
 "day": "Day mode",
@@ -59,10 +59,16 @@
 ],
 "modes": {
 "am": {
-"sh": "voice",
+"sh": "broadcast",
 "t": "AM: amplitude modulation",
 "h": "The strength of the carrier follows the sound: the curve \"swells\" and \"shrinks\".",
-"l": "A fixed line in the centre (the carrier), with two identical sidebands on each side. About 6 to 9 kHz wide. Shortwave and medium-wave broadcasting, aviation (sheets 10 and 12)."
+"l": "A fixed line in the centre (the carrier), with two identical sidebands on each side. About 6 to 9 kHz wide. Shortwave and medium-wave broadcasting, aviation (sheets 10 and 12).",
+"r": [
+[
+"Listening",
+"A jingle, then the presenter over background music. The two sidebands are mirror images: you see the melody, then the voice, on each side of the carrier."
+]
+]
 },
 "ssb": {
 "nm": "SSB",
@@ -74,7 +80,13 @@
 "sh": "voice",
 "t": "FM: frequency modulation",
 "h": "The amplitude stays fixed; the oscillations get closer or wider apart with the sound.",
-"l": "The signal dances around its frequency, wider when the sound is loud: 12.5 kHz per channel in narrow FM (walkie-talkies, repeaters), 200 kHz for FM broadcasting (sheets 2 and 11)."
+"l": "The signal dances around its frequency, wider when the sound is loud: 12.5 kHz per channel in narrow FM (walkie-talkies, repeaters), 200 kHz for FM broadcasting (sheets 2 and 11).",
+"r": [
+[
+"Listening",
+"At the end, the short \"kshh\": the squelch closes when the transmitter stops."
+]
+]
 },
 "cw": {
 "t": "CW: Morse",
@@ -394,7 +406,13 @@
 "t": "FM stereo radio and RDS",
 "h": "The demodulated sound (multiplex) contains the L+R channel, a 19 kHz pilot, the L-R channel around 38 kHz and RDS at 57 kHz.",
 "l": "Seen from 0 to 60 kHz after demodulation: a low block, a thin line at 19 kHz, a weaker block in the middle and RDS at the very top (sheet 10).",
-"n": "scale ÷ 20 for listening"
+"n": "scale ÷ 20; stereo sound",
+"r": [
+[
+"Listening",
+"With headphones: 4 s in mono (the middle block, L-R, disappears), then 4 s in stereo, the melody on the left and the chords on the right."
+]
+]
 },
 "dcf77": {
 "t": "DCF77 time signal (77.5 kHz)",
