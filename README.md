@@ -54,7 +54,7 @@ The language is picked automatically from your browser's language settings (all 
 The online page counts visits (once per browser session) and plays with [Abacus](https://v2.jasoncameron.dev/abacus), a free counting service with no cookies and no personal data stored. The totals are shown at the bottom of the page and in the badges above. The downloaded copy (offline) counts nothing.
 
 ## Editing the page
-`index.html` is built by `python3 src/build.py` from `src/template.html` and the language files `src/i18n/<language>.json`. Fix a translation in its language file, then run the command again.
+`index.html` is built by `python3 src/build.py` from `src/template.html` and the language files `src/i18n/<language>.json`. Fix a translation in its language file, then run the command again. `node src/check.js index.html` checks every signal (missing texts, spectrum peaks).
 
 ## The book
 This page goes with the "Visualising a signal" sheet (sheet 5 bis) of the **OpenBookRadio** book, a free radio listening guide: [download it here](https://github.com/ic3fr/OpenBookRadio/releases). The sheet numbers shown refer to the book.

@@ -53,7 +53,7 @@ La langue est choisie automatiquement d'après les réglages du navigateur (tout
 La page en ligne compte les visites (une fois par session de navigateur) et les écoutes avec [Abacus](https://v2.jasoncameron.dev/abacus), un service de comptage gratuit, sans cookie et sans donnée personnelle conservée. Les totaux s'affichent en bas de la page et dans les badges ci-dessus. La copie téléchargée (hors ligne) ne compte rien.
 
 ## Modifier la page
-`index.html` est construite par `python3 src/build.py` à partir de `src/template.html` et des fichiers de langue `src/i18n/<langue>.json`. Corrige une traduction dans le fichier de sa langue, puis relance la commande.
+`index.html` est construite par `python3 src/build.py` à partir de `src/template.html` et des fichiers de langue `src/i18n/<langue>.json`. Corrige une traduction dans le fichier de sa langue, puis relance la commande. `node src/check.js index.html` vérifie chaque signal (textes manquants, pics du spectre).
 
 ## Le livre
 Cette page accompagne la fiche « Visualiser un signal » du livre **OpenBookRadio** (guide d'écoute radio, gratuit) : [le télécharger ici](https://github.com/ic3fr/OpenBookRadio/releases). Les numéros de fiche affichés renvoient au livre.
