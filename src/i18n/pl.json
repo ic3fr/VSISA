@@ -33,7 +33,9 @@
 "night": "Tryb nocny",
 "day": "Tryb dzienny",
 "visits": "odwiedzin",
-"plays": "odtworzeń"
+"plays": "odtworzeń",
+"book_dl": "Pobierz książkę",
+"book_dl2": "Pobierz książkę OpenBookRadio (za darmo, PDF i EPUB, 13 języków)"
 },
 "groups": [
 "Głos analogowy",

@@ -33,7 +33,9 @@
 "night": "Modo notte",
 "day": "Modo giorno",
 "visits": "visite",
-"plays": "ascolti"
+"plays": "ascolti",
+"book_dl": "Scarica il libro",
+"book_dl2": "Scarica il libro OpenBookRadio (gratuito, PDF ed EPUB, 13 lingue)"
 },
 "groups": [
 "Voce analogica",

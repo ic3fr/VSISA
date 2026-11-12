@@ -27,6 +27,11 @@ h1 small{display:block;font-family:var(--f-mono);font-weight:400;font-size:.78re
 .btn{font:500 .9rem var(--f-body);border:1px solid var(--line);background:var(--panel-2);color:var(--fg);border-radius:6px;padding:8px 14px;cursor:pointer;min-height:38px}
 .btn:hover{border-color:var(--muted)}
 .hdr-ctl{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+a.btn{display:inline-flex;align-items:center;text-decoration:none}
+.btn.book{border-color:var(--accent);color:var(--accent)}
+.btn.book:hover{background:var(--accent);color:var(--accent-ink)}
+.ref{text-decoration:none}
+a.ref:hover{border-color:var(--accent)}
 .langlbl{display:flex;align-items:center;gap:8px;font:400 .8rem var(--f-mono);color:var(--muted)}
 select{font:500 .9rem var(--f-body);color:var(--fg);background:var(--panel-2);border:1px solid var(--line);border-radius:6px;padding:7px 10px;min-height:38px;cursor:pointer}
 select:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
@@ -89,6 +94,7 @@ footer p{margin:0;max-width:110ch}
     <div class="hdr-ctl">
       <label class="langlbl" for="lang"><span id="tLang">Langue</span>
         <select id="lang"></select></label>
+      <a class="btn book" id="tBook" href="https://github.com/ic3fr/OpenBookRadio/releases" target="_blank" rel="noopener">Télécharger le livre</a>
       <button class="btn" id="night" type="button" aria-pressed="false">Mode nuit</button>
       <button class="btn" id="mystery" type="button">Son mystère</button>
     </div>
@@ -133,6 +139,7 @@ footer p{margin:0;max-width:110ch}
   <footer>
     <p id="tF1"></p>
     <p id="tF2"></p>
+    <p><a id="tBook2" href="https://github.com/ic3fr/OpenBookRadio/releases" target="_blank" rel="noopener" style="color:var(--accent)">Télécharger le livre</a></p>
     <p id="tStats" class="stats" hidden></p>
   </footer>
 </div>
@@ -672,7 +679,7 @@ let lastPrefix="";
 function renderInfo(m,prefix){ lastPrefix=prefix||""; const x=tx(m);
   const rows=[[t("principle"),x.how],[t("screen"),x.look]].concat(x.rows).filter(r=>r[1]);
   document.getElementById("info").innerHTML=lastPrefix+`<h3>${esc(x.title)}</h3><dl>${rows.map(r=>`<dt>${esc(r[0])}</dt><dd>${esc(r[1])}</dd>`).join("")}</dl>`+
-    (m.ref?`<span class="ref">${esc(t("book").replace("{r}",m.ref))}</span>`:"");
+    (m.ref?`<a class="ref" href="https://github.com/ic3fr/OpenBookRadio/releases" target="_blank" rel="noopener">${esc(t("book").replace("{r}",m.ref))}</a>`:"");
   const ag=document.getElementById("again"); if(ag) ag.addEventListener("click",mystery);
 }
 function renderQuiz(){ const el=document.getElementById("info");
@@ -734,7 +741,7 @@ function buildAside(){ aside.textContent=""; aside.setAttribute("aria-label",t("
     aside.appendChild(d); }); }
 function setLang(l){ if(!I18N[l]) l="fr"; LG=l; LOC=(LANGS.find(x=>x[0]===l)||LANGS[0])[2]; document.documentElement.lang=l;
   const sel=document.getElementById("lang"); sel.value=l;
-  const T={tTitle:"title",tLang:"lang",mystery:"mystery",play:"play",stop:"stop",tNoise:"noise",tVol:"volume",tLoop:"loop",tSpecwf:"specwf",tCursor:"cursor",tFoot:"footprint",tF1:"f1",tF2:"f2"};
+  const T={tBook:"book_dl",tBook2:"book_dl2",tTitle:"title",tLang:"lang",mystery:"mystery",play:"play",stop:"stop",tNoise:"noise",tVol:"volume",tLoop:"loop",tSpecwf:"specwf",tCursor:"cursor",tFoot:"footprint",tF1:"f1",tF2:"f2"};
   for(const id in T) document.getElementById(id).textContent=t(T[id]);
   document.getElementById("night").textContent=t(NIGHT?"day":"night");
   document.title=t("title")+" · VSISA"; showStats();

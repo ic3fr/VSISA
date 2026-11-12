@@ -33,7 +33,9 @@
 "night": "ナイトモード",
 "day": "デイモード",
 "visits": "訪問",
-"plays": "再生"
+"plays": "再生",
+"book_dl": "本をダウンロード",
+"book_dl2": "OpenBookRadio の本をダウンロード（無料、PDF と EPUB、13 言語）"
 },
 "groups": [
 "アナログ音声",

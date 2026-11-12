@@ -33,7 +33,9 @@
 "night": "Noční režim",
 "day": "Denní režim",
 "visits": "návštěv",
-"plays": "přehrání"
+"plays": "přehrání",
+"book_dl": "Stáhnout knihu",
+"book_dl2": "Stáhnout knihu OpenBookRadio (zdarma, PDF a EPUB, 13 jazyků)"
 },
 "groups": [
 "Analogový hlas",

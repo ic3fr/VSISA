@@ -6,7 +6,7 @@
 
 Radio mode identifier: **78 simulated signals** (including 18 sounds from space and 7 shortwave curiosities as bonuses), with a red **night mode**, to learn to recognise what you hear and see on a receiver or an SDR.
 
-**Open the page: https://ic3fr.github.io/VSISA/** · 13 languages: menu at the top of the page, or a direct link ending in `#en`, `#fr`, `#de`…
+**Open the page: https://ic3fr.github.io/VSISA/** · **[📥 Download the OpenBookRadio book](https://github.com/ic3fr/OpenBookRadio/releases)** (free, PDF and EPUB) · 13 languages: menu at the top of the page, or a direct link ending in `#en`, `#fr`, `#de`…
 
 ## What it does
 - For each signal: the **sound**, the live **spectrum** and **waterfall**, the full **footprint** of the signal, and a fact card (principle, what it looks like on screen, sheet number in the book).
@@ -57,7 +57,7 @@ The online page counts visits (once per browser session) and plays with [Abacus]
 `index.html` is built by `python3 src/build.py` from `src/template.html` and the language files `src/i18n/<language>.json`. Fix a translation in its language file, then run the command again.
 
 ## The book
-This page goes with the "Visualising a signal" sheet (sheet 5 bis) of the **OpenBookRadio** book, a free radio listening guide. The sheet numbers shown refer to the book.
+This page goes with the "Visualising a signal" sheet (sheet 5 bis) of the **OpenBookRadio** book, a free radio listening guide: [download it here](https://github.com/ic3fr/OpenBookRadio/releases). The sheet numbers shown refer to the book.
 
 ## License
 Creative Commons **BY-NC-SA 4.0**: free, sharing allowed with attribution, no commercial use, same license for derivatives. Not for sale.

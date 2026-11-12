@@ -33,7 +33,9 @@
 "night": "Nachtmodus",
 "day": "Dagmodus",
 "visits": "bezoeken",
-"plays": "afspelingen"
+"plays": "afspelingen",
+"book_dl": "Boek downloaden",
+"book_dl2": "Het boek OpenBookRadio downloaden (gratis, PDF en EPUB, 13 talen)"
 },
 "groups": [
 "Analoge spraak",

@@ -33,7 +33,9 @@
 "night": "Nachtmodus",
 "day": "Tagmodus",
 "visits": "Besuche",
-"plays": "Wiedergaben"
+"plays": "Wiedergaben",
+"book_dl": "Buch herunterladen",
+"book_dl2": "Das Buch OpenBookRadio herunterladen (kostenlos, PDF und EPUB, 13 Sprachen)"
 },
 "groups": [
 "Analoge Sprache",

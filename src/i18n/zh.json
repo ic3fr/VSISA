@@ -33,7 +33,9 @@
 "night": "夜间模式",
 "day": "日间模式",
 "visits": "次访问",
-"plays": "次收听"
+"plays": "次收听",
+"book_dl": "下载本书",
+"book_dl2": "下载 OpenBookRadio 一书（免费，PDF 和 EPUB，13 种语言）"
 },
 "groups": [
 "模拟语音",

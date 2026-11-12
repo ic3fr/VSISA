@@ -6,7 +6,7 @@
 
 Identificateur de modes radio : **78 signaux simulés** (dont 18 sons de l'espace et 7 curiosités des ondes courtes en bonus), avec un **mode nuit** en nuances de rouge pour apprendre à reconnaître ce qu'on entend et ce qu'on voit sur un récepteur ou un SDR.
 
-**Ouvrir la page : https://ic3fr.github.io/VSISA/** · 13 langues : menu en haut de la page, ou lien direct avec `#en`, `#es`, `#de`… à la fin de l'adresse.
+**Ouvrir la page : https://ic3fr.github.io/VSISA/** · **[📥 Télécharger le livre OpenBookRadio](https://github.com/ic3fr/OpenBookRadio/releases)** (gratuit, PDF et EPUB) · 13 langues : menu en haut de la page, ou lien direct avec `#en`, `#es`, `#de`… à la fin de l'adresse.
 
 ## Ce qu'elle fait
 - Pour chaque signal : le **son**, le **spectre** et le **waterfall** en direct, l'**empreinte** complète du signal et une fiche (principe, aspect à l'écran, fiche du livre).
@@ -56,7 +56,7 @@ La page en ligne compte les visites (une fois par session de navigateur) et les 
 `index.html` est construite par `python3 src/build.py` à partir de `src/template.html` et des fichiers de langue `src/i18n/<langue>.json`. Corrige une traduction dans le fichier de sa langue, puis relance la commande.
 
 ## Le livre
-Cette page accompagne la fiche « Visualiser un signal » du livre **OpenBookRadio** (guide d'écoute radio, gratuit). Les numéros de fiche affichés renvoient au livre.
+Cette page accompagne la fiche « Visualiser un signal » du livre **OpenBookRadio** (guide d'écoute radio, gratuit) : [le télécharger ici](https://github.com/ic3fr/OpenBookRadio/releases). Les numéros de fiche affichés renvoient au livre.
 
 ## Licence
 Creative Commons **BY-NC-SA 4.0** : gratuit, partage autorisé avec attribution, pas d'usage commercial, même licence pour les dérivés. Ne pas vendre.

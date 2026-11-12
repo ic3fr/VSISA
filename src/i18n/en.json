@@ -33,7 +33,9 @@
 "night": "Night mode",
 "day": "Day mode",
 "visits": "visits",
-"plays": "plays"
+"plays": "plays",
+"book_dl": "Download the book",
+"book_dl2": "Download the OpenBookRadio book (free, PDF and EPUB, 13 languages)"
 },
 "groups": [
 "Analogue voice",
