@@ -28,7 +28,7 @@
 "book": "Buch: Blatt {r}",
 "lang": "Sprache",
 "signals": "Signale",
-"f1": "Im Browser simulierte Signale (12 000 Abtastwerte pro Sekunde), nach den Signalen von Blatt 5 bis des Buchs OpenBookRadio, dazu Olivia, FT4 und Feld Hell (Blatt 26). Bei Funksignalen (AM, FM, AIS, LoRa…) sieht man die simulierte Zwischenfrequenz wie auf einem SDR-Bildschirm; manche sind verkleinert oder beschleunigt, das ist angegeben.",
+"f1": "Im Browser simulierte Signale (12 000 Abtastwerte pro Sekunde): die von Blatt 5 bis des Buchs OpenBookRadio, weitere Signale aus dem Buch und Bonus-Signale. Bei Funksignalen (AM, FM, AIS, LoRa…) sieht man die simulierte Zwischenfrequenz wie auf einem SDR-Bildschirm; manche sind verkleinert oder beschleunigt, das ist angegeben.",
 "f2": "Die Zeit läuft im Wasserfall und im Abdruck nach unten. Lizenz CC BY-NC-SA 4.0, kostenlos, nicht verkaufen.",
 "night": "Nachtmodus",
 "day": "Tagmodus",
@@ -627,7 +627,7 @@
 "nm": "ISS in FM",
 "sh": "145,800 MHz",
 "t": "Raumstation (ISS): Sprache in FM",
-"h": "Astronauten sprechen mit Schulen und Funkamateuren in FM auf 145,800 MHz. Die Station fliegt mit 28 000 km/h: die Empfangsfrequenz sinkt während des Überflugs um etwa 3,5 kHz.",
+"h": "Astronauten sprechen mit Schulen und Funkamateuren in FM auf 145,800 MHz. Die Station fliegt mit 28 000 km/h: während des Überflugs wandert die Empfangsfrequenz von etwa +3,5 kHz auf −3,5 kHz.",
 "l": "Ein FM-Sprachband, das während des 10-minütigen Überflugs langsam von rechts nach links wandert (Blatt 34).",
 "n": "10-min-Überflug auf 10 s verkürzt"
 },
@@ -643,7 +643,7 @@
 "sh": "3756 / 5448 kHz",
 "t": "„The Pip“: endlose Pieptöne",
 "h": "Eine weitere russische Militärbake auf Kurzwelle, die Tag und Nacht kurze Pieptöne wiederholt, manchmal von Nachrichten unterbrochen.",
-"l": "Ein fester Strich, in sehr dichte Punkte zerhackt; im Ohr ein schnelles Pip-pip-pip ohne Ende.",
+"l": "Ein fester Strich, etwa 50-mal pro Minute von einem kurzen Piep unterbrochen; im Ohr ein gleichmäßiges „Pip… pip…“, das nie aufhört.",
 "n": "Rhythmus angenähert"
 },
 "squeaky": {
@@ -674,7 +674,7 @@
 "sh": "16 Töne",
 "t": "Link-11: Marine-Datenverbindung",
 "h": "Sechzehn Töne von 605 bis 2915 Hz gleichzeitig, jeder 75-mal pro Sekunde phasenmoduliert.",
-"l": "Ein Kamm regelmäßiger Linien über 2,3 kHz, dazu eine etwas abseits liegende Linie; im Ohr ein musikalisches Brummen (Blatt 35 bis)."
+"l": "Ein Kamm aus vierzehn regelmäßigen Linien von 935 bis 2365 Hz, dazu zwei abseits liegende Linien bei 605 und 2915 Hz; im Ohr ein musikalisches Brummen (Blatt 35 bis)."
 },
 "numbers": {
 "nm": "Zahlensender",
@@ -683,6 +683,167 @@
 "h": "Zu fester Zeit eine kurze Erkennungsmelodie, dann liest eine (oft synthetische) Stimme Gruppen von fünf Ziffern, in AM oder SSB.",
 "l": "Die Melodie als einzelne Töne, dann regelmäßige Silbengruppen mit Pausen dazwischen (Blatt 35 bis).",
 "n": "nachgeahmte Stimme, keine echten Ziffern"
+},
+"rttydwd": {
+"nm": "DWD-Wetter-RTTY",
+"sh": "50 Bd / 450 Hz",
+"t": "Wetter-RTTY des DWD (Deutschland)",
+"h": "Wie das RTTY der Funkamateure, aber mit 50 Baud und 450 Hz Abstand: der Deutsche Wetterdienst sendet seine Berichte und Seewettervorhersagen im Klartext.",
+"l": "Zwei viel weiter auseinanderliegende Striche und ein etwas schnellerer Rhythmus. Zwischen den Berichten der Anruf „CQ CQ CQ DE DDK2 DDH7 DDK9“, dann RYRYRY. Auf 4583, 7646 und 10 100,8 kHz, auch 147,3 kHz (Blatt 27)."
+},
+"mfsk16": {
+"nm": "MFSK16",
+"sh": "16 Töne",
+"t": "MFSK16: sechzehn Töne",
+"h": "Sechzehn Töne im Abstand von 15,625 Hz, immer nur einer, 15,625-mal pro Sekunde; jeder Ton trägt vier Bit, durch Fehlerkorrektur geschützt.",
+"l": "Ein 316 Hz breites Band aus kleinen Stufen, die ständig springen, nach einem festen Ton am Anfang. Im Ohr eine schnelle kleine Melodie, wie eine Flöte. Dient auch zum Senden kleiner Bilder."
+},
+"sitora": {
+"nm": "SITOR-A (ARQ)",
+"sh": "Telex",
+"t": "SITOR-A: Seefunk-Telex in ARQ",
+"h": "Die Station sendet alle 450 ms Blöcke aus drei Zeichen (210 ms, 100 Baud, 170 Hz Abstand); dazwischen antwortet die Gegenstation mit einem kurzen Signal für „empfangen“ oder „wiederholen“.",
+"l": "Kurze regelmäßige Pakete mit einer kleinen, schwächeren Antwort dazwischen: ein Grillen-„Tschirp-tschirp“. Auf Kurzwelle selten geworden."
+},
+"dscvhf": {
+"nm": "UKW-DSC (Kanal 70)",
+"sh": "DSC",
+"t": "DSC: digitaler Selektivruf auf Kanal 70",
+"h": "Ein Paket von etwa einer halben Sekunde mit 1200 Baud auf zwei Tönen, 1300 und 2100 Hz: es enthält die MMSI-Nummer des Schiffs, die Art des Anrufs und im Notfall die Position.",
+"l": "Ein kurzes, hohes „brrrt“ auf 156,525 MHz, das mit einer Folge wechselnder Bits beginnt. Auf Mittel- und Kurzwelle ist DSC eine FSK mit 100 Baud, wie NAVTEX (Blatt 17)."
+},
+"selcal": {
+"nm": "SELCAL Luftfahrt",
+"sh": "4 Töne",
+"t": "SELCAL: Selektivruf für Flugzeuge auf Kurzwelle",
+"h": "Die Flugsicherung ruft ein bestimmtes Flugzeug mit zwei Impulsen von etwa einer Sekunde, jeder aus zwei von sechzehn Tönen (312,6 bis 1479,1 Hz). Im Flugzeug gehen eine Lampe und ein Gong an: die Besatzung muss nicht ständig mithören.",
+"l": "Zwei Akkorde nacheinander, „Bing-Bong“, zwischen den Sprachmeldungen auf den Flugfunkfrequenzen in SSB, zum Beispiel 5616 oder 8864 kHz."
+},
+"dcs": {
+"nm": "DCS",
+"sh": "134,4 bit/s",
+"t": "DCS: der digitale Subton",
+"h": "Statt eines Dauertons wie bei CTCSS sendet das Gerät unter der Stimme ein 23-Bit-Wort, pausenlos wiederholt, mit 134,4 Bit pro Sekunde. Am Ende schließt ein 134,4-Hz-Ton die Rauschsperre geräuschlos.",
+"l": "Im Ton des FM-Empfängers: ein unregelmäßiges Band ganz unten, unter 300 Hz, und ein dumpfes Brummen, wenn das Filter des Geräts es durchlässt (Blatt 8)."
+},
+"t1750": {
+"nm": "1750-Hz-Ton",
+"sh": "Relais",
+"t": "1750-Hz-Ton: ein Relais öffnen",
+"h": "Ein kurzer 1750-Hz-Ton (etwa 0,5 bis 1 s) am Anfang der Sendung öffnet noch manche europäische Amateurfunkrelais; das Relais antwortet beim Loslassen oft mit einem Piep.",
+"l": "Ein kurzer Strich bei 1750 Hz, dann die Stimme, dann der Piep des Relais (Blatt 8)."
+},
+"ncdxf": {
+"nm": "NCDXF-Baken",
+"sh": "14,100 MHz",
+"t": "NCDXF-/IARU-Baken: Ausbreitung testen",
+"h": "Achtzehn Baken weltweit senden reihum je zehn Sekunden auf 14,100, 18,110, 21,150, 24,930 und 28,200 MHz: das Rufzeichen in Morse, dann vier Striche von je einer Sekunde mit 100 W, 10 W, 1 W und 0,1 W.",
+"l": "Ein Rufzeichen, dann vier immer schwächere Striche: hörst du noch den letzten, ist die Ausbreitung zu dieser Bake ausgezeichnet. Hier 4U1UN (New York), dann VE8AT (Kanada) (Blatt 26 bis)."
+},
+"lrpt": {
+"nm": "Meteor-M LRPT",
+"sh": "137,9 MHz",
+"t": "Meteor-M-Satelliten: LRPT-Bilder",
+"h": "Die russischen Wettersatelliten Meteor-M senden ihre Bilder digital: Vierphasenmodulation (QPSK), 72 000 Symbole pro Sekunde, etwa 120 kHz breit.",
+"l": "Ein voller Block mit runden Kanten, der während des Überflugs langsam wandert (Dopplereffekt); im Ohr nur ein Rauschen. Auf 137,9 oder 137,1 MHz, dekodiert mit SatDump (Blatt 34).",
+"n": "verkleinert"
+},
+"quindar": {
+"nm": "Quindar-Töne",
+"sh": "NASA",
+"t": "Quindar-Töne: die Apollo-Pieptöne",
+"h": "Drückt Houston die Sprechtaste, schaltet ein 2525-Hz-Piep (250 ms) die Sender der Bodenstationen ein; beim Loslassen schaltet ein 2475-Hz-Piep sie aus.",
+"l": "Ein hoher Piep vor jedem Satz und ein etwas tieferer danach: der berühmte Klang der Aufnahmen der Apollo-Missionen."
+},
+"wow": {
+"nm": "„Wow!“-Signal",
+"sh": "1977",
+"t": "Das „Wow!“-Signal (15. August 1977)",
+"h": "Das Radioteleskop Big Ear (Ohio) empfing 72 Sekunden lang ein schmales, sehr starkes Signal nahe der Wasserstofflinie, bei etwa 1420,456 MHz. Der Astronom Jerry Ehman schrieb „Wow!“ auf den Ausdruck. Es wurde nie wieder gesehen, und sein Ursprung ist bis heute umstritten.",
+"l": "Ein feiner Strich, der aus dem Rauschen auftaucht, stärker wird und wieder verschwindet: die Form einer festen Quelle, die durch die Antennenkeule wandert. Dies ist eine Nachbildung: eine Tonaufnahme gibt es nicht.",
+"n": "72 s auf 12 s verkürzt"
+},
+"frb": {
+"nm": "Schneller Radioblitz",
+"sh": "FRB",
+"t": "Schneller Radioblitz (FRB)",
+"h": "Ein Radioblitz von wenigen Millisekunden aus einer anderen Galaxie; der erste wurde 2007 entdeckt. Das durchquerte Gas verzögert die tiefen Frequenzen stark: der Blitz kommt gedehnt an, die hohen Töne zuerst.",
+"l": "Eine einzige Kurve, die von oben nach unten durch das Spektrum fällt, dann nichts mehr. Manche wiederholen sich; die meisten sieht man nur einmal.",
+"n": "stark verlangsamt und übertrieben"
+},
+"letterb": {
+"nm": "Ein-Buchstaben-Baken",
+"sh": "D, P, S, C…",
+"t": "Ein-Buchstaben-Baken",
+"h": "Sender der russischen Marine wiederholen endlos einen einzigen Morsebuchstaben, jeder 100 Hz neben dem Nachbarn: D, P, S, C, A, F, K oder M je nach Standort.",
+"l": "Parallele gepunktete Linien, sehr dicht beieinander, jede mit eigenem Rhythmus. Um 4558, 5154, 7039, 10 872, 13 528 und 16 332 kHz, in CW."
+},
+"sid": {
+"nm": "Sonneneruption auf VLF",
+"sh": "SID",
+"t": "Sonneneruption auf VLF gesehen (SID)",
+"h": "Die VLF-Sender der Marinen (20,9 kHz in Frankreich, 23,4 kHz in Deutschland…) breiten sich zwischen Boden und Ionosphäre aus. Trifft eine Sonneneruption ein, verändern ihre Röntgenstrahlen die untere Ionosphäre in wenigen Minuten und der Empfangspegel springt.",
+"l": "Ein schmales, gleichmäßiges Band (das MSK-Signal des Senders), das plötzlich stärker wird und dann langsam zum Normalwert zurückkehrt. Eine Drahtschleife und eine Soundkarte genügen: ein Klassiker der Astronomievereine.",
+"n": "eine Stunde auf 12 s verkürzt"
+},
+"qrn": {
+"nm": "Gewitterstörungen",
+"sh": "QRN",
+"t": "Gewitterstörungen (QRN)",
+"h": "Jeder Blitz ist ein sehr starker Sender, der alle Frequenzen zugleich überdeckt. Auf Mittel- und Kurzwelle hört man Gewitter in Tausenden Kilometern Entfernung, vor allem im Sommer und auf den tiefen Bändern.",
+"l": "Unregelmäßige waagerechte Striche über die ganze Breite; trockenes Krachen im Ohr. Der Störaustaster (NB) hilft etwas, eine Rahmenantenne hilft mehr."
+},
+"fading": {
+"nm": "Selektiver Schwund",
+"sh": "QSB",
+"t": "Selektiver Schwund (QSB)",
+"h": "Auf Kurzwelle kommt das Signal auf mehreren Wegen durch die Ionosphäre. Je nach Frequenz addieren sie sich oder löschen sich aus: eine schmale Senke wandert durch das Signal.",
+"l": "Eine dunkle Zone, die langsam durch den AM-Sender wandert. Läuft sie über den Träger in der Mitte, klingt der Ton einige Sekunden rau und verzerrt; Synchrondetektor oder SSB-Empfang beheben das."
+},
+"plc": {
+"nm": "Powerline (PLC)",
+"sh": "2–30 MHz",
+"t": "PLC: Internet über die Steckdose",
+"h": "Powerline-Adapter schicken die Daten über die Hausleitungen, auf Hunderten Trägern zwischen 2 und 30 MHz (bei neueren Modellen höher), einer alle 24,4 kHz. Die Leitungen strahlen wie eine Antenne.",
+"l": "Ein Kamm regelmäßiger Linien, der paketweise flackert, mit Lücken auf den Amateurfunkbändern (von der Norm verlangte Kerben); im Ohr ein Prasseln, das dem Internetverkehr folgt (Blatt 35 bis).",
+"n": "verkleinert"
+},
+"fence": {
+"nm": "Weidezaun",
+"sh": "tack… tack…",
+"t": "Elektrischer Weidezaun",
+"h": "Das Weidezaungerät schickt etwa einmal pro Sekunde einen Impuls von mehreren tausend Volt in den Draht. Berührt Gras den Draht oder ist ein Isolator beschädigt, springt ein Funke über und strahlt auf allen Frequenzen.",
+"l": "Ein sehr feiner waagerechter Strich über die ganze Breite, in völlig regelmäßigem Abstand; ein „Tack… tack…“ von Langwelle bis UKW. Der gleichmäßige Takt unterscheidet ihn vom Gewitter."
+},
+"gsm": {
+"nm": "GSM-Handy",
+"sh": "217 Hz",
+"t": "GSM-Handy neben einem Lautsprecher",
+"h": "Ein 2G-Handy sendet in Paketen von 0,577 ms, 217-mal pro Sekunde. Ein schlecht abgeschirmter Audioverstärker demoduliert diese Pakete und macht sie hörbar.",
+"l": "Ein Kamm von Linien alle 217 Hz; das bekannte „Dit-dit-didit“ kurz bevor das Handy klingelt, dann ein Dauerbrummen während des Gesprächs. Wird selten: die 2G-Netze werden abgeschaltet."
+},
+"jjy": {
+"nm": "JJY",
+"sh": "40 / 60 kHz",
+"t": "Zeitsignal JJY (Japan, 40 und 60 kHz)",
+"h": "In jeder Sekunde sendet der Träger 0,8 s (Bit 0), 0,5 s (Bit 1) oder 0,2 s (Marke) mit voller Leistung und fällt dann auf 10 %. Umgekehrt wie bei DCF77, das am Sekundenanfang absenkt.",
+"l": "Ein fester Strich, der am Ende jeder Sekunde früher oder später schwächer wird. Sender in Fukushima (40 kHz) und Saga-Fukuoka (60 kHz), für die Funkuhren in Japan."
+},
+"rwm": {
+"nm": "RWM",
+"sh": "4996 kHz",
+"t": "Zeitsignal RWM (Moskau)",
+"h": "In Telegrafie auf 4996, 9996 und 14 996 kHz: jede Sekunde ein Impuls von 100 ms, in anderen Minuten zehn Impulse pro Sekunde. Das Rufzeichen RWM wird zweimal pro Stunde gemorst.",
+"l": "Das Rufzeichen, dann ein Strich aus regelmäßigen „Ticks“, dann aus schnellen Punkten. In CW oder SSB hören.",
+"n": "geraffter Auszug"
+},
+"bpm": {
+"nm": "BPM",
+"sh": "2,5–15 MHz",
+"t": "Zeitsignal BPM (China)",
+"h": "Die Station Pucheng (Shaanxi) sendet in AM auf 2,5, 5, 10 und 15 MHz: jede Sekunde ein Tick von 10 ms auf 1000 Hz (300 ms zur Minute) und in bestimmten Minuten Ticks von 100 ms für die Zeit UT1. Das Rufzeichen BPM kommt in Morse, dann als Ansage.",
+"l": "Im demodulierten Ton: das Rufzeichen, dann sehr kurze Striche auf 1000 Hz, einer pro Sekunde, mit einem längeren zur Minute. Oft mit WWV auf denselben Frequenzen gemischt.",
+"n": "geraffter Auszug"
 }
 }
 }

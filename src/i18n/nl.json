@@ -28,7 +28,7 @@
 "book": "Boek: blad {r}",
 "lang": "Taal",
 "signals": "Signalen",
-"f1": "Signalen gesimuleerd in de pagina (12 000 samples per seconde), naar de signalen van blad 5 bis van het boek OpenBookRadio, plus Olivia, FT4 en Feld Hell (blad 26). Bij radiosignalen (AM, FM, AIS, LoRa…) zie je de gesimuleerde middenfrequentie, zoals op een SDR-scherm; sommige zijn verkleind of versneld, dat staat erbij.",
+"f1": "Signalen gesimuleerd in de pagina (12 000 samples per seconde): die van blad 5 bis van het boek OpenBookRadio, andere signalen uit het boek en bonussen. Bij radiosignalen (AM, FM, AIS, LoRa…) zie je de gesimuleerde middenfrequentie, zoals op een SDR-scherm; sommige zijn verkleind of versneld, dat staat erbij.",
 "f2": "De tijd loopt naar beneden in de waterval en de afdruk. Licentie CC BY-NC-SA 4.0, gratis, niet verkopen.",
 "night": "Nachtmodus",
 "day": "Dagmodus",
@@ -627,7 +627,7 @@
 "nm": "ISS in FM",
 "sh": "145,800 MHz",
 "t": "Ruimtestation (ISS): spraak in FM",
-"h": "Astronauten praten met scholen en zendamateurs in FM op 145,800 MHz. Het station vliegt 28 000 km/u: de ontvangen frequentie daalt tijdens de overgang met ongeveer 3,5 kHz.",
+"h": "Astronauten praten met scholen en zendamateurs in FM op 145,800 MHz. Het station vliegt 28 000 km/u: tijdens de overgang schuift de ontvangen frequentie van ongeveer +3,5 kHz naar −3,5 kHz.",
 "l": "Een band FM-spraak die tijdens de overgang van 10 minuten langzaam van rechts naar links schuift (blad 34).",
 "n": "overgang van 10 min ingekort tot 10 s"
 },
@@ -643,7 +643,7 @@
 "sh": "3756 / 5448 kHz",
 "t": "„The Pip”: eindeloze piepjes",
 "h": "Nog een Russisch militair kortegolfbaken, dat dag en nacht korte piepjes herhaalt, soms onderbroken door berichten.",
-"l": "Een vaste streep die in heel dichte puntjes gehakt is; in het oor een snel pip-pip-pip dat nooit stopt.",
+"l": "Een vaste streep die ongeveer 50 keer per minuut door een korte piep onderbroken wordt; in het oor een regelmatig „pip… pip…” dat nooit stopt.",
 "n": "ritme benaderd"
 },
 "squeaky": {
@@ -674,7 +674,7 @@
 "sh": "16 tonen",
 "t": "Link-11: datalink van de marine",
 "h": "Zestien tonen van 605 tot 2915 Hz tegelijk, elk 75 keer per seconde in fase gemoduleerd.",
-"l": "Een kam van regelmatige lijnen over 2,3 kHz, plus één lijn wat apart; in het oor een muzikaal gebrom (blad 35 bis)."
+"l": "Een kam van veertien regelmatige lijnen van 935 tot 2365 Hz, plus twee lijnen apart op 605 en 2915 Hz; in het oor een muzikaal gebrom (blad 35 bis)."
 },
 "numbers": {
 "nm": "Nummerstation",
@@ -683,6 +683,167 @@
 "h": "Op een vast tijdstip een korte herkenningsmelodie, dan leest een (vaak synthetische) stem groepen van vijf cijfers voor, in AM of SSB.",
 "l": "De melodie als losse noten, dan regelmatige groepen lettergrepen met stiltes ertussen (blad 35 bis).",
 "n": "nagebootste stem, geen echte cijfers"
+},
+"rttydwd": {
+"nm": "DWD-weer-RTTY",
+"sh": "50 Bd / 450 Hz",
+"t": "Weer-RTTY van de DWD (Duitsland)",
+"h": "Zoals de RTTY van zendamateurs, maar met 50 baud en 450 Hz afstand: de Duitse weerdienst verstuurt zijn berichten en zeeweersverwachtingen in gewone tekst.",
+"l": "Twee strepen die veel verder uit elkaar liggen en een iets sneller ritme. Tussen de berichten de oproep „CQ CQ CQ DE DDK2 DDH7 DDK9” en dan RYRYRY. Op 4583, 7646 en 10 100,8 kHz, ook 147,3 kHz (blad 27)."
+},
+"mfsk16": {
+"nm": "MFSK16",
+"sh": "16 tonen",
+"t": "MFSK16: zestien tonen",
+"h": "Zestien tonen op 15,625 Hz afstand, steeds één tegelijk, 15,625 keer per seconde; elke toon draagt vier bits, beschermd door foutcorrectie.",
+"l": "Een band van 316 Hz uit kleine trapjes die voortdurend verspringen, na een vaste toon aan het begin. In het oor een snel deuntje, als een fluit. Wordt ook gebruikt om kleine afbeeldingen te versturen."
+},
+"sitora": {
+"nm": "SITOR-A (ARQ)",
+"sh": "telex",
+"t": "SITOR-A: maritieme telex in ARQ",
+"h": "Het station stuurt elke 450 ms blokken van drie tekens (210 ms, 100 baud, 170 Hz afstand); tussen de blokken antwoordt het andere station met een kort signaal voor „ontvangen” of „herhaal”.",
+"l": "Korte regelmatige salvo's met een klein, zwakker antwoord ertussen: een krekelachtig „tjirp-tjirp”. Tegenwoordig zeldzaam op kortegolf."
+},
+"dscvhf": {
+"nm": "VHF-DSC (kanaal 70)",
+"sh": "DSC",
+"t": "DSC: digitale selectieve oproep op kanaal 70",
+"h": "Een salvo van ongeveer een halve seconde met 1200 baud, op twee tonen van 1300 en 2100 Hz: het bevat het MMSI-nummer van het schip, het soort oproep en bij nood de positie.",
+"l": "Een kort, hoog „brrrt” op 156,525 MHz dat begint met een reeks afwisselende bits. Op midden- en kortegolf is DSC een FSK van 100 baud, zoals NAVTEX (blad 17)."
+},
+"selcal": {
+"nm": "SELCAL luchtvaart",
+"sh": "4 tonen",
+"t": "SELCAL: selectieve oproep van vliegtuigen op kortegolf",
+"h": "De verkeersleiding roept één bepaald vliegtuig op met twee pulsen van ongeveer een seconde, elk uit twee van zestien tonen (312,6 tot 1479,1 Hz). In het vliegtuig gaan een lampje en een gong af: de bemanning hoeft niet voortdurend te luisteren.",
+"l": "Twee akkoorden na elkaar, „bing-bong”, tussen de gesproken berichten op de luchtvaartfrequenties in SSB, bijvoorbeeld 5616 of 8864 kHz."
+},
+"dcs": {
+"nm": "DCS",
+"sh": "134,4 bit/s",
+"t": "DCS: de digitale subtoon",
+"h": "In plaats van een doorlopende toon zoals bij CTCSS stuurt de radio onder de stem een woord van 23 bits dat zonder pauze herhaald wordt, met 134,4 bits per seconde. Aan het eind sluit een toon van 134,4 Hz de squelch geruisloos.",
+"l": "Gezien in het geluid van de FM-ontvanger: een onregelmatige band helemaal onderaan, onder 300 Hz, en een dof gebrom als het filter van de radio het doorlaat (blad 8)."
+},
+"t1750": {
+"nm": "1750 Hz-toon",
+"sh": "relais",
+"t": "1750 Hz-toon: een relais openen",
+"h": "Een korte toon van 1750 Hz (ongeveer 0,5 tot 1 s) aan het begin van de uitzending opent nog sommige Europese amateurrelais; het relais antwoordt vaak met een piep als je loslaat.",
+"l": "Een korte streep op 1750 Hz, dan de stem, dan de piep van het relais (blad 8)."
+},
+"ncdxf": {
+"nm": "NCDXF-bakens",
+"sh": "14,100 MHz",
+"t": "NCDXF-/IARU-bakens: de propagatie testen",
+"h": "Achttien bakens over de hele wereld zenden om beurten, elk tien seconden, op 14,100, 18,110, 21,150, 24,930 en 28,200 MHz: de roepnaam in morse, dan vier strepen van een seconde met 100 W, 10 W, 1 W en 0,1 W.",
+"l": "Een roepnaam en dan vier steeds zwakkere strepen: hoor je de laatste nog, dan is de propagatie naar dat baken uitstekend. Hier 4U1UN (New York) en dan VE8AT (Canada) (blad 26 bis)."
+},
+"lrpt": {
+"nm": "Meteor-M LRPT",
+"sh": "137,9 MHz",
+"t": "Meteor-M-satellieten: LRPT-beelden",
+"h": "De Russische weersatellieten Meteor-M sturen hun beelden digitaal: fasemodulatie met vier toestanden (QPSK), 72 000 symbolen per seconde, ongeveer 120 kHz breed.",
+"l": "Een vol blok met afgeronde randen dat tijdens de overgang langzaam verschuift (dopplereffect); in het oor alleen geruis. Op 137,9 of 137,1 MHz, gedecodeerd met SatDump (blad 34).",
+"n": "verkleind"
+},
+"quindar": {
+"nm": "Quindar-tonen",
+"sh": "NASA",
+"t": "Quindar-tonen: de piepjes van Apollo",
+"h": "Als Houston de microfoontoets indrukt, schakelt een piep van 2525 Hz (250 ms) de zenders van de grondstations in; bij het loslaten schakelt een piep van 2475 Hz ze uit.",
+"l": "Een hoge piep voor elke zin en een iets lagere erna: het beroemde geluid van de opnamen van de Apollo-missies."
+},
+"wow": {
+"nm": "„Wow!”-signaal",
+"sh": "1977",
+"t": "Het „Wow!”-signaal (15 augustus 1977)",
+"h": "De radiotelescoop Big Ear (Ohio) ving 72 seconden lang een smal en zeer sterk signaal op vlak bij de waterstoflijn, rond 1420,456 MHz. Astronoom Jerry Ehman schreef „Wow!” op de uitdraai. Het is nooit meer gezien en de oorsprong blijft omstreden.",
+"l": "Een dunne streep die uit de ruis komt, aanzwelt en weer verdwijnt: de vorm van een vaste bron die door de antennebundel trekt. Dit is een reconstructie: er bestaat geen geluidsopname.",
+"n": "72 s ingekort tot 12 s"
+},
+"frb": {
+"nm": "Snelle radioflits",
+"sh": "FRB",
+"t": "Snelle radioflits (FRB)",
+"h": "Een radioflits van enkele milliseconden uit een ander sterrenstelsel; de eerste werd in 2007 ontdekt. Het gas onderweg vertraagt de lage frequenties sterk: de flits komt uitgesmeerd aan, de hoge tonen eerst.",
+"l": "Eén enkele curve die van boven naar beneden door het spectrum valt, en dan niets meer. Sommige herhalen zich; de meeste zie je maar één keer.",
+"n": "sterk vertraagd en overdreven"
+},
+"letterb": {
+"nm": "Eenletterbakens",
+"sh": "D, P, S, C…",
+"t": "Eenletterbakens",
+"h": "Zenders van de Russische marine herhalen eindeloos één morseletter, elk op 100 Hz van zijn buur: D, P, S, C, A, F, K of M naargelang de plaats.",
+"l": "Evenwijdige stippellijnen, heel dicht bij elkaar, elk met een eigen ritme. Rond 4558, 5154, 7039, 10 872, 13 528 en 16 332 kHz, in CW."
+},
+"sid": {
+"nm": "Zonnevlam op VLF",
+"sh": "SID",
+"t": "Zonnevlam gezien op VLF (SID)",
+"h": "De VLF-zenders van de marines (20,9 kHz in Frankrijk, 23,4 kHz in Duitsland…) planten zich voort tussen de grond en de ionosfeer. Als er een zonnevlam aankomt, verandert de röntgenstraling de onderkant van de ionosfeer in enkele minuten en springt het ontvangen niveau.",
+"l": "Een smalle, regelmatige band (het MSK-signaal van de zender) die plots sterker wordt en dan langzaam weer normaal wordt. Een draadlus en een geluidskaart volstaan: een klassieker bij sterrenkundeclubs.",
+"n": "een uur ingekort tot 12 s"
+},
+"qrn": {
+"nm": "Onweersstoring",
+"sh": "QRN",
+"t": "Onweersstoring (QRN)",
+"h": "Elke bliksem is een heel sterke zender die alle frequenties tegelijk bestrijkt. Op midden- en kortegolf hoor je onweer op duizenden kilometers, vooral in de zomer en op de lage banden.",
+"l": "Onregelmatige horizontale strepen over de hele breedte; droog gekraak in het oor. De noise blanker (NB) helpt een beetje, een raamantenne helpt meer."
+},
+"fading": {
+"nm": "Selectieve fading",
+"sh": "QSB",
+"t": "Selectieve fading (QSB)",
+"h": "Op kortegolf komt het signaal langs meerdere wegen door de ionosfeer. Afhankelijk van de frequentie versterken ze elkaar of doven ze elkaar uit: een smalle dip wandelt door het signaal.",
+"l": "Een donkere zone die langzaam door de AM-zender schuift. Als ze over de draaggolf in het midden gaat, klinkt het geluid enkele seconden schor en vervormd; synchrone detectie of luisteren in SSB lost dat op."
+},
+"plc": {
+"nm": "Powerline (PLC)",
+"sh": "2–30 MHz",
+"t": "PLC: internet via het stopcontact",
+"h": "Powerline-adapters sturen de data over de huisbedrading met honderden draaggolven tussen 2 en 30 MHz (hoger bij recente modellen), één om de 24,4 kHz. De draden stralen als een antenne.",
+"l": "Een kam van regelmatige lijnen die in pakketjes flikkert, met gaten op de amateurbanden (door de norm voorgeschreven inkepingen); in het oor een geknetter dat het internetverkeer volgt (blad 35 bis).",
+"n": "verkleind"
+},
+"fence": {
+"nm": "Schrikdraad",
+"sh": "tik… tik…",
+"t": "Schrikdraad",
+"h": "Het schrikdraadapparaat stuurt ongeveer één keer per seconde een puls van enkele duizenden volt in de draad. Raakt gras de draad of is een isolator beschadigd, dan springt er een vonk over die op alle frequenties straalt.",
+"l": "Een heel dunne horizontale streep over de hele breedte, met een perfect regelmatige tussentijd; een „tik… tik…” van langegolf tot VHF. Het vaste ritme onderscheidt het van onweer."
+},
+"gsm": {
+"nm": "Gsm-telefoon",
+"sh": "217 Hz",
+"t": "Gsm-telefoon naast een luidspreker",
+"h": "Een 2G-telefoon zendt in salvo's van 0,577 ms, 217 keer per seconde. Een slecht afgeschermde audioversterker detecteert die salvo's en maakt ze hoorbaar.",
+"l": "Een kam van lijnen om de 217 Hz; het bekende „ta-ta-tatata” vlak voor de telefoon overgaat, daarna een aanhoudend gezoem tijdens het gesprek. Steeds zeldzamer: de 2G-netwerken worden uitgezet."
+},
+"jjy": {
+"nm": "JJY",
+"sh": "40 / 60 kHz",
+"t": "Tijdsignaal JJY (Japan, 40 en 60 kHz)",
+"h": "Elke seconde staat de draaggolf 0,8 s (bit 0), 0,5 s (bit 1) of 0,2 s (markering) op vol vermogen en zakt dan naar 10 %. Het omgekeerde van DCF77, dat aan het begin van de seconde zakt.",
+"l": "Een vaste streep die aan het eind van elke seconde vroeger of later zwakker wordt. Zenders in Fukushima (40 kHz) en Saga-Fukuoka (60 kHz), voor de radiogestuurde klokken in Japan."
+},
+"rwm": {
+"nm": "RWM",
+"sh": "4996 kHz",
+"t": "Tijdsignaal RWM (Moskou)",
+"h": "In telegrafie op 4996, 9996 en 14 996 kHz: elke seconde een puls van 100 ms en, op andere minuten, tien pulsen per seconde. De roepnaam RWM wordt twee keer per uur in morse gezonden.",
+"l": "De roepnaam, dan een streep in regelmatige „tikken”, dan in snelle puntjes. Luister in CW of SSB.",
+"n": "ingekort fragment"
+},
+"bpm": {
+"nm": "BPM",
+"sh": "2,5–15 MHz",
+"t": "Tijdsignaal BPM (China)",
+"h": "Het station Pucheng (Shaanxi) zendt in AM op 2,5, 5, 10 en 15 MHz: elke seconde een tik van 10 ms op 1000 Hz (300 ms op de minuut) en, op bepaalde minuten, tikken van 100 ms voor de UT1-tijd. De roepnaam BPM komt in morse en daarna met een stem.",
+"l": "In het gedemoduleerde geluid: de roepnaam, dan heel korte streepjes op 1000 Hz, één per seconde, met een langere op de minuut. Vaak gemengd met WWV op dezelfde frequenties.",
+"n": "ingekort fragment"
 }
 }
 }

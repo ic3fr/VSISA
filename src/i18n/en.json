@@ -28,7 +28,7 @@
 "book": "Book: sheet {r}",
 "lang": "Language",
 "signals": "Signals",
-"f1": "Signals simulated in the page (12,000 samples per second), based on the signals of sheet 5 bis of the OpenBookRadio book, plus Olivia, FT4 and Feld Hell (sheet 26). For radio signals (AM, FM, AIS, LoRa…), you see the simulated intermediate frequency, as on an SDR screen; some are scaled down or sped up, as stated.",
+"f1": "Signals simulated in the page (12,000 samples per second): those of sheet 5 bis of the OpenBookRadio book, other signals from the book, and bonuses. For radio signals (AM, FM, AIS, LoRa…), you see the simulated intermediate frequency, as on an SDR screen; some are scaled down or sped up, as stated.",
 "f2": "Time runs downwards in the waterfall and the footprint. CC BY-NC-SA 4.0 license, free, not for sale.",
 "night": "Night mode",
 "day": "Day mode",
@@ -627,7 +627,7 @@
 "nm": "ISS on FM",
 "sh": "145.800 MHz",
 "t": "Space station (ISS): FM voice",
-"h": "Astronauts talk with schools and radio amateurs in FM on 145.800 MHz. The station flies at 28,000 km/h: the received frequency falls by about 3.5 kHz during the pass.",
+"h": "Astronauts talk with schools and radio amateurs in FM on 145.800 MHz. The station flies at 28,000 km/h: during the pass, the received frequency slides from about +3.5 kHz to −3.5 kHz.",
 "l": "A band of FM voice slowly moving from right to left during the 10-minute pass (sheet 34).",
 "n": "10 min pass squeezed into 10 s"
 },
@@ -643,7 +643,7 @@
 "sh": "3756 / 5448 kHz",
 "t": "\"The Pip\": endless beeps",
 "h": "Another Russian military shortwave beacon, repeating short little beeps day and night, sometimes interrupted by messages.",
-"l": "A fixed line cut into very tight dots; to the ear, a fast pip-pip-pip that never stops.",
+"l": "A fixed line cut by a short beep about 50 times a minute; to the ear, a steady \"pip… pip…\" that never stops.",
 "n": "approximate rhythm"
 },
 "squeaky": {
@@ -674,7 +674,7 @@
 "sh": "16 tones",
 "t": "Link-11: naval data link",
 "h": "Sixteen tones from 605 to 2915 Hz sent together, each phase-modulated 75 times per second.",
-"l": "A comb of regular lines over 2.3 kHz, plus one line a little apart; to the ear, a musical drone (sheet 35 bis)."
+"l": "A comb of fourteen regular lines from 935 to 2365 Hz, plus two lines set apart at 605 and 2915 Hz; to the ear, a musical drone (sheet 35 bis)."
 },
 "numbers": {
 "nm": "Numbers station",
@@ -683,6 +683,167 @@
 "h": "At a fixed time, a short call melody, then a voice (often synthetic) reads groups of five digits, in AM or SSB.",
 "l": "The melody as separate notes, then regular groups of syllables separated by silences (sheet 35 bis).",
 "n": "imitated voice, no real digits"
+},
+"rttydwd": {
+"nm": "DWD weather RTTY",
+"sh": "50 Bd / 450 Hz",
+"t": "DWD weather RTTY (Germany)",
+"h": "Like amateur RTTY, but at 50 baud with a 450 Hz shift: the German weather service sends its bulletins and marine forecasts in plain text.",
+"l": "Two lines much further apart, and a slightly faster rhythm. Between bulletins, the call \"CQ CQ CQ DE DDK2 DDH7 DDK9\" then RYRYRY. On 4583, 7646 and 10,100.8 kHz, also 147.3 kHz (sheet 27)."
+},
+"mfsk16": {
+"nm": "MFSK16",
+"sh": "16 tones",
+"t": "MFSK16: sixteen tones",
+"h": "Sixteen tones spaced 15.625 Hz, one at a time, 15.625 times per second; each tone carries four bits, protected by error correction.",
+"l": "A 316 Hz band made of small steps that keep jumping, after a steady tone at the start. To the ear, a quick little tune, like a flute. Also used to send small pictures."
+},
+"sitora": {
+"nm": "SITOR-A (ARQ)",
+"sh": "telex",
+"t": "SITOR-A: maritime telex in ARQ",
+"h": "The station sends blocks of three characters (210 ms, 100 baud, 170 Hz shift) every 450 ms; between blocks, the other station answers with a short signal meaning \"received\" or \"repeat\".",
+"l": "Short regular bursts with a small, weaker reply in between: a cricket-like \"chirp-chirp\". Now rare on shortwave."
+},
+"dscvhf": {
+"nm": "VHF DSC (channel 70)",
+"sh": "DSC",
+"t": "DSC: digital selective calling on channel 70",
+"h": "A burst of about half a second at 1200 baud, on two tones of 1300 and 2100 Hz: it carries the ship's MMSI number, the type of call and, in distress, its position.",
+"l": "A short, high-pitched \"brrrt\" on 156.525 MHz that starts with a run of alternating bits. On medium and short waves, DSC is 100 baud FSK, like NAVTEX (sheet 17)."
+},
+"selcal": {
+"nm": "Aviation SELCAL",
+"sh": "4 tones",
+"t": "SELCAL: selective calling of aircraft on shortwave",
+"h": "Air traffic control calls one particular aircraft with two pulses of about one second, each made of two tones out of sixteen (312.6 to 1479.1 Hz). In the aircraft a light and a chime go off: the crew does not have to listen all the time.",
+"l": "Two successive chords, \"bing-bong\", between the voice messages on aeronautical SSB frequencies, for example 5616 or 8864 kHz."
+},
+"dcs": {
+"nm": "DCS",
+"sh": "134.4 bit/s",
+"t": "DCS: the digital sub-tone",
+"h": "Instead of a continuous tone like CTCSS, the radio sends under the voice a 23-bit word repeated non-stop at 134.4 bits per second. At the end, a 134.4 Hz tone closes the squelch silently.",
+"l": "Seen in the FM receiver audio: an irregular band at the very bottom, below 300 Hz, and a dull rumble if the radio's filter lets it through (sheet 8)."
+},
+"t1750": {
+"nm": "1750 Hz tone",
+"sh": "repeater",
+"t": "1750 Hz tone: opening a repeater",
+"h": "A short 1750 Hz tone (about 0.5 to 1 s) at the start of a transmission still opens some European amateur repeaters; the repeater often answers with a beep when you release.",
+"l": "A short line at 1750 Hz, then the voice, then the repeater's beep (sheet 8)."
+},
+"ncdxf": {
+"nm": "NCDXF beacons",
+"sh": "14.100 MHz",
+"t": "NCDXF / IARU beacons: testing propagation",
+"h": "Eighteen beacons around the world transmit in turn, ten seconds each, on 14.100, 18.110, 21.150, 24.930 and 28.200 MHz: the call sign in Morse, then four one-second dashes at 100 W, 10 W, 1 W and 0.1 W.",
+"l": "A call sign, then four dashes getting weaker and weaker: if you can still hear the last one, propagation to that beacon is excellent. Here 4U1UN (New York) then VE8AT (Canada) (sheet 26 bis)."
+},
+"lrpt": {
+"nm": "Meteor-M LRPT",
+"sh": "137.9 MHz",
+"t": "Meteor-M satellites: LRPT images",
+"h": "The Russian Meteor-M weather satellites send their images digitally: four-state phase modulation (QPSK), 72,000 symbols per second, about 120 kHz wide.",
+"l": "A full block with rounded edges that slides slowly during the pass (Doppler effect); to the ear, just a hiss. On 137.9 or 137.1 MHz, decoded with SatDump (sheet 34).",
+"n": "reduced scale"
+},
+"quindar": {
+"nm": "Quindar tones",
+"sh": "NASA",
+"t": "Quindar tones: the Apollo beeps",
+"h": "When Houston presses the microphone key, a 2525 Hz beep (250 ms) switches on the ground station transmitters; on release, a 2475 Hz beep switches them off.",
+"l": "A high beep before each sentence and another, slightly lower, after it: the famous sound of the Apollo mission recordings."
+},
+"wow": {
+"nm": "\"Wow!\" signal",
+"sh": "1977",
+"t": "The \"Wow!\" signal (15 August 1977)",
+"h": "The Big Ear radio telescope (Ohio) picked up, for 72 seconds, a narrow and very strong signal near the hydrogen line, around 1420.456 MHz. Astronomer Jerry Ehman wrote \"Wow!\" on the printout. It was never seen again and its origin is still debated.",
+"l": "A thin line that rises out of the noise, grows and fades: the shape of a fixed source drifting through the antenna beam. This is a reconstruction: no sound recording exists.",
+"n": "72 s squeezed into 12 s"
+},
+"frb": {
+"nm": "Fast radio burst",
+"sh": "FRB",
+"t": "Fast radio burst (FRB)",
+"h": "A radio flash lasting a few milliseconds, coming from another galaxy; the first one was discovered in 2007. The gas it crosses delays the low frequencies a lot: the burst arrives smeared, high notes first.",
+"l": "A single curve falling from the top to the bottom of the spectrum, then nothing. Some repeat; most are seen only once.",
+"n": "greatly slowed down and exaggerated"
+},
+"letterb": {
+"nm": "Single-letter beacons",
+"sh": "D, P, S, C…",
+"t": "Single-letter beacons",
+"h": "Russian navy transmitters endlessly repeat a single Morse letter, each 100 Hz from its neighbour: D, P, S, C, A, F, K or M depending on the site.",
+"l": "Parallel dotted lines, very close together, each with its own rhythm. Around 4558, 5154, 7039, 10,872, 13,528 and 16,332 kHz, in CW."
+},
+"sid": {
+"nm": "Solar flare on VLF",
+"sh": "SID",
+"t": "Solar flare seen on VLF (SID)",
+"h": "Navy VLF transmitters (20.9 kHz in France, 23.4 kHz in Germany…) travel between the ground and the ionosphere. When a solar flare arrives, its X-rays change the bottom of the ionosphere within minutes and the received level jumps.",
+"l": "A narrow, steady band (the transmitter's MSK signal) that suddenly gets stronger, then slowly returns to normal. A wire loop and a sound card are enough: a classic astronomy-club project.",
+"n": "one hour squeezed into 12 s"
+},
+"qrn": {
+"nm": "Thunderstorm static",
+"sh": "QRN",
+"t": "Thunderstorm static (QRN)",
+"h": "Every lightning stroke is a very powerful transmitter covering all frequencies at once. On medium and short waves you can hear storms thousands of kilometres away, mostly in summer and on the low bands.",
+"l": "Irregular horizontal lines across the whole width; sharp crashes to the ear. The noise blanker (NB) helps a little, a loop antenna helps more."
+},
+"fading": {
+"nm": "Selective fading",
+"sh": "QSB",
+"t": "Selective fading (QSB)",
+"h": "On shortwave the signal arrives by several paths through the ionosphere. Depending on the frequency they add up or cancel out: a narrow dip wanders through the signal.",
+"l": "A dark zone drifting slowly through the AM station. When it crosses the carrier, in the centre, the sound turns harsh and distorted for a few seconds; synchronous detection or listening in SSB cures it."
+},
+"plc": {
+"nm": "Powerline (PLC)",
+"sh": "2–30 MHz",
+"t": "PLC: Internet through the mains sockets",
+"h": "Powerline adapters send data over the house wiring on hundreds of carriers between 2 and 30 MHz (higher for recent models), one every 24.4 kHz. The wires radiate like an antenna.",
+"l": "A comb of regular lines flickering in packets, with gaps on the amateur bands (notches required by the standard); to the ear, a crackle that follows the Internet traffic (sheet 35 bis).",
+"n": "reduced scale"
+},
+"fence": {
+"nm": "Electric fence",
+"sh": "tick… tick…",
+"t": "Electric fence",
+"h": "The energiser sends a pulse of several thousand volts into the wire about once a second. If grass touches the wire or an insulator is damaged, a spark jumps and radiates on all frequencies.",
+"l": "A very thin horizontal line across the whole width, at a perfectly regular interval; a \"tick… tick…\" from long wave up to VHF. Its steady rhythm tells it apart from storm static."
+},
+"gsm": {
+"nm": "GSM phone",
+"sh": "217 Hz",
+"t": "GSM phone next to a loudspeaker",
+"h": "A 2G phone transmits in bursts of 0.577 ms, 217 times per second. A poorly shielded audio amplifier detects these bursts and makes them audible.",
+"l": "A comb of lines every 217 Hz; the famous \"dit-dit-di-di-dit\" just before the phone rings, then a steady buzz during the call. Getting rare: 2G networks are being switched off."
+},
+"jjy": {
+"nm": "JJY",
+"sh": "40 / 60 kHz",
+"t": "JJY time signal (Japan, 40 and 60 kHz)",
+"h": "Each second the carrier is at full power for 0.8 s (bit 0), 0.5 s (bit 1) or 0.2 s (marker), then drops to 10 %. It is the reverse of DCF77, which drops at the start of the second.",
+"l": "A fixed line that weakens at the end of each second, sooner or later. Transmitters in Fukushima (40 kHz) and Saga-Fukuoka (60 kHz), for Japan's radio-controlled clocks."
+},
+"rwm": {
+"nm": "RWM",
+"sh": "4996 kHz",
+"t": "RWM time signal (Moscow)",
+"h": "In telegraphy on 4996, 9996 and 14,996 kHz: one 100 ms pulse every second, then, at other minutes, ten pulses per second. The call sign RWM is sent in Morse twice an hour.",
+"l": "The call sign, then a line cut into regular \"ticks\", then into fast dots. Listen in CW or SSB.",
+"n": "condensed excerpt"
+},
+"bpm": {
+"nm": "BPM",
+"sh": "2.5–15 MHz",
+"t": "BPM time signal (China)",
+"h": "The Pucheng station (Shaanxi) transmits in AM on 2.5, 5, 10 and 15 MHz: a 10 ms tick at 1000 Hz every second (300 ms on the minute) and, at certain minutes, 100 ms ticks for UT1 time. The call sign BPM is given in Morse, then by a voice.",
+"l": "In the demodulated sound: the call sign, then very short lines at 1000 Hz, one per second, with a longer one on the minute. Often mixed with WWV on the same frequencies.",
+"n": "condensed excerpt"
 }
 }
 }

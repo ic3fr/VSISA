@@ -28,7 +28,7 @@
 "book": "Livro: ficha {r}",
 "lang": "Idioma",
 "signals": "Sinais",
-"f1": "Sinais simulados na página (12 000 amostras por segundo), segundo os sinais da ficha 5 bis do livro OpenBookRadio, mais Olivia, FT4 e Feld Hell (ficha 26). Nos sinais de rádio (AM, FM, AIS, LoRa…) vê-se a frequência intermédia simulada, como no ecrã de um SDR; alguns estão em escala reduzida ou acelerada, como indicado.",
+"f1": "Sinais simulados na página (12 000 amostras por segundo): os da ficha 5 bis do livro OpenBookRadio, outros sinais do livro e bónus. Nos sinais de rádio (AM, FM, AIS, LoRa…) vê-se a frequência intermédia simulada, como no ecrã de um SDR; alguns estão em escala reduzida ou acelerada, como indicado.",
 "f2": "O tempo desce na cascata e na impressão. Licença CC BY-NC-SA 4.0, gratuito, proibida a venda.",
 "night": "Modo noite",
 "day": "Modo dia",
@@ -627,7 +627,7 @@
 "nm": "ISS em FM",
 "sh": "145,800 MHz",
 "t": "Estação espacial (ISS): voz em FM",
-"h": "Os astronautas falam com escolas e radioamadores em FM em 145,800 MHz. A estação voa a 28 000 km/h: a frequência recebida desce cerca de 3,5 kHz durante a passagem.",
+"h": "Os astronautas falam com escolas e radioamadores em FM em 145,800 MHz. A estação voa a 28 000 km/h: durante a passagem, a frequência recebida desliza de cerca de +3,5 kHz para −3,5 kHz.",
 "l": "Uma banda de voz FM que se desloca devagar da direita para a esquerda durante os 10 minutos da passagem (ficha 34).",
 "n": "passagem de 10 min reduzida a 10 s"
 },
@@ -643,7 +643,7 @@
 "sh": "3756 / 5448 kHz",
 "t": "«The Pip»: bips sem fim",
 "h": "Outra baliza militar russa de onda curta, que repete pequenos bips curtos dia e noite, por vezes interrompidos por mensagens.",
-"l": "Um traço fixo cortado em pontos muito apertados; ao ouvido, um pip-pip-pip rápido que nunca para.",
+"l": "Um traço fixo cortado por um bip curto cerca de 50 vezes por minuto; ao ouvido, um «pip… pip…» regular que nunca para.",
 "n": "ritmo aproximado"
 },
 "squeaky": {
@@ -674,7 +674,7 @@
 "sh": "16 tons",
 "t": "Link-11: ligação de dados naval",
 "h": "Dezasseis tons de 605 a 2915 Hz emitidos em conjunto, cada um modulado em fase 75 vezes por segundo.",
-"l": "Um pente de riscas regulares em 2,3 kHz, mais uma risca um pouco à parte; ao ouvido, um zumbido musical (ficha 35 bis)."
+"l": "Um pente de catorze riscas regulares de 935 a 2365 Hz, mais duas riscas à parte em 605 e 2915 Hz; ao ouvido, um zumbido musical (ficha 35 bis)."
 },
 "numbers": {
 "nm": "Estação de números",
@@ -683,6 +683,167 @@
 "h": "A uma hora fixa, uma pequena melodia de chamada e depois uma voz (muitas vezes sintética) que lê grupos de cinco algarismos, em AM ou BLU.",
 "l": "A melodia em notas soltas e depois grupos regulares de sílabas separados por silêncios (ficha 35 bis).",
 "n": "voz imitada, sem algarismos reais"
+},
+"rttydwd": {
+"nm": "RTTY meteo DWD",
+"sh": "50 Bd / 450 Hz",
+"t": "RTTY meteorológico do DWD (Alemanha)",
+"h": "Como o RTTY dos radioamadores, mas a 50 bauds com 450 Hz de desvio: o serviço meteorológico alemão envia os boletins e as previsões marítimas em texto claro.",
+"l": "Dois traços muito mais afastados e um ritmo um pouco mais rápido. Entre boletins, a chamada «CQ CQ CQ DE DDK2 DDH7 DDK9» e depois RYRYRY. Em 4583, 7646 e 10 100,8 kHz, também 147,3 kHz (ficha 27)."
+},
+"mfsk16": {
+"nm": "MFSK16",
+"sh": "16 tons",
+"t": "MFSK16: dezasseis tons",
+"h": "Dezasseis tons afastados 15,625 Hz, um de cada vez, 15,625 vezes por segundo; cada tom leva quatro bits, protegidos por um código corretor.",
+"l": "Uma banda de 316 Hz feita de pequenos degraus que saltam sem parar, depois de um tom fixo no início. Ao ouvido, uma musiquinha rápida, como uma flauta. Também serve para enviar pequenas imagens."
+},
+"sitora": {
+"nm": "SITOR-A (ARQ)",
+"sh": "telex",
+"t": "SITOR-A: o telex marítimo em ARQ",
+"h": "A estação envia blocos de três carateres (210 ms, 100 bauds, desvio de 170 Hz) a cada 450 ms; entre blocos, a outra estação responde com um sinal curto para dizer «recebido» ou «repete».",
+"l": "Rajadas curtas e regulares, com uma pequena resposta mais fraca entre elas: um «tchip-tchip» de grilo. Hoje raro em onda curta."
+},
+"dscvhf": {
+"nm": "DSC VHF (canal 70)",
+"sh": "DSC",
+"t": "DSC: chamada seletiva digital no canal 70",
+"h": "Uma rajada de cerca de meio segundo a 1200 bauds, em dois tons de 1300 e 2100 Hz: leva o número MMSI do navio, o tipo de chamada e, em perigo, a posição.",
+"l": "Um «brrrt» curto e agudo em 156,525 MHz, que começa por uma série de bits alternados. Em onda média e curta, o DSC é em FSK a 100 bauds, como o NAVTEX (ficha 17)."
+},
+"selcal": {
+"nm": "SELCAL aviação",
+"sh": "4 tons",
+"t": "SELCAL: chamada seletiva dos aviões em onda curta",
+"h": "O controlo chama um avião preciso com dois impulsos de cerca de um segundo, cada um feito de dois tons entre dezasseis (312,6 a 1479,1 Hz). No avião acende-se uma luz e toca um carrilhão: a tripulação não precisa de estar sempre à escuta.",
+"l": "Dois acordes seguidos, «bing-bong», entre as mensagens de voz das frequências aeronáuticas em BLU, por exemplo 5616 ou 8864 kHz."
+},
+"dcs": {
+"nm": "DCS",
+"sh": "134,4 bit/s",
+"t": "DCS: o subtom digital",
+"h": "Em vez de um tom contínuo como o CTCSS, o rádio envia por baixo da voz uma palavra de 23 bits repetida sem parar, a 134,4 bits por segundo. No fim, um tom de 134,4 Hz fecha o squelch sem ruído.",
+"l": "Visto no som do recetor FM: uma banda irregular bem em baixo, abaixo de 300 Hz, e um ronco surdo se o filtro do rádio o deixar passar (ficha 8)."
+},
+"t1750": {
+"nm": "Tom de 1750 Hz",
+"sh": "repetidor",
+"t": "Tom de 1750 Hz: abrir um repetidor",
+"h": "Um tom curto de 1750 Hz (cerca de 0,5 a 1 s) no início da emissão ainda abre alguns repetidores de radioamadores europeus; o repetidor responde muitas vezes com um bip quando se larga o botão.",
+"l": "Um traço curto em 1750 Hz, depois a voz, depois o bip do repetidor (ficha 8)."
+},
+"ncdxf": {
+"nm": "Balizas NCDXF",
+"sh": "14,100 MHz",
+"t": "Balizas NCDXF / IARU: testar a propagação",
+"h": "Dezoito balizas no mundo emitem à vez, dez segundos cada, em 14,100, 18,110, 21,150, 24,930 e 28,200 MHz: o indicativo em Morse e depois quatro traços de um segundo a 100 W, 10 W, 1 W e 0,1 W.",
+"l": "Um indicativo e quatro traços cada vez mais fracos: se ainda ouves o último, a propagação para essa baliza é excelente. Aqui 4U1UN (Nova Iorque) e depois VE8AT (Canadá) (ficha 26 bis)."
+},
+"lrpt": {
+"nm": "Meteor-M LRPT",
+"sh": "137,9 MHz",
+"t": "Satélites Meteor-M: imagens LRPT",
+"h": "Os satélites meteorológicos russos Meteor-M enviam as imagens em digital: modulação de fase de quatro estados (QPSK), 72 000 símbolos por segundo, com cerca de 120 kHz de largura.",
+"l": "Um bloco cheio de bordas arredondadas que desliza devagar durante a passagem (efeito Doppler); ao ouvido, um simples sopro. Em 137,9 ou 137,1 MHz, descodificado com o SatDump (ficha 34).",
+"n": "escala reduzida"
+},
+"quindar": {
+"nm": "Bips Quindar",
+"sh": "NASA",
+"t": "Tons Quindar: os bips do Apollo",
+"h": "Quando o controlo de Houston carrega no microfone, um bip de 2525 Hz (250 ms) liga os emissores das estações terrestres; quando larga, um bip de 2475 Hz desliga-os.",
+"l": "Um bip agudo antes de cada frase e outro, um pouco mais grave, depois: o som célebre das gravações das missões Apollo."
+},
+"wow": {
+"nm": "Sinal «Wow!»",
+"sh": "1977",
+"t": "O sinal «Wow!» (15 de agosto de 1977)",
+"h": "O radiotelescópio Big Ear (Ohio) captou durante 72 segundos um sinal estreito e muito forte perto da risca do hidrogénio, cerca de 1420,456 MHz. O astrónomo Jerry Ehman escreveu «Wow!» na listagem. Nunca mais foi visto e a sua origem continua em discussão.",
+"l": "Um traço fino que sai do ruído, cresce e volta a descer: a forma da passagem de uma fonte fixa no feixe da antena. É uma reconstituição: não existe nenhuma gravação sonora.",
+"n": "72 s reduzidos a 12 s"
+},
+"frb": {
+"nm": "Explosão rápida de rádio",
+"sh": "FRB",
+"t": "Explosão rápida de rádio (FRB)",
+"h": "Um clarão rádio de alguns milissegundos vindo de outra galáxia; o primeiro foi descoberto em 2007. O gás atravessado atrasa muito as frequências baixas: a explosão chega esticada, os agudos primeiro.",
+"l": "Uma só curva que cai do topo para o fundo do espetro, e depois mais nada. Algumas repetem-se; a maioria só é vista uma vez.",
+"n": "muito abrandado e exagerado"
+},
+"letterb": {
+"nm": "Balizas de uma letra",
+"sh": "D, P, S, C…",
+"t": "Balizas de uma letra",
+"h": "Emissores da marinha russa repetem sem fim uma única letra em Morse, cada um a 100 Hz do vizinho: D, P, S, C, A, F, K ou M conforme o local.",
+"l": "Linhas pontilhadas paralelas, muito próximas, cada uma com o seu ritmo. Perto de 4558, 5154, 7039, 10 872, 13 528 e 16 332 kHz, em CW."
+},
+"sid": {
+"nm": "Erupção solar em VLF",
+"sh": "SID",
+"t": "Erupção solar vista em VLF (SID)",
+"h": "Os emissores VLF das marinhas (20,9 kHz em França, 23,4 kHz na Alemanha…) propagam-se entre o solo e a ionosfera. Quando chega uma erupção solar, os seus raios X alteram a base da ionosfera em poucos minutos e o nível recebido salta de repente.",
+"l": "Uma banda estreita e regular (o sinal MSK do emissor) que fica bruscamente mais forte e depois volta devagar ao normal. Bastam uma espira de fio e uma placa de som: um projeto clássico dos clubes de astronomia.",
+"n": "uma hora reduzida a 12 s"
+},
+"qrn": {
+"nm": "Estática de trovoada",
+"sh": "QRN",
+"t": "Estática de trovoada (QRN)",
+"h": "Cada relâmpago é um emissor muito potente que cobre todas as frequências ao mesmo tempo. Em onda média e curta ouvem-se trovoadas a milhares de quilómetros, sobretudo no verão e nas bandas baixas.",
+"l": "Traços horizontais irregulares em toda a largura; estalos secos ao ouvido. O limitador de ruído (NB) ajuda um pouco, uma antena de quadro ajuda mais."
+},
+"fading": {
+"nm": "Desvanecimento seletivo",
+"sh": "QSB",
+"t": "Desvanecimento seletivo (QSB)",
+"h": "Em onda curta o sinal chega por vários caminhos através da ionosfera. Conforme a frequência, somam-se ou anulam-se: uma cova estreita passeia pelo sinal.",
+"l": "Uma zona escura que se desloca devagar na estação de AM. Quando passa na portadora, ao centro, o som fica rouco e deformado uns segundos; a deteção síncrona ou a escuta em BLU corrigem isso."
+},
+"plc": {
+"nm": "PLC",
+"sh": "2–30 MHz",
+"t": "PLC: Internet pelas tomadas elétricas",
+"h": "Os adaptadores PLC enviam os dados pelos fios da casa com centenas de portadoras entre 2 e 30 MHz (mais acima nos modelos recentes), uma a cada 24,4 kHz. Os fios irradiam como uma antena.",
+"l": "Um pente de riscas regulares que pisca por pacotes, com buracos nas bandas de radioamador (entalhes previstos pela norma); ao ouvido, um crepitar que acompanha o tráfego da Internet (ficha 35 bis).",
+"n": "escala reduzida"
+},
+"fence": {
+"nm": "Cerca elétrica",
+"sh": "tac… tac…",
+"t": "Cerca elétrica",
+"h": "O eletrificador envia para o fio um impulso de vários milhares de volts, cerca de uma vez por segundo. Se a erva tocar no fio ou um isolador estiver danificado, salta uma faísca que irradia em todas as frequências.",
+"l": "Um traço horizontal muito fino em toda a largura, a intervalos perfeitamente regulares; um «tac… tac…» da onda longa até VHF. O ritmo regular distingue-o da trovoada."
+},
+"gsm": {
+"nm": "Telemóvel GSM",
+"sh": "217 Hz",
+"t": "Telemóvel GSM junto de um altifalante",
+"h": "Um telemóvel 2G emite em rajadas de 0,577 ms, 217 vezes por segundo. Um amplificador de áudio mal blindado deteta essas rajadas e torna-as audíveis.",
+"l": "Um pente de riscas a cada 217 Hz; o famoso «ta-ta-tatata» mesmo antes de o telemóvel tocar e depois um zumbido contínuo durante a chamada. Cada vez mais raro: as redes 2G estão a fechar."
+},
+"jjy": {
+"nm": "JJY",
+"sh": "40 / 60 kHz",
+"t": "Sinal horário JJY (Japão, 40 e 60 kHz)",
+"h": "Em cada segundo a portadora está em plena potência durante 0,8 s (bit 0), 0,5 s (bit 1) ou 0,2 s (marca) e depois cai para 10 %. É o inverso do DCF77, que baixa no início do segundo.",
+"l": "Um traço fixo que enfraquece no fim de cada segundo, mais cedo ou mais tarde. Emissores de Fukushima (40 kHz) e Saga-Fukuoka (60 kHz), para os relógios radiocontrolados do Japão."
+},
+"rwm": {
+"nm": "RWM",
+"sh": "4996 kHz",
+"t": "Sinal horário RWM (Moscovo)",
+"h": "Em telegrafia em 4996, 9996 e 14 996 kHz: um impulso de 100 ms a cada segundo e, noutros minutos, dez impulsos por segundo. O indicativo RWM é enviado em Morse duas vezes por hora.",
+"l": "O indicativo, depois um traço cortado em «tiques» regulares e a seguir em pontos rápidos. Ouvir em CW ou BLU.",
+"n": "excerto condensado"
+},
+"bpm": {
+"nm": "BPM",
+"sh": "2,5–15 MHz",
+"t": "Sinal horário BPM (China)",
+"h": "A estação de Pucheng (Shaanxi) emite em AM em 2,5, 5, 10 e 15 MHz: um tique de 10 ms a 1000 Hz a cada segundo (300 ms no minuto) e, em certos minutos, tiques de 100 ms para o tempo UT1. O indicativo BPM é dado em Morse e depois por uma voz.",
+"l": "No som desmodulado: o indicativo, depois traços muito curtos a 1000 Hz, um por segundo, com um mais longo no minuto. Muitas vezes misturado com a WWV nas mesmas frequências.",
+"n": "excerto condensado"
 }
 }
 }
