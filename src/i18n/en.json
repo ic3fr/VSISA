@@ -39,7 +39,9 @@
 "display": "Display",
 "theme_day": "Day",
 "theme_night": "Night (red)",
-"theme_phos": "Green phosphor"
+"theme_phos": "Green phosphor",
+"theme_phosb": "Blue phosphor",
+"theme_phosa": "Amber phosphor"
 },
 "groups": [
 "Analogue voice",

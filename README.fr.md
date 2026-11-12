@@ -4,7 +4,7 @@
 
 [![Visits](https://abacus.jasoncameron.dev/get/ic3fr-vsisa/visits/shield?text=visits)](https://ic3fr.github.io/VSISA/) [![Plays](https://abacus.jasoncameron.dev/get/ic3fr-vsisa/plays/shield?text=plays)](https://ic3fr.github.io/VSISA/)
 
-Identificateur de modes radio : **78 signaux simulés** (dont 18 sons de l'espace et 7 curiosités des ondes courtes en bonus), avec trois **modes d'affichage** (jour, nuit en nuances de rouge, phosphore vert comme les vieux ordinateurs) pour apprendre à reconnaître ce qu'on entend et ce qu'on voit sur un récepteur ou un SDR.
+Identificateur de modes radio : **78 signaux simulés** (dont 18 sons de l'espace et 7 curiosités des ondes courtes en bonus), avec cinq **modes d'affichage** (jour, nuit en nuances de rouge, et phosphore vert, bleu ou orange comme les vieux ordinateurs) pour apprendre à reconnaître ce qu'on entend et ce qu'on voit sur un récepteur ou un SDR.
 
 **Ouvrir la page : https://ic3fr.github.io/VSISA/** · **[📥 Télécharger le livre OpenBookRadio](https://github.com/ic3fr/OpenBookRadio/releases)** (gratuit, PDF et EPUB) · 13 langues : menu en haut de la page, ou lien direct avec `#en`, `#es`, `#de`… à la fin de l'adresse.
 
@@ -47,7 +47,7 @@ Les signaux radio (AM, FM, AIS, LoRa…) sont montrés comme sur l'écran d'un S
 | 🇨🇳 中文 | 无线电模式识别器：78 种模拟信号，声音、频谱、瀑布图、测验。`#zh` |
 | 🇯🇵 日本語 | 無線モード識別器：78 種類のシミュレーション信号、音、スペクトラム、ウォーターフォール、クイズ。`#ja` |
 
-La langue est choisie automatiquement selon le navigateur ; le menu permet d'en changer. Le menu **Affichage** propose jour, **nuit** (nuances de rouge, pour garder la vision de nuit) et **phosphore vert** (comme les vieux terminaux, avec des lignes de balayage) ; le choix est retenu.
+La langue est choisie automatiquement d'après les réglages du navigateur (toutes les langues préférées sont regardées : un visiteur de Chine, de Taïwan ou du Brésil arrive directement en chinois ou en portugais ; sinon en anglais) ; le menu permet d'en changer. Le menu **Affichage** propose jour, **nuit** (nuances de rouge, pour garder la vision de nuit) et **phosphore vert, bleu ou orange** (comme les vieux terminaux, avec des lignes de balayage) ; le choix est retenu.
 
 ## Compteur
 La page en ligne compte les visites (une fois par session de navigateur) et les écoutes avec [Abacus](https://v2.jasoncameron.dev/abacus), un service de comptage gratuit, sans cookie et sans donnée personnelle conservée. Les totaux s'affichent en bas de la page et dans les badges ci-dessus. La copie téléchargée (hors ligne) ne compte rien.

@@ -39,7 +39,9 @@
 "display": "表示",
 "theme_day": "昼",
 "theme_night": "夜（赤）",
-"theme_phos": "緑色リン光"
+"theme_phos": "緑色リン光",
+"theme_phosb": "青色リン光",
+"theme_phosa": "琥珀色リン光"
 },
 "groups": [
 "アナログ音声",

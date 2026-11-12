@@ -39,7 +39,9 @@
 "display": "Zobrazení",
 "theme_day": "Den",
 "theme_night": "Noc (červená)",
-"theme_phos": "Zelený fosfor"
+"theme_phos": "Zelený fosfor",
+"theme_phosb": "Modrý fosfor",
+"theme_phosa": "Oranžový fosfor"
 },
 "groups": [
 "Analogový hlas",

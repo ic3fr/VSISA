@@ -16,15 +16,17 @@
 }
 html.night{--bg:#0a0000;--panel:#140202;--panel-2:#1e0404;--line:#3d0a08;--fg:#e2533f;--muted:#9c3428;--accent:#ff3b2f;--accent-ink:#140000;--ok:#ff8a6a;--bad:#c22a1c}
 html.night .screen{background:#000}
-html.phos{--bg:#010801;--panel:#031203;--panel-2:#052005;--line:#0e4a12;--fg:#39ff6a;--muted:#1fa83f;--accent:#7dff9a;--accent-ink:#011a04;--ok:#b6ffc6;--bad:#ffd84a;
+html.phos{--glow:57,255,106;--bg:#010801;--panel:#031203;--panel-2:#052005;--line:#0e4a12;--fg:#39ff6a;--muted:#1fa83f;--accent:#7dff9a;--accent-ink:#011a04;--ok:#b6ffc6;--bad:#ffd84a;
   --f-display:"VT323",ui-monospace,Menlo,Consolas,monospace;--f-body:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;color-scheme:dark}
 html.phos .screen{background:#000}
-html.phos body{text-shadow:0 0 4px rgba(57,255,106,.45)}
+html.phos body{text-shadow:0 0 4px rgba(var(--glow),.45)}
 html.phos h1,html.phos .now h2,html.phos .card h3{font-weight:400;letter-spacing:.03em}
 html.phos h1{font-size:clamp(2.1rem,5vw,3rem)}
 html.phos .btn,html.phos select,html.phos .mode,html.phos .ref,html.phos .screen,html.phos .card{border-radius:0}
 html.phos body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:50;background:repeating-linear-gradient(to bottom,rgba(0,0,0,0) 0,rgba(0,0,0,0) 2px,rgba(0,0,0,.22) 3px);box-shadow:inset 0 0 120px rgba(0,0,0,.65)}
-html.phos canvas{filter:drop-shadow(0 0 2px rgba(57,255,106,.35))}
+html.phos canvas{filter:drop-shadow(0 0 2px rgba(var(--glow),.35))}
+html.phos.blue{--glow:90,190,255;--bg:#00040a;--panel:#020a16;--panel-2:#041226;--line:#0c3058;--fg:#5ab8ff;--muted:#2d78b8;--accent:#9fd8ff;--accent-ink:#000c1a;--ok:#c8ecff;--bad:#ffd84a}
+html.phos.amber{--glow:255,176,0;--bg:#0a0500;--panel:#140b00;--panel-2:#201200;--line:#4a2c00;--fg:#ffb000;--muted:#b07600;--accent:#ffd060;--accent-ink:#1a0e00;--ok:#ffe7a8;--bad:#ff6a4a}
 *{box-sizing:border-box}
 html,body{background:var(--bg);color:var(--fg)}
 body{font-family:var(--f-body);font-size:15px;line-height:1.5;
@@ -105,7 +107,7 @@ footer p{margin:0;max-width:110ch}
         <select id="lang"></select></label>
       <a class="btn book" id="tBook" href="https://github.com/ic3fr/OpenBookRadio/releases" target="_blank" rel="noopener">Télécharger le livre</a>
       <label class="langlbl" for="theme"><span id="tTheme">Affichage</span>
-        <select id="theme"><option value="day">Jour</option><option value="night">Nuit (rouge)</option><option value="phos">Phosphore vert</option></select></label>
+        <select id="theme"><option value="day">Jour</option><option value="night">Nuit (rouge)</option><option value="phos">Phosphore vert</option><option value="phosb">Phosphore bleu</option><option value="phosa">Phosphore orange</option></select></label>
       <button class="btn" id="mystery" type="button">Son mystère</button>
     </div>
   </header>
@@ -614,6 +616,8 @@ function spectrumRaw(sig,center,m){
 let THEME="day";
 const PALS={day:{bg:"#05080c",grid:"rgba(141,155,173,.18)",grid2:"rgba(141,155,173,.12)",lab:"rgba(141,155,173,.75)",peak:"rgba(225,231,239,.45)",f0:"rgba(242,181,68,.55)",f1:"rgba(242,181,68,.03)",line:"#f2b544",txt:"rgba(225,231,239,.85)",head:"rgba(242,181,68,.95)"},
  phos:{bg:"#000400",grid:"rgba(57,255,106,.16)",grid2:"rgba(57,255,106,.09)",lab:"rgba(57,255,106,.75)",peak:"rgba(182,255,198,.45)",f0:"rgba(57,255,106,.45)",f1:"rgba(57,255,106,.03)",line:"#39ff6a",txt:"rgba(125,255,154,.9)",head:"rgba(182,255,198,.95)"},
+ phosb:{bg:"#000208",grid:"rgba(90,190,255,.16)",grid2:"rgba(90,190,255,.09)",lab:"rgba(90,190,255,.75)",peak:"rgba(200,236,255,.45)",f0:"rgba(90,190,255,.45)",f1:"rgba(90,190,255,.03)",line:"#5ab8ff",txt:"rgba(159,216,255,.9)",head:"rgba(200,236,255,.95)"},
+ phosa:{bg:"#060300",grid:"rgba(255,176,0,.16)",grid2:"rgba(255,176,0,.09)",lab:"rgba(255,176,0,.75)",peak:"rgba(255,231,168,.45)",f0:"rgba(255,176,0,.45)",f1:"rgba(255,176,0,.03)",line:"#ffb000",txt:"rgba(255,208,96,.9)",head:"rgba(255,231,168,.95)"},
  night:{bg:"#050000",grid:"rgba(255,60,40,.16)",grid2:"rgba(255,60,40,.10)",lab:"rgba(200,60,45,.8)",peak:"rgba(255,110,90,.4)",f0:"rgba(255,40,20,.5)",f1:"rgba(255,40,20,.03)",line:"#ff3b2f",txt:"rgba(230,80,60,.9)",head:"rgba(255,60,40,.95)"}};
 function P(){ return PALS[THEME]||PALS.day; }
 function makeLUT(stops){
@@ -621,6 +625,9 @@ function makeLUT(stops){
     const [a,ca]=stops[k],[b,cb]=stops[k+1], u=(v-a)/(b-a); for(let c=0;c<3;c++) t[i*3+c]=ca[c]+(cb[c]-ca[c])*u; } return t; }
 const LUT_DAY=makeLUT([[0,[2,8,24]],[.18,[11,42,74]],[.38,[26,95,180]],[.55,[63,169,245]],[.7,[155,231,255]],[.85,[255,224,138]],[1,[255,138,61]]]), LUT_NIGHT=makeLUT([[0,[0,0,0]],[.25,[30,0,0]],[.5,[110,4,0]],[.75,[210,25,10]],[.9,[255,70,40]],[1,[255,130,100]]]);
 const LUT_PHOS=makeLUT([[0,[0,0,0]],[.25,[0,22,4]],[.5,[0,90,20]],[.75,[30,200,70]],[.9,[90,255,130]],[1,[210,255,220]]]);
+const LUT_PHOSB=makeLUT([[0,[0,0,0]],[.25,[0,8,26]],[.5,[0,40,110]],[.75,[30,130,220]],[.9,[110,200,255]],[1,[220,242,255]]]);
+const LUT_PHOSA=makeLUT([[0,[0,0,0]],[.25,[26,12,0]],[.5,[110,60,0]],[.75,[220,140,0]],[.9,[255,190,40]],[1,[255,238,190]]]);
+const LUTS={day:LUT_DAY,night:LUT_NIGHT,phos:LUT_PHOS,phosb:LUT_PHOSB,phosa:LUT_PHOSA};
 let LUT=LUT_DAY;
 const DR=55;
 function norm(row){ const o=new Float32Array(W); for(let x=0;x<W;x++) o[x]=Math.min(1,Math.max(0,(row[x]-vmin)/DR)); return o; }
@@ -756,7 +763,7 @@ function setLang(l){ if(!I18N[l]) l="fr"; LG=l; LOC=(LANGS.find(x=>x[0]===l)||LA
   const T={tBook:"book_dl",tBook2:"book_dl2",tTitle:"title",tLang:"lang",mystery:"mystery",play:"play",stop:"stop",tNoise:"noise",tVol:"volume",tLoop:"loop",tSpecwf:"specwf",tCursor:"cursor",tFoot:"footprint",tF1:"f1",tF2:"f2"};
   for(const id in T) document.getElementById(id).textContent=t(T[id]);
   document.getElementById("tTheme").textContent=t("display");
-  [["day","theme_day"],["night","theme_night"],["phos","theme_phos"]].forEach(([v,k])=>{ document.querySelector('#theme option[value="'+v+'"]').textContent=t(k); });
+  [["day","theme_day"],["night","theme_night"],["phos","theme_phos"],["phosb","theme_phosb"],["phosa","theme_phosa"]].forEach(([v,k])=>{ document.querySelector('#theme option[value="'+v+'"]').textContent=t(k); });
   document.title=t("title")+" · VSISA"; showStats();
   try{ localStorage.setItem("idmr-lang",l); }catch(e){}
   if(location.hash.slice(1)!==l){ try{ history.replaceState(null,"","#"+l); }catch(e){} }
@@ -766,8 +773,8 @@ function setLang(l){ if(!I18N[l]) l="fr"; LG=l; LOC=(LANGS.find(x=>x[0]===l)||LA
     const d=signal.length/SR; document.getElementById("dur").textContent=t("dur").replace("{s}",d.toLocaleString(LOC,{minimumFractionDigits:1,maximumFractionDigits:1})); } }
 (function(){ const sel=document.getElementById("lang"); LANGS.forEach(([c,n])=>{ const o=document.createElement("option"); o.value=c; o.textContent=n; sel.appendChild(o); });
   sel.addEventListener("change",()=>setLang(sel.value)); })();
-function setTheme(th){ if(!PALS[th]) th="day"; THEME=th; LUT=th==="night"?LUT_NIGHT:th==="phos"?LUT_PHOS:LUT_DAY;
-  const h=document.documentElement; h.classList.toggle("night",th==="night"); h.classList.toggle("phos",th==="phos");
+function setTheme(th){ if(!PALS[th]) th="day"; THEME=th; LUT=LUTS[th];
+  const h=document.documentElement; h.classList.toggle("night",th==="night"); h.classList.toggle("phos",th.startsWith("phos")); h.classList.toggle("blue",th==="phosb"); h.classList.toggle("amber",th==="phosa");
   document.getElementById("theme").value=th;
   try{ localStorage.setItem("idmr-theme",th); }catch(e){}
   if(current&&signal){ analyse(); if(!playing) blankWaterfall(t("press")); } }
@@ -780,9 +787,14 @@ document.getElementById("loop").addEventListener("change",e=>{ if(src) src.loop=
 document.getElementById("noise").addEventListener("change",()=>{ if(!current) return; const was=playing, hidden=!!quiz; stop();
   signal=buildSignal(current); analyse(); if(was) play(); else blankWaterfall(t("press")); if(hidden) renderQuiz(); });
 
+function browserLang(){ // langue du navigateur : on parcourt toute la liste de préférences (zh-TW, pt-BR, de-CH… comptent aussi)
+  const alias={cz:"cs",ua:"uk",jp:"ja",cn:"zh",be:"ru"};
+  const list=[].concat(navigator.languages||[],navigator.language||[],navigator.userLanguage||[]);
+  for(const tag of list){ if(!tag) continue; const b=String(tag).toLowerCase().split(/[-_]/)[0], c=alias[b]||b; if(I18N[c]) return c; }
+  return "en"; }
 let lg0=location.hash.slice(1);
 if(!I18N[lg0]){ try{ lg0=localStorage.getItem("idmr-lang")||""; }catch(e){ lg0=""; } }
-if(!I18N[lg0]){ const nl=(navigator.language||"fr").slice(0,2).toLowerCase(); lg0=I18N[nl]?nl:"en"; }
+if(!I18N[lg0]) lg0=browserLang();
 window.addEventListener("hashchange",()=>{ const h=location.hash.slice(1); if(I18N[h]&&h!==LG) setLang(h); });
 let start=MODES.find(m=>m.id==="psk31");
 try{ const s=localStorage.getItem("idmr-mode"); const f=MODES.find(m=>m.id===s); if(f) start=f; }catch(e){}

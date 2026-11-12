@@ -39,7 +39,9 @@
 "display": "显示",
 "theme_day": "日间",
 "theme_night": "夜间（红色）",
-"theme_phos": "绿色荧光屏"
+"theme_phos": "绿色荧光屏",
+"theme_phosb": "蓝色荧光屏",
+"theme_phosa": "琥珀色荧光屏"
 },
 "groups": [
 "模拟语音",

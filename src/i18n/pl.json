@@ -39,7 +39,9 @@
 "display": "Wygląd",
 "theme_day": "Dzień",
 "theme_night": "Noc (czerwony)",
-"theme_phos": "Zielony luminofor"
+"theme_phos": "Zielony luminofor",
+"theme_phosb": "Niebieski luminofor",
+"theme_phosa": "Pomarańczowy luminofor"
 },
 "groups": [
 "Głos analogowy",

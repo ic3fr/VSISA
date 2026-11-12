@@ -39,7 +39,9 @@
 "display": "Visualização",
 "theme_day": "Dia",
 "theme_night": "Noite (vermelho)",
-"theme_phos": "Fósforo verde"
+"theme_phos": "Fósforo verde",
+"theme_phosb": "Fósforo azul",
+"theme_phosa": "Fósforo âmbar"
 },
 "groups": [
 "Voz analógica",

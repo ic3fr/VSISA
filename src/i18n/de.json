@@ -39,7 +39,9 @@
 "display": "Anzeige",
 "theme_day": "Tag",
 "theme_night": "Nacht (rot)",
-"theme_phos": "Grüner Phosphor"
+"theme_phos": "Grüner Phosphor",
+"theme_phosb": "Blauer Phosphor",
+"theme_phosa": "Bernstein-Phosphor"
 },
 "groups": [
 "Analoge Sprache",

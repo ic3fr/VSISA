@@ -39,7 +39,9 @@
 "display": "Weergave",
 "theme_day": "Dag",
 "theme_night": "Nacht (rood)",
-"theme_phos": "Groen fosfor"
+"theme_phos": "Groen fosfor",
+"theme_phosb": "Blauw fosfor",
+"theme_phosa": "Amber fosfor"
 },
 "groups": [
 "Analoge spraak",

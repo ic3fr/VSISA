@@ -4,7 +4,7 @@
 
 [![Visits](https://abacus.jasoncameron.dev/get/ic3fr-vsisa/visits/shield?text=visits)](https://ic3fr.github.io/VSISA/) [![Plays](https://abacus.jasoncameron.dev/get/ic3fr-vsisa/plays/shield?text=plays)](https://ic3fr.github.io/VSISA/)
 
-Radio mode identifier: **78 simulated signals** (including 18 sounds from space and 7 shortwave curiosities as bonuses), with three **display modes** (day, red night mode, green phosphor like old computer screens), to learn to recognise what you hear and see on a receiver or an SDR.
+Radio mode identifier: **78 simulated signals** (including 18 sounds from space and 7 shortwave curiosities as bonuses), with five **display modes** (day, red night mode, and green, blue or amber phosphor like old computer screens), to learn to recognise what you hear and see on a receiver or an SDR.
 
 **Open the page: https://ic3fr.github.io/VSISA/** · **[📥 Download the OpenBookRadio book](https://github.com/ic3fr/OpenBookRadio/releases)** (free, PDF and EPUB) · 13 languages: menu at the top of the page, or a direct link ending in `#en`, `#fr`, `#de`…
 
@@ -12,7 +12,7 @@ Radio mode identifier: **78 simulated signals** (including 18 sounds from space 
 - For each signal: the **sound**, the live **spectrum** and **waterfall**, the full **footprint** of the signal, and a fact card (principle, what it looks like on screen, sheet number in the book).
 - **Mystery sound**: a random signal to identify among four answers, with a score.
 - Settings: added noise, volume, loop playback; the cursor shows the frequency.
-- **Display** menu: day, **night** (shades of red, to keep your night vision) or **green phosphor** (like old computer terminals, with scan lines); your choice is remembered.
+- **Display** menu: day, **night** (shades of red, to keep your night vision) or **green, blue or amber phosphor** (like old computer terminals, with scan lines); your choice is remembered.
 - A single HTML page, nothing to install, that works **offline**: download `index.html` and open it in a browser.
 
 ## The signals
@@ -48,7 +48,7 @@ Radio signals (AM, FM, AIS, LoRa…) are shown as on an SDR screen, around a sim
 | 🇨🇳 中文 | 无线电模式识别器：78 种模拟信号，声音、频谱、瀑布图、测验。`#zh` |
 | 🇯🇵 日本語 | 無線モード識別器：78 種類のシミュレーション信号、音、スペクトラム、ウォーターフォール、クイズ。`#ja` |
 
-The language is picked automatically from your browser; the menu lets you change it.
+The language is picked automatically from your browser's language settings (all preferred languages are checked: a visitor from China, Taiwan or Brazil gets Chinese or Portuguese straight away; English otherwise); the menu lets you change it.
 
 ## Counter
 The online page counts visits (once per browser session) and plays with [Abacus](https://v2.jasoncameron.dev/abacus), a free counting service with no cookies and no personal data stored. The totals are shown at the bottom of the page and in the badges above. The downloaded copy (offline) counts nothing.

@@ -39,7 +39,9 @@
 "display": "Affichage",
 "theme_day": "Jour",
 "theme_night": "Nuit (rouge)",
-"theme_phos": "Phosphore vert"
+"theme_phos": "Phosphore vert",
+"theme_phosb": "Phosphore bleu",
+"theme_phosa": "Phosphore orange"
 },
 "groups": [
 "Voix analogique",
