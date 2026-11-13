@@ -13,7 +13,7 @@
 "dur": "{s} s de arriba abajo",
 "avg": "media de toda la señal",
 "press": "Pulsa Escuchar: la señal se desplaza aquí",
-"count": "{n} señales, en el orden de la ficha 5 bis",
+"count": "{n} señales, en el orden de la ficha 6",
 "myst": "Modo misterioso",
 "mystTags": "Escucha y observa, luego elige la respuesta correcta",
 "quizH": "¿Qué señal es?",
@@ -28,7 +28,7 @@
 "book": "Libro: ficha {r}",
 "lang": "Idioma",
 "signals": "Señales",
-"f1": "Señales simuladas en la página (12 000 muestras por segundo): las de la ficha 5 bis del libro OpenBookRadio, otras señales del libro y extras. Para las señales de radio (AM, FM, AIS, LoRa…) se ve la frecuencia intermedia simulada, como en la pantalla de un SDR; algunas están a escala reducida o acelerada, y se indica. En AM, BLU, FM, FM estéreo, ISS y desvanecimiento se oye el sonido demodulado, como en el altavoz del receptor, y la pantalla muestra la señal de radio; la voz es sintética y no dice palabras reales.",
+"f1": "Señales simuladas en la página (12 000 muestras por segundo): las de la ficha 6 del libro OpenBookRadio, otras señales del libro y extras. Para las señales de radio (AM, FM, AIS, LoRa…) se ve la frecuencia intermedia simulada, como en la pantalla de un SDR; algunas están a escala reducida o acelerada, y se indica. En AM, BLU, FM, FM estéreo, ISS y desvanecimiento se oye el sonido demodulado, como en el altavoz del receptor, y la pantalla muestra la señal de radio; la voz es sintética y no dice palabras reales.",
 "f2": "El tiempo baja en la cascada y en la huella. Licencia CC BY-NC-SA 4.0, gratis, prohibida la venta.",
 "night": "Modo noche",
 "day": "Modo día",
@@ -62,7 +62,7 @@
 "sh": "radio",
 "t": "AM: modulación de amplitud",
 "h": "La fuerza de la portadora sigue al sonido: la curva se «hincha» y se «deshincha».",
-"l": "Una raya fija en el centro (la portadora), con dos bandas laterales idénticas a cada lado. Unos 6 a 9 kHz de ancho. Radio en onda corta y onda media, aviación (fichas 10 y 12).",
+"l": "Una raya fija en el centro (la portadora), con dos bandas laterales idénticas a cada lado. Unos 6 a 9 kHz de ancho. Radio en onda corta y onda media, aviación (fichas 12 y 14).",
 "r": [
 [
 "Escucha",
@@ -73,13 +73,13 @@
 "ssb": {
 "t": "BLU / SSB: banda lateral única",
 "h": "Solo queda una banda lateral, sin portadora: nada cuando nadie habla.",
-"l": "Sin raya central, una sola banda de unos 2,7 kHz que solo vive cuando se habla. USB por encima de 10 MHz, LSB por debajo (radioaficionados). Mal sintonizada, la voz suena a «pato» (fichas 9 y 26)."
+"l": "Sin raya central, una sola banda de unos 2,7 kHz que solo vive cuando se habla. USB por encima de 10 MHz, LSB por debajo (radioaficionados). Mal sintonizada, la voz suena a «pato» (fichas 11 y 29)."
 },
 "fm": {
 "sh": "voz",
 "t": "FM: modulación de frecuencia",
 "h": "La amplitud se mantiene fija; las oscilaciones se juntan o se separan con el sonido.",
-"l": "La señal baila alrededor de su frecuencia, más ancha cuando el sonido es fuerte: 12,5 kHz por canal en FM estrecha (walkies, repetidores), 200 kHz en radio FM (fichas 2 y 11).",
+"l": "La señal baila alrededor de su frecuencia, más ancha cuando el sonido es fuerte: 12,5 kHz por canal en FM estrecha (walkies, repetidores), 200 kHz en radio FM (fichas 2 y 13).",
 "r": [
 [
 "Escucha",
@@ -90,7 +90,7 @@
 "cw": {
 "t": "CW: Morse",
 "h": "La portadora se enciende y se apaga: rayas y puntos.",
-"l": "Una raya muy fina que se corta al ritmo del Morse; un pitido al oído. Aquí «CQ» (ficha 39).",
+"l": "Una raya muy fina que se corta al ritmo del Morse; un pitido al oído. Aquí «CQ» (ficha 48).",
 "r": [
 [
 "Velocidad",
@@ -109,7 +109,7 @@
 "rtty": {
 "t": "FSK / RTTY: dos frecuencias",
 "h": "La frecuencia salta entre dos valores, uno para 0 y otro para 1.",
-"l": "Dos rayas paralelas: 170 Hz de separación entre radioaficionados (45,45 baudios), 450 u 850 Hz para los boletines meteorológicos. Un «tidilidi» regular (ficha 27).",
+"l": "Dos rayas paralelas: 170 Hz de separación entre radioaficionados (45,45 baudios), 450 u 850 Hz para los boletines meteorológicos. Un «tidilidi» regular (ficha 32).",
 "r": [
 [
 "Código",
@@ -128,7 +128,7 @@
 "afsk": {
 "t": "AFSK 1200 baudios: APRS y packet",
 "h": "Dos tonos de audio, 1200 y 2200 Hz, enviados a un transmisor FM.",
-"l": "Vista tras el receptor FM (sonido del altavoz): una banda de 1200 a 2200 Hz, en ráfagas cortas. Al oído, un «grrrt» de un segundo (fichas 29 y 30).",
+"l": "Vista tras el receptor FM (sonido del altavoz): una banda de 1200 a 2200 Hz, en ráfagas cortas. Al oído, un «grrrt» de un segundo (fichas 35 y 36).",
 "r": [
 [
 "Frecuencia",
@@ -147,7 +147,7 @@
 "psk31": {
 "t": "PSK31: modulación de fase",
 "h": "La frecuencia no se mueve, es la fase la que se invierte; la amplitud baja en cada inversión.",
-"l": "Una raya muy fina de unos 60 Hz, algo «trenzada». Decenas de estaciones caben en 3 kHz (ficha 26).",
+"l": "Una raya muy fina de unos 60 Hz, algo «trenzada». Decenas de estaciones caben en 3 kHz (ficha 29).",
 "r": [
 [
 "Código",
@@ -166,7 +166,7 @@
 "ft8": {
 "t": "MFSK / FT8: ocho tonos",
 "h": "La frecuencia sube y baja en escalones de 6,25 Hz, 0,16 s por escalón.",
-"l": "Bandas de unos 50 Hz que duran 12,6 s y vuelven cada 15 s, sincronizadas con la hora: varias estaciones a la vez en 3 kHz, por ejemplo en 7,074 MHz (ficha 26).",
+"l": "Bandas de unos 50 Hz que duran 12,6 s y vuelven cada 15 s, sincronizadas con la hora: varias estaciones a la vez en 3 kHz, por ejemplo en 7,074 MHz (ficha 29).",
 "r": [
 [
 "Trama",
@@ -185,37 +185,37 @@
 "ft4": {
 "t": "FT4: el FT8 de los concursos",
 "h": "Cuatro tonos separados 20,8 Hz, 20,8 baudios: 105 símbolos en 5 s, en turnos de 7,5 s.",
-"l": "Bandas de unos 90 Hz, más cortas y anchas que el FT8, que vuelven cada 7,5 s. 14 080, 7047,5 kHz (ficha 26)."
+"l": "Bandas de unos 90 Hz, más cortas y anchas que el FT8, que vuelven cada 7,5 s. 14 080, 7047,5 kHz (ficha 29)."
 },
 "olivia": {
 "t": "Olivia 8/250: ocho tonos",
 "h": "Ocho tonos separados 31,25 Hz, uno cada vez, que saltan al azar; codificación Walsh y entrelazado.",
-"l": "Un bloque de puntos dispersos sobre 250 Hz; decodifica muy por debajo del ruido. Una pequeña melodía aleatoria al oído (ficha 26)."
+"l": "Un bloque de puntos dispersos sobre 250 Hz; decodifica muy por debajo del ruido. Una pequeña melodía aleatoria al oído (ficha 29)."
 },
 "hell": {
 "t": "Feld Hell: escribir con una portadora",
 "h": "La portadora se enciende y se apaga punto a punto: cada letra son columnas de 14 puntos, barridas de abajo arriba (245 puntos por segundo).",
-"l": "En la cascada, una raya entrecortada; la pantalla del programa (fldigi) redibuja las letras. Un crepitar suave al oído (ficha 26)."
+"l": "En la cascada, una raya entrecortada; la pantalla del programa (fldigi) redibuja las letras. Un crepitar suave al oído (ficha 29)."
 },
 "4fsk": {
 "t": "4FSK: DMR, C4FM (Fusion), NXDN, dPMR",
 "h": "Cuatro niveles de frecuencia: cada símbolo lleva dos bits.",
-"l": "Un bloque rectangular de 6 a 12,5 kHz, lleno como el ruido, a menudo en ráfagas (el DMR reparte el canal en dos intervalos). Un «frrr» ronco al oído (ficha 38)."
+"l": "Un bloque rectangular de 6 a 12,5 kHz, lleno como el ruido, a menudo en ráfagas (el DMR reparte el canal en dos intervalos). Un «frrr» ronco al oído (ficha 46)."
 },
 "mt63": {
 "t": "MT63: mensajes de emergencia (NBEMS)",
 "h": "64 tonos a la vez, cada uno modulado lentamente, con mucha redundancia.",
-"l": "Un bloque plano de 1 o 2 kHz centrado en 1500 Hz, de bordes nítidos; un soplido regular. Pasa incluso por un micrófono pegado a un altavoz (ficha 26 ter)."
+"l": "Un bloque plano de 1 o 2 kHz centrado en 1500 Hz, de bordes nítidos; un soplido regular. Pasa incluso por un micrófono pegado a un altavoz (ficha 31)."
 },
 "lora": {
 "t": "LoRa: rampas de frecuencia (chirps)",
 "h": "La frecuencia barre todo el ancho y vuelve a empezar desde abajo: la posición del salto lleva los datos.",
-"l": "Diagonales paralelas, fáciles de reconocer: Meshtastic y MeshCore en 869,525 MHz o 433 MHz, sensores LoRaWAN (fichas 11, 20 y 21)."
+"l": "Diagonales paralelas, fáciles de reconocer: Meshtastic y MeshCore en 869,525 MHz o 433 MHz, sensores LoRaWAN (fichas 13, 23 y 24)."
 },
 "sstv": {
 "t": "SSTV: imágenes en audio",
 "h": "Un pulso de sincronía a 1200 Hz y luego la frecuencia sigue el brillo de la línea, de 1500 (negro) a 2300 Hz (blanco).",
-"l": "Rayas de sincronía regulares y una nube que cambia con la imagen; un sonido que «gorjea» durante uno o dos minutos. 14,230 MHz, ISS en 145,800 MHz (ficha 31).",
+"l": "Rayas de sincronía regulares y una nube que cambia con la imagen; un sonido que «gorjea» durante uno o dos minutos. 14,230 MHz, ISS en 145,800 MHz (ficha 37).",
 "r": [
 [
 "Trama",
@@ -231,7 +231,7 @@
 "nm": "Fax meteorológico",
 "t": "Fax meteorológico: 1500 Hz negro, 2300 Hz blanco",
 "h": "La frecuencia pasa del negro al blanco de forma continua, 120 líneas por minuto.",
-"l": "Dos bandas fijas en 1500 y 2300 Hz (800 Hz de separación), un «tic-tac» regular. Las frecuencias publicadas son las de la portadora: escucha en USB 1,9 kHz más abajo (ficha 32).",
+"l": "Dos bandas fijas en 1500 y 2300 Hz (800 Hz de separación), un «tic-tac» regular. Las frecuencias publicadas son las de la portadora: escucha en USB 1,9 kHz más abajo (ficha 38).",
 "r": [
 [
 "Trama",
@@ -247,35 +247,35 @@
 "nm": "Sirena ELT",
 "t": "Sirena ELT / PLB en 121,5 MHz",
 "h": "Una AM cuyo tono baja de 1600 a 300 Hz, de dos a cuatro veces por segundo.",
-"l": "Una portadora fija y bandas laterales que se deslizan en abanico: el «uu-uu» de las radiobalizas de socorro, también en 121,375 MHz para ejercicios (fichas 24 y 25)."
+"l": "Una portadora fija y bandas laterales que se deslizan en abanico: el «uu-uu» de las radiobalizas de socorro, también en 121,375 MHz para ejercicios (fichas 27 y 28)."
 },
 "406": {
 "nm": "Baliza 406",
 "t": "Baliza 406 MHz: ráfaga BPSK",
 "h": "Medio segundo de emisión: 160 ms de portadora pura, luego la fase oscila ±1,1 radián a 400 bit/s.",
-"l": "Una rayita corta que vuelve cada 50 s, entre 406,0 y 406,1 MHz; nada útil que oír, hace falta un decodificador (EPIRB 406, ficha 25)."
+"l": "Una rayita corta que vuelve cada 50 s, entre 406,0 y 406,1 MHz; nada útil que oír, hace falta un decodificador (EPIRB 406, ficha 28)."
 },
 "adsb": {
 "t": "ADS-B / modo S (1090 MHz): impulsos",
 "h": "Impulsos de 0,5 µs cuya posición lleva los bits (PPM); aquí la escala de tiempo está muy ralentizada.",
-"l": "Rayas horizontales muy cortas en todo el ancho, cientos por segundo cerca de un aeropuerto; hace falta una llave SDR (ficha 13).",
+"l": "Rayas horizontales muy cortas en todo el ancho, cientos por segundo cerca de un aeropuerto; hace falta una llave SDR (ficha 15).",
 "n": "escala de tiempo muy ralentizada"
 },
 "acars": {
 "t": "ACARS: AM y datos MSK",
 "h": "Una AM que transporta dos tonos, 1200 y 2400 Hz, a 2400 bit/s.",
-"l": "Ráfagas de medio segundo con portadora y bandas laterales, en 131,525, 131,725 o 131,825 MHz en Europa: un «brrrt» al oído (ficha 14)."
+"l": "Ráfagas de medio segundo con portadora y bandas laterales, en 131,525, 131,725 o 131,825 MHz en Europa: un «brrrt» al oído (ficha 16)."
 },
 "ais": {
 "t": "AIS: GMSK 9600 baudios en dos canales",
 "h": "Una FSK suavizada (GMSK) en ráfagas de 26 ms, una vez en 161,975 MHz, otra en 162,025 MHz (escala reducida).",
-"l": "Dos columnas de rayitas breves, a 50 kHz, un chasquido regular; cuantos más barcos, más denso (ficha 16).",
+"l": "Dos columnas de rayitas breves, a 50 kHz, un chasquido regular; cuantos más barcos, más denso (ficha 19).",
 "n": "escala reducida"
 },
 "navtex": {
 "t": "NAVTEX y LSD en onda media y corta: FSK 170 Hz",
 "h": "Como el RTTY: dos frecuencias separadas 170 Hz, pero a 100 baudios.",
-"l": "Dos rayas paralelas continuas durante el boletín, en 518 y 490 kHz (NAVTEX) o 2187,5 kHz (llamada selectiva digital) (ficha 17).",
+"l": "Dos rayas paralelas continuas durante el boletín, en 518 y 490 kHz (NAVTEX) o 2187,5 kHz (llamada selectiva digital) (ficha 20).",
 "r": [
 [
 "Código",
@@ -290,18 +290,18 @@
 "hfdl": {
 "t": "HFDL: los aviones en onda corta",
 "h": "Una PSK de 1800 baudios sobre una subportadora de 1440 Hz.",
-"l": "Ráfagas de unos 2,4 kHz entre 2,9 y 22 MHz; un siseo de módem que va y viene (ficha 14 bis)."
+"l": "Ráfagas de unos 2,4 kHz entre 2,9 y 22 MHz; un siseo de módem que va y viene (ficha 17)."
 },
 "ctcss": {
 "t": "CTCSS: subtono bajo la voz",
 "h": "Un tono grave y continuo (67 a 254 Hz, aquí 88,5 Hz) añadido a la voz.",
-"l": "Visto en el sonido del receptor FM: una raya fija abajo del todo, bajo la voz; abre el silenciador de repetidores y walkies (ficha 8)."
+"l": "Visto en el sonido del receptor FM: una raya fija abajo del todo, bajo la voz; abre el silenciador de repetidores y walkies (ficha 10)."
 },
 "dtmf": {
 "sh": "2 tonos",
 "t": "DTMF: dos tonos por tecla",
 "h": "Cada tecla envía un tono grave (697 a 941 Hz) y uno agudo (1209 a 1633 Hz) a la vez.",
-"l": "Pares de puntos alineados en ocho columnas fijas; el «bip-bip» de los números de teléfono y de los mandos de repetidores (ficha 8).",
+"l": "Pares de puntos alineados en ocho columnas fijas; el «bip-bip» de los números de teléfono y de los mandos de repetidores (ficha 10).",
 "r": [
 [
 "Secuencia",
@@ -313,7 +313,7 @@
 "sh": "5 tonos",
 "t": "Selcall CCIR: tonos en secuencia",
 "h": "Cinco tonos de 100 ms uno tras otro, uno por cifra.",
-"l": "Una pequeña escalera de puntos, repetida; un «tululululu» rápido para llamar a una radio concreta (ficha 28).",
+"l": "Una pequeña escalera de puntos, repetida; un «tululululu» rápido para llamar a una radio concreta (ficha 33).",
 "r": [
 [
 "Secuencia",
@@ -325,50 +325,50 @@
 "sh": "buscas",
 "t": "POCSAG y FLEX: buscapersonas",
 "h": "Una FSK a ±4,5 kHz; un preámbulo 1010… y luego los datos (escala reducida).",
-"l": "Dos rayas nítidas durante el preámbulo y luego una banda llena; un «brrrrt» estridente. 466,075 MHz, DAPNET 439,9875 MHz (ficha 37).",
+"l": "Dos rayas nítidas durante el preámbulo y luego una banda llena; un «brrrrt» estridente. 466,075 MHz, DAPNET 439,9875 MHz (ficha 45).",
 "n": "escala reducida"
 },
 "ale": {
 "sh": "8 tonos",
 "t": "ALE: llamada automática en onda corta",
 "h": "Ocho tonos de 750 a 2500 Hz, 125 baudios, en ráfagas.",
-"l": "Un bloque de unos 2 kHz hecho de puntitos, de uno a dos segundos, a veces en varias frecuencias vecinas; un gorjeo agudo (ficha 28 bis)."
+"l": "Un bloque de unos 2 kHz hecho de puntitos, de uno a dos segundos, a veces en varias frecuencias vecinas; un gorjeo agudo (ficha 34)."
 },
 "rs41": {
 "nm": "Radiosonda RS41",
 "t": "Radiosonda RS41: GFSK continua",
 "h": "Una FSK suavizada a 4800 baudios, sin parar; la frecuencia deriva despacio cuando la sonda sube y se enfría.",
-"l": "Una banda de unos 10 kHz que se desliza en diagonal durante todo el vuelo, entre 400 y 406 MHz (ficha 18)."
+"l": "Una banda de unos 10 kHz que se desliza en diagonal durante todo el vuelo, entre 400 y 406 MHz (ficha 21)."
 },
 "ook": {
 "nm": "Sensores 433",
 "t": "Sensores 433 MHz: OOK",
 "h": "La portadora se enciende y se apaga en impulsos cortos o largos (todo o nada); el mensaje se repite tres veces.",
-"l": "Ráfagas de puntitos, a menudo por triplicado, en 433,92 MHz: estaciones meteorológicas, sondas de temperatura, mandos a distancia (ficha 19)."
+"l": "Ráfagas de puntitos, a menudo por triplicado, en 433,92 MHz: estaciones meteorológicas, sondas de temperatura, mandos a distancia (ficha 22)."
 },
 "fhss": {
 "t": "Bluetooth: saltos de frecuencia (FHSS)",
 "h": "La frecuencia cambia 1600 veces por segundo entre 79 canales (escala reducida).",
-"l": "Rayitas esparcidas por todas partes en 80 MHz de ancho, nunca en el mismo sitio, hacia 2,4 GHz (ficha 22).",
+"l": "Rayitas esparcidas por todas partes en 80 MHz de ancho, nunca en el mismo sitio, hacia 2,4 GHz (ficha 25).",
 "n": "escala reducida"
 },
 "wspr": {
 "t": "WSPR: balizas de propagación",
 "h": "Cuatro tonos separados 1,46 Hz, 0,68 s por símbolo, durante 110,6 s.",
-"l": "Una raya muy fina de unos 6 Hz que dura casi dos minutos, cada dos minutos pares: hay que ampliar mucho (ficha 26).",
+"l": "Una raya muy fina de unos 6 Hz que dura casi dos minutos, cada dos minutos pares: hay que ampliar mucho (ficha 29).",
 "n": "extracto de 24 s (una emisión dura 110,6 s)"
 },
 "qrss": {
 "t": "QRSS: Morse muy lento",
 "h": "Una portadora encendida y apagada, con puntos de 3 a 10 s, a menudo en dos frecuencias vecinas (DFCW).",
-"l": "Rayas de pocos Hz de ancho que se leen en una pantalla de diez minutos; inaudible al oído (ficha 26 bis).",
+"l": "Rayas de pocos Hz de ancho que se leen en una pantalla de diez minutos; inaudible al oído (ficha 30).",
 "n": "acelerado: punto de 0,6 s en lugar de 3 a 10 s"
 },
 "texte": {
 "nm": "Texto en la cascada",
 "t": "Texto en la cascada",
 "h": "Cada línea de una imagen se convierte en un grupo de tonos: el sonido parece ruido.",
-"l": "El texto o el dibujo aparece directamente en la pantalla del SDR (ficha 33).",
+"l": "El texto o el dibujo aparece directamente en la pantalla del SDR (ficha 40).",
 "r": [
 [
 "Nota",
@@ -379,7 +379,7 @@
 "vara": {
 "t": "Datos HF modernos: VARA, Pactor, ARDOP",
 "h": "Largas ráfagas llenas (OFDM o PSK) y, entre ellas, respuestas cortas de la otra estación.",
-"l": "Un rectángulo de unos 2,4 kHz que se para y vuelve a empezar, con un pequeño acuse de recibo en medio; un siseo entrecortado (ficha 26)."
+"l": "Un rectángulo de unos 2,4 kHz que se para y vuelve a empezar, con un pequeño acuse de recibo en medio; un siseo entrecortado (ficha 29)."
 },
 "chirp": {
 "nm": "Sondeador ionosférico",
@@ -398,13 +398,13 @@
 "sh": "fuente",
 "t": "Interferencias de una fuente conmutada",
 "h": "Una señal cuadrada: su frecuencia y todos sus armónicos salen a la vez.",
-"l": "Un peine de rayas regulares que derivan juntas sobre un fondo de ruido: búscalo con NOISE FIND o con un receptor portátil (ficha K21b)."
+"l": "Un peine de rayas regulares que derivan juntas sobre un fondo de ruido: búscalo con NOISE FIND o con un receptor portátil (ficha K22)."
 },
 "mpx": {
 "nm": "FM estéreo y RDS",
 "t": "Radio FM estéreo y RDS",
 "h": "El sonido demodulado (multiplex) contiene la vía L+R, un piloto a 19 kHz, la vía L-R alrededor de 38 kHz y el RDS a 57 kHz.",
-"l": "Visto de 0 a 60 kHz tras la demodulación: un bloque grave, una raya fina a 19 kHz, un bloque más débil en el centro y el RDS arriba del todo (ficha 10).",
+"l": "Visto de 0 a 60 kHz tras la demodulación: un bloque grave, una raya fina a 19 kHz, un bloque más débil en el centro y el RDS arriba del todo (ficha 12).",
 "n": "escala ÷ 20; sonido estéreo",
 "r": [
 [
@@ -416,7 +416,7 @@
 "dcf77": {
 "t": "Señal horaria DCF77 (77,5 kHz)",
 "h": "Una portadora que baja al 15 % durante 0,1 s (bit 0) o 0,2 s (bit 1), al inicio de cada segundo.",
-"l": "Una raya fija con un corte negro cada segundo; el segundo 59 no lo tiene, para marcar el minuto (ficha 10).",
+"l": "Una raya fija con un corte negro cada segundo; el segundo 59 no lo tiene, para marcar el minuto (ficha 12).",
 "r": [
 [
 "Nota",
@@ -427,12 +427,12 @@
 "ofdm": {
 "t": "OFDM: decenas de subportadoras",
 "h": "Muchas portadoras muy juntas, cada una lenta: la suma parece ruido.",
-"l": "Un rectángulo plano de bordes nítidos, siempre presente: DRM en onda corta (10 kHz), DAB+ (1,5 MHz), TDT, wifi. Un soplido continuo al oído (fichas 10 y 22)."
+"l": "Un rectángulo plano de bordes nítidos, siempre presente: DRM en onda corta (10 kHz), DAB+ (1,5 MHz), TDT, wifi. Un soplido continuo al oído (fichas 12 y 25)."
 },
 "dsss": {
 "t": "Espectro ensanchado (DSSS): GPS, wifi 802.11b",
 "h": "Los datos se mezclan con un código muy rápido: la energía se reparte en un gran ancho.",
-"l": "Una joroba ancha, apenas por encima del ruido; el GPS está incluso por debajo del ruido y no se ve sin tratamiento (fichas 22 y 23)."
+"l": "Una joroba ancha, apenas por encima del ruido; el GPS está incluso por debajo del ruido y no se ve sin tratamiento (fichas 25 y 26)."
 },
 "hline": {
 "nm": "Línea del hidrógeno",
@@ -497,7 +497,7 @@
 "sh": "satélite",
 "t": "Baliza de satélite y efecto Doppler",
 "h": "Un satélite en órbita baja se acerca y luego se aleja: la frecuencia recibida baja durante el pase, unos ±3 kHz en 145 MHz y ±10 kHz en 435 MHz.",
-"l": "Una raya que baja en forma de S: despacio al principio, deprisa cuando el satélite pasa más cerca, y otra vez despacio (ficha 34).",
+"l": "Una raya que baja en forma de S: despacio al principio, deprisa cuando el satélite pasa más cerca, y otra vez despacio (ficha 41).",
 "n": "pase de 10 min reducido a 12 s"
 },
 "apt": {
@@ -505,7 +505,7 @@
 "sh": "137 MHz",
 "t": "Satélites NOAA: imágenes APT (histórico)",
 "h": "Una subportadora de 2400 Hz modulada en amplitud por la imagen, dos líneas por segundo, con un pulso de sincronía al inicio de cada línea. Se apagó en 2025; hoy los Meteor-M emiten en LRPT.",
-"l": "Una raya en 2400 Hz con bandas laterales que cambian con la imagen, y el famoso «tic-tac» dos veces por segundo (ficha 34)."
+"l": "Una raya en 2400 Hz con bandas laterales que cambian con la imagen, y el famoso «tic-tac» dos veces por segundo (ficha 41)."
 },
 "eme": {
 "nm": "Eco de la Luna",
@@ -535,7 +535,7 @@
 "sh": "π/4-DQPSK",
 "t": "TETRA: red digital profesional",
 "h": "Modulación de fase π/4-DQPSK a 18 000 símbolos por segundo, cuatro canales repartidos en el tiempo, en canales de 25 kHz.",
-"l": "Un bloque lleno de flancos redondeados, siempre presente cerca de un repetidor; un soplido ronco. Cifrado: no se puede escuchar (ficha 38).",
+"l": "Un bloque lleno de flancos redondeados, siempre presente cerca de un repetidor; un soplido ronco. Cifrado: no se puede escuchar (ficha 46).",
 "n": "escala reducida"
 },
 "ndb": {
@@ -543,14 +543,14 @@
 "sh": "190–535 kHz",
 "t": "NDB: radiofaro no direccional",
 "h": "Una portadora fija en onda larga, con un indicativo Morse de dos o tres letras enviado sobre un tono (a menudo 1020 Hz).",
-"l": "Una raya fija en el centro y, durante el indicativo, dos rayitas a cada lado. De unos 190 a 535 kHz, en BLU o CW (ficha 10)."
+"l": "Una raya fija en el centro y, durante el indicativo, dos rayitas a cada lado. De unos 190 a 535 kHz, en BLU o CW (ficha 12)."
 },
 "vor": {
 "nm": "VOR",
 "sh": "108–118 MHz",
 "t": "VOR: radiofaro omnidireccional",
 "h": "En AM: una señal de 30 Hz que depende de la dirección, una subportadora de 9960 Hz modulada en frecuencia a 30 Hz (la referencia) y el indicativo Morse en 1020 Hz.",
-"l": "En el sonido demodulado: un zumbido grave de 30 Hz, una raya ancha ondulante hacia 10 kHz y el indicativo de vez en cuando (ficha 15).",
+"l": "En el sonido demodulado: un zumbido grave de 30 Hz, una raya ancha ondulante hacia 10 kHz y el indicativo de vez en cuando (ficha 18).",
 "n": "sonido demodulado, escala ÷ 2"
 },
 "ils": {
@@ -558,14 +558,14 @@
 "sh": "90 + 150 Hz",
 "t": "ILS: guiado de aterrizaje (localizador)",
 "h": "En AM, dos tonos de 90 y 150 Hz; su relación indica al avión si está a la izquierda o a la derecha del eje. El indicativo Morse empieza por I.",
-"l": "En el sonido demodulado: dos rayas muy graves en 90 y 150 Hz y el indicativo en 1020 Hz. Entre 108,1 y 112 MHz; la senda de planeo está hacia 330 MHz (ficha 15)."
+"l": "En el sonido demodulado: dos rayas muy graves en 90 y 150 Hz y el indicativo en 1020 Hz. Entre 108,1 y 112 MHz; la senda de planeo está hacia 330 MHz (ficha 18)."
 },
 "m10": {
 "nm": "Sondas M10 / M20",
 "sh": "Meteomodem",
 "t": "Radiosondas M10 y M20 (Meteomodem)",
 "h": "Una trama por segundo en FSK rápida (unos 9600 baudios): más ancha que la RS41. Las lanza en Francia Météo-France.",
-"l": "Una ráfaga ancha cada segundo que deriva despacio durante el vuelo; entre 400 y 406 MHz (ficha 18)."
+"l": "Una ráfaga ancha cada segundo que deriva despacio durante el vuelo; entre 400 y 406 MHz (ficha 21)."
 },
 "tpms": {
 "nm": "Neumáticos (TPMS)",
@@ -579,21 +579,21 @@
 "sh": "162 kHz",
 "t": "Señal horaria ALS162 (Allouis, 162 kHz)",
 "h": "La portadora de la antigua onda larga de France Inter; la hora se codifica con pequeñas modulaciones de fase, inaudibles.",
-"l": "Una raya fija, muy fuerte en Francia, apenas ensanchada al inicio de cada segundo; hace falta un decodificador para leer la hora (ficha 10)."
+"l": "Una raya fija, muy fuerte en Francia, apenas ensanchada al inicio de cada segundo; hace falta un decodificador para leer la hora (ficha 12)."
 },
 "wwv": {
 "nm": "WWV",
 "sh": "2,5–20 MHz",
 "t": "Señal horaria WWV (Colorado)",
 "h": "En AM: un «tic» de 5 ms a 1000 Hz cada segundo, un tono de 500 o 600 Hz, un código horario en 100 Hz y una voz que anuncia la hora UTC.",
-"l": "En el sonido demodulado: una raya en 500 Hz cortada cada segundo, el tic en 1000 Hz y el código abajo del todo en 100 Hz (ficha 10)."
+"l": "En el sonido demodulado: una raya en 500 Hz cortada cada segundo, el tic en 1000 Hz y el código abajo del todo en 100 Hz (ficha 12)."
 },
 "msf": {
 "nm": "MSF",
 "sh": "60 kHz",
 "t": "Señal horaria MSF (Anthorn, 60 kHz)",
 "h": "La portadora se corta al inicio de cada segundo durante 0,1, 0,2 o 0,3 s según los bits, y 0,5 s para marcar el minuto.",
-"l": "Una raya fija con huecos negros completos cada segundo, más largos que con DCF77 (ficha 10)."
+"l": "Una raya fija con huecos negros completos cada segundo, más largos que con DCF77 (ficha 12)."
 },
 "type2": {
 "nm": "Sol tipo II",
@@ -637,7 +637,7 @@
 "sh": "9600 bd",
 "t": "Telemetría de CubeSat",
 "h": "Los pequeños satélites envían con regularidad sus medidas (batería, temperaturas) en FSK o GMSK a 1200 o 9600 baudios, hacia 435–438 MHz.",
-"l": "Ráfagas regulares que bajan un poco cada vez, por efecto Doppler, durante el pase (ficha 34).",
+"l": "Ráfagas regulares que bajan un poco cada vez, por efecto Doppler, durante el pase (ficha 41).",
 "n": "escala reducida, pase acelerado"
 },
 "issfm": {
@@ -645,7 +645,7 @@
 "sh": "145,800 MHz",
 "t": "Estación espacial (ISS): voz en FM",
 "h": "Los astronautas hablan con colegios y radioaficionados en FM en 145,800 MHz. La estación va a 28 000 km/h: durante el pase, la frecuencia recibida se desliza de unos +3,5 kHz a −3,5 kHz.",
-"l": "Una banda de voz FM que se desplaza despacio de derecha a izquierda durante los 10 minutos del pase (ficha 34).",
+"l": "Una banda de voz FM que se desplaza despacio de derecha a izquierda durante los 10 minutos del pase (ficha 41).",
 "n": "pase de 10 min reducido a 10 s"
 },
 "buzzer": {
@@ -684,21 +684,21 @@
 "sh": "8-PSK",
 "t": "Módem militar STANAG 4285",
 "h": "Modulación de fase 8-PSK a 2400 baudios sobre una portadora de 1800 Hz, con una secuencia de prueba cada 107 ms para seguir el canal.",
-"l": "Un bloque lleno de unos 3 kHz; al oído, un soplido con un zumbido regular (ficha 35 bis)."
+"l": "Un bloque lleno de unos 3 kHz; al oído, un soplido con un zumbido regular (ficha 43)."
 },
 "link11": {
 "nm": "Link-11",
 "sh": "16 tonos",
 "t": "Link-11: enlace de datos naval",
 "h": "Dieciséis tonos de 605 a 2915 Hz emitidos juntos, cada uno modulado en fase 75 veces por segundo.",
-"l": "Un peine de catorce rayas regulares de 935 a 2365 Hz, más dos rayas apartadas en 605 y 2915 Hz; al oído, un zumbido musical (ficha 35 bis)."
+"l": "Un peine de catorce rayas regulares de 935 a 2365 Hz, más dos rayas apartadas en 605 y 2915 Hz; al oído, un zumbido musical (ficha 43)."
 },
 "numbers": {
 "nm": "Estación de números",
 "sh": "voz",
 "t": "Estación de números",
 "h": "A hora fija, una pequeña melodía de llamada y luego una voz (a menudo sintética) que lee grupos de cinco cifras, en AM o BLU.",
-"l": "La melodía en notas sueltas y después grupos regulares de sílabas separados por silencios (ficha 35 bis).",
+"l": "La melodía en notas sueltas y después grupos regulares de sílabas separados por silencios (ficha 43).",
 "n": "voz imitada, sin cifras reales"
 },
 "rttydwd": {
@@ -706,7 +706,7 @@
 "sh": "50 Bd / 450 Hz",
 "t": "RTTY meteorológico del DWD (Alemania)",
 "h": "Como el RTTY de los radioaficionados, pero a 50 baudios con 450 Hz de separación: el servicio meteorológico alemán envía sus boletines y previsiones marinas en texto claro.",
-"l": "Dos rayas mucho más separadas y un ritmo algo más rápido. Entre boletines, la llamada «CQ CQ CQ DE DDK2 DDH7 DDK9» y luego RYRYRY. En 4583, 7646 y 10 100,8 kHz, también 147,3 kHz (ficha 27)."
+"l": "Dos rayas mucho más separadas y un ritmo algo más rápido. Entre boletines, la llamada «CQ CQ CQ DE DDK2 DDH7 DDK9» y luego RYRYRY. En 4583, 7646 y 10 100,8 kHz, también 147,3 kHz (ficha 32)."
 },
 "mfsk16": {
 "nm": "MFSK16",
@@ -727,7 +727,7 @@
 "sh": "DSC",
 "t": "LSD / DSC: llamada selectiva digital en el canal 70",
 "h": "Una ráfaga de medio segundo aproximadamente a 1200 baudios, con dos tonos de 1300 y 2100 Hz: lleva el número MMSI del barco, el tipo de llamada y, en caso de socorro, su posición.",
-"l": "Un «brrrt» breve y agudo en 156,525 MHz, que empieza con una serie de bits alternos. En onda media y corta, la LSD es FSK a 100 baudios, como el NAVTEX (ficha 17)."
+"l": "Un «brrrt» breve y agudo en 156,525 MHz, que empieza con una serie de bits alternos. En onda media y corta, la LSD es FSK a 100 baudios, como el NAVTEX (ficha 20)."
 },
 "selcal": {
 "nm": "SELCAL aviación",
@@ -741,28 +741,28 @@
 "sh": "134,4 bit/s",
 "t": "DCS: el subtono digital",
 "h": "En lugar de un tono continuo como el CTCSS, la radio envía bajo la voz una palabra de 23 bits repetida sin parar, a 134,4 bits por segundo. Al final, un tono de 134,4 Hz cierra el silenciador sin ruido.",
-"l": "Visto en el sonido del receptor FM: una banda irregular abajo del todo, por debajo de 300 Hz, y un zumbido sordo si el filtro de la radio lo deja pasar (ficha 8)."
+"l": "Visto en el sonido del receptor FM: una banda irregular abajo del todo, por debajo de 300 Hz, y un zumbido sordo si el filtro de la radio lo deja pasar (ficha 10)."
 },
 "t1750": {
 "nm": "Tono de 1750 Hz",
 "sh": "repetidor",
 "t": "Tono de 1750 Hz: abrir un repetidor",
 "h": "Un tono breve de 1750 Hz (de 0,5 a 1 s) al inicio de la emisión abre todavía algunos repetidores de radioaficionados europeos; el repetidor suele responder con un pitido al soltar.",
-"l": "Una raya corta en 1750 Hz, luego la voz y después el pitido del repetidor (ficha 8)."
+"l": "Una raya corta en 1750 Hz, luego la voz y después el pitido del repetidor (ficha 10)."
 },
 "ncdxf": {
 "nm": "Balizas NCDXF",
 "sh": "14,100 MHz",
 "t": "Balizas NCDXF / IARU: probar la propagación",
 "h": "Dieciocho balizas en todo el mundo emiten por turnos, diez segundos cada una, en 14,100, 18,110, 21,150, 24,930 y 28,200 MHz: el indicativo en Morse y luego cuatro rayas de un segundo a 100 W, 10 W, 1 W y 0,1 W.",
-"l": "Un indicativo y cuatro rayas cada vez más débiles: si aún oyes la última, la propagación hacia esa baliza es excelente. Aquí 4U1UN (Nueva York) y luego VE8AT (Canadá) (ficha 26 bis)."
+"l": "Un indicativo y cuatro rayas cada vez más débiles: si aún oyes la última, la propagación hacia esa baliza es excelente. Aquí 4U1UN (Nueva York) y luego VE8AT (Canadá) (ficha 30)."
 },
 "lrpt": {
 "nm": "Meteor-M LRPT",
 "sh": "137,9 MHz",
 "t": "Satélites Meteor-M: imágenes LRPT",
 "h": "Los satélites meteorológicos rusos Meteor-M envían sus imágenes en digital: modulación de fase de cuatro estados (QPSK), 72 000 símbolos por segundo, unos 120 kHz de ancho.",
-"l": "Un bloque lleno de bordes redondeados que se desliza despacio durante el pase (efecto Doppler); al oído, un simple soplido. En 137,9 o 137,1 MHz, decodificado con SatDump (ficha 34).",
+"l": "Un bloque lleno de bordes redondeados que se desliza despacio durante el pase (efecto Doppler); al oído, un simple soplido. En 137,9 o 137,1 MHz, decodificado con SatDump (ficha 41).",
 "n": "escala reducida"
 },
 "quindar": {
@@ -822,7 +822,7 @@
 "sh": "2–30 MHz",
 "t": "PLC: Internet por los enchufes",
 "h": "Los adaptadores PLC envían los datos por los cables de la casa con cientos de portadoras entre 2 y 30 MHz (más arriba en los modelos recientes), una cada 24,4 kHz. Los cables radian como una antena.",
-"l": "Un peine de rayas regulares que parpadea por paquetes, con huecos en las bandas de radioaficionados (muescas previstas por la norma); al oído, un crepitar que sigue el tráfico de Internet (ficha 35 bis).",
+"l": "Un peine de rayas regulares que parpadea por paquetes, con huecos en las bandas de radioaficionados (muescas previstas por la norma); al oído, un crepitar que sigue el tráfico de Internet (ficha 43).",
 "n": "escala reducida"
 },
 "fence": {

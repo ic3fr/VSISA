@@ -13,7 +13,7 @@
 "dur": "{s} s from top to bottom",
 "avg": "average over the whole signal",
 "press": "Press Listen: the signal scrolls here",
-"count": "{n} signals, in the order of sheet 5 bis",
+"count": "{n} signals, in the order of sheet 6",
 "myst": "Mystery mode",
 "mystTags": "Listen and watch, then pick the right answer",
 "quizH": "Which signal is this?",
@@ -28,7 +28,7 @@
 "book": "Book: sheet {r}",
 "lang": "Language",
 "signals": "Signals",
-"f1": "Signals simulated in the page (12,000 samples per second): those of sheet 5 bis of the OpenBookRadio book, other signals from the book, and bonuses. For radio signals (AM, FM, AIS, LoRa…), you see the simulated intermediate frequency, as on an SDR screen; some are scaled down or sped up, as stated. For AM, SSB, FM, FM stereo, ISS and fading, you hear the demodulated sound, as from the receiver's loudspeaker, while the screen shows the radio signal; the voice is a synthetic voice that says no real words.",
+"f1": "Signals simulated in the page (12,000 samples per second): those of sheet 6 of the OpenBookRadio book, other signals from the book, and bonuses. For radio signals (AM, FM, AIS, LoRa…), you see the simulated intermediate frequency, as on an SDR screen; some are scaled down or sped up, as stated. For AM, SSB, FM, FM stereo, ISS and fading, you hear the demodulated sound, as from the receiver's loudspeaker, while the screen shows the radio signal; the voice is a synthetic voice that says no real words.",
 "f2": "Time runs downwards in the waterfall and the footprint. CC BY-NC-SA 4.0 license, free, not for sale.",
 "night": "Night mode",
 "day": "Day mode",
@@ -62,7 +62,7 @@
 "sh": "broadcast",
 "t": "AM: amplitude modulation",
 "h": "The strength of the carrier follows the sound: the curve \"swells\" and \"shrinks\".",
-"l": "A fixed line in the centre (the carrier), with two identical sidebands on each side. About 6 to 9 kHz wide. Shortwave and medium-wave broadcasting, aviation (sheets 10 and 12).",
+"l": "A fixed line in the centre (the carrier), with two identical sidebands on each side. About 6 to 9 kHz wide. Shortwave and medium-wave broadcasting, aviation (sheets 12 and 14).",
 "r": [
 [
 "Listening",
@@ -74,13 +74,13 @@
 "nm": "SSB",
 "t": "SSB: single sideband",
 "h": "Only one sideband remains, without carrier: nothing when nobody speaks.",
-"l": "No central line, a single band about 2.7 kHz wide that only lives while someone talks. USB above 10 MHz, LSB below (radio amateurs). Badly tuned, the voice sounds like a \"duck\" (sheets 9 and 26)."
+"l": "No central line, a single band about 2.7 kHz wide that only lives while someone talks. USB above 10 MHz, LSB below (radio amateurs). Badly tuned, the voice sounds like a \"duck\" (sheets 11 and 29)."
 },
 "fm": {
 "sh": "voice",
 "t": "FM: frequency modulation",
 "h": "The amplitude stays fixed; the oscillations get closer or wider apart with the sound.",
-"l": "The signal dances around its frequency, wider when the sound is loud: 12.5 kHz per channel in narrow FM (walkie-talkies, repeaters), 200 kHz for FM broadcasting (sheets 2 and 11).",
+"l": "The signal dances around its frequency, wider when the sound is loud: 12.5 kHz per channel in narrow FM (walkie-talkies, repeaters), 200 kHz for FM broadcasting (sheets 2 and 13).",
 "r": [
 [
 "Listening",
@@ -91,7 +91,7 @@
 "cw": {
 "t": "CW: Morse",
 "h": "The carrier is switched on and off: dashes and dots.",
-"l": "A very thin line that breaks to the rhythm of Morse; a beep to the ear. Here \"CQ\" (sheet 39).",
+"l": "A very thin line that breaks to the rhythm of Morse; a beep to the ear. Here \"CQ\" (sheet 48).",
 "r": [
 [
 "Speed",
@@ -110,7 +110,7 @@
 "rtty": {
 "t": "FSK / RTTY: two frequencies",
 "h": "The frequency jumps between two values, one for 0, one for 1.",
-"l": "Two parallel lines: 170 Hz apart for radio amateurs (45.45 baud), 450 or 850 Hz for weather bulletins. A steady \"tidilidi\" (sheet 27).",
+"l": "Two parallel lines: 170 Hz apart for radio amateurs (45.45 baud), 450 or 850 Hz for weather bulletins. A steady \"tidilidi\" (sheet 32).",
 "r": [
 [
 "Code",
@@ -129,7 +129,7 @@
 "afsk": {
 "t": "AFSK 1200 baud: APRS and packet",
 "h": "Two audio tones, 1200 and 2200 Hz, sent into an FM transmitter.",
-"l": "Seen after the FM receiver (loudspeaker sound): a band from 1200 to 2200 Hz, in short bursts. By ear, a one-second \"grrrt\" (sheets 29 and 30).",
+"l": "Seen after the FM receiver (loudspeaker sound): a band from 1200 to 2200 Hz, in short bursts. By ear, a one-second \"grrrt\" (sheets 35 and 36).",
 "r": [
 [
 "Frequency",
@@ -148,7 +148,7 @@
 "psk31": {
 "t": "PSK31: phase modulation",
 "h": "The frequency does not move, the phase reverses; the amplitude dips at each reversal.",
-"l": "A very thin line about 60 Hz wide, slightly \"braided\". Dozens of stations fit in 3 kHz (sheet 26).",
+"l": "A very thin line about 60 Hz wide, slightly \"braided\". Dozens of stations fit in 3 kHz (sheet 29).",
 "r": [
 [
 "Code",
@@ -167,7 +167,7 @@
 "ft8": {
 "t": "MFSK / FT8: eight tones",
 "h": "The frequency goes up and down in steps of 6.25 Hz, 0.16 s per step.",
-"l": "Bands about 50 Hz wide lasting 12.6 s and coming back every 15 s, synchronised to the clock: several stations at once within 3 kHz, for example on 7.074 MHz (sheet 26).",
+"l": "Bands about 50 Hz wide lasting 12.6 s and coming back every 15 s, synchronised to the clock: several stations at once within 3 kHz, for example on 7.074 MHz (sheet 29).",
 "r": [
 [
 "Frame",
@@ -186,37 +186,37 @@
 "ft4": {
 "t": "FT4: the contest FT8",
 "h": "Four tones spaced 20.8 Hz, 20.8 baud: 105 symbols in 5 s, in 7.5 s time slots.",
-"l": "Bands about 90 Hz wide, shorter and wider than FT8, coming back every 7.5 s. 14,080, 7,047.5 kHz (sheet 26)."
+"l": "Bands about 90 Hz wide, shorter and wider than FT8, coming back every 7.5 s. 14,080, 7,047.5 kHz (sheet 29)."
 },
 "olivia": {
 "t": "Olivia 8/250: eight tones",
 "h": "Eight tones spaced 31.25 Hz, one at a time, jumping at random; Walsh coding and interleaving.",
-"l": "A block of scattered dots over 250 Hz; decodes far below the noise. A small random melody to the ear (sheet 26)."
+"l": "A block of scattered dots over 250 Hz; decodes far below the noise. A small random melody to the ear (sheet 29)."
 },
 "hell": {
 "t": "Feld Hell: writing with a carrier",
 "h": "The carrier is switched on and off dot by dot: each letter is made of columns of 14 dots, scanned from bottom to top (245 dots per second).",
-"l": "On the waterfall, a chopped line; the software screen (fldigi) redraws the letters. A soft crackle to the ear (sheet 26)."
+"l": "On the waterfall, a chopped line; the software screen (fldigi) redraws the letters. A soft crackle to the ear (sheet 29)."
 },
 "4fsk": {
 "t": "4FSK: DMR, C4FM (Fusion), NXDN, dPMR",
 "h": "Four frequency levels: each symbol carries two bits.",
-"l": "A rectangular block 6 to 12.5 kHz wide, full like noise, often in bursts (DMR splits the channel into two time slots). A hoarse \"frrr\" to the ear (sheet 38)."
+"l": "A rectangular block 6 to 12.5 kHz wide, full like noise, often in bursts (DMR splits the channel into two time slots). A hoarse \"frrr\" to the ear (sheet 46)."
 },
 "mt63": {
 "t": "MT63: emergency messages (NBEMS)",
 "h": "64 tones at once, each slowly modulated, with lots of redundancy.",
-"l": "A flat block of 1 or 2 kHz centred on 1500 Hz, with sharp edges; a steady hiss. Even works through a microphone held to a loudspeaker (sheet 26 ter)."
+"l": "A flat block of 1 or 2 kHz centred on 1500 Hz, with sharp edges; a steady hiss. Even works through a microphone held to a loudspeaker (sheet 31)."
 },
 "lora": {
 "t": "LoRa: frequency ramps (chirps)",
 "h": "The frequency sweeps the whole width, then starts again from the bottom: the position of the jump carries the data.",
-"l": "Parallel diagonals, easy to recognise: Meshtastic and MeshCore on 869.525 MHz or 433 MHz, LoRaWAN sensors (sheets 11, 20 and 21)."
+"l": "Parallel diagonals, easy to recognise: Meshtastic and MeshCore on 869.525 MHz or 433 MHz, LoRaWAN sensors (sheets 13, 23 and 24)."
 },
 "sstv": {
 "t": "SSTV: pictures in audio",
 "h": "A sync pulse at 1200 Hz, then the frequency follows the brightness of the line, from 1500 (black) to 2300 Hz (white).",
-"l": "Regular sync lines and a cloud that changes with the picture; a \"chirping\" sound for one to two minutes. 14.230 MHz, ISS on 145.800 MHz (sheet 31).",
+"l": "Regular sync lines and a cloud that changes with the picture; a \"chirping\" sound for one to two minutes. 14.230 MHz, ISS on 145.800 MHz (sheet 37).",
 "r": [
 [
 "Frame",
@@ -232,7 +232,7 @@
 "nm": "Weather fax",
 "t": "Weather fax: 1500 Hz black, 2300 Hz white",
 "h": "The frequency moves continuously from black to white, 120 lines per minute.",
-"l": "Two fixed bands at 1500 and 2300 Hz (800 Hz apart), a steady \"tick-tock\". Published frequencies are carrier frequencies: listen in USB 1.9 kHz lower (sheet 32).",
+"l": "Two fixed bands at 1500 and 2300 Hz (800 Hz apart), a steady \"tick-tock\". Published frequencies are carrier frequencies: listen in USB 1.9 kHz lower (sheet 38).",
 "r": [
 [
 "Frame",
@@ -248,35 +248,35 @@
 "nm": "ELT siren",
 "t": "ELT / PLB siren on 121.5 MHz",
 "h": "An AM signal whose tone falls from 1600 to 300 Hz, two to four times per second.",
-"l": "A fixed carrier and sidebands sliding like a fan: the \"woo-woo\" of distress beacons, also on 121.375 MHz for exercises (sheets 24 and 25)."
+"l": "A fixed carrier and sidebands sliding like a fan: the \"woo-woo\" of distress beacons, also on 121.375 MHz for exercises (sheets 27 and 28)."
 },
 "406": {
 "nm": "406 beacon",
 "t": "406 MHz beacon: BPSK burst",
 "h": "Half a second of transmission: 160 ms of pure carrier, then the phase swings by ±1.1 radian at 400 bit/s.",
-"l": "A short little line coming back every 50 s, between 406.0 and 406.1 MHz; nothing useful to hear, a decoder is needed (EPIRB 406, sheet 25)."
+"l": "A short little line coming back every 50 s, between 406.0 and 406.1 MHz; nothing useful to hear, a decoder is needed (EPIRB 406, sheet 28)."
 },
 "adsb": {
 "t": "ADS-B / Mode S (1090 MHz): pulses",
 "h": "0.5 µs pulses whose position carries the bits (PPM); here the time scale is greatly slowed down.",
-"l": "Very short horizontal lines across the whole width, hundreds per second near an airport; an SDR dongle is needed (sheet 13).",
+"l": "Very short horizontal lines across the whole width, hundreds per second near an airport; an SDR dongle is needed (sheet 15).",
 "n": "time scale greatly slowed down"
 },
 "acars": {
 "t": "ACARS: AM and MSK data",
 "h": "An AM signal carrying two tones, 1200 and 2400 Hz, at 2400 bit/s.",
-"l": "Half-second bursts with carrier and sidebands, on 131.525, 131.725 or 131.825 MHz in Europe: a \"brrrt\" to the ear (sheet 14)."
+"l": "Half-second bursts with carrier and sidebands, on 131.525, 131.725 or 131.825 MHz in Europe: a \"brrrt\" to the ear (sheet 16)."
 },
 "ais": {
 "t": "AIS: GMSK 9600 baud on two channels",
 "h": "A smoothed FSK (GMSK) in 26 ms bursts, once on 161.975 MHz, once on 162.025 MHz (reduced scale).",
-"l": "Two columns of short little lines, 50 kHz apart, a regular clicking; the more ships, the denser it gets (sheet 16).",
+"l": "Two columns of short little lines, 50 kHz apart, a regular clicking; the more ships, the denser it gets (sheet 19).",
 "n": "reduced scale"
 },
 "navtex": {
 "t": "NAVTEX and DSC on medium and short waves: 170 Hz FSK",
 "h": "Like RTTY: two frequencies 170 Hz apart, but at 100 baud.",
-"l": "Two parallel lines, continuous during the bulletin, on 518 and 490 kHz (NAVTEX) or 2187.5 kHz (digital selective calling) (sheet 17).",
+"l": "Two parallel lines, continuous during the bulletin, on 518 and 490 kHz (NAVTEX) or 2187.5 kHz (digital selective calling) (sheet 20).",
 "r": [
 [
 "Code",
@@ -291,18 +291,18 @@
 "hfdl": {
 "t": "HFDL: aircraft on shortwave",
 "h": "A 1800 baud PSK on a 1440 Hz subcarrier.",
-"l": "Bursts about 2.4 kHz wide between 2.9 and 22 MHz; a modem hiss that comes and goes (sheet 14 bis)."
+"l": "Bursts about 2.4 kHz wide between 2.9 and 22 MHz; a modem hiss that comes and goes (sheet 17)."
 },
 "ctcss": {
 "t": "CTCSS: a sub-tone under the voice",
 "h": "A low continuous tone (67 to 254 Hz, here 88.5 Hz) added to the voice.",
-"l": "Seen in the FM receiver audio: a fixed line at the very bottom, under the voice; it opens the squelch of repeaters and walkie-talkies (sheet 8)."
+"l": "Seen in the FM receiver audio: a fixed line at the very bottom, under the voice; it opens the squelch of repeaters and walkie-talkies (sheet 10)."
 },
 "dtmf": {
 "sh": "2 tones",
 "t": "DTMF: two tones per key",
 "h": "Each keypad key sends a low tone (697 to 941 Hz) and a high one (1209 to 1633 Hz) at the same time.",
-"l": "Pairs of dots aligned on eight fixed columns; the \"beep-beep\" of phone numbers and repeater commands (sheet 8).",
+"l": "Pairs of dots aligned on eight fixed columns; the \"beep-beep\" of phone numbers and repeater commands (sheet 10).",
 "r": [
 [
 "Sequence",
@@ -314,7 +314,7 @@
 "sh": "5 tones",
 "t": "CCIR Selcall: tones in sequence",
 "h": "Five 100 ms tones one after the other, one per digit.",
-"l": "A small staircase of dots, repeated; a quick \"tululululu\" to call one specific radio (sheet 28).",
+"l": "A small staircase of dots, repeated; a quick \"tululululu\" to call one specific radio (sheet 33).",
 "r": [
 [
 "Sequence",
@@ -326,50 +326,50 @@
 "sh": "pagers",
 "t": "POCSAG and FLEX: pagers",
 "h": "An FSK at ±4.5 kHz; a 1010… preamble then the data (reduced scale).",
-"l": "Two clean lines during the preamble, then a full band; a shrill \"brrrrt\". 466.075 MHz, DAPNET 439.9875 MHz (sheet 37).",
+"l": "Two clean lines during the preamble, then a full band; a shrill \"brrrrt\". 466.075 MHz, DAPNET 439.9875 MHz (sheet 45).",
 "n": "reduced scale"
 },
 "ale": {
 "sh": "8 tones",
 "t": "ALE: automatic link establishment on shortwave",
 "h": "Eight tones from 750 to 2500 Hz, 125 baud, in bursts.",
-"l": "A block about 2 kHz wide made of small dots, one to two seconds, sometimes on several nearby frequencies; a high-pitched twitter (sheet 28 bis)."
+"l": "A block about 2 kHz wide made of small dots, one to two seconds, sometimes on several nearby frequencies; a high-pitched twitter (sheet 34)."
 },
 "rs41": {
 "nm": "RS41 radiosonde",
 "t": "RS41 radiosonde: continuous GFSK",
 "h": "A smoothed FSK at 4800 baud, non-stop; the frequency drifts slowly as the sonde rises and cools down.",
-"l": "A band about 10 kHz wide that slides at an angle during the whole flight, between 400 and 406 MHz (sheet 18)."
+"l": "A band about 10 kHz wide that slides at an angle during the whole flight, between 400 and 406 MHz (sheet 21)."
 },
 "ook": {
 "nm": "433 sensors",
 "t": "433 MHz sensors: OOK",
 "h": "The carrier switches on and off in short or long pulses (on-off keying); the message is repeated three times.",
-"l": "Bursts of small dots, often in threes, on 433.92 MHz: weather stations, temperature probes, remote controls (sheet 19)."
+"l": "Bursts of small dots, often in threes, on 433.92 MHz: weather stations, temperature probes, remote controls (sheet 22)."
 },
 "fhss": {
 "t": "Bluetooth: frequency hopping (FHSS)",
 "h": "The frequency changes 1600 times per second among 79 channels (reduced scale).",
-"l": "Small lines scattered everywhere over 80 MHz, never in the same place, around 2.4 GHz (sheet 22).",
+"l": "Small lines scattered everywhere over 80 MHz, never in the same place, around 2.4 GHz (sheet 25).",
 "n": "reduced scale"
 },
 "wspr": {
 "t": "WSPR: propagation beacons",
 "h": "Four tones spaced 1.46 Hz, 0.68 s per symbol, for 110.6 s.",
-"l": "A very thin line about 6 Hz wide lasting almost two minutes, every even two minutes: you have to zoom in a lot (sheet 26).",
+"l": "A very thin line about 6 Hz wide lasting almost two minutes, every even two minutes: you have to zoom in a lot (sheet 29).",
 "n": "24 s excerpt (a transmission lasts 110.6 s)"
 },
 "qrss": {
 "t": "QRSS: very slow Morse",
 "h": "A carrier switched on and off, with dots of 3 to 10 s, often on two nearby frequencies (DFCW).",
-"l": "Lines a few Hz wide, read on a ten-minute screen; inaudible to the ear (sheet 26 bis).",
+"l": "Lines a few Hz wide, read on a ten-minute screen; inaudible to the ear (sheet 30).",
 "n": "sped up: 0.6 s dot instead of 3 to 10 s"
 },
 "texte": {
 "nm": "Text in the waterfall",
 "t": "Text in the waterfall",
 "h": "Each line of a picture becomes a group of tones: the sound is like noise.",
-"l": "The text or drawing appears directly on the SDR screen (sheet 33).",
+"l": "The text or drawing appears directly on the SDR screen (sheet 40).",
 "r": [
 [
 "Note",
@@ -380,7 +380,7 @@
 "vara": {
 "t": "Modern HF data: VARA, Pactor, ARDOP",
 "h": "Long full bursts (OFDM or PSK) and, in between, short replies from the other station.",
-"l": "A rectangle about 2.4 kHz wide that stops and starts again, with a small acknowledgement in between; a chopped hiss (sheet 26)."
+"l": "A rectangle about 2.4 kHz wide that stops and starts again, with a small acknowledgement in between; a chopped hiss (sheet 29)."
 },
 "chirp": {
 "nm": "Ionospheric sounder",
@@ -399,13 +399,13 @@
 "sh": "power supply",
 "t": "Interference from a switching power supply",
 "h": "A square wave: its frequency and all its harmonics come out at the same time.",
-"l": "A comb of regular lines drifting together, on a noise background: look for it with NOISE FIND or a portable receiver (sheet K21b)."
+"l": "A comb of regular lines drifting together, on a noise background: look for it with NOISE FIND or a portable receiver (sheet K22)."
 },
 "mpx": {
 "nm": "FM stereo and RDS",
 "t": "FM stereo radio and RDS",
 "h": "The demodulated sound (multiplex) contains the L+R channel, a 19 kHz pilot, the L-R channel around 38 kHz and RDS at 57 kHz.",
-"l": "Seen from 0 to 60 kHz after demodulation: a low block, a thin line at 19 kHz, a weaker block in the middle and RDS at the very top (sheet 10).",
+"l": "Seen from 0 to 60 kHz after demodulation: a low block, a thin line at 19 kHz, a weaker block in the middle and RDS at the very top (sheet 12).",
 "n": "scale ÷ 20; stereo sound",
 "r": [
 [
@@ -417,7 +417,7 @@
 "dcf77": {
 "t": "DCF77 time signal (77.5 kHz)",
 "h": "A carrier dropping to 15 % for 0.1 s (bit 0) or 0.2 s (bit 1), at the start of each second.",
-"l": "A fixed line with a black gap every second; the 59th second has none, to mark the minute (sheet 10).",
+"l": "A fixed line with a black gap every second; the 59th second has none, to mark the minute (sheet 12).",
 "r": [
 [
 "Note",
@@ -428,12 +428,12 @@
 "ofdm": {
 "t": "OFDM: dozens of subcarriers",
 "h": "Many tightly packed carriers, each slow: the sum looks like noise.",
-"l": "A flat rectangle with sharp edges, always there: DRM on shortwave (10 kHz), DAB+ (1.5 MHz), DVB-T, Wi-Fi. A continuous hiss to the ear (sheets 10 and 22)."
+"l": "A flat rectangle with sharp edges, always there: DRM on shortwave (10 kHz), DAB+ (1.5 MHz), DVB-T, Wi-Fi. A continuous hiss to the ear (sheets 12 and 25)."
 },
 "dsss": {
 "t": "Spread spectrum (DSSS): GPS, Wi-Fi 802.11b",
 "h": "The data are mixed with a very fast code: the energy is spread over a wide band.",
-"l": "A wide hump, barely above the noise; GPS is even below the noise and cannot be seen without processing (sheets 22 and 23)."
+"l": "A wide hump, barely above the noise; GPS is even below the noise and cannot be seen without processing (sheets 25 and 26)."
 },
 "hline": {
 "nm": "Hydrogen line",
@@ -498,7 +498,7 @@
 "sh": "satellite",
 "t": "Satellite beacon and Doppler effect",
 "h": "A low-orbit satellite comes closer then moves away: the received frequency falls during the pass, by about ±3 kHz at 145 MHz and ±10 kHz at 435 MHz.",
-"l": "A line falling in an S shape: slowly at first, fast when the satellite is closest, then slowly again (sheet 34).",
+"l": "A line falling in an S shape: slowly at first, fast when the satellite is closest, then slowly again (sheet 41).",
 "n": "10 min pass squeezed into 12 s"
 },
 "apt": {
@@ -506,7 +506,7 @@
 "sh": "137 MHz",
 "t": "NOAA satellites: APT images (historical)",
 "h": "A 2400 Hz subcarrier amplitude-modulated by the picture, two lines per second, with a sync pulse at the start of each line. Stopped in 2025; Meteor-M satellites now transmit LRPT.",
-"l": "A line at 2400 Hz with sidebands that change with the picture, and the famous \"tick-tock\" twice a second (sheet 34)."
+"l": "A line at 2400 Hz with sidebands that change with the picture, and the famous \"tick-tock\" twice a second (sheet 41)."
 },
 "eme": {
 "nm": "Moon echo",
@@ -536,7 +536,7 @@
 "sh": "π/4-DQPSK",
 "t": "TETRA: professional digital network",
 "h": "π/4-DQPSK phase modulation at 18,000 symbols per second, four time-shared channels, in 25 kHz channels.",
-"l": "A full block with rounded edges, always there near a base station; a hoarse hiss. Encrypted: you cannot listen to it (sheet 38).",
+"l": "A full block with rounded edges, always there near a base station; a hoarse hiss. Encrypted: you cannot listen to it (sheet 46).",
 "n": "reduced scale"
 },
 "ndb": {
@@ -544,14 +544,14 @@
 "sh": "190–535 kHz",
 "t": "NDB: non-directional beacon",
 "h": "A fixed carrier on long wave, with a two- or three-letter Morse identifier sent on a tone (often 1020 Hz).",
-"l": "A fixed line in the centre and, during the identifier, two small lines on either side. Roughly 190 to 535 kHz, in SSB or CW (sheet 10)."
+"l": "A fixed line in the centre and, during the identifier, two small lines on either side. Roughly 190 to 535 kHz, in SSB or CW (sheet 12)."
 },
 "vor": {
 "nm": "VOR",
 "sh": "108–118 MHz",
 "t": "VOR: omnidirectional radio range",
 "h": "In AM: a 30 Hz signal that depends on direction, a 9960 Hz subcarrier frequency-modulated at 30 Hz (the reference), and the Morse identifier on 1020 Hz.",
-"l": "In the demodulated sound: a low 30 Hz hum, a wide wavy line near 10 kHz, and the identifier now and then (sheet 15).",
+"l": "In the demodulated sound: a low 30 Hz hum, a wide wavy line near 10 kHz, and the identifier now and then (sheet 18).",
 "n": "demodulated sound, scale ÷ 2"
 },
 "ils": {
@@ -559,14 +559,14 @@
 "sh": "90 + 150 Hz",
 "t": "ILS: landing guidance (localizer)",
 "h": "In AM, two tones of 90 and 150 Hz; their ratio tells the aircraft whether it is left or right of the centreline. The Morse identifier starts with I.",
-"l": "In the demodulated sound: two very low lines at 90 and 150 Hz, and the identifier on 1020 Hz. Between 108.1 and 112 MHz; the glide slope is around 330 MHz (sheet 15)."
+"l": "In the demodulated sound: two very low lines at 90 and 150 Hz, and the identifier on 1020 Hz. Between 108.1 and 112 MHz; the glide slope is around 330 MHz (sheet 18)."
 },
 "m10": {
 "nm": "M10 / M20 sondes",
 "sh": "Meteomodem",
 "t": "M10 and M20 radiosondes (Meteomodem)",
 "h": "One frame per second, in fast FSK (about 9600 baud): wider than the RS41. Launched in France by Météo-France.",
-"l": "A wide burst every second that drifts slowly during the flight; between 400 and 406 MHz (sheet 18)."
+"l": "A wide burst every second that drifts slowly during the flight; between 400 and 406 MHz (sheet 21)."
 },
 "tpms": {
 "nm": "Tyres (TPMS)",
@@ -580,21 +580,21 @@
 "sh": "162 kHz",
 "t": "ALS162 time signal (Allouis, 162 kHz)",
 "h": "The carrier of France Inter's former long-wave service; the time is coded by small, inaudible phase modulations.",
-"l": "A fixed line, very strong in France, barely widened at the start of each second; a decoder is needed to read the time (sheet 10)."
+"l": "A fixed line, very strong in France, barely widened at the start of each second; a decoder is needed to read the time (sheet 12)."
 },
 "wwv": {
 "nm": "WWV",
 "sh": "2.5–20 MHz",
 "t": "WWV time signal (Colorado)",
 "h": "In AM: a 5 ms \"tick\" at 1000 Hz every second, a 500 or 600 Hz tone, a time code on 100 Hz and a voice announcing UTC.",
-"l": "In the demodulated sound: a 500 Hz line broken every second, the 1000 Hz tick, and the code at the very bottom on 100 Hz (sheet 10)."
+"l": "In the demodulated sound: a 500 Hz line broken every second, the 1000 Hz tick, and the code at the very bottom on 100 Hz (sheet 12)."
 },
 "msf": {
 "nm": "MSF",
 "sh": "60 kHz",
 "t": "MSF time signal (Anthorn, 60 kHz)",
 "h": "The carrier is switched off at the start of each second for 0.1, 0.2 or 0.3 s depending on the bits, and for 0.5 s to mark the minute.",
-"l": "A fixed line with complete black gaps every second, longer than with DCF77 (sheet 10)."
+"l": "A fixed line with complete black gaps every second, longer than with DCF77 (sheet 12)."
 },
 "type2": {
 "nm": "Sun type II",
@@ -638,7 +638,7 @@
 "sh": "9600 bd",
 "t": "CubeSat telemetry",
 "h": "Small satellites regularly send their measurements (battery, temperatures) in FSK or GMSK at 1200 or 9600 baud, around 435–438 MHz.",
-"l": "Regular bursts sliding lower each time, by the Doppler effect, during the pass (sheet 34).",
+"l": "Regular bursts sliding lower each time, by the Doppler effect, during the pass (sheet 41).",
 "n": "reduced scale, pass sped up"
 },
 "issfm": {
@@ -646,7 +646,7 @@
 "sh": "145.800 MHz",
 "t": "Space station (ISS): FM voice",
 "h": "Astronauts talk with schools and radio amateurs in FM on 145.800 MHz. The station flies at 28,000 km/h: during the pass, the received frequency slides from about +3.5 kHz to −3.5 kHz.",
-"l": "A band of FM voice slowly moving from right to left during the 10-minute pass (sheet 34).",
+"l": "A band of FM voice slowly moving from right to left during the 10-minute pass (sheet 41).",
 "n": "10 min pass squeezed into 10 s"
 },
 "buzzer": {
@@ -685,21 +685,21 @@
 "sh": "8-PSK",
 "t": "STANAG 4285 military modem",
 "h": "8-PSK phase modulation at 2400 baud on an 1800 Hz carrier, with a probe sequence every 107 ms to track the channel.",
-"l": "A full block about 3 kHz wide; to the ear, a hiss with a regular buzz (sheet 35 bis)."
+"l": "A full block about 3 kHz wide; to the ear, a hiss with a regular buzz (sheet 43)."
 },
 "link11": {
 "nm": "Link-11",
 "sh": "16 tones",
 "t": "Link-11: naval data link",
 "h": "Sixteen tones from 605 to 2915 Hz sent together, each phase-modulated 75 times per second.",
-"l": "A comb of fourteen regular lines from 935 to 2365 Hz, plus two lines set apart at 605 and 2915 Hz; to the ear, a musical drone (sheet 35 bis)."
+"l": "A comb of fourteen regular lines from 935 to 2365 Hz, plus two lines set apart at 605 and 2915 Hz; to the ear, a musical drone (sheet 43)."
 },
 "numbers": {
 "nm": "Numbers station",
 "sh": "voice",
 "t": "Numbers station",
 "h": "At a fixed time, a short call melody, then a voice (often synthetic) reads groups of five digits, in AM or SSB.",
-"l": "The melody as separate notes, then regular groups of syllables separated by silences (sheet 35 bis).",
+"l": "The melody as separate notes, then regular groups of syllables separated by silences (sheet 43).",
 "n": "imitated voice, no real digits"
 },
 "rttydwd": {
@@ -707,7 +707,7 @@
 "sh": "50 Bd / 450 Hz",
 "t": "DWD weather RTTY (Germany)",
 "h": "Like amateur RTTY, but at 50 baud with a 450 Hz shift: the German weather service sends its bulletins and marine forecasts in plain text.",
-"l": "Two lines much further apart, and a slightly faster rhythm. Between bulletins, the call \"CQ CQ CQ DE DDK2 DDH7 DDK9\" then RYRYRY. On 4583, 7646 and 10,100.8 kHz, also 147.3 kHz (sheet 27)."
+"l": "Two lines much further apart, and a slightly faster rhythm. Between bulletins, the call \"CQ CQ CQ DE DDK2 DDH7 DDK9\" then RYRYRY. On 4583, 7646 and 10,100.8 kHz, also 147.3 kHz (sheet 32)."
 },
 "mfsk16": {
 "nm": "MFSK16",
@@ -728,7 +728,7 @@
 "sh": "DSC",
 "t": "DSC: digital selective calling on channel 70",
 "h": "A burst of about half a second at 1200 baud, on two tones of 1300 and 2100 Hz: it carries the ship's MMSI number, the type of call and, in distress, its position.",
-"l": "A short, high-pitched \"brrrt\" on 156.525 MHz that starts with a run of alternating bits. On medium and short waves, DSC is 100 baud FSK, like NAVTEX (sheet 17)."
+"l": "A short, high-pitched \"brrrt\" on 156.525 MHz that starts with a run of alternating bits. On medium and short waves, DSC is 100 baud FSK, like NAVTEX (sheet 20)."
 },
 "selcal": {
 "nm": "Aviation SELCAL",
@@ -742,28 +742,28 @@
 "sh": "134.4 bit/s",
 "t": "DCS: the digital sub-tone",
 "h": "Instead of a continuous tone like CTCSS, the radio sends under the voice a 23-bit word repeated non-stop at 134.4 bits per second. At the end, a 134.4 Hz tone closes the squelch silently.",
-"l": "Seen in the FM receiver audio: an irregular band at the very bottom, below 300 Hz, and a dull rumble if the radio's filter lets it through (sheet 8)."
+"l": "Seen in the FM receiver audio: an irregular band at the very bottom, below 300 Hz, and a dull rumble if the radio's filter lets it through (sheet 10)."
 },
 "t1750": {
 "nm": "1750 Hz tone",
 "sh": "repeater",
 "t": "1750 Hz tone: opening a repeater",
 "h": "A short 1750 Hz tone (about 0.5 to 1 s) at the start of a transmission still opens some European amateur repeaters; the repeater often answers with a beep when you release.",
-"l": "A short line at 1750 Hz, then the voice, then the repeater's beep (sheet 8)."
+"l": "A short line at 1750 Hz, then the voice, then the repeater's beep (sheet 10)."
 },
 "ncdxf": {
 "nm": "NCDXF beacons",
 "sh": "14.100 MHz",
 "t": "NCDXF / IARU beacons: testing propagation",
 "h": "Eighteen beacons around the world transmit in turn, ten seconds each, on 14.100, 18.110, 21.150, 24.930 and 28.200 MHz: the call sign in Morse, then four one-second dashes at 100 W, 10 W, 1 W and 0.1 W.",
-"l": "A call sign, then four dashes getting weaker and weaker: if you can still hear the last one, propagation to that beacon is excellent. Here 4U1UN (New York) then VE8AT (Canada) (sheet 26 bis)."
+"l": "A call sign, then four dashes getting weaker and weaker: if you can still hear the last one, propagation to that beacon is excellent. Here 4U1UN (New York) then VE8AT (Canada) (sheet 30)."
 },
 "lrpt": {
 "nm": "Meteor-M LRPT",
 "sh": "137.9 MHz",
 "t": "Meteor-M satellites: LRPT images",
 "h": "The Russian Meteor-M weather satellites send their images digitally: four-state phase modulation (QPSK), 72,000 symbols per second, about 120 kHz wide.",
-"l": "A full block with rounded edges that slides slowly during the pass (Doppler effect); to the ear, just a hiss. On 137.9 or 137.1 MHz, decoded with SatDump (sheet 34).",
+"l": "A full block with rounded edges that slides slowly during the pass (Doppler effect); to the ear, just a hiss. On 137.9 or 137.1 MHz, decoded with SatDump (sheet 41).",
 "n": "reduced scale"
 },
 "quindar": {
@@ -823,7 +823,7 @@
 "sh": "2–30 MHz",
 "t": "PLC: Internet through the mains sockets",
 "h": "Powerline adapters send data over the house wiring on hundreds of carriers between 2 and 30 MHz (higher for recent models), one every 24.4 kHz. The wires radiate like an antenna.",
-"l": "A comb of regular lines flickering in packets, with gaps on the amateur bands (notches required by the standard); to the ear, a crackle that follows the Internet traffic (sheet 35 bis).",
+"l": "A comb of regular lines flickering in packets, with gaps on the amateur bands (notches required by the standard); to the ear, a crackle that follows the Internet traffic (sheet 43).",
 "n": "reduced scale"
 },
 "fence": {

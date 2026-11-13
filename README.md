@@ -12,6 +12,7 @@ Radio mode identifier: **100 simulated signals** (including 18 sounds from space
 - For each signal: the **sound**, the live **spectrum** and **waterfall**, the full **footprint** of the signal, and a fact card (principle, what it looks like on screen, sheet number in the book).
 - **Mystery sound**: a random signal to identify among four answers, with a score.
 - Settings: added noise, volume, loop playback; the cursor shows the frequency.
+- **Rolling-digit counters** at the top of the online page: visits and plays.
 - For AM, SSB, FM and FM stereo you hear the **demodulated sound**, as from a receiver, with a synthetic voice and synthetic music (FM stereo is in real stereo: use headphones).
 - **Display** menu: day, **night** (shades of red, to keep your night vision) or **green, blue or amber phosphor** (like old computer terminals, with scan lines); your choice is remembered.
 - A single HTML page, nothing to install, that works **offline**: download `index.html` and open it in a browser.
@@ -52,13 +53,13 @@ Radio signals (AM, FM, AIS, LoRa…) are shown as on an SDR screen, around a sim
 The language is picked automatically from your browser's language settings (all preferred languages are checked: a visitor from China, Taiwan or Brazil gets Chinese or Portuguese straight away; English otherwise); the menu lets you change it. The address only gets a `#language` ending when someone picks a language in the menu, so a plain link always opens in each visitor's own language.
 
 ## Counter
-The online page counts visits (once per browser session) and plays with [Abacus](https://v2.jasoncameron.dev/abacus), a free counting service with no cookies and no personal data stored. The totals are shown at the bottom of the page and in the badges above. The downloaded copy (offline) counts nothing.
+The online page counts visits (once per browser session) and plays with [Abacus](https://v2.jasoncameron.dev/abacus), a free counting service with no cookies and no personal data stored. The totals are shown at the top of the page, as rolling digits like a mechanical counter, and in the badges above. The downloaded copy (offline) counts nothing.
 
 ## Editing the page
 `index.html` is built by `python3 src/build.py` from `src/template.html` and the language files `src/i18n/<language>.json`. Fix a translation in its language file, then run the command again. `node src/check.js index.html` checks every signal (missing texts, spectrum peaks).
 
 ## The book
-This page goes with the "Visualising a signal" sheet (sheet 5 bis) of the **OpenBookRadio** book, a free radio listening guide: [download it here](https://github.com/ic3fr/OpenBookRadio/releases). The sheet numbers shown refer to the book.
+This page goes with the "Visualising a signal" sheet (sheet 6) of the **OpenBookRadio** book, a free radio listening guide: [download it here](https://github.com/ic3fr/OpenBookRadio/releases). The sheet numbers shown refer to the book.
 
 ## License
 Creative Commons **BY-NC-SA 4.0**: free, sharing allowed with attribution, no commercial use, same license for derivatives. Not for sale.

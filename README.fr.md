@@ -12,6 +12,7 @@ Identificateur de modes radio : **100 signaux simulés** (dont 18 sons de l'espa
 - Pour chaque signal : le **son**, le **spectre** et le **waterfall** en direct, l'**empreinte** complète du signal et une fiche (principe, aspect à l'écran, fiche du livre).
 - **Son mystère** : un signal au hasard, à reconnaître parmi quatre réponses, avec un score.
 - Réglages : bruit ajouté, volume, lecture en boucle ; le curseur affiche la fréquence.
+- **Compteurs à rouleaux** en haut de la page en ligne : visites et écoutes.
 - En AM, BLU, FM et FM stéréo, on entend le **son démodulé**, comme sur un récepteur, avec une voix et une musique de synthèse (la FM stéréo est en vraie stéréo : au casque).
 - Une seule page HTML, sans installation, qui marche **hors ligne** : télécharge `index.html` et ouvre-la dans un navigateur.
 
@@ -51,7 +52,7 @@ Les signaux radio (AM, FM, AIS, LoRa…) sont montrés comme sur l'écran d'un S
 La langue est choisie automatiquement d'après les réglages du navigateur (toutes les langues préférées sont regardées : un visiteur de Chine, de Taïwan ou du Brésil arrive directement en chinois ou en portugais ; sinon en anglais) ; le menu permet d'en changer. L'adresse ne prend une fin `#langue` que si quelqu'un choisit une langue dans le menu : un lien simple s'ouvre donc toujours dans la langue de chaque visiteur. Le menu **Affichage** propose jour, **nuit** (nuances de rouge, pour garder la vision de nuit) et **phosphore vert, bleu ou orange** (comme les vieux terminaux, avec des lignes de balayage) ; le choix est retenu.
 
 ## Compteur
-La page en ligne compte les visites (une fois par session de navigateur) et les écoutes avec [Abacus](https://v2.jasoncameron.dev/abacus), un service de comptage gratuit, sans cookie et sans donnée personnelle conservée. Les totaux s'affichent en bas de la page et dans les badges ci-dessus. La copie téléchargée (hors ligne) ne compte rien.
+La page en ligne compte les visites (une fois par session de navigateur) et les écoutes avec [Abacus](https://v2.jasoncameron.dev/abacus), un service de comptage gratuit, sans cookie et sans donnée personnelle conservée. Les totaux s'affichent en haut de la page, en chiffres qui tournent comme un compteur mécanique, et dans les badges ci-dessus. La copie téléchargée (hors ligne) ne compte rien.
 
 ## Modifier la page
 `index.html` est construite par `python3 src/build.py` à partir de `src/template.html` et des fichiers de langue `src/i18n/<langue>.json`. Corrige une traduction dans le fichier de sa langue, puis relance la commande. `node src/check.js index.html` vérifie chaque signal (textes manquants, pics du spectre).

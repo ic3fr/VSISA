@@ -6,6 +6,7 @@
 <style>
 /* Layout : un panneau de récepteur. Liste des signaux à gauche, spectre + waterfall en direct au centre, empreinte + fiche en dessous. */
 :root{
+  --odo-bg:#15110b;--odo-fg:#f3ead2;--odo-case:#0b0d10;
   --bg:#10141b; --panel:#171e28; --panel-2:#1d2633; --line:#2b3746;
   --fg:#e1e7ef; --muted:#8d9bad; --accent:#f2b544; --accent-ink:#1a1408;
   --ok:#5fcf8f; --bad:#ef6b6b;
@@ -16,6 +17,7 @@
 }
 html.night{--bg:#0a0000;--panel:#140202;--panel-2:#1e0404;--line:#3d0a08;--fg:#e2533f;--muted:#9c3428;--accent:#ff3b2f;--accent-ink:#140000;--ok:#ff8a6a;--bad:#c22a1c}
 html.night .screen{background:#000}
+html.night,html.phos{--odo-bg:#000;--odo-fg:var(--fg);--odo-case:var(--panel)}
 html.phos{--glow:57,255,106;--bg:#010801;--panel:#031203;--panel-2:#052005;--line:#0e4a12;--fg:#39ff6a;--muted:#1fa83f;--accent:#7dff9a;--accent-ink:#011a04;--ok:#b6ffc6;--bad:#ffd84a;
   --f-display:"VT323",ui-monospace,Menlo,Consolas,monospace;--f-body:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;color-scheme:dark}
 html.phos .screen{background:#000}
@@ -28,6 +30,7 @@ html.phos canvas{filter:drop-shadow(0 0 2px rgba(var(--glow),.35))}
 html.phos.blue{--glow:90,190,255;--bg:#00040a;--panel:#020a16;--panel-2:#041226;--line:#0c3058;--fg:#5ab8ff;--muted:#2d78b8;--accent:#9fd8ff;--accent-ink:#000c1a;--ok:#c8ecff;--bad:#ffd84a}
 html.phos.amber{--glow:255,176,0;--bg:#0a0500;--panel:#140b00;--panel-2:#201200;--line:#4a2c00;--fg:#ffb000;--muted:#b07600;--accent:#ffd060;--accent-ink:#1a0e00;--ok:#ffe7a8;--bad:#ff6a4a}
 *{box-sizing:border-box}
+[hidden]{display:none!important}
 html,body{background:var(--bg);color:var(--fg)}
 body{font-family:var(--f-body);font-size:15px;line-height:1.5;
   padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:20px 40px}
@@ -97,12 +100,27 @@ dd{margin:0;min-width:0}
 .readout{font-variant-numeric:tabular-nums;color:var(--accent)}
 footer{color:var(--muted);font-size:.8rem;border-top:1px solid var(--line);padding-top:12px;display:flex;flex-direction:column;gap:4px}
 footer p{margin:0;max-width:110ch}
-.stats{font:400 .78rem var(--f-mono);color:var(--muted);font-variant-numeric:tabular-nums}
+/* compteur à rouleaux, comme un compteur mécanique */
+.odo-wrap{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;margin-left:auto}
+.hdr-ctl{flex-basis:100%}
+.odo{display:flex;align-items:center;gap:8px}
+.odo-lbl{font:500 .72rem var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.odo-num{display:inline-flex;gap:2px;padding:3px;background:var(--odo-case);border:1px solid var(--line);border-radius:5px;box-shadow:inset 0 1px 3px rgba(0,0,0,.5)}
+.odo-d{position:relative;width:1.1em;height:1.55em;overflow:hidden;border-radius:2px;background:var(--odo-bg);font:600 1.15rem var(--f-mono)}
+.odo-d::before{content:"";position:absolute;left:0;right:0;top:50%;height:1px;background:rgba(0,0,0,.55);z-index:2}
+.odo-d::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,0) 32%,rgba(255,255,255,.06) 50%,rgba(0,0,0,0) 68%,rgba(0,0,0,.6))}
+.odo-strip{display:flex;flex-direction:column;will-change:transform}
+.odo-strip span{display:block;height:1.55em;line-height:1.55em;text-align:center;color:var(--odo-fg)}
+@media (prefers-reduced-motion:reduce){.odo-strip{transition:none!important}}
 </style>
 
 <div class="wrap">
   <header>
     <h1><small>VSISA · Virtual Simulator identification Signal Audio · OpenBookRadio</small><span id="tTitle">Identificateur de modes radio</span></h1>
+    <div class="odo-wrap" id="odo" hidden>
+      <div class="odo"><span class="odo-lbl" id="tOdoV">visites</span><span class="odo-num" id="odoV"></span></div>
+      <div class="odo"><span class="odo-lbl" id="tOdoP">écoutes</span><span class="odo-num" id="odoP"></span></div>
+    </div>
     <div class="hdr-ctl">
       <label class="langlbl" for="lang"><span id="tLang">Langue</span>
         <select id="lang"></select></label>
@@ -153,7 +171,6 @@ footer p{margin:0;max-width:110ch}
     <p id="tF1"></p>
     <p id="tF2"></p>
     <p><a id="tBook2" href="https://github.com/ic3fr/OpenBookRadio/releases" target="_blank" rel="noopener" style="color:var(--accent)">Télécharger le livre</a></p>
-    <p id="tStats" class="stats" hidden></p>
   </footer>
 </div>
 
@@ -168,8 +185,19 @@ function t(k){ return (I18N[LG]&&I18N[LG].ui[k])||I18N.fr.ui[k]||k; }
 /* compteur de visites et d'écoutes : seulement sur la page en ligne (github.io), service Abacus sans cookie */
 const CNT_NS="ic3fr-vsisa", CNT_ON=/(^|\.)github\.io$/.test(location.hostname);
 let stV=null, stP=null;
-function showStats(){ const el=document.getElementById("tStats"); if(!el) return; if(stV==null){ el.hidden=true; return; }
-  const f=n=>Number(n).toLocaleString(LOC); el.hidden=false; el.textContent=f(stV)+" "+t("visits")+(stP!=null?" · "+f(stP)+" "+t("plays"):""); }
+function setOdo(el,value){ // chaque chiffre est un rouleau 0-9 (répété) qui tourne toujours vers l'avant
+  const s=String(Math.max(0,Math.floor(value))).padStart(6,"0"), first=!el.children.length;
+  while(el.children.length<s.length){ const d=document.createElement("span"); d.className="odo-d"; d.setAttribute("aria-hidden","true"); const st=document.createElement("span"); st.className="odo-strip";
+    for(let k=0;k<40;k++){ const c=document.createElement("span"); c.textContent=k%10; st.appendChild(c); } d.appendChild(st); d._i=0; el.insertBefore(d,el.firstChild); }
+  [...el.children].forEach((d,k)=>{ const pos=el.children.length-1-k, digit=+s[k], st=d.firstChild;
+    if(d._i>=10){ st.style.transition="none"; d._i-=10; st.style.transform=`translateY(${-d._i*1.55}em)`; void st.offsetHeight; }
+    let target=d._i+((digit-d._i%10)+10)%10; if(first&&pos<3) target+=10*(3-pos)-(target>=30?10:0);
+    if(target===d._i) return;
+    st.style.transition=`transform ${first?1.2+0.25*pos:0.7}s cubic-bezier(.25,.9,.3,1)`; st.style.transform=`translateY(${-target*1.55}em)`; d._i=target; });
+  el.setAttribute("aria-label",Number(value).toLocaleString(LOC)); el.setAttribute("role","img"); }
+function showStats(){ const box=document.getElementById("odo"); if(!box) return; if(stV==null){ box.hidden=true; return; }
+  box.hidden=false; document.getElementById("tOdoV").textContent=t("visits"); document.getElementById("tOdoP").textContent=t("plays");
+  setOdo(document.getElementById("odoV"),stV); if(stP!=null) setOdo(document.getElementById("odoP"),stP); }
 function cnt(path){ return fetch("https://abacus.jasoncameron.dev/"+path).then(r=>r.ok?r.json():null).then(j=>j&&typeof j.value==="number"?j.value:null).catch(()=>null); }
 if(CNT_ON){ let seen=false; try{ seen=sessionStorage.getItem("vsisa-seen")==="1"; sessionStorage.setItem("vsisa-seen","1"); }catch(e){}
   cnt((seen?"get/":"hit/")+CNT_NS+"/visits").then(v=>{ stV=v; showStats(); });

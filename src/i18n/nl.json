@@ -13,7 +13,7 @@
 "dur": "{s} s van boven naar beneden",
 "avg": "gemiddelde over het hele signaal",
 "press": "Druk op Luisteren: het signaal loopt hier voorbij",
-"count": "{n} signalen, in de volgorde van blad 5 bis",
+"count": "{n} signalen, in de volgorde van blad 6",
 "myst": "Mysteriemodus",
 "mystTags": "Luister en kijk, kies dan het juiste antwoord",
 "quizH": "Welk signaal is dit?",
@@ -28,7 +28,7 @@
 "book": "Boek: blad {r}",
 "lang": "Taal",
 "signals": "Signalen",
-"f1": "Signalen gesimuleerd in de pagina (12 000 samples per seconde): die van blad 5 bis van het boek OpenBookRadio, andere signalen uit het boek en bonussen. Bij radiosignalen (AM, FM, AIS, LoRa…) zie je de gesimuleerde middenfrequentie, zoals op een SDR-scherm; sommige zijn verkleind of versneld, dat staat erbij. Bij AM, SSB, FM, FM-stereo, ISS en fading hoor je het gedemoduleerde geluid, zoals uit de luidspreker van de ontvanger, en toont het scherm het radiosignaal; de stem is synthetisch en zegt geen echte woorden.",
+"f1": "Signalen gesimuleerd in de pagina (12 000 samples per seconde): die van blad 6 van het boek OpenBookRadio, andere signalen uit het boek en bonussen. Bij radiosignalen (AM, FM, AIS, LoRa…) zie je de gesimuleerde middenfrequentie, zoals op een SDR-scherm; sommige zijn verkleind of versneld, dat staat erbij. Bij AM, SSB, FM, FM-stereo, ISS en fading hoor je het gedemoduleerde geluid, zoals uit de luidspreker van de ontvanger, en toont het scherm het radiosignaal; de stem is synthetisch en zegt geen echte woorden.",
 "f2": "De tijd loopt naar beneden in de waterval en de afdruk. Licentie CC BY-NC-SA 4.0, gratis, niet verkopen.",
 "night": "Nachtmodus",
 "day": "Dagmodus",
@@ -62,7 +62,7 @@
 "sh": "omroep",
 "t": "AM: amplitudemodulatie",
 "h": "De sterkte van de draaggolf volgt het geluid: de curve „zwelt” op en af.",
-"l": "Een vaste streep in het midden (de draaggolf), met aan elke kant een gelijke zijband. Ongeveer 6 tot 9 kHz breed. Omroep op korte en middengolf, luchtvaart (bladen 10 en 12).",
+"l": "Een vaste streep in het midden (de draaggolf), met aan elke kant een gelijke zijband. Ongeveer 6 tot 9 kHz breed. Omroep op korte en middengolf, luchtvaart (bladen 12 en 14).",
 "r": [
 [
 "Luisteren",
@@ -74,13 +74,13 @@
 "nm": "SSB",
 "t": "SSB: enkelzijband",
 "h": "Er blijft maar één zijband over, zonder draaggolf: niets als er niet gesproken wordt.",
-"l": "Geen middenstreep, één band van ongeveer 2,7 kHz die alleen leeft als er gesproken wordt. USB boven 10 MHz, LSB eronder (zendamateurs). Slecht afgestemd klinkt de stem als een „eend” (bladen 9 en 26)."
+"l": "Geen middenstreep, één band van ongeveer 2,7 kHz die alleen leeft als er gesproken wordt. USB boven 10 MHz, LSB eronder (zendamateurs). Slecht afgestemd klinkt de stem als een „eend” (bladen 11 en 29)."
 },
 "fm": {
 "sh": "spraak",
 "t": "FM: frequentiemodulatie",
 "h": "De amplitude blijft gelijk; de trillingen komen met het geluid dichter bij elkaar of verder uiteen.",
-"l": "Het signaal danst rond zijn frequentie, breder bij luid geluid: 12,5 kHz per kanaal bij smalband-FM (portofoons, relais), 200 kHz bij FM-omroep (bladen 2 en 11).",
+"l": "Het signaal danst rond zijn frequentie, breder bij luid geluid: 12,5 kHz per kanaal bij smalband-FM (portofoons, relais), 200 kHz bij FM-omroep (bladen 2 en 13).",
 "r": [
 [
 "Luisteren",
@@ -91,7 +91,7 @@
 "cw": {
 "t": "CW: morse",
 "h": "De draaggolf gaat aan en uit: strepen en punten.",
-"l": "Een heel dunne streep die in het ritme van morse onderbroken wordt; een piep in het oor. Hier „CQ” (blad 39).",
+"l": "Een heel dunne streep die in het ritme van morse onderbroken wordt; een piep in het oor. Hier „CQ” (blad 48).",
 "r": [
 [
 "Snelheid",
@@ -110,7 +110,7 @@
 "rtty": {
 "t": "FSK / RTTY: twee frequenties",
 "h": "De frequentie springt tussen twee waarden, één voor 0, één voor 1.",
-"l": "Twee evenwijdige strepen: 170 Hz uit elkaar bij zendamateurs (45,45 baud), 450 of 850 Hz bij weerberichten. Een regelmatig „tidilidi” (blad 27).",
+"l": "Twee evenwijdige strepen: 170 Hz uit elkaar bij zendamateurs (45,45 baud), 450 of 850 Hz bij weerberichten. Een regelmatig „tidilidi” (blad 32).",
 "r": [
 [
 "Code",
@@ -129,7 +129,7 @@
 "afsk": {
 "t": "AFSK 1200 baud: APRS en packet",
 "h": "Twee audiotonen, 1200 en 2200 Hz, in een FM-zender gestuurd.",
-"l": "Gezien na de FM-ontvanger (luidsprekergeluid): een band van 1200 tot 2200 Hz, in korte pakketjes. In het oor een „grrrt” van een seconde (bladen 29 en 30).",
+"l": "Gezien na de FM-ontvanger (luidsprekergeluid): een band van 1200 tot 2200 Hz, in korte pakketjes. In het oor een „grrrt” van een seconde (bladen 35 en 36).",
 "r": [
 [
 "Frequentie",
@@ -148,7 +148,7 @@
 "psk31": {
 "t": "PSK31: fasemodulatie",
 "h": "De frequentie blijft gelijk, de fase keert om; bij elke omkering zakt de amplitude.",
-"l": "Een heel dunne streep van ongeveer 60 Hz, een beetje „gevlochten”. Tientallen stations passen in 3 kHz (blad 26).",
+"l": "Een heel dunne streep van ongeveer 60 Hz, een beetje „gevlochten”. Tientallen stations passen in 3 kHz (blad 29).",
 "r": [
 [
 "Code",
@@ -167,7 +167,7 @@
 "ft8": {
 "t": "MFSK / FT8: acht tonen",
 "h": "De frequentie gaat op en neer in stapjes van 6,25 Hz, 0,16 s per stap.",
-"l": "Banden van ongeveer 50 Hz die 12,6 s duren en elke 15 s terugkomen, op de klok afgestemd: meerdere stations tegelijk in 3 kHz, bijvoorbeeld op 7,074 MHz (blad 26).",
+"l": "Banden van ongeveer 50 Hz die 12,6 s duren en elke 15 s terugkomen, op de klok afgestemd: meerdere stations tegelijk in 3 kHz, bijvoorbeeld op 7,074 MHz (blad 29).",
 "r": [
 [
 "Frame",
@@ -186,37 +186,37 @@
 "ft4": {
 "t": "FT4: de FT8 voor contests",
 "h": "Vier tonen op 20,8 Hz afstand, 20,8 baud: 105 symbolen in 5 s, in tijdvakken van 7,5 s.",
-"l": "Banden van ongeveer 90 Hz, korter en breder dan FT8, die elke 7,5 s terugkomen. 14 080, 7047,5 kHz (blad 26)."
+"l": "Banden van ongeveer 90 Hz, korter en breder dan FT8, die elke 7,5 s terugkomen. 14 080, 7047,5 kHz (blad 29)."
 },
 "olivia": {
 "t": "Olivia 8/250: acht tonen",
 "h": "Acht tonen op 31,25 Hz afstand, steeds één tegelijk, die willekeurig springen; Walsh-codering en interleaving.",
-"l": "Een blok verspreide puntjes over 250 Hz; decodeert ver onder de ruis. Een klein willekeurig melodietje in het oor (blad 26)."
+"l": "Een blok verspreide puntjes over 250 Hz; decodeert ver onder de ruis. Een klein willekeurig melodietje in het oor (blad 29)."
 },
 "hell": {
 "t": "Feld Hell: schrijven met een draaggolf",
 "h": "De draaggolf gaat punt voor punt aan en uit: elke letter bestaat uit kolommen van 14 punten, van onder naar boven afgetast (245 punten per seconde).",
-"l": "In de waterval een gehakte streep; het programmascherm (fldigi) tekent de letters. Een zacht geknetter in het oor (blad 26)."
+"l": "In de waterval een gehakte streep; het programmascherm (fldigi) tekent de letters. Een zacht geknetter in het oor (blad 29)."
 },
 "4fsk": {
 "t": "4FSK: DMR, C4FM (Fusion), NXDN, dPMR",
 "h": "Vier frequentieniveaus: elk symbool draagt twee bits.",
-"l": "Een rechthoekig blok van 6 tot 12,5 kHz, vol als ruis, vaak in pakketjes (DMR deelt het kanaal in twee tijdsloten). Een schor „frrr” in het oor (blad 38)."
+"l": "Een rechthoekig blok van 6 tot 12,5 kHz, vol als ruis, vaak in pakketjes (DMR deelt het kanaal in twee tijdsloten). Een schor „frrr” in het oor (blad 46)."
 },
 "mt63": {
 "t": "MT63: noodberichten (NBEMS)",
 "h": "64 tonen tegelijk, elk langzaam gemoduleerd, met veel redundantie.",
-"l": "Een vlak blok van 1 of 2 kHz rond 1500 Hz, met scherpe randen; een regelmatig geruis. Werkt zelfs via een microfoon tegen een luidspreker (blad 26 ter)."
+"l": "Een vlak blok van 1 of 2 kHz rond 1500 Hz, met scherpe randen; een regelmatig geruis. Werkt zelfs via een microfoon tegen een luidspreker (blad 31)."
 },
 "lora": {
 "t": "LoRa: frequentiehellingen (chirps)",
 "h": "De frequentie zwiept over de hele breedte en begint dan weer onderaan: de plaats van de sprong draagt de data.",
-"l": "Evenwijdige diagonalen, makkelijk te herkennen: Meshtastic en MeshCore op 869,525 MHz of 433 MHz, LoRaWAN-sensoren (bladen 11, 20 en 21)."
+"l": "Evenwijdige diagonalen, makkelijk te herkennen: Meshtastic en MeshCore op 869,525 MHz of 433 MHz, LoRaWAN-sensoren (bladen 13, 23 en 24)."
 },
 "sstv": {
 "t": "SSTV: beelden als geluid",
 "h": "Een synchronisatiepuls op 1200 Hz, daarna volgt de frequentie de helderheid van de lijn, van 1500 (zwart) tot 2300 Hz (wit).",
-"l": "Regelmatige synchronisatiestrepen en een wolk die met het beeld verandert; een „tjilpend” geluid gedurende een à twee minuten. 14,230 MHz, ISS op 145,800 MHz (blad 31).",
+"l": "Regelmatige synchronisatiestrepen en een wolk die met het beeld verandert; een „tjilpend” geluid gedurende een à twee minuten. 14,230 MHz, ISS op 145,800 MHz (blad 37).",
 "r": [
 [
 "Frame",
@@ -232,7 +232,7 @@
 "nm": "Weerfax",
 "t": "Weerfax: 1500 Hz zwart, 2300 Hz wit",
 "h": "De frequentie gaat traploos van zwart naar wit, 120 lijnen per minuut.",
-"l": "Twee vaste banden op 1500 en 2300 Hz (800 Hz uit elkaar), een regelmatig „tik-tak”. Gepubliceerde frequenties zijn die van de draaggolf: luister in USB 1,9 kHz lager (blad 32).",
+"l": "Twee vaste banden op 1500 en 2300 Hz (800 Hz uit elkaar), een regelmatig „tik-tak”. Gepubliceerde frequenties zijn die van de draaggolf: luister in USB 1,9 kHz lager (blad 38).",
 "r": [
 [
 "Frame",
@@ -248,35 +248,35 @@
 "nm": "ELT-sirene",
 "t": "ELT- / PLB-sirene op 121,5 MHz",
 "h": "Een AM waarvan de toon twee tot vier keer per seconde van 1600 naar 300 Hz daalt.",
-"l": "Een vaste draaggolf en zijbanden die als een waaier glijden: het „oe-oe” van noodbakens, ook op 121,375 MHz voor oefeningen (bladen 24 en 25)."
+"l": "Een vaste draaggolf en zijbanden die als een waaier glijden: het „oe-oe” van noodbakens, ook op 121,375 MHz voor oefeningen (bladen 27 en 28)."
 },
 "406": {
 "nm": "406-baken",
 "t": "406 MHz-baken: BPSK-salvo",
 "h": "Een halve seconde uitzending: 160 ms zuivere draaggolf, daarna verspringt de fase ±1,1 radiaal met 400 bit/s.",
-"l": "Een kort streepje dat elke 50 s terugkomt, tussen 406,0 en 406,1 MHz; niets nuttigs te horen, je hebt een decoder nodig (EPIRB 406, blad 25)."
+"l": "Een kort streepje dat elke 50 s terugkomt, tussen 406,0 en 406,1 MHz; niets nuttigs te horen, je hebt een decoder nodig (EPIRB 406, blad 28)."
 },
 "adsb": {
 "t": "ADS-B / mode S (1090 MHz): pulsen",
 "h": "Pulsen van 0,5 µs waarvan de positie de bits draagt (PPM); hier is de tijdschaal sterk vertraagd.",
-"l": "Heel korte horizontale streepjes over de hele breedte, honderden per seconde bij een luchthaven; een SDR-stick is nodig (blad 13).",
+"l": "Heel korte horizontale streepjes over de hele breedte, honderden per seconde bij een luchthaven; een SDR-stick is nodig (blad 15).",
 "n": "tijdschaal sterk vertraagd"
 },
 "acars": {
 "t": "ACARS: AM en MSK-data",
 "h": "Een AM die twee tonen draagt, 1200 en 2400 Hz, met 2400 bit/s.",
-"l": "Salvo's van een halve seconde met draaggolf en zijbanden, op 131,525, 131,725 of 131,825 MHz in Europa: een „brrrt” in het oor (blad 14)."
+"l": "Salvo's van een halve seconde met draaggolf en zijbanden, op 131,525, 131,725 of 131,825 MHz in Europa: een „brrrt” in het oor (blad 16)."
 },
 "ais": {
 "t": "AIS: GMSK 9600 baud op twee kanalen",
 "h": "Een afgevlakte FSK (GMSK) in salvo's van 26 ms, eens op 161,975 MHz, eens op 162,025 MHz (verkleind).",
-"l": "Twee kolommen korte streepjes, 50 kHz uit elkaar, een regelmatig geklik; hoe meer schepen, hoe dichter (blad 16).",
+"l": "Twee kolommen korte streepjes, 50 kHz uit elkaar, een regelmatig geklik; hoe meer schepen, hoe dichter (blad 19).",
 "n": "verkleind"
 },
 "navtex": {
 "t": "NAVTEX en DSC op midden- en kortegolf: FSK 170 Hz",
 "h": "Zoals RTTY: twee frequenties op 170 Hz afstand, maar met 100 baud.",
-"l": "Twee evenwijdige strepen, ononderbroken tijdens het bericht, op 518 en 490 kHz (NAVTEX) of 2187,5 kHz (digitale selectieve oproep) (blad 17).",
+"l": "Twee evenwijdige strepen, ononderbroken tijdens het bericht, op 518 en 490 kHz (NAVTEX) of 2187,5 kHz (digitale selectieve oproep) (blad 20).",
 "r": [
 [
 "Code",
@@ -291,18 +291,18 @@
 "hfdl": {
 "t": "HFDL: vliegtuigen op kortegolf",
 "h": "Een PSK van 1800 baud op een hulpdraaggolf van 1440 Hz.",
-"l": "Salvo's van ongeveer 2,4 kHz tussen 2,9 en 22 MHz; een modemgeruis dat komt en gaat (blad 14 bis)."
+"l": "Salvo's van ongeveer 2,4 kHz tussen 2,9 en 22 MHz; een modemgeruis dat komt en gaat (blad 17)."
 },
 "ctcss": {
 "t": "CTCSS: subtoon onder de stem",
 "h": "Een lage, doorlopende toon (67 tot 254 Hz, hier 88,5 Hz) bij de stem gevoegd.",
-"l": "Gezien in het geluid van de FM-ontvanger: een vaste streep helemaal onderaan, onder de stem; hij opent de squelch van relais en portofoons (blad 8)."
+"l": "Gezien in het geluid van de FM-ontvanger: een vaste streep helemaal onderaan, onder de stem; hij opent de squelch van relais en portofoons (blad 10)."
 },
 "dtmf": {
 "sh": "2 tonen",
 "t": "DTMF: twee tonen per toets",
 "h": "Elke toets stuurt tegelijk een lage toon (697 tot 941 Hz) en een hoge (1209 tot 1633 Hz).",
-"l": "Paren puntjes op acht vaste kolommen; het „piep-piep” van telefoonnummers en relaiscommando's (blad 8).",
+"l": "Paren puntjes op acht vaste kolommen; het „piep-piep” van telefoonnummers en relaiscommando's (blad 10).",
 "r": [
 [
 "Reeks",
@@ -314,7 +314,7 @@
 "sh": "5 tonen",
 "t": "Selcall CCIR: tonen na elkaar",
 "h": "Vijf tonen van 100 ms na elkaar, één per cijfer.",
-"l": "Een klein trapje van puntjes, herhaald; een snel „tululululu” om één bepaalde radio op te roepen (blad 28).",
+"l": "Een klein trapje van puntjes, herhaald; een snel „tululululu” om één bepaalde radio op te roepen (blad 33).",
 "r": [
 [
 "Reeks",
@@ -326,50 +326,50 @@
 "sh": "pagers",
 "t": "POCSAG en FLEX: pagers",
 "h": "Een FSK op ±4,5 kHz; een preambule 1010… en dan de data (verkleind).",
-"l": "Twee scherpe strepen tijdens de preambule, daarna een volle band; een schel „brrrrt”. 466,075 MHz, DAPNET 439,9875 MHz (blad 37).",
+"l": "Twee scherpe strepen tijdens de preambule, daarna een volle band; een schel „brrrrt”. 466,075 MHz, DAPNET 439,9875 MHz (blad 45).",
 "n": "verkleind"
 },
 "ale": {
 "sh": "8 tonen",
 "t": "ALE: automatische oproep op kortegolf",
 "h": "Acht tonen van 750 tot 2500 Hz, 125 baud, in salvo's.",
-"l": "Een blok van ongeveer 2 kHz van kleine puntjes, een à twee seconden, soms op meerdere nabije frequenties; een hoog getjilp (blad 28 bis)."
+"l": "Een blok van ongeveer 2 kHz van kleine puntjes, een à twee seconden, soms op meerdere nabije frequenties; een hoog getjilp (blad 34)."
 },
 "rs41": {
 "nm": "Radiosonde RS41",
 "t": "Radiosonde RS41: doorlopende GFSK",
 "h": "Een afgevlakte FSK van 4800 baud, zonder pauze; de frequentie verloopt langzaam als de sonde stijgt en afkoelt.",
-"l": "Een band van ongeveer 10 kHz die tijdens de hele vlucht schuin verschuift, tussen 400 en 406 MHz (blad 18)."
+"l": "Een band van ongeveer 10 kHz die tijdens de hele vlucht schuin verschuift, tussen 400 en 406 MHz (blad 21)."
 },
 "ook": {
 "nm": "433-sensoren",
 "t": "433 MHz-sensoren: OOK",
 "h": "De draaggolf gaat aan en uit in korte of lange pulsen (aan-uit); het bericht wordt drie keer herhaald.",
-"l": "Salvo's van kleine puntjes, vaak in drievoud, op 433,92 MHz: weerstations, temperatuursensoren, afstandsbedieningen (blad 19)."
+"l": "Salvo's van kleine puntjes, vaak in drievoud, op 433,92 MHz: weerstations, temperatuursensoren, afstandsbedieningen (blad 22)."
 },
 "fhss": {
 "t": "Bluetooth: frequentiesprongen (FHSS)",
 "h": "De frequentie wisselt 1600 keer per seconde tussen 79 kanalen (verkleind).",
-"l": "Kleine streepjes overal verspreid over 80 MHz, nooit op dezelfde plek, rond 2,4 GHz (blad 22).",
+"l": "Kleine streepjes overal verspreid over 80 MHz, nooit op dezelfde plek, rond 2,4 GHz (blad 25).",
 "n": "verkleind"
 },
 "wspr": {
 "t": "WSPR: propagatiebakens",
 "h": "Vier tonen op 1,46 Hz afstand, 0,68 s per symbool, gedurende 110,6 s.",
-"l": "Een heel dunne streep van ongeveer 6 Hz die bijna twee minuten duurt, elke even twee minuten: je moet sterk inzoomen (blad 26).",
+"l": "Een heel dunne streep van ongeveer 6 Hz die bijna twee minuten duurt, elke even twee minuten: je moet sterk inzoomen (blad 29).",
 "n": "fragment van 24 s (een uitzending duurt 110,6 s)"
 },
 "qrss": {
 "t": "QRSS: heel langzame morse",
 "h": "Een draaggolf die aan en uit gaat, met punten van 3 tot 10 s, vaak op twee nabije frequenties (DFCW).",
-"l": "Strepen van enkele Hz breed, gelezen op een scherm van tien minuten; niet hoorbaar (blad 26 bis).",
+"l": "Strepen van enkele Hz breed, gelezen op een scherm van tien minuten; niet hoorbaar (blad 30).",
 "n": "versneld: punt van 0,6 s in plaats van 3 tot 10 s"
 },
 "texte": {
 "nm": "Tekst in de waterval",
 "t": "Tekst in de waterval",
 "h": "Elke lijn van een afbeelding wordt een groep tonen: het geluid lijkt op ruis.",
-"l": "De tekst of tekening verschijnt rechtstreeks op het SDR-scherm (blad 33).",
+"l": "De tekst of tekening verschijnt rechtstreeks op het SDR-scherm (blad 40).",
 "r": [
 [
 "Opmerking",
@@ -380,7 +380,7 @@
 "vara": {
 "t": "Moderne HF-data: VARA, Pactor, ARDOP",
 "h": "Lange volle salvo's (OFDM of PSK) en daartussen korte antwoorden van het andere station.",
-"l": "Een rechthoek van ongeveer 2,4 kHz die stopt en opnieuw begint, met een kleine ontvangstbevestiging ertussen; een gehakt geruis (blad 26)."
+"l": "Een rechthoek van ongeveer 2,4 kHz die stopt en opnieuw begint, met een kleine ontvangstbevestiging ertussen; een gehakt geruis (blad 29)."
 },
 "chirp": {
 "nm": "Ionosfeersonde",
@@ -399,13 +399,13 @@
 "sh": "voeding",
 "t": "Storing van een schakelende voeding",
 "h": "Een blokgolf: de frequentie en alle harmonischen komen tegelijk naar buiten.",
-"l": "Een kam van regelmatige lijnen die samen verschuiven, op een ruisachtergrond: zoek met NOISE FIND of een draagbare ontvanger (blad K21b)."
+"l": "Een kam van regelmatige lijnen die samen verschuiven, op een ruisachtergrond: zoek met NOISE FIND of een draagbare ontvanger (blad K22)."
 },
 "mpx": {
 "nm": "FM-stereo en RDS",
 "t": "FM-stereo en RDS",
 "h": "Het gedemoduleerde geluid (multiplex) bevat het L+R-kanaal, een pilottoon op 19 kHz, het L-R-kanaal rond 38 kHz en RDS op 57 kHz.",
-"l": "Gezien van 0 tot 60 kHz na demodulatie: een laag blok, een dunne streep op 19 kHz, een zwakker blok in het midden en RDS helemaal bovenaan (blad 10).",
+"l": "Gezien van 0 tot 60 kHz na demodulatie: een laag blok, een dunne streep op 19 kHz, een zwakker blok in het midden en RDS helemaal bovenaan (blad 12).",
 "n": "schaal ÷ 20; stereogeluid",
 "r": [
 [
@@ -417,7 +417,7 @@
 "dcf77": {
 "t": "Tijdsignaal DCF77 (77,5 kHz)",
 "h": "Een draaggolf die aan het begin van elke seconde 0,1 s (bit 0) of 0,2 s (bit 1) tot 15 % daalt.",
-"l": "Een vaste streep met elke seconde een zwart gat; de 59e seconde heeft er geen, om de minuut aan te geven (blad 10).",
+"l": "Een vaste streep met elke seconde een zwart gat; de 59e seconde heeft er geen, om de minuut aan te geven (blad 12).",
 "r": [
 [
 "Opmerking",
@@ -428,12 +428,12 @@
 "ofdm": {
 "t": "OFDM: tientallen subdraaggolven",
 "h": "Veel dicht op elkaar gepakte draaggolven, elk langzaam: de som lijkt op ruis.",
-"l": "Een vlakke rechthoek met scherpe randen, altijd aanwezig: DRM op kortegolf (10 kHz), DAB+ (1,5 MHz), DVB-T, wifi. Een doorlopend geruis in het oor (bladen 10 en 22)."
+"l": "Een vlakke rechthoek met scherpe randen, altijd aanwezig: DRM op kortegolf (10 kHz), DAB+ (1,5 MHz), DVB-T, wifi. Een doorlopend geruis in het oor (bladen 12 en 25)."
 },
 "dsss": {
 "t": "Gespreid spectrum (DSSS): gps, wifi 802.11b",
 "h": "De data worden gemengd met een heel snelle code: de energie wordt over een grote breedte verspreid.",
-"l": "Een brede bult, nauwelijks boven de ruis; gps ligt zelfs onder de ruis en is zonder bewerking niet te zien (bladen 22 en 23)."
+"l": "Een brede bult, nauwelijks boven de ruis; gps ligt zelfs onder de ruis en is zonder bewerking niet te zien (bladen 25 en 26)."
 },
 "hline": {
 "nm": "Waterstoflijn",
@@ -498,7 +498,7 @@
 "sh": "satelliet",
 "t": "Satellietbaken en dopplereffect",
 "h": "Een satelliet in een lage baan komt dichterbij en gaat weer weg: de ontvangen frequentie daalt tijdens de overgang, ongeveer ±3 kHz op 145 MHz en ±10 kHz op 435 MHz.",
-"l": "Een streep die in een S-vorm daalt: eerst langzaam, snel als de satelliet het dichtst bij is, dan weer langzaam (blad 34).",
+"l": "Een streep die in een S-vorm daalt: eerst langzaam, snel als de satelliet het dichtst bij is, dan weer langzaam (blad 41).",
 "n": "overgang van 10 min ingekort tot 12 s"
 },
 "apt": {
@@ -506,7 +506,7 @@
 "sh": "137 MHz",
 "t": "NOAA-satellieten: APT-beelden (historisch)",
 "h": "Een hulpdraaggolf van 2400 Hz, in amplitude gemoduleerd door het beeld, twee lijnen per seconde, met een synchronisatiepuls aan het begin van elke lijn. Gestopt in 2025; de Meteor-M-satellieten zenden nu LRPT.",
-"l": "Een streep op 2400 Hz met zijbanden die met het beeld veranderen, en het bekende „tik-tak” twee keer per seconde (blad 34)."
+"l": "Een streep op 2400 Hz met zijbanden die met het beeld veranderen, en het bekende „tik-tak” twee keer per seconde (blad 41)."
 },
 "eme": {
 "nm": "Maanecho",
@@ -536,7 +536,7 @@
 "sh": "π/4-DQPSK",
 "t": "TETRA: professioneel digitaal netwerk",
 "h": "Fasemodulatie π/4-DQPSK met 18 000 symbolen per seconde, vier tijdsloten, in kanalen van 25 kHz.",
-"l": "Een vol blok met afgeronde flanken, altijd aanwezig bij een basisstation; een schor geruis. Versleuteld: niet te beluisteren (blad 38).",
+"l": "Een vol blok met afgeronde flanken, altijd aanwezig bij een basisstation; een schor geruis. Versleuteld: niet te beluisteren (blad 46).",
 "n": "verkleind"
 },
 "ndb": {
@@ -544,14 +544,14 @@
 "sh": "190–535 kHz",
 "t": "NDB: niet-gericht radiobaken",
 "h": "Een vaste draaggolf op langegolf, met een morseroepnaam van twee of drie letters op een toon (vaak 1020 Hz).",
-"l": "Een vaste streep in het midden en tijdens de roepnaam twee streepjes aan weerszijden. Ongeveer 190 tot 535 kHz, in SSB of CW (blad 10)."
+"l": "Een vaste streep in het midden en tijdens de roepnaam twee streepjes aan weerszijden. Ongeveer 190 tot 535 kHz, in SSB of CW (blad 12)."
 },
 "vor": {
 "nm": "VOR",
 "sh": "108–118 MHz",
 "t": "VOR: omnidirectioneel radiobaken",
 "h": "In AM: een richtingsafhankelijk signaal van 30 Hz, een hulpdraaggolf van 9960 Hz die met 30 Hz in frequentie gemoduleerd is (de referentie), en de morseroepnaam op 1020 Hz.",
-"l": "In het gedemoduleerde geluid: een laag gebrom op 30 Hz, een brede golvende streep rond 10 kHz en af en toe de roepnaam (blad 15).",
+"l": "In het gedemoduleerde geluid: een laag gebrom op 30 Hz, een brede golvende streep rond 10 kHz en af en toe de roepnaam (blad 18).",
 "n": "gedemoduleerd geluid, schaal ÷ 2"
 },
 "ils": {
@@ -559,14 +559,14 @@
 "sh": "90 + 150 Hz",
 "t": "ILS: landingsgeleiding (localizer)",
 "h": "In AM twee tonen van 90 en 150 Hz; hun verhouding vertelt het vliegtuig of het links of rechts van de as zit. De morseroepnaam begint met I.",
-"l": "In het gedemoduleerde geluid: twee heel lage strepen op 90 en 150 Hz en de roepnaam op 1020 Hz. Tussen 108,1 en 112 MHz; het glijpad zit rond 330 MHz (blad 15)."
+"l": "In het gedemoduleerde geluid: twee heel lage strepen op 90 en 150 Hz en de roepnaam op 1020 Hz. Tussen 108,1 en 112 MHz; het glijpad zit rond 330 MHz (blad 18)."
 },
 "m10": {
 "nm": "Sondes M10 / M20",
 "sh": "Meteomodem",
 "t": "Radiosondes M10 en M20 (Meteomodem)",
 "h": "Eén frame per seconde in snelle FSK (ongeveer 9600 baud): breder dan de RS41. In Frankrijk opgelaten door Météo-France.",
-"l": "Elke seconde een breed salvo dat tijdens de vlucht langzaam verschuift; tussen 400 en 406 MHz (blad 18)."
+"l": "Elke seconde een breed salvo dat tijdens de vlucht langzaam verschuift; tussen 400 en 406 MHz (blad 21)."
 },
 "tpms": {
 "nm": "Banden (TPMS)",
@@ -580,21 +580,21 @@
 "sh": "162 kHz",
 "t": "Tijdsignaal ALS162 (Allouis, 162 kHz)",
 "h": "De draaggolf van de vroegere langegolfzender van France Inter; de tijd is gecodeerd met kleine, onhoorbare fasemodulaties.",
-"l": "Een vaste streep, heel sterk in Frankrijk, aan het begin van elke seconde nauwelijks verbreed; je hebt een decoder nodig om de tijd te lezen (blad 10)."
+"l": "Een vaste streep, heel sterk in Frankrijk, aan het begin van elke seconde nauwelijks verbreed; je hebt een decoder nodig om de tijd te lezen (blad 12)."
 },
 "wwv": {
 "nm": "WWV",
 "sh": "2,5–20 MHz",
 "t": "Tijdsignaal WWV (Colorado)",
 "h": "In AM: elke seconde een „tik” van 5 ms op 1000 Hz, een toon van 500 of 600 Hz, een tijdcode op 100 Hz en een stem die UTC aankondigt.",
-"l": "In het gedemoduleerde geluid: een streep op 500 Hz die elke seconde onderbroken wordt, de tik op 1000 Hz en de code helemaal onderaan op 100 Hz (blad 10)."
+"l": "In het gedemoduleerde geluid: een streep op 500 Hz die elke seconde onderbroken wordt, de tik op 1000 Hz en de code helemaal onderaan op 100 Hz (blad 12)."
 },
 "msf": {
 "nm": "MSF",
 "sh": "60 kHz",
 "t": "Tijdsignaal MSF (Anthorn, 60 kHz)",
 "h": "De draaggolf wordt aan het begin van elke seconde 0,1, 0,2 of 0,3 s uitgezet, afhankelijk van de bits, en 0,5 s om de minuut aan te geven.",
-"l": "Een vaste streep met elke seconde volledig zwarte gaten, langer dan bij DCF77 (blad 10)."
+"l": "Een vaste streep met elke seconde volledig zwarte gaten, langer dan bij DCF77 (blad 12)."
 },
 "type2": {
 "nm": "Zon type II",
@@ -638,7 +638,7 @@
 "sh": "9600 bd",
 "t": "CubeSat-telemetrie",
 "h": "Kleine satellieten zenden regelmatig hun metingen (batterij, temperaturen) in FSK of GMSK met 1200 of 9600 baud, rond 435–438 MHz.",
-"l": "Regelmatige salvo's die tijdens de overgang door het dopplereffect telkens wat lager liggen (blad 34).",
+"l": "Regelmatige salvo's die tijdens de overgang door het dopplereffect telkens wat lager liggen (blad 41).",
 "n": "verkleind, overgang versneld"
 },
 "issfm": {
@@ -646,7 +646,7 @@
 "sh": "145,800 MHz",
 "t": "Ruimtestation (ISS): spraak in FM",
 "h": "Astronauten praten met scholen en zendamateurs in FM op 145,800 MHz. Het station vliegt 28 000 km/u: tijdens de overgang schuift de ontvangen frequentie van ongeveer +3,5 kHz naar −3,5 kHz.",
-"l": "Een band FM-spraak die tijdens de overgang van 10 minuten langzaam van rechts naar links schuift (blad 34).",
+"l": "Een band FM-spraak die tijdens de overgang van 10 minuten langzaam van rechts naar links schuift (blad 41).",
 "n": "overgang van 10 min ingekort tot 10 s"
 },
 "buzzer": {
@@ -685,21 +685,21 @@
 "sh": "8-PSK",
 "t": "Militaire modem STANAG 4285",
 "h": "8-PSK-fasemodulatie met 2400 baud op een draaggolf van 1800 Hz, met elke 107 ms een testreeks om het kanaal te volgen.",
-"l": "Een vol blok van ongeveer 3 kHz; in het oor een geruis met een regelmatig gezoem (blad 35 bis)."
+"l": "Een vol blok van ongeveer 3 kHz; in het oor een geruis met een regelmatig gezoem (blad 43)."
 },
 "link11": {
 "nm": "Link-11",
 "sh": "16 tonen",
 "t": "Link-11: datalink van de marine",
 "h": "Zestien tonen van 605 tot 2915 Hz tegelijk, elk 75 keer per seconde in fase gemoduleerd.",
-"l": "Een kam van veertien regelmatige lijnen van 935 tot 2365 Hz, plus twee lijnen apart op 605 en 2915 Hz; in het oor een muzikaal gebrom (blad 35 bis)."
+"l": "Een kam van veertien regelmatige lijnen van 935 tot 2365 Hz, plus twee lijnen apart op 605 en 2915 Hz; in het oor een muzikaal gebrom (blad 43)."
 },
 "numbers": {
 "nm": "Nummerstation",
 "sh": "stem",
 "t": "Nummerstation",
 "h": "Op een vast tijdstip een korte herkenningsmelodie, dan leest een (vaak synthetische) stem groepen van vijf cijfers voor, in AM of SSB.",
-"l": "De melodie als losse noten, dan regelmatige groepen lettergrepen met stiltes ertussen (blad 35 bis).",
+"l": "De melodie als losse noten, dan regelmatige groepen lettergrepen met stiltes ertussen (blad 43).",
 "n": "nagebootste stem, geen echte cijfers"
 },
 "rttydwd": {
@@ -707,7 +707,7 @@
 "sh": "50 Bd / 450 Hz",
 "t": "Weer-RTTY van de DWD (Duitsland)",
 "h": "Zoals de RTTY van zendamateurs, maar met 50 baud en 450 Hz afstand: de Duitse weerdienst verstuurt zijn berichten en zeeweersverwachtingen in gewone tekst.",
-"l": "Twee strepen die veel verder uit elkaar liggen en een iets sneller ritme. Tussen de berichten de oproep „CQ CQ CQ DE DDK2 DDH7 DDK9” en dan RYRYRY. Op 4583, 7646 en 10 100,8 kHz, ook 147,3 kHz (blad 27)."
+"l": "Twee strepen die veel verder uit elkaar liggen en een iets sneller ritme. Tussen de berichten de oproep „CQ CQ CQ DE DDK2 DDH7 DDK9” en dan RYRYRY. Op 4583, 7646 en 10 100,8 kHz, ook 147,3 kHz (blad 32)."
 },
 "mfsk16": {
 "nm": "MFSK16",
@@ -728,7 +728,7 @@
 "sh": "DSC",
 "t": "DSC: digitale selectieve oproep op kanaal 70",
 "h": "Een salvo van ongeveer een halve seconde met 1200 baud, op twee tonen van 1300 en 2100 Hz: het bevat het MMSI-nummer van het schip, het soort oproep en bij nood de positie.",
-"l": "Een kort, hoog „brrrt” op 156,525 MHz dat begint met een reeks afwisselende bits. Op midden- en kortegolf is DSC een FSK van 100 baud, zoals NAVTEX (blad 17)."
+"l": "Een kort, hoog „brrrt” op 156,525 MHz dat begint met een reeks afwisselende bits. Op midden- en kortegolf is DSC een FSK van 100 baud, zoals NAVTEX (blad 20)."
 },
 "selcal": {
 "nm": "SELCAL luchtvaart",
@@ -742,28 +742,28 @@
 "sh": "134,4 bit/s",
 "t": "DCS: de digitale subtoon",
 "h": "In plaats van een doorlopende toon zoals bij CTCSS stuurt de radio onder de stem een woord van 23 bits dat zonder pauze herhaald wordt, met 134,4 bits per seconde. Aan het eind sluit een toon van 134,4 Hz de squelch geruisloos.",
-"l": "Gezien in het geluid van de FM-ontvanger: een onregelmatige band helemaal onderaan, onder 300 Hz, en een dof gebrom als het filter van de radio het doorlaat (blad 8)."
+"l": "Gezien in het geluid van de FM-ontvanger: een onregelmatige band helemaal onderaan, onder 300 Hz, en een dof gebrom als het filter van de radio het doorlaat (blad 10)."
 },
 "t1750": {
 "nm": "1750 Hz-toon",
 "sh": "relais",
 "t": "1750 Hz-toon: een relais openen",
 "h": "Een korte toon van 1750 Hz (ongeveer 0,5 tot 1 s) aan het begin van de uitzending opent nog sommige Europese amateurrelais; het relais antwoordt vaak met een piep als je loslaat.",
-"l": "Een korte streep op 1750 Hz, dan de stem, dan de piep van het relais (blad 8)."
+"l": "Een korte streep op 1750 Hz, dan de stem, dan de piep van het relais (blad 10)."
 },
 "ncdxf": {
 "nm": "NCDXF-bakens",
 "sh": "14,100 MHz",
 "t": "NCDXF-/IARU-bakens: de propagatie testen",
 "h": "Achttien bakens over de hele wereld zenden om beurten, elk tien seconden, op 14,100, 18,110, 21,150, 24,930 en 28,200 MHz: de roepnaam in morse, dan vier strepen van een seconde met 100 W, 10 W, 1 W en 0,1 W.",
-"l": "Een roepnaam en dan vier steeds zwakkere strepen: hoor je de laatste nog, dan is de propagatie naar dat baken uitstekend. Hier 4U1UN (New York) en dan VE8AT (Canada) (blad 26 bis)."
+"l": "Een roepnaam en dan vier steeds zwakkere strepen: hoor je de laatste nog, dan is de propagatie naar dat baken uitstekend. Hier 4U1UN (New York) en dan VE8AT (Canada) (blad 30)."
 },
 "lrpt": {
 "nm": "Meteor-M LRPT",
 "sh": "137,9 MHz",
 "t": "Meteor-M-satellieten: LRPT-beelden",
 "h": "De Russische weersatellieten Meteor-M sturen hun beelden digitaal: fasemodulatie met vier toestanden (QPSK), 72 000 symbolen per seconde, ongeveer 120 kHz breed.",
-"l": "Een vol blok met afgeronde randen dat tijdens de overgang langzaam verschuift (dopplereffect); in het oor alleen geruis. Op 137,9 of 137,1 MHz, gedecodeerd met SatDump (blad 34).",
+"l": "Een vol blok met afgeronde randen dat tijdens de overgang langzaam verschuift (dopplereffect); in het oor alleen geruis. Op 137,9 of 137,1 MHz, gedecodeerd met SatDump (blad 41).",
 "n": "verkleind"
 },
 "quindar": {
@@ -823,7 +823,7 @@
 "sh": "2–30 MHz",
 "t": "PLC: internet via het stopcontact",
 "h": "Powerline-adapters sturen de data over de huisbedrading met honderden draaggolven tussen 2 en 30 MHz (hoger bij recente modellen), één om de 24,4 kHz. De draden stralen als een antenne.",
-"l": "Een kam van regelmatige lijnen die in pakketjes flikkert, met gaten op de amateurbanden (door de norm voorgeschreven inkepingen); in het oor een geknetter dat het internetverkeer volgt (blad 35 bis).",
+"l": "Een kam van regelmatige lijnen die in pakketjes flikkert, met gaten op de amateurbanden (door de norm voorgeschreven inkepingen); in het oor een geknetter dat het internetverkeer volgt (blad 43).",
 "n": "verkleind"
 },
 "fence": {
