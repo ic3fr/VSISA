@@ -57,7 +57,8 @@
 "Radiofonia i czas",
 "Szerokie pasmo",
 "Bonus: dźwięki z kosmosu",
-"Bonus: ciekawostki fal krótkich"
+"Bonus: ciekawostki fal krótkich",
+"Bonus: dźwięki podwodne"
 ],
 "modes": {
 "am": {
@@ -863,6 +864,103 @@
 "h": "Stacja Pucheng (Shaanxi) nadaje w AM na 2,5, 5, 10 i 15 MHz: co sekundę tyknięcie 10 ms na 1000 Hz (300 ms o pełnej minucie), a w niektórych minutach tyknięcia 100 ms dla czasu UT1. Znak BPM podawany jest Morse'em, potem głosem.",
 "l": "W zdemodulowanym dźwięku: znak, potem bardzo krótkie kreski na 1000 Hz, jedna na sekundę, z dłuższą o pełnej minucie. Często miesza się z WWV na tych samych częstotliwościach.",
 "n": "skrócony fragment"
+},
+"humpback": {
+"nm": "Humbak",
+"sh": "pieśń",
+"t": "Pieśń humbaka",
+"h": "Zimą, na obszarach rozrodu, samce śpiewają: ciąg jęków, pomruków i okrzyków tworzy temat, powtarzany bez zmian przez wiele godzin i zmieniający się z sezonu na sezon. Hydrofony słyszą go z odległości dziesiątek kilometrów.",
+"l": "Grube ślady z harmonicznymi, powoli rosnące lub opadające między 100 Hz a kilkoma kHz; ten sam ciąg wraca po kilku sekundach. Echo od powierzchni i dna przedłuża każdą nutę."
+},
+"bluewhale": {
+"nm": "Płetwal błękitny",
+"sh": "×10",
+"t": "Płetwal błękitny: najniższy zew",
+"h": "Największe zwierzę świata wydaje bardzo niskie (10–40 Hz) i bardzo silne zawołania, trwające 10–20 sekund i powtarzane godzinami: niosą się na setki kilometrów. Aby je usłyszeć, nagranie przyspiesza się dziesięciokrotnie.",
+"l": "Część pulsująca, potem długa nuta, która ledwie opada, z harmonicznymi powyżej; sekwencja się powtarza. Skala pokazuje prawdziwe częstotliwości.",
+"n": "przyspieszone 10×"
+},
+"finwhale": {
+"nm": "Płetwal zwyczajny",
+"sh": "20 Hz",
+"t": "Płetwal zwyczajny: impulsy 20 Hz",
+"h": "Płetwal zwyczajny wydaje impulsy trwające około sekundy, opadające z ok. 25 do 18 Hz, w regularnych odstępach, czasem przez wiele dni. W latach 50. i 60. te „sygnały 20 Hz” intrygowały sieci nasłuchowe marynarki USA, zanim przypisano je temu wielorybowi.",
+"l": "Krótkie kreski, wszystkie jednakowe, w regularnym ciągu lub parami, jak uderzenia bardzo wolnego serca; każda lekko opada w częstotliwości. Skala pokazuje prawdziwe częstotliwości.",
+"n": "przyspieszone 10×"
+},
+"sperm": {
+"nm": "Kaszalot",
+"sh": "kliki",
+"t": "Kliki kaszalota",
+"h": "Kaszalot poluje podczas głębokich nurkowań, używając sonaru: bardzo silne kliki, mniej więcej jeden na sekundę, które przyspieszają w „skrzypienie”, gdy zbliża się do ofiary. Między sobą kaszaloty wymieniają „cody”, krótkie serie klików, których rytm różni się między klanami.",
+"l": "Poziome kreski na całej szerokości, w równych odstępach, potem zagęszczone w brzęczenie (skrzypienie), a na końcu mały rytmiczny motyw: coda. Każdy klik składa się z kilku bliskich impulsów, powstałych przez odbicia w głowie zwierzęcia."
+},
+"dolphin": {
+"nm": "Butlonos",
+"sh": "gwizdy",
+"t": "Gwizdy i kliki delfina",
+"h": "Butlonos gwiżdże w zakresie ok. 5–20 kHz; każdy osobnik ma „gwizd sygnaturowy”, który służy mu za imię. Do polowania i orientacji wysyła też serie bardzo krótkich klików, nawet kilkaset na sekundę.",
+"l": "Cienkie krzywe, które rosną i znów opadają, często powtarzane bez zmian, oraz serie poziomych kresek przy echolokacji. Częstotliwości podzielono przez 3, by były słyszalne; skala pokazuje prawdziwe wartości.",
+"n": "odtwarzane 3× niżej"
+},
+"orca": {
+"nm": "Orka",
+"sh": "zawołania pulsowe",
+"t": "Pulsowe zawołania orki",
+"h": "Orki porozumiewają się zawołaniami pulsowymi: ciągami impulsów tak szybkimi (500–2000 na sekundę), że słychać je jako nutę, z nagłym skokiem wysokości. Każda grupa rodzinna ma własny „dialekt”.",
+"l": "Stos równoległych śladów (harmonicznych), które rosną lub opadają razem, z wyraźnym załamaniem w środku zawołania; czasem cienki, wyższy gwizd."
+},
+"bseal": {
+"nm": "Foka brodata",
+"sh": "tryl",
+"t": "Tryl foki brodatej",
+"h": "Wiosną, pod arktycznym lodem, samiec wydaje długie tryle, które spiralnie opadają od kilku kHz do kilkuset herców, czasem przez całą minutę. Służą do obrony terytorium i wabienia samic.",
+"l": "Falista krzywa, która zsuwa się z góry na dół skali jak rozprężająca się sprężyna, a na końcu niska nuta.",
+"n": "skrócone"
+},
+"shrimp": {
+"nm": "Krewetki pistolety",
+"sh": "rafa",
+"t": "Krewetki pistolety (krewetkowate Alpheidae)",
+"h": "Zamykając gwałtownie wielkie szczypce, krewetka wystrzeliwuje strumień wody tak szybki, że powstaje pęcherzyk kawitacyjny; zapadając się, trzaska jak wystrzał. Tysiące krewetek tworzą tło dźwiękowe raf i mogą zakłócać sonary.",
+"l": "Deszcz punktów i krótkich poziomych kresek na całej szerokości, bez żadnego porządku; w słuchawkach nieustanne trzeszczenie jak przy smażeniu."
+},
+"sonar": {
+"nm": "Sonar aktywny",
+"sh": "ping",
+"t": "Ping sonaru aktywnego",
+"h": "Okręt wysyła silny impuls dźwiękowy (tu ok. 3,5 kHz, zakres sonarów kadłubowych fregat) i nasłuchuje echa: opóźnienie daje odległość, a przesunięcie częstotliwości (efekt Dopplera) prędkość celu. Dźwięk wraca też jako ogon od dna i powierzchni: pogłos.",
+"l": "Krótka, silna kreska, ogon, który wygasa, a potem echo, znacznie słabsze i nieco przesunięte w częstotliwości. Drugi ping to przemiatanie częstotliwości (chirp), które lepiej mierzy odległość."
+},
+"propeller": {
+"nm": "Śruba okrętowa",
+"sh": "kawitacja",
+"t": "Śruba przepływającego statku",
+"h": "Łopaty śruby tworzą pęcherzyki kawitacyjne, które pękają: szeroki szum, pulsujący w rytmie przechodzących łopat. Maszyny dodają stałe prążki. Operatorzy sonaru analizują ten rytm (analiza DEMON), by policzyć łopaty i obroty, i rozpoznać statek.",
+"l": "Szum w szerokim paśmie, prążkowany poziomymi pasami w rytmie łopat, z kilkoma stałymi pionowymi kreskami (silnik, przekładnia). Wszystko narasta, a potem cichnie, gdy statek przepływa nad hydrofonem."
+},
+"uqc": {
+"nm": "Telefon podwodny",
+"sh": "UQC 8 kHz",
+"t": "Telefon podwodny (UQC, „Gertrude”)",
+"h": "Okręty podwodne i nawodne rozmawiają pod wodą przez telefon akustyczny: głos jest przesyłany jedną wstęgą boczną nad nośną 8,0875 kHz, emitowaną przez przetwornik w kadłubie. Zasięg: kilka kilometrów.",
+"l": "Pasmo głosu SSB powyżej 8 kHz; po demodulacji odległy głos, który faluje i dudni przez echa od powierzchni i dna. Obraz jest pomniejszony o połowę; skala pokazuje prawdziwe częstotliwości.",
+"n": "skala podzielona przez 2"
+},
+"zevs": {
+"nm": "ZEVS 82 Hz",
+"sh": "ELF",
+"t": "ZEVS: radio okrętów podwodnych na 82 Hz",
+"h": "Fale radiowe bardzo słabo wnikają w wodę morską, z wyjątkiem częstotliwości skrajnie niskich (ELF). Rosyjski nadajnik ZEVS na Półwyspie Kolskim nadaje na 82 Hz liniami antenowymi o długości dziesiątek kilometrów, by dotrzeć do głęboko zanurzonych okrętów. Szybkość jest znikoma: kilka znaków na minutę.",
+"l": "Cienka kreska na 82 Hz obok prążka sieci 50 Hz i jego harmonicznych, z zakłóceniami od burz. W słuchawkach ledwie słyszalny niski pomruk; odbiera się go dużą anteną ramową i kartą dźwiękową. Amerykański odpowiednik na 76 Hz wyłączono w 2004 roku."
+},
+"bloop": {
+"nm": "„Bloop”",
+"sh": "1997",
+"t": "„Bloop” (1997)",
+"h": "W 1997 roku hydrofony NOAA na Pacyfiku zarejestrowały bardzo niski, szybko rosnący dźwięk, słyszalny na tysiące kilometrów. Długo zagadkowy, od 2012 roku przypisywany jest trzęsieniu lodu: pękającej ogromnej górze lodowej.",
+"l": "Szerokie pasmo, które rośnie w kilka sekund, z harmonicznymi, a potem powoli wygasa. Rekonstrukcja, przyspieszona 16× jak nagranie udostępnione przez NOAA.",
+"n": "przyspieszone 16×"
 }
 }
 }

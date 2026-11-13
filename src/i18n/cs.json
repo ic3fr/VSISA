@@ -57,7 +57,8 @@
 "Vysílání a čas",
 "Široké pásmo",
 "Bonus: zvuky z vesmíru",
-"Bonus: kuriozity krátkých vln"
+"Bonus: kuriozity krátkých vln",
+"Bonus: podvodní zvuky"
 ],
 "modes": {
 "am": {
@@ -863,6 +864,103 @@
 "h": "Stanice Pchu-čcheng (Šen-si) vysílá v AM na 2,5, 5, 10 a 15 MHz: každou sekundu tik 10 ms na 1000 Hz (300 ms v celou minutu) a v určitých minutách tiky 100 ms pro čas UT1. Značka BPM zazní morseovkou a pak hlasem.",
 "l": "V demodulovaném zvuku: značka, pak velmi krátké čárky na 1000 Hz, jedna za sekundu, s delší v celou minutu. Často se mísí s WWV na stejných kmitočtech.",
 "n": "zhuštěná ukázka"
+},
+"humpback": {
+"nm": "Keporkak",
+"sh": "zpěv",
+"t": "Zpěv keporkaka",
+"h": "V zimě v oblastech rozmnožování samci zpívají: sled stenů, mručení a výkřiků tvoří téma, které se hodiny opakuje beze změny a mění se z jedné sezóny na druhou. Hydrofony ho zachytí na desítky kilometrů.",
+"l": "Tlusté stopy s harmonickými, které pomalu stoupají nebo klesají mezi 100 Hz a několika kHz; stejný sled se vrátí po několika sekundách. Ozvěna od hladiny a dna každý tón prodlužuje."
+},
+"bluewhale": {
+"nm": "Plejtvák obrovský",
+"sh": "×10",
+"t": "Plejtvák obrovský: nejhlubší volání",
+"h": "Největší živočich na světě vydává velmi hluboká (10 až 40 Hz) a velmi silná volání, dlouhá 10 až 20 sekund a opakovaná celé hodiny: nesou se stovky kilometrů. Aby byla slyšet, nahrávka se desetkrát zrychlí.",
+"l": "Pulzní část a pak dlouhý tón, který jen nepatrně klesá, s harmonickými nad ním; sled se opakuje. Stupnice ukazuje skutečné kmitočty.",
+"n": "zrychleno 10×"
+},
+"finwhale": {
+"nm": "Plejtvák myšok",
+"sh": "20 Hz",
+"t": "Plejtvák myšok: impulzy 20 Hz",
+"h": "Plejtvák myšok vydává asi sekundové impulzy klesající zhruba z 25 na 18 Hz, v pravidelných odstupech, někdy celé dny. V 50. a 60. letech tyto „signály 20 Hz“ mátly odposlechové sítě amerického námořnictva, než byly přiřazeny tomuto plejtvákovi.",
+"l": "Krátké čárky, všechny stejné, v pravidelné řadě nebo ve dvojicích, jako tep velmi pomalého srdce; každá mírně klesá v kmitočtu. Stupnice ukazuje skutečné kmitočty.",
+"n": "zrychleno 10×"
+},
+"sperm": {
+"nm": "Vorvaň",
+"sh": "cvakání",
+"t": "Cvakání vorvaně",
+"h": "Vorvaň loví při hlubokých ponorech pomocí sonaru: velmi silná cvaknutí, asi jedno za sekundu, která se při přiblížení ke kořisti zrychlí ve „vrzání“. Mezi sebou si vorvani vyměňují „kódy“, krátké řady cvaknutí, jejichž rytmus se liší klan od klanu.",
+"l": "Vodorovné čáry přes celou šířku, pravidelně rozložené, pak nahuštěné do bzučení (vrzání) a nakonec malý rytmický vzor: kóda. Každé cvaknutí tvoří několik těsně po sobě jdoucích impulzů, vzniklých odrazy v hlavě zvířete."
+},
+"dolphin": {
+"nm": "Delfín skákavý",
+"sh": "pískání",
+"t": "Pískání a cvakání delfína",
+"h": "Delfín skákavý píská zhruba mezi 5 a 20 kHz; každý jedinec má „podpisový hvizd“, který mu slouží jako jméno. K lovu a orientaci vysílá také řady velmi krátkých cvaknutí, až několik set za sekundu.",
+"l": "Tenké křivky, které stoupají a zase klesají, často opakované beze změny, a dávky vodorovných čar pro echolokaci. Kmitočty jsou vyděleny třemi, aby byly slyšet; stupnice ukazuje skutečné hodnoty.",
+"n": "přehráno 3× níž"
+},
+"orca": {
+"nm": "Kosatka",
+"sh": "pulzní volání",
+"t": "Pulzní volání kosatky",
+"h": "Kosatky se dorozumívají pulzními voláními: řadami impulzů tak rychlými (500 až 2000 za sekundu), že je slyšíme jako tón, s náhlým skokem výšky. Každá rodinná skupina má svůj vlastní „dialekt“.",
+"l": "Svazek rovnoběžných stop (harmonických), které stoupají nebo klesají společně, s ostrým zlomem uprostřed volání; někdy tenký, vyšší hvizd."
+},
+"bseal": {
+"nm": "Tuleň vousatý",
+"sh": "trylek",
+"t": "Trylek tuleně vousatého",
+"h": "Na jaře pod arktickým ledem vydává samec dlouhé trylky, které ve spirále klesají z několika kHz až na pár set hertzů, někdy celou minutu. Slouží k obraně teritoria a k lákání samic.",
+"l": "Zvlněná křivka, která klouže po stupnici shora dolů jako povolující pružina, a na konci hluboký tón.",
+"n": "zkráceno"
+},
+"shrimp": {
+"nm": "Krevety pistolnice",
+"sh": "útes",
+"t": "Krevety pistolnice (Alpheidae)",
+"h": "Když kreveta prudce sevře velké klepeto, vystřelí proud vody tak rychle, že vznikne kavitační bublina; ta při zániku praskne jako výstřel. Tisíce krevet tvoří zvukové pozadí útesů a mohou rušit sonary.",
+"l": "Déšť teček a krátkých vodorovných čar přes celou šířku, bez jakéhokoli pořádku; ve sluchátkách nepřetržité praskání jako při smažení."
+},
+"sonar": {
+"nm": "Aktivní sonar",
+"sh": "ping",
+"t": "Ping aktivního sonaru",
+"h": "Loď vyšle silný zvukový impulz (zde kolem 3,5 kHz, v pásmu trupových sonarů fregat) a poslouchá ozvěnu: zpoždění udává vzdálenost, posun kmitočtu (Dopplerův jev) rychlost cíle. Zvuk se vrací i jako dozvuk ode dna a hladiny.",
+"l": "Krátká silná čára, dozvuk, který doznívá, a pak ozvěna, mnohem slabší a mírně posunutá v kmitočtu. Druhý ping je kmitočtový rozmítnutý signál (chirp), který lépe měří vzdálenost."
+},
+"propeller": {
+"nm": "Lodní šroub",
+"sh": "kavitace",
+"t": "Šroub proplouvající lodi",
+"h": "Listy šroubu vytvářejí kavitační bubliny, které praskají: široký šum, který pulzuje v rytmu míjejících listů. Strojovna přidává pevné čáry. Sonaristé tento rytmus analyzují (analýza DEMON), aby spočítali listy a otáčky a loď poznali.",
+"l": "Šum v širokém pásmu, pruhovaný vodorovnými pásy v rytmu listů, s několika pevnými svislými čarami (motor, převodovka). Vše zesílí a pak odezní, když loď přepluje nad hydrofonem."
+},
+"uqc": {
+"nm": "Podvodní telefon",
+"sh": "UQC 8 kHz",
+"t": "Podvodní telefon (UQC, „Gertrude“)",
+"h": "Ponorky a lodě spolu mluví pod vodou akustickým telefonem: hlas se přenáší jedním postranním pásmem nad nosnou 8,0875 kHz, vyzařovanou měničem v trupu. Dosah: několik kilometrů.",
+"l": "Pásmo hlasu SSB nad 8 kHz; po demodulaci vzdálený hlas, který se vlní a zní ozvěnami od hladiny a dna. Zobrazení je zmenšeno na polovinu; stupnice ukazuje skutečné kmitočty.",
+"n": "stupnice vydělena 2"
+},
+"zevs": {
+"nm": "ZEVS 82 Hz",
+"sh": "ELF",
+"t": "ZEVS: rádio pro ponorky na 82 Hz",
+"h": "Rádiové vlny pronikají do mořské vody jen velmi špatně, kromě extrémně nízkých kmitočtů (ELF). Ruský vysílač ZEVS na poloostrově Kola vysílá na 82 Hz anténními vedeními dlouhými desítky kilometrů, aby zastihl ponorky v hlubokém ponoru. Rychlost je nepatrná: několik znaků za minutu.",
+"l": "Tenká čára na 82 Hz vedle čáry sítě 50 Hz a jejích harmonických, s rušením od bouřek. Ve sluchátkách sotva slyšitelné hluboké bručení; zachytí se velkou rámovou anténou a zvukovou kartou. Americký protějšek na 76 Hz byl uzavřen v roce 2004."
+},
+"bloop": {
+"nm": "„Bloop“",
+"sh": "1997",
+"t": "„Bloop“ (1997)",
+"h": "V roce 1997 zachytily hydrofony NOAA v Tichém oceánu velmi hluboký, rychle stoupající zvuk, slyšitelný na tisíce kilometrů. Dlouho záhadný, od roku 2012 je připisován ledotřesení: obrovskému ledovci, který praská.",
+"l": "Široké pásmo, které během několika sekund stoupne, s harmonickými, a pak pomalu odezní. Rekonstrukce, zrychlená 16× jako nahrávka zveřejněná NOAA.",
+"n": "zrychleno 16×"
 }
 }
 }

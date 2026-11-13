@@ -57,7 +57,8 @@
 "Broadcast and time",
 "Wideband",
 "Bonus: sounds from space",
-"Bonus: shortwave curiosities"
+"Bonus: shortwave curiosities",
+"Bonus: underwater sounds"
 ],
 "modes": {
 "am": {
@@ -864,6 +865,103 @@
 "h": "The Pucheng station (Shaanxi) transmits in AM on 2.5, 5, 10 and 15 MHz: a 10 ms tick at 1000 Hz every second (300 ms on the minute) and, at certain minutes, 100 ms ticks for UT1 time. The call sign BPM is given in Morse, then by a voice.",
 "l": "In the demodulated sound: the call sign, then very short lines at 1000 Hz, one per second, with a longer one on the minute. Often mixed with WWV on the same frequencies.",
 "n": "condensed excerpt"
+},
+"humpback": {
+"nm": "Humpback whale",
+"sh": "song",
+"t": "The humpback whale's song",
+"h": "In winter, on the breeding grounds, the males sing: a sequence of moans, groans and cries forming a theme that is repeated identically for hours and changes from one season to the next. Hydrophones pick it up tens of kilometres away.",
+"l": "Thick traces with their harmonics, slowly rising or falling between 100 Hz and a few kHz; the same sequence comes back after a few seconds. Echoes from the surface and the seabed stretch every note."
+},
+"bluewhale": {
+"nm": "Blue whale",
+"sh": "×10",
+"t": "The blue whale: the deepest call",
+"h": "The largest animal on Earth makes very low (10 to 40 Hz) and very powerful calls, 10 to 20 seconds long and repeated for hours: they carry for hundreds of kilometres. To hear them, the recording is sped up ten times.",
+"l": "A pulsed part, then a long note that barely falls, with its harmonics above; the sequence repeats. The scale shows the real frequencies.",
+"n": "sped up 10×"
+},
+"finwhale": {
+"nm": "Fin whale",
+"sh": "20 Hz",
+"t": "The fin whale: the 20 Hz pulses",
+"h": "The fin whale makes pulses about one second long that fall from roughly 25 to 18 Hz, at regular intervals, sometimes for days. In the 1950s and 60s these “20 Hz signals” puzzled US Navy listening networks before being traced to this whale.",
+"l": "Short dashes, all alike, in a regular series or in pairs, like the beats of a very slow heart; each one falls slightly in frequency. The scale shows the real frequencies.",
+"n": "sped up 10×"
+},
+"sperm": {
+"nm": "Sperm whale",
+"sh": "clicks",
+"t": "Sperm whale clicks",
+"h": "The sperm whale hunts on deep dives using sonar: very powerful clicks, about one per second, that speed up into a “creak” as it closes in on prey. Between dives, sperm whales exchange “codas”, short series of clicks whose rhythm differs from clan to clan.",
+"l": "Horizontal lines across the full width, evenly spaced, then crowded into a buzz (the creak), then a small rhythmic pattern: the coda. Each click is made of several closely spaced pulses, caused by reflections inside the animal's head."
+},
+"dolphin": {
+"nm": "Bottlenose dolphin",
+"sh": "whistles",
+"t": "Dolphin whistles and clicks",
+"h": "The bottlenose dolphin whistles between about 5 and 20 kHz; each animal has a “signature whistle” that works as its name. To hunt and find its way it also sends trains of very short clicks, up to several hundred per second.",
+"l": "Thin curves that rise and fall back, often repeated identically, and bursts of horizontal lines for echolocation. Frequencies are divided by 3 to stay audible; the scale shows the real values.",
+"n": "played 3× lower"
+},
+"orca": {
+"nm": "Orca",
+"sh": "pulsed calls",
+"t": "Orca pulsed calls",
+"h": "Orcas communicate with pulsed calls: trains of pulses so fast (500 to 2000 per second) that they are heard as a note, with a sudden jump in pitch. Each family group has its own “dialect”.",
+"l": "A stack of parallel traces (the harmonics) rising or falling together, with a sharp break in the middle of the call; sometimes a thin, higher whistle."
+},
+"bseal": {
+"nm": "Bearded seal",
+"sh": "trill",
+"t": "The bearded seal's trill",
+"h": "In spring, under the Arctic sea ice, the male makes long trills that spiral down from several kHz to a few hundred hertz, sometimes for a whole minute. They defend a territory and attract females.",
+"l": "A wavy curve gliding from the top of the scale to the bottom, like a spring uncoiling, then a low note at the end.",
+"n": "shortened"
+},
+"shrimp": {
+"nm": "Snapping shrimp",
+"sh": "reef",
+"t": "Snapping shrimp (pistol shrimp)",
+"h": "When it snaps its big claw shut, the shrimp shoots out a jet of water so fast that it forms a cavitation bubble; when the bubble collapses it cracks like a gunshot. Thousands of shrimp make the background noise of reefs and can disturb sonar.",
+"l": "A shower of dots and short lines across the full width, with no order at all; in headphones, a continuous crackle like frying."
+},
+"sonar": {
+"nm": "Active sonar",
+"sh": "ping",
+"t": "An active sonar ping",
+"h": "A ship sends a powerful sound pulse (here near 3.5 kHz, the range of frigate hull sonars) and listens for the echo: the delay gives the range, the frequency shift (Doppler effect) the target's speed. Sound also comes back as a tail from the seabed and the surface: reverberation.",
+"l": "A short, strong trace, a tail that fades away, then the echo, much weaker and slightly shifted in frequency. The second ping is a frequency sweep (chirp), which measures range better."
+},
+"propeller": {
+"nm": "Ship propeller",
+"sh": "cavitation",
+"t": "The propeller of a passing ship",
+"h": "The propeller blades create cavitation bubbles that collapse: a wide hiss, beating at the rate the blades go by. The machinery adds fixed lines. Sonar operators analyse this rhythm (DEMON analysis) to count the blades and the shaft speed, and identify the ship.",
+"l": "A hiss over a wide band, striped with horizontal bands at the blade rate, with a few fixed vertical lines (engine, gearbox). It all grows, then dies away as the ship passes over the hydrophone."
+},
+"uqc": {
+"nm": "Underwater telephone",
+"sh": "UQC 8 kHz",
+"t": "The underwater telephone (UQC, “Gertrude”)",
+"h": "Submarines and ships talk underwater with an acoustic telephone: the voice is sent as single sideband above an 8.0875 kHz carrier, radiated by a transducer in the hull. Range: a few kilometres.",
+"l": "An SSB voice band above 8 kHz; demodulated, a distant voice that wobbles and rings because of echoes from the surface and the seabed. The display is halved; the scale shows the real frequencies.",
+"n": "scale halved"
+},
+"zevs": {
+"nm": "ZEVS 82 Hz",
+"sh": "ELF",
+"t": "ZEVS: submarine radio at 82 Hz",
+"h": "Radio waves barely penetrate seawater, except at extremely low frequencies (ELF). The Russian ZEVS transmitter on the Kola Peninsula sends at 82 Hz through antenna lines tens of kilometres long to reach deeply submerged submarines. The data rate is tiny: a few characters per minute.",
+"l": "A thin line at 82 Hz next to the 50 Hz mains line and its harmonics, with static from thunderstorms. In headphones, a barely audible low hum; it can be received with a large loop and a sound card. The American equivalent, at 76 Hz, shut down in 2004."
+},
+"bloop": {
+"nm": "The “Bloop”",
+"sh": "1997",
+"t": "The “Bloop” (1997)",
+"h": "In 1997, NOAA hydrophones in the Pacific picked up a very low sound that rose quickly, heard thousands of kilometres away. Long a mystery, since 2012 it has been put down to an icequake: a huge iceberg cracking.",
+"l": "A wide band that rises within a few seconds, with its harmonics, then slowly dies away. A reconstruction, sped up 16 times like the recording NOAA released.",
+"n": "sped up 16×"
 }
 }
 }

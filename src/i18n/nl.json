@@ -57,7 +57,8 @@
 "Omroep en tijd",
 "Breedband",
 "Bonus: geluiden uit de ruimte",
-"Bonus: curiosa op kortegolf"
+"Bonus: curiosa op kortegolf",
+"Bonus: onderwatergeluiden"
 ],
 "modes": {
 "am": {
@@ -864,6 +865,103 @@
 "h": "Het station Pucheng (Shaanxi) zendt in AM op 2,5, 5, 10 en 15 MHz: elke seconde een tik van 10 ms op 1000 Hz (300 ms op de minuut) en, op bepaalde minuten, tikken van 100 ms voor de UT1-tijd. De roepnaam BPM komt in morse en daarna met een stem.",
 "l": "In het gedemoduleerde geluid: de roepnaam, dan heel korte streepjes op 1000 Hz, één per seconde, met een langere op de minuut. Vaak gemengd met WWV op dezelfde frequenties.",
 "n": "ingekort fragment"
+},
+"humpback": {
+"nm": "Bultrug",
+"sh": "zang",
+"t": "De zang van de bultrug",
+"h": "In de winter zingen de mannetjes in de voortplantingsgebieden: een reeks kreunen, brommen en roepen die een thema vormt, urenlang gelijk herhaald en van seizoen tot seizoen anders. Hydrofoons horen hem op tientallen kilometers.",
+"l": "Dikke sporen met hun harmonischen, die langzaam stijgen of dalen tussen 100 Hz en enkele kHz; dezelfde reeks komt na een paar seconden terug. Echo's van het oppervlak en de bodem rekken elke noot."
+},
+"bluewhale": {
+"nm": "Blauwe vinvis",
+"sh": "×10",
+"t": "De blauwe vinvis: de laagste roep",
+"h": "Het grootste dier ter wereld maakt zeer lage (10 tot 40 Hz) en zeer krachtige roepen, 10 tot 20 seconden lang en urenlang herhaald: ze dragen honderden kilometers ver. Om ze te horen wordt de opname tien keer versneld.",
+"l": "Een gepulst deel, dan een lange toon die nauwelijks daalt, met zijn harmonischen erboven; de reeks herhaalt zich. De schaal geeft de echte frequenties.",
+"n": "10× versneld"
+},
+"finwhale": {
+"nm": "Gewone vinvis",
+"sh": "20 Hz",
+"t": "De gewone vinvis: de pulsen van 20 Hz",
+"h": "De gewone vinvis maakt pulsen van ongeveer een seconde die van zo'n 25 naar 18 Hz dalen, met regelmatige tussenpozen, soms dagenlang. In de jaren 1950-60 verbaasden deze „20 Hz-signalen” de luisternetten van de Amerikaanse marine, tot ze aan deze walvis werden toegeschreven.",
+"l": "Korte streepjes, allemaal gelijk, in een regelmatige reeks of per paar, als de slagen van een heel traag hart; elk daalt licht in frequentie. De schaal geeft de echte frequenties.",
+"n": "10× versneld"
+},
+"sperm": {
+"nm": "Potvis",
+"sh": "klikken",
+"t": "De klikken van de potvis",
+"h": "De potvis jaagt tijdens diepe duiken met zijn sonar: zeer krachtige klikken, ongeveer één per seconde, die versnellen tot een „kraken” als hij zijn prooi nadert. Onderling wisselen potvissen „coda's” uit, korte klikreeksen waarvan het ritme per clan verschilt.",
+"l": "Horizontale strepen over de hele breedte, regelmatig verdeeld, dan dicht opeen tot een zoemen (het kraken), dan een klein ritmisch patroon: de coda. Elke klik bestaat uit meerdere vlak opeenvolgende pulsen, door weerkaatsingen in de kop van het dier."
+},
+"dolphin": {
+"nm": "Tuimelaar",
+"sh": "fluiten",
+"t": "Fluitjes en klikken van de dolfijn",
+"h": "De tuimelaar fluit tussen ongeveer 5 en 20 kHz; elk dier heeft een „signatuurfluit” die als naam dient. Om te jagen en zich te oriënteren zendt hij ook reeksen heel korte klikken uit, tot enkele honderden per seconde.",
+"l": "Dunne curven die stijgen en weer dalen, vaak gelijk herhaald, en salvo's horizontale strepen voor echolocatie. De frequenties zijn door 3 gedeeld om hoorbaar te blijven; de schaal geeft de echte waarden.",
+"n": "3× lager afgespeeld"
+},
+"orca": {
+"nm": "Orka",
+"sh": "pulsroepen",
+"t": "De pulsroepen van de orka",
+"h": "Orka's communiceren met gepulste roepen: reeksen pulsen zo snel (500 tot 2000 per seconde) dat je ze als een toon hoort, met een plotse sprong in toonhoogte. Elke familiegroep heeft zijn eigen „dialect”.",
+"l": "Een stapel evenwijdige sporen (de harmonischen) die samen stijgen of dalen, met een scherpe knik midden in de roep; soms een dun, hoger fluitje."
+},
+"bseal": {
+"nm": "Baardrob",
+"sh": "triller",
+"t": "De triller van de baardrob",
+"h": "In de lente, onder het Arctische pakijs, maakt het mannetje lange trillers die spiraalsgewijs dalen van enkele kHz tot een paar honderd hertz, soms een hele minuut lang. Ze dienen om een territorium te verdedigen en vrouwtjes te lokken.",
+"l": "Een golvende curve die van boven naar onder over de schaal glijdt, als een veer die ontspant, en een lage toon aan het eind.",
+"n": "ingekort"
+},
+"shrimp": {
+"nm": "Pistoolgarnalen",
+"sh": "rif",
+"t": "Pistoolgarnalen (knalkreeftjes)",
+"h": "Als de garnaal zijn grote schaar dichtklapt, schiet hij een waterstraal zo snel weg dat er een cavitatiebel ontstaat; als die implodeert, knalt ze als een schot. Duizenden garnalen vormen het achtergrondgeluid van riffen en kunnen sonar storen.",
+"l": "Een regen van stippen en korte horizontale streepjes over de hele breedte, zonder enige orde; in de koptelefoon een voortdurend geknetter, als bakken in de pan."
+},
+"sonar": {
+"nm": "Actieve sonar",
+"sh": "ping",
+"t": "De ping van een actieve sonar",
+"h": "Een schip zendt een krachtige geluidspuls uit (hier rond 3,5 kHz, het bereik van de rompsonars van fregatten) en luistert naar de echo: de vertraging geeft de afstand, de frequentieverschuiving (dopplereffect) de snelheid van het doel. Het geluid komt ook als een sleep terug van bodem en oppervlak: de nagalm.",
+"l": "Een korte, sterke streep, een sleep die uitdooft, dan de echo, veel zwakker en iets verschoven in frequentie. De tweede ping is een frequentiezwaai (chirp), die de afstand beter meet."
+},
+"propeller": {
+"nm": "Scheepsschroef",
+"sh": "cavitatie",
+"t": "De schroef van een passerend schip",
+"h": "De schroefbladen veroorzaken cavitatiebellen die imploderen: een breed geruis dat klopt op het ritme van de voorbijkomende bladen. De machines voegen vaste lijnen toe. Sonaroperators analyseren dat ritme (DEMON-analyse) om bladen en toerental te tellen en het schip te herkennen.",
+"l": "Geruis over een brede band, gestreept met horizontale banden op het ritme van de bladen, met enkele vaste verticale lijnen (motor, tandwielkast). Alles zwelt aan en dooft dan uit als het schip over de hydrofoon vaart."
+},
+"uqc": {
+"nm": "Onderwatertelefoon",
+"sh": "UQC 8 kHz",
+"t": "De onderwatertelefoon (UQC, „Gertrude”)",
+"h": "Onderzeeërs en schepen praten onder water met een akoestische telefoon: de stem wordt als enkelzijband boven een draaggolf van 8,0875 kHz verzonden, uitgestraald door een transducer in de romp. Bereik: enkele kilometers.",
+"l": "Een SSB-spraakband boven 8 kHz; gedemoduleerd een verre stem die golft en galmt door echo's van oppervlak en bodem. De weergave is gehalveerd; de schaal geeft de echte frequenties.",
+"n": "schaal gehalveerd"
+},
+"zevs": {
+"nm": "ZEVS 82 Hz",
+"sh": "ELF",
+"t": "ZEVS: radio voor onderzeeërs op 82 Hz",
+"h": "Radiogolven dringen nauwelijks door in zeewater, behalve bij extreem lage frequenties (ELF). De Russische zender ZEVS op het schiereiland Kola zendt op 82 Hz via antennelijnen van tientallen kilometers om diep gedoken onderzeeërs te bereiken. De snelheid is piepklein: een paar tekens per minuut.",
+"l": "Een dunne lijn op 82 Hz naast de 50 Hz-netlijn en haar harmonischen, met storingen van onweer. In de koptelefoon een nauwelijks hoorbaar laag brommen; te ontvangen met een grote raamantenne en een geluidskaart. Het Amerikaanse equivalent op 76 Hz sloot in 2004."
+},
+"bloop": {
+"nm": "De „Bloop”",
+"sh": "1997",
+"t": "De „Bloop” (1997)",
+"h": "In 1997 vingen hydrofoons van de NOAA in de Stille Oceaan een zeer laag, snel stijgend geluid op, dat duizenden kilometers ver te horen was. Lang een raadsel, sinds 2012 toegeschreven aan een ijsbeving: een enorme ijsberg die scheurt.",
+"l": "Een brede band die in een paar seconden stijgt, met zijn harmonischen, en dan langzaam uitdooft. Reconstructie, 16× versneld zoals de opname die de NOAA uitbracht.",
+"n": "16× versneld"
 }
 }
 }

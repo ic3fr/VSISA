@@ -57,7 +57,8 @@
 "Radiodiffusione e ora",
 "Banda larga",
 "Bonus: suoni dallo spazio",
-"Bonus: curiosità delle onde corte"
+"Bonus: curiosità delle onde corte",
+"Bonus: suoni sottomarini"
 ],
 "modes": {
 "am": {
@@ -863,6 +864,103 @@
 "h": "La stazione di Pucheng (Shaanxi) trasmette in AM su 2,5, 5, 10 e 15 MHz: un tic di 10 ms a 1000 Hz ogni secondo (300 ms al minuto) e, in certi minuti, tic di 100 ms per il tempo UT1. Il nominativo BPM è dato in Morse e poi a voce.",
 "l": "Nel suono demodulato: il nominativo, poi righe cortissime a 1000 Hz, una al secondo, con una più lunga al minuto. Spesso mescolata a WWV sulle stesse frequenze.",
 "n": "estratto condensato"
+},
+"humpback": {
+"nm": "Megattera",
+"sh": "canto",
+"t": "Il canto della megattera",
+"h": "In inverno, nelle zone di riproduzione, i maschi cantano: una serie di lamenti, brontolii e grida che forma un tema, ripetuto identico per ore e che cambia da una stagione all'altra. Gli idrofoni lo sentono a decine di chilometri.",
+"l": "Tratti spessi con le loro armoniche, che salgono o scendono lentamente tra 100 Hz e qualche kHz; la stessa serie ritorna dopo pochi secondi. L'eco sulla superficie e sul fondo allunga ogni nota."
+},
+"bluewhale": {
+"nm": "Balenottera azzurra",
+"sh": "×10",
+"t": "La balenottera azzurra: il richiamo più grave",
+"h": "L'animale più grande del mondo emette richiami molto gravi (da 10 a 40 Hz) e molto potenti, lunghi da 10 a 20 secondi e ripetuti per ore: arrivano a centinaia di chilometri. Per sentirli, la registrazione viene accelerata dieci volte.",
+"l": "Una parte pulsata, poi una lunga nota che scende appena, con le armoniche sopra; la sequenza si ripete. La scala indica le frequenze reali.",
+"n": "accelerato 10 volte"
+},
+"finwhale": {
+"nm": "Balenottera comune",
+"sh": "20 Hz",
+"t": "La balenottera comune: gli impulsi a 20 Hz",
+"h": "La balenottera comune emette impulsi di circa un secondo che scendono da circa 25 a 18 Hz, a intervalli regolari, a volte per giorni. Negli anni '50 e '60 questi «segnali a 20 Hz» incuriosirono le reti d'ascolto della marina statunitense prima di essere attribuiti a questa balena.",
+"l": "Brevi trattini tutti uguali, in serie regolare o a coppie, come i battiti di un cuore lentissimo; ognuno scende un poco di frequenza. La scala indica le frequenze reali.",
+"n": "accelerato 10 volte"
+},
+"sperm": {
+"nm": "Capodoglio",
+"sh": "clic",
+"t": "I clic del capodoglio",
+"h": "Il capodoglio caccia in immersione profonda con il suo sonar: clic potentissimi, circa uno al secondo, che accelerano in uno «scricchiolio» quando si avvicina alla preda. Tra loro i capodogli si scambiano «code», brevi serie di clic il cui ritmo varia da un clan all'altro.",
+"l": "Tratti orizzontali su tutta la larghezza, regolarmente distanziati, poi fitti in un ronzio (lo scricchiolio), poi un piccolo motivo ritmico: la coda. Ogni clic è fatto di più impulsi ravvicinati, dovuti alle riflessioni nella testa dell'animale."
+},
+"dolphin": {
+"nm": "Tursiope",
+"sh": "fischi",
+"t": "Fischi e clic del delfino",
+"h": "Il tursiope fischia tra circa 5 e 20 kHz; ogni individuo ha un «fischio firma» che gli fa da nome. Per cacciare e orientarsi emette anche treni di clic brevissimi, fino a diverse centinaia al secondo.",
+"l": "Curve sottili che salgono e riscendono, spesso ripetute identiche, e raffiche di tratti orizzontali per l'ecolocalizzazione. Le frequenze sono divise per 3 per restare udibili; la scala indica i valori reali.",
+"n": "suonato 3 volte più grave"
+},
+"orca": {
+"nm": "Orca",
+"sh": "richiami pulsati",
+"t": "I richiami pulsati dell'orca",
+"h": "Le orche comunicano con richiami pulsati: treni di impulsi così rapidi (da 500 a 2000 al secondo) da essere percepiti come una nota, con un salto brusco di altezza. Ogni gruppo familiare ha il suo «dialetto».",
+"l": "Una pila di tratti paralleli (le armoniche) che salgono o scendono insieme, con una rottura netta a metà del richiamo; a volte un fischio sottile e più acuto."
+},
+"bseal": {
+"nm": "Foca barbata",
+"sh": "trillo",
+"t": "Il trillo della foca barbata",
+"h": "In primavera, sotto la banchisa artica, il maschio emette lunghi trilli che scendono a spirale da diversi kHz fino a qualche centinaio di hertz, a volte per un minuto. Servono a difendere un territorio e ad attirare le femmine.",
+"l": "Una curva ondulata che scivola dall'alto in basso della scala, come una molla che si distende, poi una nota grave alla fine.",
+"n": "accorciato"
+},
+"shrimp": {
+"nm": "Gamberi pistola",
+"sh": "scogliera",
+"t": "I gamberi pistola (alfeidi)",
+"h": "Chiudendo di scatto la grossa chela, il gambero spara un getto d'acqua così veloce da creare una bolla di cavitazione; implodendo, la bolla schiocca come un colpo di pistola. Migliaia di gamberi formano il rumore di fondo delle scogliere e possono disturbare i sonar.",
+"l": "Una pioggia di punti e brevi tratti orizzontali su tutta la larghezza, senza alcun ordine; in cuffia, un crepitio continuo come una frittura."
+},
+"sonar": {
+"nm": "Sonar attivo",
+"sh": "ping",
+"t": "Il ping di un sonar attivo",
+"h": "Una nave invia un potente impulso sonoro (qui verso 3,5 kHz, la gamma dei sonar di scafo delle fregate) e ascolta l'eco: il ritardo dà la distanza, lo spostamento di frequenza (effetto Doppler) la velocità del bersaglio. Il suono torna anche come una coda dal fondo e dalla superficie: il riverbero.",
+"l": "Un tratto breve e forte, una coda che si spegne, poi l'eco, molto più debole e un po' spostato in frequenza. Il secondo ping è una spazzata di frequenza (chirp), che misura meglio la distanza."
+},
+"propeller": {
+"nm": "Elica di nave",
+"sh": "cavitazione",
+"t": "L'elica di una nave che passa",
+"h": "Le pale dell'elica creano bolle di cavitazione che implodono: un soffio largo, che pulsa al ritmo del passaggio delle pale. Le macchine aggiungono righe fisse. I sonaristi analizzano questo ritmo (analisi DEMON) per contare le pale e la velocità di rotazione, e riconoscere la nave.",
+"l": "Un soffio su una banda larga, striato da bande orizzontali al ritmo delle pale, con alcuni tratti verticali fissi (motore, riduttore). Tutto cresce e poi si spegne quando la nave passa sopra l'idrofono."
+},
+"uqc": {
+"nm": "Telefono subacqueo",
+"sh": "UQC 8 kHz",
+"t": "Il telefono subacqueo (UQC, «Gertrude»)",
+"h": "Sottomarini e navi si parlano sott'acqua con un telefono acustico: la voce viene trasmessa in banda laterale unica sopra una portante di 8,0875 kHz, emessa da un trasduttore nello scafo. Portata: qualche chilometro.",
+"l": "Una banda di voce SSB sopra gli 8 kHz; demodulata, una voce lontana che ondeggia e risuona per gli echi su superficie e fondo. La visualizzazione è dimezzata; la scala indica le frequenze reali.",
+"n": "scala dimezzata"
+},
+"zevs": {
+"nm": "ZEVS 82 Hz",
+"sh": "ELF",
+"t": "ZEVS: la radio dei sottomarini a 82 Hz",
+"h": "Le onde radio penetrano pochissimo nell'acqua di mare, tranne alle frequenze estremamente basse (ELF). Il trasmettitore russo ZEVS, nella penisola di Kola, trasmette a 82 Hz con linee d'antenna lunghe decine di chilometri per raggiungere i sottomarini in immersione profonda. La velocità è minima: pochi caratteri al minuto.",
+"l": "Un tratto sottile a 82 Hz accanto alla riga di rete a 50 Hz e alle sue armoniche, con i disturbi dei temporali. In cuffia, un ronzio grave appena udibile; si riceve con un grande telaio e una scheda audio. L'equivalente americano, a 76 Hz, ha chiuso nel 2004."
+},
+"bloop": {
+"nm": "Il «Bloop»",
+"sh": "1997",
+"t": "Il «Bloop» (1997)",
+"h": "Nel 1997 gli idrofoni della NOAA nel Pacifico captarono un suono molto grave che saliva rapidamente, udito a migliaia di chilometri. A lungo misterioso, dal 2012 è attribuito a un terremoto di ghiaccio: un enorme iceberg che si spacca.",
+"l": "Una banda larga che sale in pochi secondi, con le sue armoniche, poi si spegne lentamente. Ricostruzione, accelerata 16 volte come la registrazione diffusa dalla NOAA.",
+"n": "accelerato 16 volte"
 }
 }
 }

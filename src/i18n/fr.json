@@ -57,7 +57,8 @@
 "Diffusion et temps",
 "Large bande",
 "Bonus : sons de l'espace",
-"Bonus : curiosités des ondes courtes"
+"Bonus : curiosités des ondes courtes",
+"Bonus : sons sous-marins"
 ],
 "modes": {
 "406": {
@@ -930,6 +931,103 @@
 "h": "La station de Pucheng (Shaanxi) émet en AM sur 2,5, 5, 10 et 15 MHz : un top de 10 ms à 1000 Hz chaque seconde (300 ms à la minute) et, à certaines minutes, des tops de 100 ms pour le temps UT1. L'indicatif BPM est donné en Morse, puis par une voix.",
 "l": "Dans le son démodulé : l'indicatif, puis de très courts traits à 1000 Hz, un par seconde, avec un plus long à la minute. Souvent mêlé à WWV, sur les mêmes fréquences.",
 "n": "extrait condensé"
+},
+"humpback": {
+"nm": "Baleine à bosse",
+"sh": "chant",
+"t": "Le chant de la baleine à bosse",
+"h": "En hiver, sur les lieux de reproduction, les mâles chantent : une suite de gémissements, de grondements et de cris qui forme un thème, répété à l'identique pendant des heures et qui change d'une saison à l'autre. Les hydrophones l'entendent à des dizaines de kilomètres.",
+"l": "Des traits épais avec leurs harmoniques, qui montent ou descendent lentement entre 100 Hz et quelques kHz ; la même suite revient après quelques secondes. L'écho sur la surface et le fond prolonge chaque note."
+},
+"bluewhale": {
+"nm": "Rorqual bleu",
+"sh": "×10",
+"t": "Le rorqual bleu : l'appel le plus grave",
+"h": "Le plus grand animal du monde émet des appels très graves (10 à 40 Hz) et très puissants, longs de 10 à 20 secondes et répétés pendant des heures : ils portent à des centaines de kilomètres. Pour les entendre, on accélère l'enregistrement dix fois.",
+"l": "Une partie pulsée, puis une longue note qui descend à peine, avec ses harmoniques au-dessus ; la séquence se répète. La règle donne les vraies fréquences.",
+"n": "accéléré 10 fois"
+},
+"finwhale": {
+"nm": "Rorqual commun",
+"sh": "20 Hz",
+"t": "Le rorqual commun : les impulsions à 20 Hz",
+"h": "Le rorqual commun émet des impulsions d'environ une seconde qui descendent d'environ 25 à 18 Hz, à intervalles réguliers, parfois pendant des jours. Dans les années 1950-60, ces « signaux à 20 Hz » ont intrigué les réseaux d'écoute de la marine américaine avant d'être attribués à ce rorqual.",
+"l": "De petits traits courts, tous pareils, en série régulière ou par paires, comme les battements d'un cœur très lent ; chacun descend légèrement en fréquence. La règle donne les vraies fréquences.",
+"n": "accéléré 10 fois"
+},
+"sperm": {
+"nm": "Cachalot",
+"sh": "clics",
+"t": "Les clics du cachalot",
+"h": "Le cachalot chasse en plongée profonde grâce à son sonar : des clics très puissants, environ un par seconde, qui s'accélèrent en « grincement » à l'approche d'une proie. Entre eux, les cachalots échangent des « codas », de courtes séries de clics dont le rythme varie d'un clan à l'autre.",
+"l": "Des traits horizontaux sur toute la largeur, régulièrement espacés, puis serrés en bourdonnement (le grincement), puis un petit motif rythmé : la coda. Chaque clic est fait de plusieurs impulsions rapprochées, dues aux réflexions dans la tête de l'animal."
+},
+"dolphin": {
+"nm": "Grand dauphin",
+"sh": "sifflements",
+"t": "Sifflements et clics du dauphin",
+"h": "Le grand dauphin siffle entre 5 et 20 kHz environ ; chaque individu a un « sifflement signature » qui lui sert de nom. Pour chasser et s'orienter, il émet aussi des trains de clics très brefs, jusqu'à plusieurs centaines par seconde.",
+"l": "Des courbes fines qui montent et redescendent, souvent répétées à l'identique, et des rafales de traits horizontaux pour l'écholocation. Les fréquences sont divisées par 3 pour rester audibles ; la règle donne les vraies valeurs.",
+"n": "joué 3 fois plus grave"
+},
+"orca": {
+"nm": "Orque",
+"sh": "cris pulsés",
+"t": "Les cris pulsés de l'orque",
+"h": "Les orques communiquent par des cris pulsés : des trains d'impulsions si rapides (500 à 2000 par seconde) qu'on les entend comme une note, avec un saut de hauteur brusque. Chaque groupe familial a son propre « dialecte ».",
+"l": "Un empilement de traits parallèles (les harmoniques) qui montent ou descendent ensemble, avec une cassure nette au milieu du cri ; parfois un sifflement fin, plus aigu."
+},
+"bseal": {
+"nm": "Phoque barbu",
+"sh": "trille",
+"t": "Le trille du phoque barbu",
+"h": "Au printemps, sous la banquise arctique, le mâle émet de longs trilles qui descendent en spirale de plusieurs kHz jusqu'à quelques centaines de hertz, pendant parfois une minute. Ils servent à défendre un territoire et à attirer les femelles.",
+"l": "Une courbe ondulée qui glisse du haut vers le bas de l'échelle, comme un ressort qui se détend, puis une note grave à la fin.",
+"n": "raccourci"
+},
+"shrimp": {
+"nm": "Crevettes-pistolets",
+"sh": "récif",
+"t": "Les crevettes-pistolets (alphées)",
+"h": "En refermant sa grosse pince, l'alphée projette un jet d'eau si rapide qu'il crée une bulle de cavitation ; en éclatant, la bulle claque comme un coup de feu. Des milliers de crevettes font le fond sonore des récifs et peuvent gêner les sonars.",
+"l": "Une pluie de points et de petits traits horizontaux sur toute la largeur, sans aucun ordre ; au casque, un crépitement continu, comme une friture."
+},
+"sonar": {
+"nm": "Sonar actif",
+"sh": "ping",
+"t": "Le ping d'un sonar actif",
+"h": "Un navire envoie une impulsion sonore puissante (ici vers 3,5 kHz, la gamme des sonars de coque des frégates) et écoute l'écho : le délai donne la distance, le décalage de fréquence (effet Doppler) la vitesse de la cible. Le son revient aussi en traînée depuis le fond et la surface : c'est la réverbération.",
+"l": "Un trait court et fort, une traînée qui s'éteint, puis l'écho, bien plus faible et un peu décalé en fréquence. Le second ping est un balayage de fréquence (chirp), qui mesure mieux la distance."
+},
+"propeller": {
+"nm": "Hélice de navire",
+"sh": "cavitation",
+"t": "L'hélice d'un navire qui passe",
+"h": "Les pales de l'hélice créent des bulles de cavitation qui éclatent : un souffle large, battu au rythme du passage des pales. Les machines ajoutent des raies fixes. Les sonaristes analysent ce rythme (analyse DEMON) pour compter les pales et la vitesse de rotation, et reconnaître le navire.",
+"l": "Un souffle sur une large bande, strié de bandes horizontales au rythme des pales, avec quelques traits verticaux fixes (moteur, réducteur). Le tout monte puis s'éteint quand le navire passe au-dessus de l'hydrophone."
+},
+"uqc": {
+"nm": "Téléphone sous-marin",
+"sh": "UQC 8 kHz",
+"t": "Le téléphone sous-marin (UQC, « Gertrude »)",
+"h": "Les sous-marins et les navires se parlent sous l'eau avec un téléphone acoustique : la voix est transmise en bande latérale unique au-dessus d'une porteuse de 8,0875 kHz, émise par un transducteur dans la coque. Portée : quelques kilomètres.",
+"l": "Une bande de voix BLU au-dessus de 8 kHz ; démodulée, une voix lointaine qui ondule et résonne à cause des échos sur la surface et le fond. L'affichage est réduit de moitié ; la règle donne les vraies fréquences.",
+"n": "échelle divisée par 2"
+},
+"zevs": {
+"nm": "ZEVS 82 Hz",
+"sh": "ELF",
+"t": "ZEVS : la radio des sous-marins à 82 Hz",
+"h": "Les ondes radio pénètrent très mal l'eau de mer, sauf aux fréquences extrêmement basses (ELF). L'émetteur russe ZEVS, dans la péninsule de Kola, émet à 82 Hz avec des lignes d'antenne de plusieurs dizaines de kilomètres pour joindre les sous-marins en plongée profonde. Le débit est minuscule : quelques caractères par minute.",
+"l": "Un trait fin à 82 Hz, à côté de la raie du secteur à 50 Hz et de ses harmoniques, avec les parasites des orages. Au casque, un bourdonnement grave à peine audible ; on le capte avec une grande boucle et une carte son. L'équivalent américain, à 76 Hz, a fermé en 2004."
+},
+"bloop": {
+"nm": "Le « Bloop »",
+"sh": "1997",
+"t": "Le « Bloop » (1997)",
+"h": "En 1997, les hydrophones de la NOAA dans le Pacifique ont capté un son très grave qui montait rapidement, entendu à plusieurs milliers de kilomètres. Longtemps mystérieux, il est attribué depuis 2012 à un tremblement de glace : un énorme iceberg qui se fissure.",
+"l": "Une large bande qui monte en quelques secondes, avec ses harmoniques, puis s'éteint lentement. Reconstitution, accélérée 16 fois comme l'enregistrement diffusé par la NOAA.",
+"n": "accéléré 16 fois"
 }
 }
 }

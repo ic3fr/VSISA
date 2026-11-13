@@ -57,7 +57,8 @@
 "Radiodifusión y hora",
 "Banda ancha",
 "Bonus: sonidos del espacio",
-"Bonus: curiosidades de onda corta"
+"Bonus: curiosidades de onda corta",
+"Bonus: sonidos submarinos"
 ],
 "modes": {
 "am": {
@@ -863,6 +864,103 @@
 "h": "La estación de Pucheng (Shaanxi) emite en AM en 2,5, 5, 10 y 15 MHz: un tic de 10 ms a 1000 Hz cada segundo (300 ms en el minuto) y, en ciertos minutos, tics de 100 ms para el tiempo UT1. El indicativo BPM se da en Morse y luego con una voz.",
 "l": "En el sonido demodulado: el indicativo y luego rayas muy cortas a 1000 Hz, una por segundo, con una más larga en el minuto. A menudo mezclada con WWV en las mismas frecuencias.",
 "n": "extracto condensado"
+},
+"humpback": {
+"nm": "Ballena jorobada",
+"sh": "canto",
+"t": "El canto de la ballena jorobada",
+"h": "En invierno, en las zonas de reproducción, los machos cantan: una serie de gemidos, gruñidos y gritos que forma un tema, repetido igual durante horas y que cambia de una temporada a otra. Los hidrófonos lo oyen a decenas de kilómetros.",
+"l": "Trazos gruesos con sus armónicos, que suben o bajan lentamente entre 100 Hz y unos kHz; la misma serie vuelve a los pocos segundos. El eco en la superficie y el fondo alarga cada nota."
+},
+"bluewhale": {
+"nm": "Ballena azul",
+"sh": "×10",
+"t": "La ballena azul: la llamada más grave",
+"h": "El animal más grande del mundo emite llamadas muy graves (10 a 40 Hz) y muy potentes, de 10 a 20 segundos, repetidas durante horas: llegan a cientos de kilómetros. Para oírlas, la grabación se acelera diez veces.",
+"l": "Una parte pulsada y luego una nota larga que apenas baja, con sus armónicos encima; la secuencia se repite. La escala muestra las frecuencias reales.",
+"n": "acelerado 10 veces"
+},
+"finwhale": {
+"nm": "Rorcual común",
+"sh": "20 Hz",
+"t": "El rorcual común: los pulsos de 20 Hz",
+"h": "El rorcual común emite pulsos de un segundo que bajan de unos 25 a 18 Hz, a intervalos regulares, a veces durante días. En los años 1950-60 estas «señales de 20 Hz» intrigaron a las redes de escucha de la marina estadounidense antes de atribuirse a este rorcual.",
+"l": "Trazos cortos, todos iguales, en serie regular o por parejas, como los latidos de un corazón muy lento; cada uno baja un poco de frecuencia. La escala muestra las frecuencias reales.",
+"n": "acelerado 10 veces"
+},
+"sperm": {
+"nm": "Cachalote",
+"sh": "clics",
+"t": "Los clics del cachalote",
+"h": "El cachalote caza en inmersión profunda con su sonar: clics muy potentes, uno por segundo aproximadamente, que se aceleran en un «crujido» al acercarse a la presa. Entre ellos intercambian «codas», series cortas de clics cuyo ritmo cambia de un clan a otro.",
+"l": "Trazos horizontales en todo el ancho, regularmente espaciados, luego apretados en un zumbido (el crujido) y por último un pequeño motivo rítmico: la coda. Cada clic está formado por varios pulsos muy juntos, debidos a reflexiones en la cabeza del animal."
+},
+"dolphin": {
+"nm": "Delfín mular",
+"sh": "silbidos",
+"t": "Silbidos y clics del delfín",
+"h": "El delfín mular silba entre unos 5 y 20 kHz; cada individuo tiene un «silbido firma» que le sirve de nombre. Para cazar y orientarse emite también trenes de clics muy breves, hasta varios cientos por segundo.",
+"l": "Curvas finas que suben y vuelven a bajar, a menudo repetidas igual, y ráfagas de trazos horizontales para la ecolocalización. Las frecuencias se dividen entre 3 para que sean audibles; la escala muestra los valores reales.",
+"n": "3 veces más grave"
+},
+"orca": {
+"nm": "Orca",
+"sh": "gritos pulsados",
+"t": "Los gritos pulsados de la orca",
+"h": "Las orcas se comunican con gritos pulsados: trenes de pulsos tan rápidos (500 a 2000 por segundo) que se oyen como una nota, con un salto brusco de tono. Cada grupo familiar tiene su propio «dialecto».",
+"l": "Una pila de trazos paralelos (los armónicos) que suben o bajan juntos, con un quiebro neto en mitad del grito; a veces un silbido fino y más agudo."
+},
+"bseal": {
+"nm": "Foca barbuda",
+"sh": "trino",
+"t": "El trino de la foca barbuda",
+"h": "En primavera, bajo la banquisa ártica, el macho emite largos trinos que bajan en espiral desde varios kHz hasta unos cientos de hercios, a veces durante un minuto. Sirven para defender un territorio y atraer a las hembras.",
+"l": "Una curva ondulada que se desliza de arriba abajo de la escala, como un muelle que se suelta, y una nota grave al final.",
+"n": "acortado"
+},
+"shrimp": {
+"nm": "Camarones pistola",
+"sh": "arrecife",
+"t": "Los camarones pistola (alfeidos)",
+"h": "Al cerrar su gran pinza, el camarón lanza un chorro de agua tan rápido que forma una burbuja de cavitación; al reventar, la burbuja chasquea como un disparo. Miles de camarones forman el ruido de fondo de los arrecifes y pueden molestar a los sonares.",
+"l": "Una lluvia de puntos y trazos horizontales cortos en todo el ancho, sin ningún orden; en auriculares, un crepitar continuo, como una fritura."
+},
+"sonar": {
+"nm": "Sonar activo",
+"sh": "ping",
+"t": "El ping de un sonar activo",
+"h": "Un buque envía un pulso sonoro potente (aquí hacia 3,5 kHz, la gama de los sonares de casco de las fragatas) y escucha el eco: el retardo da la distancia y el desplazamiento de frecuencia (efecto Doppler) la velocidad del blanco. El sonido vuelve también como una cola desde el fondo y la superficie: la reverberación.",
+"l": "Un trazo corto y fuerte, una cola que se apaga y luego el eco, mucho más débil y algo desplazado en frecuencia. El segundo ping es un barrido de frecuencia (chirp), que mide mejor la distancia."
+},
+"propeller": {
+"nm": "Hélice de barco",
+"sh": "cavitación",
+"t": "La hélice de un barco que pasa",
+"h": "Las palas de la hélice crean burbujas de cavitación que revientan: un soplo ancho, que late al ritmo del paso de las palas. Las máquinas añaden rayas fijas. Los operadores de sonar analizan ese ritmo (análisis DEMON) para contar las palas y la velocidad de giro, y reconocer el barco.",
+"l": "Un soplo en una banda ancha, rayado con bandas horizontales al ritmo de las palas, con algunos trazos verticales fijos (motor, reductora). Todo crece y luego se apaga cuando el barco pasa sobre el hidrófono."
+},
+"uqc": {
+"nm": "Teléfono submarino",
+"sh": "UQC 8 kHz",
+"t": "El teléfono submarino (UQC, «Gertrude»)",
+"h": "Submarinos y buques se hablan bajo el agua con un teléfono acústico: la voz se transmite en banda lateral única sobre una portadora de 8,0875 kHz, emitida por un transductor en el casco. Alcance: unos kilómetros.",
+"l": "Una banda de voz BLU por encima de 8 kHz; demodulada, una voz lejana que ondula y resuena por los ecos en la superficie y el fondo. La pantalla está reducida a la mitad; la escala muestra las frecuencias reales.",
+"n": "escala dividida por 2"
+},
+"zevs": {
+"nm": "ZEVS 82 Hz",
+"sh": "ELF",
+"t": "ZEVS: la radio de los submarinos a 82 Hz",
+"h": "Las ondas de radio penetran muy mal en el agua de mar, salvo a frecuencias extremadamente bajas (ELF). El emisor ruso ZEVS, en la península de Kola, emite a 82 Hz con líneas de antena de decenas de kilómetros para llegar a los submarinos en inmersión profunda. La velocidad es mínima: unos pocos caracteres por minuto.",
+"l": "Un trazo fino a 82 Hz junto a la raya de la red a 50 Hz y sus armónicos, con los parásitos de las tormentas. En auriculares, un zumbido grave apenas audible; se capta con un gran cuadro y una tarjeta de sonido. El equivalente estadounidense, a 76 Hz, cerró en 2004."
+},
+"bloop": {
+"nm": "El «Bloop»",
+"sh": "1997",
+"t": "El «Bloop» (1997)",
+"h": "En 1997, los hidrófonos de la NOAA en el Pacífico captaron un sonido muy grave que subía rápidamente, oído a miles de kilómetros. Misterioso durante años, desde 2012 se atribuye a un sismo de hielo: un enorme iceberg que se resquebraja.",
+"l": "Una banda ancha que sube en pocos segundos, con sus armónicos, y luego se apaga lentamente. Reconstrucción, acelerada 16 veces como la grabación difundida por la NOAA.",
+"n": "acelerado 16 veces"
 }
 }
 }

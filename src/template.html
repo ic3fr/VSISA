@@ -108,6 +108,12 @@ footer p{margin:0;max-width:110ch}
 /* en-tête : VSISA à gauche ; à sa droite la description en haut et les compteurs en bas ; réglages dessous, à gauche */
 header{flex-direction:column;align-items:stretch}
 .ver{font-family:var(--f-mono);font-weight:500;font-size:.32em;letter-spacing:.06em;color:var(--accent);vertical-align:super}
+.gh{position:relative;flex:none;align-self:flex-start;margin-left:auto;width:46px;height:46px;border-radius:50%;color:var(--fg);display:block}
+.gh img{width:46px;height:46px;border-radius:50%;display:block;border:1px solid var(--line);background:var(--panel-2)}
+.gh .gh-mark{position:absolute;right:-4px;bottom:-4px;width:20px;height:20px;padding:2px;border-radius:50%;background:var(--bg);box-sizing:content-box}
+.gh.noav .gh-mark{position:static;width:38px;height:38px;padding:4px;background:none}
+.gh:hover img{border-color:var(--accent)} .gh:hover .gh-mark{color:var(--accent)}
+html.night .gh img,html.phos .gh img{filter:grayscale(1) contrast(1.1);opacity:.85}
 .brand{display:flex;align-items:stretch;gap:6px 18px}
 header h1{font-size:clamp(2.3rem,6vw,3.3rem);letter-spacing:.04em;line-height:1;align-self:center}
 html.phos header h1{font-size:clamp(2.6rem,6.6vw,3.7rem)}
@@ -115,7 +121,7 @@ html.phos header h1{font-size:clamp(2.6rem,6.6vw,3.7rem)}
 .brand-desc{font-family:var(--f-mono);font-weight:400;font-size:.78rem;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;line-height:1.35}
 header .odo-wrap{margin-left:0;justify-content:flex-start}
 header .hdr-ctl{justify-content:flex-start}
-@media (max-width:560px){.odo-d{font-size:.95rem}.odo-wrap{gap:6px 12px}}
+@media (max-width:560px){.odo-d{font-size:.95rem}.odo-wrap{gap:6px 12px}.brand{gap:6px 10px}.brand-desc{font-size:.66rem;letter-spacing:.03em}.gh,.gh img{width:34px;height:34px}.gh{margin-right:4px}.gh .gh-mark{width:15px;height:15px}.gh.noav .gh-mark{width:28px;height:28px}}
 .odo{display:flex;align-items:center;gap:8px}
 .odo-lbl{font:500 .72rem var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
 .odo-num{display:inline-flex;gap:2px;padding:3px;background:var(--odo-case);border:1px solid var(--line);border-radius:5px;box-shadow:inset 0 1px 3px rgba(0,0,0,.5)}
@@ -138,6 +144,7 @@ header .hdr-ctl{justify-content:flex-start}
           <div class="odo"><span class="odo-lbl" id="tOdoP">écoutes</span><span class="odo-num" id="odoP"></span></div>
         </div>
       </div>
+      <a class="gh" href="https://github.com/ic3fr/VSISA" target="_blank" rel="noopener" title="GitHub · ic3fr/VSISA" aria-label="GitHub · ic3fr/VSISA"><img src="https://github.com/ic3fr.png?size=96" alt="" width="46" height="46" referrerpolicy="no-referrer" onerror="this.parentNode.classList.add('noav');this.remove()"><svg class="gh-mark" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"/></svg></a>
     </div>
     <div class="hdr-ctl">
       <label class="langlbl" for="lang"><span id="tLang">Langue</span>
@@ -721,6 +728,73 @@ G.bpm=()=>{ const k=morseKey("BPM",0.07,0.3), t1=k.end+0.3, N=Math.round((t1+7)*
   for(let i=0;i<N;i++){ const t=i/SR; let e=keyEnv(k.seg,t); if(t>=t1){ const s=Math.floor(t-t1), f=(t-t1)-s, w=s===2?0.3:(s>=4?0.1:0.01); if(f<w) e=1; } x[i]=0.7*e*Math.sin(TAU*1000*t); }
   return addNoise(x,0.02); };
 
+/* ---- bonus : sons sous-marins ---- */
+function uwEcho(x,taps){ const o=Float32Array.from(x); for(const [d,g] of taps){ const k=Math.round(d*SR); for(let i=k;i<o.length;i++) o[i]+=g*x[i-k]; } return o; }
+function seaNoise(x,l){ const n=Z(x.length); for(let i=0;i<n.length;i++) n[i]=gauss(); const s=lp2(lp2(n,900),900); for(let i=0;i<x.length;i++) x[i]+=l*3*s[i]+l*0.15*n[i]; return x; }
+// une note animale : fréquence de f0 à f1 (courbe c), harmoniques H, enveloppe douce, modulation am (Hz) facultative
+function unit(x,t0,d,f0,f1,H,o){ o=o||{}; const i0=Math.round(t0*SR), n=Math.round(d*SR), c=o.c||1, A=o.a==null?1:o.a; let ph=0;
+  for(let k=0;k<n&&i0+k<x.length;k++){ const u=k/n, f=(o.fn?o.fn(u):f0+(f1-f0)*Math.pow(u,c)), env=Math.pow(Math.sin(Math.PI*Math.min(1,Math.min(u/(o.att||0.15),(1-u)/(o.rel||0.3)))*0.5),1.2);
+    ph+=TAU*f/SR; let s=0; for(let h=0;h<H.length;h++){ if((h+1)*f>5800) break; s+=H[h]*Math.sin((h+1)*ph); }
+    const am=o.am?0.5+0.5*Math.cos(TAU*o.am*k/SR):1; x[i0+k]+=A*env*am*s; } }
+function snap(x,i,a,tau,f){ f=f||1; for(let j=0;j<8*tau&&i+j<x.length;j++){ const e=a*Math.exp(-j/tau), w=TAU*j/SR*f; x[i+j]+=e*(Math.sin(1700*w)+0.8*Math.sin(3100*w+1)+0.6*Math.sin(4600*w+2)+0.4*Math.sin(5500*w+3)); } }
+function clickAt(x,i,a,len){ for(let j=0;j<len&&i+j<x.length;j++) x[i+j]+=a*gauss()*Math.exp(-j/(len/4)); }
+G.humpback=()=>{ const N=12*SR, x=Z(N), M=[1,.6,.45,.3,.2,.12], W=[1,.3,.15], R=[1,.8,.7,.6,.5,.45,.35,.3,.25,.2];
+  for(const o of [0,6.4]){ unit(x,o+0.1,1.6,190,150,M,{c:0.7}); unit(x,o+2.0,0.8,300,920,W,{c:2,a:0.8}); unit(x,o+3.2,1.2,120,110,R,{am:22,a:0.7});
+    unit(x,o+4.8,1.1,0,0,[1,.25],{fn:u=>1200+350*Math.sin(Math.PI*u)-100*u,a:0.55}); }
+  return seaNoise(uwEcho(x,[[0.12,0.4],[0.31,0.22],[0.62,0.12]]),0.05); };
+G.bluewhale=()=>{ const N=12*SR, x=Z(N), H=[0.6,0.35,1,0.35,0.2]; // ×10 : 165 Hz affichés = 16,5 Hz réels
+  for(const o of [0,6.6]){ unit(x,o+0.2,1.5,172,168,[1,.5,.3],{am:15,a:0.8}); unit(x,o+2.6,2.2,166,154,H,{c:0.8,att:0.08,rel:0.15}); }
+  return seaNoise(x,0.05); };
+G.finwhale=()=>{ const N=12*SR, x=Z(N); let t=0.3, k=0; // ×10 : impulsions de 25 à 18 Hz
+  while(t<11.7){ unit(x,t,0.11,250,180,[1,.25],{att:0.3,rel:0.4}); t+=k%2?1.75:1.15; k++; }
+  return seaNoise(x,0.05); };
+G.sperm=()=>{ const N=10*SR, x=Z(N), times=[];
+  for(let t=0.3;t<4.6;t+=0.95+0.1*rnd()) times.push([t,1]);
+  { let t=4.8, d=0.4; while(t<7.4){ times.push([t,0.7]); t+=d; d=Math.max(0.03,d*0.8); } }
+  for(const t of [8.0,8.22,8.44,8.56,8.68]) times.push([t,0.9]);
+  for(const [t,a] of times){ const i=Math.round(t*SR), f=0.75+0.5*rnd(); for(let p=0;p<4;p++) snap(x,i+p*Math.round(0.0042*SR),a*[1,0.45,0.25,0.12][p]*(0.8+0.4*rnd()),a<0.8?22:45,f); }
+  const y=hp2(x,700); for(let i=0;i<N;i++) y[i]=Math.tanh(3*y[i]); return seaNoise(y,0.002); };
+G.dolphin=()=>{ const N=9*SR, x=Z(N), sig=u=>u<0.8?2100+2100*Math.sin(Math.PI*u/0.8):2100+1500*(u-0.8)/0.2; // fréquences ÷ 3
+  for(const t of [0.3,2.3,6.0]) unit(x,t,1.5,0,0,[1,.3],{fn:sig,a:0.55,att:0.05,rel:0.08});
+  unit(x,4.3,0.7,1700,4300,[1,.25],{c:1.6,a:0.45});
+  for(const [t0,t1,r0,r1] of [[1.85,2.25,30,120],[3.9,5.3,20,260],[7.7,8.8,25,90]]){ let t=t0; while(t<t1){ clickAt(x,Math.round(t*SR),0.9*(0.7+0.6*rnd()),8); const u=(t-t0)/(t1-t0); t+=1/(r0+(r1-r0)*u); } }
+  return seaNoise(uwEcho(x,[[0.05,0.3]]),0.012); };
+G.orca=()=>{ const N=8*SR, x=Z(N), emph=f=>1/(1+Math.pow((f-2200)/1600,2));
+  const call=(t,fn,d,a)=>{ const i0=Math.round(t*SR), n=Math.round(d*SR); let ph=0; for(let k=0;k<n;k++){ const u=k/n, f=fn(u), env=Math.min(1,u/0.05,(1-u)/0.12); ph+=TAU*f/SR; let s=0; for(let h=1;h*f<5800;h++) s+=emph(h*f)*Math.sin(h*ph)/Math.sqrt(h); x[i0+k]+=a*env*s; } };
+  const c1=u=>u<0.55?850+250*u:1350-150*(u-0.55);
+  call(0.3,c1,1.3,0.5); call(2.4,u=>u<0.4?1100-200*u:600+180*u,1.1,0.5); unit(x,4.3,0.9,0,0,[1],{fn:u=>4200+700*Math.sin(Math.PI*u),a:0.35}); call(5.6,c1,1.3,0.45);
+  return seaNoise(uwEcho(x,[[0.09,0.35],[0.27,0.18]]),0.04); };
+G.bseal=()=>{ const N=12*SR, x=Z(N);
+  unit(x,0.3,9.6,0,0,[1,.4,.18],{fn:u=>(300+3000*Math.pow(1-u,2.2))*(1+0.09*Math.sin(TAU*(6+10*(1-u))*u*9.6)),a:0.6,att:0.02,rel:0.05});
+  unit(x,10.0,1.6,330,260,[1,.5,.3],{a:0.5});
+  return seaNoise(uwEcho(x,[[0.08,0.3],[0.22,0.15]]),0.04); };
+G.shrimp=()=>{ const N=7*SR, x=Z(N); for(let k=0;k<700;k++){ const a=0.03/Math.pow(rnd()+0.02,1.3); snap(x,ri(N-400),Math.min(1.5,a),14,0.85+0.3*rnd()); }
+  const y=hp2(hp2(x,1200),1200); for(let i=0;i<N;i++) y[i]=Math.tanh(5*y[i]); return seaNoise(y,0.002); };
+G.sonar=()=>{ const N=10*SR, x=Z(N);
+  const ping=(t,d,fn,a)=>{ const i0=Math.round(t*SR), n=Math.round(d*SR); let ph=0; for(let k=0;k<n;k++){ const u=k/n; ph+=TAU*fn(u)/SR; x[i0+k]+=a*Math.min(1,u/0.02,(1-u)/0.02)*Math.sin(ph); } };
+  const rev=(t,f,d,a)=>{ const i0=Math.round(t*SR), n=Math.round(d*SR), K=40, fs=[], ps=[]; for(let q=0;q<K;q++){ fs.push(TAU*(f+50*(rnd()-0.5))/SR); ps.push(TAU*rnd()); }
+    for(let k=0;k<n&&i0+k<N;k++){ let v=0; for(let q=0;q<K;q++) v+=Math.sin(fs[q]*k+ps[q]); x[i0+k]+=a*0.16*v/Math.sqrt(K)*Math.exp(-3*k/n)*Math.min(1,k/(0.08*SR)); } };
+  ping(0.3,0.6,()=>3500,1); rev(0.9,3500,2.2,0.9); ping(2.8,0.6,()=>3525,0.22);
+  ping(5.2,0.8,u=>3300+400*u,1); rev(6.0,3500,2.2,0.8); ping(7.9,0.8,u=>3325+400*u,0.2);
+  return addNoise(x,0.03); };
+G.propeller=()=>{ const N=10*SR, x=Z(N), nz=Z(N); for(let i=0;i<N;i++) nz[i]=gauss(); const cav=band(nz,300,4500); let p1=0,p2=0,p3=0;
+  for(let i=0;i<N;i++){ const t=i/SR, g=Math.exp(-Math.pow((t-5)/2.6,2)), dop=1+0.012*Math.tanh((5-t)/1.2), sr=2.3*dop;
+    const am=1+0.75*Math.cos(TAU*5*sr*t)+0.25*Math.cos(TAU*sr*t); p1+=TAU*120*dop/SR; p2+=TAU*240*dop/SR; p3+=TAU*760*dop/SR;
+    x[i]=g*(1.6*cav[i]*am+0.35*Math.sin(p1)+0.25*Math.sin(p2)+0.18*Math.sin(p3)); }
+  return seaNoise(x,0.05); };
+G.uqc=()=>{ const N=7*SR, v=voice(N-Math.round(0.6*SR),{f0:104}), vv=Z(N); vv.set(v,Math.round(0.3*SR)); // affichage : fréquences ÷ 2, porteuse 8087,5 Hz → 4043,75
+  const a=uwEcho(band(vv,300,2700),[[0.018,0.5],[0.047,0.3],[0.11,0.18]]); for(let i=0;i<N;i++) a[i]*=1+0.25*Math.sin(TAU*0.7*i/SR);
+  const x=ssb(band(vv,150,1900),8087.5/2);
+  return {x:addNoise(x,0.01), a:seaNoise(a,0.04)}; };
+G.zevs=()=>{ const N=12*SR, x=Z(N); let ph=0;
+  for(let i=0;i<N;i++){ const t=i/SR; ph+=TAU*(82+0.04*Math.sin(TAU*t/9))/SR; x[i]=0.35*Math.sin(ph)+0.6*Math.sin(TAU*50*t)+0.25*Math.sin(TAU*100*t+1)+0.18*Math.sin(TAU*150*t+2); }
+  for(let k=0;k<60;k++) clickAt(x,ri(N-50),1+2*rnd(),30);
+  return addNoise(x,0.02); };
+G.bloop=()=>{ const N=9*SR, x=Z(N); // ×16
+  unit(x,0.6,5.6,0,0,[1,.6,.4,.25,.15],{fn:u=>u<0.6?140+560*Math.pow(u/0.6,1.6):700-60*(u-0.6),am:0,a:0.8,att:0.25,rel:0.45});
+  const nz=Z(N); for(let i=0;i<N;i++) nz[i]=gauss(); const rb=band(nz,120,900); for(let i=0;i<N;i++){ const t=i/SR; x[i]*=1+0.5*rb[i]; x[i]+=0.25*rb[i]*Math.exp(-Math.pow((t-3.5)/2,2)); }
+  return seaNoise(x,0.05); };
+
 /* ================= catalogue ================= */
 // [clé, nom court, repère, span Hz [a,b], nfft, lignes/s, options]
 // [id, -, -, span Hz [a,b], nfft, lignes/s, {gi: rubrique, scale}]
@@ -824,7 +898,20 @@ const LIST=[
  ["gsm",0,0,[0, 3200],2048,36,{"gi": 7}],
  ["jjy",0,0,[800, 1200],1024,40,{"gi": 8}],
  ["rwm",0,0,[600, 1400],512,60,{"gi": 8}],
- ["bpm",0,0,[600, 1400],512,60,{"gi": 8}]
+ ["bpm",0,0,[600, 1400],512,60,{"gi": 8}],
+ ["humpback",0,0,[0, 3000],1024,36,{"gi": 12}],
+ ["bluewhale",0,0,[0, 600],4096,24,{"gi": 12, "scale": 0.1}],
+ ["finwhale",0,0,[0, 500],2048,30,{"gi": 12, "scale": 0.1}],
+ ["sperm",0,0,[0, 6000],256,60,{"gi": 12}],
+ ["dolphin",0,0,[0, 6000],512,48,{"gi": 12, "scale": 3}],
+ ["orca",0,0,[0, 6000],512,40,{"gi": 12}],
+ ["bseal",0,0,[0, 4000],1024,36,{"gi": 12}],
+ ["shrimp",0,0,[0, 6000],256,60,{"gi": 12}],
+ ["sonar",0,0,[3000, 4000],2048,30,{"gi": 12}],
+ ["propeller",0,0,[0, 3000],1024,40,{"gi": 12}],
+ ["uqc",0,0,[3000, 6000],1024,36,{"gi": 12, "scale": 2}],
+ ["zevs",0,0,[30, 170],16384,8,{"gi": 12}],
+ ["bloop",0,0,[0, 1200],2048,30,{"gi": 12, "scale": 0.0625}]
 ];
 const MODES=LIST.map(([id,,,span,nfft,rps,o])=>{ o=o||{}; const fr=I18N.fr.modes[id];
   const mm=[...fr.l.matchAll(/fiches? ([^)]*)\)/g)], ref=mm.length?mm[mm.length-1][1]:"";

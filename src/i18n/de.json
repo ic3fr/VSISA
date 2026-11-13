@@ -57,7 +57,8 @@
 "Rundfunk und Zeit",
 "Breitband",
 "Bonus: Klänge aus dem All",
-"Bonus: Kuriositäten der Kurzwelle"
+"Bonus: Kuriositäten der Kurzwelle",
+"Bonus: Unterwassergeräusche"
 ],
 "modes": {
 "am": {
@@ -864,6 +865,103 @@
 "h": "Die Station Pucheng (Shaanxi) sendet in AM auf 2,5, 5, 10 und 15 MHz: jede Sekunde ein Tick von 10 ms auf 1000 Hz (300 ms zur Minute) und in bestimmten Minuten Ticks von 100 ms für die Zeit UT1. Das Rufzeichen BPM kommt in Morse, dann als Ansage.",
 "l": "Im demodulierten Ton: das Rufzeichen, dann sehr kurze Striche auf 1000 Hz, einer pro Sekunde, mit einem längeren zur Minute. Oft mit WWV auf denselben Frequenzen gemischt.",
 "n": "geraffter Auszug"
+},
+"humpback": {
+"nm": "Buckelwal",
+"sh": "Gesang",
+"t": "Der Gesang des Buckelwals",
+"h": "Im Winter singen die Männchen in den Paarungsgebieten: eine Folge aus Stöhnen, Brummen und Rufen, die ein Thema bildet, stundenlang gleich wiederholt wird und sich von Saison zu Saison ändert. Hydrofone hören ihn noch in Dutzenden Kilometern Entfernung.",
+"l": "Dicke Spuren mit ihren Oberwellen, die zwischen 100 Hz und einigen kHz langsam steigen oder fallen; dieselbe Folge kehrt nach einigen Sekunden wieder. Echos von Oberfläche und Meeresboden verlängern jeden Ton."
+},
+"bluewhale": {
+"nm": "Blauwal",
+"sh": "×10",
+"t": "Der Blauwal: der tiefste Ruf",
+"h": "Das größte Tier der Erde stößt sehr tiefe (10 bis 40 Hz) und sehr laute Rufe aus, 10 bis 20 Sekunden lang und stundenlang wiederholt; sie tragen Hunderte Kilometer weit. Damit man sie hört, wird die Aufnahme zehnfach beschleunigt.",
+"l": "Ein gepulster Teil, dann ein langer, kaum fallender Ton mit seinen Oberwellen darüber; die Folge wiederholt sich. Die Skala zeigt die echten Frequenzen.",
+"n": "10-fach beschleunigt"
+},
+"finwhale": {
+"nm": "Finnwal",
+"sh": "20 Hz",
+"t": "Der Finnwal: die 20-Hz-Impulse",
+"h": "Der Finnwal sendet etwa eine Sekunde lange Impulse, die von rund 25 auf 18 Hz fallen, in regelmäßigen Abständen, manchmal tagelang. In den 1950er- und 60er-Jahren rätselten die Horchnetze der US-Marine über diese „20-Hz-Signale“, bevor man sie diesem Wal zuordnete.",
+"l": "Kurze, gleiche Striche, in regelmäßiger Folge oder paarweise, wie die Schläge eines sehr langsamen Herzens; jeder fällt leicht in der Frequenz. Die Skala zeigt die echten Frequenzen.",
+"n": "10-fach beschleunigt"
+},
+"sperm": {
+"nm": "Pottwal",
+"sh": "Klicks",
+"t": "Die Klicks des Pottwals",
+"h": "Der Pottwal jagt bei tiefen Tauchgängen mit seinem Sonar: sehr starke Klicks, etwa einer pro Sekunde, die sich beim Annähern an die Beute zu einem „Knarren“ beschleunigen. Untereinander tauschen Pottwale „Codas“ aus, kurze Klickfolgen, deren Rhythmus von Clan zu Clan verschieden ist.",
+"l": "Waagerechte Striche über die ganze Breite, regelmäßig verteilt, dann dicht gedrängt zu einem Summen (das Knarren), dann ein kleines rhythmisches Muster: die Coda. Jeder Klick besteht aus mehreren dicht aufeinanderfolgenden Impulsen, die durch Reflexionen im Kopf des Tieres entstehen."
+},
+"dolphin": {
+"nm": "Großer Tümmler",
+"sh": "Pfiffe",
+"t": "Pfiffe und Klicks des Delfins",
+"h": "Der Große Tümmler pfeift zwischen etwa 5 und 20 kHz; jedes Tier hat einen „Signaturpfiff“, der ihm als Name dient. Zum Jagen und zur Orientierung sendet er außerdem Folgen sehr kurzer Klicks, bis zu mehrere Hundert pro Sekunde.",
+"l": "Feine Kurven, die steigen und wieder fallen, oft gleich wiederholt, und Salven waagerechter Striche für die Echoortung. Die Frequenzen sind durch 3 geteilt, damit man sie hört; die Skala zeigt die echten Werte.",
+"n": "3-mal tiefer abgespielt"
+},
+"orca": {
+"nm": "Orca",
+"sh": "Pulsrufe",
+"t": "Die Pulsrufe des Orcas",
+"h": "Orcas verständigen sich mit gepulsten Rufen: Impulsfolgen, so schnell (500 bis 2000 pro Sekunde), dass man sie als Ton hört, mit einem plötzlichen Tonhöhensprung. Jede Familiengruppe hat ihren eigenen „Dialekt“.",
+"l": "Ein Stapel paralleler Spuren (die Oberwellen), die gemeinsam steigen oder fallen, mit einem deutlichen Knick in der Mitte des Rufs; manchmal ein feiner, höherer Pfiff."
+},
+"bseal": {
+"nm": "Bartrobbe",
+"sh": "Triller",
+"t": "Der Triller der Bartrobbe",
+"h": "Im Frühjahr stößt das Männchen unter dem arktischen Packeis lange Triller aus, die spiralförmig von mehreren kHz bis auf einige Hundert Hertz fallen, manchmal eine ganze Minute lang. Sie verteidigen ein Revier und locken Weibchen an.",
+"l": "Eine wellige Kurve, die von oben nach unten über die Skala gleitet wie eine Feder, die sich entspannt, dann ein tiefer Ton am Ende.",
+"n": "gekürzt"
+},
+"shrimp": {
+"nm": "Knallkrebse",
+"sh": "Riff",
+"t": "Knallkrebse (Pistolenkrebse)",
+"h": "Wenn der Knallkrebs seine große Schere zuschnappen lässt, schießt er einen so schnellen Wasserstrahl ab, dass eine Kavitationsblase entsteht; beim Zusammenfallen knallt sie wie ein Schuss. Tausende Krebse bilden das Hintergrundgeräusch der Riffe und können Sonare stören.",
+"l": "Ein Regen aus Punkten und kurzen waagerechten Strichen über die ganze Breite, ganz ohne Ordnung; im Kopfhörer ein ständiges Knistern wie Braten in der Pfanne."
+},
+"sonar": {
+"nm": "Aktivsonar",
+"sh": "Ping",
+"t": "Der Ping eines Aktivsonars",
+"h": "Ein Schiff sendet einen starken Schallimpuls (hier um 3,5 kHz, der Bereich der Rumpfsonare von Fregatten) und horcht auf das Echo: Die Laufzeit ergibt die Entfernung, die Frequenzverschiebung (Doppler-Effekt) die Geschwindigkeit des Ziels. Der Schall kommt auch als Nachhall von Boden und Oberfläche zurück.",
+"l": "Ein kurzer, starker Strich, ein Nachhall, der verklingt, dann das Echo, viel schwächer und leicht in der Frequenz verschoben. Der zweite Ping ist ein Frequenzdurchlauf (Chirp), der die Entfernung besser misst."
+},
+"propeller": {
+"nm": "Schiffsschraube",
+"sh": "Kavitation",
+"t": "Die Schraube eines vorbeifahrenden Schiffs",
+"h": "Die Propellerflügel erzeugen Kavitationsblasen, die zerplatzen: ein breites Rauschen, das im Takt der vorbeilaufenden Flügel pulsiert. Die Maschinen fügen feste Linien hinzu. Sonarleute werten diesen Takt aus (DEMON-Analyse), um Flügelzahl und Drehzahl zu bestimmen und das Schiff zu erkennen.",
+"l": "Ein Rauschen über ein breites Band, gestreift mit waagerechten Bändern im Takt der Flügel, dazu einige feste senkrechte Linien (Motor, Getriebe). Alles wird lauter und klingt ab, wenn das Schiff über das Hydrofon fährt."
+},
+"uqc": {
+"nm": "Unterwassertelefon",
+"sh": "UQC 8 kHz",
+"t": "Das Unterwassertelefon (UQC, „Gertrude“)",
+"h": "U-Boote und Schiffe sprechen unter Wasser über ein akustisches Telefon: Die Stimme wird als Einseitenband über einem Träger von 8,0875 kHz übertragen und von einem Schallwandler im Rumpf abgestrahlt. Reichweite: einige Kilometer.",
+"l": "Ein SSB-Sprachband oberhalb von 8 kHz; demoduliert eine ferne Stimme, die durch Echos von Oberfläche und Boden schwankt und hallt. Die Anzeige ist halbiert; die Skala zeigt die echten Frequenzen.",
+"n": "Skala halbiert"
+},
+"zevs": {
+"nm": "ZEVS 82 Hz",
+"sh": "ELF",
+"t": "ZEVS: U-Boot-Funk auf 82 Hz",
+"h": "Funkwellen dringen kaum ins Meerwasser ein, außer bei extrem niedrigen Frequenzen (ELF). Der russische Sender ZEVS auf der Halbinsel Kola sendet auf 82 Hz über Dutzende Kilometer lange Antennenleitungen, um tief getauchte U-Boote zu erreichen. Die Datenrate ist winzig: einige Zeichen pro Minute.",
+"l": "Eine feine Linie bei 82 Hz neben der 50-Hz-Netzlinie und ihren Oberwellen, mit Störungen von Gewittern. Im Kopfhörer ein kaum hörbares tiefes Brummen; empfangbar mit einer großen Rahmenantenne und einer Soundkarte. Das amerikanische Gegenstück auf 76 Hz wurde 2004 abgeschaltet."
+},
+"bloop": {
+"nm": "Der „Bloop“",
+"sh": "1997",
+"t": "Der „Bloop“ (1997)",
+"h": "1997 fingen Hydrofone der NOAA im Pazifik einen sehr tiefen, schnell ansteigenden Ton auf, der Tausende Kilometer weit zu hören war. Lange rätselhaft, wird er seit 2012 einem Eisbeben zugeschrieben: einem riesigen Eisberg, der zerbricht.",
+"l": "Ein breites Band, das in wenigen Sekunden ansteigt, mit seinen Oberwellen, und dann langsam verklingt. Rekonstruktion, 16-fach beschleunigt wie die von der NOAA veröffentlichte Aufnahme.",
+"n": "16-fach beschleunigt"
 }
 }
 }
