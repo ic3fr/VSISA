@@ -41,7 +41,9 @@
 "theme_night": "Nacht (rood)",
 "theme_phos": "Groen fosfor",
 "theme_phosb": "Blauw fosfor",
-"theme_phosa": "Amber fosfor"
+"theme_phosa": "Amber fosfor",
+"w3d": "3D-waterval",
+"w3dHint": "sleep om te draaien"
 },
 "groups": [
 "Analoge spraak",

@@ -41,7 +41,9 @@
 "theme_night": "Nacht (rot)",
 "theme_phos": "Grüner Phosphor",
 "theme_phosb": "Blauer Phosphor",
-"theme_phosa": "Bernstein-Phosphor"
+"theme_phosa": "Bernstein-Phosphor",
+"w3d": "3D-Wasserfall",
+"w3dHint": "zum Drehen ziehen"
 },
 "groups": [
 "Analoge Sprache",

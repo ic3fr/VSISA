@@ -1,4 +1,4 @@
-# VSISA – Virtual Simulator identification Signal Audio
+# VSISA V1.8 – Virtual Simulator identification Signal Audio
 
 [English](README.md) · **Français**
 
@@ -9,7 +9,7 @@ Identificateur de modes radio : **100 signaux simulés** (dont 18 sons de l'espa
 **Ouvrir la page : https://ic3fr.github.io/VSISA/** · **[📥 Télécharger le livre OpenBookRadio](https://github.com/ic3fr/OpenBookRadio/releases)** (gratuit, PDF et EPUB) · 13 langues : menu en haut de la page, ou lien direct avec `#en`, `#es`, `#de`… à la fin de l'adresse.
 
 ## Ce qu'elle fait
-- Pour chaque signal : le **son**, le **spectre** et le **waterfall** en direct, l'**empreinte** complète du signal et une fiche (principe, aspect à l'écran, fiche du livre).
+- Pour chaque signal : le **son**, le **spectre** et le **waterfall** en direct, l'**empreinte** complète du signal, un **waterfall 3D** qu'on fait tourner à la souris ou au doigt et une fiche (principe, aspect à l'écran, fiche du livre).
 - **Son mystère** : un signal au hasard, à reconnaître parmi quatre réponses, avec un score.
 - Réglages : bruit ajouté, volume, lecture en boucle ; le curseur affiche la fréquence.
 - **Compteurs à rouleaux** en haut de la page en ligne : visites et écoutes.

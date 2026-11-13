@@ -1,5 +1,5 @@
 <meta charset="utf-8">
-<title>VSISA · Virtual Simulator identification Signal Audio</title>
+<title>VSISA V1.8 · Virtual Simulator identification Signal Audio</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=VT323&display=swap">
@@ -83,6 +83,8 @@ canvas{display:block;width:100%;height:auto;image-rendering:pixelated;cursor:cro
 .ruler span::before{content:"";position:absolute;left:50%;top:-5px;width:1px;height:4px;background:var(--muted)}
 .ruler span.first{transform:none}.ruler span.first::before{left:0}
 .ruler span.last{transform:translateX(-100%)}.ruler span.last::before{left:auto;right:0}
+.col{display:flex;flex-direction:column;gap:16px;min-width:0}
+#w3{cursor:grab;touch-action:none}#w3:active{cursor:grabbing}
 .two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:16px;align-items:start}
 @media (max-width:980px){.two{grid-template-columns:1fr}}
 .card{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:16px 18px;min-width:0}
@@ -105,6 +107,7 @@ footer p{margin:0;max-width:110ch}
 .hdr-ctl{flex-basis:100%}
 /* en-tête : VSISA à gauche ; à sa droite la description en haut et les compteurs en bas ; réglages dessous, à gauche */
 header{flex-direction:column;align-items:stretch}
+.ver{font-family:var(--f-mono);font-weight:500;font-size:.32em;letter-spacing:.06em;color:var(--accent);vertical-align:super}
 .brand{display:flex;align-items:stretch;gap:6px 18px}
 header h1{font-size:clamp(2.3rem,6vw,3.3rem);letter-spacing:.04em;line-height:1;align-self:center}
 html.phos header h1{font-size:clamp(2.6rem,6.6vw,3.7rem)}
@@ -127,7 +130,7 @@ header .hdr-ctl{justify-content:flex-start}
 <div class="wrap">
   <header>
     <div class="brand">
-      <h1><span id="tTitle">VSISA</span></h1>
+      <h1><span id="tTitle">VSISA</span> <span class="ver">V1.8</span></h1>
       <div class="brand-side">
         <p class="brand-desc" style="margin:0">Virtual Simulator identification Signal Audio · OpenBookRadio</p>
         <div class="odo-wrap" id="odo" hidden>
@@ -172,11 +175,17 @@ header .hdr-ctl{justify-content:flex-start}
       </section>
 
       <div class="two">
-        <section class="screen" aria-label="Empreinte du signal">
-          <div class="screen-head"><b id="tFoot">Empreinte</b><span id="dur">—</span></div>
-          <canvas id="fp" width="600" height="300"></canvas>
-          <div class="ruler" id="ruler2"></div>
-        </section>
+        <div class="col">
+          <section class="screen" aria-label="Empreinte du signal">
+            <div class="screen-head"><b id="tFoot">Empreinte</b><span id="dur">—</span></div>
+            <canvas id="fp" width="600" height="300"></canvas>
+            <div class="ruler" id="ruler2"></div>
+          </section>
+          <section class="screen" aria-label="Waterfall 3D">
+            <div class="screen-head"><b id="tW3d">Waterfall 3D</b><span id="tW3dHint">glisser pour tourner</span></div>
+            <canvas id="w3" width="600" height="280"></canvas>
+          </section>
+        </div>
         <section class="card" id="info" aria-live="polite"></section>
       </div>
     </main>
@@ -881,7 +890,7 @@ function analyse(){
   const H=fp.height, rows=[]; for(let y=0;y<H;y++) rows.push(spectrumRaw(signal,Math.round((y+0.5)/H*signal.length),current));
   const all=new Float32Array(H*W); rows.forEach((r,y)=>all.set(r,y*W)); const s=Array.from(all).sort((a,b)=>a-b); const vmax=s[Math.floor(s.length*0.997)]; vmin=vmax-DR;
   const img=fctx.createImageData(W,H), acc=new Float32Array(W);
-  rows.forEach((r,y)=>{ const v=norm(r); paintRow(img,y,v); for(let x=0;x<W;x++) acc[x]+=v[x]; });
+  const nr=[]; rows.forEach((r,y)=>{ const v=norm(r); nr.push(v); paintRow(img,y,v); for(let x=0;x<W;x++) acc[x]+=v[x]; }); w3rows=nr; w3draw(-1);
   for(let x=0;x<W;x++) acc[x]/=H; avgRow=acc; fpImage=img; fctx.putImageData(img,0,0); restSpectrum();
   const d=signal.length/SR; document.getElementById("dur").textContent=t("dur").replace("{s}",d.toLocaleString(LOC,{minimumFractionDigits:1,maximumFractionDigits:1}));
 }
@@ -900,6 +909,38 @@ function blankWaterfall(msg){
   const img=wctx.createImageData(W,WH); for(let y=0;y<WH;y++){ const r=new Float32Array(W); for(let x=0;x<W;x++) r[x]=0.05+rnd()*0.08; paintRow(img,y,r); }
   wctx.putImageData(img,0,0); wctx.fillStyle=P().txt; wctx.font="500 15px 'IBM Plex Sans',system-ui,sans-serif"; wctx.textAlign="center"; wctx.fillText(msg,W/2,WH/2+5);
 }
+
+/* ================= waterfall 3D ================= */
+const w3=document.getElementById("w3"), w3c=w3.getContext("2d");
+let w3rows=null, w3yaw=0.22, w3tilt=0.5, w3last=-2;
+function w3draw(head){ // head : position de lecture 0..1, ou -1
+  const H=w3.height, bg=P().bg; w3c.fillStyle=bg; w3c.fillRect(0,0,W,H); if(!w3rows) return;
+  const N=44, STEP=3, nx=Math.floor(W/STEP), depth=H*(0.18+0.36*w3tilt), amp=H*(0.66-0.24*w3tilt), skew=W*w3yaw;
+  const hr=head<0?-1:Math.min(N-1,Math.floor(head*N));
+  const proj=(u,d,v)=>{ const sc=1-0.28*d, cx=W/2+skew*(d-0.5); return [cx+(u-0.5)*W*0.78*sc, H-12-d*depth-v*amp*sc]; };
+  // sol
+  w3c.strokeStyle=P().grid; w3c.lineWidth=1; w3c.beginPath();
+  for(const u of [0,0.25,0.5,0.75,1]){ const a=proj(u,0,0), b=proj(u,1,0); w3c.moveTo(a[0],a[1]); w3c.lineTo(b[0],b[1]); }
+  for(const d of [0,1]){ const a=proj(0,d,0), b=proj(1,d,0); w3c.moveTo(a[0],a[1]); w3c.lineTo(b[0],b[1]); } w3c.stroke();
+  const R=w3rows.length, BK=24;
+  for(let k=0;k<N;k++){ // du fond (début) vers l'avant (fin)
+    const row=w3rows[Math.min(R-1,Math.floor((k+0.5)/N*R))], d=1-k/(N-1), pts=new Array(nx+1), vals=new Array(nx+1);
+    for(let i=0;i<=nx;i++){ let v=0; const x0=i*STEP; for(let j=0;j<STEP&&x0+j<W;j++) v=Math.max(v,row[x0+j]); vals[i]=v; pts[i]=proj(i/nx,d,v); }
+    const b0=proj(0,d,0), b1=proj(1,d,0);
+    w3c.beginPath(); w3c.moveTo(b0[0],b0[1]); for(const q of pts) w3c.lineTo(q[0],q[1]); w3c.lineTo(b1[0],b1[1]); w3c.closePath(); w3c.fillStyle=bg; w3c.globalAlpha=0.92; w3c.fill(); w3c.globalAlpha=1;
+    const hot=k===hr; w3c.lineWidth=hot?2.2:1.1;
+    const paths=[]; for(let i=0;i<nx;i++){ const v=Math.max(vals[i],vals[i+1]), b=Math.min(BK-1,Math.floor(v*BK)); (paths[b]||(paths[b]=[])).push(i); }
+    paths.forEach((list,b)=>{ if(!list) return; if(hot) w3c.strokeStyle=P().head; else { const c=Math.round((0.18+0.82*(b+0.5)/BK)*255)*3; w3c.strokeStyle="rgb("+LUT[c]+","+LUT[c+1]+","+LUT[c+2]+")"; }
+      w3c.beginPath(); for(const i of list){ w3c.moveTo(pts[i][0],pts[i][1]); w3c.lineTo(pts[i+1][0],pts[i+1][1]); } w3c.stroke(); });
+  }
+  w3c.lineWidth=1;
+}
+(function(){ let drag=null;
+  w3.addEventListener("pointerdown",e=>{ drag={x:e.clientX,y:e.clientY,yaw:w3yaw,tilt:w3tilt}; try{w3.setPointerCapture(e.pointerId);}catch(_){} });
+  w3.addEventListener("pointermove",e=>{ if(!drag) return; const r=w3.getBoundingClientRect();
+    w3yaw=Math.max(-0.45,Math.min(0.45,drag.yaw+(e.clientX-drag.x)/r.width*0.9)); w3tilt=Math.max(0,Math.min(1,drag.tilt-(e.clientY-drag.y)/r.height*1.2)); if(!playing) w3draw(-1); });
+  const end=()=>{ drag=null; }; w3.addEventListener("pointerup",end); w3.addEventListener("pointercancel",end);
+})();
 
 /* ================= règle des fréquences ================= */
 function ticks(m){ if(!m) return []; const [a,b]=m.span, s=m.scale, w=(b-a)*s, raw=w/6, p=Math.pow(10,Math.floor(Math.log10(raw)));
@@ -954,13 +995,13 @@ function play(){
     chans.forEach((c,ci)=>{ const o=buf.getChannelData(ci); for(let i=0;i<n;i++){ const a=c[i], b=c[i+1<n?i+1:i]; for(let j=0;j<k;j++) o[i*k+j]=a+(b-a)*j/k; } }); }
   src=ctx.createBufferSource(); src.buffer=buf; src.loop=document.getElementById("loop").checked;
   gain=ctx.createGain(); gain.gain.value=document.getElementById("vol").value/100*0.8; src.connect(gain).connect(ctx.destination);
-  const me=src; src.onended=()=>{ if(playing&&src===me&&!me.loop){ playing=false; fctx.putImageData(fpImage,0,0); restSpectrum(); } };
+  const me=src; src.onended=()=>{ if(playing&&src===me&&!me.loop){ playing=false; w3draw(-1); fctx.putImageData(fpImage,0,0); restSpectrum(); } };
   if(CNT_ON) cnt("hit/"+CNT_NS+"/plays").then(v=>{ if(v!=null){ stP=v; showStats(); } });
   t0=ctx.currentTime+0.05; src.start(t0); lastRow=0; playing=true; peak=null;
   const img=wctx.createImageData(W,WH); for(let y=0;y<WH;y++) paintRow(img,y,new Float32Array(W)); wctx.putImageData(img,0,0);
   requestAnimationFrame(tick);
 }
-function stop(){ playing=false; if(src){ try{src.stop();}catch(e){} src.disconnect(); src=null; } if(fpImage) fctx.putImageData(fpImage,0,0); restSpectrum(); }
+function stop(){ playing=false; w3last=-2; if(w3rows) w3draw(-1); if(src){ try{src.stop();}catch(e){} src.disconnect(); src=null; } if(fpImage) fctx.putImageData(fpImage,0,0); restSpectrum(); }
 function tick(){
   if(!playing||!ctx||!src) return;
   const m=current, dur=signal.length/SR, el=ctx.currentTime-t0;
@@ -971,7 +1012,7 @@ function tick(){
       lastRow++; added++; last=row; }
     if(added===8) lastRow=target;
     if(last){ if(!peak) peak=Float32Array.from(last); else for(let x=0;x<W;x++) peak[x]=Math.max(last[x],peak[x]-0.006); drawSpectrum(last); }
-    const p=(src.loop?el%dur:Math.min(el,dur))/dur; fctx.putImageData(fpImage,0,0); fctx.fillStyle=P().head; fctx.fillRect(0,Math.round(p*fp.height),W,2); }
+    const p=(src.loop?el%dur:Math.min(el,dur))/dur; fctx.putImageData(fpImage,0,0); fctx.fillStyle=P().head; fctx.fillRect(0,Math.round(p*fp.height),W,2); const hk=Math.floor(p*44); if(hk!==w3last){ w3last=hk; w3draw(p); } }
   requestAnimationFrame(tick);
 }
 
@@ -994,11 +1035,11 @@ function buildAside(){ aside.textContent=""; aside.setAttribute("aria-label",t("
     aside.appendChild(d); }); }
 function setLang(l,user){ if(!I18N[l]) l="fr"; LG=l; LOC=(LANGS.find(x=>x[0]===l)||LANGS[0])[2]; document.documentElement.lang=l;
   const sel=document.getElementById("lang"); sel.value=l;
-  const T={tBook:"book_dl",tBook2:"book_dl2",tTitle:"title",tLang:"lang",mystery:"mystery",play:"play",stop:"stop",tNoise:"noise",tVol:"volume",tLoop:"loop",tSpecwf:"specwf",tCursor:"cursor",tFoot:"footprint",tF1:"f1",tF2:"f2"};
+  const T={tBook:"book_dl",tBook2:"book_dl2",tTitle:"title",tLang:"lang",mystery:"mystery",play:"play",stop:"stop",tNoise:"noise",tVol:"volume",tLoop:"loop",tSpecwf:"specwf",tCursor:"cursor",tFoot:"footprint",tW3d:"w3d",tW3dHint:"w3dHint",tF1:"f1",tF2:"f2"};
   for(const id in T) document.getElementById(id).textContent=t(T[id]);
   document.getElementById("tTheme").textContent=t("display"); document.getElementById("theme").setAttribute("aria-label",t("display")); sel.setAttribute("aria-label",t("lang"));
   [["day","theme_day"],["night","theme_night"],["phos","theme_phos"],["phosb","theme_phosb"],["phosa","theme_phosa"]].forEach(([v,k])=>{ document.querySelector('#theme option[value="'+v+'"]').textContent=t(k); });
-  document.title="VSISA · Virtual Simulator identification Signal Audio"; showStats();
+  document.title="VSISA V1.8 · Virtual Simulator identification Signal Audio"; showStats();
   if(user){ try{ localStorage.setItem("idmr-lang",l); }catch(e){} try{ history.replaceState(null,"","#"+l); }catch(e){} }
   buildAside();
   if(current){ setNow(current,!!quiz); document.getElementById("spanLbl").textContent=spanText(current,!!quiz); ruler("ruler1"); ruler("ruler2");

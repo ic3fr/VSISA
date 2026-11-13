@@ -41,7 +41,9 @@
 "theme_night": "夜（赤）",
 "theme_phos": "緑色リン光",
 "theme_phosb": "青色リン光",
-"theme_phosa": "琥珀色リン光"
+"theme_phosa": "琥珀色リン光",
+"w3d": "3D ウォーターフォール",
+"w3dHint": "ドラッグで回転"
 },
 "groups": [
 "アナログ音声",

@@ -1,4 +1,4 @@
-# VSISA – Virtual Simulator identification Signal Audio
+# VSISA V1.8 – Virtual Simulator identification Signal Audio
 
 **English** · [Français](README.fr.md)
 
@@ -9,7 +9,7 @@ Radio mode identifier: **100 simulated signals** (including 18 sounds from space
 **Open the page: https://ic3fr.github.io/VSISA/** · **[📥 Download the OpenBookRadio book](https://github.com/ic3fr/OpenBookRadio/releases)** (free, PDF and EPUB) · 13 languages: menu at the top of the page, or a direct link ending in `#en`, `#fr`, `#de`…
 
 ## What it does
-- For each signal: the **sound**, the live **spectrum** and **waterfall**, the full **footprint** of the signal, and a fact card (principle, what it looks like on screen, sheet number in the book).
+- For each signal: the **sound**, the live **spectrum** and **waterfall**, the full **footprint** of the signal, a **3D waterfall** you can rotate with the mouse or a finger, and a fact card (principle, what it looks like on screen, sheet number in the book).
 - **Mystery sound**: a random signal to identify among four answers, with a score.
 - Settings: added noise, volume, loop playback; the cursor shows the frequency.
 - **Rolling-digit counters** at the top of the online page: visits and plays.

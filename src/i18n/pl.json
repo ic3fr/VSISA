@@ -41,7 +41,9 @@
 "theme_night": "Noc (czerwony)",
 "theme_phos": "Zielony luminofor",
 "theme_phosb": "Niebieski luminofor",
-"theme_phosa": "Pomarańczowy luminofor"
+"theme_phosa": "Pomarańczowy luminofor",
+"w3d": "Wodospad 3D",
+"w3dHint": "przeciągnij, aby obrócić"
 },
 "groups": [
 "Głos analogowy",

@@ -41,7 +41,9 @@
 "theme_night": "Noite (vermelho)",
 "theme_phos": "Fósforo verde",
 "theme_phosb": "Fósforo azul",
-"theme_phosa": "Fósforo âmbar"
+"theme_phosa": "Fósforo âmbar",
+"w3d": "Cascata 3D",
+"w3dHint": "arraste para girar"
 },
 "groups": [
 "Voz analógica",

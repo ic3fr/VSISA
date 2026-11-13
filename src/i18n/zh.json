@@ -41,7 +41,9 @@
 "theme_night": "夜间（红色）",
 "theme_phos": "绿色荧光屏",
 "theme_phosb": "蓝色荧光屏",
-"theme_phosa": "琥珀色荧光屏"
+"theme_phosa": "琥珀色荧光屏",
+"w3d": "3D 瀑布图",
+"w3dHint": "拖动可旋转"
 },
 "groups": [
 "模拟语音",

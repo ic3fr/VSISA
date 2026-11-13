@@ -41,7 +41,9 @@
 "theme_night": "Notte (rosso)",
 "theme_phos": "Fosfori verdi",
 "theme_phosb": "Fosfori blu",
-"theme_phosa": "Fosfori ambra"
+"theme_phosa": "Fosfori ambra",
+"w3d": "Waterfall 3D",
+"w3dHint": "trascina per ruotare"
 },
 "groups": [
 "Voce analogica",

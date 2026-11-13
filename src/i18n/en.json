@@ -41,7 +41,9 @@
 "theme_night": "Night (red)",
 "theme_phos": "Green phosphor",
 "theme_phosb": "Blue phosphor",
-"theme_phosa": "Amber phosphor"
+"theme_phosa": "Amber phosphor",
+"w3d": "3D waterfall",
+"w3dHint": "drag to rotate"
 },
 "groups": [
 "Analogue voice",

@@ -41,7 +41,9 @@
 "theme_night": "Noc (červená)",
 "theme_phos": "Zelený fosfor",
 "theme_phosb": "Modrý fosfor",
-"theme_phosa": "Oranžový fosfor"
+"theme_phosa": "Oranžový fosfor",
+"w3d": "3D vodopád",
+"w3dHint": "tažením otočíte"
 },
 "groups": [
 "Analogový hlas",
