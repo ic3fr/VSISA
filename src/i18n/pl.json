@@ -43,7 +43,8 @@
 "theme_phosb": "Niebieski luminofor",
 "theme_phosa": "Pomarańczowy luminofor",
 "w3d": "Wodospad 3D",
-"w3dHint": "przeciągnij, aby obrócić"
+"w3dHint": "przeciągnij, aby obrócić",
+"audio_retry": "Przeglądarka przerwała dźwięk: naciśnij ponownie ▶ Słuchaj."
 },
 "groups": [
 "Głos analogowy",

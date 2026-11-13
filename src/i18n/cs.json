@@ -43,7 +43,8 @@
 "theme_phosb": "Modrý fosfor",
 "theme_phosa": "Oranžový fosfor",
 "w3d": "3D vodopád",
-"w3dHint": "tažením otočíte"
+"w3dHint": "tažením otočíte",
+"audio_retry": "Prohlížeč přerušil zvuk: stiskni znovu ▶ Poslouchat."
 },
 "groups": [
 "Analogový hlas",

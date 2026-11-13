@@ -43,7 +43,8 @@
 "theme_phosb": "Fósforo azul",
 "theme_phosa": "Fósforo âmbar",
 "w3d": "Cascata 3D",
-"w3dHint": "arraste para girar"
+"w3dHint": "arraste para girar",
+"audio_retry": "O navegador cortou o som: carrega outra vez em ▶ Ouvir."
 },
 "groups": [
 "Voz analógica",

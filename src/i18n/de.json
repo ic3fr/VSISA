@@ -43,7 +43,8 @@
 "theme_phosb": "Blauer Phosphor",
 "theme_phosa": "Bernstein-Phosphor",
 "w3d": "3D-Wasserfall",
-"w3dHint": "zum Drehen ziehen"
+"w3dHint": "zum Drehen ziehen",
+"audio_retry": "Der Browser hat den Ton unterbrochen: Drücke noch einmal auf ▶ Anhören."
 },
 "groups": [
 "Analoge Sprache",

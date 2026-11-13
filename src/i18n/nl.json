@@ -43,7 +43,8 @@
 "theme_phosb": "Blauw fosfor",
 "theme_phosa": "Amber fosfor",
 "w3d": "3D-waterval",
-"w3dHint": "sleep om te draaien"
+"w3dHint": "sleep om te draaien",
+"audio_retry": "De browser heeft het geluid onderbroken: druk nog eens op ▶ Luisteren."
 },
 "groups": [
 "Analoge spraak",

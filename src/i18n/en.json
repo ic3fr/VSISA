@@ -43,7 +43,8 @@
 "theme_phosb": "Blue phosphor",
 "theme_phosa": "Amber phosphor",
 "w3d": "3D waterfall",
-"w3dHint": "drag to rotate"
+"w3dHint": "drag to rotate",
+"audio_retry": "The browser cut the sound: press ▶ Listen again."
 },
 "groups": [
 "Analogue voice",

@@ -43,7 +43,8 @@
 "theme_phosb": "Phosphore bleu",
 "theme_phosa": "Phosphore orange",
 "w3d": "Waterfall 3D",
-"w3dHint": "glisser pour tourner"
+"w3dHint": "glisser pour tourner",
+"audio_retry": "Le son a été coupé par le navigateur : appuie encore sur ▶ Écouter."
 },
 "groups": [
 "Voix analogique",
