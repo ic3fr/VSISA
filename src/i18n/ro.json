@@ -81,7 +81,7 @@
 "nm": "BLU / SSB",
 "t": "SSB: bandă laterală unică",
 "h": "Rămâne o singură bandă laterală, fără purtătoare: nimic când nu vorbește nimeni.",
-"l": "Nicio linie centrală, o singură bandă de circa 2,7 kHz care trăiește doar cât vorbește cineva. USB peste 10 MHz, LSB sub (radioamatori). Prost acordată, vocea sună ca o „rață” (fișele 11 și 29)."
+"l": "Nicio linie centrală, o singură bandă de circa 2,7 kHz care trăiește doar cât vorbește cineva. USB peste 10 MHz, LSB sub (radioamatori). Prost acordată, vocea sună ca o „rață” (fișele 11 și 30)."
 },
 "fm": {
 "sh": "voce",
@@ -98,7 +98,7 @@
 "cw": {
 "t": "CW: Morse",
 "h": "Purtătoarea este pornită și oprită: linii și puncte.",
-"l": "O linie foarte subțire care se întrerupe în ritmul Morse; pentru ureche, un bip. Aici „CQ” (fișa 49).",
+"l": "O linie foarte subțire care se întrerupe în ritmul Morse; pentru ureche, un bip. Aici „CQ” (fișa 51).",
 "r": [
 [
 "Viteză",
@@ -117,7 +117,7 @@
 "rtty": {
 "t": "FSK / RTTY: două frecvențe",
 "h": "Frecvența sare între două valori, una pentru 0, una pentru 1.",
-"l": "Două linii paralele: la 170 Hz distanță pentru radioamatori (45,45 baud), 450 sau 850 Hz pentru buletinele meteo. Un „tidilidi” regulat (fișa 32).",
+"l": "Două linii paralele: la 170 Hz distanță pentru radioamatori (45,45 baud), 450 sau 850 Hz pentru buletinele meteo. Un „tidilidi” regulat (fișa 33).",
 "r": [
 [
 "Cod",
@@ -136,7 +136,7 @@
 "afsk": {
 "t": "AFSK 1200 baud: APRS și packet",
 "h": "Două tonuri audio, 1200 și 2200 Hz, trimise într-un emițător FM.",
-"l": "Văzut după receptorul FM (sunetul din difuzor): o bandă între 1200 și 2200 Hz, în rafale scurte. Pentru ureche, un „grrrt” de o secundă (fișele 35 și 36).",
+"l": "Văzut după receptorul FM (sunetul din difuzor): o bandă între 1200 și 2200 Hz, în rafale scurte. Pentru ureche, un „grrrt” de o secundă (fișele 36 și 37).",
 "r": [
 [
 "Frecvență",
@@ -155,7 +155,7 @@
 "psk31": {
 "t": "PSK31: modulație de fază",
 "h": "Frecvența nu se mișcă, faza se inversează; amplitudinea scade la fiecare inversare.",
-"l": "O linie foarte subțire de circa 60 Hz, ușor „împletită”. Zeci de stații încap în 3 kHz (fișa 29).",
+"l": "O linie foarte subțire de circa 60 Hz, ușor „împletită”. Zeci de stații încap în 3 kHz (fișa 30).",
 "r": [
 [
 "Cod",
@@ -174,7 +174,7 @@
 "ft8": {
 "t": "MFSK / FT8: opt tonuri",
 "h": "Frecvența urcă și coboară în trepte de 6,25 Hz, 0,16 s pe treaptă.",
-"l": "Benzi de circa 50 Hz care durează 12,6 s și revin la fiecare 15 s, sincronizate cu ceasul: mai multe stații deodată în 3 kHz, de exemplu pe 7,074 MHz (fișa 29).",
+"l": "Benzi de circa 50 Hz care durează 12,6 s și revin la fiecare 15 s, sincronizate cu ceasul: mai multe stații deodată în 3 kHz, de exemplu pe 7,074 MHz (fișa 30).",
 "r": [
 [
 "Cadru",
@@ -193,37 +193,37 @@
 "ft4": {
 "t": "FT4: FT8-ul concursurilor",
 "h": "Patru tonuri la 20,8 Hz distanță, 20,8 baud: 105 simboluri în 5 s, în intervale de 7,5 s.",
-"l": "Benzi de circa 90 Hz, mai scurte și mai late decât FT8, care revin la fiecare 7,5 s. 14.080, 7.047,5 kHz (fișa 29)."
+"l": "Benzi de circa 90 Hz, mai scurte și mai late decât FT8, care revin la fiecare 7,5 s. 14.080, 7.047,5 kHz (fișa 30)."
 },
 "olivia": {
 "t": "Olivia 8/250: opt tonuri",
 "h": "Opt tonuri la 31,25 Hz distanță, unul câte unul, sărind la întâmplare; codare Walsh și întrețesere.",
-"l": "Un bloc de puncte risipite pe 250 Hz; se decodează mult sub zgomot. Pentru ureche, o mică melodie la întâmplare (fișa 29)."
+"l": "Un bloc de puncte risipite pe 250 Hz; se decodează mult sub zgomot. Pentru ureche, o mică melodie la întâmplare (fișa 30)."
 },
 "hell": {
 "t": "Feld Hell: scris cu o purtătoare",
 "h": "Purtătoarea e pornită și oprită punct cu punct: fiecare literă e făcută din coloane de 14 puncte, parcurse de jos în sus (245 de puncte pe secundă).",
-"l": "În cascadă, o linie tocată; ecranul programului (fldigi) redesenează literele. Pentru ureche, un pârâit ușor (fișa 29)."
+"l": "În cascadă, o linie tocată; ecranul programului (fldigi) redesenează literele. Pentru ureche, un pârâit ușor (fișa 30)."
 },
 "4fsk": {
 "t": "4FSK: DMR, C4FM (Fusion), NXDN, dPMR",
 "h": "Patru niveluri de frecvență: fiecare simbol poartă doi biți.",
-"l": "Un bloc dreptunghiular de 6–12,5 kHz, plin ca un zgomot, adesea în rafale (DMR împarte canalul în două intervale de timp). Pentru ureche, un „frrr” răgușit (fișa 46)."
+"l": "Un bloc dreptunghiular de 6–12,5 kHz, plin ca un zgomot, adesea în rafale (DMR împarte canalul în două intervale de timp). Pentru ureche, un „frrr” răgușit (fișa 47)."
 },
 "mt63": {
 "t": "MT63: mesaje de urgență (NBEMS)",
 "h": "64 de tonuri deodată, fiecare modulat lent, cu multă redundanță.",
-"l": "Un bloc plat de 1 sau 2 kHz centrat pe 1500 Hz, cu margini nete; un suflu constant. Merge chiar și cu un microfon ținut lângă un difuzor (fișa 31)."
+"l": "Un bloc plat de 1 sau 2 kHz centrat pe 1500 Hz, cu margini nete; un suflu constant. Merge chiar și cu un microfon ținut lângă un difuzor (fișa 32)."
 },
 "lora": {
 "t": "LoRa: rampe de frecvență (chirpuri)",
 "h": "Frecvența mătură toată lățimea, apoi reîncepe de jos: poziția saltului poartă datele.",
-"l": "Diagonale paralele, ușor de recunoscut: Meshtastic și MeshCore pe 869,525 MHz sau 433 MHz, senzori LoRaWAN (fișele 13, 23 și 24)."
+"l": "Diagonale paralele, ușor de recunoscut: Meshtastic și MeshCore pe 869,525 MHz sau 433 MHz, senzori LoRaWAN (fișele 13, 24 și 25)."
 },
 "sstv": {
 "t": "SSTV: imagini în sunet",
 "h": "Un impuls de sincronizare la 1200 Hz, apoi frecvența urmează luminozitatea liniei, de la 1500 (negru) la 2300 Hz (alb).",
-"l": "Linii de sincronizare regulate și un nor care se schimbă odată cu imaginea; un sunet „ciripit” timp de unul-două minute. 14,230 MHz, ISS pe 145,800 MHz (fișa 37).",
+"l": "Linii de sincronizare regulate și un nor care se schimbă odată cu imaginea; un sunet „ciripit” timp de unul-două minute. 14,230 MHz, ISS pe 145,800 MHz (fișa 38).",
 "r": [
 [
 "Cadru",
@@ -239,7 +239,7 @@
 "nm": "Fax meteo",
 "t": "Fax meteo: 1500 Hz negru, 2300 Hz alb",
 "h": "Frecvența se mișcă continuu de la negru la alb, 120 de linii pe minut.",
-"l": "Două benzi fixe la 1500 și 2300 Hz (800 Hz distanță), un „tic-tac” regulat. Frecvențele publicate sunt ale purtătoarei: ascultă în USB cu 1,9 kHz mai jos (fișa 38).",
+"l": "Două benzi fixe la 1500 și 2300 Hz (800 Hz distanță), un „tic-tac” regulat. Frecvențele publicate sunt ale purtătoarei: ascultă în USB cu 1,9 kHz mai jos (fișa 39).",
 "r": [
 [
 "Cadru",
@@ -255,13 +255,13 @@
 "nm": "Sirenă ELT",
 "t": "Sirenă ELT / PLB pe 121,5 MHz",
 "h": "Un semnal AM al cărui ton coboară de la 1600 la 300 Hz, de două până la patru ori pe secundă.",
-"l": "O purtătoare fixă și benzi laterale care alunecă precum un evantai: „uu-uu”-ul balizelor de pericol, și pe 121,375 MHz la exerciții (fișele 27 și 28)."
+"l": "O purtătoare fixă și benzi laterale care alunecă precum un evantai: „uu-uu”-ul balizelor de pericol, și pe 121,375 MHz la exerciții (fișele 28 și 29)."
 },
 "406": {
 "nm": "Baliză 406",
 "t": "Baliză 406 MHz: rafală BPSK",
 "h": "O jumătate de secundă de emisie: 160 ms de purtătoare pură, apoi faza oscilează cu ±1,1 radiani la 400 bit/s.",
-"l": "O mică linie scurtă care revine la fiecare 50 s, între 406,0 și 406,1 MHz; nimic util de auzit, e nevoie de un decodor (EPIRB 406, fișa 28)."
+"l": "O mică linie scurtă care revine la fiecare 50 s, între 406,0 și 406,1 MHz; nimic util de auzit, e nevoie de un decodor (EPIRB 406, fișa 29)."
 },
 "adsb": {
 "t": "ADS-B / Mode S (1090 MHz): impulsuri",
@@ -321,7 +321,7 @@
 "sh": "5 tonuri",
 "t": "Selcall CCIR: tonuri în succesiune",
 "h": "Cinci tonuri de 100 ms unul după altul, câte unul pe cifră.",
-"l": "O mică scară de puncte, repetată; un „tululululu” rapid pentru a chema o anumită stație (fișa 33).",
+"l": "O mică scară de puncte, repetată; un „tululululu” rapid pentru a chema o anumită stație (fișa 34).",
 "r": [
 [
 "Secvență",
@@ -333,50 +333,50 @@
 "sh": "pagere",
 "t": "POCSAG și FLEX: pagere",
 "h": "Un FSK la ±4,5 kHz; un preambul 1010… apoi datele (scară redusă).",
-"l": "Două linii curate în timpul preambulului, apoi o bandă plină; un „brrrrt” strident. 466,075 MHz, DAPNET 439,9875 MHz (fișa 45).",
+"l": "Două linii curate în timpul preambulului, apoi o bandă plină; un „brrrrt” strident. 466,075 MHz, DAPNET 439,9875 MHz (fișa 46).",
 "n": "scară redusă"
 },
 "ale": {
 "sh": "8 tonuri",
 "t": "ALE: stabilire automată a legăturii pe unde scurte",
 "h": "Opt tonuri de la 750 la 2500 Hz, 125 baud, în rafale.",
-"l": "Un bloc de circa 2 kHz din puncte mici, de una-două secunde, uneori pe mai multe frecvențe apropiate; un ciripit ascuțit (fișa 34)."
+"l": "Un bloc de circa 2 kHz din puncte mici, de una-două secunde, uneori pe mai multe frecvențe apropiate; un ciripit ascuțit (fișa 35)."
 },
 "rs41": {
 "nm": "Radiosondă RS41",
 "t": "Radiosondă RS41: GFSK continuu",
 "h": "Un FSK netezit la 4800 baud, fără oprire; frecvența derivă încet pe măsură ce sonda urcă și se răcește.",
-"l": "O bandă de circa 10 kHz care alunecă oblic pe tot zborul, între 400 și 406 MHz (fișa 21)."
+"l": "O bandă de circa 10 kHz care alunecă oblic pe tot zborul, între 400 și 406 MHz (fișa 22)."
 },
 "ook": {
 "nm": "Senzori 433",
 "t": "Senzori pe 433 MHz: OOK",
 "h": "Purtătoarea se aprinde și se stinge în impulsuri scurte sau lungi (on-off keying); mesajul e repetat de trei ori.",
-"l": "Rafale de puncte mici, adesea câte trei, pe 433,92 MHz: stații meteo, sonde de temperatură, telecomenzi (fișa 22)."
+"l": "Rafale de puncte mici, adesea câte trei, pe 433,92 MHz: stații meteo, sonde de temperatură, telecomenzi (fișa 23)."
 },
 "fhss": {
 "t": "Bluetooth: salt de frecvență (FHSS)",
 "h": "Frecvența se schimbă de 1600 de ori pe secundă între 79 de canale (scară redusă).",
-"l": "Linii mici risipite peste tot pe 80 MHz, niciodată în același loc, în jur de 2,4 GHz (fișa 25).",
+"l": "Linii mici risipite peste tot pe 80 MHz, niciodată în același loc, în jur de 2,4 GHz (fișa 26).",
 "n": "scară redusă"
 },
 "wspr": {
 "t": "WSPR: balize de propagare",
 "h": "Patru tonuri la 1,46 Hz distanță, 0,68 s pe simbol, timp de 110,6 s.",
-"l": "O linie foarte subțire de circa 6 Hz care durează aproape două minute, la fiecare două minute pare: trebuie mărit mult (fișa 29).",
+"l": "O linie foarte subțire de circa 6 Hz care durează aproape două minute, la fiecare două minute pare: trebuie mărit mult (fișa 30).",
 "n": "extras de 24 s (o emisie durează 110,6 s)"
 },
 "qrss": {
 "t": "QRSS: Morse foarte lent",
 "h": "O purtătoare pornită și oprită, cu puncte de 3–10 s, adesea pe două frecvențe apropiate (DFCW).",
-"l": "Linii de câțiva Hz, citite pe un ecran de zece minute; inaudibile pentru ureche (fișa 30).",
+"l": "Linii de câțiva Hz, citite pe un ecran de zece minute; inaudibile pentru ureche (fișa 31).",
 "n": "accelerat: punct de 0,6 s în loc de 3–10 s"
 },
 "texte": {
 "nm": "Text în cascadă",
 "t": "Text în cascadă",
 "h": "Fiecare linie a unei imagini devine un grup de tonuri: sunetul seamănă cu un zgomot.",
-"l": "Textul sau desenul apare direct pe ecranul SDR-ului (fișa 40).",
+"l": "Textul sau desenul apare direct pe ecranul SDR-ului (fișa 41).",
 "r": [
 [
 "Notă",
@@ -387,7 +387,7 @@
 "vara": {
 "t": "Date HF moderne: VARA, Pactor, ARDOP",
 "h": "Rafale lungi și pline (OFDM sau PSK) și, între ele, răspunsuri scurte ale celeilalte stații.",
-"l": "Un dreptunghi de circa 2,4 kHz care se oprește și pornește iar, cu o mică confirmare între; un suflu tocat (fișa 29)."
+"l": "Un dreptunghi de circa 2,4 kHz care se oprește și pornește iar, cu o mică confirmare între; un suflu tocat (fișa 30)."
 },
 "chirp": {
 "nm": "Sondă ionosferică",
@@ -435,19 +435,19 @@
 "ofdm": {
 "t": "OFDM: zeci de subpurtătoare",
 "h": "Multe purtătoare strânse, fiecare lentă: suma seamănă cu un zgomot.",
-"l": "Un dreptunghi plat cu margini nete, mereu prezent: DRM pe unde scurte (10 kHz), DAB+ (1,5 MHz), DVB-T, Wi-Fi. Pentru ureche, un suflu continuu (fișele 12 și 25)."
+"l": "Un dreptunghi plat cu margini nete, mereu prezent: DRM pe unde scurte (10 kHz), DAB+ (1,5 MHz), DVB-T, Wi-Fi. Pentru ureche, un suflu continuu (fișele 12 și 26)."
 },
 "dsss": {
 "t": "Spectru împrăștiat (DSSS): GPS, Wi-Fi 802.11b",
 "h": "Datele sunt amestecate cu un cod foarte rapid: energia e împrăștiată pe o bandă largă.",
-"l": "O cocoașă largă, abia deasupra zgomotului; GPS-ul este chiar sub zgomot și nu se vede fără prelucrare (fișele 25 și 26)."
+"l": "O cocoașă largă, abia deasupra zgomotului; GPS-ul este chiar sub zgomot și nu se vede fără prelucrare (fișele 26 și 27)."
 },
 "hline": {
 "nm": "Linia hidrogenului",
 "sh": "1420 MHz",
 "t": "Linia de 21 cm a hidrogenului (1420,405 MHz)",
 "h": "Hidrogenul rece din Calea Lactee emite un suflu foarte slab pe 1420,405 MHz. Mișcarea brațelor galaxiei îl deplasează prin efect Doppler: se văd mai multe cocoașe mici.",
-"l": "Aproape nimic în cascadă de la o secundă la alta: trebuie mediat mult timp ca să vezi cocoașele ieșind din zgomot. Aici, privește spectrul mediu la oprire. Ajung o parabolă sau o pâlnie, un preamplificator și un SDR (fișa 47).",
+"l": "Aproape nimic în cascadă de la o secundă la alta: trebuie mediat mult timp ca să vezi cocoașele ieșind din zgomot. Aici, privește spectrul mediu la oprire. Ajung o parabolă sau o pâlnie, un preamplificator și un SDR (fișa 49).",
 "n": "semnal mult exagerat"
 },
 "sun": {
@@ -455,21 +455,21 @@
 "sh": "erupții",
 "t": "Soarele: erupții radio de tip III",
 "h": "Electronii aruncați de o erupție traversează coroana Soarelui și o fac să emită pe frecvențe tot mai joase pe măsură ce se îndepărtează.",
-"l": "Linii care cad în diagonală din vârful până la baza spectrului în mai puțin de o secundă, pe un fond de zgomot solar; un „șșșș” care se umflă. De la circa 10 la 400 MHz, și pe unde scurte în jur de 20 MHz (fișa 47)."
+"l": "Linii care cad în diagonală din vârful până la baza spectrului în mai puțin de o secundă, pe un fond de zgomot solar; un „șșșș” care se umflă. De la circa 10 la 400 MHz, și pe unde scurte în jur de 20 MHz (fișa 49)."
 },
 "jupiter": {
 "nm": "Jupiter",
 "sh": "20 MHz",
 "t": "Jupiter: erupții decametrice (L și S)",
 "h": "Câmpul magnetic al lui Jupiter și satelitul său Io produc emisii puternice între 15 și 40 MHz: erupții L lente și erupții S foarte scurte, care alunecă repede în jos.",
-"l": "Întâi valuri de suflu (L, ca valurile pe o plajă), apoi șiruri de mici „pocnete” (S) în diagonale strânse. În jur de 20,1 MHz noaptea, cu un simplu dipol, când Io e bine plasat (fișa 47)."
+"l": "Întâi valuri de suflu (L, ca valurile pe o plajă), apoi șiruri de mici „pocnete” (S) în diagonale strânse. În jur de 20,1 MHz noaptea, cu un simplu dipol, când Io e bine plasat (fișa 49)."
 },
 "pulsar": {
 "nm": "Pulsar",
 "sh": "B0329+54",
 "t": "Pulsarul PSR B0329+54",
 "h": "O stea neutronică în rotație mătură Pământul cu un fascicul radio, aici la fiecare 0,714 s. Gazul interstelar întârzie frecvențele joase: fiecare impuls sosește întâi în vârful spectrului.",
-"l": "Un „tic” regulat; în cascadă, fiecare impuls e o curbă înclinată în jos (dispersie). Semnalul real e sub zgomot: trebuie o antenă mare și însumarea impulsurilor pe perioada lor (fișa 47).",
+"l": "Un „tic” regulat; în cascadă, fiecare impuls e o curbă înclinată în jos (dispersie). Semnalul real e sub zgomot: trebuie o antenă mare și însumarea impulsurilor pe perioada lor (fișa 49).",
 "n": "semnal mult exagerat"
 },
 "meteor": {
@@ -484,28 +484,28 @@
 "sh": "VLF",
 "t": "Fluierături VLF (whistlers)",
 "h": "Un fulger produce un clic radio; o parte urmează liniile câmpului magnetic al Pământului până în emisfera opusă și înapoi, întâi notele înalte.",
-"l": "Un „piuuu” care coboară de sus în jos în una-două secunde, imediat după un clic; pârâituri (sferics) peste tot. Sub 10 kHz, cu un receptor VLF departe de liniile electrice (fișa 47)."
+"l": "Un „piuuu” care coboară de sus în jos în una-două secunde, imediat după un clic; pârâituri (sferics) peste tot. Sub 10 kHz, cu un receptor VLF departe de liniile electrice (fișa 49)."
 },
 "chorus": {
 "nm": "Corul zorilor",
 "sh": "VLF",
 "t": "Corul zorilor (dawn chorus)",
 "h": "În timpul unei furtuni magnetice, electronii prinși în magnetosferă emit mici note ascendente, mai ales în jurul răsăritului.",
-"l": "Ciripituri ascendente care se suprapun, ca niște păsări, de la circa 1 la 4 kHz. Același echipament ca pentru fluierături (fișa 47)."
+"l": "Ciripituri ascendente care se suprapun, ca niște păsări, de la circa 1 la 4 kHz. Același echipament ca pentru fluierături (fișa 49)."
 },
 "sputnik": {
 "nm": "Sputnik 1",
 "sh": "1957",
 "t": "Sputnik 1 (1957)",
 "h": "Primul satelit artificial trimitea bipuri de circa 0,3 s pe 20,005 și 40,002 MHz, alternativ, timp de trei săptămâni.",
-"l": "O linie întreruptă regulat: „bip… bip…”, sunetul pe care l-a ascultat lumea întreagă în octombrie 1957 (reconstituire) (fișa 41)."
+"l": "O linie întreruptă regulat: „bip… bip…”, sunetul pe care l-a ascultat lumea întreagă în octombrie 1957 (reconstituire) (fișa 42)."
 },
 "doppler": {
 "nm": "Efect Doppler",
 "sh": "satelit",
 "t": "Baliză de satelit și efect Doppler",
 "h": "Un satelit pe orbită joasă se apropie, apoi se depărtează: frecvența recepționată scade în timpul trecerii, cu circa ±3 kHz pe 145 MHz și ±10 kHz pe 435 MHz.",
-"l": "O linie care coboară în S: încet la început, repede când satelitul e cel mai aproape, apoi iar încet (fișa 41).",
+"l": "O linie care coboară în S: încet la început, repede când satelitul e cel mai aproape, apoi iar încet (fișa 42).",
 "n": "trecere de 10 min comprimată în 12 s"
 },
 "apt": {
@@ -513,7 +513,7 @@
 "sh": "137 MHz",
 "t": "Sateliții NOAA: imagini APT (istoric)",
 "h": "O subpurtătoare de 2400 Hz modulată în amplitudine de imagine, două linii pe secundă, cu un impuls de sincronizare la începutul fiecărei linii. Oprit în 2025; sateliții Meteor-M emit acum LRPT.",
-"l": "O linie la 2400 Hz cu benzi laterale care se schimbă odată cu imaginea și celebrul „tic-tac” de două ori pe secundă (fișa 41)."
+"l": "O linie la 2400 Hz cu benzi laterale care se schimbă odată cu imaginea și celebrul „tic-tac” de două ori pe secundă (fișa 42)."
 },
 "eme": {
 "nm": "Ecou lunar",
@@ -528,14 +528,14 @@
 "sh": "meteori",
 "t": "MSK144: modul digital pentru meteor scatter",
 "h": "Două tonuri, 1000 și 2000 Hz, la 2000 baud, în cadre de 72 ms repetate fără oprire: fiecare urmă de meteor lasă să treacă câteva.",
-"l": "Rafale de 0,1–1 s, de circa 2,4 kHz, care apar și se sting odată cu „ping”-ul meteorului. Pe 50 și 144 MHz, cu WSJT-X (fișa 29)."
+"l": "Rafale de 0,1–1 s, de circa 2,4 kHz, care apar și se sting odată cu „ping”-ul meteorului. Pe 50 și 144 MHz, cu WSJT-X (fișa 30)."
 },
 "jt65": {
 "nm": "JT65",
 "sh": "65 tonuri",
 "t": "JT65: 65 de tonuri, foarte lent",
 "h": "Un ton de sincronizare și 64 de tonuri de date la 2,7 Hz distanță (JT65A), 0,37 s pe simbol, 47 s de emisie pe minut.",
-"l": "O scară de linii mici pe circa 180 Hz, cu o linie de sincronizare care revine mereu în același loc. Folosit pentru reflexia pe Lună (JT65B și C) și semnale foarte slabe (fișa 29).",
+"l": "O scară de linii mici pe circa 180 Hz, cu o linie de sincronizare care revine mereu în același loc. Folosit pentru reflexia pe Lună (JT65B și C) și semnale foarte slabe (fișa 30).",
 "n": "extras de 20 s (o emisie durează 47 s)"
 },
 "tetra": {
@@ -543,7 +543,7 @@
 "sh": "π/4-DQPSK",
 "t": "TETRA: rețea digitală profesională",
 "h": "Modulație de fază π/4-DQPSK la 18.000 de simboluri pe secundă, patru canale partajate în timp, în canale de 25 kHz.",
-"l": "Un bloc plin cu margini rotunjite, mereu prezent lângă o stație de bază; un suflu răgușit. Criptat: nu se poate asculta (fișa 46).",
+"l": "Un bloc plin cu margini rotunjite, mereu prezent lângă o stație de bază; un suflu răgușit. Criptat: nu se poate asculta (fișa 47).",
 "n": "scară redusă"
 },
 "ndb": {
@@ -573,42 +573,42 @@
 "sh": "Meteomodem",
 "t": "Radiosondele M10 și M20 (Meteomodem)",
 "h": "Un cadru pe secundă, în FSK rapid (circa 9600 baud): mai lat decât RS41. Lansate în Franța de Météo-France.",
-"l": "O rafală largă în fiecare secundă, care derivă încet în timpul zborului; între 400 și 406 MHz (fișa 21)."
+"l": "O rafală largă în fiecare secundă, care derivă încet în timpul zborului; între 400 și 406 MHz (fișa 22)."
 },
 "tpms": {
 "nm": "Anvelope (TPMS)",
 "sh": "433 MHz",
 "t": "Senzori de presiune a anvelopelor (TPMS)",
 "h": "Fiecare roată trimite din când în când o rafală FSK de câteva milisecunde: presiune, temperatură, identificator.",
-"l": "Mici rafale izolate pe 433,92 MHz (sau 315 MHz), adesea câte două, când trece o mașină. Decodate cu rtl_433 (fișa 22)."
+"l": "Mici rafale izolate pe 433,92 MHz (sau 315 MHz), adesea câte două, când trece o mașină. Decodate cu rtl_433 (fișa 23)."
 },
 "als162": {
 "nm": "ALS162",
 "sh": "162 kHz",
 "t": "Semnal orar ALS162 (Allouis, 162 kHz)",
 "h": "Purtătoarea fostului post de unde lungi France Inter; ora e codată prin mici modulații de fază, inaudibile.",
-"l": "O linie fixă, foarte puternică în Franța, abia lărgită la începutul fiecărei secunde; e nevoie de un decodor pentru a citi ora (fișa 39)."
+"l": "O linie fixă, foarte puternică în Franța, abia lărgită la începutul fiecărei secunde; e nevoie de un decodor pentru a citi ora (fișa 40)."
 },
 "wwv": {
 "nm": "WWV",
 "sh": "2,5–20 MHz",
 "t": "Semnal orar WWV (Colorado)",
 "h": "În AM: un „tic” de 5 ms la 1000 Hz în fiecare secundă, un ton de 500 sau 600 Hz, un cod orar pe 100 Hz și o voce care anunță ora UTC.",
-"l": "În sunetul demodulat: o linie la 500 Hz întreruptă în fiecare secundă, tic-ul la 1000 Hz și codul chiar jos, pe 100 Hz (fișa 39)."
+"l": "În sunetul demodulat: o linie la 500 Hz întreruptă în fiecare secundă, tic-ul la 1000 Hz și codul chiar jos, pe 100 Hz (fișa 40)."
 },
 "msf": {
 "nm": "MSF",
 "sh": "60 kHz",
 "t": "Semnal orar MSF (Anthorn, 60 kHz)",
 "h": "Purtătoarea e oprită la începutul fiecărei secunde timp de 0,1, 0,2 sau 0,3 s în funcție de biți și 0,5 s pentru a marca minutul.",
-"l": "O linie fixă cu goluri complet negre în fiecare secundă, mai lungi decât la DCF77 (fișa 39)."
+"l": "O linie fixă cu goluri complet negre în fiecare secundă, mai lungi decât la DCF77 (fișa 40)."
 },
 "type2": {
 "nm": "Soare tip II",
 "sh": "undă de șoc",
 "t": "Soarele: erupții radio de tip II",
 "h": "Unda de șoc a unei ejecții de masă coronală face plasma să emită tot mai jos, încet, adesea în două benzi (fundamentala și dublul ei).",
-"l": "Două benzi de zgomot paralele care coboară lin timp de mai multe minute. Compară cu erupțiile de tip III, mult mai rapide (fișa 47).",
+"l": "Două benzi de zgomot paralele care coboară lin timp de mai multe minute. Compară cu erupțiile de tip III, mult mai rapide (fișa 49).",
 "n": "mai multe minute comprimate în 6 s"
 },
 "tweeks": {
@@ -616,14 +616,14 @@
 "sh": "VLF",
 "t": "Tweeks: „ping”-urile VLF din timpul nopții",
 "h": "Noaptea, clicul unui fulger îndepărtat ricoșează între sol și ionosferă; frecvențele apropiate de cea de tăiere (circa 1,7 kHz) sosesc ultimele.",
-"l": "Un mic „ping” care coboară și se oprește în jur de 1,7 kHz, uneori cu un ecou la frecvență dublă; pârâituri peste tot. Sub 10 kHz, noaptea (fișa 47)."
+"l": "Un mic „ping” care coboară și se oprește în jur de 1,7 kHz, uneori cu un ecou la frecvență dublă; pârâituri peste tot. Sub 10 kHz, noaptea (fișa 49)."
 },
 "hiss": {
 "nm": "Suflu VLF",
 "sh": "hiss",
 "t": "Suflul VLF (hiss)",
 "h": "Zgomot de bandă largă produs de electronii din plasmasferă, care crește și scade odată cu activitatea magnetică.",
-"l": "O bandă de suflu de la câteva sute de Hz la câțiva kHz, fără model, care se umflă și se stinge încet (fișa 47)."
+"l": "O bandă de suflu de la câteva sute de Hz la câțiva kHz, fără model, care se umflă și se stinge încet (fișa 49)."
 },
 "aurora": {
 "nm": "Aurora radio",
@@ -637,7 +637,7 @@
 "sh": "20–40 MHz",
 "t": "Zgomotul Căii Lactee",
 "h": "Centrul galaxiei emite un suflu radio descoperit de Karl Jansky în 1932, în jur de 20 MHz. Crește și scade pe măsură ce Pământul se rotește.",
-"l": "Un zgomot de fond care urcă încet și coboară din nou, cu circa 4 minute mai devreme în fiecare zi. Vizibil cu un simplu dipol între 20 și 40 MHz (fișa 47).",
+"l": "Un zgomot de fond care urcă încet și coboară din nou, cu circa 4 minute mai devreme în fiecare zi. Vizibil cu un simplu dipol între 20 și 40 MHz (fișa 49).",
 "n": "o zi comprimată în 12 s"
 },
 "cubesat": {
@@ -645,7 +645,7 @@
 "sh": "9600 bd",
 "t": "Telemetrie CubeSat",
 "h": "Sateliții mici își trimit regulat măsurătorile (baterie, temperaturi) în FSK sau GMSK la 1200 sau 9600 baud, în jur de 435–438 MHz.",
-"l": "Rafale regulate care alunecă de fiecare dată puțin mai jos, prin efect Doppler, în timpul trecerii (fișa 41).",
+"l": "Rafale regulate care alunecă de fiecare dată puțin mai jos, prin efect Doppler, în timpul trecerii (fișa 42).",
 "n": "scară redusă, trecere accelerată"
 },
 "issfm": {
@@ -653,7 +653,7 @@
 "sh": "145,800 MHz",
 "t": "Stația spațială (ISS): voce în FM",
 "h": "Astronauții vorbesc cu școli și radioamatori în FM pe 145,800 MHz. Stația zboară cu 28.000 km/h: în timpul trecerii, frecvența recepționată alunecă de la circa +3,5 kHz la −3,5 kHz.",
-"l": "O bandă de voce FM care se mută încet de la dreapta la stânga în timpul trecerii de zece minute (fișa 41).",
+"l": "O bandă de voce FM care se mută încet de la dreapta la stânga în timpul trecerii de zece minute (fișa 42).",
 "n": "trecere de 10 min comprimată în 10 s"
 },
 "buzzer": {
@@ -661,14 +661,14 @@
 "sh": "4625 kHz",
 "t": "UVB-76, „The Buzzer” (4625 kHz)",
 "h": "O stație militară rusă care emite de decenii un bâzâit de circa o secundă, repetat de vreo 25 de ori pe minut, întrerupt uneori de un mesaj vocal.",
-"l": "O purtătoare fixă și, la fiecare bâzâit, o coloană de linii strânse de sus până jos. Ușor de găsit pe 4625 kHz în USB (fișa 43)."
+"l": "O purtătoare fixă și, la fiecare bâzâit, o coloană de linii strânse de sus până jos. Ușor de găsit pe 4625 kHz în USB (fișa 44)."
 },
 "pip": {
 "nm": "„The Pip”",
 "sh": "3756 / 5448 kHz",
 "t": "„The Pip”: bipuri fără sfârșit",
 "h": "O altă baliză militară rusă pe unde scurte, care repetă zi și noapte mici bipuri scurte, întrerupte uneori de mesaje.",
-"l": "O linie fixă tăiată de un bip scurt de circa 50 de ori pe minut; pentru ureche, un „pip… pip…” regulat care nu se oprește niciodată (fișa 43).",
+"l": "O linie fixă tăiată de un bip scurt de circa 50 de ori pe minut; pentru ureche, un „pip… pip…” regulat care nu se oprește niciodată (fișa 44).",
 "n": "ritm aproximativ"
 },
 "squeaky": {
@@ -676,7 +676,7 @@
 "sh": "HF",
 "t": "„Squeaky Wheel”",
 "h": "O baliză militară rusă pe unde scurte, numită de ascultători după motivul sonor repetat.",
-"l": "Un mic motiv din două sunete, unul ascendent, repetat în buclă: ca o roată care scârțâie (fișa 43).",
+"l": "Un mic motiv din două sunete, unul ascendent, repetat în buclă: ca o roată care scârțâie (fișa 44).",
 "n": "imitație aproximativă"
 },
 "codar": {
@@ -684,7 +684,7 @@
 "sh": "radar oceanic",
 "t": "CODAR: radare pentru curenții marini",
 "h": "Radare de coastă mătură o bandă de frecvențe o dată sau de două ori pe secundă pentru a măsura curenții și valurile.",
-"l": "Diagonale paralele regulate și un „fâșșș” repetat; în jur de 4,5–5,5 MHz, 13 MHz și 25 MHz, adesea zi și noapte (fișa 43).",
+"l": "Diagonale paralele regulate și un „fâșșș” repetat; în jur de 4,5–5,5 MHz, 13 MHz și 25 MHz, adesea zi și noapte (fișa 44).",
 "n": "scară redusă"
 },
 "stanag": {
@@ -692,21 +692,21 @@
 "sh": "8-PSK",
 "t": "Modem militar STANAG 4285",
 "h": "Modulație de fază 8-PSK la 2400 baud pe o purtătoare de 1800 Hz, cu o secvență de sondare la fiecare 107 ms pentru urmărirea canalului.",
-"l": "Un bloc plin de circa 3 kHz; pentru ureche, un suflu cu un bâzâit regulat (fișa 43)."
+"l": "Un bloc plin de circa 3 kHz; pentru ureche, un suflu cu un bâzâit regulat (fișa 44)."
 },
 "link11": {
 "nm": "Link-11",
 "sh": "16 tonuri",
 "t": "Link-11: legătură de date navală",
 "h": "Șaisprezece tonuri de la 605 la 2915 Hz emise împreună, fiecare modulat în fază de 75 de ori pe secundă.",
-"l": "Un pieptene de paisprezece linii regulate de la 935 la 2365 Hz, plus două linii separate la 605 și 2915 Hz; pentru ureche, un bâzâit muzical (fișa 43)."
+"l": "Un pieptene de paisprezece linii regulate de la 935 la 2365 Hz, plus două linii separate la 605 și 2915 Hz; pentru ureche, un bâzâit muzical (fișa 44)."
 },
 "numbers": {
 "nm": "Stație de numere",
 "sh": "voce",
 "t": "Stație de numere",
 "h": "La o oră fixă, o scurtă melodie de apel, apoi o voce (adesea sintetică) citește grupuri de cinci cifre, în AM sau SSB.",
-"l": "Melodia în note separate, apoi grupuri regulate de silabe despărțite de tăceri (fișa 43).",
+"l": "Melodia în note separate, apoi grupuri regulate de silabe despărțite de tăceri (fișa 44).",
 "n": "voce imitată, fără cifre reale"
 },
 "rttydwd": {
@@ -714,14 +714,14 @@
 "sh": "50 Bd / 450 Hz",
 "t": "RTTY meteo al DWD (Germania)",
 "h": "Ca RTTY-ul amatorilor, dar la 50 baud cu deviație de 450 Hz: serviciul meteo german își trimite buletinele și prognozele marine în clar.",
-"l": "Două linii mult mai depărtate și un ritm puțin mai rapid. Între buletine, apelul „CQ CQ CQ DE DDK2 DDH7 DDK9”, apoi RYRYRY. Pe 4583, 7646 și 10.100,8 kHz, și pe 147,3 kHz (fișa 32)."
+"l": "Două linii mult mai depărtate și un ritm puțin mai rapid. Între buletine, apelul „CQ CQ CQ DE DDK2 DDH7 DDK9”, apoi RYRYRY. Pe 4583, 7646 și 10.100,8 kHz, și pe 147,3 kHz (fișa 33)."
 },
 "mfsk16": {
 "nm": "MFSK16",
 "sh": "16 tonuri",
 "t": "MFSK16: șaisprezece tonuri",
 "h": "Șaisprezece tonuri la 15,625 Hz distanță, câte unul, de 15,625 ori pe secundă; fiecare ton poartă patru biți, protejați de corecția erorilor.",
-"l": "O bandă de 316 Hz din mici trepte care sar mereu, după un ton fix la început. Pentru ureche, o mică melodie rapidă, ca un flaut. Folosit și pentru trimiterea de imagini mici (fișa 29)."
+"l": "O bandă de 316 Hz din mici trepte care sar mereu, după un ton fix la început. Pentru ureche, o mică melodie rapidă, ca un flaut. Folosit și pentru trimiterea de imagini mici (fișa 30)."
 },
 "sitora": {
 "nm": "SITOR-A (ARQ)",
@@ -763,14 +763,14 @@
 "sh": "14,100 MHz",
 "t": "Balizele NCDXF / IARU: testarea propagării",
 "h": "Optsprezece balize din toată lumea emit pe rând, câte zece secunde, pe 14,100, 18,110, 21,150, 24,930 și 28,200 MHz: indicativul în Morse, apoi patru linii de câte o secundă la 100 W, 10 W, 1 W și 0,1 W.",
-"l": "Un indicativ, apoi patru linii tot mai slabe: dacă o mai auzi pe ultima, propagarea spre acea baliză e excelentă. Aici 4U1UN (New York), apoi VE8AT (Canada) (fișa 30)."
+"l": "Un indicativ, apoi patru linii tot mai slabe: dacă o mai auzi pe ultima, propagarea spre acea baliză e excelentă. Aici 4U1UN (New York), apoi VE8AT (Canada) (fișa 31)."
 },
 "lrpt": {
 "nm": "Meteor-M LRPT",
 "sh": "137,9 MHz",
 "t": "Sateliții Meteor-M: imagini LRPT",
 "h": "Sateliții meteo ruși Meteor-M își trimit imaginile digital: modulație de fază cu patru stări (QPSK), 72.000 de simboluri pe secundă, circa 120 kHz lățime.",
-"l": "Un bloc plin cu margini rotunjite care alunecă încet în timpul trecerii (efect Doppler); pentru ureche, doar un suflu. Pe 137,9 sau 137,1 MHz, decodare cu SatDump (fișa 41).",
+"l": "Un bloc plin cu margini rotunjite care alunecă încet în timpul trecerii (efect Doppler); pentru ureche, doar un suflu. Pe 137,9 sau 137,1 MHz, decodare cu SatDump (fișa 42).",
 "n": "scară redusă"
 },
 "quindar": {
@@ -778,14 +778,14 @@
 "sh": "NASA",
 "t": "Tonurile Quindar: bipurile Apollo",
 "h": "Când Houstonul apasă butonul microfonului, un bip de 2525 Hz (250 ms) pornește emițătoarele stațiilor de la sol; la eliberare, un bip de 2475 Hz le oprește.",
-"l": "Un bip înalt înaintea fiecărei fraze și altul, puțin mai jos, după: celebrul sunet al înregistrărilor misiunilor Apollo (fișa 41)."
+"l": "Un bip înalt înaintea fiecărei fraze și altul, puțin mai jos, după: celebrul sunet al înregistrărilor misiunilor Apollo (fișa 42)."
 },
 "wow": {
 "nm": "Semnalul „Wow!”",
 "sh": "1977",
 "t": "Semnalul „Wow!” (15 august 1977)",
 "h": "Radiotelescopul Big Ear (Ohio) a captat timp de 72 de secunde un semnal îngust și foarte puternic lângă linia hidrogenului, în jur de 1420,456 MHz. Astronomul Jerry Ehman a scris „Wow!” pe listare. Nu a mai fost văzut niciodată, iar originea lui e încă discutată.",
-"l": "O linie subțire care iese din zgomot, crește și se stinge: forma unei surse fixe care traversează fasciculul antenei. E o reconstituire: nu există nicio înregistrare sonoră (fișa 47).",
+"l": "O linie subțire care iese din zgomot, crește și se stinge: forma unei surse fixe care traversează fasciculul antenei. E o reconstituire: nu există nicio înregistrare sonoră (fișa 49).",
 "n": "72 s comprimate în 12 s"
 },
 "frb": {
@@ -793,7 +793,7 @@
 "sh": "FRB",
 "t": "Explozie radio rapidă (FRB)",
 "h": "Un fulger radio de câteva milisecunde, venit din altă galaxie; primul a fost descoperit în 2007. Gazul traversat întârzie mult frecvențele joase: explozia sosește întinsă, întâi notele înalte.",
-"l": "O singură curbă care cade din vârful până la baza spectrului, apoi nimic. Unele se repetă; cele mai multe sunt văzute o singură dată (fișa 47).",
+"l": "O singură curbă care cade din vârful până la baza spectrului, apoi nimic. Unele se repetă; cele mai multe sunt văzute o singură dată (fișa 49).",
 "n": "mult încetinit și exagerat"
 },
 "letterb": {
@@ -801,14 +801,14 @@
 "sh": "D, P, S, C…",
 "t": "Balizele cu o singură literă",
 "h": "Emițătoare ale marinei ruse repetă la nesfârșit o literă Morse, fiecare la 100 Hz de vecina ei: D, P, S, C, A, F, K sau M, după loc.",
-"l": "Linii punctate paralele, foarte apropiate, fiecare cu ritmul ei. În jur de 4558, 5154, 7039, 10.872, 13.528 și 16.332 kHz, în CW (fișa 43)."
+"l": "Linii punctate paralele, foarte apropiate, fiecare cu ritmul ei. În jur de 4558, 5154, 7039, 10.872, 13.528 și 16.332 kHz, în CW (fișa 44)."
 },
 "sid": {
 "nm": "Erupție solară în VLF",
 "sh": "SID",
 "t": "Erupție solară văzută în VLF (SID)",
 "h": "Emițătoarele VLF ale marinelor (20,9 kHz în Franța, 23,4 kHz în Germania…) se propagă între sol și ionosferă. Când sosește o erupție solară, razele X modifică baza ionosferei în câteva minute, iar nivelul recepționat sare.",
-"l": "O bandă îngustă și stabilă (semnalul MSK al emițătorului) care devine brusc mai puternică, apoi revine încet la normal. Ajung o buclă de sârmă și o placă de sunet: un proiect clasic al cluburilor de astronomie (fișa 47).",
+"l": "O bandă îngustă și stabilă (semnalul MSK al emițătorului) care devine brusc mai puternică, apoi revine încet la normal. Ajung o buclă de sârmă și o placă de sunet: un proiect clasic al cluburilor de astronomie (fișa 49).",
 "n": "o oră comprimată în 12 s"
 },
 "qrn": {
@@ -830,7 +830,7 @@
 "sh": "2–30 MHz",
 "t": "PLC: internet prin prizele electrice",
 "h": "Adaptoarele powerline trimit date prin instalația electrică a casei pe sute de purtătoare între 2 și 30 MHz (mai sus la modelele recente), câte una la 24,4 kHz. Firele radiază ca o antenă.",
-"l": "Un pieptene de linii regulate care pâlpâie în pachete, cu goluri pe benzile de amatori (crestături impuse de standard); pentru ureche, un pârâit care urmează traficul de internet (fișa 43).",
+"l": "Un pieptene de linii regulate care pâlpâie în pachete, cu goluri pe benzile de amatori (crestături impuse de standard); pentru ureche, un pârâit care urmează traficul de internet (fișa 44).",
 "n": "scară redusă"
 },
 "fence": {
@@ -838,28 +838,28 @@
 "sh": "tic… tic…",
 "t": "Gard electric",
 "h": "Aparatul trimite în sârmă un impuls de câteva mii de volți cam o dată pe secundă. Dacă iarba atinge sârma sau un izolator e deteriorat, sare o scânteie care radiază pe toate frecvențele.",
-"l": "O linie orizontală foarte subțire pe toată lățimea, la intervale perfect regulate; un „tic… tic…” de la unde lungi până în VHF. Ritmul constant îl deosebește de paraziții de furtună (fișa 43)."
+"l": "O linie orizontală foarte subțire pe toată lățimea, la intervale perfect regulate; un „tic… tic…” de la unde lungi până în VHF. Ritmul constant îl deosebește de paraziții de furtună (fișa 44)."
 },
 "gsm": {
 "nm": "Telefon GSM",
 "sh": "217 Hz",
 "t": "Telefon GSM lângă un difuzor",
 "h": "Un telefon 2G emite în rafale de 0,577 ms, de 217 ori pe secundă. Un amplificator audio prost ecranat detectează aceste rafale și le face audibile.",
-"l": "Un pieptene de linii la fiecare 217 Hz; celebrul „tit-tit-ti-ti-tit” chiar înainte să sune telefonul, apoi un bâzâit constant în timpul convorbirii. Tot mai rar: rețelele 2G sunt închise (fișa 43)."
+"l": "Un pieptene de linii la fiecare 217 Hz; celebrul „tit-tit-ti-ti-tit” chiar înainte să sune telefonul, apoi un bâzâit constant în timpul convorbirii. Tot mai rar: rețelele 2G sunt închise (fișa 44)."
 },
 "jjy": {
 "nm": "JJY",
 "sh": "40 / 60 kHz",
 "t": "Semnal orar JJY (Japonia, 40 și 60 kHz)",
 "h": "În fiecare secundă purtătoarea are putere maximă timp de 0,8 s (bit 0), 0,5 s (bit 1) sau 0,2 s (marcaj), apoi scade la 10 %. E opusul lui DCF77, care scade la începutul secundei.",
-"l": "O linie fixă care slăbește la sfârșitul fiecărei secunde, mai devreme sau mai târziu. Emițătoare la Fukushima (40 kHz) și Saga-Fukuoka (60 kHz), pentru ceasurile radio din Japonia (fișa 39)."
+"l": "O linie fixă care slăbește la sfârșitul fiecărei secunde, mai devreme sau mai târziu. Emițătoare la Fukushima (40 kHz) și Saga-Fukuoka (60 kHz), pentru ceasurile radio din Japonia (fișa 40)."
 },
 "rwm": {
 "nm": "RWM",
 "sh": "4996 kHz",
 "t": "Semnal orar RWM (Moscova)",
 "h": "În telegrafie pe 4996, 9996 și 14.996 kHz: un impuls de 100 ms în fiecare secundă, apoi, în alte minute, zece impulsuri pe secundă. Indicativul RWM e dat în Morse de două ori pe oră.",
-"l": "Indicativul, apoi o linie tăiată în „tic”-uri regulate, apoi în puncte rapide. Ascultă în CW sau SSB (fișa 39).",
+"l": "Indicativul, apoi o linie tăiată în „tic”-uri regulate, apoi în puncte rapide. Ascultă în CW sau SSB (fișa 40).",
 "n": "extras condensat"
 },
 "bpm": {
@@ -867,7 +867,7 @@
 "sh": "2,5–15 MHz",
 "t": "Semnal orar BPM (China)",
 "h": "Stația din Pucheng (Shaanxi) emite în AM pe 2,5, 5, 10 și 15 MHz: un tic de 10 ms la 1000 Hz în fiecare secundă (300 ms la minut fix) și, în anumite minute, tic-uri de 100 ms pentru ora UT1. Indicativul BPM e dat în Morse, apoi de o voce.",
-"l": "În sunetul demodulat: indicativul, apoi linii foarte scurte la 1000 Hz, una pe secundă, cu una mai lungă la minut fix. Adesea amestecat cu WWV pe aceleași frecvențe (fișa 39).",
+"l": "În sunetul demodulat: indicativul, apoi linii foarte scurte la 1000 Hz, una pe secundă, cu una mai lungă la minut fix. Adesea amestecat cu WWV pe aceleași frecvențe (fișa 40).",
 "n": "extras condensat"
 },
 "humpback": {
@@ -875,14 +875,14 @@
 "sh": "cântec",
 "t": "Cântecul balenei cu cocoașă",
 "h": "Iarna, în zonele de reproducere, masculii cântă: un șir de gemete, mormăieli și strigăte care formează o temă, repetată identic ore în șir și schimbată de la un sezon la altul. Hidrofoanele îl aud de la zeci de kilometri.",
-"l": "Urme groase cu armonicile lor, care urcă sau coboară încet între 100 Hz și câțiva kHz; același șir revine după câteva secunde. Ecoul de la suprafață și de pe fund prelungește fiecare notă."
+"l": "Urme groase cu armonicile lor, care urcă sau coboară încet între 100 Hz și câțiva kHz; același șir revine după câteva secunde. Ecoul de la suprafață și de pe fund prelungește fiecare notă (fișa 48)."
 },
 "bluewhale": {
 "nm": "Balena albastră",
 "sh": "×10",
 "t": "Balena albastră: cea mai gravă chemare",
 "h": "Cel mai mare animal din lume scoate chemări foarte grave (10–40 Hz) și foarte puternice, lungi de 10–20 de secunde, repetate ore în șir: se aud la sute de kilometri. Ca să le auzim, înregistrarea e accelerată de zece ori.",
-"l": "O parte pulsată, apoi o notă lungă care abia coboară, cu armonicile deasupra; secvența se repetă. Scara arată frecvențele reale.",
+"l": "O parte pulsată, apoi o notă lungă care abia coboară, cu armonicile deasupra; secvența se repetă. Scara arată frecvențele reale (fișa 48).",
 "n": "accelerat de 10 ori"
 },
 "finwhale": {
@@ -890,7 +890,7 @@
 "sh": "20 Hz",
 "t": "Balena cu înotătoare: impulsurile de 20 Hz",
 "h": "Balena cu înotătoare emite impulsuri de circa o secundă care coboară de la circa 25 la 18 Hz, la intervale regulate, uneori zile întregi. În anii 1950–60, aceste „semnale de 20 Hz” au nedumerit rețelele de ascultare ale marinei americane, până să fie atribuite acestei balene.",
-"l": "Liniuțe scurte, toate la fel, în serie regulată sau câte două, ca bătăile unei inimi foarte lente; fiecare coboară puțin în frecvență. Scara arată frecvențele reale.",
+"l": "Liniuțe scurte, toate la fel, în serie regulată sau câte două, ca bătăile unei inimi foarte lente; fiecare coboară puțin în frecvență. Scara arată frecvențele reale (fișa 48).",
 "n": "accelerat de 10 ori"
 },
 "sperm": {
@@ -898,14 +898,14 @@
 "sh": "clicuri",
 "t": "Clicurile cașalotului",
 "h": "Cașalotul vânează în scufundări adânci cu ajutorul sonarului: clicuri foarte puternice, cam unul pe secundă, care se accelerează într-un „scârțâit” la apropierea de pradă. Între ei, cașaloții schimbă „code”, scurte serii de clicuri al căror ritm diferă de la un clan la altul.",
-"l": "Linii orizontale pe toată lățimea, la distanțe regulate, apoi strânse într-un bâzâit (scârțâitul), apoi un mic motiv ritmic: coda. Fiecare clic e făcut din mai multe impulsuri apropiate, datorate reflexiilor din capul animalului."
+"l": "Linii orizontale pe toată lățimea, la distanțe regulate, apoi strânse într-un bâzâit (scârțâitul), apoi un mic motiv ritmic: coda. Fiecare clic e făcut din mai multe impulsuri apropiate, datorate reflexiilor din capul animalului (fișa 48)."
 },
 "dolphin": {
 "nm": "Delfin cu bot gros",
 "sh": "fluierături",
 "t": "Fluierăturile și clicurile delfinului",
 "h": "Delfinul cu bot gros fluieră între circa 5 și 20 kHz; fiecare individ are o „fluierătură-semnătură” care îi servește drept nume. Pentru a vâna și a se orienta, emite și trenuri de clicuri foarte scurte, până la câteva sute pe secundă.",
-"l": "Curbe subțiri care urcă și coboară, adesea repetate identic, și rafale de linii orizontale pentru ecolocație. Frecvențele sunt împărțite la 3 ca să fie audibile; scara arată valorile reale.",
+"l": "Curbe subțiri care urcă și coboară, adesea repetate identic, și rafale de linii orizontale pentru ecolocație. Frecvențele sunt împărțite la 3 ca să fie audibile; scara arată valorile reale (fișa 48).",
 "n": "redat de 3 ori mai grav"
 },
 "orca": {
@@ -913,14 +913,14 @@
 "sh": "strigăte pulsate",
 "t": "Strigătele pulsate ale orcei",
 "h": "Orcele comunică prin strigăte pulsate: trenuri de impulsuri atât de rapide (500–2000 pe secundă) încât se aud ca o notă, cu un salt brusc de înălțime. Fiecare grup familial are propriul „dialect”.",
-"l": "Un teanc de urme paralele (armonicile) care urcă sau coboară împreună, cu o frântură netă în mijlocul strigătului; uneori o fluierătură subțire, mai înaltă."
+"l": "Un teanc de urme paralele (armonicile) care urcă sau coboară împreună, cu o frântură netă în mijlocul strigătului; uneori o fluierătură subțire, mai înaltă (fișa 48)."
 },
 "bseal": {
 "nm": "Foca cu barbă",
 "sh": "tril",
 "t": "Trilul focii cu barbă",
 "h": "Primăvara, sub banchiza arctică, masculul emite triluri lungi care coboară în spirală de la câțiva kHz la câteva sute de herți, uneori un minut întreg. Servesc la apărarea unui teritoriu și la atragerea femelelor.",
-"l": "O curbă ondulată care alunecă de sus în jos pe scară, ca un arc care se destinde, apoi o notă gravă la final.",
+"l": "O curbă ondulată care alunecă de sus în jos pe scară, ca un arc care se destinde, apoi o notă gravă la final (fișa 48).",
 "n": "scurtat"
 },
 "shrimp": {
@@ -928,28 +928,28 @@
 "sh": "recif",
 "t": "Creveții-pistol (alfeide)",
 "h": "Închizându-și brusc cleștele mare, crevetele aruncă un jet de apă atât de rapid încât formează o bulă de cavitație; când se sparge, bula pocnește ca un foc de armă. Mii de creveți fac zgomotul de fond al recifelor și pot deranja sonarele.",
-"l": "O ploaie de puncte și linii orizontale scurte pe toată lățimea, fără nicio ordine; în căști, un sfârâit continuu, ca o prăjeală."
+"l": "O ploaie de puncte și linii orizontale scurte pe toată lățimea, fără nicio ordine; în căști, un sfârâit continuu, ca o prăjeală (fișa 48)."
 },
 "sonar": {
 "nm": "Sonar activ",
 "sh": "ping",
 "t": "Ping-ul unui sonar activ",
 "h": "O navă trimite un impuls sonor puternic (aici în jur de 3,5 kHz, gama sonarelor de corp ale fregatelor) și ascultă ecoul: întârzierea dă distanța, deplasarea de frecvență (efect Doppler) viteza țintei. Sunetul revine și ca o coadă de la fund și de la suprafață: reverberația.",
-"l": "O urmă scurtă și puternică, o coadă care se stinge, apoi ecoul, mult mai slab și puțin deplasat în frecvență. Al doilea ping e un baleiaj de frecvență (chirp), care măsoară mai bine distanța."
+"l": "O urmă scurtă și puternică, o coadă care se stinge, apoi ecoul, mult mai slab și puțin deplasat în frecvență. Al doilea ping e un baleiaj de frecvență (chirp), care măsoară mai bine distanța (fișa 48)."
 },
 "propeller": {
 "nm": "Elice de navă",
 "sh": "cavitație",
 "t": "Elicea unei nave care trece",
 "h": "Palele elicei creează bule de cavitație care se sparg: un suflu larg, bătut în ritmul trecerii palelor. Mașinile adaugă linii fixe. Operatorii sonar analizează acest ritm (analiză DEMON) pentru a număra palele și turația și a recunoaște nava.",
-"l": "Un suflu pe o bandă largă, vărgat cu benzi orizontale în ritmul palelor, cu câteva linii verticale fixe (motor, reductor). Totul crește, apoi se stinge când nava trece deasupra hidrofonului."
+"l": "Un suflu pe o bandă largă, vărgat cu benzi orizontale în ritmul palelor, cu câteva linii verticale fixe (motor, reductor). Totul crește, apoi se stinge când nava trece deasupra hidrofonului (fișa 48)."
 },
 "uqc": {
 "nm": "Telefon subacvatic",
 "sh": "UQC 8 kHz",
 "t": "Telefonul subacvatic (UQC, „Gertrude”)",
 "h": "Submarinele și navele vorbesc sub apă cu un telefon acustic: vocea e transmisă în bandă laterală unică deasupra unei purtătoare de 8,0875 kHz, emisă de un traductor din corp. Bătaie: câțiva kilometri.",
-"l": "O bandă de voce BLU peste 8 kHz; demodulată, o voce îndepărtată care ondulează și răsună din cauza ecourilor de la suprafață și de pe fund. Afișajul e redus la jumătate; scara arată frecvențele reale.",
+"l": "O bandă de voce BLU peste 8 kHz; demodulată, o voce îndepărtată care ondulează și răsună din cauza ecourilor de la suprafață și de pe fund. Afișajul e redus la jumătate; scara arată frecvențele reale (fișa 48).",
 "n": "scară redusă la jumătate"
 },
 "zevs": {
@@ -957,14 +957,14 @@
 "sh": "ELF",
 "t": "ZEVS: radioul submarinelor pe 82 Hz",
 "h": "Undele radio pătrund foarte greu în apa de mare, cu excepția frecvențelor extrem de joase (ELF). Emițătorul rus ZEVS, din peninsula Kola, emite pe 82 Hz cu linii de antenă de zeci de kilometri pentru a ajunge la submarinele aflate în imersiune adâncă. Debitul e minuscul: câteva caractere pe minut.",
-"l": "O linie subțire la 82 Hz lângă linia rețelei de 50 Hz și armonicile ei, cu paraziții furtunilor. În căști, un zumzet grav abia audibil; se recepționează cu o buclă mare și o placă de sunet. Echivalentul american, pe 76 Hz, a fost închis în 2004."
+"l": "O linie subțire la 82 Hz lângă linia rețelei de 50 Hz și armonicile ei, cu paraziții furtunilor. În căști, un zumzet grav abia audibil; se recepționează cu o buclă mare și o placă de sunet. Echivalentul american, pe 76 Hz, a fost închis în 2004 (fișa 48)."
 },
 "bloop": {
 "nm": "„Bloop”-ul",
 "sh": "1997",
 "t": "„Bloop”-ul (1997)",
 "h": "În 1997, hidrofoanele NOAA din Pacific au captat un sunet foarte grav care urca repede, auzit la mii de kilometri. Mult timp misterios, din 2012 e atribuit unui cutremur de gheață: un aisberg uriaș care se fisurează.",
-"l": "O bandă largă care urcă în câteva secunde, cu armonicile ei, apoi se stinge încet. Reconstituire, accelerată de 16 ori ca înregistrarea difuzată de NOAA.",
+"l": "O bandă largă care urcă în câteva secunde, cu armonicile ei, apoi se stinge încet. Reconstituire, accelerată de 16 ori ca înregistrarea difuzată de NOAA (fișa 48).",
 "n": "accelerat de 16 ori"
 },
 "quake": {

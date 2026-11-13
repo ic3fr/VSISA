@@ -80,7 +80,7 @@
 "ssb": {
 "t": "SSB: jedna wstęga boczna",
 "h": "Zostaje tylko jedna wstęga boczna, bez nośnej: nic, gdy nikt nie mówi.",
-"l": "Brak środkowej kreski, jedno pasmo około 2,7 kHz, które żyje tylko podczas mówienia. USB powyżej 10 MHz, LSB poniżej (krótkofalowcy). Źle dostrojony głos brzmi jak „kaczka” (karty 11 i 29)."
+"l": "Brak środkowej kreski, jedno pasmo około 2,7 kHz, które żyje tylko podczas mówienia. USB powyżej 10 MHz, LSB poniżej (krótkofalowcy). Źle dostrojony głos brzmi jak „kaczka” (karty 11 i 30)."
 },
 "fm": {
 "sh": "głos",
@@ -97,7 +97,7 @@
 "cw": {
 "t": "CW: Morse",
 "h": "Nośna jest włączana i wyłączana: kreski i kropki.",
-"l": "Bardzo cienka kreska przerywana w rytmie Morse'a; piszczenie w uchu. Tutaj „CQ” (karta 49).",
+"l": "Bardzo cienka kreska przerywana w rytmie Morse'a; piszczenie w uchu. Tutaj „CQ” (karta 51).",
 "r": [
 [
 "Szybkość",
@@ -116,7 +116,7 @@
 "rtty": {
 "t": "FSK / RTTY: dwie częstotliwości",
 "h": "Częstotliwość przeskakuje między dwiema wartościami, jedną dla 0, drugą dla 1.",
-"l": "Dwie równoległe kreski: 170 Hz odstępu u krótkofalowców (45,45 bodów), 450 lub 850 Hz w komunikatach pogodowych. Regularne „tidilidi” (karta 32).",
+"l": "Dwie równoległe kreski: 170 Hz odstępu u krótkofalowców (45,45 bodów), 450 lub 850 Hz w komunikatach pogodowych. Regularne „tidilidi” (karta 33).",
 "r": [
 [
 "Kod",
@@ -135,7 +135,7 @@
 "afsk": {
 "t": "AFSK 1200 bodów: APRS i packet",
 "h": "Dwa tony akustyczne, 1200 i 2200 Hz, podane do nadajnika FM.",
-"l": "Za odbiornikiem FM (dźwięk z głośnika): pasmo od 1200 do 2200 Hz w krótkich paczkach. Na słuch sekundowe „grrrt” (karty 35 i 36).",
+"l": "Za odbiornikiem FM (dźwięk z głośnika): pasmo od 1200 do 2200 Hz w krótkich paczkach. Na słuch sekundowe „grrrt” (karty 36 i 37).",
 "r": [
 [
 "Częstotliwość",
@@ -154,7 +154,7 @@
 "psk31": {
 "t": "PSK31: modulacja fazy",
 "h": "Częstotliwość się nie zmienia, odwraca się faza; przy każdym odwróceniu amplituda spada.",
-"l": "Bardzo cienka kreska około 60 Hz, lekko „pleciona”. W 3 kHz mieszczą się dziesiątki stacji (karta 29).",
+"l": "Bardzo cienka kreska około 60 Hz, lekko „pleciona”. W 3 kHz mieszczą się dziesiątki stacji (karta 30).",
 "r": [
 [
 "Kod",
@@ -173,7 +173,7 @@
 "ft8": {
 "t": "MFSK / FT8: osiem tonów",
 "h": "Częstotliwość rośnie i maleje skokami po 6,25 Hz, 0,16 s na skok.",
-"l": "Pasma około 50 Hz, które trwają 12,6 s i wracają co 15 s, zsynchronizowane z zegarem: kilka stacji naraz w 3 kHz, np. na 7,074 MHz (karta 29).",
+"l": "Pasma około 50 Hz, które trwają 12,6 s i wracają co 15 s, zsynchronizowane z zegarem: kilka stacji naraz w 3 kHz, np. na 7,074 MHz (karta 30).",
 "r": [
 [
 "Ramka",
@@ -192,37 +192,37 @@
 "ft4": {
 "t": "FT4: FT8 do zawodów",
 "h": "Cztery tony co 20,8 Hz, 20,8 bodów: 105 symboli w 5 s, w okienkach 7,5 s.",
-"l": "Pasma około 90 Hz, krótsze i szersze niż FT8, wracające co 7,5 s. 14 080, 7047,5 kHz (karta 29)."
+"l": "Pasma około 90 Hz, krótsze i szersze niż FT8, wracające co 7,5 s. 14 080, 7047,5 kHz (karta 30)."
 },
 "olivia": {
 "t": "Olivia 8/250: osiem tonów",
 "h": "Osiem tonów co 31,25 Hz, zawsze jeden naraz, przeskakujących losowo; kodowanie Walsha i przeplot.",
-"l": "Blok rozsianych kropek na 250 Hz; dekoduje głęboko pod szumem. Na słuch mała losowa melodia (karta 29)."
+"l": "Blok rozsianych kropek na 250 Hz; dekoduje głęboko pod szumem. Na słuch mała losowa melodia (karta 30)."
 },
 "hell": {
 "t": "Feld Hell: pisanie nośną",
 "h": "Nośna jest włączana i wyłączana punkt po punkcie: każda litera to kolumny po 14 punktów, skanowane od dołu do góry (245 punktów na sekundę).",
-"l": "W wodospadzie poszarpana kreska; dopiero ekran programu (fldigi) rysuje litery. Na słuch delikatne trzeszczenie (karta 29)."
+"l": "W wodospadzie poszarpana kreska; dopiero ekran programu (fldigi) rysuje litery. Na słuch delikatne trzeszczenie (karta 30)."
 },
 "4fsk": {
 "t": "4FSK: DMR, C4FM (Fusion), NXDN, dPMR",
 "h": "Cztery poziomy częstotliwości: każdy symbol niesie dwa bity.",
-"l": "Prostokątny blok 6–12,5 kHz, pełny jak szum, często w paczkach (DMR dzieli kanał na dwie szczeliny czasowe). Na słuch chrapliwe „frrr” (karta 46)."
+"l": "Prostokątny blok 6–12,5 kHz, pełny jak szum, często w paczkach (DMR dzieli kanał na dwie szczeliny czasowe). Na słuch chrapliwe „frrr” (karta 47)."
 },
 "mt63": {
 "t": "MT63: wiadomości alarmowe (NBEMS)",
 "h": "64 tony naraz, każdy powoli modulowany, z dużą nadmiarowością.",
-"l": "Płaski blok 1 lub 2 kHz wokół 1500 Hz, o ostrych brzegach; równy szum. Przechodzi nawet przez mikrofon przyłożony do głośnika (karta 31)."
+"l": "Płaski blok 1 lub 2 kHz wokół 1500 Hz, o ostrych brzegach; równy szum. Przechodzi nawet przez mikrofon przyłożony do głośnika (karta 32)."
 },
 "lora": {
 "t": "LoRa: rampy częstotliwości (chirpy)",
 "h": "Częstotliwość przemiata całą szerokość i zaczyna od dołu: położenie skoku niesie dane.",
-"l": "Równoległe przekątne, łatwe do rozpoznania: Meshtastic i MeshCore na 869,525 MHz lub 433 MHz, czujniki LoRaWAN (karty 13, 23 i 24)."
+"l": "Równoległe przekątne, łatwe do rozpoznania: Meshtastic i MeshCore na 869,525 MHz lub 433 MHz, czujniki LoRaWAN (karty 13, 24 i 25)."
 },
 "sstv": {
 "t": "SSTV: obrazy w dźwięku",
 "h": "Impuls synchronizacji na 1200 Hz, potem częstotliwość podąża za jasnością linii, od 1500 (czarny) do 2300 Hz (biały).",
-"l": "Regularne kreski synchronizacji i chmura zmieniająca się z obrazem; „ćwierkający” dźwięk przez minutę lub dwie. 14,230 MHz, ISS na 145,800 MHz (karta 37).",
+"l": "Regularne kreski synchronizacji i chmura zmieniająca się z obrazem; „ćwierkający” dźwięk przez minutę lub dwie. 14,230 MHz, ISS na 145,800 MHz (karta 38).",
 "r": [
 [
 "Ramka",
@@ -238,7 +238,7 @@
 "nm": "Faks pogodowy",
 "t": "Faks pogodowy: 1500 Hz czarny, 2300 Hz biały",
 "h": "Częstotliwość płynnie przechodzi od czerni do bieli, 120 linii na minutę.",
-"l": "Dwa stałe pasma na 1500 i 2300 Hz (800 Hz odstępu), regularne „tik-tak”. Publikowane są częstotliwości nośnej: słuchaj w USB 1,9 kHz niżej (karta 38).",
+"l": "Dwa stałe pasma na 1500 i 2300 Hz (800 Hz odstępu), regularne „tik-tak”. Publikowane są częstotliwości nośnej: słuchaj w USB 1,9 kHz niżej (karta 39).",
 "r": [
 [
 "Ramka",
@@ -254,13 +254,13 @@
 "nm": "Syrena ELT",
 "t": "Syrena ELT / PLB na 121,5 MHz",
 "h": "AM, której ton opada z 1600 do 300 Hz dwa do czterech razy na sekundę.",
-"l": "Stała nośna i wstęgi boczne przesuwające się wachlarzem: „łuu-łuu” radiolatarni ratunkowych, także na 121,375 MHz do ćwiczeń (karty 27 i 28)."
+"l": "Stała nośna i wstęgi boczne przesuwające się wachlarzem: „łuu-łuu” radiolatarni ratunkowych, także na 121,375 MHz do ćwiczeń (karty 28 i 29)."
 },
 "406": {
 "nm": "Radiolatarnia 406",
 "t": "Radiolatarnia 406 MHz: paczka BPSK",
 "h": "Pół sekundy nadawania: 160 ms czystej nośnej, potem faza przełącza się o ±1,1 radiana z szybkością 400 bit/s.",
-"l": "Krótka kreseczka powracająca co 50 s, między 406,0 a 406,1 MHz; nic użytecznego do usłyszenia, potrzebny dekoder (EPIRB 406, karta 28)."
+"l": "Krótka kreseczka powracająca co 50 s, między 406,0 a 406,1 MHz; nic użytecznego do usłyszenia, potrzebny dekoder (EPIRB 406, karta 29)."
 },
 "adsb": {
 "t": "ADS-B / mod S (1090 MHz): impulsy",
@@ -320,7 +320,7 @@
 "sh": "5 tonów",
 "t": "Selcall CCIR: tony po kolei",
 "h": "Pięć tonów po 100 ms jeden po drugim, jeden na cyfrę.",
-"l": "Małe schodki z kropek, powtarzane; szybkie „tululululu”, by wywołać jedno konkretne radio (karta 33).",
+"l": "Małe schodki z kropek, powtarzane; szybkie „tululululu”, by wywołać jedno konkretne radio (karta 34).",
 "r": [
 [
 "Sekwencja",
@@ -332,50 +332,50 @@
 "sh": "pagery",
 "t": "POCSAG i FLEX: pagery",
 "h": "FSK ±4,5 kHz; preambuła 1010…, potem dane (skala zmniejszona).",
-"l": "Dwie wyraźne kreski podczas preambuły, potem pełne pasmo; przenikliwe „brrrrt”. 466,075 MHz, DAPNET 439,9875 MHz (karta 45).",
+"l": "Dwie wyraźne kreski podczas preambuły, potem pełne pasmo; przenikliwe „brrrrt”. 466,075 MHz, DAPNET 439,9875 MHz (karta 46).",
 "n": "skala zmniejszona"
 },
 "ale": {
 "sh": "8 tonów",
 "t": "ALE: automatyczne nawiązywanie łączności na KF",
 "h": "Osiem tonów od 750 do 2500 Hz, 125 bodów, w paczkach.",
-"l": "Blok około 2 kHz z drobnych kropek, sekunda lub dwie, czasem na kilku sąsiednich częstotliwościach; wysokie ćwierkanie (karta 34)."
+"l": "Blok około 2 kHz z drobnych kropek, sekunda lub dwie, czasem na kilku sąsiednich częstotliwościach; wysokie ćwierkanie (karta 35)."
 },
 "rs41": {
 "nm": "Radiosonda RS41",
 "t": "Radiosonda RS41: ciągłe GFSK",
 "h": "Wygładzone FSK 4800 bodów bez przerwy; częstotliwość powoli dryfuje, gdy sonda wznosi się i stygnie.",
-"l": "Pasmo około 10 kHz przesuwające się ukośnie przez cały lot, między 400 a 406 MHz (karta 21)."
+"l": "Pasmo około 10 kHz przesuwające się ukośnie przez cały lot, między 400 a 406 MHz (karta 22)."
 },
 "ook": {
 "nm": "Czujniki 433",
 "t": "Czujniki 433 MHz: OOK",
 "h": "Nośna włącza się i wyłącza krótkimi lub długimi impulsami (wszystko albo nic); komunikat powtarza się trzy razy.",
-"l": "Paczki drobnych kropek, często potrójne, na 433,92 MHz: stacje pogodowe, czujniki temperatury, piloty (karta 22)."
+"l": "Paczki drobnych kropek, często potrójne, na 433,92 MHz: stacje pogodowe, czujniki temperatury, piloty (karta 23)."
 },
 "fhss": {
 "t": "Bluetooth: skoki częstotliwości (FHSS)",
 "h": "Częstotliwość zmienia się 1600 razy na sekundę wśród 79 kanałów (skala zmniejszona).",
-"l": "Drobne kreski rozsiane wszędzie na 80 MHz, nigdy w tym samym miejscu, w okolicy 2,4 GHz (karta 25).",
+"l": "Drobne kreski rozsiane wszędzie na 80 MHz, nigdy w tym samym miejscu, w okolicy 2,4 GHz (karta 26).",
 "n": "skala zmniejszona"
 },
 "wspr": {
 "t": "WSPR: radiolatarnie propagacyjne",
 "h": "Cztery tony co 1,46 Hz, 0,68 s na symbol, przez 110,6 s.",
-"l": "Bardzo cienka kreska około 6 Hz trwająca prawie dwie minuty, co parzyste dwie minuty: trzeba mocno powiększyć (karta 29).",
+"l": "Bardzo cienka kreska około 6 Hz trwająca prawie dwie minuty, co parzyste dwie minuty: trzeba mocno powiększyć (karta 30).",
 "n": "fragment 24 s (emisja trwa 110,6 s)"
 },
 "qrss": {
 "t": "QRSS: bardzo wolny Morse",
 "h": "Nośna włączana i wyłączana, kropki od 3 do 10 s, często na dwóch sąsiednich częstotliwościach (DFCW).",
-"l": "Kreski szerokie na kilka Hz, czytane na dziesięciominutowym ekranie; niesłyszalne (karta 30).",
+"l": "Kreski szerokie na kilka Hz, czytane na dziesięciominutowym ekranie; niesłyszalne (karta 31).",
 "n": "przyspieszone: kropka 0,6 s zamiast 3–10 s"
 },
 "texte": {
 "nm": "Tekst w wodospadzie",
 "t": "Tekst w wodospadzie",
 "h": "Każda linia obrazu staje się grupą tonów: dźwięk przypomina szum.",
-"l": "Tekst lub rysunek pojawia się bezpośrednio na ekranie SDR (karta 40).",
+"l": "Tekst lub rysunek pojawia się bezpośrednio na ekranie SDR (karta 41).",
 "r": [
 [
 "Uwaga",
@@ -386,7 +386,7 @@
 "vara": {
 "t": "Nowoczesne dane KF: VARA, Pactor, ARDOP",
 "h": "Długie pełne paczki (OFDM lub PSK), a między nimi krótkie odpowiedzi drugiej stacji.",
-"l": "Prostokąt około 2,4 kHz, który zatrzymuje się i rusza, z małym potwierdzeniem pośrodku; poszarpany szum (karta 29)."
+"l": "Prostokąt około 2,4 kHz, który zatrzymuje się i rusza, z małym potwierdzeniem pośrodku; poszarpany szum (karta 30)."
 },
 "chirp": {
 "nm": "Jonosonda",
@@ -434,19 +434,19 @@
 "ofdm": {
 "t": "OFDM: dziesiątki podnośnych",
 "h": "Wiele gęsto upakowanych nośnych, każda wolna: suma wygląda jak szum.",
-"l": "Płaski prostokąt o ostrych brzegach, zawsze obecny: DRM na KF (10 kHz), DAB+ (1,5 MHz), DVB-T, Wi-Fi. Na słuch ciągły szum (karty 12 i 25)."
+"l": "Płaski prostokąt o ostrych brzegach, zawsze obecny: DRM na KF (10 kHz), DAB+ (1,5 MHz), DVB-T, Wi-Fi. Na słuch ciągły szum (karty 12 i 26)."
 },
 "dsss": {
 "t": "Widmo rozproszone (DSSS): GPS, Wi-Fi 802.11b",
 "h": "Dane miesza się z bardzo szybkim kodem: energia rozkłada się na dużą szerokość.",
-"l": "Szeroki garb ledwo ponad szumem; GPS jest nawet pod szumem i bez obróbki go nie widać (karty 25 i 26)."
+"l": "Szeroki garb ledwo ponad szumem; GPS jest nawet pod szumem i bez obróbki go nie widać (karty 26 i 27)."
 },
 "hline": {
 "nm": "Linia wodoru",
 "sh": "1420 MHz",
 "t": "Linia wodoru 21 cm (1420,405 MHz)",
 "h": "Zimny wodór w Drodze Mlecznej emituje bardzo słaby szum na 1420,405 MHz. Ruch ramion galaktyki przesuwa go przez efekt Dopplera: widać kilka małych garbów.",
-"l": "W wodospadzie z sekundy na sekundę prawie nic: trzeba długo uśredniać, by garby wyłoniły się z szumu. Tutaj spójrz na średnie widmo po zatrzymaniu. Wystarczy czasza lub tuba, przedwzmacniacz i klucz SDR (karta 47).",
+"l": "W wodospadzie z sekundy na sekundę prawie nic: trzeba długo uśredniać, by garby wyłoniły się z szumu. Tutaj spójrz na średnie widmo po zatrzymaniu. Wystarczy czasza lub tuba, przedwzmacniacz i klucz SDR (karta 49).",
 "n": "sygnał mocno przesadzony"
 },
 "sun": {
@@ -454,21 +454,21 @@
 "sh": "rozbłyski",
 "t": "Słońce: rozbłyski radiowe typu III",
 "h": "Elektrony wyrzucone przez rozbłysk przechodzą przez koronę słoneczną i sprawiają, że emituje coraz niżej, w miarę jak się oddalają.",
-"l": "Kreski spadające ukośnie z góry na dół widma w mniej niż sekundę, na tle szumu słonecznego; narastające „szszsz”. Od około 10 do 400 MHz, także na falach krótkich w okolicy 20 MHz (karta 47)."
+"l": "Kreski spadające ukośnie z góry na dół widma w mniej niż sekundę, na tle szumu słonecznego; narastające „szszsz”. Od około 10 do 400 MHz, także na falach krótkich w okolicy 20 MHz (karta 49)."
 },
 "jupiter": {
 "nm": "Jowisz",
 "sh": "20 MHz",
 "t": "Jowisz: rozbłyski dekametrowe (L i S)",
 "h": "Pole magnetyczne Jowisza i jego księżyc Io wytwarzają silną emisję między 15 a 40 MHz: powolne rozbłyski L i bardzo krótkie rozbłyski S, które szybko zjeżdżają w dół.",
-"l": "Najpierw fale szumu (L, jak przybój), potem serie drobnych „pyknięć” (S) w gęstych przekątnych. Okolice 20,1 MHz nocą, z prostym dipolem, gdy Io jest dobrze ustawiona (karta 47)."
+"l": "Najpierw fale szumu (L, jak przybój), potem serie drobnych „pyknięć” (S) w gęstych przekątnych. Okolice 20,1 MHz nocą, z prostym dipolem, gdy Io jest dobrze ustawiona (karta 49)."
 },
 "pulsar": {
 "nm": "Pulsar",
 "sh": "B0329+54",
 "t": "Pulsar PSR B0329+54",
 "h": "Wirująca gwiazda neutronowa omiata Ziemię wiązką radiową, tutaj co 0,714 s. Gaz międzygwiazdowy opóźnia niskie częstotliwości: każdy impuls dociera najpierw na górę widma.",
-"l": "Regularne „tik”; w wodospadzie każdy impuls to opadająca krzywa (dyspersja). Prawdziwy sygnał jest pod szumem: potrzeba dużej anteny i sumowania impulsów w ich okresie (karta 47).",
+"l": "Regularne „tik”; w wodospadzie każdy impuls to opadająca krzywa (dyspersja). Prawdziwy sygnał jest pod szumem: potrzeba dużej anteny i sumowania impulsów w ich okresie (karta 49).",
 "n": "sygnał mocno przesadzony"
 },
 "meteor": {
@@ -483,28 +483,28 @@
 "sh": "VLF",
 "t": "Gwizdy VLF (whistlery)",
 "h": "Piorun wytwarza radiowy trzask; część biegnie wzdłuż linii ziemskiego pola magnetycznego na drugą półkulę i z powrotem, wysokie tony najpierw.",
-"l": "„Fiuuu” opadające od wysokich do niskich tonów w sekundę lub dwie, tuż po trzasku; wszędzie trzaski (sferyki). Poniżej 10 kHz, z odbiornikiem VLF z dala od linii energetycznych (karta 47)."
+"l": "„Fiuuu” opadające od wysokich do niskich tonów w sekundę lub dwie, tuż po trzasku; wszędzie trzaski (sferyki). Poniżej 10 kHz, z odbiornikiem VLF z dala od linii energetycznych (karta 49)."
 },
 "chorus": {
 "nm": "Chór świtu",
 "sh": "VLF",
 "t": "Chór świtu (dawn chorus)",
 "h": "Podczas burzy magnetycznej elektrony uwięzione w magnetosferze wydają małe rosnące nuty, głównie o świcie.",
-"l": "Nakładające się, wznoszące ćwierkania, jak ptaki, od około 1 do 4 kHz. Ten sam sprzęt co do gwizdów (karta 47)."
+"l": "Nakładające się, wznoszące ćwierkania, jak ptaki, od około 1 do 4 kHz. Ten sam sprzęt co do gwizdów (karta 49)."
 },
 "sputnik": {
 "nm": "Sputnik 1",
 "sh": "1957",
 "t": "Sputnik 1 (1957)",
 "h": "Pierwszy sztuczny satelita przez trzy tygodnie nadawał piknięcia po około 0,3 s, na przemian na 20,005 i 40,002 MHz.",
-"l": "Regularnie przerywana kreska: „pip… pip…”, dźwięk, którego w październiku 1957 słuchał cały świat (rekonstrukcja) (karta 41)."
+"l": "Regularnie przerywana kreska: „pip… pip…”, dźwięk, którego w październiku 1957 słuchał cały świat (rekonstrukcja) (karta 42)."
 },
 "doppler": {
 "nm": "Efekt Dopplera",
 "sh": "satelita",
 "t": "Radiolatarnia satelity i efekt Dopplera",
 "h": "Satelita na niskiej orbicie zbliża się, a potem oddala: odbierana częstotliwość spada podczas przelotu, o około ±3 kHz na 145 MHz i ±10 kHz na 435 MHz.",
-"l": "Kreska opadająca w kształcie litery S: najpierw powoli, szybko w chwili największego zbliżenia, potem znów powoli (karta 41).",
+"l": "Kreska opadająca w kształcie litery S: najpierw powoli, szybko w chwili największego zbliżenia, potem znów powoli (karta 42).",
 "n": "przelot 10 min skrócony do 12 s"
 },
 "apt": {
@@ -512,7 +512,7 @@
 "sh": "137 MHz",
 "t": "Satelity NOAA: obrazy APT (historia)",
 "h": "Podnośna 2400 Hz modulowana amplitudowo obrazem, dwie linie na sekundę, z impulsem synchronizacji na początku każdej linii. Wyłączone w 2025; dziś satelity Meteor-M nadają LRPT.",
-"l": "Kreska na 2400 Hz ze wstęgami bocznymi zmieniającymi się z obrazem i słynne „tik-tak” dwa razy na sekundę (karta 41)."
+"l": "Kreska na 2400 Hz ze wstęgami bocznymi zmieniającymi się z obrazem i słynne „tik-tak” dwa razy na sekundę (karta 42)."
 },
 "eme": {
 "nm": "Echo od Księżyca",
@@ -527,14 +527,14 @@
 "sh": "meteory",
 "t": "MSK144: emisja cyfrowa do łączności przez meteory",
 "h": "Dwa tony, 1000 i 2000 Hz, 2000 bodów, w ramkach po 72 ms powtarzanych bez przerwy: każdy ślad meteoru przepuszcza kilka z nich.",
-"l": "Paczki od 0,1 do 1 s, szerokie na około 2,4 kHz, które pojawiają się i gasną z „pingiem” meteoru. Na 50 i 144 MHz, z WSJT-X (karta 29)."
+"l": "Paczki od 0,1 do 1 s, szerokie na około 2,4 kHz, które pojawiają się i gasną z „pingiem” meteoru. Na 50 i 144 MHz, z WSJT-X (karta 30)."
 },
 "jt65": {
 "nm": "JT65",
 "sh": "65 tonów",
 "t": "JT65: 65 tonów, bardzo wolno",
 "h": "Jeden ton synchronizacji i 64 tony danych co 2,7 Hz (JT65A), 0,37 s na symbol, 47 s nadawania na minutę.",
-"l": "Drabinka drobnych kresek na około 180 Hz, z kreską synchronizacji, która wraca stale w to samo miejsce. Używana do odbić od Księżyca (JT65B i C) i bardzo słabych sygnałów (karta 29).",
+"l": "Drabinka drobnych kresek na około 180 Hz, z kreską synchronizacji, która wraca stale w to samo miejsce. Używana do odbić od Księżyca (JT65B i C) i bardzo słabych sygnałów (karta 30).",
 "n": "fragment 20 s (emisja trwa 47 s)"
 },
 "tetra": {
@@ -542,7 +542,7 @@
 "sh": "π/4-DQPSK",
 "t": "TETRA: profesjonalna sieć cyfrowa",
 "h": "Modulacja fazy π/4-DQPSK, 18 000 symboli na sekundę, cztery szczeliny czasowe, w kanałach 25 kHz.",
-"l": "Pełny blok o zaokrąglonych bokach, stale obecny przy stacji bazowej; chrapliwy szum. Szyfrowane: nie da się słuchać (karta 46).",
+"l": "Pełny blok o zaokrąglonych bokach, stale obecny przy stacji bazowej; chrapliwy szum. Szyfrowane: nie da się słuchać (karta 47).",
 "n": "skala zmniejszona"
 },
 "ndb": {
@@ -572,42 +572,42 @@
 "sh": "Meteomodem",
 "t": "Radiosondy M10 i M20 (Meteomodem)",
 "h": "Jedna ramka na sekundę w szybkim FSK (około 9600 bodów): szersza niż RS41. We Francji wypuszcza je Météo-France.",
-"l": "Co sekundę szeroka paczka, która powoli dryfuje w czasie lotu; między 400 a 406 MHz (karta 21)."
+"l": "Co sekundę szeroka paczka, która powoli dryfuje w czasie lotu; między 400 a 406 MHz (karta 22)."
 },
 "tpms": {
 "nm": "Opony (TPMS)",
 "sh": "433 MHz",
 "t": "Czujniki ciśnienia w oponach (TPMS)",
 "h": "Każde koło od czasu do czasu wysyła paczkę FSK trwającą kilka milisekund: ciśnienie, temperatura, identyfikator.",
-"l": "Małe pojedyncze paczki na 433,92 MHz (lub 315 MHz), często parami, gdy przejeżdża samochód. Dekoduje je rtl_433 (karta 22)."
+"l": "Małe pojedyncze paczki na 433,92 MHz (lub 315 MHz), często parami, gdy przejeżdża samochód. Dekoduje je rtl_433 (karta 23)."
 },
 "als162": {
 "nm": "ALS162",
 "sh": "162 kHz",
 "t": "Sygnał czasu ALS162 (Allouis, 162 kHz)",
 "h": "Nośna dawnych fal długich France Inter; czas jest kodowany małymi, niesłyszalnymi zmianami fazy.",
-"l": "Stała kreska, bardzo silna we Francji, ledwo poszerzona na początku każdej sekundy; do odczytu czasu potrzebny dekoder (karta 39)."
+"l": "Stała kreska, bardzo silna we Francji, ledwo poszerzona na początku każdej sekundy; do odczytu czasu potrzebny dekoder (karta 40)."
 },
 "wwv": {
 "nm": "WWV",
 "sh": "2,5–20 MHz",
 "t": "Sygnał czasu WWV (Kolorado)",
 "h": "W AM: co sekundę „tyk” 5 ms na 1000 Hz, ton 500 lub 600 Hz, kod czasu na 100 Hz i głos podający czas UTC.",
-"l": "W zdemodulowanym dźwięku: kreska na 500 Hz przerywana co sekundę, tyknięcie na 1000 Hz i kod na samym dole na 100 Hz (karta 39)."
+"l": "W zdemodulowanym dźwięku: kreska na 500 Hz przerywana co sekundę, tyknięcie na 1000 Hz i kod na samym dole na 100 Hz (karta 40)."
 },
 "msf": {
 "nm": "MSF",
 "sh": "60 kHz",
 "t": "Sygnał czasu MSF (Anthorn, 60 kHz)",
 "h": "Nośna jest wyłączana na początku każdej sekundy na 0,1, 0,2 lub 0,3 s zależnie od bitów, a na 0,5 s dla oznaczenia minuty.",
-"l": "Stała kreska z całkiem czarnymi przerwami co sekundę, dłuższymi niż w DCF77 (karta 39)."
+"l": "Stała kreska z całkiem czarnymi przerwami co sekundę, dłuższymi niż w DCF77 (karta 40)."
 },
 "type2": {
 "nm": "Słońce typ II",
 "sh": "fala uderzeniowa",
 "t": "Słońce: rozbłyski radiowe typu II",
 "h": "Fala uderzeniowa koronalnego wyrzutu masy sprawia, że plazma emituje powoli coraz niżej, często w dwóch pasmach (podstawowym i podwojonym).",
-"l": "Dwa równoległe pasma szumu, które przez kilka minut łagodnie opadają. Porównaj z typem III, znacznie szybszym (karta 47).",
+"l": "Dwa równoległe pasma szumu, które przez kilka minut łagodnie opadają. Porównaj z typem III, znacznie szybszym (karta 49).",
 "n": "kilka minut skrócone do 6 s"
 },
 "tweeks": {
@@ -615,14 +615,14 @@
 "sh": "VLF",
 "t": "Tweeki: nocne „pingi” VLF",
 "h": "Nocą trzask odległego pioruna odbija się między ziemią a jonosferą; częstotliwości bliskie odcięcia (około 1,7 kHz) docierają ostatnie.",
-"l": "Małe „ping”, które opada i zatrzymuje się około 1,7 kHz, czasem z echem na podwójnej częstotliwości; wszędzie trzaski. Poniżej 10 kHz, nocą (karta 47)."
+"l": "Małe „ping”, które opada i zatrzymuje się około 1,7 kHz, czasem z echem na podwójnej częstotliwości; wszędzie trzaski. Poniżej 10 kHz, nocą (karta 49)."
 },
 "hiss": {
 "nm": "Szum VLF",
 "sh": "hiss",
 "t": "Szum VLF (hiss)",
 "h": "Szeroki szum wytwarzany przez elektrony plazmasfery, rosnący i malejący z aktywnością magnetyczną.",
-"l": "Pasmo szumu od kilkuset Hz do kilku kHz, bez wzoru, powoli narastające i opadające (karta 47)."
+"l": "Pasmo szumu od kilkuset Hz do kilku kHz, bez wzoru, powoli narastające i opadające (karta 49)."
 },
 "aurora": {
 "nm": "Zorza radiowa",
@@ -636,7 +636,7 @@
 "sh": "20–40 MHz",
 "t": "Szum Drogi Mlecznej",
 "h": "Centrum Galaktyki emituje szum radiowy, który Karl Jansky odkrył w 1932 roku około 20 MHz. Rośnie i maleje wraz z obrotem Ziemi.",
-"l": "Szum tła, który powoli rośnie i znów opada, każdego dnia około 4 minut wcześniej. Widoczny z prostym dipolem między 20 a 40 MHz (karta 47).",
+"l": "Szum tła, który powoli rośnie i znów opada, każdego dnia około 4 minut wcześniej. Widoczny z prostym dipolem między 20 a 40 MHz (karta 49).",
 "n": "jeden dzień skrócony do 12 s"
 },
 "cubesat": {
@@ -644,7 +644,7 @@
 "sh": "9600 bd",
 "t": "Telemetria CubeSata",
 "h": "Małe satelity regularnie wysyłają pomiary (bateria, temperatury) w FSK lub GMSK 1200 lub 9600 bodów, w okolicy 435–438 MHz.",
-"l": "Regularne paczki, które za każdym razem schodzą trochę niżej przez efekt Dopplera, w czasie przelotu (karta 41).",
+"l": "Regularne paczki, które za każdym razem schodzą trochę niżej przez efekt Dopplera, w czasie przelotu (karta 42).",
 "n": "skala zmniejszona, przelot przyspieszony"
 },
 "issfm": {
@@ -652,7 +652,7 @@
 "sh": "145,800 MHz",
 "t": "Stacja kosmiczna (ISS): głos w FM",
 "h": "Astronauci rozmawiają ze szkołami i krótkofalowcami w FM na 145,800 MHz. Stacja leci 28 000 km/h: podczas przelotu odbierana częstotliwość przesuwa się od około +3,5 kHz do −3,5 kHz.",
-"l": "Pasmo głosu FM, które w czasie 10-minutowego przelotu powoli przesuwa się z prawej na lewą (karta 41).",
+"l": "Pasmo głosu FM, które w czasie 10-minutowego przelotu powoli przesuwa się z prawej na lewą (karta 42).",
 "n": "przelot 10 min skrócony do 10 s"
 },
 "buzzer": {
@@ -660,14 +660,14 @@
 "sh": "4625 kHz",
 "t": "UVB-76, „The Buzzer” (4625 kHz)",
 "h": "Rosyjska stacja wojskowa, która od dziesięcioleci nadaje około sekundowe brzęczenie, mniej więcej 25 razy na minutę, czasem przerywane komunikatem głosowym.",
-"l": "Stała nośna, a przy każdym brzęczeniu kolumna gęstych prążków z góry na dół. Łatwo ją znaleźć na 4625 kHz w USB (karta 43)."
+"l": "Stała nośna, a przy każdym brzęczeniu kolumna gęstych prążków z góry na dół. Łatwo ją znaleźć na 4625 kHz w USB (karta 44)."
 },
 "pip": {
 "nm": "„The Pip”",
 "sh": "3756 / 5448 kHz",
 "t": "„The Pip”: niekończące się piknięcia",
 "h": "Kolejna rosyjska wojskowa radiolatarnia krótkofalowa, która dzień i noc powtarza krótkie piknięcia, czasem przerywane komunikatami.",
-"l": "Stała kreska przerywana krótkim piknięciem około 50 razy na minutę; na słuch równe „pip… pip…”, które nigdy nie milknie (karta 43).",
+"l": "Stała kreska przerywana krótkim piknięciem około 50 razy na minutę; na słuch równe „pip… pip…”, które nigdy nie milknie (karta 44).",
 "n": "rytm przybliżony"
 },
 "squeaky": {
@@ -675,7 +675,7 @@
 "sh": "KF",
 "t": "„Squeaky Wheel”: skrzypiące koło",
 "h": "Rosyjska wojskowa radiolatarnia krótkofalowa, nazwana przez nasłuchowców od powtarzanego wzoru dźwięku.",
-"l": "Mały wzór dwóch dźwięków, z których jeden rośnie, powtarzany w pętli: jak skrzypiące koło (karta 43).",
+"l": "Mały wzór dwóch dźwięków, z których jeden rośnie, powtarzany w pętli: jak skrzypiące koło (karta 44).",
 "n": "przybliżona imitacja"
 },
 "codar": {
@@ -683,7 +683,7 @@
 "sh": "radar oceaniczny",
 "t": "CODAR: radary prądów morskich",
 "h": "Radary przybrzeżne raz lub dwa razy na sekundę przemiatają pasmo częstotliwości, by mierzyć prądy i fale.",
-"l": "Regularne równoległe przekątne i powtarzane „swish”; w okolicy 4,5–5,5 MHz, 13 MHz i 25 MHz, często dzień i noc (karta 43).",
+"l": "Regularne równoległe przekątne i powtarzane „swish”; w okolicy 4,5–5,5 MHz, 13 MHz i 25 MHz, często dzień i noc (karta 44).",
 "n": "skala zmniejszona"
 },
 "stanag": {
@@ -691,21 +691,21 @@
 "sh": "8-PSK",
 "t": "Modem wojskowy STANAG 4285",
 "h": "Modulacja fazy 8-PSK, 2400 bodów, na nośnej 1800 Hz, z sekwencją testową co 107 ms do śledzenia kanału.",
-"l": "Pełny blok około 3 kHz; na słuch szum z regularnym brzęczeniem (karta 43)."
+"l": "Pełny blok około 3 kHz; na słuch szum z regularnym brzęczeniem (karta 44)."
 },
 "link11": {
 "nm": "Link-11",
 "sh": "16 tonów",
 "t": "Link-11: morskie łącze danych",
 "h": "Szesnaście tonów od 605 do 2915 Hz nadawanych razem, każdy modulowany fazowo 75 razy na sekundę.",
-"l": "Grzebień czternastu regularnych prążków od 935 do 2365 Hz i dwa prążki z boku, na 605 i 2915 Hz; na słuch muzyczne buczenie (karta 43)."
+"l": "Grzebień czternastu regularnych prążków od 935 do 2365 Hz i dwa prążki z boku, na 605 i 2915 Hz; na słuch muzyczne buczenie (karta 44)."
 },
 "numbers": {
 "nm": "Stacja numeryczna",
 "sh": "głos",
 "t": "Stacja numeryczna",
 "h": "O stałej porze krótka melodia wywoławcza, potem głos (często syntetyczny) czyta grupy po pięć cyfr, w AM lub SSB.",
-"l": "Melodia w osobnych nutach, potem regularne grupy sylab rozdzielone ciszą (karta 43).",
+"l": "Melodia w osobnych nutach, potem regularne grupy sylab rozdzielone ciszą (karta 44).",
 "n": "głos naśladowany, bez prawdziwych cyfr"
 },
 "rttydwd": {
@@ -713,14 +713,14 @@
 "sh": "50 Bd / 450 Hz",
 "t": "Pogodowe RTTY służby DWD (Niemcy)",
 "h": "Jak RTTY krótkofalowców, ale 50 bodów z przesuwem 450 Hz: niemiecka służba meteorologiczna nadaje komunikaty i prognozy morskie otwartym tekstem.",
-"l": "Dwie kreski znacznie dalej od siebie i nieco szybszy rytm. Między komunikatami wywołanie „CQ CQ CQ DE DDK2 DDH7 DDK9”, potem RYRYRY. Na 4583, 7646 i 10 100,8 kHz, także 147,3 kHz (karta 32)."
+"l": "Dwie kreski znacznie dalej od siebie i nieco szybszy rytm. Między komunikatami wywołanie „CQ CQ CQ DE DDK2 DDH7 DDK9”, potem RYRYRY. Na 4583, 7646 i 10 100,8 kHz, także 147,3 kHz (karta 33)."
 },
 "mfsk16": {
 "nm": "MFSK16",
 "sh": "16 tonów",
 "t": "MFSK16: szesnaście tonów",
 "h": "Szesnaście tonów co 15,625 Hz, zawsze jeden naraz, 15,625 razy na sekundę; każdy ton niesie cztery bity chronione kodem korekcyjnym.",
-"l": "Pasmo 316 Hz z małych schodków, które ciągle przeskakują, po stałym tonie na początku. Na słuch szybka melodyjka, jak flet. Służy też do przesyłania małych obrazków (karta 29)."
+"l": "Pasmo 316 Hz z małych schodków, które ciągle przeskakują, po stałym tonie na początku. Na słuch szybka melodyjka, jak flet. Służy też do przesyłania małych obrazków (karta 30)."
 },
 "sitora": {
 "nm": "SITOR-A (ARQ)",
@@ -762,14 +762,14 @@
 "sh": "14,100 MHz",
 "t": "Radiolatarnie NCDXF / IARU: sprawdzanie propagacji",
 "h": "Osiemnaście radiolatarni na świecie nadaje po kolei, każda dziesięć sekund, na 14,100, 18,110, 21,150, 24,930 i 28,200 MHz: znak Morse'em, potem cztery sekundowe kreski mocą 100 W, 10 W, 1 W i 0,1 W.",
-"l": "Znak, potem cztery coraz słabsze kreski: jeśli słyszysz jeszcze ostatnią, propagacja do tej radiolatarni jest znakomita. Tutaj 4U1UN (Nowy Jork), potem VE8AT (Kanada) (karta 30)."
+"l": "Znak, potem cztery coraz słabsze kreski: jeśli słyszysz jeszcze ostatnią, propagacja do tej radiolatarni jest znakomita. Tutaj 4U1UN (Nowy Jork), potem VE8AT (Kanada) (karta 31)."
 },
 "lrpt": {
 "nm": "Meteor-M LRPT",
 "sh": "137,9 MHz",
 "t": "Satelity Meteor-M: obrazy LRPT",
 "h": "Rosyjskie satelity meteorologiczne Meteor-M wysyłają obrazy cyfrowo: czterostanowa modulacja fazy (QPSK), 72 000 symboli na sekundę, szerokość około 120 kHz.",
-"l": "Pełny blok o zaokrąglonych brzegach, który powoli przesuwa się podczas przelotu (efekt Dopplera); na słuch zwykły szum. Na 137,9 lub 137,1 MHz, dekoduje SatDump (karta 41).",
+"l": "Pełny blok o zaokrąglonych brzegach, który powoli przesuwa się podczas przelotu (efekt Dopplera); na słuch zwykły szum. Na 137,9 lub 137,1 MHz, dekoduje SatDump (karta 42).",
 "n": "skala zmniejszona"
 },
 "quindar": {
@@ -777,14 +777,14 @@
 "sh": "NASA",
 "t": "Tony Quindar: piknięcia Apollo",
 "h": "Gdy kontrola w Houston naciska przycisk mikrofonu, piknięcie 2525 Hz (250 ms) włącza nadajniki stacji naziemnych; po zwolnieniu piknięcie 2475 Hz je wyłącza.",
-"l": "Wysokie piknięcie przed każdym zdaniem i drugie, nieco niższe, po nim: słynny dźwięk nagrań z misji Apollo (karta 41)."
+"l": "Wysokie piknięcie przed każdym zdaniem i drugie, nieco niższe, po nim: słynny dźwięk nagrań z misji Apollo (karta 42)."
 },
 "wow": {
 "nm": "Sygnał „Wow!”",
 "sh": "1977",
 "t": "Sygnał „Wow!” (15 sierpnia 1977)",
 "h": "Radioteleskop Big Ear (Ohio) odebrał przez 72 sekundy wąski i bardzo silny sygnał w pobliżu linii wodoru, około 1420,456 MHz. Astronom Jerry Ehman napisał na wydruku „Wow!”. Nigdy się nie powtórzył, a jego pochodzenie wciąż jest przedmiotem sporu.",
-"l": "Cienka kreska, która wyłania się z szumu, rośnie i słabnie: kształt przejścia stałego źródła przez wiązkę anteny. To rekonstrukcja: nie istnieje żadne nagranie dźwiękowe (karta 47).",
+"l": "Cienka kreska, która wyłania się z szumu, rośnie i słabnie: kształt przejścia stałego źródła przez wiązkę anteny. To rekonstrukcja: nie istnieje żadne nagranie dźwiękowe (karta 49).",
 "n": "72 s skrócone do 12 s"
 },
 "frb": {
@@ -792,7 +792,7 @@
 "sh": "FRB",
 "t": "Szybki błysk radiowy (FRB)",
 "h": "Błysk radiowy trwający kilka milisekund, z innej galaktyki; pierwszy odkryto w 2007 roku. Gaz po drodze mocno opóźnia niskie częstotliwości: błysk dociera rozciągnięty, wysokie tony najpierw.",
-"l": "Jedna krzywa opadająca z góry na dół widma, a potem nic. Niektóre się powtarzają; większość widziano tylko raz (karta 47).",
+"l": "Jedna krzywa opadająca z góry na dół widma, a potem nic. Niektóre się powtarzają; większość widziano tylko raz (karta 49).",
 "n": "mocno spowolnione i przesadzone"
 },
 "letterb": {
@@ -800,14 +800,14 @@
 "sh": "D, P, S, C…",
 "t": "Radiolatarnie jednoliterowe",
 "h": "Nadajniki rosyjskiej marynarki powtarzają bez końca jedną literę Morse'em, każdy 100 Hz od sąsiada: D, P, S, C, A, F, K lub M zależnie od miejsca.",
-"l": "Równoległe przerywane linie, bardzo blisko siebie, każda we własnym rytmie. Okolice 4558, 5154, 7039, 10 872, 13 528 i 16 332 kHz, w CW (karta 43)."
+"l": "Równoległe przerywane linie, bardzo blisko siebie, każda we własnym rytmie. Okolice 4558, 5154, 7039, 10 872, 13 528 i 16 332 kHz, w CW (karta 44)."
 },
 "sid": {
 "nm": "Rozbłysk słoneczny na VLF",
 "sh": "SID",
 "t": "Rozbłysk słoneczny widziany na VLF (SID)",
 "h": "Nadajniki VLF marynarek (20,9 kHz we Francji, 23,4 kHz w Niemczech…) rozchodzą się między ziemią a jonosferą. Gdy dociera rozbłysk słoneczny, jego promienie X w kilka minut zmieniają dół jonosfery i poziom odbioru skacze.",
-"l": "Wąskie, równe pasmo (sygnał MSK nadajnika), które nagle staje się silniejsze, a potem powoli wraca do normy. Wystarczy pętla z drutu i karta dźwiękowa: klasyczny projekt kół astronomicznych (karta 47).",
+"l": "Wąskie, równe pasmo (sygnał MSK nadajnika), które nagle staje się silniejsze, a potem powoli wraca do normy. Wystarczy pętla z drutu i karta dźwiękowa: klasyczny projekt kół astronomicznych (karta 49).",
 "n": "godzina skrócona do 12 s"
 },
 "qrn": {
@@ -829,7 +829,7 @@
 "sh": "2–30 MHz",
 "t": "PLC: internet przez gniazdka elektryczne",
 "h": "Adaptery PLC wysyłają dane po przewodach w domu na setkach nośnych między 2 a 30 MHz (w nowszych modelach wyżej), jedna co 24,4 kHz. Przewody promieniują jak antena.",
-"l": "Grzebień regularnych prążków migający paczkami, z przerwami na pasmach amatorskich (wycięcia wymagane normą); na słuch trzeszczenie podążające za ruchem w internecie (karta 43).",
+"l": "Grzebień regularnych prążków migający paczkami, z przerwami na pasmach amatorskich (wycięcia wymagane normą); na słuch trzeszczenie podążające za ruchem w internecie (karta 44).",
 "n": "skala zmniejszona"
 },
 "fence": {
@@ -837,28 +837,28 @@
 "sh": "tyk… tyk…",
 "t": "Pastuch elektryczny",
 "h": "Elektryzator wysyła do drutu impuls kilku tysięcy woltów mniej więcej raz na sekundę. Jeśli trawa dotyka drutu albo izolator jest uszkodzony, przeskakuje iskra i promieniuje na wszystkich częstotliwościach.",
-"l": "Bardzo cienka pozioma kreska na całej szerokości, w idealnie równych odstępach; „tyk… tyk…” od fal długich po UKF. Równy rytm odróżnia go od burzy (karta 43)."
+"l": "Bardzo cienka pozioma kreska na całej szerokości, w idealnie równych odstępach; „tyk… tyk…” od fal długich po UKF. Równy rytm odróżnia go od burzy (karta 44)."
 },
 "gsm": {
 "nm": "Telefon GSM",
 "sh": "217 Hz",
 "t": "Telefon GSM obok głośnika",
 "h": "Telefon 2G nadaje paczkami po 0,577 ms, 217 razy na sekundę. Źle ekranowany wzmacniacz audio wykrywa te paczki i czyni je słyszalnymi.",
-"l": "Grzebień prążków co 217 Hz; słynne „ta-ta-tatata” tuż przed dzwonkiem telefonu, potem ciągłe brzęczenie w czasie rozmowy. Coraz rzadsze: sieci 2G są wyłączane (karta 43)."
+"l": "Grzebień prążków co 217 Hz; słynne „ta-ta-tatata” tuż przed dzwonkiem telefonu, potem ciągłe brzęczenie w czasie rozmowy. Coraz rzadsze: sieci 2G są wyłączane (karta 44)."
 },
 "jjy": {
 "nm": "JJY",
 "sh": "40 / 60 kHz",
 "t": "Sygnał czasu JJY (Japonia, 40 i 60 kHz)",
 "h": "W każdej sekundzie nośna ma pełną moc przez 0,8 s (bit 0), 0,5 s (bit 1) lub 0,2 s (znacznik), potem spada do 10 %. Odwrotnie niż DCF77, który obniża się na początku sekundy.",
-"l": "Stała kreska, która słabnie pod koniec każdej sekundy, wcześniej lub później. Nadajniki w Fukushimie (40 kHz) i Saga-Fukuoka (60 kHz), dla zegarów sterowanych radiowo w Japonii (karta 39)."
+"l": "Stała kreska, która słabnie pod koniec każdej sekundy, wcześniej lub później. Nadajniki w Fukushimie (40 kHz) i Saga-Fukuoka (60 kHz), dla zegarów sterowanych radiowo w Japonii (karta 40)."
 },
 "rwm": {
 "nm": "RWM",
 "sh": "4996 kHz",
 "t": "Sygnał czasu RWM (Moskwa)",
 "h": "Telegrafią na 4996, 9996 i 14 996 kHz: co sekundę impuls 100 ms, a w innych minutach dziesięć impulsów na sekundę. Znak RWM jest nadawany Morse'em dwa razy na godzinę.",
-"l": "Znak, potem kreska pocięta na regularne „tyknięcia”, a dalej na szybkie kropki. Słuchaj w CW lub SSB (karta 39).",
+"l": "Znak, potem kreska pocięta na regularne „tyknięcia”, a dalej na szybkie kropki. Słuchaj w CW lub SSB (karta 40).",
 "n": "skrócony fragment"
 },
 "bpm": {
@@ -866,7 +866,7 @@
 "sh": "2,5–15 MHz",
 "t": "Sygnał czasu BPM (Chiny)",
 "h": "Stacja Pucheng (Shaanxi) nadaje w AM na 2,5, 5, 10 i 15 MHz: co sekundę tyknięcie 10 ms na 1000 Hz (300 ms o pełnej minucie), a w niektórych minutach tyknięcia 100 ms dla czasu UT1. Znak BPM podawany jest Morse'em, potem głosem.",
-"l": "W zdemodulowanym dźwięku: znak, potem bardzo krótkie kreski na 1000 Hz, jedna na sekundę, z dłuższą o pełnej minucie. Często miesza się z WWV na tych samych częstotliwościach (karta 39).",
+"l": "W zdemodulowanym dźwięku: znak, potem bardzo krótkie kreski na 1000 Hz, jedna na sekundę, z dłuższą o pełnej minucie. Często miesza się z WWV na tych samych częstotliwościach (karta 40).",
 "n": "skrócony fragment"
 },
 "humpback": {
@@ -874,14 +874,14 @@
 "sh": "pieśń",
 "t": "Pieśń humbaka",
 "h": "Zimą, na obszarach rozrodu, samce śpiewają: ciąg jęków, pomruków i okrzyków tworzy temat, powtarzany bez zmian przez wiele godzin i zmieniający się z sezonu na sezon. Hydrofony słyszą go z odległości dziesiątek kilometrów.",
-"l": "Grube ślady z harmonicznymi, powoli rosnące lub opadające między 100 Hz a kilkoma kHz; ten sam ciąg wraca po kilku sekundach. Echo od powierzchni i dna przedłuża każdą nutę."
+"l": "Grube ślady z harmonicznymi, powoli rosnące lub opadające między 100 Hz a kilkoma kHz; ten sam ciąg wraca po kilku sekundach. Echo od powierzchni i dna przedłuża każdą nutę (karta 48)."
 },
 "bluewhale": {
 "nm": "Płetwal błękitny",
 "sh": "×10",
 "t": "Płetwal błękitny: najniższy zew",
 "h": "Największe zwierzę świata wydaje bardzo niskie (10–40 Hz) i bardzo silne zawołania, trwające 10–20 sekund i powtarzane godzinami: niosą się na setki kilometrów. Aby je usłyszeć, nagranie przyspiesza się dziesięciokrotnie.",
-"l": "Część pulsująca, potem długa nuta, która ledwie opada, z harmonicznymi powyżej; sekwencja się powtarza. Skala pokazuje prawdziwe częstotliwości.",
+"l": "Część pulsująca, potem długa nuta, która ledwie opada, z harmonicznymi powyżej; sekwencja się powtarza. Skala pokazuje prawdziwe częstotliwości (karta 48).",
 "n": "przyspieszone 10×"
 },
 "finwhale": {
@@ -889,7 +889,7 @@
 "sh": "20 Hz",
 "t": "Płetwal zwyczajny: impulsy 20 Hz",
 "h": "Płetwal zwyczajny wydaje impulsy trwające około sekundy, opadające z ok. 25 do 18 Hz, w regularnych odstępach, czasem przez wiele dni. W latach 50. i 60. te „sygnały 20 Hz” intrygowały sieci nasłuchowe marynarki USA, zanim przypisano je temu wielorybowi.",
-"l": "Krótkie kreski, wszystkie jednakowe, w regularnym ciągu lub parami, jak uderzenia bardzo wolnego serca; każda lekko opada w częstotliwości. Skala pokazuje prawdziwe częstotliwości.",
+"l": "Krótkie kreski, wszystkie jednakowe, w regularnym ciągu lub parami, jak uderzenia bardzo wolnego serca; każda lekko opada w częstotliwości. Skala pokazuje prawdziwe częstotliwości (karta 48).",
 "n": "przyspieszone 10×"
 },
 "sperm": {
@@ -897,14 +897,14 @@
 "sh": "kliki",
 "t": "Kliki kaszalota",
 "h": "Kaszalot poluje podczas głębokich nurkowań, używając sonaru: bardzo silne kliki, mniej więcej jeden na sekundę, które przyspieszają w „skrzypienie”, gdy zbliża się do ofiary. Między sobą kaszaloty wymieniają „cody”, krótkie serie klików, których rytm różni się między klanami.",
-"l": "Poziome kreski na całej szerokości, w równych odstępach, potem zagęszczone w brzęczenie (skrzypienie), a na końcu mały rytmiczny motyw: coda. Każdy klik składa się z kilku bliskich impulsów, powstałych przez odbicia w głowie zwierzęcia."
+"l": "Poziome kreski na całej szerokości, w równych odstępach, potem zagęszczone w brzęczenie (skrzypienie), a na końcu mały rytmiczny motyw: coda. Każdy klik składa się z kilku bliskich impulsów, powstałych przez odbicia w głowie zwierzęcia (karta 48)."
 },
 "dolphin": {
 "nm": "Butlonos",
 "sh": "gwizdy",
 "t": "Gwizdy i kliki delfina",
 "h": "Butlonos gwiżdże w zakresie ok. 5–20 kHz; każdy osobnik ma „gwizd sygnaturowy”, który służy mu za imię. Do polowania i orientacji wysyła też serie bardzo krótkich klików, nawet kilkaset na sekundę.",
-"l": "Cienkie krzywe, które rosną i znów opadają, często powtarzane bez zmian, oraz serie poziomych kresek przy echolokacji. Częstotliwości podzielono przez 3, by były słyszalne; skala pokazuje prawdziwe wartości.",
+"l": "Cienkie krzywe, które rosną i znów opadają, często powtarzane bez zmian, oraz serie poziomych kresek przy echolokacji. Częstotliwości podzielono przez 3, by były słyszalne; skala pokazuje prawdziwe wartości (karta 48).",
 "n": "odtwarzane 3× niżej"
 },
 "orca": {
@@ -912,14 +912,14 @@
 "sh": "zawołania pulsowe",
 "t": "Pulsowe zawołania orki",
 "h": "Orki porozumiewają się zawołaniami pulsowymi: ciągami impulsów tak szybkimi (500–2000 na sekundę), że słychać je jako nutę, z nagłym skokiem wysokości. Każda grupa rodzinna ma własny „dialekt”.",
-"l": "Stos równoległych śladów (harmonicznych), które rosną lub opadają razem, z wyraźnym załamaniem w środku zawołania; czasem cienki, wyższy gwizd."
+"l": "Stos równoległych śladów (harmonicznych), które rosną lub opadają razem, z wyraźnym załamaniem w środku zawołania; czasem cienki, wyższy gwizd (karta 48)."
 },
 "bseal": {
 "nm": "Foka brodata",
 "sh": "tryl",
 "t": "Tryl foki brodatej",
 "h": "Wiosną, pod arktycznym lodem, samiec wydaje długie tryle, które spiralnie opadają od kilku kHz do kilkuset herców, czasem przez całą minutę. Służą do obrony terytorium i wabienia samic.",
-"l": "Falista krzywa, która zsuwa się z góry na dół skali jak rozprężająca się sprężyna, a na końcu niska nuta.",
+"l": "Falista krzywa, która zsuwa się z góry na dół skali jak rozprężająca się sprężyna, a na końcu niska nuta (karta 48).",
 "n": "skrócone"
 },
 "shrimp": {
@@ -927,28 +927,28 @@
 "sh": "rafa",
 "t": "Krewetki pistolety (krewetkowate Alpheidae)",
 "h": "Zamykając gwałtownie wielkie szczypce, krewetka wystrzeliwuje strumień wody tak szybki, że powstaje pęcherzyk kawitacyjny; zapadając się, trzaska jak wystrzał. Tysiące krewetek tworzą tło dźwiękowe raf i mogą zakłócać sonary.",
-"l": "Deszcz punktów i krótkich poziomych kresek na całej szerokości, bez żadnego porządku; w słuchawkach nieustanne trzeszczenie jak przy smażeniu."
+"l": "Deszcz punktów i krótkich poziomych kresek na całej szerokości, bez żadnego porządku; w słuchawkach nieustanne trzeszczenie jak przy smażeniu (karta 48)."
 },
 "sonar": {
 "nm": "Sonar aktywny",
 "sh": "ping",
 "t": "Ping sonaru aktywnego",
 "h": "Okręt wysyła silny impuls dźwiękowy (tu ok. 3,5 kHz, zakres sonarów kadłubowych fregat) i nasłuchuje echa: opóźnienie daje odległość, a przesunięcie częstotliwości (efekt Dopplera) prędkość celu. Dźwięk wraca też jako ogon od dna i powierzchni: pogłos.",
-"l": "Krótka, silna kreska, ogon, który wygasa, a potem echo, znacznie słabsze i nieco przesunięte w częstotliwości. Drugi ping to przemiatanie częstotliwości (chirp), które lepiej mierzy odległość."
+"l": "Krótka, silna kreska, ogon, który wygasa, a potem echo, znacznie słabsze i nieco przesunięte w częstotliwości. Drugi ping to przemiatanie częstotliwości (chirp), które lepiej mierzy odległość (karta 48)."
 },
 "propeller": {
 "nm": "Śruba okrętowa",
 "sh": "kawitacja",
 "t": "Śruba przepływającego statku",
 "h": "Łopaty śruby tworzą pęcherzyki kawitacyjne, które pękają: szeroki szum, pulsujący w rytmie przechodzących łopat. Maszyny dodają stałe prążki. Operatorzy sonaru analizują ten rytm (analiza DEMON), by policzyć łopaty i obroty, i rozpoznać statek.",
-"l": "Szum w szerokim paśmie, prążkowany poziomymi pasami w rytmie łopat, z kilkoma stałymi pionowymi kreskami (silnik, przekładnia). Wszystko narasta, a potem cichnie, gdy statek przepływa nad hydrofonem."
+"l": "Szum w szerokim paśmie, prążkowany poziomymi pasami w rytmie łopat, z kilkoma stałymi pionowymi kreskami (silnik, przekładnia). Wszystko narasta, a potem cichnie, gdy statek przepływa nad hydrofonem (karta 48)."
 },
 "uqc": {
 "nm": "Telefon podwodny",
 "sh": "UQC 8 kHz",
 "t": "Telefon podwodny (UQC, „Gertrude”)",
 "h": "Okręty podwodne i nawodne rozmawiają pod wodą przez telefon akustyczny: głos jest przesyłany jedną wstęgą boczną nad nośną 8,0875 kHz, emitowaną przez przetwornik w kadłubie. Zasięg: kilka kilometrów.",
-"l": "Pasmo głosu SSB powyżej 8 kHz; po demodulacji odległy głos, który faluje i dudni przez echa od powierzchni i dna. Obraz jest pomniejszony o połowę; skala pokazuje prawdziwe częstotliwości.",
+"l": "Pasmo głosu SSB powyżej 8 kHz; po demodulacji odległy głos, który faluje i dudni przez echa od powierzchni i dna. Obraz jest pomniejszony o połowę; skala pokazuje prawdziwe częstotliwości (karta 48).",
 "n": "skala podzielona przez 2"
 },
 "zevs": {
@@ -956,14 +956,14 @@
 "sh": "ELF",
 "t": "ZEVS: radio okrętów podwodnych na 82 Hz",
 "h": "Fale radiowe bardzo słabo wnikają w wodę morską, z wyjątkiem częstotliwości skrajnie niskich (ELF). Rosyjski nadajnik ZEVS na Półwyspie Kolskim nadaje na 82 Hz liniami antenowymi o długości dziesiątek kilometrów, by dotrzeć do głęboko zanurzonych okrętów. Szybkość jest znikoma: kilka znaków na minutę.",
-"l": "Cienka kreska na 82 Hz obok prążka sieci 50 Hz i jego harmonicznych, z zakłóceniami od burz. W słuchawkach ledwie słyszalny niski pomruk; odbiera się go dużą anteną ramową i kartą dźwiękową. Amerykański odpowiednik na 76 Hz wyłączono w 2004 roku."
+"l": "Cienka kreska na 82 Hz obok prążka sieci 50 Hz i jego harmonicznych, z zakłóceniami od burz. W słuchawkach ledwie słyszalny niski pomruk; odbiera się go dużą anteną ramową i kartą dźwiękową. Amerykański odpowiednik na 76 Hz wyłączono w 2004 roku (karta 48)."
 },
 "bloop": {
 "nm": "„Bloop”",
 "sh": "1997",
 "t": "„Bloop” (1997)",
 "h": "W 1997 roku hydrofony NOAA na Pacyfiku zarejestrowały bardzo niski, szybko rosnący dźwięk, słyszalny na tysiące kilometrów. Długo zagadkowy, od 2012 roku przypisywany jest trzęsieniu lodu: pękającej ogromnej górze lodowej.",
-"l": "Szerokie pasmo, które rośnie w kilka sekund, z harmonicznymi, a potem powoli wygasa. Rekonstrukcja, przyspieszona 16× jak nagranie udostępnione przez NOAA.",
+"l": "Szerokie pasmo, które rośnie w kilka sekund, z harmonicznymi, a potem powoli wygasa. Rekonstrukcja, przyspieszona 16× jak nagranie udostępnione przez NOAA (karta 48).",
 "n": "przyspieszone 16×"
 },
 "quake": {

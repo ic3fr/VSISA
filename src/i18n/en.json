@@ -81,7 +81,7 @@
 "nm": "SSB",
 "t": "SSB: single sideband",
 "h": "Only one sideband remains, without carrier: nothing when nobody speaks.",
-"l": "No central line, a single band about 2.7 kHz wide that only lives while someone talks. USB above 10 MHz, LSB below (radio amateurs). Badly tuned, the voice sounds like a \"duck\" (sheets 11 and 29)."
+"l": "No central line, a single band about 2.7 kHz wide that only lives while someone talks. USB above 10 MHz, LSB below (radio amateurs). Badly tuned, the voice sounds like a \"duck\" (sheets 11 and 30)."
 },
 "fm": {
 "sh": "voice",
@@ -98,7 +98,7 @@
 "cw": {
 "t": "CW: Morse",
 "h": "The carrier is switched on and off: dashes and dots.",
-"l": "A very thin line that breaks to the rhythm of Morse; a beep to the ear. Here \"CQ\" (sheet 49).",
+"l": "A very thin line that breaks to the rhythm of Morse; a beep to the ear. Here \"CQ\" (sheet 51).",
 "r": [
 [
 "Speed",
@@ -117,7 +117,7 @@
 "rtty": {
 "t": "FSK / RTTY: two frequencies",
 "h": "The frequency jumps between two values, one for 0, one for 1.",
-"l": "Two parallel lines: 170 Hz apart for radio amateurs (45.45 baud), 450 or 850 Hz for weather bulletins. A steady \"tidilidi\" (sheet 32).",
+"l": "Two parallel lines: 170 Hz apart for radio amateurs (45.45 baud), 450 or 850 Hz for weather bulletins. A steady \"tidilidi\" (sheet 33).",
 "r": [
 [
 "Code",
@@ -136,7 +136,7 @@
 "afsk": {
 "t": "AFSK 1200 baud: APRS and packet",
 "h": "Two audio tones, 1200 and 2200 Hz, sent into an FM transmitter.",
-"l": "Seen after the FM receiver (loudspeaker sound): a band from 1200 to 2200 Hz, in short bursts. By ear, a one-second \"grrrt\" (sheets 35 and 36).",
+"l": "Seen after the FM receiver (loudspeaker sound): a band from 1200 to 2200 Hz, in short bursts. By ear, a one-second \"grrrt\" (sheets 36 and 37).",
 "r": [
 [
 "Frequency",
@@ -155,7 +155,7 @@
 "psk31": {
 "t": "PSK31: phase modulation",
 "h": "The frequency does not move, the phase reverses; the amplitude dips at each reversal.",
-"l": "A very thin line about 60 Hz wide, slightly \"braided\". Dozens of stations fit in 3 kHz (sheet 29).",
+"l": "A very thin line about 60 Hz wide, slightly \"braided\". Dozens of stations fit in 3 kHz (sheet 30).",
 "r": [
 [
 "Code",
@@ -174,7 +174,7 @@
 "ft8": {
 "t": "MFSK / FT8: eight tones",
 "h": "The frequency goes up and down in steps of 6.25 Hz, 0.16 s per step.",
-"l": "Bands about 50 Hz wide lasting 12.6 s and coming back every 15 s, synchronised to the clock: several stations at once within 3 kHz, for example on 7.074 MHz (sheet 29).",
+"l": "Bands about 50 Hz wide lasting 12.6 s and coming back every 15 s, synchronised to the clock: several stations at once within 3 kHz, for example on 7.074 MHz (sheet 30).",
 "r": [
 [
 "Frame",
@@ -193,37 +193,37 @@
 "ft4": {
 "t": "FT4: the contest FT8",
 "h": "Four tones spaced 20.8 Hz, 20.8 baud: 105 symbols in 5 s, in 7.5 s time slots.",
-"l": "Bands about 90 Hz wide, shorter and wider than FT8, coming back every 7.5 s. 14,080, 7,047.5 kHz (sheet 29)."
+"l": "Bands about 90 Hz wide, shorter and wider than FT8, coming back every 7.5 s. 14,080, 7,047.5 kHz (sheet 30)."
 },
 "olivia": {
 "t": "Olivia 8/250: eight tones",
 "h": "Eight tones spaced 31.25 Hz, one at a time, jumping at random; Walsh coding and interleaving.",
-"l": "A block of scattered dots over 250 Hz; decodes far below the noise. A small random melody to the ear (sheet 29)."
+"l": "A block of scattered dots over 250 Hz; decodes far below the noise. A small random melody to the ear (sheet 30)."
 },
 "hell": {
 "t": "Feld Hell: writing with a carrier",
 "h": "The carrier is switched on and off dot by dot: each letter is made of columns of 14 dots, scanned from bottom to top (245 dots per second).",
-"l": "On the waterfall, a chopped line; the software screen (fldigi) redraws the letters. A soft crackle to the ear (sheet 29)."
+"l": "On the waterfall, a chopped line; the software screen (fldigi) redraws the letters. A soft crackle to the ear (sheet 30)."
 },
 "4fsk": {
 "t": "4FSK: DMR, C4FM (Fusion), NXDN, dPMR",
 "h": "Four frequency levels: each symbol carries two bits.",
-"l": "A rectangular block 6 to 12.5 kHz wide, full like noise, often in bursts (DMR splits the channel into two time slots). A hoarse \"frrr\" to the ear (sheet 46)."
+"l": "A rectangular block 6 to 12.5 kHz wide, full like noise, often in bursts (DMR splits the channel into two time slots). A hoarse \"frrr\" to the ear (sheet 47)."
 },
 "mt63": {
 "t": "MT63: emergency messages (NBEMS)",
 "h": "64 tones at once, each slowly modulated, with lots of redundancy.",
-"l": "A flat block of 1 or 2 kHz centred on 1500 Hz, with sharp edges; a steady hiss. Even works through a microphone held to a loudspeaker (sheet 31)."
+"l": "A flat block of 1 or 2 kHz centred on 1500 Hz, with sharp edges; a steady hiss. Even works through a microphone held to a loudspeaker (sheet 32)."
 },
 "lora": {
 "t": "LoRa: frequency ramps (chirps)",
 "h": "The frequency sweeps the whole width, then starts again from the bottom: the position of the jump carries the data.",
-"l": "Parallel diagonals, easy to recognise: Meshtastic and MeshCore on 869.525 MHz or 433 MHz, LoRaWAN sensors (sheets 13, 23 and 24)."
+"l": "Parallel diagonals, easy to recognise: Meshtastic and MeshCore on 869.525 MHz or 433 MHz, LoRaWAN sensors (sheets 13, 24 and 25)."
 },
 "sstv": {
 "t": "SSTV: pictures in audio",
 "h": "A sync pulse at 1200 Hz, then the frequency follows the brightness of the line, from 1500 (black) to 2300 Hz (white).",
-"l": "Regular sync lines and a cloud that changes with the picture; a \"chirping\" sound for one to two minutes. 14.230 MHz, ISS on 145.800 MHz (sheet 37).",
+"l": "Regular sync lines and a cloud that changes with the picture; a \"chirping\" sound for one to two minutes. 14.230 MHz, ISS on 145.800 MHz (sheet 38).",
 "r": [
 [
 "Frame",
@@ -239,7 +239,7 @@
 "nm": "Weather fax",
 "t": "Weather fax: 1500 Hz black, 2300 Hz white",
 "h": "The frequency moves continuously from black to white, 120 lines per minute.",
-"l": "Two fixed bands at 1500 and 2300 Hz (800 Hz apart), a steady \"tick-tock\". Published frequencies are carrier frequencies: listen in USB 1.9 kHz lower (sheet 38).",
+"l": "Two fixed bands at 1500 and 2300 Hz (800 Hz apart), a steady \"tick-tock\". Published frequencies are carrier frequencies: listen in USB 1.9 kHz lower (sheet 39).",
 "r": [
 [
 "Frame",
@@ -255,13 +255,13 @@
 "nm": "ELT siren",
 "t": "ELT / PLB siren on 121.5 MHz",
 "h": "An AM signal whose tone falls from 1600 to 300 Hz, two to four times per second.",
-"l": "A fixed carrier and sidebands sliding like a fan: the \"woo-woo\" of distress beacons, also on 121.375 MHz for exercises (sheets 27 and 28)."
+"l": "A fixed carrier and sidebands sliding like a fan: the \"woo-woo\" of distress beacons, also on 121.375 MHz for exercises (sheets 28 and 29)."
 },
 "406": {
 "nm": "406 beacon",
 "t": "406 MHz beacon: BPSK burst",
 "h": "Half a second of transmission: 160 ms of pure carrier, then the phase swings by ±1.1 radian at 400 bit/s.",
-"l": "A short little line coming back every 50 s, between 406.0 and 406.1 MHz; nothing useful to hear, a decoder is needed (EPIRB 406, sheet 28)."
+"l": "A short little line coming back every 50 s, between 406.0 and 406.1 MHz; nothing useful to hear, a decoder is needed (EPIRB 406, sheet 29)."
 },
 "adsb": {
 "t": "ADS-B / Mode S (1090 MHz): pulses",
@@ -321,7 +321,7 @@
 "sh": "5 tones",
 "t": "CCIR Selcall: tones in sequence",
 "h": "Five 100 ms tones one after the other, one per digit.",
-"l": "A small staircase of dots, repeated; a quick \"tululululu\" to call one specific radio (sheet 33).",
+"l": "A small staircase of dots, repeated; a quick \"tululululu\" to call one specific radio (sheet 34).",
 "r": [
 [
 "Sequence",
@@ -333,50 +333,50 @@
 "sh": "pagers",
 "t": "POCSAG and FLEX: pagers",
 "h": "An FSK at ±4.5 kHz; a 1010… preamble then the data (reduced scale).",
-"l": "Two clean lines during the preamble, then a full band; a shrill \"brrrrt\". 466.075 MHz, DAPNET 439.9875 MHz (sheet 45).",
+"l": "Two clean lines during the preamble, then a full band; a shrill \"brrrrt\". 466.075 MHz, DAPNET 439.9875 MHz (sheet 46).",
 "n": "reduced scale"
 },
 "ale": {
 "sh": "8 tones",
 "t": "ALE: automatic link establishment on shortwave",
 "h": "Eight tones from 750 to 2500 Hz, 125 baud, in bursts.",
-"l": "A block about 2 kHz wide made of small dots, one to two seconds, sometimes on several nearby frequencies; a high-pitched twitter (sheet 34)."
+"l": "A block about 2 kHz wide made of small dots, one to two seconds, sometimes on several nearby frequencies; a high-pitched twitter (sheet 35)."
 },
 "rs41": {
 "nm": "RS41 radiosonde",
 "t": "RS41 radiosonde: continuous GFSK",
 "h": "A smoothed FSK at 4800 baud, non-stop; the frequency drifts slowly as the sonde rises and cools down.",
-"l": "A band about 10 kHz wide that slides at an angle during the whole flight, between 400 and 406 MHz (sheet 21)."
+"l": "A band about 10 kHz wide that slides at an angle during the whole flight, between 400 and 406 MHz (sheet 22)."
 },
 "ook": {
 "nm": "433 sensors",
 "t": "433 MHz sensors: OOK",
 "h": "The carrier switches on and off in short or long pulses (on-off keying); the message is repeated three times.",
-"l": "Bursts of small dots, often in threes, on 433.92 MHz: weather stations, temperature probes, remote controls (sheet 22)."
+"l": "Bursts of small dots, often in threes, on 433.92 MHz: weather stations, temperature probes, remote controls (sheet 23)."
 },
 "fhss": {
 "t": "Bluetooth: frequency hopping (FHSS)",
 "h": "The frequency changes 1600 times per second among 79 channels (reduced scale).",
-"l": "Small lines scattered everywhere over 80 MHz, never in the same place, around 2.4 GHz (sheet 25).",
+"l": "Small lines scattered everywhere over 80 MHz, never in the same place, around 2.4 GHz (sheet 26).",
 "n": "reduced scale"
 },
 "wspr": {
 "t": "WSPR: propagation beacons",
 "h": "Four tones spaced 1.46 Hz, 0.68 s per symbol, for 110.6 s.",
-"l": "A very thin line about 6 Hz wide lasting almost two minutes, every even two minutes: you have to zoom in a lot (sheet 29).",
+"l": "A very thin line about 6 Hz wide lasting almost two minutes, every even two minutes: you have to zoom in a lot (sheet 30).",
 "n": "24 s excerpt (a transmission lasts 110.6 s)"
 },
 "qrss": {
 "t": "QRSS: very slow Morse",
 "h": "A carrier switched on and off, with dots of 3 to 10 s, often on two nearby frequencies (DFCW).",
-"l": "Lines a few Hz wide, read on a ten-minute screen; inaudible to the ear (sheet 30).",
+"l": "Lines a few Hz wide, read on a ten-minute screen; inaudible to the ear (sheet 31).",
 "n": "sped up: 0.6 s dot instead of 3 to 10 s"
 },
 "texte": {
 "nm": "Text in the waterfall",
 "t": "Text in the waterfall",
 "h": "Each line of a picture becomes a group of tones: the sound is like noise.",
-"l": "The text or drawing appears directly on the SDR screen (sheet 40).",
+"l": "The text or drawing appears directly on the SDR screen (sheet 41).",
 "r": [
 [
 "Note",
@@ -387,7 +387,7 @@
 "vara": {
 "t": "Modern HF data: VARA, Pactor, ARDOP",
 "h": "Long full bursts (OFDM or PSK) and, in between, short replies from the other station.",
-"l": "A rectangle about 2.4 kHz wide that stops and starts again, with a small acknowledgement in between; a chopped hiss (sheet 29)."
+"l": "A rectangle about 2.4 kHz wide that stops and starts again, with a small acknowledgement in between; a chopped hiss (sheet 30)."
 },
 "chirp": {
 "nm": "Ionospheric sounder",
@@ -435,19 +435,19 @@
 "ofdm": {
 "t": "OFDM: dozens of subcarriers",
 "h": "Many tightly packed carriers, each slow: the sum looks like noise.",
-"l": "A flat rectangle with sharp edges, always there: DRM on shortwave (10 kHz), DAB+ (1.5 MHz), DVB-T, Wi-Fi. A continuous hiss to the ear (sheets 12 and 25)."
+"l": "A flat rectangle with sharp edges, always there: DRM on shortwave (10 kHz), DAB+ (1.5 MHz), DVB-T, Wi-Fi. A continuous hiss to the ear (sheets 12 and 26)."
 },
 "dsss": {
 "t": "Spread spectrum (DSSS): GPS, Wi-Fi 802.11b",
 "h": "The data are mixed with a very fast code: the energy is spread over a wide band.",
-"l": "A wide hump, barely above the noise; GPS is even below the noise and cannot be seen without processing (sheets 25 and 26)."
+"l": "A wide hump, barely above the noise; GPS is even below the noise and cannot be seen without processing (sheets 26 and 27)."
 },
 "hline": {
 "nm": "Hydrogen line",
 "sh": "1420 MHz",
 "t": "21 cm hydrogen line (1420.405 MHz)",
 "h": "Cold hydrogen in the Milky Way emits a very faint hiss on 1420.405 MHz. The motion of the galaxy's arms shifts it by the Doppler effect: you see several small humps.",
-"l": "Almost nothing in the waterfall from one second to the next: you have to average for a long time to see the humps rise out of the noise. Here, look at the average spectrum when stopped. A dish or a horn, a preamp and an SDR dongle are enough (sheet 47).",
+"l": "Almost nothing in the waterfall from one second to the next: you have to average for a long time to see the humps rise out of the noise. Here, look at the average spectrum when stopped. A dish or a horn, a preamp and an SDR dongle are enough (sheet 49).",
 "n": "signal greatly exaggerated"
 },
 "sun": {
@@ -455,21 +455,21 @@
 "sh": "bursts",
 "t": "Sun: type III radio bursts",
 "h": "Electrons thrown out by a flare cross the Sun's corona and make it emit at lower and lower frequencies as they move away.",
-"l": "Lines falling diagonally from the top to the bottom of the spectrum in less than a second, over a background of solar noise; a swelling \"shhhh\". From about 10 to 400 MHz, also on shortwave around 20 MHz (sheet 47)."
+"l": "Lines falling diagonally from the top to the bottom of the spectrum in less than a second, over a background of solar noise; a swelling \"shhhh\". From about 10 to 400 MHz, also on shortwave around 20 MHz (sheet 49)."
 },
 "jupiter": {
 "nm": "Jupiter",
 "sh": "20 MHz",
 "t": "Jupiter: decametric bursts (L and S)",
 "h": "Jupiter's magnetic field and its moon Io produce powerful emissions between 15 and 40 MHz: slow L bursts and very short S bursts that slide down fast.",
-"l": "First waves of hiss (L, like surf on a beach), then trains of little \"pops\" (S) in tight diagonals. Around 20.1 MHz at night, with a simple dipole, when Io is well placed (sheet 47)."
+"l": "First waves of hiss (L, like surf on a beach), then trains of little \"pops\" (S) in tight diagonals. Around 20.1 MHz at night, with a simple dipole, when Io is well placed (sheet 49)."
 },
 "pulsar": {
 "nm": "Pulsar",
 "sh": "B0329+54",
 "t": "Pulsar PSR B0329+54",
 "h": "A spinning neutron star sweeps the Earth with a radio beam, here every 0.714 s. Interstellar gas delays the low frequencies: each pulse arrives first at the top of the spectrum.",
-"l": "A regular \"tick\"; in the waterfall each pulse is a curve sloping down (dispersion). The real signal is below the noise: you need a big antenna and must add up the pulses over their period (sheet 47).",
+"l": "A regular \"tick\"; in the waterfall each pulse is a curve sloping down (dispersion). The real signal is below the noise: you need a big antenna and must add up the pulses over their period (sheet 49).",
 "n": "signal greatly exaggerated"
 },
 "meteor": {
@@ -484,28 +484,28 @@
 "sh": "VLF",
 "t": "VLF whistlers",
 "h": "Lightning makes a radio click; part of it follows the Earth's magnetic field lines to the other hemisphere and back, high notes first.",
-"l": "A \"pyooo\" falling from high to low in one or two seconds, right after a click; crackles (sferics) everywhere. Below 10 kHz, with a VLF receiver far from power lines (sheet 47)."
+"l": "A \"pyooo\" falling from high to low in one or two seconds, right after a click; crackles (sferics) everywhere. Below 10 kHz, with a VLF receiver far from power lines (sheet 49)."
 },
 "chorus": {
 "nm": "Dawn chorus",
 "sh": "VLF",
 "t": "Dawn chorus",
 "h": "During a magnetic storm, electrons trapped in the magnetosphere emit small rising notes, mostly around sunrise.",
-"l": "Overlapping rising chirps, like birds, from about 1 to 4 kHz. Same equipment as for whistlers (sheet 47)."
+"l": "Overlapping rising chirps, like birds, from about 1 to 4 kHz. Same equipment as for whistlers (sheet 49)."
 },
 "sputnik": {
 "nm": "Sputnik 1",
 "sh": "1957",
 "t": "Sputnik 1 (1957)",
 "h": "The first artificial satellite sent beeps of about 0.3 s on 20.005 and 40.002 MHz, alternately, for three weeks.",
-"l": "A regularly broken line: \"beep… beep…\", the sound the whole world listened to in October 1957 (reconstruction) (sheet 41)."
+"l": "A regularly broken line: \"beep… beep…\", the sound the whole world listened to in October 1957 (reconstruction) (sheet 42)."
 },
 "doppler": {
 "nm": "Doppler effect",
 "sh": "satellite",
 "t": "Satellite beacon and Doppler effect",
 "h": "A low-orbit satellite comes closer then moves away: the received frequency falls during the pass, by about ±3 kHz at 145 MHz and ±10 kHz at 435 MHz.",
-"l": "A line falling in an S shape: slowly at first, fast when the satellite is closest, then slowly again (sheet 41).",
+"l": "A line falling in an S shape: slowly at first, fast when the satellite is closest, then slowly again (sheet 42).",
 "n": "10 min pass squeezed into 12 s"
 },
 "apt": {
@@ -513,7 +513,7 @@
 "sh": "137 MHz",
 "t": "NOAA satellites: APT images (historical)",
 "h": "A 2400 Hz subcarrier amplitude-modulated by the picture, two lines per second, with a sync pulse at the start of each line. Stopped in 2025; Meteor-M satellites now transmit LRPT.",
-"l": "A line at 2400 Hz with sidebands that change with the picture, and the famous \"tick-tock\" twice a second (sheet 41)."
+"l": "A line at 2400 Hz with sidebands that change with the picture, and the famous \"tick-tock\" twice a second (sheet 42)."
 },
 "eme": {
 "nm": "Moon echo",
@@ -528,14 +528,14 @@
 "sh": "meteors",
 "t": "MSK144: the meteor-scatter digital mode",
 "h": "Two tones, 1000 and 2000 Hz, at 2000 baud, in 72 ms frames repeated non-stop: each meteor trail lets a few of them through.",
-"l": "Bursts of 0.1 to 1 s, about 2.4 kHz wide, that appear and fade with the meteor's \"ping\". On 50 and 144 MHz, with WSJT-X (sheet 29)."
+"l": "Bursts of 0.1 to 1 s, about 2.4 kHz wide, that appear and fade with the meteor's \"ping\". On 50 and 144 MHz, with WSJT-X (sheet 30)."
 },
 "jt65": {
 "nm": "JT65",
 "sh": "65 tones",
 "t": "JT65: 65 tones, very slow",
 "h": "One sync tone and 64 data tones spaced 2.7 Hz (JT65A), 0.37 s per symbol, 47 s of transmission per minute.",
-"l": "A ladder of small lines over about 180 Hz, with a sync line that keeps returning to the same place. Used for Moon bounce (JT65B and C) and very weak signals (sheet 29).",
+"l": "A ladder of small lines over about 180 Hz, with a sync line that keeps returning to the same place. Used for Moon bounce (JT65B and C) and very weak signals (sheet 30).",
 "n": "20 s excerpt (a transmission lasts 47 s)"
 },
 "tetra": {
@@ -543,7 +543,7 @@
 "sh": "π/4-DQPSK",
 "t": "TETRA: professional digital network",
 "h": "π/4-DQPSK phase modulation at 18,000 symbols per second, four time-shared channels, in 25 kHz channels.",
-"l": "A full block with rounded edges, always there near a base station; a hoarse hiss. Encrypted: you cannot listen to it (sheet 46).",
+"l": "A full block with rounded edges, always there near a base station; a hoarse hiss. Encrypted: you cannot listen to it (sheet 47).",
 "n": "reduced scale"
 },
 "ndb": {
@@ -573,42 +573,42 @@
 "sh": "Meteomodem",
 "t": "M10 and M20 radiosondes (Meteomodem)",
 "h": "One frame per second, in fast FSK (about 9600 baud): wider than the RS41. Launched in France by Météo-France.",
-"l": "A wide burst every second that drifts slowly during the flight; between 400 and 406 MHz (sheet 21)."
+"l": "A wide burst every second that drifts slowly during the flight; between 400 and 406 MHz (sheet 22)."
 },
 "tpms": {
 "nm": "Tyres (TPMS)",
 "sh": "433 MHz",
 "t": "Tyre pressure sensors (TPMS)",
 "h": "Each wheel now and then sends an FSK burst of a few milliseconds: pressure, temperature, identifier.",
-"l": "Small isolated bursts on 433.92 MHz (or 315 MHz), often in pairs, as a car passes. Decoded by rtl_433 (sheet 22)."
+"l": "Small isolated bursts on 433.92 MHz (or 315 MHz), often in pairs, as a car passes. Decoded by rtl_433 (sheet 23)."
 },
 "als162": {
 "nm": "ALS162",
 "sh": "162 kHz",
 "t": "ALS162 time signal (Allouis, 162 kHz)",
 "h": "The carrier of France Inter's former long-wave service; the time is coded by small, inaudible phase modulations.",
-"l": "A fixed line, very strong in France, barely widened at the start of each second; a decoder is needed to read the time (sheet 39)."
+"l": "A fixed line, very strong in France, barely widened at the start of each second; a decoder is needed to read the time (sheet 40)."
 },
 "wwv": {
 "nm": "WWV",
 "sh": "2.5–20 MHz",
 "t": "WWV time signal (Colorado)",
 "h": "In AM: a 5 ms \"tick\" at 1000 Hz every second, a 500 or 600 Hz tone, a time code on 100 Hz and a voice announcing UTC.",
-"l": "In the demodulated sound: a 500 Hz line broken every second, the 1000 Hz tick, and the code at the very bottom on 100 Hz (sheet 39)."
+"l": "In the demodulated sound: a 500 Hz line broken every second, the 1000 Hz tick, and the code at the very bottom on 100 Hz (sheet 40)."
 },
 "msf": {
 "nm": "MSF",
 "sh": "60 kHz",
 "t": "MSF time signal (Anthorn, 60 kHz)",
 "h": "The carrier is switched off at the start of each second for 0.1, 0.2 or 0.3 s depending on the bits, and for 0.5 s to mark the minute.",
-"l": "A fixed line with complete black gaps every second, longer than with DCF77 (sheet 39)."
+"l": "A fixed line with complete black gaps every second, longer than with DCF77 (sheet 40)."
 },
 "type2": {
 "nm": "Sun type II",
 "sh": "shock wave",
 "t": "Sun: type II radio bursts",
 "h": "The shock wave of a coronal mass ejection makes the plasma emit lower and lower, slowly, often in two bands (the fundamental and its double).",
-"l": "Two parallel noise bands drifting down gently for several minutes. Compare with type III bursts, which are much faster (sheet 47).",
+"l": "Two parallel noise bands drifting down gently for several minutes. Compare with type III bursts, which are much faster (sheet 49).",
 "n": "several minutes squeezed into 6 s"
 },
 "tweeks": {
@@ -616,14 +616,14 @@
 "sh": "VLF",
 "t": "Tweeks: the night-time VLF \"pings\"",
 "h": "At night, the click of distant lightning bounces between the ground and the ionosphere; frequencies near the cut-off (around 1.7 kHz) arrive last.",
-"l": "A small \"ping\" that falls and stops around 1.7 kHz, sometimes with an echo at double frequency; crackles everywhere. Below 10 kHz, at night (sheet 47)."
+"l": "A small \"ping\" that falls and stops around 1.7 kHz, sometimes with an echo at double frequency; crackles everywhere. Below 10 kHz, at night (sheet 49)."
 },
 "hiss": {
 "nm": "VLF hiss",
 "sh": "hiss",
 "t": "VLF hiss",
 "h": "Wideband noise produced by electrons in the plasmasphere, rising and falling with magnetic activity.",
-"l": "A band of hiss from a few hundred Hz to a few kHz, with no pattern, slowly swelling and fading (sheet 47)."
+"l": "A band of hiss from a few hundred Hz to a few kHz, with no pattern, slowly swelling and fading (sheet 49)."
 },
 "aurora": {
 "nm": "Radio aurora",
@@ -637,7 +637,7 @@
 "sh": "20–40 MHz",
 "t": "Noise from the Milky Way",
 "h": "The centre of the galaxy emits a radio hiss that Karl Jansky discovered in 1932 around 20 MHz. It rises and falls as the Earth turns.",
-"l": "A background noise that slowly rises then falls again, about 4 minutes earlier each day. Visible with a simple dipole between 20 and 40 MHz (sheet 47).",
+"l": "A background noise that slowly rises then falls again, about 4 minutes earlier each day. Visible with a simple dipole between 20 and 40 MHz (sheet 49).",
 "n": "one day squeezed into 12 s"
 },
 "cubesat": {
@@ -645,7 +645,7 @@
 "sh": "9600 bd",
 "t": "CubeSat telemetry",
 "h": "Small satellites regularly send their measurements (battery, temperatures) in FSK or GMSK at 1200 or 9600 baud, around 435–438 MHz.",
-"l": "Regular bursts sliding lower each time, by the Doppler effect, during the pass (sheet 41).",
+"l": "Regular bursts sliding lower each time, by the Doppler effect, during the pass (sheet 42).",
 "n": "reduced scale, pass sped up"
 },
 "issfm": {
@@ -653,7 +653,7 @@
 "sh": "145.800 MHz",
 "t": "Space station (ISS): FM voice",
 "h": "Astronauts talk with schools and radio amateurs in FM on 145.800 MHz. The station flies at 28,000 km/h: during the pass, the received frequency slides from about +3.5 kHz to −3.5 kHz.",
-"l": "A band of FM voice slowly moving from right to left during the 10-minute pass (sheet 41).",
+"l": "A band of FM voice slowly moving from right to left during the 10-minute pass (sheet 42).",
 "n": "10 min pass squeezed into 10 s"
 },
 "buzzer": {
@@ -661,14 +661,14 @@
 "sh": "4625 kHz",
 "t": "UVB-76, \"The Buzzer\" (4625 kHz)",
 "h": "A Russian military station that has sent, for decades, a buzz of about one second repeated about 25 times a minute, sometimes interrupted by a voice message.",
-"l": "A fixed carrier and, at each buzz, a column of tight lines from top to bottom. Easy to find on 4625 kHz in USB (sheet 43)."
+"l": "A fixed carrier and, at each buzz, a column of tight lines from top to bottom. Easy to find on 4625 kHz in USB (sheet 44)."
 },
 "pip": {
 "nm": "\"The Pip\"",
 "sh": "3756 / 5448 kHz",
 "t": "\"The Pip\": endless beeps",
 "h": "Another Russian military shortwave beacon, repeating short little beeps day and night, sometimes interrupted by messages.",
-"l": "A fixed line cut by a short beep about 50 times a minute; to the ear, a steady \"pip… pip…\" that never stops (sheet 43).",
+"l": "A fixed line cut by a short beep about 50 times a minute; to the ear, a steady \"pip… pip…\" that never stops (sheet 44).",
 "n": "approximate rhythm"
 },
 "squeaky": {
@@ -676,7 +676,7 @@
 "sh": "HF",
 "t": "\"Squeaky Wheel\"",
 "h": "A Russian military shortwave beacon, named by listeners after its repeated sound pattern.",
-"l": "A small pattern of two sounds, one of them rising, repeated in a loop: like a squeaking wheel (sheet 43).",
+"l": "A small pattern of two sounds, one of them rising, repeated in a loop: like a squeaking wheel (sheet 44).",
 "n": "approximate imitation"
 },
 "codar": {
@@ -684,7 +684,7 @@
 "sh": "ocean radar",
 "t": "CODAR: ocean current radars",
 "h": "Coastal radars sweep a band of frequencies once or twice a second to measure currents and waves.",
-"l": "Regular parallel diagonals and a repeated \"swish\"; around 4.5–5.5 MHz, 13 MHz and 25 MHz, often day and night (sheet 43).",
+"l": "Regular parallel diagonals and a repeated \"swish\"; around 4.5–5.5 MHz, 13 MHz and 25 MHz, often day and night (sheet 44).",
 "n": "reduced scale"
 },
 "stanag": {
@@ -692,21 +692,21 @@
 "sh": "8-PSK",
 "t": "STANAG 4285 military modem",
 "h": "8-PSK phase modulation at 2400 baud on an 1800 Hz carrier, with a probe sequence every 107 ms to track the channel.",
-"l": "A full block about 3 kHz wide; to the ear, a hiss with a regular buzz (sheet 43)."
+"l": "A full block about 3 kHz wide; to the ear, a hiss with a regular buzz (sheet 44)."
 },
 "link11": {
 "nm": "Link-11",
 "sh": "16 tones",
 "t": "Link-11: naval data link",
 "h": "Sixteen tones from 605 to 2915 Hz sent together, each phase-modulated 75 times per second.",
-"l": "A comb of fourteen regular lines from 935 to 2365 Hz, plus two lines set apart at 605 and 2915 Hz; to the ear, a musical drone (sheet 43)."
+"l": "A comb of fourteen regular lines from 935 to 2365 Hz, plus two lines set apart at 605 and 2915 Hz; to the ear, a musical drone (sheet 44)."
 },
 "numbers": {
 "nm": "Numbers station",
 "sh": "voice",
 "t": "Numbers station",
 "h": "At a fixed time, a short call melody, then a voice (often synthetic) reads groups of five digits, in AM or SSB.",
-"l": "The melody as separate notes, then regular groups of syllables separated by silences (sheet 43).",
+"l": "The melody as separate notes, then regular groups of syllables separated by silences (sheet 44).",
 "n": "imitated voice, no real digits"
 },
 "rttydwd": {
@@ -714,14 +714,14 @@
 "sh": "50 Bd / 450 Hz",
 "t": "DWD weather RTTY (Germany)",
 "h": "Like amateur RTTY, but at 50 baud with a 450 Hz shift: the German weather service sends its bulletins and marine forecasts in plain text.",
-"l": "Two lines much further apart, and a slightly faster rhythm. Between bulletins, the call \"CQ CQ CQ DE DDK2 DDH7 DDK9\" then RYRYRY. On 4583, 7646 and 10,100.8 kHz, also 147.3 kHz (sheet 32)."
+"l": "Two lines much further apart, and a slightly faster rhythm. Between bulletins, the call \"CQ CQ CQ DE DDK2 DDH7 DDK9\" then RYRYRY. On 4583, 7646 and 10,100.8 kHz, also 147.3 kHz (sheet 33)."
 },
 "mfsk16": {
 "nm": "MFSK16",
 "sh": "16 tones",
 "t": "MFSK16: sixteen tones",
 "h": "Sixteen tones spaced 15.625 Hz, one at a time, 15.625 times per second; each tone carries four bits, protected by error correction.",
-"l": "A 316 Hz band made of small steps that keep jumping, after a steady tone at the start. To the ear, a quick little tune, like a flute. Also used to send small pictures (sheet 29)."
+"l": "A 316 Hz band made of small steps that keep jumping, after a steady tone at the start. To the ear, a quick little tune, like a flute. Also used to send small pictures (sheet 30)."
 },
 "sitora": {
 "nm": "SITOR-A (ARQ)",
@@ -763,14 +763,14 @@
 "sh": "14.100 MHz",
 "t": "NCDXF / IARU beacons: testing propagation",
 "h": "Eighteen beacons around the world transmit in turn, ten seconds each, on 14.100, 18.110, 21.150, 24.930 and 28.200 MHz: the call sign in Morse, then four one-second dashes at 100 W, 10 W, 1 W and 0.1 W.",
-"l": "A call sign, then four dashes getting weaker and weaker: if you can still hear the last one, propagation to that beacon is excellent. Here 4U1UN (New York) then VE8AT (Canada) (sheet 30)."
+"l": "A call sign, then four dashes getting weaker and weaker: if you can still hear the last one, propagation to that beacon is excellent. Here 4U1UN (New York) then VE8AT (Canada) (sheet 31)."
 },
 "lrpt": {
 "nm": "Meteor-M LRPT",
 "sh": "137.9 MHz",
 "t": "Meteor-M satellites: LRPT images",
 "h": "The Russian Meteor-M weather satellites send their images digitally: four-state phase modulation (QPSK), 72,000 symbols per second, about 120 kHz wide.",
-"l": "A full block with rounded edges that slides slowly during the pass (Doppler effect); to the ear, just a hiss. On 137.9 or 137.1 MHz, decoded with SatDump (sheet 41).",
+"l": "A full block with rounded edges that slides slowly during the pass (Doppler effect); to the ear, just a hiss. On 137.9 or 137.1 MHz, decoded with SatDump (sheet 42).",
 "n": "reduced scale"
 },
 "quindar": {
@@ -778,14 +778,14 @@
 "sh": "NASA",
 "t": "Quindar tones: the Apollo beeps",
 "h": "When Houston presses the microphone key, a 2525 Hz beep (250 ms) switches on the ground station transmitters; on release, a 2475 Hz beep switches them off.",
-"l": "A high beep before each sentence and another, slightly lower, after it: the famous sound of the Apollo mission recordings (sheet 41)."
+"l": "A high beep before each sentence and another, slightly lower, after it: the famous sound of the Apollo mission recordings (sheet 42)."
 },
 "wow": {
 "nm": "\"Wow!\" signal",
 "sh": "1977",
 "t": "The \"Wow!\" signal (15 August 1977)",
 "h": "The Big Ear radio telescope (Ohio) picked up, for 72 seconds, a narrow and very strong signal near the hydrogen line, around 1420.456 MHz. Astronomer Jerry Ehman wrote \"Wow!\" on the printout. It was never seen again and its origin is still debated.",
-"l": "A thin line that rises out of the noise, grows and fades: the shape of a fixed source drifting through the antenna beam. This is a reconstruction: no sound recording exists (sheet 47).",
+"l": "A thin line that rises out of the noise, grows and fades: the shape of a fixed source drifting through the antenna beam. This is a reconstruction: no sound recording exists (sheet 49).",
 "n": "72 s squeezed into 12 s"
 },
 "frb": {
@@ -793,7 +793,7 @@
 "sh": "FRB",
 "t": "Fast radio burst (FRB)",
 "h": "A radio flash lasting a few milliseconds, coming from another galaxy; the first one was discovered in 2007. The gas it crosses delays the low frequencies a lot: the burst arrives smeared, high notes first.",
-"l": "A single curve falling from the top to the bottom of the spectrum, then nothing. Some repeat; most are seen only once (sheet 47).",
+"l": "A single curve falling from the top to the bottom of the spectrum, then nothing. Some repeat; most are seen only once (sheet 49).",
 "n": "greatly slowed down and exaggerated"
 },
 "letterb": {
@@ -801,14 +801,14 @@
 "sh": "D, P, S, C…",
 "t": "Single-letter beacons",
 "h": "Russian navy transmitters endlessly repeat a single Morse letter, each 100 Hz from its neighbour: D, P, S, C, A, F, K or M depending on the site.",
-"l": "Parallel dotted lines, very close together, each with its own rhythm. Around 4558, 5154, 7039, 10,872, 13,528 and 16,332 kHz, in CW (sheet 43)."
+"l": "Parallel dotted lines, very close together, each with its own rhythm. Around 4558, 5154, 7039, 10,872, 13,528 and 16,332 kHz, in CW (sheet 44)."
 },
 "sid": {
 "nm": "Solar flare on VLF",
 "sh": "SID",
 "t": "Solar flare seen on VLF (SID)",
 "h": "Navy VLF transmitters (20.9 kHz in France, 23.4 kHz in Germany…) travel between the ground and the ionosphere. When a solar flare arrives, its X-rays change the bottom of the ionosphere within minutes and the received level jumps.",
-"l": "A narrow, steady band (the transmitter's MSK signal) that suddenly gets stronger, then slowly returns to normal. A wire loop and a sound card are enough: a classic astronomy-club project (sheet 47).",
+"l": "A narrow, steady band (the transmitter's MSK signal) that suddenly gets stronger, then slowly returns to normal. A wire loop and a sound card are enough: a classic astronomy-club project (sheet 49).",
 "n": "one hour squeezed into 12 s"
 },
 "qrn": {
@@ -830,7 +830,7 @@
 "sh": "2–30 MHz",
 "t": "PLC: Internet through the mains sockets",
 "h": "Powerline adapters send data over the house wiring on hundreds of carriers between 2 and 30 MHz (higher for recent models), one every 24.4 kHz. The wires radiate like an antenna.",
-"l": "A comb of regular lines flickering in packets, with gaps on the amateur bands (notches required by the standard); to the ear, a crackle that follows the Internet traffic (sheet 43).",
+"l": "A comb of regular lines flickering in packets, with gaps on the amateur bands (notches required by the standard); to the ear, a crackle that follows the Internet traffic (sheet 44).",
 "n": "reduced scale"
 },
 "fence": {
@@ -838,28 +838,28 @@
 "sh": "tick… tick…",
 "t": "Electric fence",
 "h": "The energiser sends a pulse of several thousand volts into the wire about once a second. If grass touches the wire or an insulator is damaged, a spark jumps and radiates on all frequencies.",
-"l": "A very thin horizontal line across the whole width, at a perfectly regular interval; a \"tick… tick…\" from long wave up to VHF. Its steady rhythm tells it apart from storm static (sheet 43)."
+"l": "A very thin horizontal line across the whole width, at a perfectly regular interval; a \"tick… tick…\" from long wave up to VHF. Its steady rhythm tells it apart from storm static (sheet 44)."
 },
 "gsm": {
 "nm": "GSM phone",
 "sh": "217 Hz",
 "t": "GSM phone next to a loudspeaker",
 "h": "A 2G phone transmits in bursts of 0.577 ms, 217 times per second. A poorly shielded audio amplifier detects these bursts and makes them audible.",
-"l": "A comb of lines every 217 Hz; the famous \"dit-dit-di-di-dit\" just before the phone rings, then a steady buzz during the call. Getting rare: 2G networks are being switched off (sheet 43)."
+"l": "A comb of lines every 217 Hz; the famous \"dit-dit-di-di-dit\" just before the phone rings, then a steady buzz during the call. Getting rare: 2G networks are being switched off (sheet 44)."
 },
 "jjy": {
 "nm": "JJY",
 "sh": "40 / 60 kHz",
 "t": "JJY time signal (Japan, 40 and 60 kHz)",
 "h": "Each second the carrier is at full power for 0.8 s (bit 0), 0.5 s (bit 1) or 0.2 s (marker), then drops to 10 %. It is the reverse of DCF77, which drops at the start of the second.",
-"l": "A fixed line that weakens at the end of each second, sooner or later. Transmitters in Fukushima (40 kHz) and Saga-Fukuoka (60 kHz), for Japan's radio-controlled clocks (sheet 39)."
+"l": "A fixed line that weakens at the end of each second, sooner or later. Transmitters in Fukushima (40 kHz) and Saga-Fukuoka (60 kHz), for Japan's radio-controlled clocks (sheet 40)."
 },
 "rwm": {
 "nm": "RWM",
 "sh": "4996 kHz",
 "t": "RWM time signal (Moscow)",
 "h": "In telegraphy on 4996, 9996 and 14,996 kHz: one 100 ms pulse every second, then, at other minutes, ten pulses per second. The call sign RWM is sent in Morse twice an hour.",
-"l": "The call sign, then a line cut into regular \"ticks\", then into fast dots. Listen in CW or SSB (sheet 39).",
+"l": "The call sign, then a line cut into regular \"ticks\", then into fast dots. Listen in CW or SSB (sheet 40).",
 "n": "condensed excerpt"
 },
 "bpm": {
@@ -867,7 +867,7 @@
 "sh": "2.5–15 MHz",
 "t": "BPM time signal (China)",
 "h": "The Pucheng station (Shaanxi) transmits in AM on 2.5, 5, 10 and 15 MHz: a 10 ms tick at 1000 Hz every second (300 ms on the minute) and, at certain minutes, 100 ms ticks for UT1 time. The call sign BPM is given in Morse, then by a voice.",
-"l": "In the demodulated sound: the call sign, then very short lines at 1000 Hz, one per second, with a longer one on the minute. Often mixed with WWV on the same frequencies (sheet 39).",
+"l": "In the demodulated sound: the call sign, then very short lines at 1000 Hz, one per second, with a longer one on the minute. Often mixed with WWV on the same frequencies (sheet 40).",
 "n": "condensed excerpt"
 },
 "humpback": {
@@ -875,14 +875,14 @@
 "sh": "song",
 "t": "The humpback whale's song",
 "h": "In winter, on the breeding grounds, the males sing: a sequence of moans, groans and cries forming a theme that is repeated identically for hours and changes from one season to the next. Hydrophones pick it up tens of kilometres away.",
-"l": "Thick traces with their harmonics, slowly rising or falling between 100 Hz and a few kHz; the same sequence comes back after a few seconds. Echoes from the surface and the seabed stretch every note."
+"l": "Thick traces with their harmonics, slowly rising or falling between 100 Hz and a few kHz; the same sequence comes back after a few seconds. Echoes from the surface and the seabed stretch every note (sheet 48)."
 },
 "bluewhale": {
 "nm": "Blue whale",
 "sh": "×10",
 "t": "The blue whale: the deepest call",
 "h": "The largest animal on Earth makes very low (10 to 40 Hz) and very powerful calls, 10 to 20 seconds long and repeated for hours: they carry for hundreds of kilometres. To hear them, the recording is sped up ten times.",
-"l": "A pulsed part, then a long note that barely falls, with its harmonics above; the sequence repeats. The scale shows the real frequencies.",
+"l": "A pulsed part, then a long note that barely falls, with its harmonics above; the sequence repeats. The scale shows the real frequencies (sheet 48).",
 "n": "sped up 10×"
 },
 "finwhale": {
@@ -890,7 +890,7 @@
 "sh": "20 Hz",
 "t": "The fin whale: the 20 Hz pulses",
 "h": "The fin whale makes pulses about one second long that fall from roughly 25 to 18 Hz, at regular intervals, sometimes for days. In the 1950s and 60s these “20 Hz signals” puzzled US Navy listening networks before being traced to this whale.",
-"l": "Short dashes, all alike, in a regular series or in pairs, like the beats of a very slow heart; each one falls slightly in frequency. The scale shows the real frequencies.",
+"l": "Short dashes, all alike, in a regular series or in pairs, like the beats of a very slow heart; each one falls slightly in frequency. The scale shows the real frequencies (sheet 48).",
 "n": "sped up 10×"
 },
 "sperm": {
@@ -898,14 +898,14 @@
 "sh": "clicks",
 "t": "Sperm whale clicks",
 "h": "The sperm whale hunts on deep dives using sonar: very powerful clicks, about one per second, that speed up into a “creak” as it closes in on prey. Between dives, sperm whales exchange “codas”, short series of clicks whose rhythm differs from clan to clan.",
-"l": "Horizontal lines across the full width, evenly spaced, then crowded into a buzz (the creak), then a small rhythmic pattern: the coda. Each click is made of several closely spaced pulses, caused by reflections inside the animal's head."
+"l": "Horizontal lines across the full width, evenly spaced, then crowded into a buzz (the creak), then a small rhythmic pattern: the coda. Each click is made of several closely spaced pulses, caused by reflections inside the animal's head (sheet 48)."
 },
 "dolphin": {
 "nm": "Bottlenose dolphin",
 "sh": "whistles",
 "t": "Dolphin whistles and clicks",
 "h": "The bottlenose dolphin whistles between about 5 and 20 kHz; each animal has a “signature whistle” that works as its name. To hunt and find its way it also sends trains of very short clicks, up to several hundred per second.",
-"l": "Thin curves that rise and fall back, often repeated identically, and bursts of horizontal lines for echolocation. Frequencies are divided by 3 to stay audible; the scale shows the real values.",
+"l": "Thin curves that rise and fall back, often repeated identically, and bursts of horizontal lines for echolocation. Frequencies are divided by 3 to stay audible; the scale shows the real values (sheet 48).",
 "n": "played 3× lower"
 },
 "orca": {
@@ -913,14 +913,14 @@
 "sh": "pulsed calls",
 "t": "Orca pulsed calls",
 "h": "Orcas communicate with pulsed calls: trains of pulses so fast (500 to 2000 per second) that they are heard as a note, with a sudden jump in pitch. Each family group has its own “dialect”.",
-"l": "A stack of parallel traces (the harmonics) rising or falling together, with a sharp break in the middle of the call; sometimes a thin, higher whistle."
+"l": "A stack of parallel traces (the harmonics) rising or falling together, with a sharp break in the middle of the call; sometimes a thin, higher whistle (sheet 48)."
 },
 "bseal": {
 "nm": "Bearded seal",
 "sh": "trill",
 "t": "The bearded seal's trill",
 "h": "In spring, under the Arctic sea ice, the male makes long trills that spiral down from several kHz to a few hundred hertz, sometimes for a whole minute. They defend a territory and attract females.",
-"l": "A wavy curve gliding from the top of the scale to the bottom, like a spring uncoiling, then a low note at the end.",
+"l": "A wavy curve gliding from the top of the scale to the bottom, like a spring uncoiling, then a low note at the end (sheet 48).",
 "n": "shortened"
 },
 "shrimp": {
@@ -928,28 +928,28 @@
 "sh": "reef",
 "t": "Snapping shrimp (pistol shrimp)",
 "h": "When it snaps its big claw shut, the shrimp shoots out a jet of water so fast that it forms a cavitation bubble; when the bubble collapses it cracks like a gunshot. Thousands of shrimp make the background noise of reefs and can disturb sonar.",
-"l": "A shower of dots and short lines across the full width, with no order at all; in headphones, a continuous crackle like frying."
+"l": "A shower of dots and short lines across the full width, with no order at all; in headphones, a continuous crackle like frying (sheet 48)."
 },
 "sonar": {
 "nm": "Active sonar",
 "sh": "ping",
 "t": "An active sonar ping",
 "h": "A ship sends a powerful sound pulse (here near 3.5 kHz, the range of frigate hull sonars) and listens for the echo: the delay gives the range, the frequency shift (Doppler effect) the target's speed. Sound also comes back as a tail from the seabed and the surface: reverberation.",
-"l": "A short, strong trace, a tail that fades away, then the echo, much weaker and slightly shifted in frequency. The second ping is a frequency sweep (chirp), which measures range better."
+"l": "A short, strong trace, a tail that fades away, then the echo, much weaker and slightly shifted in frequency. The second ping is a frequency sweep (chirp), which measures range better (sheet 48)."
 },
 "propeller": {
 "nm": "Ship propeller",
 "sh": "cavitation",
 "t": "The propeller of a passing ship",
 "h": "The propeller blades create cavitation bubbles that collapse: a wide hiss, beating at the rate the blades go by. The machinery adds fixed lines. Sonar operators analyse this rhythm (DEMON analysis) to count the blades and the shaft speed, and identify the ship.",
-"l": "A hiss over a wide band, striped with horizontal bands at the blade rate, with a few fixed vertical lines (engine, gearbox). It all grows, then dies away as the ship passes over the hydrophone."
+"l": "A hiss over a wide band, striped with horizontal bands at the blade rate, with a few fixed vertical lines (engine, gearbox). It all grows, then dies away as the ship passes over the hydrophone (sheet 48)."
 },
 "uqc": {
 "nm": "Underwater telephone",
 "sh": "UQC 8 kHz",
 "t": "The underwater telephone (UQC, “Gertrude”)",
 "h": "Submarines and ships talk underwater with an acoustic telephone: the voice is sent as single sideband above an 8.0875 kHz carrier, radiated by a transducer in the hull. Range: a few kilometres.",
-"l": "An SSB voice band above 8 kHz; demodulated, a distant voice that wobbles and rings because of echoes from the surface and the seabed. The display is halved; the scale shows the real frequencies.",
+"l": "An SSB voice band above 8 kHz; demodulated, a distant voice that wobbles and rings because of echoes from the surface and the seabed. The display is halved; the scale shows the real frequencies (sheet 48).",
 "n": "scale halved"
 },
 "zevs": {
@@ -957,14 +957,14 @@
 "sh": "ELF",
 "t": "ZEVS: submarine radio at 82 Hz",
 "h": "Radio waves barely penetrate seawater, except at extremely low frequencies (ELF). The Russian ZEVS transmitter on the Kola Peninsula sends at 82 Hz through antenna lines tens of kilometres long to reach deeply submerged submarines. The data rate is tiny: a few characters per minute.",
-"l": "A thin line at 82 Hz next to the 50 Hz mains line and its harmonics, with static from thunderstorms. In headphones, a barely audible low hum; it can be received with a large loop and a sound card. The American equivalent, at 76 Hz, shut down in 2004."
+"l": "A thin line at 82 Hz next to the 50 Hz mains line and its harmonics, with static from thunderstorms. In headphones, a barely audible low hum; it can be received with a large loop and a sound card. The American equivalent, at 76 Hz, shut down in 2004 (sheet 48)."
 },
 "bloop": {
 "nm": "The “Bloop”",
 "sh": "1997",
 "t": "The “Bloop” (1997)",
 "h": "In 1997, NOAA hydrophones in the Pacific picked up a very low sound that rose quickly, heard thousands of kilometres away. Long a mystery, since 2012 it has been put down to an icequake: a huge iceberg cracking.",
-"l": "A wide band that rises within a few seconds, with its harmonics, then slowly dies away. A reconstruction, sped up 16 times like the recording NOAA released.",
+"l": "A wide band that rises within a few seconds, with its harmonics, then slowly dies away. A reconstruction, sped up 16 times like the recording NOAA released (sheet 48).",
 "n": "sped up 16×"
 },
 "quake": {
