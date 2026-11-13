@@ -1,5 +1,5 @@
 <meta charset="utf-8">
-<title>Identificateur de modes radio</title>
+<title>VSISA · Virtual Simulator identification Signal Audio</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=VT323&display=swap">
@@ -116,7 +116,7 @@ footer p{margin:0;max-width:110ch}
 
 <div class="wrap">
   <header>
-    <h1><small>VSISA · Virtual Simulator identification Signal Audio · OpenBookRadio</small><span id="tTitle">Identificateur de modes radio</span></h1>
+    <h1><small>Virtual Simulator identification Signal Audio · OpenBookRadio</small><span id="tTitle">VSISA</span></h1>
     <div class="odo-wrap" id="odo" hidden>
       <div class="odo"><span class="odo-lbl" id="tOdoV">visites</span><span class="odo-num" id="odoV"></span></div>
       <div class="odo"><span class="odo-lbl" id="tOdoP">écoutes</span><span class="odo-num" id="odoP"></span></div>
@@ -983,7 +983,7 @@ function setLang(l,user){ if(!I18N[l]) l="fr"; LG=l; LOC=(LANGS.find(x=>x[0]===l
   for(const id in T) document.getElementById(id).textContent=t(T[id]);
   document.getElementById("tTheme").textContent=t("display"); document.getElementById("theme").setAttribute("aria-label",t("display")); sel.setAttribute("aria-label",t("lang"));
   [["day","theme_day"],["night","theme_night"],["phos","theme_phos"],["phosb","theme_phosb"],["phosa","theme_phosa"]].forEach(([v,k])=>{ document.querySelector('#theme option[value="'+v+'"]').textContent=t(k); });
-  document.title=t("title")+" · VSISA"; showStats();
+  document.title="VSISA · Virtual Simulator identification Signal Audio"; showStats();
   if(user){ try{ localStorage.setItem("idmr-lang",l); }catch(e){} try{ history.replaceState(null,"","#"+l); }catch(e){} }
   buildAside();
   if(current){ setNow(current,!!quiz); document.getElementById("spanLbl").textContent=spanText(current,!!quiz); ruler("ruler1"); ruler("ruler2");
