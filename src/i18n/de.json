@@ -97,7 +97,7 @@
 "cw": {
 "t": "CW: Morse",
 "h": "Der Träger wird ein- und ausgeschaltet: Striche und Punkte.",
-"l": "Ein sehr feiner Strich, der im Rhythmus des Morsecodes unterbrochen wird; ein Piepen im Ohr. Hier „CQ“ (Blatt 48).",
+"l": "Ein sehr feiner Strich, der im Rhythmus des Morsecodes unterbrochen wird; ein Piepen im Ohr. Hier „CQ“ (Blatt 49).",
 "r": [
 [
 "Tempo",
@@ -446,7 +446,7 @@
 "sh": "1420 MHz",
 "t": "21-cm-Wasserstofflinie (1420,405 MHz)",
 "h": "Kalter Wasserstoff der Milchstraße sendet ein sehr schwaches Rauschen auf 1420,405 MHz. Die Bewegung der Spiralarme verschiebt es durch den Dopplereffekt: man sieht mehrere kleine Buckel.",
-"l": "Im Wasserfall von Sekunde zu Sekunde fast nichts: man muss lange mitteln, bis die Buckel aus dem Rauschen auftauchen. Hier im angehaltenen Zustand das mittlere Spektrum ansehen. Eine Schüssel oder ein Horn, ein Vorverstärker und ein SDR-Stick genügen.",
+"l": "Im Wasserfall von Sekunde zu Sekunde fast nichts: man muss lange mitteln, bis die Buckel aus dem Rauschen auftauchen. Hier im angehaltenen Zustand das mittlere Spektrum ansehen. Eine Schüssel oder ein Horn, ein Vorverstärker und ein SDR-Stick genügen (Blatt 47).",
 "n": "Signal stark übertrieben"
 },
 "sun": {
@@ -454,21 +454,21 @@
 "sh": "Bursts",
 "t": "Sonne: Radiobursts vom Typ III",
 "h": "Von einem Flare ausgeschleuderte Elektronen durchqueren die Sonnenkorona und lassen sie immer tiefer senden, je weiter sie sich entfernen.",
-"l": "Striche, die in weniger als einer Sekunde schräg von oben nach unten durch das Spektrum fallen, über solarem Rauschen; ein anschwellendes „schhhh“. Etwa 10 bis 400 MHz, auch auf Kurzwelle um 20 MHz."
+"l": "Striche, die in weniger als einer Sekunde schräg von oben nach unten durch das Spektrum fallen, über solarem Rauschen; ein anschwellendes „schhhh“. Etwa 10 bis 400 MHz, auch auf Kurzwelle um 20 MHz (Blatt 47)."
 },
 "jupiter": {
 "nm": "Jupiter",
 "sh": "20 MHz",
 "t": "Jupiter: Dekameter-Bursts (L und S)",
 "h": "Jupiters Magnetfeld und sein Mond Io erzeugen starke Emissionen zwischen 15 und 40 MHz: langsame L-Bursts und sehr kurze S-Bursts, die schnell nach unten gleiten.",
-"l": "Zuerst Rauschwellen (L, wie Brandung), dann Folgen kleiner „Pops“ (S) in engen Diagonalen. Um 20,1 MHz nachts, mit einem einfachen Dipol, wenn Io gut steht."
+"l": "Zuerst Rauschwellen (L, wie Brandung), dann Folgen kleiner „Pops“ (S) in engen Diagonalen. Um 20,1 MHz nachts, mit einem einfachen Dipol, wenn Io gut steht (Blatt 47)."
 },
 "pulsar": {
 "nm": "Pulsar",
 "sh": "B0329+54",
 "t": "Pulsar PSR B0329+54",
 "h": "Ein rotierender Neutronenstern überstreicht die Erde mit einem Radiostrahl, hier alle 0,714 s. Das interstellare Gas verzögert die tiefen Frequenzen: jeder Impuls kommt zuerst oben im Spektrum an.",
-"l": "Ein regelmäßiges „Tick“; im Wasserfall ist jeder Impuls eine abfallende Kurve (Dispersion). Das echte Signal liegt unter dem Rauschen: man braucht eine große Antenne und muss die Impulse über ihre Periode aufaddieren.",
+"l": "Ein regelmäßiges „Tick“; im Wasserfall ist jeder Impuls eine abfallende Kurve (Dispersion). Das echte Signal liegt unter dem Rauschen: man braucht eine große Antenne und muss die Impulse über ihre Periode aufaddieren (Blatt 47).",
 "n": "Signal stark übertrieben"
 },
 "meteor": {
@@ -483,21 +483,21 @@
 "sh": "VLF",
 "t": "VLF-Whistler (Pfeiftöne)",
 "h": "Ein Blitz erzeugt einen Radioknack; ein Teil folgt den Feldlinien des Erdmagnetfelds bis zur anderen Halbkugel und zurück, die hohen Töne zuerst.",
-"l": "Ein „Tjiuuu“, das in ein bis zwei Sekunden von hoch nach tief fällt, direkt nach einem Knack; überall Knistern (Sferics). Unter 10 kHz, mit einem VLF-Empfänger fern von Stromleitungen."
+"l": "Ein „Tjiuuu“, das in ein bis zwei Sekunden von hoch nach tief fällt, direkt nach einem Knack; überall Knistern (Sferics). Unter 10 kHz, mit einem VLF-Empfänger fern von Stromleitungen (Blatt 47)."
 },
 "chorus": {
 "nm": "Morgenchor",
 "sh": "VLF",
 "t": "Morgenchor (Dawn Chorus)",
 "h": "Bei einem Magnetsturm senden in der Magnetosphäre gefangene Elektronen kleine aufsteigende Töne, vor allem bei Sonnenaufgang.",
-"l": "Sich überlagernde, aufsteigende Zwitschertöne wie Vögel, etwa 1 bis 4 kHz. Gleiche Ausrüstung wie für Whistler."
+"l": "Sich überlagernde, aufsteigende Zwitschertöne wie Vögel, etwa 1 bis 4 kHz. Gleiche Ausrüstung wie für Whistler (Blatt 47)."
 },
 "sputnik": {
 "nm": "Sputnik 1",
 "sh": "1957",
 "t": "Sputnik 1 (1957)",
 "h": "Der erste künstliche Satellit sendete drei Wochen lang Pieptöne von etwa 0,3 s abwechselnd auf 20,005 und 40,002 MHz.",
-"l": "Ein regelmäßig unterbrochener Strich: „Piep… Piep…“, der Klang, dem im Oktober 1957 die ganze Welt lauschte (Nachbildung)."
+"l": "Ein regelmäßig unterbrochener Strich: „Piep… Piep…“, der Klang, dem im Oktober 1957 die ganze Welt lauschte (Nachbildung) (Blatt 41)."
 },
 "doppler": {
 "nm": "Dopplereffekt",
@@ -527,14 +527,14 @@
 "sh": "Meteore",
 "t": "MSK144: die Digitalbetriebsart für Meteorscatter",
 "h": "Zwei Töne, 1000 und 2000 Hz, mit 2000 Baud, in Rahmen von 72 ms ohne Pause wiederholt: jede Meteorspur lässt einige davon durch.",
-"l": "Pakete von 0,1 bis 1 s, etwa 2,4 kHz breit, die mit dem „Ping“ des Meteors erscheinen und verlöschen. Auf 50 und 144 MHz, mit WSJT-X."
+"l": "Pakete von 0,1 bis 1 s, etwa 2,4 kHz breit, die mit dem „Ping“ des Meteors erscheinen und verlöschen. Auf 50 und 144 MHz, mit WSJT-X (Blatt 29)."
 },
 "jt65": {
 "nm": "JT65",
 "sh": "65 Töne",
 "t": "JT65: 65 Töne, sehr langsam",
 "h": "Ein Synchronton und 64 Datentöne im Abstand von 2,7 Hz (JT65A), 0,37 s pro Symbol, 47 s Sendung pro Minute.",
-"l": "Eine Leiter kleiner Striche über etwa 180 Hz, mit einem Synchronstrich, der immer an dieselbe Stelle zurückkehrt. Für Mondreflexion (JT65B und C) und sehr schwache Signale.",
+"l": "Eine Leiter kleiner Striche über etwa 180 Hz, mit einem Synchronstrich, der immer an dieselbe Stelle zurückkehrt. Für Mondreflexion (JT65B und C) und sehr schwache Signale (Blatt 29).",
 "n": "Auszug von 20 s (eine Sendung dauert 47 s)"
 },
 "tetra": {
@@ -550,7 +550,7 @@
 "sh": "190–535 kHz",
 "t": "NDB: ungerichtetes Funkfeuer",
 "h": "Ein fester Träger auf Langwelle mit einer Morsekennung aus zwei oder drei Buchstaben, auf einem Ton gesendet (oft 1020 Hz).",
-"l": "Ein fester Strich in der Mitte und während der Kennung zwei kleine Striche links und rechts. Etwa 190 bis 535 kHz, in SSB oder CW (Blatt 12)."
+"l": "Ein fester Strich in der Mitte und während der Kennung zwei kleine Striche links und rechts. Etwa 190 bis 535 kHz, in SSB oder CW (Blatt 18)."
 },
 "vor": {
 "nm": "VOR",
@@ -579,35 +579,35 @@
 "sh": "433 MHz",
 "t": "Reifendrucksensoren (TPMS)",
 "h": "Jedes Rad sendet ab und zu ein FSK-Paket von einigen Millisekunden: Druck, Temperatur, Kennung.",
-"l": "Kleine einzelne Pakete auf 433,92 MHz (oder 315 MHz), oft paarweise, wenn ein Auto vorbeifährt. Von rtl_433 dekodiert."
+"l": "Kleine einzelne Pakete auf 433,92 MHz (oder 315 MHz), oft paarweise, wenn ein Auto vorbeifährt. Von rtl_433 dekodiert (Blatt 22)."
 },
 "als162": {
 "nm": "ALS162",
 "sh": "162 kHz",
 "t": "Zeitsignal ALS162 (Allouis, 162 kHz)",
 "h": "Der Träger der früheren Langwelle von France Inter; die Zeit ist in kleinen, unhörbaren Phasenmodulationen codiert.",
-"l": "Ein fester Strich, in Frankreich sehr stark, am Anfang jeder Sekunde kaum verbreitert; zum Lesen der Zeit braucht man einen Dekoder (Blatt 12)."
+"l": "Ein fester Strich, in Frankreich sehr stark, am Anfang jeder Sekunde kaum verbreitert; zum Lesen der Zeit braucht man einen Dekoder (Blatt 39)."
 },
 "wwv": {
 "nm": "WWV",
 "sh": "2,5–20 MHz",
 "t": "Zeitsignal WWV (Colorado)",
 "h": "In AM: jede Sekunde ein 5-ms-„Tick“ auf 1000 Hz, ein 500- oder 600-Hz-Ton, ein Zeitcode auf 100 Hz und eine Stimme, die UTC ansagt.",
-"l": "Im demodulierten Ton: ein 500-Hz-Strich, jede Sekunde unterbrochen, der Tick auf 1000 Hz und ganz unten der Code auf 100 Hz (Blatt 12)."
+"l": "Im demodulierten Ton: ein 500-Hz-Strich, jede Sekunde unterbrochen, der Tick auf 1000 Hz und ganz unten der Code auf 100 Hz (Blatt 39)."
 },
 "msf": {
 "nm": "MSF",
 "sh": "60 kHz",
 "t": "Zeitsignal MSF (Anthorn, 60 kHz)",
 "h": "Der Träger wird am Anfang jeder Sekunde je nach Bits für 0,1, 0,2 oder 0,3 s abgeschaltet, und für 0,5 s zur Minutenmarke.",
-"l": "Ein fester Strich mit vollständig schwarzen Lücken jede Sekunde, länger als bei DCF77 (Blatt 12)."
+"l": "Ein fester Strich mit vollständig schwarzen Lücken jede Sekunde, länger als bei DCF77 (Blatt 39)."
 },
 "type2": {
 "nm": "Sonne Typ II",
 "sh": "Stoßwelle",
 "t": "Sonne: Radiobursts vom Typ II",
 "h": "Die Stoßwelle eines koronalen Massenauswurfs lässt das Plasma langsam immer tiefer senden, oft in zwei Bändern (Grundwelle und Doppeltes).",
-"l": "Zwei parallele Rauschbänder, die über mehrere Minuten sanft nach unten wandern. Zum Vergleich: Typ-III-Bursts sind viel schneller.",
+"l": "Zwei parallele Rauschbänder, die über mehrere Minuten sanft nach unten wandern. Zum Vergleich: Typ-III-Bursts sind viel schneller (Blatt 47).",
 "n": "mehrere Minuten auf 6 s verkürzt"
 },
 "tweeks": {
@@ -615,28 +615,28 @@
 "sh": "VLF",
 "t": "Tweeks: die nächtlichen VLF-„Pings“",
 "h": "Nachts prallt der Knack eines fernen Blitzes zwischen Boden und Ionosphäre hin und her; Frequenzen nahe der Grenzfrequenz (um 1,7 kHz) kommen zuletzt an.",
-"l": "Ein kleines „Ping“, das abfällt und um 1,7 kHz endet, manchmal mit einem Echo bei der doppelten Frequenz; überall Knistern. Unter 10 kHz, nachts."
+"l": "Ein kleines „Ping“, das abfällt und um 1,7 kHz endet, manchmal mit einem Echo bei der doppelten Frequenz; überall Knistern. Unter 10 kHz, nachts (Blatt 47)."
 },
 "hiss": {
 "nm": "VLF-Rauschen",
 "sh": "Hiss",
 "t": "VLF-Rauschen (Hiss)",
 "h": "Ein breites Rauschen der Elektronen in der Plasmasphäre, das mit der magnetischen Aktivität steigt und fällt.",
-"l": "Ein Rauschband von einigen hundert Hz bis einigen kHz, ohne Muster, das langsam anschwillt und abklingt."
+"l": "Ein Rauschband von einigen hundert Hz bis einigen kHz, ohne Muster, das langsam anschwillt und abklingt (Blatt 47)."
 },
 "aurora": {
 "nm": "Radio-Aurora",
 "sh": "Au",
 "t": "Aurora-Ausbreitung (Au)",
 "h": "Ein Polarlicht reflektiert UKW-Wellen, schüttelt sie aber sehr schnell: jedes Signal wird über einige hundert Hz verteilt.",
-"l": "CW wird zu einem rauen, wie geflüsterten Rauschen; man hört keinen Ton mehr. Auf 50 und 144 MHz, Richtung Norden bei Magnetstürmen."
+"l": "CW wird zu einem rauen, wie geflüsterten Rauschen; man hört keinen Ton mehr. Auf 50 und 144 MHz, Richtung Norden bei Magnetstürmen (Blatt 1)."
 },
 "galactic": {
 "nm": "Galaktisches Rauschen",
 "sh": "20–40 MHz",
 "t": "Rauschen der Milchstraße",
 "h": "Das Zentrum der Galaxis sendet ein Radiorauschen, das Karl Jansky 1932 um 20 MHz entdeckte. Es steigt und fällt mit der Erddrehung.",
-"l": "Ein Grundrauschen, das langsam steigt und wieder fällt, jeden Tag etwa 4 Minuten früher. Mit einem einfachen Dipol zwischen 20 und 40 MHz sichtbar.",
+"l": "Ein Grundrauschen, das langsam steigt und wieder fällt, jeden Tag etwa 4 Minuten früher. Mit einem einfachen Dipol zwischen 20 und 40 MHz sichtbar (Blatt 47).",
 "n": "ein Tag auf 12 s verkürzt"
 },
 "cubesat": {
@@ -660,14 +660,14 @@
 "sh": "4625 kHz",
 "t": "UVB-76, „The Buzzer“ (4625 kHz)",
 "h": "Ein russischer Militärsender, der seit Jahrzehnten ein etwa einsekündiges Summen sendet, etwa 25-mal pro Minute, manchmal unterbrochen von einer Sprachnachricht.",
-"l": "Ein fester Träger und bei jedem Summen eine Säule dichter Linien von oben nach unten. Leicht auf 4625 kHz in USB zu finden."
+"l": "Ein fester Träger und bei jedem Summen eine Säule dichter Linien von oben nach unten. Leicht auf 4625 kHz in USB zu finden (Blatt 43)."
 },
 "pip": {
 "nm": "„The Pip“",
 "sh": "3756 / 5448 kHz",
 "t": "„The Pip“: endlose Pieptöne",
 "h": "Eine weitere russische Militärbake auf Kurzwelle, die Tag und Nacht kurze Pieptöne wiederholt, manchmal von Nachrichten unterbrochen.",
-"l": "Ein fester Strich, etwa 50-mal pro Minute von einem kurzen Piep unterbrochen; im Ohr ein gleichmäßiges „Pip… pip…“, das nie aufhört.",
+"l": "Ein fester Strich, etwa 50-mal pro Minute von einem kurzen Piep unterbrochen; im Ohr ein gleichmäßiges „Pip… pip…“, das nie aufhört (Blatt 43).",
 "n": "Rhythmus angenähert"
 },
 "squeaky": {
@@ -675,7 +675,7 @@
 "sh": "KW",
 "t": "„Squeaky Wheel“: das quietschende Rad",
 "h": "Eine russische Militärbake auf Kurzwelle, von Hörern nach ihrem wiederholten Klangmuster benannt.",
-"l": "Ein kleines Muster aus zwei Tönen, einer davon steigend, in Schleife wiederholt: wie ein quietschendes Rad.",
+"l": "Ein kleines Muster aus zwei Tönen, einer davon steigend, in Schleife wiederholt: wie ein quietschendes Rad (Blatt 43).",
 "n": "angenäherte Nachahmung"
 },
 "codar": {
@@ -683,7 +683,7 @@
 "sh": "Meeresradar",
 "t": "CODAR: Radare für Meeresströmungen",
 "h": "Küstenradare überstreichen ein- oder zweimal pro Sekunde ein Frequenzband, um Strömungen und Wellen zu messen.",
-"l": "Regelmäßige parallele Diagonalen und ein wiederholtes „Swish“; um 4,5–5,5 MHz, 13 MHz und 25 MHz, oft Tag und Nacht.",
+"l": "Regelmäßige parallele Diagonalen und ein wiederholtes „Swish“; um 4,5–5,5 MHz, 13 MHz und 25 MHz, oft Tag und Nacht (Blatt 43).",
 "n": "verkleinert"
 },
 "stanag": {
@@ -720,14 +720,14 @@
 "sh": "16 Töne",
 "t": "MFSK16: sechzehn Töne",
 "h": "Sechzehn Töne im Abstand von 15,625 Hz, immer nur einer, 15,625-mal pro Sekunde; jeder Ton trägt vier Bit, durch Fehlerkorrektur geschützt.",
-"l": "Ein 316 Hz breites Band aus kleinen Stufen, die ständig springen, nach einem festen Ton am Anfang. Im Ohr eine schnelle kleine Melodie, wie eine Flöte. Dient auch zum Senden kleiner Bilder."
+"l": "Ein 316 Hz breites Band aus kleinen Stufen, die ständig springen, nach einem festen Ton am Anfang. Im Ohr eine schnelle kleine Melodie, wie eine Flöte. Dient auch zum Senden kleiner Bilder (Blatt 29)."
 },
 "sitora": {
 "nm": "SITOR-A (ARQ)",
 "sh": "Telex",
 "t": "SITOR-A: Seefunk-Telex in ARQ",
 "h": "Die Station sendet alle 450 ms Blöcke aus drei Zeichen (210 ms, 100 Baud, 170 Hz Abstand); dazwischen antwortet die Gegenstation mit einem kurzen Signal für „empfangen“ oder „wiederholen“.",
-"l": "Kurze regelmäßige Pakete mit einer kleinen, schwächeren Antwort dazwischen: ein Grillen-„Tschirp-tschirp“. Auf Kurzwelle selten geworden."
+"l": "Kurze regelmäßige Pakete mit einer kleinen, schwächeren Antwort dazwischen: ein Grillen-„Tschirp-tschirp“. Auf Kurzwelle selten geworden (Blatt 20)."
 },
 "dscvhf": {
 "nm": "UKW-DSC (Kanal 70)",
@@ -741,7 +741,7 @@
 "sh": "4 Töne",
 "t": "SELCAL: Selektivruf für Flugzeuge auf Kurzwelle",
 "h": "Die Flugsicherung ruft ein bestimmtes Flugzeug mit zwei Impulsen von etwa einer Sekunde, jeder aus zwei von sechzehn Tönen (312,6 bis 1479,1 Hz). Im Flugzeug gehen eine Lampe und ein Gong an: die Besatzung muss nicht ständig mithören.",
-"l": "Zwei Akkorde nacheinander, „Bing-Bong“, zwischen den Sprachmeldungen auf den Flugfunkfrequenzen in SSB, zum Beispiel 5616 oder 8864 kHz."
+"l": "Zwei Akkorde nacheinander, „Bing-Bong“, zwischen den Sprachmeldungen auf den Flugfunkfrequenzen in SSB, zum Beispiel 5616 oder 8864 kHz (Blatt 17)."
 },
 "dcs": {
 "nm": "DCS",
@@ -777,14 +777,14 @@
 "sh": "NASA",
 "t": "Quindar-Töne: die Apollo-Pieptöne",
 "h": "Drückt Houston die Sprechtaste, schaltet ein 2525-Hz-Piep (250 ms) die Sender der Bodenstationen ein; beim Loslassen schaltet ein 2475-Hz-Piep sie aus.",
-"l": "Ein hoher Piep vor jedem Satz und ein etwas tieferer danach: der berühmte Klang der Aufnahmen der Apollo-Missionen."
+"l": "Ein hoher Piep vor jedem Satz und ein etwas tieferer danach: der berühmte Klang der Aufnahmen der Apollo-Missionen (Blatt 41)."
 },
 "wow": {
 "nm": "„Wow!“-Signal",
 "sh": "1977",
 "t": "Das „Wow!“-Signal (15. August 1977)",
 "h": "Das Radioteleskop Big Ear (Ohio) empfing 72 Sekunden lang ein schmales, sehr starkes Signal nahe der Wasserstofflinie, bei etwa 1420,456 MHz. Der Astronom Jerry Ehman schrieb „Wow!“ auf den Ausdruck. Es wurde nie wieder gesehen, und sein Ursprung ist bis heute umstritten.",
-"l": "Ein feiner Strich, der aus dem Rauschen auftaucht, stärker wird und wieder verschwindet: die Form einer festen Quelle, die durch die Antennenkeule wandert. Dies ist eine Nachbildung: eine Tonaufnahme gibt es nicht.",
+"l": "Ein feiner Strich, der aus dem Rauschen auftaucht, stärker wird und wieder verschwindet: die Form einer festen Quelle, die durch die Antennenkeule wandert. Dies ist eine Nachbildung: eine Tonaufnahme gibt es nicht (Blatt 47).",
 "n": "72 s auf 12 s verkürzt"
 },
 "frb": {
@@ -792,7 +792,7 @@
 "sh": "FRB",
 "t": "Schneller Radioblitz (FRB)",
 "h": "Ein Radioblitz von wenigen Millisekunden aus einer anderen Galaxie; der erste wurde 2007 entdeckt. Das durchquerte Gas verzögert die tiefen Frequenzen stark: der Blitz kommt gedehnt an, die hohen Töne zuerst.",
-"l": "Eine einzige Kurve, die von oben nach unten durch das Spektrum fällt, dann nichts mehr. Manche wiederholen sich; die meisten sieht man nur einmal.",
+"l": "Eine einzige Kurve, die von oben nach unten durch das Spektrum fällt, dann nichts mehr. Manche wiederholen sich; die meisten sieht man nur einmal (Blatt 47).",
 "n": "stark verlangsamt und übertrieben"
 },
 "letterb": {
@@ -800,14 +800,14 @@
 "sh": "D, P, S, C…",
 "t": "Ein-Buchstaben-Baken",
 "h": "Sender der russischen Marine wiederholen endlos einen einzigen Morsebuchstaben, jeder 100 Hz neben dem Nachbarn: D, P, S, C, A, F, K oder M je nach Standort.",
-"l": "Parallele gepunktete Linien, sehr dicht beieinander, jede mit eigenem Rhythmus. Um 4558, 5154, 7039, 10 872, 13 528 und 16 332 kHz, in CW."
+"l": "Parallele gepunktete Linien, sehr dicht beieinander, jede mit eigenem Rhythmus. Um 4558, 5154, 7039, 10 872, 13 528 und 16 332 kHz, in CW (Blatt 43)."
 },
 "sid": {
 "nm": "Sonneneruption auf VLF",
 "sh": "SID",
 "t": "Sonneneruption auf VLF gesehen (SID)",
 "h": "Die VLF-Sender der Marinen (20,9 kHz in Frankreich, 23,4 kHz in Deutschland…) breiten sich zwischen Boden und Ionosphäre aus. Trifft eine Sonneneruption ein, verändern ihre Röntgenstrahlen die untere Ionosphäre in wenigen Minuten und der Empfangspegel springt.",
-"l": "Ein schmales, gleichmäßiges Band (das MSK-Signal des Senders), das plötzlich stärker wird und dann langsam zum Normalwert zurückkehrt. Eine Drahtschleife und eine Soundkarte genügen: ein Klassiker der Astronomievereine.",
+"l": "Ein schmales, gleichmäßiges Band (das MSK-Signal des Senders), das plötzlich stärker wird und dann langsam zum Normalwert zurückkehrt. Eine Drahtschleife und eine Soundkarte genügen: ein Klassiker der Astronomievereine (Blatt 47).",
 "n": "eine Stunde auf 12 s verkürzt"
 },
 "qrn": {
@@ -815,14 +815,14 @@
 "sh": "QRN",
 "t": "Gewitterstörungen (QRN)",
 "h": "Jeder Blitz ist ein sehr starker Sender, der alle Frequenzen zugleich überdeckt. Auf Mittel- und Kurzwelle hört man Gewitter in Tausenden Kilometern Entfernung, vor allem im Sommer und auf den tiefen Bändern.",
-"l": "Unregelmäßige waagerechte Striche über die ganze Breite; trockenes Krachen im Ohr. Der Störaustaster (NB) hilft etwas, eine Rahmenantenne hilft mehr."
+"l": "Unregelmäßige waagerechte Striche über die ganze Breite; trockenes Krachen im Ohr. Der Störaustaster (NB) hilft etwas, eine Rahmenantenne hilft mehr (Blatt 1)."
 },
 "fading": {
 "nm": "Selektiver Schwund",
 "sh": "QSB",
 "t": "Selektiver Schwund (QSB)",
 "h": "Auf Kurzwelle kommt das Signal auf mehreren Wegen durch die Ionosphäre. Je nach Frequenz addieren sie sich oder löschen sich aus: eine schmale Senke wandert durch das Signal.",
-"l": "Eine dunkle Zone, die langsam durch den AM-Sender wandert. Läuft sie über den Träger in der Mitte, klingt der Ton einige Sekunden rau und verzerrt; Synchrondetektor oder SSB-Empfang beheben das."
+"l": "Eine dunkle Zone, die langsam durch den AM-Sender wandert. Läuft sie über den Träger in der Mitte, klingt der Ton einige Sekunden rau und verzerrt; Synchrondetektor oder SSB-Empfang beheben das (Blatt 1)."
 },
 "plc": {
 "nm": "Powerline (PLC)",
@@ -837,28 +837,28 @@
 "sh": "tack… tack…",
 "t": "Elektrischer Weidezaun",
 "h": "Das Weidezaungerät schickt etwa einmal pro Sekunde einen Impuls von mehreren tausend Volt in den Draht. Berührt Gras den Draht oder ist ein Isolator beschädigt, springt ein Funke über und strahlt auf allen Frequenzen.",
-"l": "Ein sehr feiner waagerechter Strich über die ganze Breite, in völlig regelmäßigem Abstand; ein „Tack… tack…“ von Langwelle bis UKW. Der gleichmäßige Takt unterscheidet ihn vom Gewitter."
+"l": "Ein sehr feiner waagerechter Strich über die ganze Breite, in völlig regelmäßigem Abstand; ein „Tack… tack…“ von Langwelle bis UKW. Der gleichmäßige Takt unterscheidet ihn vom Gewitter (Blatt 43)."
 },
 "gsm": {
 "nm": "GSM-Handy",
 "sh": "217 Hz",
 "t": "GSM-Handy neben einem Lautsprecher",
 "h": "Ein 2G-Handy sendet in Paketen von 0,577 ms, 217-mal pro Sekunde. Ein schlecht abgeschirmter Audioverstärker demoduliert diese Pakete und macht sie hörbar.",
-"l": "Ein Kamm von Linien alle 217 Hz; das bekannte „Dit-dit-didit“ kurz bevor das Handy klingelt, dann ein Dauerbrummen während des Gesprächs. Wird selten: die 2G-Netze werden abgeschaltet."
+"l": "Ein Kamm von Linien alle 217 Hz; das bekannte „Dit-dit-didit“ kurz bevor das Handy klingelt, dann ein Dauerbrummen während des Gesprächs. Wird selten: die 2G-Netze werden abgeschaltet (Blatt 43)."
 },
 "jjy": {
 "nm": "JJY",
 "sh": "40 / 60 kHz",
 "t": "Zeitsignal JJY (Japan, 40 und 60 kHz)",
 "h": "In jeder Sekunde sendet der Träger 0,8 s (Bit 0), 0,5 s (Bit 1) oder 0,2 s (Marke) mit voller Leistung und fällt dann auf 10 %. Umgekehrt wie bei DCF77, das am Sekundenanfang absenkt.",
-"l": "Ein fester Strich, der am Ende jeder Sekunde früher oder später schwächer wird. Sender in Fukushima (40 kHz) und Saga-Fukuoka (60 kHz), für die Funkuhren in Japan."
+"l": "Ein fester Strich, der am Ende jeder Sekunde früher oder später schwächer wird. Sender in Fukushima (40 kHz) und Saga-Fukuoka (60 kHz), für die Funkuhren in Japan (Blatt 39)."
 },
 "rwm": {
 "nm": "RWM",
 "sh": "4996 kHz",
 "t": "Zeitsignal RWM (Moskau)",
 "h": "In Telegrafie auf 4996, 9996 und 14 996 kHz: jede Sekunde ein Impuls von 100 ms, in anderen Minuten zehn Impulse pro Sekunde. Das Rufzeichen RWM wird zweimal pro Stunde gemorst.",
-"l": "Das Rufzeichen, dann ein Strich aus regelmäßigen „Ticks“, dann aus schnellen Punkten. In CW oder SSB hören.",
+"l": "Das Rufzeichen, dann ein Strich aus regelmäßigen „Ticks“, dann aus schnellen Punkten. In CW oder SSB hören (Blatt 39).",
 "n": "geraffter Auszug"
 },
 "bpm": {
@@ -866,7 +866,7 @@
 "sh": "2,5–15 MHz",
 "t": "Zeitsignal BPM (China)",
 "h": "Die Station Pucheng (Shaanxi) sendet in AM auf 2,5, 5, 10 und 15 MHz: jede Sekunde ein Tick von 10 ms auf 1000 Hz (300 ms zur Minute) und in bestimmten Minuten Ticks von 100 ms für die Zeit UT1. Das Rufzeichen BPM kommt in Morse, dann als Ansage.",
-"l": "Im demodulierten Ton: das Rufzeichen, dann sehr kurze Striche auf 1000 Hz, einer pro Sekunde, mit einem längeren zur Minute. Oft mit WWV auf denselben Frequenzen gemischt.",
+"l": "Im demodulierten Ton: das Rufzeichen, dann sehr kurze Striche auf 1000 Hz, einer pro Sekunde, mit einem längeren zur Minute. Oft mit WWV auf denselben Frequenzen gemischt (Blatt 39).",
 "n": "geraffter Auszug"
 },
 "humpback": {

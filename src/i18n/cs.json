@@ -96,7 +96,7 @@
 "cw": {
 "t": "CW: Morseova abeceda",
 "h": "Nosná se zapíná a vypíná: čárky a tečky.",
-"l": "Velmi tenká čára přerušovaná v rytmu morseovky; pípání v uchu. Zde „CQ“ (list 48).",
+"l": "Velmi tenká čára přerušovaná v rytmu morseovky; pípání v uchu. Zde „CQ“ (list 49).",
 "r": [
 [
 "Rychlost",
@@ -445,7 +445,7 @@
 "sh": "1420 MHz",
 "t": "Vodíková čára 21 cm (1420,405 MHz)",
 "h": "Studený vodík v Mléčné dráze vyzařuje velmi slabý šum na 1420,405 MHz. Pohyb ramen galaxie ho posouvá Dopplerovým jevem: je vidět několik malých hrbolků.",
-"l": "Ve vodopádu se ze sekundy na sekundu skoro nic neděje: je třeba dlouho průměrovat, aby se hrbolky vynořily ze šumu. Zde se po zastavení podívej na průměrné spektrum. Stačí parabola nebo trychtýř, předzesilovač a SDR klíčenka.",
+"l": "Ve vodopádu se ze sekundy na sekundu skoro nic neděje: je třeba dlouho průměrovat, aby se hrbolky vynořily ze šumu. Zde se po zastavení podívej na průměrné spektrum. Stačí parabola nebo trychtýř, předzesilovač a SDR klíčenka (list 47).",
 "n": "signál silně zveličen"
 },
 "sun": {
@@ -453,21 +453,21 @@
 "sh": "vzplanutí",
 "t": "Slunce: rádiová vzplanutí typu III",
 "h": "Elektrony vymrštěné erupcí procházejí sluneční korónou a nutí ji vyzařovat stále níž, jak se vzdalují.",
-"l": "Čáry, které za méně než sekundu padají šikmo shora dolů spektrem na pozadí slunečního šumu; sílící „šššš“. Zhruba 10 až 400 MHz, i na krátkých vlnách kolem 20 MHz."
+"l": "Čáry, které za méně než sekundu padají šikmo shora dolů spektrem na pozadí slunečního šumu; sílící „šššš“. Zhruba 10 až 400 MHz, i na krátkých vlnách kolem 20 MHz (list 47)."
 },
 "jupiter": {
 "nm": "Jupiter",
 "sh": "20 MHz",
 "t": "Jupiter: dekametrová vzplanutí (L a S)",
 "h": "Magnetické pole Jupiteru a jeho měsíc Io vytvářejí silné vyzařování mezi 15 a 40 MHz: pomalá vzplanutí L a velmi krátká vzplanutí S, která rychle klouzají dolů.",
-"l": "Nejdřív vlny šumu (L, jako příboj), pak série drobných „lupnutí“ (S) v hustých úhlopříčkách. Kolem 20,1 MHz v noci, s obyčejným dipólem, když je Io dobře postavená."
+"l": "Nejdřív vlny šumu (L, jako příboj), pak série drobných „lupnutí“ (S) v hustých úhlopříčkách. Kolem 20,1 MHz v noci, s obyčejným dipólem, když je Io dobře postavená (list 47)."
 },
 "pulsar": {
 "nm": "Pulzar",
 "sh": "B0329+54",
 "t": "Pulzar PSR B0329+54",
 "h": "Rotující neutronová hvězda přejíždí Zemi rádiovým paprskem, zde každých 0,714 s. Mezihvězdný plyn zpožďuje nízké kmitočty: každý impulz dorazí nejdřív nahoře ve spektru.",
-"l": "Pravidelné „tik“; ve vodopádu je každý impulz klesající křivka (disperze). Skutečný signál je pod šumem: je třeba velká anténa a sčítání impulzů přes jejich periodu.",
+"l": "Pravidelné „tik“; ve vodopádu je každý impulz klesající křivka (disperze). Skutečný signál je pod šumem: je třeba velká anténa a sčítání impulzů přes jejich periodu (list 47).",
 "n": "signál silně zveličen"
 },
 "meteor": {
@@ -482,21 +482,21 @@
 "sh": "VLF",
 "t": "VLF hvizdy (whistlery)",
 "h": "Blesk vytvoří rádiové cvaknutí; část putuje podél siločar zemského magnetického pole na druhou polokouli a zpět, výšky napřed.",
-"l": "„Fjúúú“, které za sekundu či dvě sklesne z výšky do hloubky hned po cvaknutí; všude praskání (sferiky). Pod 10 kHz, s VLF přijímačem daleko od elektrického vedení."
+"l": "„Fjúúú“, které za sekundu či dvě sklesne z výšky do hloubky hned po cvaknutí; všude praskání (sferiky). Pod 10 kHz, s VLF přijímačem daleko od elektrického vedení (list 47)."
 },
 "chorus": {
 "nm": "Ranní sbor",
 "sh": "VLF",
 "t": "Ranní sbor (dawn chorus)",
 "h": "Během magnetické bouře vydávají elektrony zachycené v magnetosféře drobné stoupající tóny, hlavně za úsvitu.",
-"l": "Stoupající švitoření, která se překrývají jako ptáci, zhruba 1 až 4 kHz. Stejné vybavení jako na hvizdy."
+"l": "Stoupající švitoření, která se překrývají jako ptáci, zhruba 1 až 4 kHz. Stejné vybavení jako na hvizdy (list 47)."
 },
 "sputnik": {
 "nm": "Sputnik 1",
 "sh": "1957",
 "t": "Sputnik 1 (1957)",
 "h": "První umělá družice vysílala tři týdny pípnutí asi 0,3 s střídavě na 20,005 a 40,002 MHz.",
-"l": "Pravidelně přerušovaná čára: „píp… píp…“, zvuk, který v říjnu 1957 poslouchal celý svět (rekonstrukce)."
+"l": "Pravidelně přerušovaná čára: „píp… píp…“, zvuk, který v říjnu 1957 poslouchal celý svět (rekonstrukce) (list 41)."
 },
 "doppler": {
 "nm": "Dopplerův jev",
@@ -526,14 +526,14 @@
 "sh": "meteory",
 "t": "MSK144: digitální provoz přes meteory",
 "h": "Dva tóny, 1000 a 2000 Hz, rychlostí 2000 Bd, v rámcích po 72 ms opakovaných bez přestávky: každá stopa meteoru propustí několik z nich.",
-"l": "Dávky 0,1 až 1 s, široké asi 2,4 kHz, které se objeví a zhasnou s „pípnutím“ meteoru. Na 50 a 144 MHz, s WSJT-X."
+"l": "Dávky 0,1 až 1 s, široké asi 2,4 kHz, které se objeví a zhasnou s „pípnutím“ meteoru. Na 50 a 144 MHz, s WSJT-X (list 29)."
 },
 "jt65": {
 "nm": "JT65",
 "sh": "65 tónů",
 "t": "JT65: 65 tónů, velmi pomalé",
 "h": "Jeden synchronizační tón a 64 datových tónů 2,7 Hz od sebe (JT65A), 0,37 s na symbol, 47 s vysílání za minutu.",
-"l": "Žebřík drobných čárek na asi 180 Hz se synchronizační čárou, která se vrací stále na stejné místo. Používá se pro odraz od Měsíce (JT65B a C) a velmi slabé signály.",
+"l": "Žebřík drobných čárek na asi 180 Hz se synchronizační čárou, která se vrací stále na stejné místo. Používá se pro odraz od Měsíce (JT65B a C) a velmi slabé signály (list 29).",
 "n": "úryvek 20 s (vysílání trvá 47 s)"
 },
 "tetra": {
@@ -549,7 +549,7 @@
 "sh": "190–535 kHz",
 "t": "NDB: nesměrový radiomaják",
 "h": "Pevná nosná na dlouhých vlnách s morseovkovou značkou o dvou či třech písmenech vysílanou tónem (často 1020 Hz).",
-"l": "Pevná čára uprostřed a během značky dvě čárky po stranách. Zhruba 190 až 535 kHz, v SSB nebo CW (list 12)."
+"l": "Pevná čára uprostřed a během značky dvě čárky po stranách. Zhruba 190 až 535 kHz, v SSB nebo CW (list 18)."
 },
 "vor": {
 "nm": "VOR",
@@ -578,35 +578,35 @@
 "sh": "433 MHz",
 "t": "Snímače tlaku v pneumatikách (TPMS)",
 "h": "Každé kolo občas vyšle dávku FSK o několika milisekundách: tlak, teplota, identifikátor.",
-"l": "Drobné samostatné dávky na 433,92 MHz (nebo 315 MHz), často po dvou, když projede auto. Dekóduje je rtl_433."
+"l": "Drobné samostatné dávky na 433,92 MHz (nebo 315 MHz), často po dvou, když projede auto. Dekóduje je rtl_433 (list 22)."
 },
 "als162": {
 "nm": "ALS162",
 "sh": "162 kHz",
 "t": "Časový signál ALS162 (Allouis, 162 kHz)",
 "h": "Nosná bývalého dlouhovlnného vysílání France Inter; čas je zakódován drobnými, neslyšitelnými fázovými modulacemi.",
-"l": "Pevná čára, ve Francii velmi silná, na začátku každé sekundy sotva rozšířená; ke čtení času je třeba dekodér (list 12)."
+"l": "Pevná čára, ve Francii velmi silná, na začátku každé sekundy sotva rozšířená; ke čtení času je třeba dekodér (list 39)."
 },
 "wwv": {
 "nm": "WWV",
 "sh": "2,5–20 MHz",
 "t": "Časový signál WWV (Colorado)",
 "h": "V AM: každou sekundu „tik“ 5 ms na 1000 Hz, tón 500 nebo 600 Hz, časový kód na 100 Hz a hlas hlásící UTC.",
-"l": "V demodulovaném zvuku: čára na 500 Hz přerušená každou sekundu, tik na 1000 Hz a úplně dole kód na 100 Hz (list 12)."
+"l": "V demodulovaném zvuku: čára na 500 Hz přerušená každou sekundu, tik na 1000 Hz a úplně dole kód na 100 Hz (list 39)."
 },
 "msf": {
 "nm": "MSF",
 "sh": "60 kHz",
 "t": "Časový signál MSF (Anthorn, 60 kHz)",
 "h": "Nosná se na začátku každé sekundy vypne na 0,1, 0,2 nebo 0,3 s podle bitů a na 0,5 s pro označení minuty.",
-"l": "Pevná čára s úplně černými mezerami každou sekundu, delšími než u DCF77 (list 12)."
+"l": "Pevná čára s úplně černými mezerami každou sekundu, delšími než u DCF77 (list 39)."
 },
 "type2": {
 "nm": "Slunce typ II",
 "sh": "rázová vlna",
 "t": "Slunce: rádiová vzplanutí typu II",
 "h": "Rázová vlna výronu koronální hmoty nutí plazma vyzařovat pomalu stále níž, často ve dvou pásech (základní a dvojnásobný).",
-"l": "Dva rovnoběžné pásy šumu, které několik minut pozvolna klesají. Porovnej se vzplanutími typu III, která jsou mnohem rychlejší.",
+"l": "Dva rovnoběžné pásy šumu, které několik minut pozvolna klesají. Porovnej se vzplanutími typu III, která jsou mnohem rychlejší (list 47).",
 "n": "několik minut zkráceno na 6 s"
 },
 "tweeks": {
@@ -614,28 +614,28 @@
 "sh": "VLF",
 "t": "Tweeky: noční VLF „pípnutí“",
 "h": "V noci se cvaknutí vzdáleného blesku odráží mezi zemí a ionosférou; kmitočty u mezního kmitočtu (kolem 1,7 kHz) dorazí poslední.",
-"l": "Malé „pípnutí“, které klesne a zastaví se kolem 1,7 kHz, někdy s ozvěnou na dvojnásobku; všude praskání. Pod 10 kHz, v noci."
+"l": "Malé „pípnutí“, které klesne a zastaví se kolem 1,7 kHz, někdy s ozvěnou na dvojnásobku; všude praskání. Pod 10 kHz, v noci (list 47)."
 },
 "hiss": {
 "nm": "VLF šum",
 "sh": "hiss",
 "t": "VLF šum (hiss)",
 "h": "Širokopásmový šum elektronů v plazmasféře, který roste a klesá s magnetickou aktivitou.",
-"l": "Pás šumu od několika set Hz do několika kHz, bez vzoru, pomalu sílí a slábne."
+"l": "Pás šumu od několika set Hz do několika kHz, bez vzoru, pomalu sílí a slábne (list 47)."
 },
 "aurora": {
 "nm": "Rádiová polární záře",
 "sh": "Au",
 "t": "Šíření přes polární záři (Au)",
 "h": "Polární záře odráží VKV vlny, ale velmi rychle jimi třese: každý signál se rozprostře do několika set Hz.",
-"l": "CW se změní v drsný, jakoby šeptaný šum; tón už neslyšíš. Na 50 a 144 MHz, s anténou k severu při magnetických bouřích."
+"l": "CW se změní v drsný, jakoby šeptaný šum; tón už neslyšíš. Na 50 a 144 MHz, s anténou k severu při magnetických bouřích (list 1)."
 },
 "galactic": {
 "nm": "Galaktický šum",
 "sh": "20–40 MHz",
 "t": "Šum Mléčné dráhy",
 "h": "Střed galaxie vyzařuje rádiový šum, který Karl Jansky objevil v roce 1932 kolem 20 MHz. Roste a klesá s otáčením Země.",
-"l": "Šum pozadí, který pomalu roste a zase klesá, každý den asi o 4 minuty dřív. Viditelný s obyčejným dipólem mezi 20 a 40 MHz.",
+"l": "Šum pozadí, který pomalu roste a zase klesá, každý den asi o 4 minuty dřív. Viditelný s obyčejným dipólem mezi 20 a 40 MHz (list 47).",
 "n": "den zkrácen na 12 s"
 },
 "cubesat": {
@@ -659,14 +659,14 @@
 "sh": "4625 kHz",
 "t": "UVB-76, „The Buzzer“ (4625 kHz)",
 "h": "Ruská vojenská stanice, která už desítky let vysílá asi sekundové bzučení, zhruba 25krát za minutu, někdy přerušené hlasovou zprávou.",
-"l": "Pevná nosná a při každém bzučení sloupec hustých čar shora dolů. Snadno ji najdeš na 4625 kHz v USB."
+"l": "Pevná nosná a při každém bzučení sloupec hustých čar shora dolů. Snadno ji najdeš na 4625 kHz v USB (list 43)."
 },
 "pip": {
 "nm": "„The Pip“",
 "sh": "3756 / 5448 kHz",
 "t": "„The Pip“: nekonečná pípnutí",
 "h": "Další ruský vojenský krátkovlnný maják, který dnem i nocí opakuje krátká pípnutí, někdy přerušená zprávami.",
-"l": "Pevná čára přerušovaná krátkým pípnutím asi 50krát za minutu; v uchu pravidelné „píp… píp…“, které nikdy nepřestane.",
+"l": "Pevná čára přerušovaná krátkým pípnutím asi 50krát za minutu; v uchu pravidelné „píp… píp…“, které nikdy nepřestane (list 43).",
 "n": "přibližný rytmus"
 },
 "squeaky": {
@@ -674,7 +674,7 @@
 "sh": "KV",
 "t": "„Squeaky Wheel“: vrzající kolo",
 "h": "Ruský vojenský krátkovlnný maják, pojmenovaný posluchači podle svého opakovaného zvukového vzoru.",
-"l": "Malý vzor dvou zvuků, z nichž jeden stoupá, opakovaný dokola: jako vrzající kolo.",
+"l": "Malý vzor dvou zvuků, z nichž jeden stoupá, opakovaný dokola: jako vrzající kolo (list 43).",
 "n": "přibližná napodobenina"
 },
 "codar": {
@@ -682,7 +682,7 @@
 "sh": "oceánský radar",
 "t": "CODAR: radary mořských proudů",
 "h": "Pobřežní radary jednou či dvakrát za sekundu přejedou pásmo kmitočtů, aby měřily proudy a vlny.",
-"l": "Pravidelné rovnoběžné úhlopříčky a opakované „swish“; kolem 4,5–5,5 MHz, 13 MHz a 25 MHz, často ve dne i v noci.",
+"l": "Pravidelné rovnoběžné úhlopříčky a opakované „swish“; kolem 4,5–5,5 MHz, 13 MHz a 25 MHz, často ve dne i v noci (list 43).",
 "n": "zmenšeno"
 },
 "stanag": {
@@ -719,14 +719,14 @@
 "sh": "16 tónů",
 "t": "MFSK16: šestnáct tónů",
 "h": "Šestnáct tónů 15,625 Hz od sebe, vždy jen jeden, 15,625krát za sekundu; každý tón nese čtyři bity chráněné opravným kódem.",
-"l": "Pás 316 Hz z malých schůdků, které stále přeskakují, po stálém tónu na začátku. V uchu rychlá melodie jako flétna. Používá se i k posílání malých obrázků."
+"l": "Pás 316 Hz z malých schůdků, které stále přeskakují, po stálém tónu na začátku. V uchu rychlá melodie jako flétna. Používá se i k posílání malých obrázků (list 29)."
 },
 "sitora": {
 "nm": "SITOR-A (ARQ)",
 "sh": "dálnopis",
 "t": "SITOR-A: námořní dálnopis v ARQ",
 "h": "Stanice vysílá bloky tří znaků (210 ms, 100 Bd, odstup 170 Hz) každých 450 ms; mezi bloky protistanice krátce odpoví „přijato“ nebo „opakuj“.",
-"l": "Krátké pravidelné dávky s malou slabší odpovědí mezi nimi: cvrčkovité „čip-čip“. Na krátkých vlnách už vzácné."
+"l": "Krátké pravidelné dávky s malou slabší odpovědí mezi nimi: cvrčkovité „čip-čip“. Na krátkých vlnách už vzácné (list 20)."
 },
 "dscvhf": {
 "nm": "DSC VKV (kanál 70)",
@@ -740,7 +740,7 @@
 "sh": "4 tóny",
 "t": "SELCAL: selektivní volání letadel na krátkých vlnách",
 "h": "Řízení letového provozu volá jedno určité letadlo dvěma asi sekundovými impulzy, každý ze dvou tónů ze šestnácti (312,6 až 1479,1 Hz). V letadle se rozsvítí kontrolka a zazní gong: posádka nemusí stále poslouchat.",
-"l": "Dva akordy po sobě, „bim-bam“, mezi hlasovými zprávami na leteckých kmitočtech v SSB, například 5616 nebo 8864 kHz."
+"l": "Dva akordy po sobě, „bim-bam“, mezi hlasovými zprávami na leteckých kmitočtech v SSB, například 5616 nebo 8864 kHz (list 17)."
 },
 "dcs": {
 "nm": "DCS",
@@ -776,14 +776,14 @@
 "sh": "NASA",
 "t": "Tóny Quindar: pípání Apolla",
 "h": "Když řídicí středisko v Houstonu stiskne klíčování, pípnutí 2525 Hz (250 ms) zapne vysílače pozemních stanic; po uvolnění je pípnutí 2475 Hz vypne.",
-"l": "Vysoké pípnutí před každou větou a další, o něco nižší, po ní: slavný zvuk nahrávek z misí Apollo."
+"l": "Vysoké pípnutí před každou větou a další, o něco nižší, po ní: slavný zvuk nahrávek z misí Apollo (list 41)."
 },
 "wow": {
 "nm": "Signál „Wow!“",
 "sh": "1977",
 "t": "Signál „Wow!“ (15. srpna 1977)",
 "h": "Radioteleskop Big Ear (Ohio) zachytil na 72 sekund úzký a velmi silný signál poblíž vodíkové čáry, kolem 1420,456 MHz. Astronom Jerry Ehman napsal na výpis „Wow!“. Už se nikdy neopakoval a jeho původ je dodnes sporný.",
-"l": "Tenká čára, která vystoupí ze šumu, zesílí a zeslábne: tvar průchodu pevného zdroje svazkem antény. Je to rekonstrukce: zvuková nahrávka neexistuje.",
+"l": "Tenká čára, která vystoupí ze šumu, zesílí a zeslábne: tvar průchodu pevného zdroje svazkem antény. Je to rekonstrukce: zvuková nahrávka neexistuje (list 47).",
 "n": "72 s zkráceno na 12 s"
 },
 "frb": {
@@ -791,7 +791,7 @@
 "sh": "FRB",
 "t": "Rychlý rádiový záblesk (FRB)",
 "h": "Rádiový záblesk trvající pár milisekund z jiné galaxie; první byl objeven v roce 2007. Plyn po cestě silně zpožďuje nízké kmitočty: záblesk dorazí roztažený, výšky napřed.",
-"l": "Jediná křivka padající shora dolů spektrem a pak nic. Některé se opakují; většina je vidět jen jednou.",
+"l": "Jediná křivka padající shora dolů spektrem a pak nic. Některé se opakují; většina je vidět jen jednou (list 47).",
 "n": "silně zpomaleno a zveličeno"
 },
 "letterb": {
@@ -799,14 +799,14 @@
 "sh": "D, P, S, C…",
 "t": "Jednopísmenné majáky",
 "h": "Vysílače ruského námořnictva donekonečna opakují jediné písmeno morseovky, každý 100 Hz od souseda: D, P, S, C, A, F, K nebo M podle místa.",
-"l": "Rovnoběžné tečkované čáry těsně vedle sebe, každá s vlastním rytmem. Kolem 4558, 5154, 7039, 10 872, 13 528 a 16 332 kHz, v CW."
+"l": "Rovnoběžné tečkované čáry těsně vedle sebe, každá s vlastním rytmem. Kolem 4558, 5154, 7039, 10 872, 13 528 a 16 332 kHz, v CW (list 43)."
 },
 "sid": {
 "nm": "Sluneční erupce na VLF",
 "sh": "SID",
 "t": "Sluneční erupce viděná na VLF (SID)",
 "h": "Námořní vysílače VLF (20,9 kHz ve Francii, 23,4 kHz v Německu…) se šíří mezi zemí a ionosférou. Když dorazí sluneční erupce, její rentgenové záření během minut změní spodek ionosféry a přijímaná úroveň skočí.",
-"l": "Úzký pravidelný pás (signál MSK vysílače), který náhle zesílí a pak se pomalu vrací k normálu. Stačí drátová smyčka a zvuková karta: klasický projekt astronomických kroužků.",
+"l": "Úzký pravidelný pás (signál MSK vysílače), který náhle zesílí a pak se pomalu vrací k normálu. Stačí drátová smyčka a zvuková karta: klasický projekt astronomických kroužků (list 47).",
 "n": "hodina zkrácena na 12 s"
 },
 "qrn": {
@@ -814,14 +814,14 @@
 "sh": "QRN",
 "t": "Bouřkové rušení (QRN)",
 "h": "Každý blesk je velmi silný vysílač, který pokryje všechny kmitočty najednou. Na středních a krátkých vlnách jsou slyšet bouřky tisíce kilometrů daleko, hlavně v létě a na nízkých pásmech.",
-"l": "Nepravidelné vodorovné čáry přes celou šířku; suché praskání v uchu. Omezovač šumu (NB) trochu pomůže, rámová anténa víc."
+"l": "Nepravidelné vodorovné čáry přes celou šířku; suché praskání v uchu. Omezovač šumu (NB) trochu pomůže, rámová anténa víc (list 1)."
 },
 "fading": {
 "nm": "Selektivní únik",
 "sh": "QSB",
 "t": "Selektivní únik (QSB)",
 "h": "Na krátkých vlnách přichází signál ionosférou několika cestami. Podle kmitočtu se sčítají nebo ruší: signálem putuje úzký propad.",
-"l": "Tmavá zóna, která pomalu putuje stanicí AM. Když přejde přes nosnou uprostřed, zvuk je pár sekund chraplavý a zkreslený; synchronní detekce nebo poslech v SSB to napraví."
+"l": "Tmavá zóna, která pomalu putuje stanicí AM. Když přejde přes nosnou uprostřed, zvuk je pár sekund chraplavý a zkreslený; synchronní detekce nebo poslech v SSB to napraví (list 1)."
 },
 "plc": {
 "nm": "PLC",
@@ -836,28 +836,28 @@
 "sh": "ťuk… ťuk…",
 "t": "Elektrický ohradník",
 "h": "Zdroj ohradníku pošle do drátu asi jednou za sekundu impulz několika tisíc voltů. Dotýká-li se drátu tráva nebo je poškozený izolátor, přeskočí jiskra a vyzařuje na všech kmitočtech.",
-"l": "Velmi tenká vodorovná čára přes celou šířku v dokonale pravidelném odstupu; „ťuk… ťuk…“ od dlouhých vln po VKV. Pravidelný rytmus ho odliší od bouřky."
+"l": "Velmi tenká vodorovná čára přes celou šířku v dokonale pravidelném odstupu; „ťuk… ťuk…“ od dlouhých vln po VKV. Pravidelný rytmus ho odliší od bouřky (list 43)."
 },
 "gsm": {
 "nm": "Telefon GSM",
 "sh": "217 Hz",
 "t": "Telefon GSM vedle reproduktoru",
 "h": "Telefon 2G vysílá v dávkách 0,577 ms, 217krát za sekundu. Špatně stíněný zesilovač tyto dávky detekuje a udělá je slyšitelnými.",
-"l": "Hřeben čar po 217 Hz; známé „ta-ta-tatata“ těsně před zazvoněním telefonu a pak trvalé bzučení během hovoru. Stále vzácnější: sítě 2G se vypínají."
+"l": "Hřeben čar po 217 Hz; známé „ta-ta-tatata“ těsně před zazvoněním telefonu a pak trvalé bzučení během hovoru. Stále vzácnější: sítě 2G se vypínají (list 43)."
 },
 "jjy": {
 "nm": "JJY",
 "sh": "40 / 60 kHz",
 "t": "Časový signál JJY (Japonsko, 40 a 60 kHz)",
 "h": "V každé sekundě má nosná plný výkon po 0,8 s (bit 0), 0,5 s (bit 1) nebo 0,2 s (značka) a pak klesne na 10 %. Opak DCF77, který klesá na začátku sekundy.",
-"l": "Pevná čára, která na konci každé sekundy dříve či později zeslábne. Vysílače ve Fukušimě (40 kHz) a Saga-Fukuoka (60 kHz), pro rádiem řízené hodiny v Japonsku."
+"l": "Pevná čára, která na konci každé sekundy dříve či později zeslábne. Vysílače ve Fukušimě (40 kHz) a Saga-Fukuoka (60 kHz), pro rádiem řízené hodiny v Japonsku (list 39)."
 },
 "rwm": {
 "nm": "RWM",
 "sh": "4996 kHz",
 "t": "Časový signál RWM (Moskva)",
 "h": "Telegraficky na 4996, 9996 a 14 996 kHz: každou sekundu impulz 100 ms a v jiných minutách deset impulzů za sekundu. Značka RWM se vysílá morseovkou dvakrát za hodinu.",
-"l": "Značka, pak čára rozdělená na pravidelná „tik“ a potom na rychlé tečky. Poslouchej v CW nebo SSB.",
+"l": "Značka, pak čára rozdělená na pravidelná „tik“ a potom na rychlé tečky. Poslouchej v CW nebo SSB (list 39).",
 "n": "zhuštěná ukázka"
 },
 "bpm": {
@@ -865,7 +865,7 @@
 "sh": "2,5–15 MHz",
 "t": "Časový signál BPM (Čína)",
 "h": "Stanice Pchu-čcheng (Šen-si) vysílá v AM na 2,5, 5, 10 a 15 MHz: každou sekundu tik 10 ms na 1000 Hz (300 ms v celou minutu) a v určitých minutách tiky 100 ms pro čas UT1. Značka BPM zazní morseovkou a pak hlasem.",
-"l": "V demodulovaném zvuku: značka, pak velmi krátké čárky na 1000 Hz, jedna za sekundu, s delší v celou minutu. Často se mísí s WWV na stejných kmitočtech.",
+"l": "V demodulovaném zvuku: značka, pak velmi krátké čárky na 1000 Hz, jedna za sekundu, s delší v celou minutu. Často se mísí s WWV na stejných kmitočtech (list 39).",
 "n": "zhuštěná ukázka"
 },
 "humpback": {
