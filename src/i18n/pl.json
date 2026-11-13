@@ -44,7 +44,8 @@
 "theme_phosa": "Pomarańczowy luminofor",
 "w3d": "Wodospad 3D",
 "w3dHint": "przeciągnij, aby obrócić",
-"audio_retry": "Przeglądarka przerwała dźwięk: naciśnij ponownie ▶ Słuchaj."
+"audio_retry": "Przeglądarka przerwała dźwięk: naciśnij ponownie ▶ Słuchaj.",
+"nsig": "{n} sygnałów"
 },
 "groups": [
 "Głos analogowy",

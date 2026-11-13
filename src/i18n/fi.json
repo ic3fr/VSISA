@@ -1,0 +1,1076 @@
+{
+"ui": {
+"title": "VSISA",
+"mystery": "Mysteeriääni",
+"play": "▶ Kuuntele",
+"stop": "■ Seis",
+"noise": "Kohina",
+"volume": "Äänenvoimakkuus",
+"loop": "Toisto",
+"specwf": "Spektri + Vesiputous",
+"cursor": "osoitin",
+"footprint": "Jälki",
+"dur": "{s} s ylhäältä alas",
+"avg": "keskiarvo koko signaalista",
+"press": "Paina Kuuntele: signaali vierii tässä",
+"count": "{n} signaalia, lehden 6 järjestyksessä",
+"myst": "Mysteeritila",
+"mystTags": "Kuuntele ja katso, valitse sitten oikea vastaus",
+"quizH": "Mikä signaali tämä on?",
+"quizLead": "Aloita kuuntelu, katso spektriä, vesiputousta ja jälkeä ja vastaa sitten.",
+"score": "Pisteet",
+"good": "Oikein!",
+"bad": "Väärin: se oli {x}.",
+"next": "Seuraava mysteeriääni",
+"principle": "Periaate",
+"screen": "Näytöllä",
+"sheet": "lehti",
+"book": "Kirja: lehti {r}",
+"lang": "Kieli",
+"signals": "Signaalit",
+"f1": "Sivulla simuloidut signaalit (12 000 näytettä sekunnissa): OpenBookRadio-kirjan lehden 6 signaalit, muita kirjan signaaleja ja bonuksia. Radiosignaaleista (AM, FM, AIS, LoRa…) näet simuloidun välitaajuuden kuten SDR:n näytöllä; osa on pienennetty tai nopeutettu, kuten mainitaan. AM:ssä, SSB:ssä, FM:ssä, FM-stereossa, ISS:ssä ja häipymässä kuulet ilmaisimen jälkeisen äänen kuin vastaanottimen kaiuttimesta, ja näyttö esittää radiosignaalin; ääni on synteettinen eikä sano oikeita sanoja.",
+"f2": "Aika kulkee alaspäin vesiputouksessa ja jäljessä. Lisenssi CC BY-NC-SA 4.0, ilmainen, ei myytäväksi.",
+"night": "Yötila",
+"day": "Päivätila",
+"visits": "käyntiä",
+"plays": "kuuntelua",
+"book_dl": "Lataa kirja",
+"book_dl2": "Lataa OpenBookRadio-kirja (ilmainen, PDF ja EPUB, 13 kieltä)",
+"display": "Näyttö",
+"theme_day": "Päivä",
+"theme_night": "Yö (punainen)",
+"theme_phos": "Vihreä fosfori",
+"theme_phosb": "Sininen fosfori",
+"theme_phosa": "Oranssi fosfori",
+"w3d": "3D-vesiputous",
+"w3dHint": "vedä kääntääksesi",
+"audio_retry": "Selain katkaisi äänen: paina uudelleen ▶ Kuuntele.",
+"nsig": "{n} signaalia"
+},
+"groups": [
+"Analoginen puhe",
+"Lennätin",
+"Data",
+"Kuvat",
+"Ilmailu, merenkulku ja pelastus",
+"Kutsut, alisävyt ja hakulaitteet",
+"Radiosondit, anturit ja verkkolaitteet",
+"HF-lähetelajit ja kummajaiset",
+"Yleisradio ja aika",
+"Laajakaista",
+"Bonus: ääniä avaruudesta",
+"Bonus: lyhytaaltojen kummajaisia",
+"Bonus: vedenalaisia ääniä",
+"Bonus: Maan ääniä",
+"Bonus: digitaalinen ääni (bitit ja kHz)"
+],
+"modes": {
+"am": {
+"sh": "yleisradio",
+"t": "AM: amplitudimodulaatio",
+"h": "Kantoaallon voimakkuus seuraa ääntä: käyrä ”turpoaa” ja ”kutistuu”.",
+"l": "Kiinteä viiva keskellä (kantoaalto) ja kaksi samanlaista sivukaistaa kummallakin puolella. Leveys noin 6–9 kHz. Lyhyt- ja keskiaaltojen yleisradio, ilmailu (lehdet 12 ja 14).",
+"r": [
+[
+"Kuuntelu",
+"Tunnari, sitten juontaja taustamusiikin päällä. Kaksi sivukaistaa ovat toistensa peilikuvia: näet melodian ja sitten puheen kantoaallon kummallakin puolella."
+]
+]
+},
+"ssb": {
+"nm": "SSB",
+"t": "SSB: yksisivukaista",
+"h": "Jäljellä on vain yksi sivukaista ilman kantoaaltoa: ei mitään, kun kukaan ei puhu.",
+"l": "Ei keskiviivaa, vain yksi noin 2,7 kHz:n levyinen kaista, joka elää vain puhuttaessa. USB yli 10 MHz:n, LSB alle (radioamatöörit). Huonosti viritettynä puhe kuulostaa ”ankalta” (lehdet 11 ja 29)."
+},
+"fm": {
+"sh": "puhe",
+"t": "FM: taajuusmodulaatio",
+"h": "Amplitudi pysyy vakiona; värähtelyt tihenevät tai harvenevat äänen mukana.",
+"l": "Signaali tanssii taajuutensa ympärillä, leveämmin kun ääni on voimakas: 12,5 kHz kanavaa kohden kapeakaistaisessa FM:ssä (radiopuhelimet, toistimet), 200 kHz FM-yleisradiossa (lehdet 2 ja 13).",
+"r": [
+[
+"Kuuntelu",
+"Lopussa lyhyt ”kshh”: kohinasalpa sulkeutuu, kun lähetin lopettaa."
+]
+]
+},
+"cw": {
+"t": "CW: sähkötys",
+"h": "Kantoaalto kytketään päälle ja pois: viivoja ja pisteitä.",
+"l": "Hyvin ohut viiva, joka katkeilee sähkötyksen tahdissa; korvalle piippaus. Tässä ”CQ” (lehti 49).",
+"r": [
+[
+"Nopeus",
+"20 sanaa/min, piste 60 ms, 700 Hz:llä: ”CQ CQ CQ DE F4ABC K”"
+],
+[
+"Korvalla",
+"Puhtaita piippauksia, pitkiä ja lyhyitä, yhdellä sävelellä"
+],
+[
+"Dekoodaus",
+"Korvalla, fldigi, CW Skimmer"
+]
+]
+},
+"rtty": {
+"t": "FSK / RTTY: kaksi taajuutta",
+"h": "Taajuus hyppii kahden arvon välillä, toinen nollalle ja toinen ykköselle.",
+"l": "Kaksi rinnakkaista viivaa: 170 Hz:n välein radioamatööreillä (45,45 baudia), 450 tai 850 Hz säätiedotteissa. Tasainen ”tidilidi” (lehti 32).",
+"r": [
+[
+"Koodi",
+"Baudot ITA2: 5 bittiä + start + 1,5 stop; mark 2125 Hz, space 2295 Hz"
+],
+[
+"Teksti",
+"RYRYRYRY CQ CQ DE F4ABC"
+],
+[
+"Dekoodaus",
+"fldigi, MMTTY, 2Tone"
+]
+]
+},
+"afsk": {
+"t": "AFSK 1200 baudia: APRS ja packet",
+"h": "Kaksi äänitaajuista sävyä, 1200 ja 2200 Hz, syötetään FM-lähettimeen.",
+"l": "FM-vastaanottimen jälkeen (kaiuttimen ääni): kaista 1200:sta 2200 Hz:iin lyhyinä purskeina. Korvalle sekunnin mittainen ”grrrt” (lehdet 35 ja 36).",
+"r": [
+[
+"Taajuus",
+"144,800 MHz Euroopassa (APRS), FM"
+],
+[
+"Kehys",
+"Liput 0x7E, sitten AX.25-dataa NRZI-muodossa"
+],
+[
+"Dekoodaus",
+"Direwolf, multimon-ng, KISS TNC"
+]
+]
+},
+"psk31": {
+"t": "PSK31: vaihemodulaatio",
+"h": "Taajuus ei liiku, vaihe kääntyy; amplitudi notkahtaa jokaisessa käännöksessä.",
+"l": "Hyvin ohut, noin 60 Hz:n levyinen viiva, hieman ”punottu”. Kymmeniä asemia mahtuu 3 kHz:iin (lehti 29).",
+"r": [
+[
+"Koodi",
+"Varicode: 0 = vaiheen käännös, 1 = ei muutosta; levossa kaksi kaksoisviivaa"
+],
+[
+"Missä kuulee",
+"14 070 kHz, 3 580 kHz"
+],
+[
+"Dekoodaus",
+"fldigi"
+]
+]
+},
+"ft8": {
+"t": "MFSK / FT8: kahdeksan sävyä",
+"h": "Taajuus nousee ja laskee 6,25 Hz:n askelin, 0,16 s askelta kohden.",
+"l": "Noin 50 Hz:n levyisiä kaistoja, jotka kestävät 12,6 s ja palaavat 15 sekunnin välein kellon tahdissa: useita asemia yhtä aikaa 3 kHz:n sisällä, esimerkiksi 7,074 MHz:llä (lehti 29).",
+"r": [
+[
+"Kehys",
+"79 symbolia á 0,16 s, kolme Costas-kuviota (alku, keskikohta, loppu); tässä kahdeksan asemaa"
+],
+[
+"Taajuudet",
+"14 074, 7 074, 3 573, 10 136, 21 074, 28 074 kHz"
+],
+[
+"Dekoodaus",
+"WSJT-X, JTDX (tarkka tietokoneen kello)"
+]
+]
+},
+"ft4": {
+"t": "FT4: kilpailujen FT8",
+"h": "Neljä sävyä 20,8 Hz:n välein, 20,8 baudia: 105 symbolia 5 sekunnissa, 7,5 sekunnin aikaväleissä.",
+"l": "Noin 90 Hz:n levyisiä kaistoja, lyhyempiä ja leveämpiä kuin FT8, jotka palaavat 7,5 sekunnin välein. 14 080, 7 047,5 kHz (lehti 29)."
+},
+"olivia": {
+"t": "Olivia 8/250: kahdeksan sävyä",
+"h": "Kahdeksan sävyä 31,25 Hz:n välein, yksi kerrallaan, satunnaisesti hyppien; Walsh-koodaus ja lomitus.",
+"l": "Hajanaisten pisteiden lohko 250 Hz:n alueella; dekoodautuu reilusti kohinan alapuolelta. Korvalle pieni satunnainen melodia (lehti 29)."
+},
+"hell": {
+"t": "Feld Hell: kirjoitusta kantoaallolla",
+"h": "Kantoaalto kytketään päälle ja pois piste pisteeltä: jokainen kirjain koostuu 14 pisteen sarakkeista, jotka pyyhkäistään alhaalta ylös (245 pistettä sekunnissa).",
+"l": "Vesiputouksessa katkonainen viiva; ohjelman näyttö (fldigi) piirtää kirjaimet uudelleen. Korvalle pehmeää rätinää (lehti 29)."
+},
+"4fsk": {
+"t": "4FSK: DMR, C4FM (Fusion), NXDN, dPMR",
+"h": "Neljä taajuustasoa: jokainen symboli kantaa kaksi bittiä.",
+"l": "Suorakulmainen 6–12,5 kHz:n levyinen lohko, täynnä kuin kohina, usein purskeina (DMR jakaa kanavan kahteen aikaväliin). Korvalle käheä ”frrr” (lehti 46)."
+},
+"mt63": {
+"t": "MT63: hätäviestit (NBEMS)",
+"h": "64 sävyä yhtä aikaa, kukin hitaasti moduloitu, paljon redundanssia.",
+"l": "Tasainen 1 tai 2 kHz:n lohko, keskellä 1500 Hz, terävät reunat; tasainen kohina. Toimii jopa mikrofonilla kaiutinta vasten (lehti 31)."
+},
+"lora": {
+"t": "LoRa: taajuusramput (chirpit)",
+"h": "Taajuus pyyhkäisee koko leveyden ja alkaa sitten taas alhaalta: hypyn kohta kantaa datan.",
+"l": "Rinnakkaisia vinoviivoja, helppo tunnistaa: Meshtastic ja MeshCore 869,525 MHz:llä tai 433 MHz:llä, LoRaWAN-anturit (lehdet 13, 23 ja 24)."
+},
+"sstv": {
+"t": "SSTV: kuvia äänessä",
+"h": "Tahdistuspulssi 1200 Hz:llä, sitten taajuus seuraa juovan kirkkautta 1500:sta (musta) 2300 Hz:iin (valkoinen).",
+"l": "Säännöllisiä tahdistusviivoja ja kuvan mukana muuttuva pilvi; ”sirkuttava” ääni minuutista kahteen. 14,230 MHz, ISS 145,800 MHz:llä (lehti 37).",
+"r": [
+[
+"Kehys",
+"VIS-otsake, sitten juovat: tahdistus 1200 Hz, vihreä, sininen, punainen; tässä 20 juovaa testikuvasta"
+],
+[
+"Dekoodaus",
+"QSSTV, MMSSTV, Robot36 puhelimessa"
+]
+]
+},
+"fax": {
+"nm": "Sääfaksi",
+"t": "Sääfaksi: 1500 Hz musta, 2300 Hz valkoinen",
+"h": "Taajuus liukuu portaattomasti mustasta valkoiseen, 120 juovaa minuutissa.",
+"l": "Kaksi kiinteää kaistaa 1500 ja 2300 Hz:llä (800 Hz:n välein), tasainen ”tik-tak”. Julkaistut taajuudet ovat kantoaaltotaajuuksia: kuuntele USB:llä 1,9 kHz alempaa (lehti 38).",
+"r": [
+[
+"Kehys",
+"Aloitussävy 300 Hz, vaihejuovat (valkoinen pulssi), sitten kartta"
+],
+[
+"Dekoodaus",
+"fldigi, JWX, HamFax"
+]
+]
+},
+"elt": {
+"nm": "ELT-sireeni",
+"t": "ELT/PLB-sireeni 121,5 MHz:llä",
+"h": "AM-signaali, jonka sävel laskee 1600:sta 300 Hz:iin kahdesta neljään kertaan sekunnissa.",
+"l": "Kiinteä kantoaalto ja viuhkan tavoin liukuvat sivukaistat: hätälähettimien ”uu-uu”, harjoituksissa myös 121,375 MHz:llä (lehdet 27 ja 28)."
+},
+"406": {
+"nm": "406-hätälähetin",
+"t": "Hätälähetin 406 MHz: BPSK-purske",
+"h": "Puolen sekunnin lähetys: 160 ms puhdasta kantoaaltoa, sitten vaihe heilahtaa ±1,1 radiaania 400 bit/s nopeudella.",
+"l": "Pieni lyhyt viiva, joka palaa 50 sekunnin välein, 406,0 ja 406,1 MHz:n välillä; ei mitään kuunneltavaa, tarvitaan dekooderi (EPIRB 406, lehti 28)."
+},
+"adsb": {
+"t": "ADS-B / Mode S (1090 MHz): pulssit",
+"h": "0,5 µs:n pulsseja, joiden paikka kantaa bitit (PPM); tässä aika-asteikkoa on hidastettu paljon.",
+"l": "Hyvin lyhyitä vaakaviivoja koko leveydeltä, satoja sekunnissa lentoaseman lähellä; tarvitaan SDR (lehti 15).",
+"n": "aika-asteikko hidastettu paljon"
+},
+"acars": {
+"t": "ACARS: dataa AM:llä ja MSK:lla",
+"h": "AM-signaali, joka kantaa kahta sävyä, 1200 ja 2400 Hz, 2400 bit/s.",
+"l": "Puolen sekunnin purskeita kantoaallon ja sivukaistojen kera, Euroopassa 131,525, 131,725 tai 131,825 MHz:llä: korvalle ”brrrt” (lehti 16)."
+},
+"ais": {
+"t": "AIS: GMSK 9600 baudia kahdella kanavalla",
+"h": "Pehmennetty FSK (GMSK) 26 ms:n purskeina, kerran 161,975 MHz:llä ja kerran 162,025 MHz:llä (pienennetty mittakaava).",
+"l": "Kaksi saraketta pieniä lyhyitä viivoja 50 kHz:n välein, säännöllistä naksutusta; mitä enemmän laivoja, sitä tiheämpää (lehti 19).",
+"n": "pienennetty mittakaava"
+},
+"navtex": {
+"t": "NAVTEX ja DSC keski- ja lyhyillä aalloilla: FSK 170 Hz",
+"h": "Kuten RTTY: kaksi taajuutta 170 Hz:n välein, mutta 100 baudia.",
+"l": "Kaksi rinnakkaista viivaa, yhtenäisiä tiedotteen ajan, 518 ja 490 kHz:llä (NAVTEX) tai 2187,5 kHz:llä (digitaalinen selektiivikutsu) (lehti 20).",
+"r": [
+[
+"Koodi",
+"SITOR-B, CCIR 476: 7 bittiä, joista neljä ”1”, FEC-toistolla"
+],
+[
+"Dekoodaus",
+"fldigi, YaND"
+]
+]
+},
+"hfdl": {
+"t": "HFDL: lentokoneet lyhyillä aalloilla",
+"h": "1800 baudin PSK 1440 Hz:n apukantoaallolla.",
+"l": "Noin 2,4 kHz:n levyisiä purskeita 2,9 ja 22 MHz:n välillä; tulevaa ja menevää modeemin kohinaa (lehti 17)."
+},
+"ctcss": {
+"t": "CTCSS: alisävy puheen alla",
+"h": "Matala jatkuva sävy (67–254 Hz, tässä 88,5 Hz) lisätään puheeseen.",
+"l": "FM-vastaanottimen äänessä: kiinteä viiva aivan alhaalla puheen alla; se avaa toistimien ja radiopuhelimien kohinasalvan (lehti 10)."
+},
+"dtmf": {
+"sh": "2 sävyä",
+"t": "DTMF: kaksi sävyä näppäintä kohden",
+"h": "Jokainen näppäin lähettää yhtä aikaa matalan sävyn (697–941 Hz) ja korkean (1209–1633 Hz).",
+"l": "Pisteparit kahdeksassa kiinteässä sarakkeessa; puhelinnumeroiden ja toistinkomentojen ”piip-piip” (lehti 10).",
+"r": [
+[
+"Sarja",
+"0 6 1 2 3 4 5 7 8 9 * #"
+]
+]
+},
+"selcall": {
+"sh": "5 sävyä",
+"t": "Selcall CCIR: sävyt peräkkäin",
+"h": "Viisi 100 ms:n sävyä peräkkäin, yksi kutakin numeroa kohden.",
+"l": "Pieni pisteiden portaikko, toistettuna; nopea ”tululululu” yhden tietyn radion kutsumiseen (lehti 33).",
+"r": [
+[
+"Sarja",
+"1 2 3 4 5, kahdesti; myös UV-K1:n SelCall-sovellus dekoodaa sen"
+]
+]
+},
+"pocsag": {
+"sh": "hakulaitteet",
+"t": "POCSAG ja FLEX: hakulaitteet",
+"h": "FSK ±4,5 kHz:llä; johdanto 1010… ja sitten data (pienennetty mittakaava).",
+"l": "Kaksi puhdasta viivaa johdannon aikana, sitten täysi kaista; kimeä ”brrrrt”. 466,075 MHz, DAPNET 439,9875 MHz (lehti 45).",
+"n": "pienennetty mittakaava"
+},
+"ale": {
+"sh": "8 sävyä",
+"t": "ALE: automaattinen yhteydenmuodostus lyhyillä aalloilla",
+"h": "Kahdeksan sävyä 750:stä 2500 Hz:iin, 125 baudia, purskeina.",
+"l": "Noin 2 kHz:n levyinen lohko pieniä pisteitä, sekunnista kahteen, joskus usealla lähekkäisellä taajuudella; kimeää viserrystä (lehti 34)."
+},
+"rs41": {
+"nm": "Radiosondi RS41",
+"t": "Radiosondi RS41: jatkuva GFSK",
+"h": "Pehmennetty FSK 4800 baudilla, tauotta; taajuus ryömii hitaasti, kun sondi nousee ja jäähtyy.",
+"l": "Noin 10 kHz:n levyinen kaista, joka liukuu vinosti koko lennon ajan 400 ja 406 MHz:n välillä (lehti 21)."
+},
+"ook": {
+"nm": "433-anturit",
+"t": "433 MHz:n anturit: OOK",
+"h": "Kantoaalto kytketään päälle ja pois lyhyin tai pitkin pulssein (on-off keying); viesti toistetaan kolmesti.",
+"l": "Pieniä pisteryöppyjä, usein kolmen sarjoina, 433,92 MHz:llä: sääasemat, lämpömittarit, kaukosäätimet (lehti 22)."
+},
+"fhss": {
+"t": "Bluetooth: taajuushyppely (FHSS)",
+"h": "Taajuus vaihtuu 1600 kertaa sekunnissa 79 kanavan välillä (pienennetty mittakaava).",
+"l": "Pieniä viivoja siroteltuina kaikkialle 80 MHz:n alueelle, ei koskaan samassa kohdassa, noin 2,4 GHz:llä (lehti 25).",
+"n": "pienennetty mittakaava"
+},
+"wspr": {
+"t": "WSPR: etenemismajakat",
+"h": "Neljä sävyä 1,46 Hz:n välein, 0,68 s symbolia kohden, 110,6 s ajan.",
+"l": "Hyvin ohut, noin 6 Hz:n levyinen viiva, joka kestää lähes kaksi minuuttia, joka parillinen kaksiminuuttinen: on zoomattava paljon (lehti 29).",
+"n": "24 s:n ote (lähetys kestää 110,6 s)"
+},
+"qrss": {
+"t": "QRSS: hyvin hidas sähkötys",
+"h": "Kantoaalto kytketään päälle ja pois 3–10 s:n pistein, usein kahdella lähekkäisellä taajuudella (DFCW).",
+"l": "Muutaman Hz:n levyisiä viivoja, jotka luetaan kymmenen minuutin näytöltä; korvalle kuulumattomia (lehti 30).",
+"n": "nopeutettu: piste 0,6 s eikä 3–10 s"
+},
+"texte": {
+"nm": "Tekstiä vesiputouksessa",
+"t": "Tekstiä vesiputouksessa",
+"h": "Kuvan jokaisesta juovasta tulee sävyjen ryhmä: ääni muistuttaa kohinaa.",
+"l": "Teksti tai piirros näkyy suoraan SDR:n näytöllä (lehti 40).",
+"r": [
+[
+"Huom.",
+"Lähetetään kuvan alareunasta alkaen: oikein päin elävässä vesiputouksessa, ylösalaisin jäljessä (luetaan ylhäältä alas)"
+]
+]
+},
+"vara": {
+"t": "Nykyaikainen HF-data: VARA, Pactor, ARDOP",
+"h": "Pitkiä täysiä purskeita (OFDM tai PSK) ja niiden välissä toisen aseman lyhyitä vastauksia.",
+"l": "Noin 2,4 kHz:n levyinen suorakulmio, joka pysähtyy ja alkaa uudelleen, välissä pieni kuittaus; katkonaista kohinaa (lehti 29)."
+},
+"chirp": {
+"nm": "Ionosondi",
+"t": "Ionosondi (chirp sounder)",
+"h": "Hidas taajuusramppi koko HF-alueen yli; ionosfäärin kaiut saapuvat hieman myöhemmin.",
+"l": "Näytön poikki pyyhkäisevä vinoviiva, rinnakkaisilla viivoilla (kaiuilla) kerrattuna; ”ffviit”, joka menee ohi sekunnin murto-osassa."
+},
+"oth": {
+"nm": "Horisontintakainen tutka",
+"t": "Horisontintakainen tutka (”tikka”)",
+"h": "Pulsseja 10–50 kertaa sekunnissa, kukin usean kHz:n levyinen.",
+"l": "Leveä raidallinen lohko, joka peittää kokonaisia kaistoja; hyvin säännöllinen tikka, joka nakuttaa lyhyillä aalloilla."
+},
+"parasites": {
+"nm": "Häiriöt",
+"sh": "virtalähde",
+"t": "Hakkurivirtalähteen häiriöt",
+"h": "Kanttiaalto: sen taajuus ja kaikki sen harmoniset tulevat ulos yhtä aikaa.",
+"l": "Kampa säännöllisiä viivoja, jotka ryömivät yhdessä kohinataustaa vasten: etsi se NOISE FIND -toiminnolla tai kannettavalla vastaanottimella (lehti K22)."
+},
+"mpx": {
+"nm": "FM-stereo ja RDS",
+"t": "FM-stereoradio ja RDS",
+"h": "Ilmaistu ääni (multipleksi) sisältää L+R-kanavan, 19 kHz:n pilotin, L-R-kanavan noin 38 kHz:llä ja RDS:n 57 kHz:llä.",
+"l": "Ilmaisun jälkeen 0–60 kHz: matala lohko, ohut viiva 19 kHz:llä, heikompi lohko keskellä ja RDS aivan ylhäällä (lehti 12).",
+"n": "mittakaava ÷ 20; stereoääni",
+"r": [
+[
+"Kuuntelu",
+"Kuulokkeilla: 4 s monona (keskimmäinen lohko, L-R, katoaa), sitten 4 s stereona, melodia vasemmalla ja soinnut oikealla."
+]
+]
+},
+"dcf77": {
+"t": "Aikamerkki DCF77 (77,5 kHz)",
+"h": "Kantoaalto putoaa 15 %:iin 0,1 s:ksi (bitti 0) tai 0,2 s:ksi (bitti 1) jokaisen sekunnin alussa.",
+"l": "Kiinteä viiva, jossa musta aukko joka sekunti; 59. sekunnissa sitä ei ole, jotta minuutti erottuu (lehti 12).",
+"r": [
+[
+"Huom.",
+"Tässä kantoaalto on siirretty 1000 Hz:iin; 6. sekunnissa ei ole aukkoa, kuten jokaisen minuutin 59. sekunnissa"
+]
+]
+},
+"ofdm": {
+"t": "OFDM: kymmeniä alikantoaaltoja",
+"h": "Monta tiheästi pakattua kantoaaltoa, kukin hidas: summa muistuttaa kohinaa.",
+"l": "Tasainen suorakulmio terävin reunoin, aina paikalla: DRM lyhyillä aalloilla (10 kHz), DAB+ (1,5 MHz), DVB-T, Wi-Fi. Korvalle jatkuva kohina (lehdet 12 ja 25)."
+},
+"dsss": {
+"t": "Hajaspektri (DSSS): GPS, Wi-Fi 802.11b",
+"h": "Data sekoitetaan hyvin nopeaan koodiin: energia leviää laajalle kaistalle.",
+"l": "Leveä kumpare, tuskin kohinan yläpuolella; GPS on jopa kohinan alapuolella eikä näy ilman käsittelyä (lehdet 25 ja 26)."
+},
+"hline": {
+"nm": "Vetyviiva",
+"sh": "1420 MHz",
+"t": "21 cm:n vetyviiva (1420,405 MHz)",
+"h": "Linnunradan kylmä vety lähettää hyvin heikkoa kohinaa 1420,405 MHz:llä. Galaksin kierteishaarojen liike siirtää sitä Dopplerin ilmiön vuoksi: näkyy useita pieniä kumpareita.",
+"l": "Vesiputouksessa lähes ei mitään sekunnista toiseen: on keskiarvoistettava pitkään, jotta kumpareet nousevat kohinasta. Katso tässä keskiarvospektriä pysäytettynä. Riittää lautanen tai torvi, esivahvistin ja SDR (lehti 47).",
+"n": "signaalia liioiteltu paljon"
+},
+"sun": {
+"nm": "Aurinko",
+"sh": "purkaukset",
+"t": "Aurinko: tyypin III radiopurkaukset",
+"h": "Roihupurkauksen sinkoamat elektronit kulkevat Auringon koronan läpi ja saavat sen säteilemään yhä matalammilla taajuuksilla etääntyessään.",
+"l": "Viivoja, jotka putoavat vinosti spektrin ylälaidasta alalaitaan alle sekunnissa Auringon kohinan päällä; paisuva ”shhhh”. Noin 10:stä 400 MHz:iin, myös lyhyillä aalloilla noin 20 MHz:llä (lehti 47)."
+},
+"jupiter": {
+"nm": "Jupiter",
+"sh": "20 MHz",
+"t": "Jupiter: dekametripurkaukset (L ja S)",
+"h": "Jupiterin magneettikenttä ja sen kuu Io tuottavat voimakasta säteilyä 15 ja 40 MHz:n välillä: hitaita L-purkauksia ja hyvin lyhyitä, nopeasti alas liukuvia S-purkauksia.",
+"l": "Ensin kohinan aaltoja (L, kuin rantamaininki), sitten pienten ”poksahdusten” jonoja (S) tiheinä vinoviivoina. Noin 20,1 MHz:llä öisin yksinkertaisella dipolilla, kun Io on sopivassa kohdassa (lehti 47)."
+},
+"pulsar": {
+"nm": "Pulsari",
+"sh": "B0329+54",
+"t": "Pulsari PSR B0329+54",
+"h": "Pyörivä neutronitähti pyyhkäisee Maata radiokeilalla, tässä 0,714 s:n välein. Tähtienvälinen kaasu viivästää matalia taajuuksia: jokainen pulssi saapuu ensin spektrin yläpäähän.",
+"l": "Säännöllinen ”tik”; vesiputouksessa jokainen pulssi on alaspäin kallistuva käyrä (dispersio). Todellinen signaali on kohinan alapuolella: tarvitaan suuri antenni ja pulssien summaus jakson yli (lehti 47).",
+"n": "signaalia liioiteltu paljon"
+},
+"meteor": {
+"nm": "Meteorit",
+"sh": "GRAVES",
+"t": "Meteorikaiut GRAVES-tutkasta (143,050 MHz)",
+"h": "Ranskalainen GRAVES-tutka lähettää tauotta 143,050 MHz:llä. Kun tähdenlento ionisoi ilman, sen vana heijastaa hieman tästä signaalista vastaanottimeesi sekunnin murto-osasta muutamaan sekuntiin.",
+"l": "USB:llä 143,049 MHz:llä: lyhyitä ”pingejä” noin 1000 Hz:llä, joskus liukuva kaiku (meteorin pää, Dopplerin ilmiö) tai pitkään kestävä. Paljon enemmän meteoriparvien aikaan (Perseidit, Geminidit) (lehti 1)."
+},
+"whistler": {
+"nm": "Vihellykset",
+"sh": "VLF",
+"t": "VLF-vihellykset (whistlers)",
+"h": "Salama synnyttää radionaksahduksen; osa siitä seuraa Maan magneettikentän kenttäviivoja toiselle pallonpuoliskolle ja takaisin, korkeat sävelet ensin.",
+"l": "”Pjuuu”, joka laskee korkeasta matalaan sekunnissa tai kahdessa heti naksahduksen jälkeen; rätinää (sferics) kaikkialla. Alle 10 kHz, VLF-vastaanottimella kaukana sähkölinjoista (lehti 47)."
+},
+"chorus": {
+"nm": "Aamunkoiton kuoro",
+"sh": "VLF",
+"t": "Aamunkoiton kuoro (dawn chorus)",
+"h": "Magneettisen myrskyn aikana magnetosfääriin loukkuun jääneet elektronit lähettävät pieniä nousevia säveliä, enimmäkseen auringonnousun aikaan.",
+"l": "Päällekkäisiä nousevia sirkutuksia kuin linnut, noin 1–4 kHz. Sama laitteisto kuin vihellyksille (lehti 47)."
+},
+"sputnik": {
+"nm": "Sputnik 1",
+"sh": "1957",
+"t": "Sputnik 1 (1957)",
+"h": "Ensimmäinen tekokuu lähetti noin 0,3 s:n piippauksia 20,005 ja 40,002 MHz:llä vuorotellen kolmen viikon ajan.",
+"l": "Säännöllisesti katkeava viiva: ”piip… piip…”, ääni jota koko maailma kuunteli lokakuussa 1957 (rekonstruktio) (lehti 41)."
+},
+"doppler": {
+"nm": "Dopplerin ilmiö",
+"sh": "satelliitti",
+"t": "Satelliittimajakka ja Dopplerin ilmiö",
+"h": "Matalalla kiertävä satelliitti lähestyy ja sitten loittonee: vastaanotettu taajuus laskee ylilennon aikana, noin ±3 kHz 145 MHz:llä ja ±10 kHz 435 MHz:llä.",
+"l": "S-muotoisesti laskeva viiva: ensin hitaasti, nopeasti kun satelliitti on lähimpänä, sitten taas hitaasti (lehti 41).",
+"n": "10 min ylilento tiivistetty 12 sekuntiin"
+},
+"apt": {
+"nm": "NOAA APT",
+"sh": "137 MHz",
+"t": "NOAA-satelliitit: APT-kuvat (historiaa)",
+"h": "2400 Hz:n apukantoaalto, jota kuva amplitudimoduloi, kaksi juovaa sekunnissa, juovan alussa tahdistuspulssi. Päättyi 2025; Meteor-M-satelliitit lähettävät nyt LRPT:tä.",
+"l": "Viiva 2400 Hz:llä kuvan mukana muuttuvine sivukaistoineen ja kuuluisa ”tik-tak” kahdesti sekunnissa (lehti 41)."
+},
+"eme": {
+"nm": "Kuukaiku",
+"sh": "EME",
+"t": "Kuukaiku (EME)",
+"h": "Kuuhun lähetetty signaali palaa noin 2,5 s myöhemmin valtavasti heikentyneenä, hieman levinneenä ja Dopplerin siirtämänä.",
+"l": "Kuulet oman ”piippisi” ja 2,5 s myöhemmin sen heikon, hieman sumean kaiun. Radioamatöörit tekevät sen CW:llä tai JT65:llä, 144 MHz:llä ja ylempänä (lehti 1).",
+"n": "kaikua liioiteltu paljon"
+},
+"msk144": {
+"nm": "MSK144",
+"sh": "meteorit",
+"t": "MSK144: meteoriheijastusten digitaalinen lähetelaji",
+"h": "Kaksi sävyä, 1000 ja 2000 Hz, 2000 baudia, 72 ms:n kehyksissä tauotta toistettuina: jokainen meteorivana päästää osan niistä läpi.",
+"l": "0,1–1 s:n purskeita, noin 2,4 kHz:n levyisiä, jotka ilmestyvät ja haipuvat meteorin ”pingin” mukana. 50 ja 144 MHz:llä WSJT-X:llä (lehti 29)."
+},
+"jt65": {
+"nm": "JT65",
+"sh": "65 sävyä",
+"t": "JT65: 65 sävyä, hyvin hitaasti",
+"h": "Yksi tahdistussävy ja 64 datasävyä 2,7 Hz:n välein (JT65A), 0,37 s symbolia kohden, 47 s lähetystä minuutissa.",
+"l": "Pienten viivojen tikapuut noin 180 Hz:n alueella ja tahdistusviiva, joka palaa jatkuvasti samaan kohtaan. Käytetään kuuyhteyksissä (JT65B ja C) ja hyvin heikoilla signaaleilla (lehti 29).",
+"n": "20 s:n ote (lähetys kestää 47 s)"
+},
+"tetra": {
+"nm": "TETRA",
+"sh": "π/4-DQPSK",
+"t": "TETRA: ammattikäytön digitaalinen verkko",
+"h": "π/4-DQPSK-vaihemodulaatio 18 000 symbolia sekunnissa, neljä aikajaettua kanavaa, 25 kHz:n kanavissa.",
+"l": "Täysi pyöreäreunainen lohko, aina paikalla tukiaseman lähellä; käheää kohinaa. Salattu: sitä ei voi kuunnella (lehti 46).",
+"n": "pienennetty mittakaava"
+},
+"ndb": {
+"nm": "NDB-majakka",
+"sh": "190–535 kHz",
+"t": "NDB: suuntaamaton radiomajakka",
+"h": "Kiinteä kantoaalto pitkillä aalloilla, kahden tai kolmen kirjaimen tunnus sähkötyksenä sävyllä (usein 1020 Hz).",
+"l": "Kiinteä viiva keskellä ja tunnuksen aikana kaksi pientä viivaa kummallakin puolella. Noin 190–535 kHz, SSB:llä tai CW:llä (lehti 18)."
+},
+"vor": {
+"nm": "VOR",
+"sh": "108–118 MHz",
+"t": "VOR: monisuuntamajakka",
+"h": "AM:ssä: suunnasta riippuva 30 Hz:n signaali, 9960 Hz:n apukantoaalto taajuusmoduloituna 30 Hz:llä (vertailu) ja sähkötystunnus 1020 Hz:llä.",
+"l": "Ilmaistussa äänessä: matala 30 Hz:n hurina, leveä aaltoileva viiva lähellä 10 kHz:iä ja tunnus silloin tällöin (lehti 18).",
+"n": "ilmaistu ääni, mittakaava ÷ 2"
+},
+"ils": {
+"nm": "ILS",
+"sh": "90 + 150 Hz",
+"t": "ILS: laskeutumisopastus (localizer)",
+"h": "AM:ssä kaksi sävyä, 90 ja 150 Hz; niiden suhde kertoo koneelle, onko se keskilinjan vasemmalla vai oikealla puolella. Sähkötystunnus alkaa I-kirjaimella.",
+"l": "Ilmaistussa äänessä: kaksi hyvin matalaa viivaa 90 ja 150 Hz:llä ja tunnus 1020 Hz:llä. 108,1:n ja 112 MHz:n välillä; liukupolku on noin 330 MHz:llä (lehti 18)."
+},
+"m10": {
+"nm": "Sondit M10 / M20",
+"sh": "Meteomodem",
+"t": "Radiosondit M10 ja M20 (Meteomodem)",
+"h": "Yksi kehys sekunnissa nopealla FSK:lla (noin 9600 baudia): leveämpi kuin RS41. Ranskassa Météo-France lähettää niitä.",
+"l": "Leveä purske joka sekunti, joka ryömii hitaasti lennon aikana; 400 ja 406 MHz:n välillä (lehti 21)."
+},
+"tpms": {
+"nm": "Renkaat (TPMS)",
+"sh": "433 MHz",
+"t": "Rengaspaineanturit (TPMS)",
+"h": "Jokainen pyörä lähettää aika ajoin muutaman millisekunnin FSK-purskeen: paine, lämpötila, tunniste.",
+"l": "Pieniä yksittäisiä purskeita 433,92 MHz:llä (tai 315 MHz:llä), usein pareittain, kun auto ajaa ohi. Dekoodataan rtl_433:lla (lehti 22)."
+},
+"als162": {
+"nm": "ALS162",
+"sh": "162 kHz",
+"t": "Aikamerkki ALS162 (Allouis, 162 kHz)",
+"h": "France Interin entisen pitkäaaltolähetyksen kantoaalto; aika koodataan pienillä, kuulumattomilla vaihemodulaatioilla.",
+"l": "Kiinteä viiva, Ranskassa hyvin voimakas, joka levenee hiukan jokaisen sekunnin alussa; ajan lukemiseen tarvitaan dekooderi (lehti 39)."
+},
+"wwv": {
+"nm": "WWV",
+"sh": "2,5–20 MHz",
+"t": "Aikamerkki WWV (Colorado)",
+"h": "AM:ssä: 5 ms:n ”tik” 1000 Hz:llä joka sekunti, 500 tai 600 Hz:n sävy, aikakoodi 100 Hz:llä ja ääni, joka ilmoittaa UTC-ajan.",
+"l": "Ilmaistussa äänessä: 500 Hz:n viiva, joka katkeaa joka sekunti, 1000 Hz:n tik ja koodi aivan alhaalla 100 Hz:llä (lehti 39)."
+},
+"msf": {
+"nm": "MSF",
+"sh": "60 kHz",
+"t": "Aikamerkki MSF (Anthorn, 60 kHz)",
+"h": "Kantoaalto katkaistaan jokaisen sekunnin alussa 0,1, 0,2 tai 0,3 s:ksi bittien mukaan ja 0,5 s:ksi minuutin merkiksi.",
+"l": "Kiinteä viiva, jossa täysin mustat aukot joka sekunti, pidemmät kuin DCF77:ssä (lehti 39)."
+},
+"type2": {
+"nm": "Aurinko, tyyppi II",
+"sh": "shokkiaalto",
+"t": "Aurinko: tyypin II radiopurkaukset",
+"h": "Koronan massapurkauksen shokkiaalto saa plasman säteilemään yhä matalammin, hitaasti, usein kahdella kaistalla (perustaajuus ja sen kaksinkertainen).",
+"l": "Kaksi rinnakkaista kohinakaistaa, jotka liukuvat hiljalleen alaspäin useita minuutteja. Vertaa tyypin III purkauksiin, jotka ovat paljon nopeampia (lehti 47).",
+"n": "useita minuutteja tiivistetty 6 sekuntiin"
+},
+"tweeks": {
+"nm": "Tweekit",
+"sh": "VLF",
+"t": "Tweekit: yön VLF-”pingit”",
+"h": "Yöllä kaukaisen salaman naksahdus pomppii maan ja ionosfäärin välillä; rajataajuuden (noin 1,7 kHz) lähellä olevat taajuudet saapuvat viimeisinä.",
+"l": "Pieni ”ping”, joka laskee ja pysähtyy noin 1,7 kHz:iin, joskus kaksinkertaisen taajuuden kaiun kera; rätinää kaikkialla. Alle 10 kHz, öisin (lehti 47)."
+},
+"hiss": {
+"nm": "VLF-kohina",
+"sh": "hiss",
+"t": "VLF-kohina (hiss)",
+"h": "Plasmasfäärin elektronien tuottamaa laajakaistaista kohinaa, joka voimistuu ja heikkenee magneettisen aktiivisuuden mukana.",
+"l": "Kohinakaista muutamasta sadasta Hz:stä muutamaan kHz:iin, ilman kuviota, hitaasti paisuen ja haipuen (lehti 47)."
+},
+"aurora": {
+"nm": "Radiorevontulet",
+"sh": "Au",
+"t": "Revontulieteneminen (Au)",
+"h": "Revontulet heijastavat VHF-aaltoja mutta ravistelevat niitä hyvin nopeasti: jokainen signaali leviää usean sadan Hz:n alueelle.",
+"l": "CW muuttuu karheaksi kohinaksi kuin kuiskaus; säveltä ei enää kuule. 50 ja 144 MHz:llä, antenni pohjoiseen, magneettisten myrskyjen aikana (lehti 1)."
+},
+"galactic": {
+"nm": "Galaktinen kohina",
+"sh": "20–40 MHz",
+"t": "Linnunradan kohina",
+"h": "Galaksin keskusta lähettää radiokohinaa, jonka Karl Jansky löysi vuonna 1932 noin 20 MHz:llä. Se voimistuu ja heikkenee Maan pyöriessä.",
+"l": "Taustakohina, joka hitaasti voimistuu ja heikkenee taas, noin 4 minuuttia aiemmin joka päivä. Näkyy yksinkertaisella dipolilla 20 ja 40 MHz:n välillä (lehti 47).",
+"n": "vuorokausi tiivistetty 12 sekuntiin"
+},
+"cubesat": {
+"nm": "CubeSat",
+"sh": "9600 bd",
+"t": "CubeSat-telemetria",
+"h": "Pienet satelliitit lähettävät säännöllisesti mittauksiaan (akku, lämpötilat) FSK:lla tai GMSK:lla 1200 tai 9600 baudilla, noin 435–438 MHz:llä.",
+"l": "Säännöllisiä purskeita, jotka liukuvat joka kerta hieman alemmas Dopplerin ilmiön vuoksi ylilennon aikana (lehti 41).",
+"n": "pienennetty mittakaava, nopeutettu ylilento"
+},
+"issfm": {
+"nm": "ISS FM:llä",
+"sh": "145,800 MHz",
+"t": "Avaruusasema (ISS): puhetta FM:llä",
+"h": "Astronautit puhuvat koulujen ja radioamatöörien kanssa FM:llä 145,800 MHz:llä. Asema lentää 28 000 km/h: ylilennon aikana vastaanotettu taajuus liukuu noin +3,5 kHz:stä −3,5 kHz:iin.",
+"l": "FM-puhekaista, joka siirtyy hitaasti oikealta vasemmalle kymmenen minuutin ylilennon aikana (lehti 41).",
+"n": "10 min ylilento tiivistetty 10 sekuntiin"
+},
+"buzzer": {
+"nm": "UVB-76 ”The Buzzer”",
+"sh": "4625 kHz",
+"t": "UVB-76, ”The Buzzer” (4625 kHz)",
+"h": "Venäläinen sotilasasema, joka on vuosikymmeniä lähettänyt noin sekunnin surinaa noin 25 kertaa minuutissa, joskus puheviestin keskeyttämänä.",
+"l": "Kiinteä kantoaalto ja jokaisen surinan kohdalla sarake tiheitä viivoja ylhäältä alas. Helppo löytää 4625 kHz:ltä USB:llä (lehti 43)."
+},
+"pip": {
+"nm": "”The Pip”",
+"sh": "3756 / 5448 kHz",
+"t": "”The Pip”: loputtomia piippauksia",
+"h": "Toinen venäläinen lyhytaaltojen sotilasmajakka, joka toistaa päivin ja öin pieniä lyhyitä piippauksia, joskus viestien keskeyttämänä.",
+"l": "Kiinteä viiva, jonka lyhyt piippaus katkaisee noin 50 kertaa minuutissa; korvalle tasainen ”piip… piip…”, joka ei lopu koskaan (lehti 43).",
+"n": "likimääräinen rytmi"
+},
+"squeaky": {
+"nm": "”Squeaky Wheel”",
+"sh": "HF",
+"t": "”Squeaky Wheel”",
+"h": "Venäläinen lyhytaaltojen sotilasmajakka, jonka kuuntelijat nimesivät toistuvan äänikuvionsa mukaan.",
+"l": "Pieni kahden äänen kuvio, toinen nouseva, toistettuna silmukassa: kuin narisevan pyörän ääni (lehti 43).",
+"n": "likimääräinen jäljitelmä"
+},
+"codar": {
+"nm": "CODAR",
+"sh": "merentutka",
+"t": "CODAR: merivirtatutkat",
+"h": "Rannikkotutkat pyyhkäisevät taajuuskaistan kerran tai kahdesti sekunnissa mitatakseen virtauksia ja aaltoja.",
+"l": "Säännöllisiä rinnakkaisia vinoviivoja ja toistuva ”suhaus”; noin 4,5–5,5 MHz, 13 MHz ja 25 MHz, usein päivin ja öin (lehti 43).",
+"n": "pienennetty mittakaava"
+},
+"stanag": {
+"nm": "STANAG 4285",
+"sh": "8-PSK",
+"t": "Sotilasmodeemi STANAG 4285",
+"h": "8-PSK-vaihemodulaatio 2400 baudilla 1800 Hz:n kantoaallolla, ja kanavan seurantaan luotainjakso 107 ms:n välein.",
+"l": "Täysi noin 3 kHz:n levyinen lohko; korvalle kohinaa ja säännöllinen surina (lehti 43)."
+},
+"link11": {
+"nm": "Link-11",
+"sh": "16 sävyä",
+"t": "Link-11: laivaston datalinkki",
+"h": "Kuusitoista sävyä 605:stä 2915 Hz:iin yhtä aikaa, kukin vaihemoduloituna 75 kertaa sekunnissa.",
+"l": "Kampa neljäätoista säännöllistä viivaa 935:stä 2365 Hz:iin sekä kaksi erillistä viivaa 605 ja 2915 Hz:llä; korvalle musikaalinen surina (lehti 43)."
+},
+"numbers": {
+"nm": "Numeroasema",
+"sh": "ääni",
+"t": "Numeroasema",
+"h": "Tiettyyn aikaan lyhyt kutsumelodia, sitten ääni (usein synteettinen) lukee viiden numeron ryhmiä, AM:llä tai SSB:llä.",
+"l": "Melodia erillisinä säveleinä, sitten säännöllisiä tavuryhmiä hiljaisuuksin erotettuina (lehti 43).",
+"n": "jäljitelty ääni, ei oikeita numeroita"
+},
+"rttydwd": {
+"nm": "Sää-RTTY DWD",
+"sh": "50 Bd / 450 Hz",
+"t": "DWD:n sää-RTTY (Saksa)",
+"h": "Kuten amatöörien RTTY, mutta 50 baudia ja 450 Hz:n siirto: Saksan sääpalvelu lähettää tiedotteensa ja merisääennusteensa selväkielisenä.",
+"l": "Kaksi viivaa paljon kauempana toisistaan ja hieman nopeampi rytmi. Tiedotteiden välissä kutsu ”CQ CQ CQ DE DDK2 DDH7 DDK9” ja sitten RYRYRY. 4583, 7646 ja 10 100,8 kHz:llä, myös 147,3 kHz:llä (lehti 32)."
+},
+"mfsk16": {
+"nm": "MFSK16",
+"sh": "16 sävyä",
+"t": "MFSK16: kuusitoista sävyä",
+"h": "Kuusitoista sävyä 15,625 Hz:n välein, yksi kerrallaan, 15,625 kertaa sekunnissa; jokainen sävy kantaa neljä bittiä virheenkorjauksen suojaamina.",
+"l": "316 Hz:n kaista pieniä askelia, jotka hyppivät jatkuvasti, alussa kiinteän sävyn jälkeen. Korvalle nopea pieni sävelmä kuin huilu. Käytetään myös pienten kuvien lähettämiseen (lehti 29)."
+},
+"sitora": {
+"nm": "SITOR-A (ARQ)",
+"sh": "teleksi",
+"t": "SITOR-A: merenkulun teleksi ARQ-tilassa",
+"h": "Asema lähettää kolmen merkin lohkoja (210 ms, 100 baudia, 170 Hz:n siirto) 450 ms:n välein; lohkojen välissä toinen asema vastaa lyhyellä signaalilla, joka tarkoittaa ”vastaanotettu” tai ”toista”.",
+"l": "Lyhyitä säännöllisiä purskeita ja välissä pieni, heikompi vastaus: sirkan ”sirp-sirp”. Nykyään harvinainen lyhyillä aalloilla (lehti 20)."
+},
+"dscvhf": {
+"nm": "VHF-DSC (kanava 70)",
+"sh": "DSC",
+"t": "DSC: digitaalinen selektiivikutsu kanavalla 70",
+"h": "Noin puolen sekunnin purske 1200 baudilla kahdella sävyllä, 1300 ja 2100 Hz: siinä on aluksen MMSI-numero, kutsun tyyppi ja hädässä sijainti.",
+"l": "Lyhyt, kimeä ”brrrt” 156,525 MHz:llä, joka alkaa vuorottelevien bittien jonolla. Keski- ja lyhyillä aalloilla DSC on 100 baudin FSK:ta kuten NAVTEX (lehti 20)."
+},
+"selcal": {
+"nm": "Ilmailun SELCAL",
+"sh": "4 sävyä",
+"t": "SELCAL: lentokoneiden selektiivikutsu lyhyillä aalloilla",
+"h": "Lennonjohtaja kutsuu tiettyä konetta kahdella noin sekunnin pulssilla, kumpikin kahdesta sävystä kuudestatoista (312,6–1479,1 Hz). Koneessa syttyy valo ja soi kello: miehistön ei tarvitse kuunnella koko ajan.",
+"l": "Kaksi peräkkäistä sointua, ”bing-bong”, puheviestien välissä ilmailun SSB-taajuuksilla, esimerkiksi 5616 tai 8864 kHz (lehti 17)."
+},
+"dcs": {
+"nm": "DCS",
+"sh": "134,4 bit/s",
+"t": "DCS: digitaalinen alisävy",
+"h": "CTCSS:n jatkuvan sävyn sijaan radio lähettää puheen alla 23 bitin sanaa, jota toistetaan tauotta 134,4 bitin sekuntinopeudella. Lopussa 134,4 Hz:n sävy sulkee kohinasalvan äänettömästi.",
+"l": "FM-vastaanottimen äänessä: epäsäännöllinen kaista aivan alhaalla alle 300 Hz:n ja tumma jyminä, jos radion suodin päästää sen läpi (lehti 10)."
+},
+"t1750": {
+"nm": "1750 Hz:n sävy",
+"sh": "toistin",
+"t": "1750 Hz:n sävy: toistimen avaus",
+"h": "Lyhyt 1750 Hz:n sävy (noin 0,5–1 s) lähetyksen alussa avaa yhä joitakin eurooppalaisia amatööritoistimia; toistin vastaa usein piippauksella, kun lähetysnappi vapautetaan.",
+"l": "Lyhyt viiva 1750 Hz:llä, sitten puhe ja lopuksi toistimen piippaus (lehti 10)."
+},
+"ncdxf": {
+"nm": "NCDXF-majakat",
+"sh": "14,100 MHz",
+"t": "NCDXF / IARU -majakat: etenemisen testaus",
+"h": "Kahdeksantoista majakkaa ympäri maailman lähettää vuorotellen, kukin kymmenen sekuntia, taajuuksilla 14,100, 18,110, 21,150, 24,930 ja 28,200 MHz: kutsutunnus sähkötyksenä ja sitten neljä sekunnin viivaa teholla 100 W, 10 W, 1 W ja 0,1 W.",
+"l": "Kutsutunnus ja sitten neljä yhä heikompaa viivaa: jos kuulet vielä viimeisen, eteneminen kyseiseen majakkaan on erinomainen. Tässä 4U1UN (New York) ja sitten VE8AT (Kanada) (lehti 30)."
+},
+"lrpt": {
+"nm": "Meteor-M LRPT",
+"sh": "137,9 MHz",
+"t": "Meteor-M-satelliitit: LRPT-kuvat",
+"h": "Venäläiset Meteor-M-sääsatelliitit lähettävät kuvansa digitaalisesti: nelitilainen vaihemodulaatio (QPSK), 72 000 symbolia sekunnissa, noin 120 kHz:n levyinen.",
+"l": "Täysi pyöreäreunainen lohko, joka liukuu hitaasti ylilennon aikana (Dopplerin ilmiö); korvalle pelkkää kohinaa. 137,9 tai 137,1 MHz:llä, dekoodaus SatDumpilla (lehti 41).",
+"n": "pienennetty mittakaava"
+},
+"quindar": {
+"nm": "Quindar-sävyt",
+"sh": "NASA",
+"t": "Quindar-sävyt: Apollon piippaukset",
+"h": "Kun Houston painaa mikrofonin näppäintä, 2525 Hz:n piippaus (250 ms) käynnistää maa-asemien lähettimet; vapautettaessa 2475 Hz:n piippaus sammuttaa ne.",
+"l": "Korkea piippaus ennen jokaista lausetta ja toinen, hieman matalampi, sen jälkeen: Apollo-lentojen tallenteiden kuuluisa ääni (lehti 41)."
+},
+"wow": {
+"nm": "”Wow!”-signaali",
+"sh": "1977",
+"t": "”Wow!”-signaali (15. elokuuta 1977)",
+"h": "Big Ear -radioteleskooppi (Ohio) havaitsi 72 sekunnin ajan kapean ja hyvin voimakkaan signaalin vetyviivan lähellä, noin 1420,456 MHz:llä. Tähtitieteilijä Jerry Ehman kirjoitti tulosteeseen ”Wow!”. Sitä ei nähty enää koskaan, ja sen alkuperästä kiistellään yhä.",
+"l": "Ohut viiva, joka nousee kohinasta, voimistuu ja haipuu: kiinteän lähteen muoto sen kulkiessa antennin keilan läpi. Tämä on rekonstruktio: äänitallennetta ei ole olemassa (lehti 47).",
+"n": "72 s tiivistetty 12 sekuntiin"
+},
+"frb": {
+"nm": "Nopea radiopurkaus",
+"sh": "FRB",
+"t": "Nopea radiopurkaus (FRB)",
+"h": "Muutaman millisekunnin radiovälähdys toisesta galaksista; ensimmäinen löydettiin vuonna 2007. Sen läpäisemä kaasu viivästää matalia taajuuksia paljon: purkaus saapuu venyneenä, korkeat sävelet ensin.",
+"l": "Yksi ainoa käyrä, joka putoaa spektrin ylälaidasta alalaitaan, sitten ei mitään. Jotkin toistuvat; useimmat nähdään vain kerran (lehti 47).",
+"n": "hidastettu ja liioiteltu paljon"
+},
+"letterb": {
+"nm": "Yhden kirjaimen majakat",
+"sh": "D, P, S, C…",
+"t": "Yhden kirjaimen majakat",
+"h": "Venäjän laivaston lähettimet toistavat loputtomasti yhtä sähkötyskirjainta, kukin 100 Hz:n päässä naapuristaan: D, P, S, C, A, F, K tai M paikasta riippuen.",
+"l": "Rinnakkaisia katkoviivoja hyvin lähekkäin, kullakin oma rytminsä. Noin 4558, 5154, 7039, 10 872, 13 528 ja 16 332 kHz, CW:llä (lehti 43)."
+},
+"sid": {
+"nm": "Auringonpurkaus VLF:llä",
+"sh": "SID",
+"t": "Auringonpurkaus VLF:llä nähtynä (SID)",
+"h": "Laivastojen VLF-lähettimet (Ranskassa 20,9 kHz, Saksassa 23,4 kHz…) etenevät maan ja ionosfäärin välissä. Kun roihupurkaus saapuu, sen röntgensäteet muuttavat ionosfäärin alaosaa muutamassa minuutissa ja vastaanottotaso hyppää.",
+"l": "Kapea, vakaa kaista (lähettimen MSK-signaali), joka äkkiä voimistuu ja palaa sitten hitaasti ennalleen. Riittää lankasilmukka ja äänikortti: tähtiharrastajien klassikkoprojekti (lehti 47).",
+"n": "tunti tiivistetty 12 sekuntiin"
+},
+"qrn": {
+"nm": "Ukkoshäiriöt",
+"sh": "QRN",
+"t": "Ukkoshäiriöt (QRN)",
+"h": "Jokainen salama on hyvin voimakas lähetin, joka kattaa kaikki taajuudet kerralla. Keski- ja lyhyillä aalloilla kuulee ukkosia tuhansien kilometrien päästä, etenkin kesällä ja matalilla kaistoilla.",
+"l": "Epäsäännöllisiä vaakaviivoja koko leveydeltä; korvalle kuivia rasahduksia. Häiriönpoistin (NB) auttaa vähän, kehäantenni enemmän (lehti 1)."
+},
+"fading": {
+"nm": "Valikoiva häipyminen",
+"sh": "QSB",
+"t": "Valikoiva häipyminen (QSB)",
+"h": "Lyhyillä aalloilla signaali saapuu useaa reittiä ionosfäärin kautta. Taajuudesta riippuen reitit vahvistavat tai kumoavat toisiaan: kapea notko vaeltaa signaalin halki.",
+"l": "Tumma alue, joka liukuu hitaasti AM-aseman läpi. Kun se ohittaa keskellä olevan kantoaallon, ääni muuttuu karheaksi ja säröiseksi muutamaksi sekunniksi; synkroni-ilmaisu tai kuuntelu SSB:llä korjaa sen (lehti 1)."
+},
+"plc": {
+"nm": "Sähköverkkoyhteys (PLC)",
+"sh": "2–30 MHz",
+"t": "PLC: internetiä pistorasioista",
+"h": "Sähköverkkosovittimet lähettävät dataa talon sähköjohtojen kautta sadoilla kantoaalloilla 2 ja 30 MHz:n välillä (uudemmissa malleissa ylempänä), yksi 24,4 kHz:n välein. Johdot säteilevät kuin antenni.",
+"l": "Kampa säännöllisiä viivoja, jotka välkkyvät paketteina, amatöörikaistoilla aukot (standardin vaatimat lovet); korvalle rätinää, joka seuraa nettiliikennettä (lehti 43).",
+"n": "pienennetty mittakaava"
+},
+"fence": {
+"nm": "Sähköaita",
+"sh": "tik… tik…",
+"t": "Sähköaita",
+"h": "Paimenlaite lähettää lankaan usean tuhannen voltin pulssin noin kerran sekunnissa. Jos ruoho koskettaa lankaa tai eristin on vioittunut, kipinä hyppää ja säteilee kaikilla taajuuksilla.",
+"l": "Hyvin ohut vaakaviiva koko leveydeltä täysin säännöllisin välein; ”tik… tik…” pitkiltä aalloilta VHF:lle asti. Tasainen rytmi erottaa sen ukkoshäiriöistä (lehti 43)."
+},
+"gsm": {
+"nm": "GSM-puhelin",
+"sh": "217 Hz",
+"t": "GSM-puhelin kaiuttimen vieressä",
+"h": "2G-puhelin lähettää 0,577 ms:n purskeina 217 kertaa sekunnissa. Huonosti suojattu äänivahvistin ilmaisee purskeet ja tekee ne kuuluviksi.",
+"l": "Kampa viivoja 217 Hz:n välein; kuuluisa ”tit-tit-ti-ti-tit” juuri ennen kuin puhelin soi, sitten tasainen surina puhelun ajan. Yhä harvinaisempi: 2G-verkkoja suljetaan (lehti 43)."
+},
+"jjy": {
+"nm": "JJY",
+"sh": "40 / 60 kHz",
+"t": "Aikamerkki JJY (Japani, 40 ja 60 kHz)",
+"h": "Joka sekunti kantoaalto on täydellä teholla 0,8 s (bitti 0), 0,5 s (bitti 1) tai 0,2 s (merkki) ja putoaa sitten 10 %:iin. Päinvastoin kuin DCF77, joka putoaa sekunnin alussa.",
+"l": "Kiinteä viiva, joka heikkenee jokaisen sekunnin lopussa, aiemmin tai myöhemmin. Lähettimet Fukushimassa (40 kHz) ja Saga-Fukuokassa (60 kHz) Japanin radiokelloille (lehti 39)."
+},
+"rwm": {
+"nm": "RWM",
+"sh": "4996 kHz",
+"t": "Aikamerkki RWM (Moskova)",
+"h": "Sähkötyksenä 4996, 9996 ja 14 996 kHz:llä: yksi 100 ms:n pulssi joka sekunti ja toisina minuutteina kymmenen pulssia sekunnissa. Kutsutunnus RWM sähkötetään kahdesti tunnissa.",
+"l": "Kutsutunnus, sitten säännöllisiksi ”tikeiksi” pilkottu viiva, sitten nopeiksi pisteiksi. Kuuntele CW:llä tai SSB:llä (lehti 39).",
+"n": "tiivistetty ote"
+},
+"bpm": {
+"nm": "BPM",
+"sh": "2,5–15 MHz",
+"t": "Aikamerkki BPM (Kiina)",
+"h": "Puchengin asema (Shaanxi) lähettää AM:llä 2,5, 5, 10 ja 15 MHz:llä: 10 ms:n tik 1000 Hz:llä joka sekunti (300 ms tasaminuutilla) ja tiettyinä minuutteina 100 ms:n tikit UT1-ajalle. Kutsutunnus BPM sähkötetään ja sitten luetaan ääneen.",
+"l": "Ilmaistussa äänessä: kutsutunnus, sitten hyvin lyhyitä viivoja 1000 Hz:llä, yksi sekunnissa, ja tasaminuutilla pidempi. Sekoittuu usein WWV:hen samoilla taajuuksilla (lehti 39).",
+"n": "tiivistetty ote"
+},
+"humpback": {
+"nm": "Ryhävalas",
+"sh": "laulu",
+"t": "Ryhävalaan laulu",
+"h": "Talvella lisääntymisalueilla urokset laulavat: voihkaisujen, murinoiden ja huutojen sarja muodostaa teeman, jota toistetaan samanlaisena tuntikausia ja joka muuttuu kaudesta toiseen. Hydrofonit kuulevat sen kymmenien kilometrien päähän.",
+"l": "Paksuja jälkiä harmonisineen, jotka nousevat tai laskevat hitaasti 100 Hz:n ja muutaman kHz:n välillä; sama sarja palaa muutaman sekunnin kuluttua. Pinnasta ja pohjasta heijastuvat kaiut pidentävät jokaista säveltä."
+},
+"bluewhale": {
+"nm": "Sinivalas",
+"sh": "×10",
+"t": "Sinivalas: matalin kutsuääni",
+"h": "Maailman suurin eläin päästää hyvin matalia (10–40 Hz) ja hyvin voimakkaita kutsuääniä, 10–20 sekunnin mittaisia ja tuntikausia toistettuja: ne kantavat satojen kilometrien päähän. Jotta ne kuulisi, tallenne nopeutetaan kymmenkertaiseksi.",
+"l": "Sykkivä osa, sitten pitkä sävel, joka laskee tuskin lainkaan, harmoniset yläpuolellaan; sarja toistuu. Asteikko näyttää todelliset taajuudet.",
+"n": "nopeutettu 10×"
+},
+"finwhale": {
+"nm": "Sillivalas",
+"sh": "20 Hz",
+"t": "Sillivalas: 20 Hz:n pulssit",
+"h": "Sillivalas päästää noin sekunnin pulsseja, jotka laskevat noin 25:stä 18 Hz:iin, säännöllisin välein, joskus päiväkausia. 1950- ja 60-luvuilla nämä ”20 Hz:n signaalit” askarruttivat Yhdysvaltain laivaston kuuntelupisteitä, kunnes ne yhdistettiin tähän valaaseen.",
+"l": "Lyhyitä viivoja, kaikki samanlaisia, säännöllisenä sarjana tai pareittain, kuin hyvin hitaan sydämen lyönnit; kukin laskee hieman taajuudeltaan. Asteikko näyttää todelliset taajuudet.",
+"n": "nopeutettu 10×"
+},
+"sperm": {
+"nm": "Kaskelotti",
+"sh": "naksutukset",
+"t": "Kaskelotin naksutukset",
+"h": "Kaskelotti saalistaa syvillä sukelluksilla luotaimensa avulla: hyvin voimakkaita naksauksia noin kerran sekunnissa, jotka kiihtyvät ”nariseviksi”, kun saalis on lähellä. Keskenään kaskelotit vaihtavat ”kodia”, lyhyitä naksausjaksoja, joiden rytmi vaihtelee klaanista toiseen.",
+"l": "Vaakaviivoja koko leveydeltä tasaisin välein, sitten tiheinä kuin surina (narina), sitten pieni rytminen kuvio: koda. Jokainen naksaus koostuu useista lähekkäisistä pulsseista, jotka syntyvät heijastuksista eläimen päässä."
+},
+"dolphin": {
+"nm": "Pullonokkadelfiini",
+"sh": "vihellykset",
+"t": "Delfiinin vihellykset ja naksutukset",
+"h": "Pullonokkadelfiini viheltää noin 5–20 kHz:llä; jokaisella yksilöllä on ”tunnusvihellys”, joka toimii nimenä. Saalistaessaan ja suunnistaessaan se lähettää myös hyvin lyhyiden naksausten jonoja, jopa useita satoja sekunnissa.",
+"l": "Ohuita käyriä, jotka nousevat ja laskevat taas, usein samanlaisina toistuen, ja vaakaviivojen ryöppyjä kaikuluotausta varten. Taajuudet on jaettu kolmella kuuluvuuden vuoksi; asteikko näyttää todelliset arvot.",
+"n": "soitetaan 3 kertaa matalammalta"
+},
+"orca": {
+"nm": "Miekkavalas",
+"sh": "pulssiäänet",
+"t": "Miekkavalaan pulssiäänet",
+"h": "Miekkavalaat viestivät pulssiäänillä: pulssijonoilla, jotka ovat niin nopeita (500–2000 sekunnissa), että ne kuulostavat sävelltä, ja sävelkorkeus hyppää äkisti. Jokaisella perheryhmällä on oma ”murteensa”.",
+"l": "Pino rinnakkaisia jälkiä (harmoniset), jotka nousevat tai laskevat yhdessä, ja selvä taitos äänen keskellä; joskus ohut, korkeampi vihellys."
+},
+"bseal": {
+"nm": "Partahylje",
+"sh": "liverrys",
+"t": "Partahylkeen liverrys",
+"h": "Keväällä arktisen jään alla uros päästää pitkiä liverryksiä, jotka laskeutuvat kierteisesti useasta kHz:stä muutamaan sataan hertsiin, joskus kokonaisen minuutin. Niillä puolustetaan reviiriä ja houkutellaan naaraita.",
+"l": "Aaltoileva käyrä, joka liukuu asteikon yläpäästä alas kuin aukeava jousi, ja lopussa matala sävel.",
+"n": "lyhennetty"
+},
+"shrimp": {
+"nm": "Pistoolikatkaravut",
+"sh": "riutta",
+"t": "Pistoolikatkaravut",
+"h": "Napsauttaessaan ison saksensa kiinni katkarapu ampuu vesisuihkun niin nopeasti, että syntyy kavitaatiokupla; luhistuessaan kupla paukahtaa kuin laukaus. Tuhannet katkaravut muodostavat riuttojen taustaäänen ja voivat häiritä luotaimia.",
+"l": "Pisteiden ja lyhyiden vaakaviivojen sade koko leveydeltä ilman mitään järjestystä; kuulokkeissa jatkuva rätinä kuin paistettaessa."
+},
+"sonar": {
+"nm": "Aktiivinen luotain",
+"sh": "ping",
+"t": "Aktiivisen luotaimen ping",
+"h": "Laiva lähettää voimakkaan äänipulssin (tässä noin 3,5 kHz, fregattien runkoluotainten alue) ja kuuntelee kaikua: viive kertoo etäisyyden, taajuussiirtymä (Dopplerin ilmiö) kohteen nopeuden. Ääni palaa myös pyrstönä pohjasta ja pinnasta: jälkikaiunta.",
+"l": "Lyhyt, voimakas jälki, sammuva pyrstö ja sitten kaiku, paljon heikompi ja hieman siirtynyt taajuudeltaan. Toinen ping on taajuuspyyhkäisy (chirp), joka mittaa etäisyyden paremmin."
+},
+"propeller": {
+"nm": "Laivan potkuri",
+"sh": "kavitaatio",
+"t": "Ohi kulkevan laivan potkuri",
+"h": "Potkurin lavat synnyttävät kavitaatiokuplia, jotka puhkeavat: leveä kohina, joka sykkii lapojen ohikulun tahdissa. Koneisto lisää kiinteitä viivoja. Luotainoperaattorit analysoivat tämän rytmin (DEMON-analyysi) laskeakseen lavat ja kierrosnopeuden ja tunnistaakseen laivan.",
+"l": "Kohinaa laajalla kaistalla, lapojen tahdissa vaakaraitoina, ja muutama kiinteä pystyviiva (moottori, alennusvaihde). Kaikki voimistuu ja sitten haipuu, kun laiva kulkee hydrofonin yli."
+},
+"uqc": {
+"nm": "Vedenalainen puhelin",
+"sh": "UQC 8 kHz",
+"t": "Vedenalainen puhelin (UQC, ”Gertrude”)",
+"h": "Sukellusveneet ja laivat puhuvat veden alla akustisella puhelimella: puhe lähetetään yksisivukaistana 8,0875 kHz:n kantoaallon yläpuolella rungon muuntimesta. Kantama: muutama kilometri.",
+"l": "SSB-puhekaista yli 8 kHz:n; ilmaistuna kaukainen ääni, joka huojuu ja kaikuu pinnan ja pohjan heijastusten vuoksi. Näyttö on puolitettu; asteikko näyttää todelliset taajuudet.",
+"n": "asteikko puolitettu"
+},
+"zevs": {
+"nm": "ZEVS 82 Hz",
+"sh": "ELF",
+"t": "ZEVS: sukellusveneiden radio 82 Hz:llä",
+"h": "Radioaallot tunkeutuvat hyvin huonosti meriveteen, paitsi äärimmäisen matalilla taajuuksilla (ELF). Venäläinen ZEVS-lähetin Kuolan niemimaalla lähettää 82 Hz:llä kymmenien kilometrien antennilinjoin tavoittaakseen syvällä sukeltavat sukellusveneet. Nopeus on mitätön: muutama merkki minuutissa.",
+"l": "Ohut viiva 82 Hz:llä sähköverkon 50 Hz:n viivan ja sen harmonisten vieressä sekä ukkosten häiriöt. Kuulokkeissa tuskin kuuluva matala hurina; vastaanotetaan suurella kehäantennilla ja äänikortilla. Yhdysvaltain vastaava 76 Hz:n järjestelmä suljettiin 2004."
+},
+"bloop": {
+"nm": "”Bloop”",
+"sh": "1997",
+"t": "”Bloop” (1997)",
+"h": "Vuonna 1997 NOAA:n hydrofonit Tyynellämerellä tallensivat hyvin matalan, nopeasti nousevan äänen, joka kuului tuhansien kilometrien päähän. Pitkään arvoitus; vuodesta 2012 se on selitetty jäänjäristykseksi: valtava jäävuori halkeilee.",
+"l": "Leveä kaista, joka nousee muutamassa sekunnissa harmonisineen ja haipuu sitten hitaasti. Rekonstruktio, nopeutettu 16-kertaiseksi kuten NOAA:n julkaisema tallenne.",
+"n": "nopeutettu 16×"
+},
+"quake": {
+"nm": "Lähimaanjäristys",
+"sh": "P ja sitten S",
+"t": "Lähellä oleva maanjäristys: P- ja S-aallot",
+"h": "Maan värähtelyt ovat korvalle liian matalia (muutama hertsi), joten seismometrin tallenne nopeutetaan. Ensin saapuu P-aalto (pitkittäinen), sitten hitaampi ja voimakkaampi S-aalto (poikittainen). S−P-ero sekunteina kerrottuna noin kahdeksalla antaa etäisyyden kilometreinä.",
+"l": "Ensimmäinen lyhyt, terävä nytkähdys (P), puoli sekuntia myöhemmin voimakkaampi ja matalampi jylinä (S), joka sammuu pitkään pyrstöön: kodaan. Tässä järistys on noin 80 km:n päässä. Asteikko näyttää todelliset taajuudet.",
+"n": "nopeutettu 20×"
+},
+"teleseism": {
+"nm": "Kaukainen maanjäristys",
+"sh": "kaukojäristys",
+"t": "Kaukainen maanjäristys: P, S ja pinta-aallot",
+"h": "9000 km:n päässä olevasta järistyksestä P-aalto kulkee Maan läpi noin kahdessatoista minuutissa, S-aalto saapuu noin kymmenen minuuttia myöhemmin, ja sitten tulevat pinta-aallot (Love ja Rayleigh), hitaat ja hyvin matalat, jotka ravistelevat pisimpään. Näin seismometrit kaikkialla maailmassa tallentavat jokaisen suuren järistyksen.",
+"l": "Kaksi pientä nytkähdystä (P ja sitten S), sitten pitkä, matala maininki, jonka taajuus nousee vähitellen: pisimmät pinta-aallot kulkevat nopeammin ja saapuvat ensin (dispersio). Yli kolmen tunnin tallenne tiivistetty 12 sekuntiin.",
+"n": "nopeutettu 1000×"
+},
+"swarm": {
+"nm": "Maanjäristysparvi",
+"sh": "tulivuori",
+"t": "Maanjäristysparvi ennen purkausta",
+"h": "Noustessaan magma murtaa kalliota: satoja pieniä järistyksiä yhä tiheämmin, kuten La Palmalla 2021. Observatoriot seuraavat tätä rytmiä ennustaakseen purkauksen; kun laava tulee ulos, nytkähdykset vaihtuvat jatkuvaksi vapinaksi.",
+"l": "Yksittäisiä pieniä nytkähdyksiä, sitten yhä tiheämmin kuin poksahtelevat popcornit, kunnes lopussa yhtenäinen kaista: purkauksen vapina. Asteikko näyttää todelliset taajuudet.",
+"n": "nopeutettu 20×"
+},
+"tremor": {
+"nm": "Harmoninen vapina",
+"sh": "Redoubt",
+"t": "Nouseva harmoninen vapina (Redoubt, 2009)",
+"h": "Ennen eräitä Redoubt-tulivuoren (Alaska) räjähdyksiä vuonna 2009 maa värähteli kuin kieli: perussävel harmonisineen liukui noin 1 Hz:stä lähes 30 Hz:iin ja vaikeni muutama sekunti ennen räjähdystä. Se selitetään hyvin nopealla pienten toistuvien järistysten sarjalla.",
+"l": "Kampa rinnakkaisia jälkiä, jotka erkanevat noustessaan kuin sireeni, sitten hiljaisuus ja sitten leveä kohina: räjähdys. Asteikko näyttää todelliset taajuudet.",
+"n": "nopeutettu 20×"
+},
+"stromboli": {
+"nm": "Strombolin infraääni",
+"sh": "infraääni",
+"t": "Strombolin räjähdysten infraääni",
+"h": "Stromboli (Italia) on räjähdellyt vuosisatoja noin 10–20 minuutin välein. Jokainen räjähdys lähettää ilmaan muutaman hertsin paineaallon: infraääntä, liian matalaa korvalle, mutta mikrobarometrit havaitsevat sen kilometrien päästä.",
+"l": "Lyhyt, matala jysähdys jokaisessa räjähdyksessä, sitten kaasusuihkun kohina ja tyyntä seuraavaan asti; alla tuulen kohina. Neljäkymmentä minuuttia tiivistetty 12 sekuntiin.",
+"n": "nopeutettu 200×"
+},
+"microseism": {
+"nm": "Mikroseismi",
+"sh": "maininki",
+"t": "Mikroseismi: maininki, joka saa Maan värähtelemään",
+"h": "Kaikkialla Maassa, kaukana rannikoistakin, seismometrit tallentavat jatkuvaa värähtelyä, jonka jakso on 5–20 s: valtameren maininki painaa merenpohjaa. Se voimistuu myrskyissä ja on talvella voimakkaampi; se on jokaisen seismogrammin taustakohina.",
+"l": "Leveä, yhtenäinen kaista ja sen alla heikompi (primäärinen mikroseismi, aaltojen jaksolla), joka paisuu myrskyn voimistuessa. Yli kolme tuntia tiivistetty 12 sekuntiin.",
+"n": "nopeutettu 1000×"
+},
+"modes": {
+"nm": "Soiva Maa",
+"sh": "ominaisvärähtelyt",
+"t": "Ominaisvärähtelyt: Maa soi kuin kello",
+"h": "Hyvin suuren järistyksen jälkeen, kuten Sumatralla 2004, koko Maa värähtelee kuin kello päiviä tai jopa kuukausia: jokaisella ominaisvärähtelyllä on oma sävelensä. Matalimman, 0S2:n, jakso on 54 minuuttia; ”hengittävä” moodi 0S0, 20,5 minuuttia, kestää pisimpään.",
+"l": "Nytkähdyksen jälkeen rivi kiinteitä pystyviivoja, Maan säveliä; korkeimmat sammuvat nopeasti, ja lopulta jäljellä on vain yksi viiva, moodi 0S0. Asteikko on millihertseinä; noin neljä viikkoa tiivistetty 12 sekuntiin.",
+"n": "nopeutettu 200 000×"
+},
+"bit2": {
+"nm": "2 bittiä",
+"sh": "4 tasoa",
+"t": "Pelimusiikkia 2 bitillä",
+"h": "Digitaalinen ääni on mittausten (näytteiden) jono. Kahdella bitillä jokainen näyte voi saada vain 4 arvoa: aaltomuodosta tulee karkea porras. Pyöristysvirhe kuuluu rakeisena kohinana ja hyvin voimakkaana säröinä; signaali-kohinasuhde on vain noin 14 dB (6 dB bittiä kohden).",
+"l": "Musiikki hukkuu koko leveyden kattavaan kohinamattoon, joka seuraa säveliä. Vertaa 4, 8 ja 16 bittiin: sama sävelmä, vain bittien määrä muuttuu. Tätä sivua varten sävelletty alkuperäinen sävelmä pelikonsolin tyyliin."
+},
+"bit4": {
+"nm": "4 bittiä",
+"sh": "16 tasoa",
+"t": "Pelimusiikkia 4 bitillä",
+"h": "16 mahdollista arvoa näytettä kohden, noin 26 dB:n signaali-kohinasuhde. Tämä on NES-konsolin kolmiokanavan ja Game Boyn ”wave”-kanavan näytteiden tarkkuus: osa konsolimusiikin rakeisuudesta tulee tästä.",
+"l": "Sävelet erottuvat, mutta kohinan harso näkyy yhä niiden välissä ja koko leveydellä. Kohina seuraa voimakkuutta: tauoissa se katoaa."
+},
+"bit8": {
+"nm": "8 bittiä",
+"sh": "256 tasoa",
+"t": "Pelimusiikkia 8 bitillä",
+"h": "256 arvoa, noin 50 dB:n signaali-kohinasuhde: ensimmäisten samplereiden ja vanhojen tietokoneiden äänten laatu. Huomaa: ”8-bittinen” konsoli kuten NES on saanut nimensä suorittimestaan, ei äänestään, joka tuli yksinkertaisista oskillaattoreista (kaksi pulssiaaltoa, kolmio, kohina).",
+"l": "Taustakohina on enää kevyt harso, joka näkyy vain tämän osion 110 dB:n asteikon ansiosta. Korvalle hiljaisissa kohdissa heikko kohina."
+},
+"bit16": {
+"nm": "16 bittiä",
+"sh": "65 536 tasoa",
+"t": "Pelimusiikkia 16 bitillä",
+"h": "65 536 arvoa, noin 98 dB:n signaali-kohinasuhde: CD-äänen (44,1 kHz, 16 bittiä) ja Super Nintendon äänilähdön (32 kHz) tarkkuus. Pyöristyskohina on heikompaa kuin mikään, minkä korva normaalilla voimakkuudella havaitsee.",
+"l": "Ei lainkaan näkyvää kohinaa: vain sävelet, niiden harmoniset ja rummut. Tämä on myös koko tämän sivun laatu, näytteistettynä 12 kHz:llä."
+},
+"bit32": {
+"nm": "32 bittiä",
+"sh": "liukuluku",
+"t": "Pelimusiikkia 32 bitillä",
+"h": "32-bittinen liukuluku: studio-ohjelmistojen tarkkuus, jolla kymmeniä raitoja voi miksata ja vahvistaa häviöttä. Korvalle ei eroa 16 bittiin. ”32-bittinen” PlayStation soitti itse asiassa äänensä 16 bitillä 44,1 kHz:llä.",
+"l": "Sama kuin 16 bittiä, silmälle ja korvalle: yli 16 bitin hyöty on vain studiotyössä."
+},
+"sr3k": {
+"nm": "3 kHz",
+"sh": "näytteenotto",
+"t": "Sama musiikki 3 kHz:n näytteenottotaajuudella",
+"h": "Näytteiden määrä sekunnissa määrää korkeimman mahdollisen taajuuden: puolet siitä (Shannonin näytteenottoteoreema), tässä 1,5 kHz. Ennen näytteenottoa suodin poistaa kaiken sen yläpuolelta; ilman sitä ne taajuudet laskostuisivat häiriöääniksi. Jäljelle jäävät vain matalat sävelet ja keskialue: musiikki kuulostaa tukkoiselta.",
+"l": "Spektri katkeaa jyrkästi noin 1,5 kHz:n kohdalla: yläpuolella ei mitään. Perinteinen puhelin näytteistää 8 kHz:llä (puhe 3,4 kHz:iin asti), CD 44,1 kHz:llä; tämä sivu on rajoitettu 12 kHz:iin."
+},
+"sr6k": {
+"nm": "6 kHz",
+"sh": "näytteenotto",
+"t": "Sama musiikki 6 kHz:n näytteenottotaajuudella",
+"h": "6 kHz:llä taajuudet ulottuvat 3 kHz:iin: sävelet ja rumpujen runko pääsevät läpi, mutta korkeiden harmonisten ja symbaalien kirkkaus katoaa.",
+"l": "Täysi spektri 3 kHz:iin asti, yläpuolella ei mitään. Vertaa 16 bittiin (koko leveys, 6 kHz:iin asti) ja 3 kHz:iin."
+}
+}
+}

@@ -1,5 +1,5 @@
 <meta charset="utf-8">
-<title>VSISA V1.8 · Virtual Simulator identification Signal Audio</title>
+<title>VSISA V1.9 · Virtual Simulator identification Signal Audio</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=VT323&display=swap">
@@ -148,7 +148,7 @@ header .hdr-ctl{justify-content:flex-start}
 <div class="wrap">
   <header>
     <div class="brand">
-      <h1><span id="tTitle">VSISA</span> <span class="ver">V1.8</span></h1>
+      <h1><span id="tTitle">VSISA</span> <span class="ver">V1.9</span></h1>
       <div class="brand-side">
         <p class="brand-desc" style="margin:0">Virtual Simulator identification Signal Audio · OpenBookRadio</p>
         <div class="odo-wrap" id="odo" hidden>
@@ -225,7 +225,7 @@ header .hdr-ctl{justify-content:flex-start}
 "use strict";
 const SR = 12000, TAU = 2*Math.PI, FC = 3000;
 const I18N = /*I18N*/{};
-const LANGS=[["fr","Français","fr-FR","🇫🇷"],["en","English","en-GB","🇬🇧"],["es","Español","es-ES","🇪🇸"],["de","Deutsch","de-DE","🇩🇪"],["nl","Nederlands","nl-NL","🇳🇱"],["cs","Čeština","cs-CZ","🇨🇿"],["pt","Português","pt-PT","🇵🇹"],["it","Italiano","it-IT","🇮🇹"],["pl","Polski","pl-PL","🇵🇱"],["el","Ελληνικά","el-GR","🇬🇷"],["sv","Svenska","sv-SE","🇸🇪"],["ru","Русский","ru-RU","🇷🇺"],["uk","Українська","uk-UA","🇺🇦"],["zh","中文","zh-CN","🇨🇳"],["ja","日本語","ja-JP","🇯🇵"]];
+const LANGS=[["cs","Čeština","cs-CZ","🇨🇿"],["da","Dansk","da-DK","🇩🇰"],["de","Deutsch","de-DE","🇩🇪"],["en","English","en-GB","🇬🇧"],["es","Español","es-ES","🇪🇸"],["fr","Français","fr-FR","🇫🇷"],["it","Italiano","it-IT","🇮🇹"],["hu","Magyar","hu-HU","🇭🇺"],["nl","Nederlands","nl-NL","🇳🇱"],["nb","Norsk","nb-NO","🇳🇴"],["pl","Polski","pl-PL","🇵🇱"],["pt","Português","pt-PT","🇵🇹"],["ro","Română","ro-RO","🇷🇴"],["fi","Suomi","fi-FI","🇫🇮"],["sv","Svenska","sv-SE","🇸🇪"],["el","Ελληνικά","el-GR","🇬🇷"],["ru","Русский","ru-RU","🇷🇺"],["uk","Українська","uk-UA","🇺🇦"],["zh","中文","zh-CN","🇨🇳"],["ja","日本語","ja-JP","🇯🇵"]];
 let LG="fr", LOC="fr-FR";
 function t(k){ return (I18N[LG]&&I18N[LG].ui[k])||I18N.fr.ui[k]||k; }
 /* compteur de visites et d'écoutes : seulement sur la page en ligne (github.io), service Abacus sans cookie */
@@ -1214,7 +1214,7 @@ function tick(){
 const aside=document.getElementById("modes");
 let openG=new Set([0,1,2]); // rubriques ouvertes : les trois premières à l'ouverture de la page
 function buildAside(){ aside.textContent=""; aside.setAttribute("aria-label",t("signals"));
-  const cnt=document.createElement("p"); cnt.className="count"; cnt.textContent=MODES.length+" "+t("signals").toLocaleLowerCase(LOC); aside.appendChild(cnt);
+  const cnt=document.createElement("p"); cnt.className="count"; cnt.textContent=t("nsig").replace("{n}",MODES.length.toLocaleString(LOC)); aside.appendChild(cnt);
   const groups=(I18N[LG]&&I18N[LG].groups)||I18N.fr.groups;
   groups.forEach((g,gi)=>{ const ms=MODES.filter(m=>m.gi===gi); if(!ms.length) return;
     const d=document.createElement("div"), open=openG.has(gi), bid="gb"+gi; d.className="group"+(open?" open":"");
@@ -1228,13 +1228,13 @@ function buildAside(){ aside.textContent=""; aside.setAttribute("aria-label",t("
       li.innerHTML=`<button class="mode" type="button" data-id="${m.id}" aria-pressed="${String(!quiz&&current===m)}">${esc(x.name)}<span>${esc(x.short)}</span></button>`;
       li.firstChild.addEventListener("click",()=>{ quiz=null; select(m); play(); }); d.querySelector("ul").appendChild(li); });
     aside.appendChild(d); }); }
-function setLang(l,user){ if(!I18N[l]) l="fr"; LG=l; LOC=(LANGS.find(x=>x[0]===l)||LANGS[0])[2]; document.documentElement.lang=l;
+function setLang(l,user){ if(!I18N[l]) l="fr"; LG=l; LOC=(LANGS.find(x=>x[0]===l)||["fr","","fr-FR"])[2]; document.documentElement.lang=l;
   const sel=document.getElementById("lang"); sel.value=l;
   const T={tBook:"book_dl",tBook2:"book_dl2",tTitle:"title",tLang:"lang",mystery:"mystery",play:"play",stop:"stop",tNoise:"noise",tVol:"volume",tLoop:"loop",tSpecwf:"specwf",tCursor:"cursor",tFoot:"footprint",tW3d:"w3d",tW3dHint:"w3dHint",tF1:"f1",tF2:"f2"};
   for(const id in T) document.getElementById(id).textContent=t(T[id]);
   document.getElementById("tTheme").textContent=t("display"); document.getElementById("theme").setAttribute("aria-label",t("display")); sel.setAttribute("aria-label",t("lang"));
   [["day","theme_day"],["night","theme_night"],["phos","theme_phos"],["phosb","theme_phosb"],["phosa","theme_phosa"]].forEach(([v,k])=>{ document.querySelector('#theme option[value="'+v+'"]').textContent=t(k); });
-  document.title="VSISA V1.8 · Virtual Simulator identification Signal Audio"; showStats();
+  document.title="VSISA V1.9 · Virtual Simulator identification Signal Audio"; showStats();
   if(user){ try{ localStorage.setItem("idmr-lang",l); }catch(e){} try{ history.replaceState(null,"","#"+l); }catch(e){} }
   buildAside();
   if(current){ setNow(current,!!quiz); document.getElementById("spanLbl").textContent=spanText(current,!!quiz); ruler("ruler1"); ruler("ruler2");
@@ -1257,7 +1257,7 @@ document.getElementById("noise").addEventListener("change",()=>{ if(!current) re
   signal=buildSignal(current); analyse(); if(was) play(); else blankWaterfall(t("press")); if(hidden) renderQuiz(); });
 
 function browserLang(){ // langue du navigateur : on parcourt toute la liste de préférences (zh-TW, pt-BR, de-CH… comptent aussi)
-  const alias={cz:"cs",ua:"uk",jp:"ja",cn:"zh",be:"ru"};
+  const alias={cz:"cs",ua:"uk",jp:"ja",cn:"zh",be:"ru",no:"nb",nn:"nb",dk:"da",gr:"el",mo:"ro"};
   const list=[].concat(navigator.languages||[],navigator.language||[],navigator.userLanguage||[]);
   for(const tag of list){ if(!tag) continue; const b=String(tag).toLowerCase().split(/[-_]/)[0], c=alias[b]||b; if(I18N[c]) return c; }
   return "en"; }

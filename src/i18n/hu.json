@@ -1,0 +1,1076 @@
+{
+"ui": {
+"title": "VSISA",
+"mystery": "Rejtélyes hang",
+"play": "▶ Meghallgatás",
+"stop": "■ Állj",
+"noise": "Zaj",
+"volume": "Hangerő",
+"loop": "Ismétlés",
+"specwf": "Spektrum + vízesés",
+"cursor": "kurzor",
+"footprint": "Lenyomat",
+"dur": "{s} s fentről lefelé",
+"avg": "átlag a teljes jelre",
+"press": "Nyomd meg a Meghallgatást: a jel itt gördül",
+"count": "{n} jel, a 6. lap sorrendjében",
+"myst": "Rejtélymód",
+"mystTags": "Hallgasd és nézd, aztán válaszd ki a helyes választ",
+"quizH": "Melyik jel ez?",
+"quizLead": "Indítsd el a hangot, figyeld a spektrumot, a vízesést és a lenyomatot, aztán válaszolj.",
+"score": "Pontszám",
+"good": "Helyes!",
+"bad": "Nem talált: ez {x} volt.",
+"next": "Következő rejtélyes hang",
+"principle": "Elv",
+"screen": "A képernyőn",
+"sheet": "lap",
+"book": "Könyv: {r}. lap",
+"lang": "Nyelv",
+"signals": "Jelek",
+"f1": "Az oldalon szimulált jelek (másodpercenként 12 000 minta): az OpenBookRadio könyv 6. lapjának jelei, a könyv más jelei és bónuszok. A rádiójeleknél (AM, FM, AIS, LoRa…) a szimulált középfrekvenciát látod, mint egy SDR képernyőjén; némelyik kicsinyítve vagy gyorsítva, ahogy jelezzük. AM, SSB, FM, sztereó FM, ISS és fading esetén a demodulált hangot hallod, mint a vevő hangszórójából, a képernyő pedig a rádiójelet mutatja; a hang szintetikus, nem mond valódi szavakat.",
+"f2": "Az idő lefelé halad a vízesésben és a lenyomatban. CC BY-NC-SA 4.0 licenc, ingyenes, nem eladó.",
+"night": "Éjszakai mód",
+"day": "Nappali mód",
+"visits": "látogatás",
+"plays": "lejátszás",
+"book_dl": "A könyv letöltése",
+"book_dl2": "Az OpenBookRadio könyv letöltése (ingyenes, PDF és EPUB, 13 nyelv)",
+"display": "Megjelenítés",
+"theme_day": "Nappal",
+"theme_night": "Éjszaka (piros)",
+"theme_phos": "Zöld foszfor",
+"theme_phosb": "Kék foszfor",
+"theme_phosa": "Narancs foszfor",
+"w3d": "3D vízesés",
+"w3dHint": "húzd a forgatáshoz",
+"audio_retry": "A böngésző megszakította a hangot: nyomd meg újra a ▶ Meghallgatás gombot.",
+"nsig": "{n} jel"
+},
+"groups": [
+"Analóg beszéd",
+"Távírás",
+"Adat",
+"Képek",
+"Repülés, hajózás és mentés",
+"Hívás, altónusok és személyhívás",
+"Rádiószondák, érzékelők és okoseszközök",
+"HF üzemmódok és érdekességek",
+"Műsorszórás és idő",
+"Szélessáv",
+"Bónusz: hangok az űrből",
+"Bónusz: rövidhullámú érdekességek",
+"Bónusz: víz alatti hangok",
+"Bónusz: a Föld hangjai",
+"Bónusz: digitális hang (bit és kHz)"
+],
+"modes": {
+"am": {
+"sh": "műsorszórás",
+"t": "AM: amplitúdómoduláció",
+"h": "A vivő erőssége követi a hangot: a görbe „dagad” és „zsugorodik”.",
+"l": "Egy álló vonal középen (a vivő), két oldalán két egyforma oldalsávval. Kb. 6–9 kHz széles. Rövid- és középhullámú műsorszórás, repülés (12. és 14. lap).",
+"r": [
+[
+"Hallgatás",
+"Egy szignál, aztán a műsorvezető háttérzenével. A két oldalsáv egymás tükörképe: látod a dallamot, aztán a beszédet a vivő mindkét oldalán."
+]
+]
+},
+"ssb": {
+"nm": "SSB",
+"t": "SSB: egyoldalsávos moduláció",
+"h": "Csak egy oldalsáv marad, vivő nélkül: semmi, ha senki sem beszél.",
+"l": "Nincs középső vonal, csak egy kb. 2,7 kHz széles sáv, amely csak beszéd közben él. USB 10 MHz felett, LSB alatta (rádióamatőrök). Rosszul hangolva a hang „kacsaszerű” (11. és 29. lap)."
+},
+"fm": {
+"sh": "beszéd",
+"t": "FM: frekvenciamoduláció",
+"h": "Az amplitúdó állandó; a rezgések a hanggal sűrűsödnek vagy ritkulnak.",
+"l": "A jel a frekvenciája körül táncol, hangos hangnál szélesebben: keskeny FM-ben 12,5 kHz csatornánként (kézi rádiók, átjátszók), FM műsorszórásban 200 kHz (2. és 13. lap).",
+"r": [
+[
+"Hallgatás",
+"A végén a rövid „kssh”: a zajzár bezár, amikor az adó elhallgat."
+]
+]
+},
+"cw": {
+"t": "CW: morze",
+"h": "A vivőt be- és kikapcsolják: vonások és pontok.",
+"l": "Nagyon vékony vonal, amely a morze ritmusára szakad meg; a fülnek sípolás. Itt „CQ” (49. lap).",
+"r": [
+[
+"Sebesség",
+"20 szó/perc, 60 ms-os pont, 700 Hz-en: „CQ CQ CQ DE F4ABC K”"
+],
+[
+"Fülre",
+"Tiszta sípolások, hosszúk és rövidek, egyetlen hangon"
+],
+[
+"Dekódolás",
+"Fülre, fldigi, CW Skimmer"
+]
+]
+},
+"rtty": {
+"t": "FSK / RTTY: két frekvencia",
+"h": "A frekvencia két érték között ugrál, egy a 0-nak, egy az 1-nek.",
+"l": "Két párhuzamos vonal: rádióamatőröknél 170 Hz-re egymástól (45,45 baud), időjárás-jelentéseknél 450 vagy 850 Hz-re. Egyenletes „tidilidi” (32. lap).",
+"r": [
+[
+"Kód",
+"Baudot ITA2: 5 bit + start + 1,5 stop; mark 2125 Hz, space 2295 Hz"
+],
+[
+"Szöveg",
+"RYRYRYRY CQ CQ DE F4ABC"
+],
+[
+"Dekódolás",
+"fldigi, MMTTY, 2Tone"
+]
+]
+},
+"afsk": {
+"t": "AFSK 1200 baud: APRS és packet",
+"h": "Két hangfrekvenciás hang, 1200 és 2200 Hz, egy FM-adóba vezetve.",
+"l": "Az FM-vevő után (hangszóróhang): 1200 és 2200 Hz közötti sáv rövid csomagokban. Fülre egy másodperces „grrrt” (35. és 36. lap).",
+"r": [
+[
+"Frekvencia",
+"144,800 MHz Európában (APRS), FM"
+],
+[
+"Keret",
+"0x7E jelzők, majd AX.25 adatok NRZI-ben"
+],
+[
+"Dekódolás",
+"Direwolf, multimon-ng, KISS TNC"
+]
+]
+},
+"psk31": {
+"t": "PSK31: fázismoduláció",
+"h": "A frekvencia nem mozdul, a fázis fordul; minden fordulásnál az amplitúdó lecsökken.",
+"l": "Nagyon vékony, kb. 60 Hz széles, kissé „fonott” vonal. Tucatnyi állomás elfér 3 kHz-en (29. lap).",
+"r": [
+[
+"Kód",
+"Varicode: 0 = fázisfordulás, 1 = nincs változás; nyugalomban két ikervonal"
+],
+[
+"Hol hallható",
+"14 070 kHz, 3 580 kHz"
+],
+[
+"Dekódolás",
+"fldigi"
+]
+]
+},
+"ft8": {
+"t": "MFSK / FT8: nyolc hang",
+"h": "A frekvencia 6,25 Hz-es lépésekben megy fel és le, lépésenként 0,16 s.",
+"l": "Kb. 50 Hz széles sávok, amelyek 12,6 s-ig tartanak és 15 másodpercenként visszatérnek, órához szinkronizálva: több állomás egyszerre 3 kHz-en belül, például 7,074 MHz-en (29. lap).",
+"r": [
+[
+"Keret",
+"79 db 0,16 s-os szimbólum, három Costas-minta (elején, közepén, végén); itt nyolc állomás"
+],
+[
+"Frekvenciák",
+"14 074, 7 074, 3 573, 10 136, 21 074, 28 074 kHz"
+],
+[
+"Dekódolás",
+"WSJT-X, JTDX (pontos számítógépóra)"
+]
+]
+},
+"ft4": {
+"t": "FT4: a versenyek FT8-a",
+"h": "Négy hang 20,8 Hz-re egymástól, 20,8 baud: 105 szimbólum 5 s alatt, 7,5 s-os időrésekben.",
+"l": "Kb. 90 Hz széles sávok, rövidebbek és szélesebbek, mint az FT8, 7,5 másodpercenként visszatérnek. 14 080, 7 047,5 kHz (29. lap)."
+},
+"olivia": {
+"t": "Olivia 8/250: nyolc hang",
+"h": "Nyolc hang 31,25 Hz-re egymástól, egyszerre egy, véletlenszerűen ugrálva; Walsh-kódolás és átlapolás.",
+"l": "Szórt pontokból álló blokk 250 Hz-en; jóval a zaj alól is dekódolható. Fülre kis véletlen dallam (29. lap)."
+},
+"hell": {
+"t": "Feld Hell: írás vivővel",
+"h": "A vivőt pontról pontra kapcsolják: minden betű 14 pontos oszlopokból áll, alulról felfelé letapogatva (másodpercenként 245 pont).",
+"l": "A vízesésen szaggatott vonal; a program képernyője (fldigi) újrarajzolja a betűket. Fülre halk recsegés (29. lap)."
+},
+"4fsk": {
+"t": "4FSK: DMR, C4FM (Fusion), NXDN, dPMR",
+"h": "Négy frekvenciaszint: minden szimbólum két bitet hordoz.",
+"l": "6–12,5 kHz széles téglalap alakú blokk, teli, mint a zaj, gyakran csomagokban (a DMR két időrésre osztja a csatornát). Fülre rekedt „frrr” (46. lap)."
+},
+"mt63": {
+"t": "MT63: vészhelyzeti üzenetek (NBEMS)",
+"h": "64 hang egyszerre, mindegyik lassan modulálva, sok redundanciával.",
+"l": "1 vagy 2 kHz-es lapos blokk 1500 Hz körül, éles szélekkel; egyenletes sziszegés. Még hangszóróhoz tartott mikrofonnal is működik (31. lap)."
+},
+"lora": {
+"t": "LoRa: frekvenciarámpák (chirpök)",
+"h": "A frekvencia végigsöpör a teljes szélességen, majd újra alulról indul: az ugrás helye hordozza az adatot.",
+"l": "Párhuzamos átlók, könnyen felismerhetők: Meshtastic és MeshCore 869,525 MHz-en vagy 433 MHz-en, LoRaWAN-érzékelők (13., 23. és 24. lap)."
+},
+"sstv": {
+"t": "SSTV: képek hangban",
+"h": "Szinkronimpulzus 1200 Hz-en, majd a frekvencia követi a sor fényességét 1500-tól (fekete) 2300 Hz-ig (fehér).",
+"l": "Szabályos szinkronvonalak és a képpel változó felhő; egy-két percig tartó „csiripelő” hang. 14,230 MHz, ISS 145,800 MHz-en (37. lap).",
+"r": [
+[
+"Keret",
+"VIS-fejléc, majd sorok: 1200 Hz-es szinkron, zöld, kék, piros; itt egy tesztábra 20 sora"
+],
+[
+"Dekódolás",
+"QSSTV, MMSSTV, Robot36 telefonon"
+]
+]
+},
+"fax": {
+"nm": "Időjárási fax",
+"t": "Időjárási fax: 1500 Hz fekete, 2300 Hz fehér",
+"h": "A frekvencia folyamatosan mozog feketétől fehérig, percenként 120 sor.",
+"l": "Két álló sáv 1500 és 2300 Hz-en (800 Hz-re egymástól), egyenletes „tik-tak”. A közölt frekvenciák vivőfrekvenciák: USB-ben 1,9 kHz-cel lejjebb hallgasd (38. lap).",
+"r": [
+[
+"Keret",
+"300 Hz-es indítóhang, fázissorok (fehér impulzus), majd a térkép"
+],
+[
+"Dekódolás",
+"fldigi, JWX, HamFax"
+]
+]
+},
+"elt": {
+"nm": "ELT-sziréna",
+"t": "ELT / PLB sziréna 121,5 MHz-en",
+"h": "AM-jel, amelynek hangja 1600-ról 300 Hz-re esik, másodpercenként kétszer-négyszer.",
+"l": "Álló vivő és legyezőként csúszó oldalsávok: a vészjeladók „úú-úú”-ja, gyakorlatokon 121,375 MHz-en is (27. és 28. lap)."
+},
+"406": {
+"nm": "406-os jeladó",
+"t": "406 MHz-es jeladó: BPSK-csomag",
+"h": "Fél másodperces adás: 160 ms tiszta vivő, majd a fázis ±1,1 radiánt leng 400 bit/s-mal.",
+"l": "Kis rövid vonal, 50 másodpercenként visszatér 406,0 és 406,1 MHz között; semmi hallgatnivaló, dekóder kell (EPIRB 406, 28. lap)."
+},
+"adsb": {
+"t": "ADS-B / Mode S (1090 MHz): impulzusok",
+"h": "0,5 µs-os impulzusok, amelyek helyzete hordozza a biteket (PPM); itt az időskála erősen lelassítva.",
+"l": "Nagyon rövid vízszintes vonalak a teljes szélességben, repülőtér közelében másodpercenként százával; SDR kell hozzá (15. lap).",
+"n": "erősen lelassított időskála"
+},
+"acars": {
+"t": "ACARS: adatok AM-ben és MSK-ban",
+"h": "AM-jel, amely két hangot hordoz, 1200 és 2400 Hz, 2400 bit/s-mal.",
+"l": "Félmásodperces csomagok vivővel és oldalsávokkal Európában 131,525, 131,725 vagy 131,825 MHz-en: fülre „brrrt” (16. lap)."
+},
+"ais": {
+"t": "AIS: GMSK 9600 baud két csatornán",
+"h": "Simított FSK (GMSK) 26 ms-os csomagokban, egyszer 161,975 MHz-en, egyszer 162,025 MHz-en (kicsinyítve).",
+"l": "Két oszlop kis rövid vonalból, 50 kHz-re egymástól, szabályos kattogás; minél több hajó, annál sűrűbb (19. lap).",
+"n": "kicsinyítve"
+},
+"navtex": {
+"t": "NAVTEX és DSC közép- és rövidhullámon: 170 Hz-es FSK",
+"h": "Mint az RTTY: két frekvencia 170 Hz-re egymástól, de 100 baudon.",
+"l": "Két párhuzamos vonal, a közlemény alatt folyamatos, 518 és 490 kHz-en (NAVTEX) vagy 2187,5 kHz-en (digitális szelektív hívás) (20. lap).",
+"r": [
+[
+"Kód",
+"SITOR-B, CCIR 476: 7 bit négy „1”-gyel, FEC-ismétléssel"
+],
+[
+"Dekódolás",
+"fldigi, YaND"
+]
+]
+},
+"hfdl": {
+"t": "HFDL: repülőgépek rövidhullámon",
+"h": "1800 baudos PSK egy 1440 Hz-es segédvivőn.",
+"l": "Kb. 2,4 kHz széles csomagok 2,9 és 22 MHz között; jövő-menő modemsziszegés (17. lap)."
+},
+"ctcss": {
+"t": "CTCSS: altónus a beszéd alatt",
+"h": "Mély, folyamatos hang (67–254 Hz, itt 88,5 Hz) a beszédhez adva.",
+"l": "Az FM-vevő hangjában: álló vonal egészen alul, a beszéd alatt; kinyitja az átjátszók és kézi rádiók zajzárát (10. lap)."
+},
+"dtmf": {
+"sh": "2 hang",
+"t": "DTMF: két hang gombonként",
+"h": "Minden gomb egyszerre küld egy mély (697–941 Hz) és egy magas (1209–1633 Hz) hangot.",
+"l": "Pontpárok nyolc álló oszlopba rendezve; a telefonszámok és átjátszóparancsok „bip-bip”-je (10. lap).",
+"r": [
+[
+"Sorozat",
+"0 6 1 2 3 4 5 7 8 9 * #"
+]
+]
+},
+"selcall": {
+"sh": "5 hang",
+"t": "CCIR Selcall: hangok egymás után",
+"h": "Öt 100 ms-os hang egymás után, számjegyenként egy.",
+"l": "Kis lépcső pontokból, ismételve; gyors „tululululu” egy adott rádió hívására (33. lap).",
+"r": [
+[
+"Sorozat",
+"1 2 3 4 5, kétszer; az UV-K1 SelCall alkalmazása is dekódolja"
+]
+]
+},
+"pocsag": {
+"sh": "személyhívók",
+"t": "POCSAG és FLEX: személyhívók",
+"h": "±4,5 kHz-es FSK; 1010… előtag, majd az adatok (kicsinyítve).",
+"l": "Két tiszta vonal az előtag alatt, aztán teli sáv; éles „brrrrt”. 466,075 MHz, DAPNET 439,9875 MHz (45. lap).",
+"n": "kicsinyítve"
+},
+"ale": {
+"sh": "8 hang",
+"t": "ALE: automatikus kapcsolatfelvétel rövidhullámon",
+"h": "Nyolc hang 750 és 2500 Hz között, 125 baud, csomagokban.",
+"l": "Kb. 2 kHz széles blokk apró pontokból, egy-két másodpercig, néha több közeli frekvencián; éles csicsergés (34. lap)."
+},
+"rs41": {
+"nm": "RS41 rádiószonda",
+"t": "RS41 rádiószonda: folyamatos GFSK",
+"h": "Simított FSK 4800 baudon, megállás nélkül; a frekvencia lassan elcsúszik, ahogy a szonda emelkedik és lehűl.",
+"l": "Kb. 10 kHz széles sáv, amely az egész repülés alatt ferdén csúszik, 400 és 406 MHz között (21. lap)."
+},
+"ook": {
+"nm": "433-as érzékelők",
+"t": "433 MHz-es érzékelők: OOK",
+"h": "A vivő rövid vagy hosszú impulzusokban kapcsol be és ki (on-off keying); az üzenet háromszor ismétlődik.",
+"l": "Apró pontokból álló csomagok, gyakran hármasával, 433,92 MHz-en: időjárás-állomások, hőmérők, távirányítók (22. lap)."
+},
+"fhss": {
+"t": "Bluetooth: frekvenciaugratás (FHSS)",
+"h": "A frekvencia másodpercenként 1600-szor vált 79 csatorna között (kicsinyítve).",
+"l": "Apró vonalak mindenfelé szórva 80 MHz-en, sosem ugyanott, 2,4 GHz körül (25. lap).",
+"n": "kicsinyítve"
+},
+"wspr": {
+"t": "WSPR: terjedésvizsgáló jeladók",
+"h": "Négy hang 1,46 Hz-re egymástól, szimbólumonként 0,68 s, 110,6 s-on át.",
+"l": "Nagyon vékony, kb. 6 Hz széles vonal, közel két percig, minden páros két percben: erősen nagyítani kell (29. lap).",
+"n": "24 s-os részlet (egy adás 110,6 s)"
+},
+"qrss": {
+"t": "QRSS: nagyon lassú morze",
+"h": "Be-ki kapcsolt vivő 3–10 s-os pontokkal, gyakran két közeli frekvencián (DFCW).",
+"l": "Néhány Hz széles vonalak, tízperces képernyőn olvasva; fülre nem hallhatók (30. lap).",
+"n": "gyorsítva: 0,6 s-os pont 3–10 s helyett"
+},
+"texte": {
+"nm": "Szöveg a vízesésben",
+"t": "Szöveg a vízesésben",
+"h": "A kép minden sora hangcsoport lesz: a hang zajnak tűnik.",
+"l": "A szöveg vagy a rajz közvetlenül megjelenik az SDR képernyőjén (40. lap).",
+"r": [
+[
+"Megjegyzés",
+"A kép aljától kezdve adják: az élő vízesésben állva, a lenyomatban fejjel lefelé (fentről lefelé olvasva)"
+]
+]
+},
+"vara": {
+"t": "Modern HF-adat: VARA, Pactor, ARDOP",
+"h": "Hosszú, teli csomagok (OFDM vagy PSK), köztük a másik állomás rövid válaszai.",
+"l": "Kb. 2,4 kHz széles téglalap, amely megáll és újraindul, közben egy kis nyugtával; szaggatott sziszegés (29. lap)."
+},
+"chirp": {
+"nm": "Ionoszféra-szonda",
+"t": "Ionoszféra-szonda (chirp sounder)",
+"h": "Lassú frekvenciarámpa a teljes HF-sávon át; az ionoszféra visszhangjai kicsit később érkeznek.",
+"l": "A képernyőn végigsöprő átló, párhuzamos vonalakkal (a visszhangokkal) megkettőzve; egy pillanat alatt elsuhanó „ffjút”."
+},
+"oth": {
+"nm": "Horizonton túli radar",
+"t": "Horizonton túli radar („harkály”)",
+"h": "Másodpercenként 10–50-szer ismétlődő impulzusok, mindegyik több kHz széles.",
+"l": "Széles, csíkos blokk, amely egész sávokat takar; nagyon szabályos harkálykopogás rövidhullámon."
+},
+"parasites": {
+"nm": "Zavarok",
+"sh": "tápegység",
+"t": "Kapcsolóüzemű tápegység zavarai",
+"h": "Négyszögjel: a frekvenciája és minden felharmonikusa egyszerre jelenik meg.",
+"l": "Együtt sodródó, szabályos vonalakból álló fésű zajos háttéren: keresd NOISE FIND funkcióval vagy hordozható vevővel (K22. lap)."
+},
+"mpx": {
+"nm": "Sztereó FM és RDS",
+"t": "Sztereó FM-rádió és RDS",
+"h": "A demodulált hang (multiplex) tartalmazza az L+R csatornát, egy 19 kHz-es pilotjelet, az L-R csatornát 38 kHz körül és az RDS-t 57 kHz-en.",
+"l": "Demodulálás után 0-tól 60 kHz-ig: egy mély blokk, egy vékony vonal 19 kHz-en, egy gyengébb blokk középen és legfelül az RDS (12. lap).",
+"n": "skála ÷ 20; sztereó hang",
+"r": [
+[
+"Hallgatás",
+"Fejhallgatóval: 4 s mono (a középső blokk, az L-R eltűnik), majd 4 s sztereó, bal oldalon a dallam, jobbon az akkordok."
+]
+]
+},
+"dcf77": {
+"t": "DCF77 időjel (77,5 kHz)",
+"h": "A vivő minden másodperc elején 0,1 s-ra (0 bit) vagy 0,2 s-ra (1 bit) 15%-ra esik.",
+"l": "Álló vonal másodpercenként egy fekete réssel; az 59. másodpercben nincs rés, ez jelzi a percet (12. lap).",
+"r": [
+[
+"Megjegyzés",
+"Itt a vivőt 1000 Hz-re hoztuk le; a 6. másodpercben nincs rés, mint minden perc 59. másodpercében"
+]
+]
+},
+"ofdm": {
+"t": "OFDM: tucatnyi segédvivő",
+"h": "Sok sűrűn elhelyezett, egyenként lassú vivő: az összeg zajnak tűnik.",
+"l": "Éles szélű lapos téglalap, mindig jelen: DRM rövidhullámon (10 kHz), DAB+ (1,5 MHz), DVB-T, Wi-Fi. Fülre folyamatos sziszegés (12. és 25. lap)."
+},
+"dsss": {
+"t": "Szórt spektrum (DSSS): GPS, Wi-Fi 802.11b",
+"h": "Az adatokat nagyon gyors kóddal keverik: az energia széles sávra terül szét.",
+"l": "Széles púp, alig a zaj felett; a GPS még a zaj alatt is van, és feldolgozás nélkül nem látható (25. és 26. lap)."
+},
+"hline": {
+"nm": "Hidrogénvonal",
+"sh": "1420 MHz",
+"t": "A 21 cm-es hidrogénvonal (1420,405 MHz)",
+"h": "A Tejút hideg hidrogénje nagyon gyenge sziszegést bocsát ki 1420,405 MHz-en. A galaxis karjainak mozgása Doppler-hatással eltolja: több kis púp látszik.",
+"l": "Másodpercről másodpercre szinte semmi a vízesésen: sokáig kell átlagolni, hogy a púpok kiemelkedjenek a zajból. Itt megállítva nézd az átlagspektrumot. Elég egy parabola vagy egy tölcsérantenna, egy előerősítő és egy SDR (47. lap).",
+"n": "erősen felnagyított jel"
+},
+"sun": {
+"nm": "Nap",
+"sh": "kitörések",
+"t": "Nap: III. típusú rádiókitörések",
+"h": "A napkitörés által kilökött elektronok átszelik a Nap koronáját, és távolodva egyre alacsonyabb frekvencián sugároztatják.",
+"l": "A spektrum tetejéről az aljára egy másodpercen belül ferdén lezuhanó vonalak naptevékenységi zaj hátterén; dagadó „sssss”. Kb. 10 és 400 MHz között, rövidhullámon 20 MHz körül is (47. lap)."
+},
+"jupiter": {
+"nm": "Jupiter",
+"sh": "20 MHz",
+"t": "Jupiter: dekaméteres kitörések (L és S)",
+"h": "A Jupiter mágneses tere és Io holdja erős sugárzást kelt 15 és 40 MHz között: lassú L-kitöréseket és nagyon rövid, gyorsan lecsúszó S-kitöréseket.",
+"l": "Először sziszegéshullámok (L, mint a parti hullámverés), aztán apró „pattanások” sorai (S) sűrű átlókban. Éjjel 20,1 MHz körül, egyszerű dipóllal, ha az Io jó helyen áll (47. lap)."
+},
+"pulsar": {
+"nm": "Pulzár",
+"sh": "B0329+54",
+"t": "A PSR B0329+54 pulzár",
+"h": "Egy forgó neutroncsillag rádiónyalábbal söpri végig a Földet, itt 0,714 másodpercenként. A csillagközi gáz késlelteti az alacsony frekvenciákat: minden impulzus előbb a spektrum tetején érkezik.",
+"l": "Szabályos „tik”; a vízesésen minden impulzus lefelé dőlő görbe (diszperzió). A valódi jel a zaj alatt van: nagy antenna kell, és az impulzusokat a periódusukkal összegezni kell (47. lap).",
+"n": "erősen felnagyított jel"
+},
+"meteor": {
+"nm": "Meteorok",
+"sh": "GRAVES",
+"t": "Meteorvisszhangok a GRAVES radarról (143,050 MHz)",
+"h": "A francia GRAVES radar megállás nélkül sugároz 143,050 MHz-en. Amikor egy hullócsillag ionizálja a levegőt, a nyoma a jel egy kis részét a vevődre veri vissza, a másodperc törtrészétől néhány másodpercig.",
+"l": "USB-ben 143,049 MHz-en: rövid „pingek” 1000 Hz körül, néha csúszó visszhang (a meteor feje, Doppler-hatás) vagy tartósabb. Meteorrajok idején sokkal több (Perseidák, Geminidák) (1. lap)."
+},
+"whistler": {
+"nm": "Fütyülők",
+"sh": "VLF",
+"t": "VLF-fütyülők (whistlerek)",
+"h": "A villám rádiókattanást kelt; egy része a Föld mágneses erővonalai mentén a másik féltekére és vissza utazik, a magas hangok előbb.",
+"l": "Egy „pjúúú”, amely egy-két másodperc alatt magasról mélyre esik, közvetlenül egy kattanás után; recsegések (sferics) mindenütt. 10 kHz alatt, villanyvezetékektől távol, VLF-vevővel (47. lap)."
+},
+"chorus": {
+"nm": "Hajnali kórus",
+"sh": "VLF",
+"t": "Hajnali kórus (dawn chorus)",
+"h": "Mágneses vihar idején a magnetoszférában csapdába esett elektronok kis emelkedő hangokat bocsátanak ki, főleg napkelte körül.",
+"l": "Egymásba fonódó, emelkedő csiripelések, mint a madarak, kb. 1 és 4 kHz között. Ugyanaz a felszerelés, mint a fütyülőkhöz (47. lap)."
+},
+"sputnik": {
+"nm": "Szputnyik–1",
+"sh": "1957",
+"t": "Szputnyik–1 (1957)",
+"h": "Az első mesterséges hold kb. 0,3 s-os sípjeleket adott 20,005 és 40,002 MHz-en, felváltva, három hétig.",
+"l": "Szabályosan megszakadó vonal: „bip… bip…”, a hang, amelyet 1957 októberében az egész világ hallgatott (rekonstrukció) (41. lap)."
+},
+"doppler": {
+"nm": "Doppler-hatás",
+"sh": "műhold",
+"t": "Műholdas jeladó és Doppler-hatás",
+"h": "Egy alacsony pályás műhold közeledik, majd távolodik: a vett frekvencia az áthaladás alatt csökken, 145 MHz-en kb. ±3 kHz-cel, 435 MHz-en ±10 kHz-cel.",
+"l": "S alakban eső vonal: először lassan, gyorsan, amikor a műhold a legközelebb van, aztán ismét lassan (41. lap).",
+"n": "10 perces áthaladás 12 s-ba sűrítve"
+},
+"apt": {
+"nm": "NOAA APT",
+"sh": "137 MHz",
+"t": "NOAA műholdak: APT-képek (történeti)",
+"h": "A kép által amplitúdómodulált 2400 Hz-es segédvivő, másodpercenként két sor, minden sor elején szinkronimpulzussal. 2025-ben leállt; a Meteor-M műholdak most LRPT-t sugároznak.",
+"l": "Vonal 2400 Hz-en a képpel változó oldalsávokkal, és a híres „tik-tak” másodpercenként kétszer (41. lap)."
+},
+"eme": {
+"nm": "Holdvisszhang",
+"sh": "EME",
+"t": "Holdvisszhang (EME)",
+"h": "A Holdra küldött jel kb. 2,5 s múlva tér vissza, rendkívül meggyengülve, kissé elkenődve és a Doppler által eltolva.",
+"l": "Hallod a saját „bip”-edet, majd 2,5 s múlva a halvány, kissé elmosódott visszhangját. A rádióamatőrök CW-ben vagy JT65-ben csinálják, 144 MHz-en és felette (1. lap).",
+"n": "erősen felnagyított visszhang"
+},
+"msk144": {
+"nm": "MSK144",
+"sh": "meteorok",
+"t": "MSK144: a meteorszórásos digitális üzemmód",
+"h": "Két hang, 1000 és 2000 Hz, 2000 baudon, megállás nélkül ismételt 72 ms-os keretekben: minden meteornyom átenged néhányat.",
+"l": "0,1–1 s-os, kb. 2,4 kHz széles csomagok, amelyek a meteor „pingjével” jelennek meg és halványulnak el. 50 és 144 MHz-en, WSJT-X-szel (29. lap)."
+},
+"jt65": {
+"nm": "JT65",
+"sh": "65 hang",
+"t": "JT65: 65 hang, nagyon lassan",
+"h": "Egy szinkronhang és 64 adathang 2,7 Hz-re egymástól (JT65A), szimbólumonként 0,37 s, percenként 47 s adás.",
+"l": "Apró vonalakból álló létra kb. 180 Hz-en, és egy szinkronvonal, amely mindig ugyanoda tér vissza. Holdvisszaverődéshez (JT65B és C) és nagyon gyenge jelekhez használják (29. lap).",
+"n": "20 s-os részlet (egy adás 47 s)"
+},
+"tetra": {
+"nm": "TETRA",
+"sh": "π/4-DQPSK",
+"t": "TETRA: hivatásos digitális hálózat",
+"h": "π/4-DQPSK fázismoduláció másodpercenként 18 000 szimbólummal, négy időosztásos csatorna 25 kHz-es csatornákban.",
+"l": "Lekerekített szélű teli blokk, bázisállomás közelében mindig jelen; rekedt sziszegés. Titkosított: nem hallgatható le (46. lap).",
+"n": "kicsinyítve"
+},
+"ndb": {
+"nm": "NDB jeladó",
+"sh": "190–535 kHz",
+"t": "NDB: irány nélküli rádiójeladó",
+"h": "Álló vivő hosszúhullámon, két- vagy hárombetűs morze-azonosítóval egy hangon (gyakran 1020 Hz).",
+"l": "Álló vonal középen, és az azonosító alatt két kis vonal két oldalt. Kb. 190–535 kHz, SSB-ben vagy CW-ben (18. lap)."
+},
+"vor": {
+"nm": "VOR",
+"sh": "108–118 MHz",
+"t": "VOR: körsugárzó rádiójeladó",
+"h": "AM-ben: iránytól függő 30 Hz-es jel, 30 Hz-cel frekvenciamodulált 9960 Hz-es segédvivő (a referencia) és a morze-azonosító 1020 Hz-en.",
+"l": "A demodulált hangban: mély 30 Hz-es zúgás, széles hullámos vonal 10 kHz közelében, és időnként az azonosító (18. lap).",
+"n": "demodulált hang, skála ÷ 2"
+},
+"ils": {
+"nm": "ILS",
+"sh": "90 + 150 Hz",
+"t": "ILS: leszállást segítő rendszer (localizer)",
+"h": "AM-ben két hang, 90 és 150 Hz; arányuk megmutatja a gépnek, hogy a tengelytől balra vagy jobbra van. A morze-azonosító I-vel kezdődik.",
+"l": "A demodulált hangban: két nagyon mély vonal 90 és 150 Hz-en, és az azonosító 1020 Hz-en. 108,1 és 112 MHz között; a siklópálya 330 MHz körül van (18. lap)."
+},
+"m10": {
+"nm": "M10 / M20 szondák",
+"sh": "Meteomodem",
+"t": "M10 és M20 rádiószondák (Meteomodem)",
+"h": "Másodpercenként egy keret, gyors FSK-ban (kb. 9600 baud): szélesebb, mint az RS41. Franciaországban a Météo-France bocsátja fel.",
+"l": "Másodpercenként egy széles csomag, amely a repülés alatt lassan elcsúszik; 400 és 406 MHz között (21. lap)."
+},
+"tpms": {
+"nm": "Gumik (TPMS)",
+"sh": "433 MHz",
+"t": "Guminyomás-érzékelők (TPMS)",
+"h": "Minden kerék időnként néhány milliszekundumos FSK-csomagot küld: nyomás, hőmérséklet, azonosító.",
+"l": "Kis elszigetelt csomagok 433,92 MHz-en (vagy 315 MHz-en), gyakran párosával, amikor egy autó elhalad. Az rtl_433 dekódolja (22. lap)."
+},
+"als162": {
+"nm": "ALS162",
+"sh": "162 kHz",
+"t": "ALS162 időjel (Allouis, 162 kHz)",
+"h": "A France Inter egykori hosszúhullámú adásának vivője; az időt apró, nem hallható fázismodulációk kódolják.",
+"l": "Álló vonal, Franciaországban nagyon erős, minden másodperc elején alig szélesedik; az idő leolvasásához dekóder kell (39. lap)."
+},
+"wwv": {
+"nm": "WWV",
+"sh": "2,5–20 MHz",
+"t": "WWV időjel (Colorado)",
+"h": "AM-ben: másodpercenként egy 5 ms-os „tik” 1000 Hz-en, egy 500 vagy 600 Hz-es hang, egy időkód 100 Hz-en és egy hang, amely bemondja az UTC-t.",
+"l": "A demodulált hangban: másodpercenként megszakadó 500 Hz-es vonal, az 1000 Hz-es tik, és egészen alul a kód 100 Hz-en (39. lap)."
+},
+"msf": {
+"nm": "MSF",
+"sh": "60 kHz",
+"t": "MSF időjel (Anthorn, 60 kHz)",
+"h": "A vivőt minden másodperc elején a bitektől függően 0,1, 0,2 vagy 0,3 s-ra kikapcsolják, a perc jelzésére pedig 0,5 s-ra.",
+"l": "Álló vonal másodpercenként teljesen fekete résekkel, hosszabbakkal, mint a DCF77-nél (39. lap)."
+},
+"type2": {
+"nm": "Nap, II. típus",
+"sh": "lökéshullám",
+"t": "Nap: II. típusú rádiókitörések",
+"h": "Egy koronakidobódás lökéshulláma a plazmát egyre alacsonyabb frekvencián, lassan sugároztatja, gyakran két sávban (alapfrekvencia és kétszerese).",
+"l": "Két párhuzamos zajsáv, amely több percen át lassan lefelé sodródik. Hasonlítsd össze a III. típusú kitörésekkel, amelyek sokkal gyorsabbak (47. lap).",
+"n": "több perc 6 s-ba sűrítve"
+},
+"tweeks": {
+"nm": "Tweekek",
+"sh": "VLF",
+"t": "Tweekek: az éjszakai VLF-„pingek”",
+"h": "Éjjel egy távoli villám kattanása a föld és az ionoszféra között pattog; a határfrekvencia (kb. 1,7 kHz) közeli frekvenciák érkeznek utoljára.",
+"l": "Kis „ping”, amely lefelé esik és 1,7 kHz körül megáll, néha kétszeres frekvenciájú visszhanggal; recsegés mindenütt. 10 kHz alatt, éjjel (47. lap)."
+},
+"hiss": {
+"nm": "VLF-sziszegés",
+"sh": "hiss",
+"t": "VLF-sziszegés (hiss)",
+"h": "A plazmaszféra elektronjai által keltett szélessávú zaj, amely a mágneses aktivitással erősödik és gyengül.",
+"l": "Sziszegő sáv néhány száz Hz-től néhány kHz-ig, minta nélkül, lassan dagadva és elhalva (47. lap)."
+},
+"aurora": {
+"nm": "Rádiós sarki fény",
+"sh": "Au",
+"t": "Sarkifény-terjedés (Au)",
+"h": "A sarki fény visszaveri a VHF-hullámokat, de nagyon gyorsan megrázza őket: minden jel több száz Hz-re szétterül.",
+"l": "A CW érdes sziszegéssé válik, mint egy suttogás; hangot már nem hallasz. 50 és 144 MHz-en, északra fordított antennával, mágneses viharok idején (1. lap)."
+},
+"galactic": {
+"nm": "Galaktikus zaj",
+"sh": "20–40 MHz",
+"t": "A Tejút zaja",
+"h": "A galaxis közepe rádiósziszegést bocsát ki, amelyet Karl Jansky fedezett fel 1932-ben 20 MHz körül. A Föld forgásával erősödik és gyengül.",
+"l": "Háttérzaj, amely lassan erősödik, majd ismét gyengül, minden nap kb. 4 perccel korábban. Egyszerű dipóllal látható 20 és 40 MHz között (47. lap).",
+"n": "egy nap 12 s-ba sűrítve"
+},
+"cubesat": {
+"nm": "CubeSat",
+"sh": "9600 bd",
+"t": "CubeSat-telemetria",
+"h": "A kis műholdak rendszeresen elküldik méréseiket (akkumulátor, hőmérsékletek) FSK-ban vagy GMSK-ban, 1200 vagy 9600 baudon, 435–438 MHz körül.",
+"l": "Szabályos csomagok, amelyek az áthaladás alatt a Doppler-hatás miatt minden alkalommal kicsit lejjebb csúsznak (41. lap).",
+"n": "kicsinyítve, gyorsított áthaladás"
+},
+"issfm": {
+"nm": "ISS FM-en",
+"sh": "145,800 MHz",
+"t": "Űrállomás (ISS): beszéd FM-ben",
+"h": "Az űrhajósok iskolákkal és rádióamatőrökkel beszélnek FM-ben 145,800 MHz-en. Az állomás 28 000 km/h-val repül: áthaladás közben a vett frekvencia kb. +3,5 kHz-ről −3,5 kHz-re csúszik.",
+"l": "FM-beszédsáv, amely a tízperces áthaladás alatt lassan jobbról balra mozog (41. lap).",
+"n": "10 perces áthaladás 10 s-ba sűrítve"
+},
+"buzzer": {
+"nm": "UVB-76 „The Buzzer”",
+"sh": "4625 kHz",
+"t": "UVB-76, „The Buzzer” (4625 kHz)",
+"h": "Orosz katonai állomás, amely évtizedek óta kb. egy másodperces zümmögést ad, percenként mintegy 25-ször, néha hangüzenettel megszakítva.",
+"l": "Álló vivő, és minden zümmögésnél sűrű vonalakból álló oszlop fentről lefelé. Könnyen megtalálható 4625 kHz-en USB-ben (43. lap)."
+},
+"pip": {
+"nm": "„The Pip”",
+"sh": "3756 / 5448 kHz",
+"t": "„The Pip”: véget nem érő sípolás",
+"h": "Egy másik orosz katonai rövidhullámú jeladó, amely éjjel-nappal apró rövid sípjeleket ismétel, néha üzenetekkel megszakítva.",
+"l": "Álló vonal, amelyet percenként kb. 50-szer megszakít egy rövid sípjel; fülre egyenletes „pip… pip…”, amely sosem áll meg (43. lap).",
+"n": "hozzávetőleges ritmus"
+},
+"squeaky": {
+"nm": "„Squeaky Wheel”",
+"sh": "HF",
+"t": "„Squeaky Wheel”",
+"h": "Orosz katonai rövidhullámú jeladó, amelyet a hallgatók ismétlődő hangmintájáról neveztek el.",
+"l": "Kéthangú kis minta, az egyik emelkedő, körbe-körbe ismételve: mint egy nyikorgó kerék (43. lap).",
+"n": "hozzávetőleges utánzat"
+},
+"codar": {
+"nm": "CODAR",
+"sh": "óceánradar",
+"t": "CODAR: tengeri áramlásmérő radarok",
+"h": "Parti radarok másodpercenként egyszer-kétszer végigsöpörnek egy frekvenciasávon az áramlások és hullámok méréséhez.",
+"l": "Szabályos párhuzamos átlók és ismétlődő „suhogás”; 4,5–5,5 MHz, 13 MHz és 25 MHz körül, gyakran éjjel-nappal (43. lap).",
+"n": "kicsinyítve"
+},
+"stanag": {
+"nm": "STANAG 4285",
+"sh": "8-PSK",
+"t": "STANAG 4285 katonai modem",
+"h": "8-PSK fázismoduláció 2400 baudon 1800 Hz-es vivőn, a csatorna követésére 107 ms-onként szondázó sorozattal.",
+"l": "Kb. 3 kHz széles teli blokk; fülre sziszegés szabályos zümmögéssel (43. lap)."
+},
+"link11": {
+"nm": "Link-11",
+"sh": "16 hang",
+"t": "Link-11: haditengerészeti adatkapcsolat",
+"h": "Tizenhat hang 605 és 2915 Hz között egyszerre, mindegyik másodpercenként 75-ször fázismodulálva.",
+"l": "Tizennégy szabályos vonalból álló fésű 935 és 2365 Hz között, plusz két különálló vonal 605 és 2915 Hz-en; fülre zenei zümmögés (43. lap)."
+},
+"numbers": {
+"nm": "Számállomás",
+"sh": "hang",
+"t": "Számállomás",
+"h": "Meghatározott időben rövid hívódallam, majd egy (gyakran szintetikus) hang ötjegyű számcsoportokat olvas fel AM-ben vagy SSB-ben.",
+"l": "A dallam különálló hangokként, majd csendekkel elválasztott szabályos szótagcsoportok (43. lap).",
+"n": "utánzott hang, valódi számok nélkül"
+},
+"rttydwd": {
+"nm": "DWD időjárási RTTY",
+"sh": "50 Bd / 450 Hz",
+"t": "A DWD időjárási RTTY-ja (Németország)",
+"h": "Mint az amatőr RTTY, de 50 baudon és 450 Hz-es eltolással: a német meteorológiai szolgálat nyílt szövegben adja közleményeit és tengeri előrejelzéseit.",
+"l": "Két, sokkal távolabbi vonal és kissé gyorsabb ritmus. A közlemények között a hívás: „CQ CQ CQ DE DDK2 DDH7 DDK9”, majd RYRYRY. 4583, 7646 és 10 100,8 kHz-en, valamint 147,3 kHz-en (32. lap)."
+},
+"mfsk16": {
+"nm": "MFSK16",
+"sh": "16 hang",
+"t": "MFSK16: tizenhat hang",
+"h": "Tizenhat hang 15,625 Hz-re egymástól, egyszerre egy, másodpercenként 15,625-ször; minden hang négy bitet hordoz hibajavítással védve.",
+"l": "316 Hz-es sáv folyton ugráló kis lépcsőkből, az elején egy állandó hang után. Fülre gyors kis dallam, mint egy furulya. Kis képek küldésére is használják (29. lap)."
+},
+"sitora": {
+"nm": "SITOR-A (ARQ)",
+"sh": "telex",
+"t": "SITOR-A: tengeri telex ARQ-ban",
+"h": "Az állomás 450 ms-onként háromkarakteres blokkokat küld (210 ms, 100 baud, 170 Hz-es eltolás); a blokkok között a másik állomás rövid jellel válaszol: „vettem” vagy „ismételd”.",
+"l": "Rövid szabályos csomagok, köztük kis, gyengébb válasz: tücsökszerű „cirp-cirp”. Ma már ritka rövidhullámon (20. lap)."
+},
+"dscvhf": {
+"nm": "VHF DSC (70-es csatorna)",
+"sh": "DSC",
+"t": "DSC: digitális szelektív hívás a 70-es csatornán",
+"h": "Kb. félmásodperces csomag 1200 baudon, két hangon, 1300 és 2100 Hz: a hajó MMSI-számát, a hívás típusát és vészhelyzetben a pozíciót hordozza.",
+"l": "Rövid, éles „brrrt” 156,525 MHz-en, váltakozó bitek sorával kezdődik. Közép- és rövidhullámon a DSC 100 baudos FSK, mint a NAVTEX (20. lap)."
+},
+"selcal": {
+"nm": "Repülési SELCAL",
+"sh": "4 hang",
+"t": "SELCAL: repülőgépek szelektív hívása rövidhullámon",
+"h": "A légiforgalmi irányító egy adott gépet két kb. egy másodperces impulzussal hív, mindegyik tizenhat hangból (312,6–1479,1 Hz) kettőből áll. A gépen kigyullad egy lámpa és megszólal egy gong: a személyzetnek nem kell folyamatosan figyelnie.",
+"l": "Két egymást követő akkord, „bing-bong”, a beszédüzenetek között a repülési SSB-frekvenciákon, például 5616 vagy 8864 kHz-en (17. lap)."
+},
+"dcs": {
+"nm": "DCS",
+"sh": "134,4 bit/s",
+"t": "DCS: a digitális altónus",
+"h": "A CTCSS folyamatos hangja helyett a rádió a beszéd alatt egy 23 bites szót küld, folyamatosan ismételve, másodpercenként 134,4 bittel. A végén egy 134,4 Hz-es hang hangtalanul bezárja a zajzárat.",
+"l": "Az FM-vevő hangjában: szabálytalan sáv egészen alul, 300 Hz alatt, és tompa morajlás, ha a rádió szűrője átengedi (10. lap)."
+},
+"t1750": {
+"nm": "1750 Hz-es hang",
+"sh": "átjátszó",
+"t": "1750 Hz-es hang: átjátszó nyitása",
+"h": "Az adás elején egy rövid 1750 Hz-es hang (kb. 0,5–1 s) ma is megnyit egyes európai amatőr átjátszókat; elengedéskor az átjátszó gyakran egy sípjellel válaszol.",
+"l": "Rövid vonal 1750 Hz-en, aztán a beszéd, végül az átjátszó sípjele (10. lap)."
+},
+"ncdxf": {
+"nm": "NCDXF jeladók",
+"sh": "14,100 MHz",
+"t": "NCDXF / IARU jeladók: a terjedés próbája",
+"h": "Tizennyolc jeladó szerte a világon sorban sugároz, mindegyik tíz másodpercig, 14,100, 18,110, 21,150, 24,930 és 28,200 MHz-en: a hívójel morzéban, majd négy egymásodperces vonás 100 W, 10 W, 1 W és 0,1 W teljesítménnyel.",
+"l": "Egy hívójel, majd négy egyre gyengébb vonás: ha még az utolsót is hallod, a terjedés az adott jeladó felé kiváló. Itt 4U1UN (New York), majd VE8AT (Kanada) (30. lap)."
+},
+"lrpt": {
+"nm": "Meteor-M LRPT",
+"sh": "137,9 MHz",
+"t": "Meteor-M műholdak: LRPT-képek",
+"h": "Az orosz Meteor-M meteorológiai műholdak digitálisan küldik képeiket: négyállapotú fázismoduláció (QPSK), másodpercenként 72 000 szimbólum, kb. 120 kHz szélesen.",
+"l": "Lekerekített szélű teli blokk, amely az áthaladás alatt lassan csúszik (Doppler-hatás); fülre csak sziszegés. 137,9 vagy 137,1 MHz-en, SatDumppal dekódolható (41. lap).",
+"n": "kicsinyítve"
+},
+"quindar": {
+"nm": "Quindar-hangok",
+"sh": "NASA",
+"t": "Quindar-hangok: az Apollo sípjelei",
+"h": "Amikor Houston megnyomja a mikrofongombot, egy 2525 Hz-es sípjel (250 ms) bekapcsolja a földi állomások adóit; elengedéskor egy 2475 Hz-es sípjel kikapcsolja őket.",
+"l": "Magas sípjel minden mondat előtt, és egy másik, kicsit mélyebb utána: az Apollo-küldetések felvételeinek híres hangja (41. lap)."
+},
+"wow": {
+"nm": "„Wow!” jel",
+"sh": "1977",
+"t": "A „Wow!” jel (1977. augusztus 15.)",
+"h": "A Big Ear rádiótávcső (Ohio) 72 másodpercig egy keskeny, nagyon erős jelet fogott a hidrogénvonal közelében, kb. 1420,456 MHz-en. Jerry Ehman csillagász a nyomatra azt írta: „Wow!”. Többé sosem észlelték, eredetéről ma is vita folyik.",
+"l": "Vékony vonal, amely kiemelkedik a zajból, erősödik, majd elhal: egy rögzített forrás alakja, amely áthalad az antenna nyalábján. Ez rekonstrukció: hangfelvétel nem létezik (47. lap).",
+"n": "72 s 12 s-ba sűrítve"
+},
+"frb": {
+"nm": "Gyors rádiókitörés",
+"sh": "FRB",
+"t": "Gyors rádiókitörés (FRB)",
+"h": "Néhány milliszekundumos rádióvillanás egy másik galaxisból; az elsőt 2007-ben fedezték fel. Az áthaladott gáz erősen késlelteti az alacsony frekvenciákat: a kitörés elkenődve érkezik, a magas hangok előbb.",
+"l": "Egyetlen görbe, amely a spektrum tetejéről az aljára zuhan, aztán semmi. Néhány ismétlődik; a legtöbbet csak egyszer látják (47. lap).",
+"n": "erősen lelassítva és felnagyítva"
+},
+"letterb": {
+"nm": "Egybetűs jeladók",
+"sh": "D, P, S, C…",
+"t": "Egybetűs jeladók",
+"h": "Az orosz haditengerészet adói végtelenül ismételnek egyetlen morzebetűt, mindegyik 100 Hz-re a szomszédjától: helyszíntől függően D, P, S, C, A, F, K vagy M.",
+"l": "Párhuzamos szaggatott vonalak nagyon közel egymáshoz, mindegyik saját ritmussal. 4558, 5154, 7039, 10 872, 13 528 és 16 332 kHz körül, CW-ben (43. lap)."
+},
+"sid": {
+"nm": "Napkitörés VLF-en",
+"sh": "SID",
+"t": "VLF-en látott napkitörés (SID)",
+"h": "A haditengerészetek VLF-adói (Franciaországban 20,9 kHz, Németországban 23,4 kHz…) a föld és az ionoszféra között terjednek. Napkitöréskor a röntgensugárzás perceken belül megváltoztatja az ionoszféra alját, és a vételi szint ugrik.",
+"l": "Keskeny, állandó sáv (az adó MSK-jele), amely hirtelen megerősödik, majd lassan visszatér a normálisba. Elég egy dróthurok és egy hangkártya: csillagászati szakkörök klasszikus projektje (47. lap).",
+"n": "egy óra 12 s-ba sűrítve"
+},
+"qrn": {
+"nm": "Zivatar okozta zaj",
+"sh": "QRN",
+"t": "Zivatar okozta zaj (QRN)",
+"h": "Minden villám nagyon erős adó, amely egyszerre minden frekvenciát lefed. Közép- és rövidhullámon ezer kilométerekre lévő viharokat is hallani, főleg nyáron és az alsó sávokon.",
+"l": "Szabálytalan vízszintes vonalak a teljes szélességben; fülre száraz reccsenések. A zajzár (NB) kicsit segít, egy keretantenna jobban (1. lap)."
+},
+"fading": {
+"nm": "Szelektív fading",
+"sh": "QSB",
+"t": "Szelektív fading (QSB)",
+"h": "Rövidhullámon a jel több úton érkezik az ionoszférán át. A frekvenciától függően ezek összeadódnak vagy kioltják egymást: egy keskeny bemélyedés vándorol a jelben.",
+"l": "Sötét sáv, amely lassan vándorol az AM-állomáson át. Amikor a középső vivőn halad át, a hang néhány másodpercre érdes és torz lesz; a szinkrondetektálás vagy az SSB-vétel segít (1. lap)."
+},
+"plc": {
+"nm": "Hálózati internet (PLC)",
+"sh": "2–30 MHz",
+"t": "PLC: internet a konnektoron át",
+"h": "A hálózati adapterek a ház villanyvezetékén küldenek adatot több száz vivőn 2 és 30 MHz között (újabb típusoknál feljebb), 24,4 kHz-enként egyet. A vezetékek antennaként sugároznak.",
+"l": "Csomagokban vibráló szabályos vonalakból álló fésű, az amatőrsávokon résekkel (a szabvány által előírt kivágások); fülre az internetforgalmat követő recsegés (43. lap).",
+"n": "kicsinyítve"
+},
+"fence": {
+"nm": "Villanypásztor",
+"sh": "tik… tik…",
+"t": "Villanypásztor",
+"h": "A készülék kb. másodpercenként egyszer több ezer voltos impulzust küld a drótba. Ha fű ér a dróthoz vagy egy szigetelő sérült, szikra ugrik át, és minden frekvencián sugároz.",
+"l": "Nagyon vékony vízszintes vonal a teljes szélességben, tökéletesen szabályos időközönként; „tik… tik…” a hosszúhullámtól a VHF-ig. Az egyenletes ritmus megkülönbözteti a zivatarzajtól (43. lap)."
+},
+"gsm": {
+"nm": "GSM-telefon",
+"sh": "217 Hz",
+"t": "GSM-telefon egy hangszóró mellett",
+"h": "A 2G-s telefon 0,577 ms-os csomagokban ad, másodpercenként 217-szer. Egy rosszul árnyékolt hangerősítő detektálja a csomagokat, és hallhatóvá teszi őket.",
+"l": "217 Hz-enként vonalakból álló fésű; a híres „tit-tit-ti-ti-tit” közvetlenül a csengés előtt, majd egyenletes zümmögés a hívás alatt. Egyre ritkább: a 2G-hálózatokat lekapcsolják (43. lap)."
+},
+"jjy": {
+"nm": "JJY",
+"sh": "40 / 60 kHz",
+"t": "JJY időjel (Japán, 40 és 60 kHz)",
+"h": "Minden másodpercben a vivő 0,8 s-ig (0 bit), 0,5 s-ig (1 bit) vagy 0,2 s-ig (jelző) teljes teljesítményű, majd 10%-ra esik. Ez a DCF77 fordítottja, amely a másodperc elején esik le.",
+"l": "Álló vonal, amely minden másodperc végén, korábban vagy később, gyengül. Adók Fukusimában (40 kHz) és Szaga-Fukuokában (60 kHz), Japán rádióvezérelt óráihoz (39. lap)."
+},
+"rwm": {
+"nm": "RWM",
+"sh": "4996 kHz",
+"t": "RWM időjel (Moszkva)",
+"h": "Távírásban 4996, 9996 és 14 996 kHz-en: másodpercenként egy 100 ms-os impulzus, más percekben másodpercenként tíz impulzus. Az RWM hívójelet óránként kétszer adják morzéban.",
+"l": "A hívójel, aztán szabályos „tikekre” szabdalt vonal, majd gyors pontok. CW-ben vagy SSB-ben hallgasd (39. lap).",
+"n": "sűrített részlet"
+},
+"bpm": {
+"nm": "BPM",
+"sh": "2,5–15 MHz",
+"t": "BPM időjel (Kína)",
+"h": "A pucsengi állomás (Senhszi) AM-ben sugároz 2,5, 5, 10 és 15 MHz-en: másodpercenként egy 10 ms-os tik 1000 Hz-en (egész percnél 300 ms), egyes percekben 100 ms-os tikek az UT1 időhöz. A BPM hívójelet morzéban, majd élőszóban adják.",
+"l": "A demodulált hangban: a hívójel, aztán nagyon rövid vonalak 1000 Hz-en, másodpercenként egy, egész percnél egy hosszabb. Gyakran keveredik a WWV-vel ugyanazokon a frekvenciákon (39. lap).",
+"n": "sűrített részlet"
+},
+"humpback": {
+"nm": "Hosszúszárnyú bálna",
+"sh": "ének",
+"t": "A hosszúszárnyú bálna éneke",
+"h": "Télen a szaporodóhelyeken a hímek énekelnek: nyögések, morgások és kiáltások sora, amely témát alkot, órákon át ugyanúgy ismétlődik, és évszakról évszakra változik. A hidrofonok tíz kilométerekről is hallják.",
+"l": "Vastag nyomok felharmonikusaikkal, amelyek 100 Hz és néhány kHz között lassan emelkednek vagy süllyednek; ugyanaz a sor néhány másodperc múlva visszatér. A felszínről és a tengerfenékről érkező visszhangok minden hangot meghosszabbítanak."
+},
+"bluewhale": {
+"nm": "Kék bálna",
+"sh": "×10",
+"t": "A kék bálna: a legmélyebb hívás",
+"h": "A Föld legnagyobb állata nagyon mély (10–40 Hz) és nagyon erős hívásokat ad, 10–20 másodperc hosszúakat, órákon át ismételve: több száz kilométerre elhallatszanak. Hogy halljuk őket, a felvételt tízszeresére gyorsítjuk.",
+"l": "Egy pulzáló rész, aztán egy hosszú, alig ereszkedő hang, fölötte a felharmonikusaival; a sor ismétlődik. A skála a valódi frekvenciákat mutatja.",
+"n": "10-szeresen gyorsítva"
+},
+"finwhale": {
+"nm": "Közönséges barázdásbálna",
+"sh": "20 Hz",
+"t": "A közönséges barázdásbálna: a 20 Hz-es impulzusok",
+"h": "A közönséges barázdásbálna kb. egy másodperces impulzusokat ad, amelyek kb. 25-ről 18 Hz-re esnek, szabályos időközönként, néha napokon át. Az 1950–60-as években ezek a „20 Hz-es jelek” fejtörést okoztak az amerikai haditengerészet lehallgatóhálózatainak, mielőtt e bálnának tulajdonították őket.",
+"l": "Egyforma rövid vonások szabályos sorban vagy párosával, mint egy nagyon lassú szív dobbanásai; mindegyik kissé ereszkedik frekvenciában. A skála a valódi frekvenciákat mutatja.",
+"n": "10-szeresen gyorsítva"
+},
+"sperm": {
+"nm": "Ámbráscet",
+"sh": "kattanások",
+"t": "Az ámbráscet kattanásai",
+"h": "Az ámbráscet mély merülésben szonárral vadászik: nagyon erős kattanások, kb. másodpercenként egy, amelyek a zsákmány közelében „nyikorgássá” gyorsulnak. Egymás között „kódákat” váltanak, rövid kattanássorokat, amelyek ritmusa klánonként eltér.",
+"l": "Vízszintes vonalak a teljes szélességben, szabályos közökkel, aztán zümmögéssé sűrűsödve (a nyikorgás), majd egy kis ritmikus minta: a kóda. Minden kattanás több, egymáshoz közeli impulzusból áll, az állat fejében keletkező visszaverődések miatt."
+},
+"dolphin": {
+"nm": "Palackorrú delfin",
+"sh": "füttyök",
+"t": "A delfin füttyei és kattanásai",
+"h": "A palackorrú delfin kb. 5 és 20 kHz között fütyül; minden egyednek van egy „névjegyfüttye”, amely a neveként szolgál. Vadászathoz és tájékozódáshoz nagyon rövid kattanássorokat is kibocsát, másodpercenként akár több százat.",
+"l": "Vékony görbék, amelyek emelkednek és visszaesnek, gyakran ugyanúgy ismétlődve, és vízszintes vonalak sorozatai a visszhangos helymeghatározáshoz. A frekvenciákat 3-mal osztottuk, hogy hallhatók legyenek; a skála a valódi értékeket mutatja.",
+"n": "3-szor mélyebben lejátszva"
+},
+"orca": {
+"nm": "Kardszárnyú delfin",
+"sh": "pulzáló hívások",
+"t": "A kardszárnyú delfin pulzáló hívásai",
+"h": "A kardszárnyú delfinek pulzáló hívásokkal kommunikálnak: olyan gyors impulzussorokkal (másodpercenként 500–2000), hogy hangnak halljuk őket, hirtelen hangmagasság-ugrással. Minden családi csoportnak saját „nyelvjárása” van.",
+"l": "Párhuzamos nyomok (a felharmonikusok) köteg, amely együtt emelkedik vagy süllyed, a hívás közepén éles töréssel; néha egy vékony, magasabb fütty."
+},
+"bseal": {
+"nm": "Szakállas fóka",
+"sh": "trilla",
+"t": "A szakállas fóka trillája",
+"h": "Tavasszal az északi-sarki jég alatt a hím hosszú trillákat ad, amelyek spirálisan ereszkednek több kHz-ről néhány száz hertzre, néha egy teljes percen át. Terület védelmére és a nőstények odacsalogatására szolgálnak.",
+"l": "Hullámos görbe, amely a skála tetejéről lefelé csúszik, mint egy kioldódó rugó, a végén egy mély hanggal.",
+"n": "rövidítve"
+},
+"shrimp": {
+"nm": "Pisztolyrákok",
+"sh": "zátony",
+"t": "A pisztolyrákok",
+"h": "Nagy ollóját összecsattintva a rák olyan gyors vízsugarat lő ki, hogy kavitációs buborék keletkezik; összeomláskor a buborék pisztolylövésként csattan. Rákok ezrei adják a zátonyok háttérzaját, és zavarhatják a szonárokat.",
+"l": "Pontok és rövid vízszintes vonalak esője a teljes szélességben, minden rend nélkül; fejhallgatóban folyamatos sercegés, mint sütéskor."
+},
+"sonar": {
+"nm": "Aktív szonár",
+"sh": "ping",
+"t": "Egy aktív szonár „pingje”",
+"h": "Egy hajó erős hangimpulzust küld (itt 3,5 kHz körül, a fregattok hajótest-szonárjainak tartománya), és hallgatja a visszhangot: a késés adja a távolságot, a frekvenciaeltolódás (Doppler-hatás) a cél sebességét. A hang a fenékről és a felszínről is visszatér egy uszály formájában: ez az utózengés.",
+"l": "Rövid, erős nyom, egy elhaló uszály, aztán a visszhang, sokkal gyengébben és kissé eltolt frekvencián. A második ping frekvenciasöprés (chirp), amely pontosabban méri a távolságot."
+},
+"propeller": {
+"nm": "Hajócsavar",
+"sh": "kavitáció",
+"t": "Egy elhaladó hajó csavarja",
+"h": "A csavarlapátok kavitációs buborékokat keltenek, amelyek szétpattannak: széles sziszegés, amely a lapátok elhaladásának ritmusában lüktet. A gépek álló vonalakat adnak hozzá. A szonárkezelők elemzik ezt a ritmust (DEMON-elemzés), hogy megszámolják a lapátokat és a fordulatszámot, és felismerjék a hajót.",
+"l": "Széles sávú sziszegés, a lapátok ritmusában vízszintes csíkokkal, néhány álló függőleges vonallal (motor, hajtómű). Az egész felerősödik, majd elhal, ahogy a hajó elhalad a hidrofon fölött."
+},
+"uqc": {
+"nm": "Víz alatti telefon",
+"sh": "UQC 8 kHz",
+"t": "A víz alatti telefon (UQC, „Gertrude”)",
+"h": "A tengeralattjárók és hajók akusztikus telefonnal beszélnek a víz alatt: a beszédet egyoldalsávosan, egy 8,0875 kHz-es vivő fölött továbbítják, a hajótestben lévő átalakítóval. Hatótáv: néhány kilométer.",
+"l": "SSB-beszédsáv 8 kHz felett; demodulálva távoli hang, amely a felszíni és fenéki visszhangok miatt hullámzik és zeng. A kijelzés felére csökkentve; a skála a valódi frekvenciákat mutatja.",
+"n": "felezett skála"
+},
+"zevs": {
+"nm": "ZEVS 82 Hz",
+"sh": "ELF",
+"t": "ZEVS: a tengeralattjárók rádiója 82 Hz-en",
+"h": "A rádióhullámok alig hatolnak be a tengervízbe, kivéve a rendkívül alacsony frekvenciákat (ELF). A Kola-félszigeten lévő orosz ZEVS adó tíz kilométeres antennavonalakkal sugároz 82 Hz-en, hogy elérje a mélyen merülő tengeralattjárókat. A sebesség parányi: percenként néhány karakter.",
+"l": "Vékony vonal 82 Hz-en a hálózati 50 Hz-es vonal és felharmonikusai mellett, zivatarzajjal. Fejhallgatóban alig hallható mély zúgás; nagy keretantennával és hangkártyával fogható. Az amerikai megfelelőjét, 76 Hz-en, 2004-ben leállították."
+},
+"bloop": {
+"nm": "A „Bloop”",
+"sh": "1997",
+"t": "A „Bloop” (1997)",
+"h": "1997-ben a NOAA csendes-óceáni hidrofonjai egy nagyon mély, gyorsan emelkedő hangot rögzítettek, amely több ezer kilométerre elhallatszott. Sokáig rejtély volt; 2012 óta jégrengésnek tulajdonítják: egy hatalmas jéghegy repedésének.",
+"l": "Széles sáv, amely néhány másodperc alatt emelkedik felharmonikusaival, majd lassan elhal. Rekonstrukció, 16-szorosára gyorsítva, mint a NOAA által közzétett felvétel.",
+"n": "16-szorosan gyorsítva"
+},
+"quake": {
+"nm": "Közeli földrengés",
+"sh": "P, majd S",
+"t": "Közeli földrengés: P- és S-hullámok",
+"h": "A talaj rezgései túl mélyek a fülnek (néhány hertz), ezért a szeizmométer felvételét felgyorsítjuk. Először a P-hullám (longitudinális) érkezik, majd a lassabb és erősebb S-hullám (transzverzális). Az S−P különbség másodpercben, kb. 8-cal szorozva, megadja a távolságot kilométerben.",
+"l": "Első rövid, éles lökés (P), fél másodperc múlva erősebb, mélyebb morajlás (S), amely hosszú uszályban, a kódában hal el. Itt a rengés kb. 80 km-re van. A skála a valódi frekvenciákat mutatja.",
+"n": "20-szorosan gyorsítva"
+},
+"teleseism": {
+"nm": "Távoli földrengés",
+"sh": "távrengés",
+"t": "Távoli földrengés: P, S és felületi hullámok",
+"h": "Egy 9000 km-re lévő rengésnél a P-hullám kb. tizenkét perc alatt halad át a Földön, az S-hullám mintegy tíz perccel később érkezik, aztán jönnek a lassú és nagyon mély felületi hullámok (Love és Rayleigh), amelyek a legtovább ráznak. Így rögzítik a szeizmométerek világszerte az összes nagy földrengést.",
+"l": "Két kis lökés (P, majd S), aztán hosszú, mély hullámzás, amelynek frekvenciája lassan emelkedik: a leghosszabb felületi hullámok gyorsabbak, és előbb érkeznek (diszperzió). Több mint háromórás felvétel 12 s-ba sűrítve.",
+"n": "1000-szeresen gyorsítva"
+},
+"swarm": {
+"nm": "Földrengésraj",
+"sh": "vulkán",
+"t": "Földrengésraj egy kitörés előtt",
+"h": "A felszálló magma töri a kőzetet: több száz kis rengés, egyre sűrűbben, mint La Palmán 2021-ben. Az obszervatóriumok ezt a ritmust követik a kitörés előrejelzéséhez; amikor a láva kilép, a lökéseket folyamatos remegés váltja fel.",
+"l": "Elszigetelt kis lökések, aztán egyre sűrűbben, mint a pattogó kukorica, végül folyamatos sáv: a kitörés remegése. A skála a valódi frekvenciákat mutatja.",
+"n": "20-szorosan gyorsítva"
+},
+"tremor": {
+"nm": "Harmonikus remegés",
+"sh": "Redoubt",
+"t": "Emelkedő harmonikus remegés (Redoubt, 2009)",
+"h": "2009-ben a Redoubt vulkán (Alaszka) egyes robbanásai előtt a talaj húrként rezgett: egy alaphang felharmonikusaival, amely kb. 1 Hz-ről közel 30 Hz-ig csúszott fel, majd néhány másodperccel a robbanás előtt elhallgatott. Kis, ismétlődő rengések nagyon gyors sorozatának tulajdonítják.",
+"l": "Párhuzamos nyomokból álló fésű, amely emelkedve szétnyílik, mint egy sziréna, aztán csend, majd széles sziszegés: a robbanás. A skála a valódi frekvenciákat mutatja.",
+"n": "20-szorosan gyorsítva"
+},
+"stromboli": {
+"nm": "A Stromboli infrahangjai",
+"sh": "infrahang",
+"t": "A Stromboli robbanásainak infrahangjai",
+"h": "A Stromboli (Olaszország) évszázadok óta nagyjából 10–20 percenként robban. Minden robbanás néhány hertzes nyomáshullámot küld a levegőbe: infrahangot, amely túl mély a fülnek, de mikrobarométerek kilométerekről is érzékelik.",
+"l": "Rövid, mély puffanás minden robbanásnál, aztán a gázsugár sziszegése, majd csend a következőig; alul a szél zúgása. Negyven perc 12 s-ba sűrítve.",
+"n": "200-szorosan gyorsítva"
+},
+"microseism": {
+"nm": "Mikroszeizmicitás",
+"sh": "hullámzás",
+"t": "Mikroszeizmicitás: a tengeri hullámzás rezegteti a Földet",
+"h": "A Föld minden pontján, a partoktól távol is, a szeizmométerek állandó, 5–20 s periódusú rezgést rögzítenek: az óceán hullámzása nyomja a tengerfeneket. Viharokkal erősödik, télen erősebb; ez minden szeizmogram háttérzaja.",
+"l": "Széles, folyamatos sáv, alatta egy gyengébb (az elsődleges mikroszeizmicitás, a hullámok periódusával), amely a vihar erősödésével vastagodik. Több mint három óra 12 s-ba sűrítve.",
+"n": "1000-szeresen gyorsítva"
+},
+"modes": {
+"nm": "A zengő Föld",
+"sh": "sajátrezgések",
+"t": "Sajátrezgések: a Föld harangként zeng",
+"h": "Egy nagyon nagy földrengés után, mint Szumátránál 2004-ben, az egész Föld napokig, sőt hónapokig rezeg, mint egy harang: minden sajátrezgésnek megvan a maga hangja. A legmélyebb, a 0S2 periódusa 54 perc; a 20,5 perces „lélegző” 0S0 módus tart a legtovább.",
+"l": "A lökés után álló függőleges vonalak sora, a Föld hangjai; a legmagasabbak gyorsan elhalnak, a végén csak egyetlen vonal marad, a 0S0 módus. A skála millihertzben; kb. négy hét 12 s-ba sűrítve.",
+"n": "200 000-szeresen gyorsítva"
+},
+"bit2": {
+"nm": "2 bit",
+"sh": "4 szint",
+"t": "Videojáték-zene 2 biten",
+"h": "A digitális hang mérések (minták) sora. 2 biten minden minta csak 4 értéket vehet fel: a hullámforma durva lépcsővé válik. A kerekítési hiba szemcsés sziszegésként és nagyon erős torzításként hallatszik; a jel-zaj viszony csak kb. 14 dB (bitenként 6 dB).",
+"l": "A zene elmerül egy, a teljes szélességet takaró, a hangokat követő zajszőnyegben. Hasonlítsd össze a 4, 8 és 16 bittel: ugyanaz a dallam, csak a bitek száma változik. Erre az oldalra írt eredeti dallam, játékkonzol stílusában."
+},
+"bit4": {
+"nm": "4 bit",
+"sh": "16 szint",
+"t": "Videojáték-zene 4 biten",
+"h": "Mintánként 16 lehetséges érték, kb. 26 dB jel-zaj viszony. Ez a NES háromszögcsatornájának és a Game Boy „wave” csatornája mintáinak pontossága: a konzolzene szemcsésségének egy része innen ered.",
+"l": "A hangok kiemelkednek, de a zaj fátyla köztük és a teljes szélességben továbbra is látszik. A zaj a hangerőt követi: a szünetekben eltűnik."
+},
+"bit8": {
+"nm": "8 bit",
+"sh": "256 szint",
+"t": "Videojáték-zene 8 biten",
+"h": "256 érték, kb. 50 dB jel-zaj viszony: az első samplerek és a régi számítógépek hangjainak minősége. Figyelem: egy „8 bites” konzol, mint a NES, a processzoráról kapta a nevét, nem a hangjáról, amelyet egyszerű oszcillátorok adtak (két négyszögjel, egy háromszög, egy zaj).",
+"l": "A háttérzaj már csak enyhe fátyol, amely csak e rovat 110 dB-es skálájának köszönhetően látszik. Fülre halk sziszegés a csendes részekben."
+},
+"bit16": {
+"nm": "16 bit",
+"sh": "65 536 szint",
+"t": "Videojáték-zene 16 biten",
+"h": "65 536 érték, kb. 98 dB jel-zaj viszony: az audio CD (44,1 kHz, 16 bit) és a Super Nintendo hangkimenetének (32 kHz) pontossága. A kerekítési zaj gyengébb mindannál, amit a fül normál hangerőn érzékel.",
+"l": "Semmi látható zaj: csak a hangok, felharmonikusaik és a dob. Ez az egész oldal minősége is, 12 kHz-es mintavételezéssel."
+},
+"bit32": {
+"nm": "32 bit",
+"sh": "lebegőpontos",
+"t": "Videojáték-zene 32 biten",
+"h": "32 bites lebegőpontos szám: a stúdiószoftverek pontossága, amellyel tucatnyi sávot lehet veszteség nélkül keverni és erősíteni. Fülre semmi különbség a 16 bithez képest. A „32 bites” PlayStation is 16 biten, 44,1 kHz-en játszotta a hangját.",
+"l": "Ugyanaz, mint a 16 bit, szemre és fülre: 16 bit felett a nyereség csak a stúdiómunkában hasznos."
+},
+"sr3k": {
+"nm": "3 kHz",
+"sh": "mintavétel",
+"t": "Ugyanaz a zene 3 kHz-es mintavétellel",
+"h": "A másodpercenkénti mintaszám szabja meg a lehető legmagasabb frekvenciát: a felét (Shannon mintavételi tétele), itt 1,5 kHz-et. Mintavétel előtt egy szűrő levág mindent, ami fölötte van; nélküle ezek a frekvenciák zavaró hangokká hajtódnának vissza. Csak a mély hangok és a közép maradnak: a zene tompa lesz.",
+"l": "A spektrum kb. 1,5 kHz-nél élesen véget ér: fölötte semmi. A hagyományos telefon 8 kHz-cel mintavételez (beszéd 3,4 kHz-ig), a CD 44,1 kHz-cel; ez az oldal 12 kHz-re korlátozott."
+},
+"sr6k": {
+"nm": "6 kHz",
+"sh": "mintavétel",
+"t": "Ugyanaz a zene 6 kHz-es mintavétellel",
+"h": "6 kHz-en a frekvenciák 3 kHz-ig érnek: a hangok és a dob teste átjut, de a magas felharmonikusok és a cintányérok csillogása eltűnik.",
+"l": "Teljes spektrum 3 kHz-ig, fölötte semmi. Hasonlítsd össze a 16 bittel (teljes szélesség, 6 kHz-ig) és a 3 kHz-cel."
+}
+}
+}

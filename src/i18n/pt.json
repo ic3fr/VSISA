@@ -44,7 +44,8 @@
 "theme_phosa": "Fósforo âmbar",
 "w3d": "Cascata 3D",
 "w3dHint": "arraste para girar",
-"audio_retry": "O navegador cortou o som: carrega outra vez em ▶ Ouvir."
+"audio_retry": "O navegador cortou o som: carrega outra vez em ▶ Ouvir.",
+"nsig": "{n} sinais"
 },
 "groups": [
 "Voz analógica",

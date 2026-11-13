@@ -44,7 +44,8 @@
 "theme_phosa": "Fosfori ambra",
 "w3d": "Waterfall 3D",
 "w3dHint": "trascina per ruotare",
-"audio_retry": "Il browser ha interrotto l'audio: premi di nuovo ▶ Ascolta."
+"audio_retry": "Il browser ha interrotto l'audio: premi di nuovo ▶ Ascolta.",
+"nsig": "{n} segnali"
 },
 "groups": [
 "Voce analogica",

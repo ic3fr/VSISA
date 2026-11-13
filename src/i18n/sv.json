@@ -44,7 +44,8 @@
 "theme_phosa": "Orange fosfor",
 "w3d": "3D-vattenfall",
 "w3dHint": "dra för att vrida",
-"audio_retry": "Webbläsaren stängde av ljudet: tryck på ▶ Lyssna igen."
+"audio_retry": "Webbläsaren stängde av ljudet: tryck på ▶ Lyssna igen.",
+"nsig": "{n} signaler"
 },
 "groups": [
 "Analog röst",

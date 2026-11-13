@@ -1,4 +1,4 @@
-# VSISA V1.8 – Virtual Simulator identification Signal Audio
+# VSISA V1.9 – Virtual Simulator identification Signal Audio
 
 [English](README.md) · **Français**
 
@@ -6,7 +6,7 @@
 
 Identificateur de modes radio : **127 signaux simulés** (dont 18 sons de l'espace, 7 curiosités des ondes courtes, 13 sons sous-marins, 7 sons de la Terre et une comparaison de son numérique en bonus), avec cinq **modes d'affichage** (jour, nuit en nuances de rouge, et phosphore vert, bleu ou orange comme les vieux ordinateurs) pour apprendre à reconnaître ce qu'on entend et ce qu'on voit sur un récepteur ou un SDR.
 
-**Ouvrir la page : https://ic3fr.github.io/VSISA/** · **[📥 Télécharger le livre OpenBookRadio](https://github.com/ic3fr/OpenBookRadio/releases)** (gratuit, PDF et EPUB) · 15 langues : menu en haut de la page, ou lien direct avec `#en`, `#es`, `#de`… à la fin de l'adresse.
+**Ouvrir la page : https://ic3fr.github.io/VSISA/** · **[📥 Télécharger le livre OpenBookRadio](https://github.com/ic3fr/OpenBookRadio/releases)** (gratuit, PDF et EPUB) · 20 langues : menu en haut de la page, ou lien direct avec `#en`, `#es`, `#de`… à la fin de l'adresse.
 
 ## Ce qu'elle fait
 - Pour chaque signal : le **son**, le **spectre** et le **waterfall** en direct, l'**empreinte** complète du signal, un **waterfall 3D** qu'on fait tourner à la souris ou au doigt et une fiche (principe, aspect à l'écran, fiche du livre).
@@ -35,20 +35,25 @@ Identificateur de modes radio : **127 signaux simulés** (dont 18 sons de l'espa
 
 Les signaux radio (AM, FM, AIS, LoRa…) sont montrés comme sur l'écran d'un SDR, autour d'une fréquence intermédiaire simulée ; certains sont à échelle réduite ou accélérée (c'est indiqué en haut de l'écran).
 
-## 15 langues / 15 languages
+## 20 langues / 20 languages
 | | |
 |---|---|
-| 🇫🇷 Français | Identificateur de modes radio : 127 signaux simulés, son, spectre, waterfall, quiz. `#fr` |
+| 🇨🇿 Čeština | Rozpoznávač rádiových druhů provozu: 127 simulovaných signálů, zvuk, spektrum, vodopád, kvíz. `#cs` |
+| 🇩🇰 Dansk | Identifikation af radiomodes: 127 simulerede signaler, lyd, spektrum, vandfald, quiz. `#da` |
+| 🇩🇪 Deutsch | Funkbetriebsarten-Erkenner: 127 simulierte Signale, Ton, Spektrum, Wasserfall, Quiz. `#de` |
 | 🇬🇧 English | Radio mode identifier: 127 simulated signals, sound, spectrum, waterfall, quiz. `#en` |
 | 🇪🇸 Español | Identificador de modos de radio: 127 señales simuladas, sonido, espectro, cascada, test. `#es` |
-| 🇩🇪 Deutsch | Funkbetriebsarten-Erkenner: 127 simulierte Signale, Ton, Spektrum, Wasserfall, Quiz. `#de` |
-| 🇳🇱 Nederlands | Radiomodus-herkenner: 127 gesimuleerde signalen, geluid, spectrum, waterval, quiz. `#nl` |
-| 🇨🇿 Čeština | Rozpoznávač rádiových druhů provozu: 127 simulovaných signálů, zvuk, spektrum, vodopád, kvíz. `#cs` |
-| 🇵🇹 Português | Identificador de modos de rádio: 127 sinais simulados, som, espetro, cascata, quiz. `#pt` |
+| 🇫🇷 Français | Identificateur de modes radio : 127 signaux simulés, son, spectre, waterfall, quiz. `#fr` |
 | 🇮🇹 Italiano | Identificatore di modi radio: 127 segnali simulati, suono, spettro, cascata, quiz. `#it` |
+| 🇭🇺 Magyar | Rádiós üzemmódok azonosítója: 127 szimulált jel, hang, spektrum, vízesés, kvíz. `#hu` |
+| 🇳🇱 Nederlands | Radiomodus-herkenner: 127 gesimuleerde signalen, geluid, spectrum, waterval, quiz. `#nl` |
+| 🇳🇴 Norsk | Identifisering av radiomoduser: 127 simulerte signaler, lyd, spektrum, foss, quiz. `#nb` |
 | 🇵🇱 Polski | Rozpoznawacz emisji radiowych: 127 symulowanych sygnałów, dźwięk, widmo, wodospad, quiz. `#pl` |
-| 🇬🇷 Ελληνικά | Αναγνώριση ραδιοφωνικών τρόπων εκπομπής: 127 προσομοιωμένα σήματα, ήχος, φάσμα, καταρράκτης, κουίζ. `#el` |
+| 🇵🇹 Português | Identificador de modos de rádio: 127 sinais simulados, som, espetro, cascata, quiz. `#pt` |
+| 🇷🇴 Română | Identificator de moduri radio: 127 de semnale simulate, sunet, spectru, cascadă, test. `#ro` |
+| 🇫🇮 Suomi | Radiolähetelajien tunnistin: 127 simuloitua signaalia, ääni, spektri, vesiputous, tietovisa. `#fi` |
 | 🇸🇪 Svenska | Identifiering av radiomoder: 127 simulerade signaler, ljud, spektrum, vattenfall, frågesport. `#sv` |
+| 🇬🇷 Ελληνικά | Αναγνώριση ραδιοφωνικών τρόπων εκπομπής: 127 προσομοιωμένα σήματα, ήχος, φάσμα, καταρράκτης, κουίζ. `#el` |
 | 🇷🇺 Русский | Определитель видов радиосигналов: 127 смоделированных сигналов, звук, спектр, водопад, викторина. `#ru` |
 | 🇺🇦 Українська | Визначник видів радіосигналів: 127 змодельованих сигналів, звук, спектр, водоспад, вікторина. `#uk` |
 | 🇨🇳 中文 | 无线电模式识别器：127 种模拟信号，声音、频谱、瀑布图、测验。`#zh` |

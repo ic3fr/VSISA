@@ -1,0 +1,1076 @@
+{
+"ui": {
+"title": "VSISA",
+"mystery": "Mysterielyd",
+"play": "▶ Lytt",
+"stop": "■ Stopp",
+"noise": "Støy",
+"volume": "Volum",
+"loop": "Gjenta",
+"specwf": "Spektrum + Foss",
+"cursor": "markør",
+"footprint": "Avtrykk",
+"dur": "{s} s ovenfra og ned",
+"avg": "gjennomsnitt over hele signalet",
+"press": "Trykk på Lytt: signalet ruller her",
+"count": "{n} signaler, i rekkefølgen fra ark 6",
+"myst": "Mysteriemodus",
+"mystTags": "Lytt og se, og velg så riktig svar",
+"quizH": "Hvilket signal er dette?",
+"quizLead": "Start lyttingen, se på spekteret, fossen og avtrykket, og svar så.",
+"score": "Poeng",
+"good": "Riktig!",
+"bad": "Feil: det var {x}.",
+"next": "Neste mysterielyd",
+"principle": "Prinsipp",
+"screen": "På skjermen",
+"sheet": "ark",
+"book": "Boka: ark {r}",
+"lang": "Språk",
+"signals": "Signaler",
+"f1": "Signaler simulert i siden (12 000 sampler per sekund): de på ark 6 i boka OpenBookRadio, andre signaler fra boka og bonuser. For radiosignaler (AM, FM, AIS, LoRa…) ser du den simulerte mellomfrekvensen, som på skjermen til en SDR; noen er nedskalert eller satt opp i fart, som angitt. For AM, SSB, FM, FM-stereo, ISS og fading hører du den demodulerte lyden, som fra mottakerens høyttaler, mens skjermen viser radiosignalet; stemmen er syntetisk og sier ingen ekte ord.",
+"f2": "Tiden går nedover i fossen og avtrykket. Lisens CC BY-NC-SA 4.0, gratis, ikke for salg.",
+"night": "Nattmodus",
+"day": "Dagmodus",
+"visits": "besøk",
+"plays": "avspillinger",
+"book_dl": "Last ned boka",
+"book_dl2": "Last ned boka OpenBookRadio (gratis, PDF og EPUB, 13 språk)",
+"display": "Visning",
+"theme_day": "Dag",
+"theme_night": "Natt (rød)",
+"theme_phos": "Grønn fosfor",
+"theme_phosb": "Blå fosfor",
+"theme_phosa": "Oransje fosfor",
+"w3d": "3D-foss",
+"w3dHint": "dra for å snu",
+"audio_retry": "Nettleseren kuttet lyden: trykk på ▶ Lytt igjen.",
+"nsig": "{n} signaler"
+},
+"groups": [
+"Analog tale",
+"Telegrafi",
+"Data",
+"Bilder",
+"Luftfart, sjøfart og redning",
+"Anrop, subtoner og personsøk",
+"Radiosonder, sensorer og tilkoblede enheter",
+"HF-moduser og kuriositeter",
+"Kringkasting og tid",
+"Bredbånd",
+"Bonus: lyder fra verdensrommet",
+"Bonus: kortbølgekuriositeter",
+"Bonus: undervannslyder",
+"Bonus: jordens lyder",
+"Bonus: digital lyd (bit og kHz)"
+],
+"modes": {
+"am": {
+"sh": "kringkasting",
+"t": "AM: amplitudemodulasjon",
+"h": "Bærebølgens styrke følger lyden: kurven «sveller» og «krymper».",
+"l": "En fast linje i midten (bærebølgen) med to like sidebånd på hver side. Omtrent 6 til 9 kHz bred. Kringkasting på kortbølge og mellombølge, luftfart (ark 12 og 14).",
+"r": [
+[
+"Lytting",
+"En jingle, så programlederen over bakgrunnsmusikk. De to sidebåndene er speilbilder: du ser melodien og så stemmen på hver side av bærebølgen."
+]
+]
+},
+"ssb": {
+"nm": "SSB",
+"t": "SSB: enkelt sidebånd",
+"h": "Bare ett sidebånd er igjen, uten bærebølge: ingenting når ingen snakker.",
+"l": "Ingen linje i midten, ett enkelt bånd omtrent 2,7 kHz bredt som bare lever mens noen snakker. USB over 10 MHz, LSB under (radioamatører). Dårlig avstemt høres stemmen ut som en «and» (ark 11 og 29)."
+},
+"fm": {
+"sh": "tale",
+"t": "FM: frekvensmodulasjon",
+"h": "Amplituden er konstant; svingningene blir tettere eller glissere med lyden.",
+"l": "Signalet danser rundt frekvensen sin, bredere når lyden er sterk: 12,5 kHz per kanal i smalbånds-FM (walkie-talkier, repeatere), 200 kHz for FM-kringkasting (ark 2 og 13).",
+"r": [
+[
+"Lytting",
+"Til slutt det korte «kshh»: squelchen lukker når senderen stopper."
+]
+]
+},
+"cw": {
+"t": "CW: morse",
+"h": "Bærebølgen slås av og på: streker og prikker.",
+"l": "En svært tynn linje som brytes i morsens rytme; et pip for øret. Her «CQ» (ark 49).",
+"r": [
+[
+"Hastighet",
+"20 ord/min, prikk 60 ms, på 700 Hz: «CQ CQ CQ DE F4ABC K»"
+],
+[
+"Med øret",
+"Rene pip, lange og korte, på én tone"
+],
+[
+"Dekoding",
+"Med øret, fldigi, CW Skimmer"
+]
+]
+},
+"rtty": {
+"t": "FSK / RTTY: to frekvenser",
+"h": "Frekvensen hopper mellom to verdier, én for 0 og én for 1.",
+"l": "To parallelle linjer: 170 Hz fra hverandre hos radioamatører (45,45 baud), 450 eller 850 Hz for værmeldinger. Et jevnt «tidilidi» (ark 32).",
+"r": [
+[
+"Kode",
+"Baudot ITA2: 5 bit + start + 1,5 stopp; mark 2125 Hz, space 2295 Hz"
+],
+[
+"Tekst",
+"RYRYRYRY CQ CQ DE F4ABC"
+],
+[
+"Dekoding",
+"fldigi, MMTTY, 2Tone"
+]
+]
+},
+"afsk": {
+"t": "AFSK 1200 baud: APRS og packet",
+"h": "To lydtoner, 1200 og 2200 Hz, sendt inn i en FM-sender.",
+"l": "Sett etter FM-mottakeren (høyttalerlyd): et bånd fra 1200 til 2200 Hz i korte støt. For øret et sekundlangt «grrrt» (ark 35 og 36).",
+"r": [
+[
+"Frekvens",
+"144,800 MHz i Europa (APRS), FM"
+],
+[
+"Ramme",
+"Flagg 0x7E, så AX.25-data i NRZI"
+],
+[
+"Dekoding",
+"Direwolf, multimon-ng, KISS TNC"
+]
+]
+},
+"psk31": {
+"t": "PSK31: fasemodulasjon",
+"h": "Frekvensen står stille, fasen snus; amplituden dupper ved hver snuing.",
+"l": "En svært tynn linje omtrent 60 Hz bred, litt «flettet». Dusinvis av stasjoner får plass på 3 kHz (ark 29).",
+"r": [
+[
+"Kode",
+"Varicode: 0 = fasesnuing, 1 = ingen endring; i hvile to tvillinglinjer"
+],
+[
+"Hvor den høres",
+"14 070 kHz, 3 580 kHz"
+],
+[
+"Dekoding",
+"fldigi"
+]
+]
+},
+"ft8": {
+"t": "MFSK / FT8: åtte toner",
+"h": "Frekvensen går opp og ned i trinn på 6,25 Hz, 0,16 s per trinn.",
+"l": "Bånd omtrent 50 Hz brede som varer 12,6 s og kommer igjen hvert 15. sekund, synkronisert med klokka: flere stasjoner samtidig innenfor 3 kHz, for eksempel på 7,074 MHz (ark 29).",
+"r": [
+[
+"Ramme",
+"79 symboler på 0,16 s, tre Costas-mønstre (start, midt, slutt); her åtte stasjoner"
+],
+[
+"Frekvenser",
+"14 074, 7 074, 3 573, 10 136, 21 074, 28 074 kHz"
+],
+[
+"Dekoding",
+"WSJT-X, JTDX (nøyaktig PC-klokke)"
+]
+]
+},
+"ft4": {
+"t": "FT4: konkurransenes FT8",
+"h": "Fire toner 20,8 Hz fra hverandre, 20,8 baud: 105 symboler på 5 s, i tidsluker på 7,5 s.",
+"l": "Bånd omtrent 90 Hz brede, kortere og bredere enn FT8, som kommer igjen hvert 7,5. sekund. 14 080, 7 047,5 kHz (ark 29)."
+},
+"olivia": {
+"t": "Olivia 8/250: åtte toner",
+"h": "Åtte toner 31,25 Hz fra hverandre, én om gangen, som hopper tilfeldig; Walsh-koding og interleaving.",
+"l": "En blokk av spredte prikker over 250 Hz; dekodes langt under støyen. En liten tilfeldig melodi for øret (ark 29)."
+},
+"hell": {
+"t": "Feld Hell: å skrive med en bærebølge",
+"h": "Bærebølgen slås av og på prikk for prikk: hver bokstav består av kolonner på 14 prikker som skannes nedenfra og opp (245 prikker i sekundet).",
+"l": "I fossen en hakkete linje; programmets skjerm (fldigi) tegner bokstavene på nytt. En myk knitring for øret (ark 29)."
+},
+"4fsk": {
+"t": "4FSK: DMR, C4FM (Fusion), NXDN, dPMR",
+"h": "Fire frekvensnivåer: hvert symbol bærer to bit.",
+"l": "En rektangulær blokk 6 til 12,5 kHz bred, full som støy, ofte i støt (DMR deler kanalen i to tidsluker). Et hest «frrr» for øret (ark 46)."
+},
+"mt63": {
+"t": "MT63: nødmeldinger (NBEMS)",
+"h": "64 toner samtidig, hver langsomt modulert, med mye redundans.",
+"l": "En flat blokk på 1 eller 2 kHz sentrert på 1500 Hz, med skarpe kanter; en jevn susing. Virker til og med med en mikrofon holdt mot en høyttaler (ark 31)."
+},
+"lora": {
+"t": "LoRa: frekvensramper (chirps)",
+"h": "Frekvensen sveiper over hele bredden og begynner så på nytt nedenfra: plasseringen av hoppet bærer dataene.",
+"l": "Parallelle diagonaler, lette å kjenne igjen: Meshtastic og MeshCore på 869,525 MHz eller 433 MHz, LoRaWAN-sensorer (ark 13, 23 og 24)."
+},
+"sstv": {
+"t": "SSTV: bilder i lyd",
+"h": "En synkpuls på 1200 Hz, så følger frekvensen linjens lysstyrke, fra 1500 (svart) til 2300 Hz (hvitt).",
+"l": "Regelmessige synklinjer og en sky som endrer seg med bildet; en «kvitrende» lyd i ett til to minutter. 14,230 MHz, ISS på 145,800 MHz (ark 37).",
+"r": [
+[
+"Ramme",
+"VIS-hode, så linjer: synk 1200 Hz, grønn, blå, rød; her 20 linjer av et testbilde"
+],
+[
+"Dekoding",
+"QSSTV, MMSSTV, Robot36 på mobilen"
+]
+]
+},
+"fax": {
+"nm": "Værfaks",
+"t": "Værfaks: 1500 Hz svart, 2300 Hz hvitt",
+"h": "Frekvensen beveger seg trinnløst fra svart til hvitt, 120 linjer i minuttet.",
+"l": "To faste bånd på 1500 og 2300 Hz (800 Hz fra hverandre), et jevnt «tikk-takk». Publiserte frekvenser er bærebølgefrekvenser: lytt i USB 1,9 kHz lavere (ark 38).",
+"r": [
+[
+"Ramme",
+"Starttone 300 Hz, faselinjer (hvit puls), så kartet"
+],
+[
+"Dekoding",
+"fldigi, JWX, HamFax"
+]
+]
+},
+"elt": {
+"nm": "ELT-sirene",
+"t": "ELT/PLB-sirene på 121,5 MHz",
+"h": "Et AM-signal der tonen faller fra 1600 til 300 Hz, to til fire ganger i sekundet.",
+"l": "En fast bærebølge og sidebånd som glir som en vifte: nødsendernes «uu-uu», også på 121,375 MHz ved øvelser (ark 27 og 28)."
+},
+"406": {
+"nm": "406-nødsender",
+"t": "Nødsender 406 MHz: BPSK-støt",
+"h": "Et halvt sekunds sending: 160 ms ren bærebølge, så svinger fasen ±1,1 radian med 400 bit/s.",
+"l": "En liten kort linje som kommer igjen hvert 50. sekund, mellom 406,0 og 406,1 MHz; ingenting nyttig å høre, det trengs en dekoder (EPIRB 406, ark 28)."
+},
+"adsb": {
+"t": "ADS-B / Mode S (1090 MHz): pulser",
+"h": "Pulser på 0,5 µs der plasseringen bærer bitene (PPM); her er tidsskalaen kraftig senket.",
+"l": "Svært korte vannrette linjer over hele bredden, hundrevis i sekundet nær en flyplass; det trengs en SDR (ark 15).",
+"n": "kraftig senket tidsskala"
+},
+"acars": {
+"t": "ACARS: data i AM og MSK",
+"h": "Et AM-signal som bærer to toner, 1200 og 2400 Hz, med 2400 bit/s.",
+"l": "Halvsekundsstøt med bærebølge og sidebånd, på 131,525, 131,725 eller 131,825 MHz i Europa: et «brrrt» for øret (ark 16)."
+},
+"ais": {
+"t": "AIS: GMSK 9600 baud på to kanaler",
+"h": "En utjevnet FSK (GMSK) i støt på 26 ms, den ene gangen på 161,975 MHz, den andre på 162,025 MHz (nedskalert).",
+"l": "To kolonner med små korte linjer, 50 kHz fra hverandre, en regelmessig klikking; jo flere skip, desto tettere (ark 19).",
+"n": "nedskalert"
+},
+"navtex": {
+"t": "NAVTEX og DSC på mellom- og kortbølge: FSK 170 Hz",
+"h": "Som RTTY: to frekvenser 170 Hz fra hverandre, men med 100 baud.",
+"l": "To parallelle linjer, sammenhengende under meldingen, på 518 og 490 kHz (NAVTEX) eller 2187,5 kHz (digitalt selektivt anrop) (ark 20).",
+"r": [
+[
+"Kode",
+"SITOR-B, CCIR 476: 7 bit med fire «1», med FEC-gjentakelse"
+],
+[
+"Dekoding",
+"fldigi, YaND"
+]
+]
+},
+"hfdl": {
+"t": "HFDL: fly på kortbølge",
+"h": "En PSK med 1800 baud på en underbærebølge på 1440 Hz.",
+"l": "Støt omtrent 2,4 kHz brede mellom 2,9 og 22 MHz; en modemsusing som kommer og går (ark 17)."
+},
+"ctcss": {
+"t": "CTCSS: en subtone under stemmen",
+"h": "En lav, sammenhengende tone (67 til 254 Hz, her 88,5 Hz) lagt til stemmen.",
+"l": "Sett i FM-mottakerens lyd: en fast linje helt nederst, under stemmen; den åpner squelchen på repeatere og walkie-talkier (ark 10)."
+},
+"dtmf": {
+"sh": "2 toner",
+"t": "DTMF: to toner per tast",
+"h": "Hver tast sender samtidig en lav tone (697 til 941 Hz) og en høy (1209 til 1633 Hz).",
+"l": "Par av prikker på linje i åtte faste kolonner; telefonnumrenes og repeaterkommandoenes «pip-pip» (ark 10).",
+"r": [
+[
+"Sekvens",
+"0 6 1 2 3 4 5 7 8 9 * #"
+]
+]
+},
+"selcall": {
+"sh": "5 toner",
+"t": "Selcall CCIR: toner etter hverandre",
+"h": "Fem toner på 100 ms etter hverandre, én per siffer.",
+"l": "En liten trapp av prikker, gjentatt; et raskt «tululululu» for å rope opp én bestemt radio (ark 33).",
+"r": [
+[
+"Sekvens",
+"1 2 3 4 5, to ganger; dekodes også av appen SelCall på UV-K1"
+]
+]
+},
+"pocsag": {
+"sh": "personsøkere",
+"t": "POCSAG og FLEX: personsøkere",
+"h": "En FSK på ±4,5 kHz; en innledning 1010… og så dataene (nedskalert).",
+"l": "To rene linjer under innledningen, så et fullt bånd; et skingrende «brrrrt». 466,075 MHz, DAPNET 439,9875 MHz (ark 45).",
+"n": "nedskalert"
+},
+"ale": {
+"sh": "8 toner",
+"t": "ALE: automatisk forbindelse på kortbølge",
+"h": "Åtte toner fra 750 til 2500 Hz, 125 baud, i støt.",
+"l": "En blokk omtrent 2 kHz bred av små prikker, ett til to sekunder, noen ganger på flere nærliggende frekvenser; en skingrende kvitring (ark 34)."
+},
+"rs41": {
+"nm": "Radiosonde RS41",
+"t": "Radiosonde RS41: sammenhengende GFSK",
+"h": "En utjevnet FSK med 4800 baud, uten pause; frekvensen driver sakte mens sonden stiger og kjøles ned.",
+"l": "Et bånd omtrent 10 kHz bredt som glir på skrå under hele ferden, mellom 400 og 406 MHz (ark 21)."
+},
+"ook": {
+"nm": "433-sensorer",
+"t": "Sensorer på 433 MHz: OOK",
+"h": "Bærebølgen slås av og på i korte eller lange pulser (on-off keying); meldingen gjentas tre ganger.",
+"l": "Støt av små prikker, ofte tre om gangen, på 433,92 MHz: værstasjoner, termometre, fjernkontroller (ark 22)."
+},
+"fhss": {
+"t": "Bluetooth: frekvenshopp (FHSS)",
+"h": "Frekvensen skifter 1600 ganger i sekundet blant 79 kanaler (nedskalert).",
+"l": "Små linjer spredt overalt over 80 MHz, aldri på samme sted, rundt 2,4 GHz (ark 25).",
+"n": "nedskalert"
+},
+"wspr": {
+"t": "WSPR: utbredelsesfyr",
+"h": "Fire toner 1,46 Hz fra hverandre, 0,68 s per symbol, i 110,6 s.",
+"l": "En svært tynn linje omtrent 6 Hz bred som varer nesten to minutter, hvert like annet minutt: man må zoome mye inn (ark 29).",
+"n": "utdrag på 24 s (en sending varer 110,6 s)"
+},
+"qrss": {
+"t": "QRSS: svært langsom morse",
+"h": "En bærebølge som slås av og på, med prikker på 3 til 10 s, ofte på to nærliggende frekvenser (DFCW).",
+"l": "Linjer noen få Hz brede, som leses av på en timinutters skjerm; uhørlige for øret (ark 30).",
+"n": "satt opp i fart: prikk 0,6 s i stedet for 3 til 10 s"
+},
+"texte": {
+"nm": "Tekst i fossen",
+"t": "Tekst i fossen",
+"h": "Hver linje i et bilde blir en gruppe toner: lyden ligner støy.",
+"l": "Teksten eller tegningen vises rett på SDR-skjermen (ark 40).",
+"r": [
+[
+"Merk",
+"Sendes fra bunnen av bildet: rett vei i den levende fossen, opp ned i avtrykket (leses ovenfra og ned)"
+]
+]
+},
+"vara": {
+"t": "Moderne HF-data: VARA, Pactor, ARDOP",
+"h": "Lange fulle støt (OFDM eller PSK) og, imellom, korte svar fra den andre stasjonen.",
+"l": "Et rektangel omtrent 2,4 kHz bredt som stopper og starter igjen, med en liten kvittering imellom; en hakkete susing (ark 29)."
+},
+"chirp": {
+"nm": "Ionosfæresonde",
+"t": "Ionosfæresonde (chirp sounder)",
+"h": "En langsom frekvensrampe over hele HF-båndet; ekko fra ionosfæren kommer litt senere.",
+"l": "En diagonal som sveiper over skjermen, doblet av parallelle linjer (ekkoene); et «ffuiit» som passerer på en brøkdel av et sekund."
+},
+"oth": {
+"nm": "Over-horisonten-radar",
+"t": "Over-horisonten-radar («hakkespetten»)",
+"h": "Pulser gjentatt 10 til 50 ganger i sekundet, hver flere kHz bred.",
+"l": "En bred stripete blokk som dekker hele bånd; en svært regelmessig hakkespett som banker på kortbølge."
+},
+"parasites": {
+"nm": "Forstyrrelser",
+"sh": "strømforsyning",
+"t": "Forstyrrelser fra en svitsjet strømforsyning",
+"h": "En firkantbølge: frekvensen og alle overtonene kommer ut samtidig.",
+"l": "En kam av regelmessige linjer som driver sammen, på en bakgrunn av støy: let etter den med NOISE FIND eller en bærbar mottaker (ark K22)."
+},
+"mpx": {
+"nm": "FM-stereo og RDS",
+"t": "FM-stereoradio og RDS",
+"h": "Den demodulerte lyden (multiplex) inneholder L+R-kanalen, en pilot på 19 kHz, L-R-kanalen rundt 38 kHz og RDS på 57 kHz.",
+"l": "Sett fra 0 til 60 kHz etter demoduleringen: en lav blokk, en tynn linje på 19 kHz, en svakere blokk i midten og RDS øverst (ark 12).",
+"n": "skala ÷ 20; stereolyd",
+"r": [
+[
+"Lytting",
+"Med hodetelefoner: 4 s i mono (midtblokken, L-R, forsvinner), så 4 s i stereo, melodien til venstre og akkordene til høyre."
+]
+]
+},
+"dcf77": {
+"t": "Tidssignalet DCF77 (77,5 kHz)",
+"h": "En bærebølge som faller til 15 % i 0,1 s (bit 0) eller 0,2 s (bit 1), i begynnelsen av hvert sekund.",
+"l": "En fast linje med et svart hull hvert sekund; det 59. sekundet har ikke noe hull, for å markere minuttet (ark 12).",
+"r": [
+[
+"Merk",
+"Her er bærebølgen flyttet ned til 1000 Hz; det 6. sekundet har ikke noe hull, som det 59. sekundet i hvert minutt"
+]
+]
+},
+"ofdm": {
+"t": "OFDM: dusinvis av underbærebølger",
+"h": "Mange tettpakkede bærebølger, hver langsom: summen ligner støy.",
+"l": "Et flatt rektangel med skarpe kanter, alltid til stede: DRM på kortbølge (10 kHz), DAB+ (1,5 MHz), DVB-T, Wi-Fi. En sammenhengende susing for øret (ark 12 og 25)."
+},
+"dsss": {
+"t": "Spredt spektrum (DSSS): GPS, Wi-Fi 802.11b",
+"h": "Dataene blandes med en svært rask kode: energien spres over et bredt bånd.",
+"l": "En bred pukkel, knapt over støyen; GPS ligger til og med under støyen og kan ikke sees uten behandling (ark 25 og 26)."
+},
+"hline": {
+"nm": "Hydrogenlinjen",
+"sh": "1420 MHz",
+"t": "Hydrogenlinjen på 21 cm (1420,405 MHz)",
+"h": "Kaldt hydrogen i Melkeveien sender en svært svak susing på 1420,405 MHz. Bevegelsen til galaksearmene forskyver den ved dopplereffekten: man ser flere små pukler.",
+"l": "Nesten ingenting i fossen fra sekund til sekund: man må ta gjennomsnitt lenge for å se puklene stige opp av støyen. Se her på gjennomsnittsspekteret når det er stoppet. En parabol eller et horn, en forforsterker og en SDR er nok (ark 47).",
+"n": "kraftig overdrevet signal"
+},
+"sun": {
+"nm": "Sola",
+"sh": "utbrudd",
+"t": "Sola: radioutbrudd av type III",
+"h": "Elektroner slynget ut av et solutbrudd krysser solens korona og får den til å sende på stadig lavere frekvenser mens de fjerner seg.",
+"l": "Linjer som faller på skrå fra toppen til bunnen av spekteret på under et sekund, over en bakgrunn av solstøy; et svulmende «shhh». Fra omtrent 10 til 400 MHz, også på kortbølge rundt 20 MHz (ark 47)."
+},
+"jupiter": {
+"nm": "Jupiter",
+"sh": "20 MHz",
+"t": "Jupiter: dekametriske utbrudd (L og S)",
+"h": "Jupiters magnetfelt og månen Io gir kraftig utstråling mellom 15 og 40 MHz: langsomme L-utbrudd og svært korte S-utbrudd som glir raskt nedover.",
+"l": "Først bølger av susing (L, som brenninger på en strand), så tog av små «pop» (S) i tette diagonaler. Rundt 20,1 MHz om natta, med en enkel dipol, når Io står riktig (ark 47)."
+},
+"pulsar": {
+"nm": "Pulsar",
+"sh": "B0329+54",
+"t": "Pulsaren PSR B0329+54",
+"h": "En roterende nøytronstjerne sveiper over jorda med en radiostråle, her hvert 0,714. sekund. Interstellar gass forsinker de lave frekvensene: hver puls kommer først i toppen av spekteret.",
+"l": "Et regelmessig «tikk»; i fossen er hver puls en kurve som heller nedover (dispersjon). Det virkelige signalet ligger under støyen: det trengs en stor antenne, og pulsene må summeres over perioden (ark 47).",
+"n": "kraftig overdrevet signal"
+},
+"meteor": {
+"nm": "Meteorer",
+"sh": "GRAVES",
+"t": "Meteorekko fra radaren GRAVES (143,050 MHz)",
+"h": "Den franske radaren GRAVES sender uten stopp på 143,050 MHz. Når et stjerneskudd ioniserer lufta, reflekterer sporet litt av signalet til mottakeren din, i en brøkdel av et sekund til noen sekunder.",
+"l": "I USB på 143,049 MHz: korte «ping» rundt 1000 Hz, noen ganger et ekko som glir (meteorhodet, dopplereffekt) eller som varer. Langt flere under meteorsvermer (Perseidene, Geminidene) (ark 1)."
+},
+"whistler": {
+"nm": "Whistlere",
+"sh": "VLF",
+"t": "VLF-whistlere",
+"h": "Et lyn gir et radioklikk; en del av det følger jordas magnetfeltlinjer til den andre halvkula og tilbake, de høye tonene først.",
+"l": "Et «pjuuu» som faller fra høyt til lavt på ett til to sekunder rett etter et klikk; knitring (sferics) overalt. Under 10 kHz, med en VLF-mottaker langt fra kraftlinjer (ark 47)."
+},
+"chorus": {
+"nm": "Morgenkor",
+"sh": "VLF",
+"t": "Morgenkoret (dawn chorus)",
+"h": "Under en magnetisk storm sender elektroner fanget i magnetosfæren små stigende toner, mest rundt soloppgang.",
+"l": "Stigende kvitring som overlapper, som fugler, fra omtrent 1 til 4 kHz. Samme utstyr som for whistlere (ark 47)."
+},
+"sputnik": {
+"nm": "Sputnik 1",
+"sh": "1957",
+"t": "Sputnik 1 (1957)",
+"h": "Den første kunstige satellitten sendte pip på omtrent 0,3 s på 20,005 og 40,002 MHz, vekselvis, i tre uker.",
+"l": "En regelmessig brutt linje: «pip… pip…», lyden hele verden lyttet til i oktober 1957 (rekonstruksjon) (ark 41)."
+},
+"doppler": {
+"nm": "Dopplereffekten",
+"sh": "satellitt",
+"t": "Satellittfyr og dopplereffekten",
+"h": "En satellitt i lav bane nærmer seg og fjerner seg så: den mottatte frekvensen faller under passeringen, omtrent ±3 kHz på 145 MHz og ±10 kHz på 435 MHz.",
+"l": "En linje som faller i en S-form: sakte først, raskt når satellitten er nærmest, så sakte igjen (ark 41).",
+"n": "passering på 10 min presset sammen til 12 s"
+},
+"apt": {
+"nm": "NOAA APT",
+"sh": "137 MHz",
+"t": "NOAA-satellitter: APT-bilder (historisk)",
+"h": "En underbærebølge på 2400 Hz amplitudemodulert av bildet, to linjer i sekundet, med en synkpuls i begynnelsen av hver linje. Stanset i 2025; Meteor-M-satellittene sender nå LRPT.",
+"l": "En linje på 2400 Hz med sidebånd som endrer seg med bildet, og det berømte «tikk-takk» to ganger i sekundet (ark 41)."
+},
+"eme": {
+"nm": "Ekko fra månen",
+"sh": "EME",
+"t": "Ekko fra månen (EME)",
+"h": "Et signal sendt mot månen kommer tilbake omtrent 2,5 s senere, enormt svekket, litt utsmurt og forskjøvet av dopplereffekten.",
+"l": "Du hører ditt eget «pip» og 2,5 s senere det svake, litt uklare ekkoet. Radioamatører gjør det i CW eller JT65, på 144 MHz og oppover (ark 1).",
+"n": "kraftig overdrevet ekko"
+},
+"msk144": {
+"nm": "MSK144",
+"sh": "meteorer",
+"t": "MSK144: den digitale modusen for meteorscatter",
+"h": "To toner, 1000 og 2000 Hz, med 2000 baud, i rammer på 72 ms gjentatt uten stopp: hvert meteorspor slipper noen av dem gjennom.",
+"l": "Støt på 0,1 til 1 s, omtrent 2,4 kHz brede, som dukker opp og forsvinner med meteorens «ping». På 50 og 144 MHz, med WSJT-X (ark 29)."
+},
+"jt65": {
+"nm": "JT65",
+"sh": "65 toner",
+"t": "JT65: 65 toner, svært langsomt",
+"h": "En synktone og 64 datatoner 2,7 Hz fra hverandre (JT65A), 0,37 s per symbol, 47 s sending i minuttet.",
+"l": "En stige av små linjer over omtrent 180 Hz, med en synklinje som hele tiden vender tilbake til samme sted. Brukes til månesprett (JT65B og C) og svært svake signaler (ark 29).",
+"n": "utdrag på 20 s (en sending varer 47 s)"
+},
+"tetra": {
+"nm": "TETRA",
+"sh": "π/4-DQPSK",
+"t": "TETRA: profesjonelt digitalt nett",
+"h": "Fasemodulasjon π/4-DQPSK med 18 000 symboler i sekundet, fire tidsdelte kanaler, i kanaler på 25 kHz.",
+"l": "En full blokk med avrundede kanter, alltid til stede nær en basestasjon; en hes susing. Kryptert: kan ikke avlyttes (ark 46).",
+"n": "nedskalert"
+},
+"ndb": {
+"nm": "NDB-fyr",
+"sh": "190–535 kHz",
+"t": "NDB: retningsløst radiofyr",
+"h": "En fast bærebølge på langbølge, med en kjenning på to eller tre bokstaver i morse på en tone (ofte 1020 Hz).",
+"l": "En fast linje i midten og, under kjenningen, to små linjer på hver side. Omtrent 190 til 535 kHz, i SSB eller CW (ark 18)."
+},
+"vor": {
+"nm": "VOR",
+"sh": "108–118 MHz",
+"t": "VOR: rundstrålende radiofyr",
+"h": "I AM: et 30 Hz-signal som avhenger av retningen, en underbærebølge på 9960 Hz frekvensmodulert med 30 Hz (referansen) og morsekjenningen på 1020 Hz.",
+"l": "I den demodulerte lyden: en lav brumming på 30 Hz, en bred bølgete linje nær 10 kHz og kjenningen innimellom (ark 18).",
+"n": "demodulert lyd, skala ÷ 2"
+},
+"ils": {
+"nm": "ILS",
+"sh": "90 + 150 Hz",
+"t": "ILS: landingshjelp (localizer)",
+"h": "I AM to toner på 90 og 150 Hz; forholdet mellom dem forteller flyet om det er til venstre eller høyre for senterlinjen. Morsekjenningen begynner med I.",
+"l": "I den demodulerte lyden: to svært lave linjer på 90 og 150 Hz og kjenningen på 1020 Hz. Mellom 108,1 og 112 MHz; glidebanen ligger rundt 330 MHz (ark 18)."
+},
+"m10": {
+"nm": "Sondene M10 / M20",
+"sh": "Meteomodem",
+"t": "Radiosondene M10 og M20 (Meteomodem)",
+"h": "Én ramme i sekundet, i rask FSK (omtrent 9600 baud): bredere enn RS41. Sendes opp i Frankrike av Météo-France.",
+"l": "Et bredt støt hvert sekund som driver sakte under ferden; mellom 400 og 406 MHz (ark 21)."
+},
+"tpms": {
+"nm": "Dekk (TPMS)",
+"sh": "433 MHz",
+"t": "Dekktrykksensorer (TPMS)",
+"h": "Hvert hjul sender innimellom et FSK-støt på noen få millisekunder: trykk, temperatur, identitet.",
+"l": "Små enkeltstående støt på 433,92 MHz (eller 315 MHz), ofte to og to, når en bil kjører forbi. Dekodes av rtl_433 (ark 22)."
+},
+"als162": {
+"nm": "ALS162",
+"sh": "162 kHz",
+"t": "Tidssignalet ALS162 (Allouis, 162 kHz)",
+"h": "Bærebølgen fra France Inters tidligere langbølgesending; tiden kodes med små, uhørlige fasemodulasjoner.",
+"l": "En fast linje, svært sterk i Frankrike, knapt bredere i begynnelsen av hvert sekund; det trengs en dekoder for å lese tiden (ark 39)."
+},
+"wwv": {
+"nm": "WWV",
+"sh": "2,5–20 MHz",
+"t": "Tidssignalet WWV (Colorado)",
+"h": "I AM: et «tikk» på 5 ms på 1000 Hz hvert sekund, en tone på 500 eller 600 Hz, en tidskode på 100 Hz og en stemme som oppgir UTC.",
+"l": "I den demodulerte lyden: en linje på 500 Hz som brytes hvert sekund, tikket på 1000 Hz og koden helt nederst på 100 Hz (ark 39)."
+},
+"msf": {
+"nm": "MSF",
+"sh": "60 kHz",
+"t": "Tidssignalet MSF (Anthorn, 60 kHz)",
+"h": "Bærebølgen slås av i begynnelsen av hvert sekund i 0,1, 0,2 eller 0,3 s avhengig av bitene, og i 0,5 s for å markere minuttet.",
+"l": "En fast linje med helt svarte hull hvert sekund, lengre enn hos DCF77 (ark 39)."
+},
+"type2": {
+"nm": "Sola type II",
+"sh": "sjokkbølge",
+"t": "Sola: radioutbrudd av type II",
+"h": "Sjokkbølgen fra en koronamasseutkastning får plasmaet til å sende stadig lavere, langsomt, ofte i to bånd (grunnfrekvensen og den doble).",
+"l": "To parallelle støybånd som glir rolig nedover i flere minutter. Sammenlign med utbrudd av type III, som er mye raskere (ark 47).",
+"n": "flere minutter presset sammen til 6 s"
+},
+"tweeks": {
+"nm": "Tweeks",
+"sh": "VLF",
+"t": "Tweeks: nattens VLF-«ping»",
+"h": "Om natta spretter klikket fra et fjernt lyn mellom bakken og ionosfæren; frekvenser nær grensefrekvensen (rundt 1,7 kHz) kommer sist.",
+"l": "Et lite «ping» som faller og stopper rundt 1,7 kHz, noen ganger med et ekko på dobbel frekvens; knitring overalt. Under 10 kHz, om natta (ark 47)."
+},
+"hiss": {
+"nm": "VLF-sus",
+"sh": "hiss",
+"t": "VLF-sus (hiss)",
+"h": "Bredbåndet støy fra elektroner i plasmasfæren, som stiger og synker med den magnetiske aktiviteten.",
+"l": "Et bånd av susing fra noen hundre Hz til noen få kHz, uten mønster, som sakte sveller og forsvinner (ark 47)."
+},
+"aurora": {
+"nm": "Radionordlys",
+"sh": "Au",
+"t": "Nordlysutbredelse (Au)",
+"h": "Nordlyset reflekterer VHF-bølger, men rister dem svært raskt: hvert signal spres over flere hundre Hz.",
+"l": "CW blir en hes susing, som en hvisking; man hører ikke lenger noen tone. På 50 og 144 MHz, med antennen mot nord, under magnetiske stormer (ark 1)."
+},
+"galactic": {
+"nm": "Galaktisk støy",
+"sh": "20–40 MHz",
+"t": "Støyen fra Melkeveien",
+"h": "Galaksens sentrum sender en radiosusing som Karl Jansky oppdaget i 1932 rundt 20 MHz. Den stiger og synker mens jorda roterer.",
+"l": "En bakgrunnsstøy som sakte stiger og synker igjen, omtrent 4 minutter tidligere hver dag. Synlig med en enkel dipol mellom 20 og 40 MHz (ark 47).",
+"n": "et døgn presset sammen til 12 s"
+},
+"cubesat": {
+"nm": "CubeSat",
+"sh": "9600 bd",
+"t": "Telemetri fra CubeSat",
+"h": "Små satellitter sender jevnlig målingene sine (batteri, temperaturer) i FSK eller GMSK med 1200 eller 9600 baud, rundt 435–438 MHz.",
+"l": "Regelmessige støt som glir litt lavere hver gang, ved dopplereffekten, under passeringen (ark 41).",
+"n": "nedskalert, passering satt opp i fart"
+},
+"issfm": {
+"nm": "ISS på FM",
+"sh": "145,800 MHz",
+"t": "Romstasjonen (ISS): tale på FM",
+"h": "Astronautene snakker med skoler og radioamatører i FM på 145,800 MHz. Stasjonen flyr i 28 000 km/t: under passeringen glir den mottatte frekvensen fra omtrent +3,5 kHz til −3,5 kHz.",
+"l": "Et bånd av FM-tale som sakte flytter seg fra høyre mot venstre under den ti minutter lange passeringen (ark 41).",
+"n": "passering på 10 min presset sammen til 10 s"
+},
+"buzzer": {
+"nm": "UVB-76 «The Buzzer»",
+"sh": "4625 kHz",
+"t": "UVB-76, «The Buzzer» (4625 kHz)",
+"h": "En russisk militærstasjon som i tiår har sendt en summing på omtrent ett sekund, rundt 25 ganger i minuttet, noen ganger avbrutt av en talemelding.",
+"l": "En fast bærebølge og, ved hver summing, en kolonne av tette linjer ovenfra og ned. Lett å finne på 4625 kHz i USB (ark 43)."
+},
+"pip": {
+"nm": "«The Pip»",
+"sh": "3756 / 5448 kHz",
+"t": "«The Pip»: pip uten slutt",
+"h": "Et annet russisk militært kortbølgefyr som dag og natt gjentar små korte pip, noen ganger avbrutt av meldinger.",
+"l": "En fast linje som brytes av et kort pip omtrent 50 ganger i minuttet; for øret et jevnt «pip… pip…» som aldri stopper (ark 43).",
+"n": "omtrentlig rytme"
+},
+"squeaky": {
+"nm": "«Squeaky Wheel»",
+"sh": "HF",
+"t": "«Squeaky Wheel»",
+"h": "Et russisk militært kortbølgefyr som lytterne har kalt opp etter det gjentatte lydmønsteret.",
+"l": "Et lite mønster av to lyder, der den ene stiger, gjentatt i en sløyfe: som et knirkende hjul (ark 43).",
+"n": "omtrentlig etterligning"
+},
+"codar": {
+"nm": "CODAR",
+"sh": "havradar",
+"t": "CODAR: radarer for havstrømmer",
+"h": "Kystradarer sveiper over et frekvensbånd en eller to ganger i sekundet for å måle strømmer og bølger.",
+"l": "Regelmessige parallelle diagonaler og et gjentatt «svisj»; rundt 4,5–5,5 MHz, 13 MHz og 25 MHz, ofte dag og natt (ark 43).",
+"n": "nedskalert"
+},
+"stanag": {
+"nm": "STANAG 4285",
+"sh": "8-PSK",
+"t": "Militært modem STANAG 4285",
+"h": "Fasemodulasjon 8-PSK med 2400 baud på en bærebølge på 1800 Hz, med en sondesekvens hvert 107. ms for å følge kanalen.",
+"l": "En full blokk omtrent 3 kHz bred; for øret en susing med en regelmessig summing (ark 43)."
+},
+"link11": {
+"nm": "Link-11",
+"sh": "16 toner",
+"t": "Link-11: maritim datalink",
+"h": "Seksten toner fra 605 til 2915 Hz sendt sammen, hver fasemodulert 75 ganger i sekundet.",
+"l": "En kam av fjorten regelmessige linjer fra 935 til 2365 Hz, pluss to linjer for seg selv på 605 og 2915 Hz; for øret en musikalsk summing (ark 43)."
+},
+"numbers": {
+"nm": "Tallstasjon",
+"sh": "stemme",
+"t": "Tallstasjon",
+"h": "På et fast tidspunkt en kort anropsmelodi, så leser en stemme (ofte syntetisk) opp grupper på fem sifre, i AM eller SSB.",
+"l": "Melodien som separate toner, så regelmessige grupper av stavelser adskilt av stillhet (ark 43).",
+"n": "etterlignet stemme, ingen ekte sifre"
+},
+"rttydwd": {
+"nm": "Vær-RTTY DWD",
+"sh": "50 Bd / 450 Hz",
+"t": "Vær-RTTY fra DWD (Tyskland)",
+"h": "Som amatørenes RTTY, men med 50 baud og 450 Hz skift: den tyske værtjenesten sender meldingene og havvarslene sine i klartekst.",
+"l": "To linjer mye lenger fra hverandre og en litt raskere rytme. Mellom meldingene anropet «CQ CQ CQ DE DDK2 DDH7 DDK9» og så RYRYRY. På 4583, 7646 og 10 100,8 kHz, også 147,3 kHz (ark 32)."
+},
+"mfsk16": {
+"nm": "MFSK16",
+"sh": "16 toner",
+"t": "MFSK16: seksten toner",
+"h": "Seksten toner 15,625 Hz fra hverandre, én om gangen, 15,625 ganger i sekundet; hver tone bærer fire bit, beskyttet av feilretting.",
+"l": "Et bånd på 316 Hz av små trinn som hopper hele tiden, etter en fast tone i starten. For øret en rask liten melodi, som en fløyte. Brukes også til å sende små bilder (ark 29)."
+},
+"sitora": {
+"nm": "SITOR-A (ARQ)",
+"sh": "teleks",
+"t": "SITOR-A: maritim teleks i ARQ",
+"h": "Stasjonen sender blokker på tre tegn (210 ms, 100 baud, 170 Hz skift) hvert 450. ms; mellom blokkene svarer den andre stasjonen med et kort signal som betyr «mottatt» eller «gjenta».",
+"l": "Korte regelmessige støt med et lite, svakere svar imellom: et «tsirp-tsirp» som en siriss. I dag sjelden på kortbølge (ark 20)."
+},
+"dscvhf": {
+"nm": "VHF-DSC (kanal 70)",
+"sh": "DSC",
+"t": "DSC: digitalt selektivt anrop på kanal 70",
+"h": "Et støt på omtrent et halvt sekund med 1200 baud, på to toner på 1300 og 2100 Hz: det bærer skipets MMSI-nummer, typen anrop og, i nød, posisjonen.",
+"l": "Et kort, skingrende «brrrt» på 156,525 MHz som begynner med en rekke vekslende bit. På mellom- og kortbølge er DSC FSK med 100 baud, som NAVTEX (ark 20)."
+},
+"selcal": {
+"nm": "SELCAL i luftfart",
+"sh": "4 toner",
+"t": "SELCAL: selektivt anrop av fly på kortbølge",
+"h": "Flygelederen roper opp ett bestemt fly med to pulser på omtrent ett sekund, hver av to toner blant seksten (312,6 til 1479,1 Hz). I flyet tennes en lampe og en klokke ringer: besetningen trenger ikke lytte hele tiden.",
+"l": "To akkorder etter hverandre, «bing-bong», mellom talemeldingene på luftfartens SSB-frekvenser, for eksempel 5616 eller 8864 kHz (ark 17)."
+},
+"dcs": {
+"nm": "DCS",
+"sh": "134,4 bit/s",
+"t": "DCS: den digitale subtonen",
+"h": "I stedet for en sammenhengende tone som CTCSS sender radioen under stemmen et ord på 23 bit som gjentas uten stopp med 134,4 bit i sekundet. Til slutt lukker en tone på 134,4 Hz squelchen lydløst.",
+"l": "Sett i FM-mottakerens lyd: et uregelmessig bånd helt nederst, under 300 Hz, og en dump rumling hvis radioens filter slipper det gjennom (ark 10)."
+},
+"t1750": {
+"nm": "Tone 1750 Hz",
+"sh": "repeater",
+"t": "Tone 1750 Hz: å åpne en repeater",
+"h": "En kort tone på 1750 Hz (omtrent 0,5 til 1 s) i begynnelsen av sendingen åpner fortsatt enkelte europeiske amatørrepeatere; repeateren svarer ofte med et pip når man slipper.",
+"l": "En kort linje på 1750 Hz, så stemmen, så repeaterens pip (ark 10)."
+},
+"ncdxf": {
+"nm": "NCDXF-fyr",
+"sh": "14,100 MHz",
+"t": "Fyrene NCDXF / IARU: å teste utbredelsen",
+"h": "Atten fyr rundt jorda sender på omgang, ti sekunder hver, på 14,100, 18,110, 21,150, 24,930 og 28,200 MHz: kallesignalet i morse, så fire streker på ett sekund med 100 W, 10 W, 1 W og 0,1 W.",
+"l": "Et kallesignal, så fire stadig svakere streker: hører du fortsatt den siste, er utbredelsen til det fyret utmerket. Her 4U1UN (New York) og så VE8AT (Canada) (ark 30)."
+},
+"lrpt": {
+"nm": "Meteor-M LRPT",
+"sh": "137,9 MHz",
+"t": "Meteor-M-satellittene: LRPT-bilder",
+"h": "De russiske værsatellittene Meteor-M sender bildene sine digitalt: fasemodulasjon med fire tilstander (QPSK), 72 000 symboler i sekundet, omtrent 120 kHz bredt.",
+"l": "En full blokk med avrundede kanter som glir sakte under passeringen (dopplereffekt); for øret bare en susing. På 137,9 eller 137,1 MHz, dekodes med SatDump (ark 41).",
+"n": "nedskalert"
+},
+"quindar": {
+"nm": "Quindar-toner",
+"sh": "NASA",
+"t": "Quindar-tonene: Apollos pip",
+"h": "Når Houston trykker på mikrofontasten, slår et pip på 2525 Hz (250 ms) på bakkestasjonenes sendere; når tasten slippes, slår et pip på 2475 Hz dem av.",
+"l": "Et høyt pip før hver setning og et annet, litt lavere, etter: den berømte lyden i opptakene fra Apollo-ferdene (ark 41)."
+},
+"wow": {
+"nm": "«Wow!»-signalet",
+"sh": "1977",
+"t": "«Wow!»-signalet (15. august 1977)",
+"h": "Radioteleskopet Big Ear (Ohio) fanget i 72 sekunder et smalt og svært sterkt signal nær hydrogenlinjen, rundt 1420,456 MHz. Astronomen Jerry Ehman skrev «Wow!» på utskriften. Det ble aldri sett igjen, og opprinnelsen diskuteres fortsatt.",
+"l": "En tynn linje som stiger opp av støyen, vokser og forsvinner: formen til en fast kilde som driver gjennom antennens stråle. Dette er en rekonstruksjon: det finnes ikke noe lydopptak (ark 47).",
+"n": "72 s presset sammen til 12 s"
+},
+"frb": {
+"nm": "Rask radioblink",
+"sh": "FRB",
+"t": "Rask radioblink (FRB)",
+"h": "Et radioblink på noen få millisekunder fra en annen galakse; det første ble oppdaget i 2007. Gassen det passerer forsinker de lave frekvensene mye: blinket kommer utsmurt, de høye tonene først.",
+"l": "En enkelt kurve som faller fra toppen til bunnen av spekteret, så ingenting. Noen gjentar seg; de fleste sees bare én gang (ark 47).",
+"n": "kraftig senket og overdrevet"
+},
+"letterb": {
+"nm": "Enbokstavsfyr",
+"sh": "D, P, S, C…",
+"t": "Enbokstavsfyr",
+"h": "Den russiske marinens sendere gjentar i det uendelige én morsebokstav, hver 100 Hz fra naboen: D, P, S, C, A, F, K eller M avhengig av stedet.",
+"l": "Parallelle prikkete linjer, svært tett inntil hverandre, hver med sin egen rytme. Rundt 4558, 5154, 7039, 10 872, 13 528 og 16 332 kHz, i CW (ark 43)."
+},
+"sid": {
+"nm": "Solutbrudd på VLF",
+"sh": "SID",
+"t": "Solutbrudd sett på VLF (SID)",
+"h": "Marinenes VLF-sendere (20,9 kHz i Frankrike, 23,4 kHz i Tyskland…) utbres mellom bakken og ionosfæren. Når et solutbrudd kommer, endrer røntgenstrålingen bunnen av ionosfæren på noen minutter, og mottaksnivået hopper.",
+"l": "Et smalt, stabilt bånd (senderens MSK-signal) som plutselig blir sterkere og så sakte går tilbake til det normale. En trådsløyfe og et lydkort er nok: et klassisk prosjekt for astronomiklubber (ark 47).",
+"n": "en time presset sammen til 12 s"
+},
+"qrn": {
+"nm": "Tordenstøy",
+"sh": "QRN",
+"t": "Tordenstøy (QRN)",
+"h": "Hvert lyn er en svært kraftig sender som dekker alle frekvenser samtidig. På mellom- og kortbølge hører man tordenvær tusenvis av kilometer unna, mest om sommeren og på de lave båndene.",
+"l": "Uregelmessige vannrette linjer over hele bredden; tørre smell for øret. Støydemperen (NB) hjelper litt, en rammeantenne mer (ark 1)."
+},
+"fading": {
+"nm": "Selektiv fading",
+"sh": "QSB",
+"t": "Selektiv fading (QSB)",
+"h": "På kortbølge kommer signalet fram via flere veier gjennom ionosfæren. Avhengig av frekvensen forsterker eller utsletter de hverandre: et smalt søkk vandrer gjennom signalet.",
+"l": "En mørk sone som sakte driver gjennom AM-stasjonen. Når den passerer bærebølgen i midten, blir lyden rå og forvrengt i noen sekunder; synkron deteksjon eller lytting i SSB retter det (ark 1)."
+},
+"plc": {
+"nm": "Powerline (PLC)",
+"sh": "2–30 MHz",
+"t": "PLC: internett gjennom stikkontaktene",
+"h": "Powerline-adaptere sender data gjennom husets elanlegg på hundrevis av bærebølger mellom 2 og 30 MHz (høyere for nye modeller), én for hver 24,4 kHz. Ledningene stråler som en antenne.",
+"l": "En kam av regelmessige linjer som flimrer i pakker, med hull på amatørbåndene (notcher som standarden krever); for øret en knitring som følger internettrafikken (ark 43).",
+"n": "nedskalert"
+},
+"fence": {
+"nm": "Strømgjerde",
+"sh": "tikk… tikk…",
+"t": "Strømgjerde",
+"h": "Apparatet sender en puls på flere tusen volt inn i tråden omtrent én gang i sekundet. Hvis gress berører tråden eller en isolator er skadet, slår en gnist over og stråler på alle frekvenser.",
+"l": "En svært tynn vannrett linje over hele bredden, med helt jevne mellomrom; et «tikk… tikk…» fra langbølge opp til VHF. Den jevne rytmen skiller det fra tordenstøy (ark 43)."
+},
+"gsm": {
+"nm": "GSM-telefon",
+"sh": "217 Hz",
+"t": "GSM-telefon ved siden av en høyttaler",
+"h": "En 2G-telefon sender i støt på 0,577 ms, 217 ganger i sekundet. En dårlig skjermet lydforsterker detekterer støtene og gjør dem hørbare.",
+"l": "En kam av linjer for hver 217 Hz; det berømte «ditt-ditt-di-di-ditt» like før telefonen ringer, så en jevn summing under samtalen. Stadig sjeldnere: 2G-nettene stenges ned (ark 43)."
+},
+"jjy": {
+"nm": "JJY",
+"sh": "40 / 60 kHz",
+"t": "Tidssignalet JJY (Japan, 40 og 60 kHz)",
+"h": "Hvert sekund har bærebølgen full effekt i 0,8 s (bit 0), 0,5 s (bit 1) eller 0,2 s (markør) og faller så til 10 %. Det er det motsatte av DCF77, som faller i begynnelsen av sekundet.",
+"l": "En fast linje som svekkes på slutten av hvert sekund, tidligere eller senere. Sendere i Fukushima (40 kHz) og Saga-Fukuoka (60 kHz), for Japans radiostyrte klokker (ark 39)."
+},
+"rwm": {
+"nm": "RWM",
+"sh": "4996 kHz",
+"t": "Tidssignalet RWM (Moskva)",
+"h": "I telegrafi på 4996, 9996 og 14 996 kHz: en puls på 100 ms hvert sekund og, i andre minutter, ti pulser i sekundet. Kallesignalet RWM sendes i morse to ganger i timen.",
+"l": "Kallesignalet, så en linje delt opp i regelmessige «tikk», så i raske prikker. Lytt i CW eller SSB (ark 39).",
+"n": "forkortet utdrag"
+},
+"bpm": {
+"nm": "BPM",
+"sh": "2,5–15 MHz",
+"t": "Tidssignalet BPM (Kina)",
+"h": "Stasjonen i Pucheng (Shaanxi) sender i AM på 2,5, 5, 10 og 15 MHz: et tikk på 10 ms på 1000 Hz hvert sekund (300 ms ved helt minutt) og, i enkelte minutter, tikk på 100 ms for UT1-tid. Kallesignalet BPM gis i morse og så av en stemme.",
+"l": "I den demodulerte lyden: kallesignalet, så svært korte linjer på 1000 Hz, én i sekundet, med en lengre ved helt minutt. Ofte blandet med WWV på de samme frekvensene (ark 39).",
+"n": "forkortet utdrag"
+},
+"humpback": {
+"nm": "Knølhval",
+"sh": "sang",
+"t": "Knølhvalens sang",
+"h": "Om vinteren, i parringsområdene, synger hannene: en rekke stønn, brumming og rop som danner et tema, gjentas likt i timevis og endrer seg fra sesong til sesong. Hydrofoner hører den flere mil unna.",
+"l": "Tykke spor med overtonene sine, som sakte stiger eller synker mellom 100 Hz og noen få kHz; den samme rekken kommer igjen etter noen sekunder. Ekko fra overflaten og havbunnen forlenger hver tone."
+},
+"bluewhale": {
+"nm": "Blåhval",
+"sh": "×10",
+"t": "Blåhvalen: det dypeste ropet",
+"h": "Jordas største dyr sender svært dype (10 til 40 Hz) og svært kraftige rop, 10 til 20 sekunder lange og gjentatt i timevis: de høres hundrevis av kilometer unna. For å høre dem settes opptaket opp i fart ti ganger.",
+"l": "En pulserende del, så en lang tone som knapt synker, med overtonene over; rekken gjentas. Skalaen viser de virkelige frekvensene.",
+"n": "satt opp i fart 10×"
+},
+"finwhale": {
+"nm": "Finnhval",
+"sh": "20 Hz",
+"t": "Finnhvalen: pulsene på 20 Hz",
+"h": "Finnhvalen sender pulser på omtrent ett sekund som faller fra rundt 25 til 18 Hz, med jevne mellomrom, noen ganger i dagevis. På 1950- og 60-tallet forundret disse «20 Hz-signalene» den amerikanske marinens lyttenett før de ble knyttet til denne hvalen.",
+"l": "Korte streker, alle like, i en jevn rekke eller to og to, som slagene fra et svært langsomt hjerte; hver faller litt i frekvens. Skalaen viser de virkelige frekvensene.",
+"n": "satt opp i fart 10×"
+},
+"sperm": {
+"nm": "Spermhval",
+"sh": "klikk",
+"t": "Spermhvalens klikk",
+"h": "Spermhvalen jakter på dype dykk med sonaren sin: svært kraftige klikk, omtrent ett i sekundet, som blir raskere til en «knirking» når den nærmer seg byttet. Seg imellom utveksler spermhvaler «codaer», korte serier av klikk der rytmen varierer fra klan til klan.",
+"l": "Vannrette linjer over hele bredden, med jevne mellomrom, så tette som en summing (knirkingen), så et lite rytmisk mønster: codaen. Hvert klikk består av flere tette pulser, skapt av refleksjoner i dyrets hode."
+},
+"dolphin": {
+"nm": "Tumler",
+"sh": "plystring",
+"t": "Delfinens plystring og klikk",
+"h": "Tumleren plystrer mellom omtrent 5 og 20 kHz; hvert dyr har en «signaturplystring» som fungerer som navn. For å jakte og orientere seg sender den også rekker av svært korte klikk, opptil flere hundre i sekundet.",
+"l": "Tynne kurver som stiger og faller igjen, ofte gjentatt likt, og byger av vannrette linjer for ekkolokaliseringen. Frekvensene er delt på 3 for å høres; skalaen viser de virkelige verdiene.",
+"n": "spilt 3 ganger dypere"
+},
+"orca": {
+"nm": "Spekkhogger",
+"sh": "pulserende rop",
+"t": "Spekkhoggerens pulserende rop",
+"h": "Spekkhoggere kommuniserer med pulserende rop: pulstog så raske (500 til 2000 i sekundet) at de høres som en tone, med et plutselig hopp i tonehøyde. Hver familiegruppe har sin egen «dialekt».",
+"l": "En stabel parallelle spor (overtonene) som stiger eller synker sammen, med et tydelig knekk midt i ropet; noen ganger en tynn, høyere plystring."
+},
+"bseal": {
+"nm": "Storkobbe",
+"sh": "trille",
+"t": "Storkobbens trille",
+"h": "Om våren, under den arktiske isen, sender hannen lange triller som faller i spiral fra flere kHz ned til noen hundre hertz, noen ganger i et helt minutt. De brukes til å forsvare et revir og tiltrekke hunner.",
+"l": "En bølgete kurve som glir ovenfra og ned langs skalaen, som en fjær som slakkes, og en dyp tone til slutt.",
+"n": "forkortet"
+},
+"shrimp": {
+"nm": "Pistolreker",
+"sh": "rev",
+"t": "Pistolrekene (knallreker)",
+"h": "Når reka smeller igjen den store kloa, skyter den ut en vannstråle så rask at det dannes en kavitasjonsboble; når boblen faller sammen, smeller den som et skudd. Tusenvis av reker står for revenes bakgrunnslyd og kan forstyrre sonarer.",
+"l": "Et regn av prikker og korte vannrette linjer over hele bredden, helt uten orden; i hodetelefonene en sammenhengende knitring, som når man steker."
+},
+"sonar": {
+"nm": "Aktiv sonar",
+"sh": "ping",
+"t": "Pinget fra en aktiv sonar",
+"h": "Et skip sender en kraftig lydpuls (her rundt 3,5 kHz, området for fregatters skrogsonarer) og lytter etter ekkoet: forsinkelsen gir avstanden, frekvensforskyvningen (dopplereffekten) målets fart. Lyden kommer også tilbake som en hale fra bunnen og overflaten: etterklangen.",
+"l": "Et kort, kraftig spor, en hale som forsvinner, og så ekkoet, mye svakere og litt forskjøvet i frekvens. Det andre pinget er et frekvenssveip (chirp), som måler avstanden bedre."
+},
+"propeller": {
+"nm": "Skipspropell",
+"sh": "kavitasjon",
+"t": "Propellen på et skip som passerer",
+"h": "Propellbladene skaper kavitasjonsbobler som brister: en bred susing som slår i takt med at bladene passerer. Maskinene legger til faste linjer. Sonaroperatører analyserer takten (DEMON-analyse) for å telle blader og omdreininger og kjenne igjen skipet.",
+"l": "En susing over et bredt bånd, stripete av vannrette bånd i bladenes takt, med noen faste loddrette linjer (motor, gir). Alt vokser og forsvinner når skipet passerer over hydrofonen."
+},
+"uqc": {
+"nm": "Undervannstelefon",
+"sh": "UQC 8 kHz",
+"t": "Undervannstelefonen (UQC, «Gertrude»)",
+"h": "Ubåter og skip snakker under vann med en akustisk telefon: stemmen sendes i enkelt sidebånd over en bærebølge på 8,0875 kHz, sendt ut av en transduser i skroget. Rekkevidde: noen få kilometer.",
+"l": "Et SSB-talebånd over 8 kHz; demodulert en fjern stemme som svaier og gir gjenlyd på grunn av ekko fra overflaten og bunnen. Visningen er halvert; skalaen viser de virkelige frekvensene.",
+"n": "halvert skala"
+},
+"zevs": {
+"nm": "ZEVS 82 Hz",
+"sh": "ELF",
+"t": "ZEVS: ubåtradioen på 82 Hz",
+"h": "Radiobølger trenger knapt ned i sjøvann, unntatt ved ekstremt lave frekvenser (ELF). Den russiske senderen ZEVS på Kolahalvøya sender på 82 Hz med antenneledninger på flere titalls kilometer for å nå ubåter på stort dyp. Hastigheten er bitteliten: noen få tegn i minuttet.",
+"l": "En tynn linje på 82 Hz ved siden av strømnettets linje på 50 Hz og overtonene, med forstyrrelser fra tordenvær. I hodetelefonene en dyp brumming som knapt høres; tas imot med en stor rammeantenne og et lydkort. Den amerikanske motparten på 76 Hz ble stengt i 2004."
+},
+"bloop": {
+"nm": "«Bloop»",
+"sh": "1997",
+"t": "«Bloop» (1997)",
+"h": "I 1997 fanget NOAAs hydrofoner i Stillehavet en svært dyp lyd som steg raskt og ble hørt tusenvis av kilometer unna. Lenge et mysterium; siden 2012 tilskrives den et isskjelv: et kjempeisfjell som sprekker.",
+"l": "Et bredt bånd som stiger på noen sekunder, med overtonene sine, og så sakte forsvinner. Rekonstruksjon, satt opp i fart 16 ganger som opptaket NOAA publiserte.",
+"n": "satt opp i fart 16×"
+},
+"quake": {
+"nm": "Nært jordskjelv",
+"sh": "P så S",
+"t": "Et nært jordskjelv: P- og S-bølger",
+"h": "Bakkens vibrasjoner er for dype for øret (noen få hertz), så seismometerets opptak settes opp i fart. Først kommer P-bølgen (trykkbølge), så den langsommere og kraftigere S-bølgen (skjærbølge). Forskjellen S−P i sekunder ganger omtrent 8 gir avstanden i kilometer.",
+"l": "Et første kort, skarpt støt (P), et halvt sekund senere en kraftigere og dypere rumling (S) som dør ut i en lang hale: codaen. Her er skjelvet omtrent 80 km unna. Skalaen viser de virkelige frekvensene.",
+"n": "satt opp i fart 20×"
+},
+"teleseism": {
+"nm": "Fjernt jordskjelv",
+"sh": "teleseisme",
+"t": "Et fjernt jordskjelv: P, S og overflatebølger",
+"h": "For et skjelv 9000 km unna krysser P-bølgen jorda på omtrent tolv minutter, S-bølgen kommer rundt ti minutter senere, og så kommer overflatebølgene (Love og Rayleigh), langsomme og svært dype, som rister lengst. Slik registrerer seismometre over hele verden hvert stort jordskjelv.",
+"l": "To små støt (P og så S), så en lang, dyp dønning der frekvensen sakte stiger: de lengste overflatebølgene går raskere og kommer først (dispersjon). Mer enn tre timers opptak presset sammen til 12 s.",
+"n": "satt opp i fart 1000×"
+},
+"swarm": {
+"nm": "Jordskjelvsverm",
+"sh": "vulkan",
+"t": "En sverm av jordskjelv før et utbrudd",
+"h": "Når magmaen stiger, sprenger den fjellet: hundrevis av små skjelv, stadig tettere, som på La Palma i 2021. Observatoriene følger rytmen for å varsle utbruddet; når lavaen kommer ut, avløses støtene av en sammenhengende skjelving.",
+"l": "Enkelte små støt, så stadig tettere, som popkorn som spretter, til et sammenhengende bånd på slutten: utbruddets skjelving. Skalaen viser de virkelige frekvensene.",
+"n": "satt opp i fart 20×"
+},
+"tremor": {
+"nm": "Harmonisk skjelving",
+"sh": "Redoubt",
+"t": "Harmonisk skjelving som stiger (Redoubt, 2009)",
+"h": "Før noen av vulkanen Redoubts (Alaska) eksplosjoner i 2009 vibrerte bakken som en streng: en grunntone med overtoner som gled fra omtrent 1 Hz opp til nesten 30 Hz og tiet noen sekunder før eksplosjonen. Den forklares med en svært rask rekke små gjentatte skjelv.",
+"l": "En kam av parallelle spor som sprer seg mens de stiger, som en sirene, så stillhet og så en bred susing: eksplosjonen. Skalaen viser de virkelige frekvensene.",
+"n": "satt opp i fart 20×"
+},
+"stromboli": {
+"nm": "Strombolis infralyd",
+"sh": "infralyd",
+"t": "Infralyden fra Strombolis eksplosjoner",
+"h": "Stromboli (Italia) har i århundrer eksplodert omtrent hvert 10. til 20. minutt. Hver eksplosjon sender en trykkbølge på noen få hertz ut i lufta: infralyd, for dyp for øret, men fanget opp av mikrobarometre flere kilometer unna.",
+"l": "Et kort, dypt dunk ved hver eksplosjon, fulgt av susingen fra gasstrålen, så ro til den neste; under det hele vindens brusing. Førti minutter presset sammen til 12 s.",
+"n": "satt opp i fart 200×"
+},
+"microseism": {
+"nm": "Mikroseisme",
+"sh": "dønning",
+"t": "Mikroseismen: dønningen som får jorda til å vibrere",
+"h": "Overalt på jorda, selv langt fra kysten, registrerer seismometre en konstant vibrasjon med en periode på 5 til 20 s: havdønningen som trykker på havbunnen. Den vokser med stormer og er sterkere om vinteren; den er bakgrunnsstøyen i hvert seismogram.",
+"l": "Et bredt, sammenhengende bånd og under det et svakere (den primære mikroseismen, med bølgenes periode), som sveller mens stormen vokser. Mer enn tre timer presset sammen til 12 s.",
+"n": "satt opp i fart 1000×"
+},
+"modes": {
+"nm": "Jorda som klinger",
+"sh": "egensvingninger",
+"t": "Egensvingninger: jorda klinger som en klokke",
+"h": "Etter et svært stort jordskjelv, som ved Sumatra i 2004, vibrerer hele jorda som en klokke i dager eller til og med måneder: hver egensvingning har sin tone. Den dypeste, 0S2, har en periode på 54 minutter; «pustemodusen» 0S0, på 20,5 minutter, er den som varer lengst.",
+"l": "Etter støtet en rad faste loddrette linjer, jordas toner; de høyeste dør raskt ut, og til slutt er det bare én linje igjen, modusen 0S0. Skalaen er i millihertz; omtrent fire uker presset sammen til 12 s.",
+"n": "satt opp i fart 200 000×"
+},
+"bit2": {
+"nm": "2 bit",
+"sh": "4 nivåer",
+"t": "Spillmusikk i 2 bit",
+"h": "Digital lyd er en rekke målinger (sampler). Med 2 bit kan hver sampel bare ha 4 verdier: bølgeformen blir en grov trapp. Avrundingsfeilen høres som en grynete susing og svært kraftig forvrengning; signal-støyforholdet er bare omtrent 14 dB (6 dB per bit).",
+"l": "Musikken drukner i et teppe av støy over hele bredden som følger tonene. Sammenlign med 4, 8 og 16 bit: det er den samme melodien, bare antallet bit endres. En egen melodi skrevet for denne siden, i stil med en spillkonsoll."
+},
+"bit4": {
+"nm": "4 bit",
+"sh": "16 nivåer",
+"t": "Spillmusikk i 4 bit",
+"h": "16 mulige verdier per sampel, omtrent 26 dB signal-støyforhold. Det er presisjonen i NES-konsollens trekantkanal og i samplene i Game Boys «wave»-kanal: en del av konsollmusikkens grynethet kommer derfra.",
+"l": "Tonene trer fram, men et slør av støy er fortsatt synlig mellom dem og over hele bredden. Støyen følger volumet: i pausene forsvinner den."
+},
+"bit8": {
+"nm": "8 bit",
+"sh": "256 nivåer",
+"t": "Spillmusikk i 8 bit",
+"h": "256 verdier, omtrent 50 dB signal-støyforhold: kvaliteten til de første samplerne og gamle datamaskiners lyd. Merk: en «8-bits» konsoll som NES har navnet fra prosessoren, ikke fra lyden, som kom fra enkle oscillatorer (to pulsbølger, en trekant, en støy).",
+"l": "Bakgrunnsstøyen er bare et lett slør, synlig kun takket være denne avdelingens skala på 110 dB. For øret en svak susing i de stille partiene."
+},
+"bit16": {
+"nm": "16 bit",
+"sh": "65 536 nivåer",
+"t": "Spillmusikk i 16 bit",
+"h": "65 536 verdier, omtrent 98 dB signal-støyforhold: presisjonen til lyd-CD-en (44,1 kHz, 16 bit) og lydutgangen på Super Nintendo (32 kHz). Avrundingsstøyen er svakere enn alt øret oppfatter ved normalt volum.",
+"l": "Ingen synlig støy: bare tonene, overtonene deres og trommene. Det er også kvaliteten på hele denne siden, samplet med 12 kHz."
+},
+"bit32": {
+"nm": "32 bit",
+"sh": "flyttall",
+"t": "Spillmusikk i 32 bit",
+"h": "32-bits flyttall: presisjonen i studioprogrammer, som lar dusinvis av spor mikses og forsterkes uten tap. For øret ingen forskjell fra 16 bit. PlayStation, en «32-bits» konsoll, spilte faktisk lyden sin i 16 bit med 44,1 kHz.",
+"l": "Lik 16 bit, både for øye og øre: over 16 bit er gevinsten bare nyttig i studioarbeid."
+},
+"sr3k": {
+"nm": "3 kHz",
+"sh": "samplingsfrekvens",
+"t": "Den samme musikken samplet med 3 kHz",
+"h": "Antallet sampler i sekundet bestemmer den høyeste mulige frekvensen: halvparten (Shannons samplingsteorem), her 1,5 kHz. Før samplingen fjerner et filter alt over; uten det ville de frekvensene brettes tilbake som støylyder. Bare de dype tonene og mellomtonene blir igjen: musikken låter dump.",
+"l": "Spekteret stopper brått rundt 1,5 kHz: over det ingenting. Den klassiske telefonen sampler med 8 kHz (tale opp til 3,4 kHz), CD-en med 44,1 kHz; denne siden er begrenset til 12 kHz."
+},
+"sr6k": {
+"nm": "6 kHz",
+"sh": "samplingsfrekvens",
+"t": "Den samme musikken samplet med 6 kHz",
+"h": "Med 6 kHz går frekvensene opp til 3 kHz: tonene og trommenes kropp kommer gjennom, men glansen i de høye overtonene og cymbalene forsvinner.",
+"l": "Et fullt spektrum opp til 3 kHz, over det ingenting. Sammenlign med 16 bit (hele bredden, opp til 6 kHz) og med 3 kHz."
+}
+}
+}
