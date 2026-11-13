@@ -58,7 +58,8 @@
 "Široké pásmo",
 "Bonus: zvuky z vesmíru",
 "Bonus: kuriozity krátkých vln",
-"Bonus: podvodní zvuky"
+"Bonus: podvodní zvuky",
+"Bonus: zvuky Země"
 ],
 "modes": {
 "am": {
@@ -961,6 +962,62 @@
 "h": "V roce 1997 zachytily hydrofony NOAA v Tichém oceánu velmi hluboký, rychle stoupající zvuk, slyšitelný na tisíce kilometrů. Dlouho záhadný, od roku 2012 je připisován ledotřesení: obrovskému ledovci, který praská.",
 "l": "Široké pásmo, které během několika sekund stoupne, s harmonickými, a pak pomalu odezní. Rekonstrukce, zrychlená 16× jako nahrávka zveřejněná NOAA.",
 "n": "zrychleno 16×"
+},
+"quake": {
+"nm": "Blízké zemětřesení",
+"sh": "P, pak S",
+"t": "Blízké zemětřesení: vlny P a S",
+"h": "Chvění půdy je pro ucho příliš hluboké (několik hertzů), proto se záznam seismometru zrychlí. Nejdřív přijde vlna P (podélná), pak pomalejší a silnější vlna S (příčná). Rozdíl S−P v sekundách vynásobený asi 8 dává vzdálenost v kilometrech.",
+"l": "Krátký ostrý první otřes (P), o půl sekundy později silnější a hlubší dunění (S), které dozní v dlouhém chvostu: kódě. Zde je zemětřesení asi 80 km daleko. Stupnice ukazuje skutečné kmitočty.",
+"n": "zrychleno 20×"
+},
+"teleseism": {
+"nm": "Vzdálené zemětřesení",
+"sh": "teleseismus",
+"t": "Vzdálené zemětřesení: P, S a povrchové vlny",
+"h": "U zemětřesení vzdáleného 9000 km projde vlna P Zemí asi za dvanáct minut, vlna S dorazí zhruba o deset minut později a pak přijdou povrchové vlny (Loveovy a Rayleighovy), pomalé a velmi hluboké, které třesou nejdéle. Tak seismometry po celém světě zaznamenají každé velké zemětřesení.",
+"l": "Dva malé otřesy (P, pak S) a pak dlouhé hluboké vlnění, jehož kmitočet pomalu stoupá: nejdelší povrchové vlny se šíří rychleji a přijdou první (disperze). Přes tři hodiny záznamu stlačené do 12 s.",
+"n": "zrychleno 1000×"
+},
+"swarm": {
+"nm": "Zemětřesný roj",
+"sh": "sopka",
+"t": "Roj zemětřesení před erupcí",
+"h": "Když magma stoupá, láme horninu: stovky malých zemětřesení, stále častějších, jako na La Palmě v roce 2021. Observatoře sledují tento rytmus, aby erupci předpověděly; když vyteče láva, otřesy vystřídá nepřetržitý třes.",
+"l": "Ojedinělé malé otřesy, pak stále hustší, jako praskající popcorn, až po souvislé pásmo na konci: třes erupce. Stupnice ukazuje skutečné kmitočty.",
+"n": "zrychleno 20×"
+},
+"tremor": {
+"nm": "Harmonický třes",
+"sh": "Redoubt",
+"t": "Stoupající harmonický třes (Redoubt, 2009)",
+"h": "Před některými výbuchy sopky Redoubt (Aljaška) v roce 2009 se půda chvěla jako struna: základní tón s harmonickými, který klouzal zhruba od 1 Hz až k téměř 30 Hz a pak několik sekund před výbuchem utichl. Přisuzuje se velmi rychlému sledu malých opakovaných zemětřesení.",
+"l": "Hřeben rovnoběžných stop, které se při stoupání rozbíhají jako siréna, pak ticho a pak široký šum: výbuch. Stupnice ukazuje skutečné kmitočty.",
+"n": "zrychleno 20×"
+},
+"stromboli": {
+"nm": "Infrazvuk Stromboli",
+"sh": "infrazvuk",
+"t": "Infrazvuk výbuchů sopky Stromboli",
+"h": "Stromboli (Itálie) vybuchuje už po staletí zhruba každých 10 až 20 minut. Každý výbuch vyšle do vzduchu tlakovou vlnu o několika hertzích: infrazvuk, příliš hluboký pro ucho, ale zachycený mikrobarometry na několik kilometrů.",
+"l": "Krátká hluboká rána při každém výbuchu, po ní šum plynného proudu a pak klid až do dalšího; pod tím hučení větru. Čtyřicet minut stlačených do 12 s.",
+"n": "zrychleno 200×"
+},
+"microseism": {
+"nm": "Mikroseismy",
+"sh": "mořské vlnění",
+"t": "Mikroseismy: mořské vlnění rozechvívá Zemi",
+"h": "Všude na Zemi, i daleko od pobřeží, zaznamenávají seismometry stálé chvění s periodou 5 až 20 s: vlnění oceánu, které tlačí na dno. Sílí s bouřemi a v zimě je silnější; je to šum pozadí každého seismogramu.",
+"l": "Široké souvislé pásmo a pod ním slabší (primární mikroseismy, s periodou vln), které sílí, jak bouře roste. Přes tři hodiny stlačené do 12 s.",
+"n": "zrychleno 1000×"
+},
+"modes": {
+"nm": "Znějící Země",
+"sh": "vlastní kmity",
+"t": "Vlastní kmity: Země zní jako zvon",
+"h": "Po velmi silném zemětřesení, jako u Sumatry v roce 2004, se celá Země chvěje jako zvon celé dny, ba měsíce: každý vlastní kmit má svůj tón. Nejhlubší, 0S2, má periodu 54 minut; „dýchací“ kmit 0S0 s periodou 20,5 minuty trvá nejdéle.",
+"l": "Po otřesu řada pevných svislých čar, tóny Země; nejvyšší rychle zaniknou a na konci zbude jediná osamocená čára, kmit 0S0. Stupnice je v milihertzích; asi čtyři týdny stlačené do 12 s.",
+"n": "zrychleno 200 000×"
 }
 }
 }

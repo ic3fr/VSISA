@@ -58,7 +58,8 @@
 "Large bande",
 "Bonus : sons de l'espace",
 "Bonus : curiosités des ondes courtes",
-"Bonus : sons sous-marins"
+"Bonus : sons sous-marins",
+"Bonus : sons de la Terre"
 ],
 "modes": {
 "406": {
@@ -1028,6 +1029,62 @@
 "h": "En 1997, les hydrophones de la NOAA dans le Pacifique ont capté un son très grave qui montait rapidement, entendu à plusieurs milliers de kilomètres. Longtemps mystérieux, il est attribué depuis 2012 à un tremblement de glace : un énorme iceberg qui se fissure.",
 "l": "Une large bande qui monte en quelques secondes, avec ses harmoniques, puis s'éteint lentement. Reconstitution, accélérée 16 fois comme l'enregistrement diffusé par la NOAA.",
 "n": "accéléré 16 fois"
+},
+"quake": {
+"nm": "Séisme proche",
+"sh": "P puis S",
+"t": "Un séisme proche : ondes P et S",
+"h": "Les vibrations du sol sont trop graves pour l'oreille (quelques hertz) : on accélère l'enregistrement du sismomètre pour les entendre. L'onde P (compression) arrive la première, l'onde S (cisaillement), plus lente et plus forte, ensuite. L'écart S−P, en secondes, multiplié par 8 environ, donne la distance en kilomètres.",
+"l": "Un premier choc bref et aigu (P), puis une demi-seconde plus tard un grondement plus fort et plus grave (S), qui s'éteint en une longue traîne : la coda. Ici le séisme est à environ 80 km. La règle donne les vraies fréquences.",
+"n": "accéléré 20 fois"
+},
+"teleseism": {
+"nm": "Séisme lointain",
+"sh": "téléséisme",
+"t": "Un séisme lointain : P, S et ondes de surface",
+"h": "Pour un séisme à 9000 km, l'onde P traverse la Terre en une douzaine de minutes, l'onde S arrive une dizaine de minutes plus tard, puis viennent les ondes de surface (Love et Rayleigh), lentes et très graves, qui secouent le plus longtemps. Les sismomètres du monde entier enregistrent ainsi chaque grand séisme.",
+"l": "Deux petits chocs (P puis S), puis une longue houle grave dont la fréquence monte peu à peu : les ondes de surface les plus longues voyagent plus vite et arrivent les premières (dispersion). Plus de trois heures d'enregistrement ramenées à 12 s.",
+"n": "accéléré 1000 fois"
+},
+"swarm": {
+"nm": "Essaim sismique",
+"sh": "volcan",
+"t": "Un essaim de séismes avant une éruption",
+"h": "Quand le magma monte, il fracture la roche : des centaines de petits séismes, de plus en plus nombreux, comme à La Palma en 2021. Les observatoires suivent ce rythme pour prévoir l'éruption ; quand la lave sort, les chocs font place à un trémor continu.",
+"l": "Des petits chocs isolés, puis de plus en plus serrés, comme du pop-corn qui éclate, jusqu'à une bande continue à la fin : le trémor de l'éruption. La règle donne les vraies fréquences.",
+"n": "accéléré 20 fois"
+},
+"tremor": {
+"nm": "Trémor harmonique",
+"sh": "Redoubt",
+"t": "Le trémor harmonique qui monte (Redoubt, 2009)",
+"h": "Avant certaines explosions du volcan Redoubt (Alaska), en 2009, le sol a vibré comme une corde : une note fondamentale et ses harmoniques, qui a glissé de 1 Hz environ jusqu'à près de 30 Hz, puis s'est tue quelques secondes avant l'explosion. On l'attribue à une suite très rapide de petits séismes répétés.",
+"l": "Un peigne de traits parallèles qui s'écartent en montant, comme une sirène, puis un silence, puis un souffle large : l'explosion. La règle donne les vraies fréquences.",
+"n": "accéléré 20 fois"
+},
+"stromboli": {
+"nm": "Infrasons du Stromboli",
+"sh": "infrasons",
+"t": "Les infrasons des explosions du Stromboli",
+"h": "Le Stromboli (Italie) explose depuis des siècles toutes les 10 à 20 minutes environ. Chaque explosion envoie dans l'air une onde de pression de quelques hertz, des infrasons trop graves pour l'oreille mais captés par des microbaromètres à plusieurs kilomètres.",
+"l": "Un coup bref et grave à chaque explosion, suivi du souffle du jet de gaz, puis le calme jusqu'à la suivante ; dessous, le grondement du vent. Quarante minutes ramenées à 12 s.",
+"n": "accéléré 200 fois"
+},
+"microseism": {
+"nm": "Microséisme",
+"sh": "houle",
+"t": "Le microséisme : la houle qui fait vibrer la Terre",
+"h": "Partout sur Terre, même loin des côtes, les sismomètres enregistrent une vibration permanente de période 5 à 20 s : la houle de l'océan qui pousse sur le fond. Elle grossit avec les tempêtes, et elle est plus forte en hiver ; c'est le bruit de fond de tous les sismogrammes.",
+"l": "Une bande large et continue, plus deux bandes plus faibles en dessous (le microséisme primaire, à la période des vagues), qui enfle à mesure que la tempête grandit. Plus de trois heures ramenées à 12 s.",
+"n": "accéléré 1000 fois"
+},
+"modes": {
+"nm": "La Terre qui sonne",
+"sh": "modes propres",
+"t": "Les modes propres : la Terre sonne comme une cloche",
+"h": "Après un très grand séisme, comme celui de Sumatra en 2004, la Terre entière vibre comme une cloche pendant des jours, voire des mois : chaque mode propre a sa note. Le plus grave, 0S2, a une période de 54 minutes ; le mode « respiratoire » 0S0, de 20,5 minutes, est celui qui dure le plus longtemps.",
+"l": "Après le choc, une rangée de traits verticaux fixes, les notes de la Terre ; les plus aigus s'éteignent vite, et il ne reste à la fin qu'un trait isolé, le mode 0S0. La règle est en millihertz ; environ quatre semaines ramenées à 12 s.",
+"n": "accéléré 200 000 fois"
 }
 }
 }

@@ -795,6 +795,38 @@ G.bloop=()=>{ const N=9*SR, x=Z(N); // ×16
   const nz=Z(N); for(let i=0;i<N;i++) nz[i]=gauss(); const rb=band(nz,120,900); for(let i=0;i<N;i++){ const t=i/SR; x[i]*=1+0.5*rb[i]; x[i]+=0.25*rb[i]*Math.exp(-Math.pow((t-3.5)/2,2)); }
   return seaNoise(x,0.05); };
 
+/* ---- bonus : sons de la Terre (sismiques, infrasons), accélérés pour l'oreille ---- */
+function nband(N,lo,hi){ const n=Z(N); for(let i=0;i<N;i++) n[i]=gauss(); return band(n,lo,hi); }
+function envAdd(x,src,t0,att,dec,a){ const i0=Math.round(t0*SR); for(let k=0;i0+k<x.length;k++){ const t=k/SR, e=a*Math.min(1,t/att)*Math.exp(-t/dec); if(e<1e-4&&t>att) break; x[i0+k]+=e*src[i0+k]; } }
+G.quake=()=>{ const N=12*SR, x=Z(N), hiB=nband(N,120,450), loB=nband(N,35,200), bg=nband(N,20,120); // ×20 : séisme à ~80 km, S−P = 10 s → 0,5 s
+  envAdd(x,hiB,1.5,0.005,0.35,1.6); envAdd(x,hiB,1.5,0.2,1.2,0.5); envAdd(x,loB,2.0,0.03,0.6,3.5); envAdd(x,loB,2.0,0.4,3.2,1.6); envAdd(x,hiB,2.0,0.01,0.5,1.0);
+  for(let i=0;i<N;i++) x[i]+=0.04*bg[i]; return x; };
+G.teleseism=()=>{ const N=12*SR, x=Z(N); // ×1000 : séisme à ~9000 km ; P, S, puis ondes de surface dispersées
+  envAdd(x,nband(N,280,560),0.72,0.005,0.5,4); envAdd(x,nband(N,100,320),1.3,0.01,0.9,4);
+  const R=nband(N,8,30); let ph=0; const t0=2.3, t1=8; for(let i=Math.round(t0*SR);i<Math.round(t1*SR);i++){ const t=i/SR, u=(t-t0)/(t1-t0), f=16+60*Math.pow(u,1.3); ph+=TAU*f/SR; x[i]+=1.1*Math.sin(Math.PI*Math.min(1,u*1.6))*Math.pow(1-u,0.4)*Math.sin(ph)*(1+3*R[i]); }
+  envAdd(x,nband(N,20,160),2.3,0.3,3.5,0.6);
+  return addNoise(x,0.01); };
+G.swarm=()=>{ const N=12*SR, x=Z(N), B=nband(N,90,480); let t=0.3; // ×20 : essaim qui s'accélère, puis trémor éruptif
+  while(t<10.4){ const a=Math.min(1.4,0.12/Math.pow(rnd()+0.05,1.1)), d=0.04+0.12*a; envAdd(x,B,t,0.005,d,a); const u=t/10.4; t+=(0.9-0.82*u)*(0.4+rnd()); }
+  const T=nband(N,60,300); for(let i=Math.round(10.4*SR);i<N;i++) x[i]+=0.5*Math.min(1,(i/SR-10.4)/0.6)*T[i];
+  return addNoise(x,0.02); };
+G.tremor=()=>{ const N=12*SR, x=Z(N); let ph=0; // ×20 : trémor harmonique qui glisse vers l'aigu (Redoubt, 2009), silence, explosion
+  for(let i=0;i<Math.round(8.6*SR);i++){ const t=i/SR, u=t/8.6, f=24+560*Math.pow(u,2.2); ph+=TAU*f/SR; let s=0; for(let h=1;h<=6&&h*f<5800;h++) s+=Math.sin(h*ph)/h; x[i]=0.6*Math.min(1,t/0.8)*Math.min(1,(8.6-t)/0.15)*s; }
+  envAdd(x,nband(N,30,1400),9.6,0.01,1.4,2.2);
+  return addNoise(x,0.02); };
+G.stromboli=()=>{ const N=12*SR, x=Z(N), J=nband(N,200,1400), W=nband(N,10,90); // ×200 : explosions toutes les 10 à 20 min
+  for(const [t,f,a] of [[1.0,380,1],[5.4,300,0.8],[9.7,450,1.1]]){ const i0=Math.round(t*SR); for(let k=0;k<0.6*SR;k++){ const tt=k/SR; x[i0+k]+=a*Math.exp(-tt/0.09)*Math.sin(TAU*f*tt)*(tt<1/f?1.6:1); } envAdd(x,J,t+0.02,0.03,0.4,1.1*a); }
+  for(let i=0;i<N;i++) x[i]+=0.15*W[i];
+  return addNoise(x,0.01); };
+G.microseism=()=>{ const N=12*SR, x=Z(N), S=nband(N,130,230), P=nband(N,55,95); // ×1000 : 12 s = 3 h 20 min
+  for(let i=0;i<N;i++){ const t=i/SR, g=0.5+0.5*Math.tanh((t-5)/2.5); x[i]=(0.45+0.8*g)*S[i]*(1+0.35*Math.sin(TAU*0.37*t))+0.35*(0.4+0.6*g)*P[i]; }
+  return addNoise(x,0.01); };
+G.modes=()=>{ const N=12*SR, x=Z(N), K=200000; // modes propres de la Terre (mHz, Q), ×200 000 : 12 s ≈ 28 jours
+  const M=[[0.3093,510],[0.4686,420],[0.6470,380],[0.8143,5400],[0.8404,350],[1.0382,350],[1.2318,340],[1.4135,330],[1.5773,330],[1.7262,330],[1.8634,320],[1.9905,310],[2.1100,300],[2.2250,300],[2.3360,290]];
+  for(const [mf,Q] of M){ const f=mf*1e-3*K, tau=Q/(Math.PI*mf*1e-3)/K, a=0.5*(0.6+0.4*rnd())*(mf===0.8143?0.6:1), p0=TAU*rnd(); for(let i=0;i<N;i++){ const t=i/SR; x[i]+=a*Math.exp(-t/tau)*Math.min(1,t/0.05)*Math.sin(TAU*f*t+p0); } }
+  envAdd(x,nband(N,20,480),0,0.002,0.08,1.2);
+  return addNoise(x,0.004); };
+
 /* ================= catalogue ================= */
 // [clé, nom court, repère, span Hz [a,b], nfft, lignes/s, options]
 // [id, -, -, span Hz [a,b], nfft, lignes/s, {gi: rubrique, scale}]
@@ -911,7 +943,14 @@ const LIST=[
  ["propeller",0,0,[0, 3000],1024,40,{"gi": 12}],
  ["uqc",0,0,[3000, 6000],1024,36,{"gi": 12, "scale": 2}],
  ["zevs",0,0,[30, 170],16384,8,{"gi": 12}],
- ["bloop",0,0,[0, 1200],2048,30,{"gi": 12, "scale": 0.0625}]
+ ["bloop",0,0,[0, 1200],2048,30,{"gi": 12, "scale": 0.0625}],
+ ["quake",0,0,[0, 600],1024,36,{"gi": 13, "scale": 0.05}],
+ ["teleseism",0,0,[0, 600],4096,24,{"gi": 13, "scale": 0.001}],
+ ["swarm",0,0,[0, 700],1024,36,{"gi": 13, "scale": 0.05}],
+ ["tremor",0,0,[0, 1500],1024,36,{"gi": 13, "scale": 0.05}],
+ ["stromboli",0,0,[0, 1500],1024,36,{"gi": 13, "scale": 0.005}],
+ ["microseism",0,0,[0, 400],4096,24,{"gi": 13, "scale": 0.001}],
+ ["modes",0,0,[0, 500],8192,12,{"gi": 13, "scale": 0.000005}]
 ];
 const MODES=LIST.map(([id,,,span,nfft,rps,o])=>{ o=o||{}; const fr=I18N.fr.modes[id];
   const mm=[...fr.l.matchAll(/fiches? ([^)]*)\)/g)], ref=mm.length?mm[mm.length-1][1]:"";
@@ -1033,13 +1072,13 @@ function w3draw(head){ // head : position de lecture 0..1, ou -1
 function ticks(m){ if(!m) return []; const [a,b]=m.span, s=m.scale, w=(b-a)*s, raw=w/6, p=Math.pow(10,Math.floor(Math.log10(raw)));
   let step=p; for(const k of [1,2,2.5,5,10]) if(k*p>=raw){ step=k*p; break; }
   const out=[]; for(let v=Math.ceil(a*s/step)*step; v<=b*s+1e-9; v+=step) out.push({v,p:(v/s-a)/(b-a)}); return out; }
-function fmtF(v,m){ const w=(m.span[1]-m.span[0])*m.scale; if(w>=4000) return (v/1000).toLocaleString(LOC,{maximumFractionDigits:2})+" k"; return v.toLocaleString(LOC,{maximumFractionDigits:1}); }
+function fmtF(v,m){ const w=(m.span[1]-m.span[0])*m.scale; if(w>=4000) return (v/1000).toLocaleString(LOC,{maximumFractionDigits:2})+" k"; if(w<0.1) return (v*1000).toLocaleString(LOC,{maximumFractionDigits:2}); return v.toLocaleString(LOC,{maximumFractionDigits:w<3?2:1}); }
 function ruler(id){ const el=document.getElementById(id); el.textContent="";
   for(const t of ticks(current)){ const s=document.createElement("span"); s.style.left=(t.p*100)+"%"; s.textContent=fmtF(t.v,current); if(t.p<0.04) s.className="first"; else if(t.p>0.96) s.className="last"; el.appendChild(s); } }
 
 /* ================= sélection, fiche, quiz ================= */
 function esc(s){ return String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])); }
-function spanText(m,hide){ const u=(m.span[1]-m.span[0])*m.scale>=4000?"kHz":"Hz", d=u==="kHz"?1000:1;
+function spanText(m,hide){ const w=(m.span[1]-m.span[0])*m.scale, u=w>=4000?"kHz":w<0.1?"mHz":"Hz", d=u==="kHz"?1000:u==="mHz"?0.001:1;
   const f=v=>(v*m.scale/d).toLocaleString(LOC,{maximumFractionDigits:2}); const n=hide?"":tx(m).note; return f(m.span[0])+" – "+f(m.span[1])+" "+u+(n?" · "+n:""); }
 function select(m,hidden){
   stop(); current=m; signal=buildSignal(m);

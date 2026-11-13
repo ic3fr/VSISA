@@ -58,7 +58,8 @@
 "Breitband",
 "Bonus: Klänge aus dem All",
 "Bonus: Kuriositäten der Kurzwelle",
-"Bonus: Unterwassergeräusche"
+"Bonus: Unterwassergeräusche",
+"Bonus: Klänge der Erde"
 ],
 "modes": {
 "am": {
@@ -962,6 +963,62 @@
 "h": "1997 fingen Hydrofone der NOAA im Pazifik einen sehr tiefen, schnell ansteigenden Ton auf, der Tausende Kilometer weit zu hören war. Lange rätselhaft, wird er seit 2012 einem Eisbeben zugeschrieben: einem riesigen Eisberg, der zerbricht.",
 "l": "Ein breites Band, das in wenigen Sekunden ansteigt, mit seinen Oberwellen, und dann langsam verklingt. Rekonstruktion, 16-fach beschleunigt wie die von der NOAA veröffentlichte Aufnahme.",
 "n": "16-fach beschleunigt"
+},
+"quake": {
+"nm": "Nahbeben",
+"sh": "P, dann S",
+"t": "Ein Nahbeben: P- und S-Wellen",
+"h": "Bodenschwingungen sind für das Ohr zu tief (einige Hertz); deshalb wird die Seismometeraufnahme beschleunigt. Zuerst kommt die P-Welle (Kompression), dann die langsamere und stärkere S-Welle (Scherung). Der Abstand S−P in Sekunden mal etwa 8 ergibt die Entfernung in Kilometern.",
+"l": "Ein kurzer, heller erster Stoß (P), eine halbe Sekunde später ein stärkeres, tieferes Grollen (S), das in einem langen Nachlauf ausklingt: die Coda. Hier ist das Beben etwa 80 km entfernt. Die Skala zeigt die echten Frequenzen.",
+"n": "20-fach beschleunigt"
+},
+"teleseism": {
+"nm": "Fernbeben",
+"sh": "Teleseismik",
+"t": "Ein Fernbeben: P, S und Oberflächenwellen",
+"h": "Bei einem Beben in 9000 km Entfernung durchquert die P-Welle die Erde in etwa zwölf Minuten, die S-Welle kommt rund zehn Minuten später, dann folgen die Oberflächenwellen (Love und Rayleigh), langsam und sehr tief, die am längsten schütteln. So zeichnen Seismometer weltweit jedes große Beben auf.",
+"l": "Zwei kleine Stöße (P, dann S), dann eine lange, tiefe Dünung, deren Frequenz langsam steigt: Die längsten Oberflächenwellen laufen schneller und kommen zuerst an (Dispersion). Über drei Stunden Aufnahme auf 12 s verdichtet.",
+"n": "1000-fach beschleunigt"
+},
+"swarm": {
+"nm": "Erdbebenschwarm",
+"sh": "Vulkan",
+"t": "Ein Erdbebenschwarm vor einem Ausbruch",
+"h": "Steigt Magma auf, zerbricht es das Gestein: Hunderte kleiner Beben, immer häufiger, wie 2021 auf La Palma. Observatorien verfolgen diesen Rhythmus, um den Ausbruch vorherzusagen; tritt Lava aus, gehen die Stöße in einen andauernden Tremor über.",
+"l": "Einzelne kleine Stöße, dann immer dichter, wie platzendes Popcorn, bis zu einem durchgehenden Band am Ende: dem Tremor des Ausbruchs. Die Skala zeigt die echten Frequenzen.",
+"n": "20-fach beschleunigt"
+},
+"tremor": {
+"nm": "Harmonischer Tremor",
+"sh": "Redoubt",
+"t": "Ansteigender harmonischer Tremor (Redoubt, 2009)",
+"h": "Vor einigen Explosionen des Vulkans Redoubt (Alaska) schwang der Boden 2009 wie eine Saite: ein Grundton mit Obertönen, der von etwa 1 Hz bis fast 30 Hz glitt und wenige Sekunden vor der Explosion verstummte. Man führt ihn auf eine sehr schnelle Folge kleiner, sich wiederholender Beben zurück.",
+"l": "Ein Kamm paralleler Spuren, die beim Steigen auseinanderlaufen wie eine Sirene, dann Stille, dann ein breites Rauschen: die Explosion. Die Skala zeigt die echten Frequenzen.",
+"n": "20-fach beschleunigt"
+},
+"stromboli": {
+"nm": "Infraschall des Stromboli",
+"sh": "Infraschall",
+"t": "Der Infraschall der Explosionen des Stromboli",
+"h": "Der Stromboli (Italien) explodiert seit Jahrhunderten etwa alle 10 bis 20 Minuten. Jede Explosion schickt eine Druckwelle von einigen Hertz in die Luft: Infraschall, zu tief für das Ohr, aber von Mikrobarometern in mehreren Kilometern Entfernung erfasst.",
+"l": "Ein kurzer, tiefer Schlag bei jeder Explosion, gefolgt vom Rauschen des Gasstrahls, dann Ruhe bis zur nächsten; darunter das Brausen des Windes. Vierzig Minuten auf 12 s verdichtet.",
+"n": "200-fach beschleunigt"
+},
+"microseism": {
+"nm": "Mikroseismik",
+"sh": "Dünung",
+"t": "Mikroseismik: die Meeresdünung lässt die Erde schwingen",
+"h": "Überall auf der Erde, auch fern der Küste, zeichnen Seismometer ein ständiges Schwingen mit 5 bis 20 s Periode auf: die Meeresdünung, die auf den Meeresboden drückt. Sie wächst mit Stürmen und ist im Winter stärker; sie ist das Grundrauschen jedes Seismogramms.",
+"l": "Ein breites, durchgehendes Band und darunter ein schwächeres (die primäre Mikroseismik, mit der Periode der Wellen), das anschwillt, während der Sturm wächst. Über drei Stunden auf 12 s verdichtet.",
+"n": "1000-fach beschleunigt"
+},
+"modes": {
+"nm": "Die klingende Erde",
+"sh": "Eigenschwingungen",
+"t": "Eigenschwingungen: die Erde klingt wie eine Glocke",
+"h": "Nach einem sehr großen Beben wie 2004 vor Sumatra schwingt die ganze Erde tage- oder sogar monatelang wie eine Glocke: Jede Eigenschwingung hat ihren Ton. Die tiefste, 0S2, hat eine Periode von 54 Minuten; der „Atem“-Modus 0S0 mit 20,5 Minuten hält am längsten an.",
+"l": "Nach dem Stoß eine Reihe fester senkrechter Linien, die Töne der Erde; die höchsten verklingen schnell, und am Ende bleibt nur eine einzelne Linie, der Modus 0S0. Die Skala ist in Millihertz; etwa vier Wochen auf 12 s verdichtet.",
+"n": "200 000-fach beschleunigt"
 }
 }
 }

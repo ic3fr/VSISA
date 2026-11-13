@@ -58,7 +58,8 @@
 "Szerokie pasmo",
 "Bonus: dźwięki z kosmosu",
 "Bonus: ciekawostki fal krótkich",
-"Bonus: dźwięki podwodne"
+"Bonus: dźwięki podwodne",
+"Bonus: dźwięki Ziemi"
 ],
 "modes": {
 "am": {
@@ -961,6 +962,62 @@
 "h": "W 1997 roku hydrofony NOAA na Pacyfiku zarejestrowały bardzo niski, szybko rosnący dźwięk, słyszalny na tysiące kilometrów. Długo zagadkowy, od 2012 roku przypisywany jest trzęsieniu lodu: pękającej ogromnej górze lodowej.",
 "l": "Szerokie pasmo, które rośnie w kilka sekund, z harmonicznymi, a potem powoli wygasa. Rekonstrukcja, przyspieszona 16× jak nagranie udostępnione przez NOAA.",
 "n": "przyspieszone 16×"
+},
+"quake": {
+"nm": "Bliskie trzęsienie ziemi",
+"sh": "P, potem S",
+"t": "Bliskie trzęsienie ziemi: fale P i S",
+"h": "Drgania gruntu są dla ucha zbyt niskie (kilka herców), dlatego zapis sejsmometru się przyspiesza. Najpierw dociera fala P (podłużna), potem wolniejsza i silniejsza fala S (poprzeczna). Różnica S−P w sekundach razy około 8 daje odległość w kilometrach.",
+"l": "Krótki, ostry pierwszy wstrząs (P), pół sekundy później silniejszy, niższy pomruk (S), który wygasa w długim ogonie: kodzie. Tu trzęsienie jest około 80 km stąd. Skala pokazuje prawdziwe częstotliwości.",
+"n": "przyspieszone 20×"
+},
+"teleseism": {
+"nm": "Odległe trzęsienie ziemi",
+"sh": "telesejsm",
+"t": "Odległe trzęsienie: fale P, S i powierzchniowe",
+"h": "Przy trzęsieniu odległym o 9000 km fala P przechodzi przez Ziemię w kilkanaście minut, fala S dociera około dziesięciu minut później, a potem nadchodzą fale powierzchniowe (Love'a i Rayleigha), wolne i bardzo niskie, które trzęsą najdłużej. Tak sejsmometry na całym świecie rejestrują każde duże trzęsienie.",
+"l": "Dwa małe wstrząsy (P, potem S), a potem długie, niskie falowanie, którego częstotliwość powoli rośnie: najdłuższe fale powierzchniowe biegną szybciej i docierają pierwsze (dyspersja). Ponad trzy godziny zapisu ściśnięte do 12 s.",
+"n": "przyspieszone 1000×"
+},
+"swarm": {
+"nm": "Rój sejsmiczny",
+"sh": "wulkan",
+"t": "Rój trzęsień przed erupcją",
+"h": "Wznosząca się magma kruszy skały: setki małych trzęsień, coraz częstszych, jak na La Palmie w 2021 roku. Obserwatoria śledzą ten rytm, by przewidzieć erupcję; gdy lawa wypływa, wstrząsy ustępują ciągłemu drżeniu.",
+"l": "Pojedyncze małe wstrząsy, potem coraz gęstsze, jak pękający popcorn, aż do ciągłego pasma na końcu: drżenia erupcji. Skala pokazuje prawdziwe częstotliwości.",
+"n": "przyspieszone 20×"
+},
+"tremor": {
+"nm": "Drżenie harmoniczne",
+"sh": "Redoubt",
+"t": "Narastające drżenie harmoniczne (Redoubt, 2009)",
+"h": "Przed niektórymi wybuchami wulkanu Redoubt (Alaska) w 2009 roku grunt drgał jak struna: ton podstawowy z harmonicznymi, który przesunął się od ok. 1 Hz do prawie 30 Hz, a kilka sekund przed wybuchem ucichł. Przypisuje się go bardzo szybkiej serii małych, powtarzających się trzęsień.",
+"l": "Grzebień równoległych śladów, które rozchodzą się, wznosząc się jak syrena, potem cisza, a potem szeroki szum: wybuch. Skala pokazuje prawdziwe częstotliwości.",
+"n": "przyspieszone 20×"
+},
+"stromboli": {
+"nm": "Infradźwięki Stromboli",
+"sh": "infradźwięki",
+"t": "Infradźwięki wybuchów Stromboli",
+"h": "Stromboli (Włochy) od stuleci wybucha mniej więcej co 10–20 minut. Każdy wybuch wysyła w powietrze falę ciśnienia o częstotliwości kilku herców: infradźwięki, zbyt niskie dla ucha, ale rejestrowane przez mikrobarometry z odległości kilku kilometrów.",
+"l": "Krótkie, niskie uderzenie przy każdym wybuchu, po nim szum strumienia gazu, potem cisza do następnego; pod spodem szum wiatru. Czterdzieści minut ściśnięte do 12 s.",
+"n": "przyspieszone 200×"
+},
+"microseism": {
+"nm": "Mikrosejsmy",
+"sh": "rozkołys",
+"t": "Mikrosejsmy: rozkołys morza wprawia Ziemię w drgania",
+"h": "Wszędzie na Ziemi, nawet daleko od wybrzeży, sejsmometry rejestrują ciągłe drgania o okresie 5–20 s: rozkołys oceanu napierający na dno. Narasta podczas sztormów i jest silniejszy zimą; to szum tła każdego sejsmogramu.",
+"l": "Szerokie, ciągłe pasmo, a pod nim słabsze (mikrosejsmy pierwotne, o okresie fal), które pęcznieje w miarę narastania sztormu. Ponad trzy godziny ściśnięte do 12 s.",
+"n": "przyspieszone 1000×"
+},
+"modes": {
+"nm": "Dzwoniąca Ziemia",
+"sh": "drgania własne",
+"t": "Drgania własne: Ziemia dzwoni jak dzwon",
+"h": "Po bardzo silnym trzęsieniu, jak u wybrzeży Sumatry w 2004 roku, cała Ziemia drga jak dzwon przez dni, a nawet miesiące: każde drganie własne ma swoją nutę. Najniższe, 0S2, ma okres 54 minut; „oddechowe” 0S0, o okresie 20,5 minuty, trwa najdłużej.",
+"l": "Po wstrząsie rząd nieruchomych pionowych kresek, nut Ziemi; najwyższe szybko gasną, a na końcu zostaje jedna samotna kreska, drganie 0S0. Skala jest w milihercach; około czterech tygodni ściśniętych do 12 s.",
+"n": "przyspieszone 200 000×"
 }
 }
 }

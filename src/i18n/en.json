@@ -58,7 +58,8 @@
 "Wideband",
 "Bonus: sounds from space",
 "Bonus: shortwave curiosities",
-"Bonus: underwater sounds"
+"Bonus: underwater sounds",
+"Bonus: sounds of the Earth"
 ],
 "modes": {
 "am": {
@@ -962,6 +963,62 @@
 "h": "In 1997, NOAA hydrophones in the Pacific picked up a very low sound that rose quickly, heard thousands of kilometres away. Long a mystery, since 2012 it has been put down to an icequake: a huge iceberg cracking.",
 "l": "A wide band that rises within a few seconds, with its harmonics, then slowly dies away. A reconstruction, sped up 16 times like the recording NOAA released.",
 "n": "sped up 16×"
+},
+"quake": {
+"nm": "Nearby earthquake",
+"sh": "P then S",
+"t": "A nearby earthquake: P and S waves",
+"h": "Ground vibrations are too low for the ear (a few hertz), so the seismometer recording is sped up to hear them. The P wave (compression) arrives first, then the S wave (shear), slower and stronger. The S−P gap in seconds, times about 8, gives the distance in kilometres.",
+"l": "A short, sharp first jolt (P), then half a second later a stronger, deeper rumble (S) that dies away in a long tail: the coda. Here the earthquake is about 80 km away. The scale shows the real frequencies.",
+"n": "sped up 20×"
+},
+"teleseism": {
+"nm": "Distant earthquake",
+"sh": "teleseism",
+"t": "A distant earthquake: P, S and surface waves",
+"h": "For an earthquake 9000 km away, the P wave crosses the Earth in about twelve minutes, the S wave arrives some ten minutes later, then come the surface waves (Love and Rayleigh), slow and very low, which shake the longest. Seismometers all over the world record every large earthquake this way.",
+"l": "Two small jolts (P then S), then a long, low swell whose frequency slowly rises: the longest surface waves travel faster and arrive first (dispersion). More than three hours of recording squeezed into 12 s.",
+"n": "sped up 1000×"
+},
+"swarm": {
+"nm": "Earthquake swarm",
+"sh": "volcano",
+"t": "An earthquake swarm before an eruption",
+"h": "As magma rises it fractures the rock: hundreds of small earthquakes, more and more frequent, as on La Palma in 2021. Observatories follow this rhythm to forecast the eruption; when lava breaks out, the jolts give way to continuous tremor.",
+"l": "Isolated small jolts, then closer and closer together, like popcorn popping, until a continuous band at the end: the eruption tremor. The scale shows the real frequencies.",
+"n": "sped up 20×"
+},
+"tremor": {
+"nm": "Harmonic tremor",
+"sh": "Redoubt",
+"t": "Rising harmonic tremor (Redoubt, 2009)",
+"h": "Before some explosions of Redoubt volcano (Alaska) in 2009, the ground vibrated like a string: a fundamental note and its harmonics that glided from about 1 Hz up to nearly 30 Hz, then fell silent a few seconds before the explosion. It is put down to a very rapid succession of small repeating earthquakes.",
+"l": "A comb of parallel traces spreading apart as they rise, like a siren, then silence, then a wide hiss: the explosion. The scale shows the real frequencies.",
+"n": "sped up 20×"
+},
+"stromboli": {
+"nm": "Stromboli infrasound",
+"sh": "infrasound",
+"t": "Infrasound from Stromboli's explosions",
+"h": "Stromboli (Italy) has been exploding every 10 to 20 minutes or so for centuries. Each explosion sends a pressure wave of a few hertz into the air: infrasound, too low for the ear but picked up by microbarometers several kilometres away.",
+"l": "A short, low thump at each explosion, followed by the hiss of the gas jet, then calm until the next one; underneath, the rumble of the wind. Forty minutes squeezed into 12 s.",
+"n": "sped up 200×"
+},
+"microseism": {
+"nm": "Microseism",
+"sh": "ocean swell",
+"t": "The microseism: ocean swell shaking the Earth",
+"h": "Everywhere on Earth, even far from the coast, seismometers record a permanent vibration with a period of 5 to 20 s: the ocean swell pressing on the seabed. It grows with storms and is stronger in winter; it is the background noise of every seismogram.",
+"l": "A wide, continuous band, plus a weaker band below it (the primary microseism, at the period of the waves), swelling as the storm grows. More than three hours squeezed into 12 s.",
+"n": "sped up 1000×"
+},
+"modes": {
+"nm": "The ringing Earth",
+"sh": "normal modes",
+"t": "Normal modes: the Earth rings like a bell",
+"h": "After a very large earthquake, such as Sumatra in 2004, the whole Earth vibrates like a bell for days or even months: each normal mode has its own note. The lowest, 0S2, has a period of 54 minutes; the “breathing” mode 0S0, at 20.5 minutes, is the one that lasts longest.",
+"l": "After the shock, a row of fixed vertical lines, the Earth's notes; the highest die away quickly, and at the end only one isolated line is left, mode 0S0. The scale is in millihertz; about four weeks squeezed into 12 s.",
+"n": "sped up 200,000×"
 }
 }
 }

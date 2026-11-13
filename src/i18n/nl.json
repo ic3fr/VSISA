@@ -58,7 +58,8 @@
 "Breedband",
 "Bonus: geluiden uit de ruimte",
 "Bonus: curiosa op kortegolf",
-"Bonus: onderwatergeluiden"
+"Bonus: onderwatergeluiden",
+"Bonus: geluiden van de aarde"
 ],
 "modes": {
 "am": {
@@ -962,6 +963,62 @@
 "h": "In 1997 vingen hydrofoons van de NOAA in de Stille Oceaan een zeer laag, snel stijgend geluid op, dat duizenden kilometers ver te horen was. Lang een raadsel, sinds 2012 toegeschreven aan een ijsbeving: een enorme ijsberg die scheurt.",
 "l": "Een brede band die in een paar seconden stijgt, met zijn harmonischen, en dan langzaam uitdooft. Reconstructie, 16× versneld zoals de opname die de NOAA uitbracht.",
 "n": "16× versneld"
+},
+"quake": {
+"nm": "Nabije aardbeving",
+"sh": "P, dan S",
+"t": "Een nabije aardbeving: P- en S-golven",
+"h": "Bodemtrillingen zijn te laag voor het oor (een paar hertz); daarom wordt de seismometeropname versneld. De P-golf (compressie) komt eerst, daarna de tragere en sterkere S-golf (schuif). Het verschil S−P in seconden maal ongeveer 8 geeft de afstand in kilometers.",
+"l": "Een korte, scherpe eerste schok (P), een halve seconde later een sterker, dieper gerommel (S) dat uitdooft in een lange staart: de coda. Hier ligt de beving op zo'n 80 km. De schaal geeft de echte frequenties.",
+"n": "20× versneld"
+},
+"teleseism": {
+"nm": "Verre aardbeving",
+"sh": "teleseisme",
+"t": "Een verre aardbeving: P, S en oppervlaktegolven",
+"h": "Bij een beving op 9000 km doorkruist de P-golf de aarde in een twaalftal minuten, de S-golf komt zo'n tien minuten later, en dan volgen de oppervlaktegolven (Love en Rayleigh), traag en heel laag, die het langst schudden. Zo registreren seismometers wereldwijd elke grote beving.",
+"l": "Twee kleine schokken (P, dan S), dan een lange, lage deining waarvan de frequentie langzaam stijgt: de langste oppervlaktegolven reizen sneller en komen eerst aan (dispersie). Meer dan drie uur opname samengeperst in 12 s.",
+"n": "1000× versneld"
+},
+"swarm": {
+"nm": "Aardbevingszwerm",
+"sh": "vulkaan",
+"t": "Een zwerm aardbevingen voor een uitbarsting",
+"h": "Als magma opstijgt, breekt het gesteente: honderden kleine bevingen, steeds talrijker, zoals op La Palma in 2021. Observatoria volgen dat ritme om de uitbarsting te voorspellen; als de lava naar buiten komt, maken de schokken plaats voor een aanhoudende tremor.",
+"l": "Losse kleine schokken, dan steeds dichter opeen, als ploffende popcorn, tot een doorlopende band aan het eind: de tremor van de uitbarsting. De schaal geeft de echte frequenties.",
+"n": "20× versneld"
+},
+"tremor": {
+"nm": "Harmonische tremor",
+"sh": "Redoubt",
+"t": "Stijgende harmonische tremor (Redoubt, 2009)",
+"h": "Voor sommige explosies van de vulkaan Redoubt (Alaska) trilde de grond in 2009 als een snaar: een grondtoon met boventonen die van ongeveer 1 Hz tot bijna 30 Hz gleed en enkele seconden voor de explosie stilviel. Men schrijft hem toe aan een razendsnelle opeenvolging van kleine, herhaalde bevingen.",
+"l": "Een kam van evenwijdige sporen die uiteenwaaieren terwijl ze stijgen, als een sirene, dan stilte, dan een breed geruis: de explosie. De schaal geeft de echte frequenties.",
+"n": "20× versneld"
+},
+"stromboli": {
+"nm": "Infrageluid van de Stromboli",
+"sh": "infrageluid",
+"t": "Het infrageluid van de explosies van de Stromboli",
+"h": "De Stromboli (Italië) explodeert al eeuwen ongeveer elke 10 tot 20 minuten. Elke explosie stuurt een drukgolf van enkele hertz de lucht in: infrageluid, te laag voor het oor maar opgevangen door microbarometers op kilometers afstand.",
+"l": "Een korte, lage dreun bij elke explosie, gevolgd door het geruis van de gasstraal, dan rust tot de volgende; eronder het geraas van de wind. Veertig minuten samengeperst in 12 s.",
+"n": "200× versneld"
+},
+"microseism": {
+"nm": "Microseisme",
+"sh": "deining",
+"t": "Het microseisme: de deining die de aarde laat trillen",
+"h": "Overal op aarde, ook ver van de kust, registreren seismometers een voortdurende trilling met een periode van 5 tot 20 s: de oceaandeining die op de zeebodem drukt. Ze groeit met stormen en is sterker in de winter; het is de achtergrondruis van elk seismogram.",
+"l": "Een brede, doorlopende band, met daaronder een zwakkere (het primaire microseisme, met de periode van de golven), die aanzwelt naarmate de storm groeit. Meer dan drie uur samengeperst in 12 s.",
+"n": "1000× versneld"
+},
+"modes": {
+"nm": "De klinkende aarde",
+"sh": "eigentrillingen",
+"t": "Eigentrillingen: de aarde klinkt als een klok",
+"h": "Na een heel zware beving, zoals bij Sumatra in 2004, trilt de hele aarde dagen- of zelfs maandenlang als een klok: elke eigentrilling heeft haar eigen toon. De laagste, 0S2, heeft een periode van 54 minuten; de „ademende” modus 0S0, van 20,5 minuten, houdt het langst aan.",
+"l": "Na de schok een rij vaste verticale lijnen, de tonen van de aarde; de hoogste doven snel uit, en aan het eind blijft één losse lijn over, de modus 0S0. De schaal is in millihertz; ongeveer vier weken samengeperst in 12 s.",
+"n": "200.000× versneld"
 }
 }
 }

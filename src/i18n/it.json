@@ -58,7 +58,8 @@
 "Banda larga",
 "Bonus: suoni dallo spazio",
 "Bonus: curiosità delle onde corte",
-"Bonus: suoni sottomarini"
+"Bonus: suoni sottomarini",
+"Bonus: suoni della Terra"
 ],
 "modes": {
 "am": {
@@ -961,6 +962,62 @@
 "h": "Nel 1997 gli idrofoni della NOAA nel Pacifico captarono un suono molto grave che saliva rapidamente, udito a migliaia di chilometri. A lungo misterioso, dal 2012 è attribuito a un terremoto di ghiaccio: un enorme iceberg che si spacca.",
 "l": "Una banda larga che sale in pochi secondi, con le sue armoniche, poi si spegne lentamente. Ricostruzione, accelerata 16 volte come la registrazione diffusa dalla NOAA.",
 "n": "accelerato 16 volte"
+},
+"quake": {
+"nm": "Terremoto vicino",
+"sh": "P poi S",
+"t": "Un terremoto vicino: onde P e S",
+"h": "Le vibrazioni del suolo sono troppo gravi per l'orecchio (pochi hertz), quindi la registrazione del sismometro viene accelerata. L'onda P (compressione) arriva per prima, poi l'onda S (taglio), più lenta e più forte. Il ritardo S−P in secondi, moltiplicato per circa 8, dà la distanza in chilometri.",
+"l": "Un primo colpo breve e acuto (P), poi mezzo secondo dopo un brontolio più forte e più grave (S) che si spegne in una lunga coda. Qui il terremoto è a circa 80 km. La scala indica le frequenze reali.",
+"n": "accelerato 20 volte"
+},
+"teleseism": {
+"nm": "Terremoto lontano",
+"sh": "telesisma",
+"t": "Un terremoto lontano: P, S e onde superficiali",
+"h": "Per un terremoto a 9000 km, l'onda P attraversa la Terra in una dozzina di minuti, l'onda S arriva una decina di minuti dopo, poi giungono le onde superficiali (Love e Rayleigh), lente e molto gravi, che scuotono più a lungo. Così i sismometri di tutto il mondo registrano ogni grande terremoto.",
+"l": "Due piccoli colpi (P poi S), poi una lunga onda grave la cui frequenza sale a poco a poco: le onde superficiali più lunghe viaggiano più veloci e arrivano per prime (dispersione). Più di tre ore di registrazione ridotte a 12 s.",
+"n": "accelerato 1000 volte"
+},
+"swarm": {
+"nm": "Sciame sismico",
+"sh": "vulcano",
+"t": "Uno sciame sismico prima di un'eruzione",
+"h": "Salendo, il magma frattura la roccia: centinaia di piccoli terremoti, sempre più frequenti, come a La Palma nel 2021. Gli osservatori seguono questo ritmo per prevedere l'eruzione; quando esce la lava, i colpi lasciano il posto a un tremore continuo.",
+"l": "Piccoli colpi isolati, poi sempre più fitti, come popcorn che scoppiano, fino a una banda continua alla fine: il tremore dell'eruzione. La scala indica le frequenze reali.",
+"n": "accelerato 20 volte"
+},
+"tremor": {
+"nm": "Tremore armonico",
+"sh": "Redoubt",
+"t": "Il tremore armonico che sale (Redoubt, 2009)",
+"h": "Prima di alcune esplosioni del vulcano Redoubt (Alaska), nel 2009, il suolo ha vibrato come una corda: una nota fondamentale con le sue armoniche, salita da circa 1 Hz fino a quasi 30 Hz e poi tacita pochi secondi prima dell'esplosione. È attribuito a una successione rapidissima di piccoli terremoti ripetuti.",
+"l": "Un pettine di tratti paralleli che si allargano salendo, come una sirena, poi un silenzio, poi un soffio largo: l'esplosione. La scala indica le frequenze reali.",
+"n": "accelerato 20 volte"
+},
+"stromboli": {
+"nm": "Infrasuoni dello Stromboli",
+"sh": "infrasuoni",
+"t": "Gli infrasuoni delle esplosioni dello Stromboli",
+"h": "Lo Stromboli esplode da secoli all'incirca ogni 10-20 minuti. Ogni esplosione manda nell'aria un'onda di pressione di pochi hertz: infrasuoni, troppo gravi per l'orecchio ma captati da microbarometri a diversi chilometri.",
+"l": "Un colpo breve e grave a ogni esplosione, seguito dal soffio del getto di gas, poi la calma fino alla successiva; sotto, il rombo del vento. Quaranta minuti ridotti a 12 s.",
+"n": "accelerato 200 volte"
+},
+"microseism": {
+"nm": "Microsisma",
+"sh": "mareggiata",
+"t": "Il microsisma: il moto ondoso che fa vibrare la Terra",
+"h": "Ovunque sulla Terra, anche lontano dalle coste, i sismometri registrano una vibrazione permanente con periodo da 5 a 20 s: il moto ondoso dell'oceano che preme sul fondo. Cresce con le tempeste ed è più forte d'inverno; è il rumore di fondo di ogni sismogramma.",
+"l": "Una banda larga e continua, e sotto una più debole (il microsisma primario, con il periodo delle onde), che si gonfia man mano che la tempesta cresce. Più di tre ore ridotte a 12 s.",
+"n": "accelerato 1000 volte"
+},
+"modes": {
+"nm": "La Terra che suona",
+"sh": "modi propri",
+"t": "I modi propri: la Terra suona come una campana",
+"h": "Dopo un terremoto molto grande, come quello di Sumatra del 2004, tutta la Terra vibra come una campana per giorni o persino mesi: ogni modo proprio ha la sua nota. Il più grave, 0S2, ha un periodo di 54 minuti; il modo «respiratorio» 0S0, di 20,5 minuti, è quello che dura più a lungo.",
+"l": "Dopo il colpo, una fila di tratti verticali fissi, le note della Terra; i più acuti si spengono presto e alla fine resta un solo tratto isolato, il modo 0S0. La scala è in millihertz; circa quattro settimane ridotte a 12 s.",
+"n": "accelerato 200 000 volte"
 }
 }
 }
