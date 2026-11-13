@@ -59,7 +59,8 @@
 "Bonus: sonidos del espacio",
 "Bonus: curiosidades de onda corta",
 "Bonus: sonidos submarinos",
-"Bonus: sonidos de la Tierra"
+"Bonus: sonidos de la Tierra",
+"Bonus: sonido digital (bits y kHz)"
 ],
 "modes": {
 "am": {
@@ -1018,6 +1019,55 @@
 "h": "Tras un sismo muy grande, como el de Sumatra en 2004, toda la Tierra vibra como una campana durante días e incluso meses: cada modo propio tiene su nota. El más grave, 0S2, tiene un período de 54 minutos; el modo «respiratorio» 0S0, de 20,5 minutos, es el que más dura.",
 "l": "Tras el golpe, una fila de trazos verticales fijos, las notas de la Tierra; los más agudos se apagan pronto y al final solo queda un trazo aislado, el modo 0S0. La escala está en milihercios; unas cuatro semanas reducidas a 12 s.",
 "n": "acelerado 200 000 veces"
+},
+"bit2": {
+"nm": "2 bits",
+"sh": "4 niveles",
+"t": "Música de videojuego en 2 bits",
+"h": "Un sonido digital es una serie de medidas (las muestras). Con 2 bits, cada muestra solo puede tomar 4 valores: la forma de onda se convierte en una escalera tosca. El error de redondeo se oye como un soplido granuloso y una distorsión muy fuerte; la relación señal/ruido es de solo unos 14 dB (6 dB por bit).",
+"l": "La música queda ahogada en una alfombra de ruido que cubre todo el ancho y sigue a las notas. Compara con 4, 8 y 16 bits: es la misma melodía, solo cambia el número de bits. Melodía original compuesta para esta página, al estilo de una consola."
+},
+"bit4": {
+"nm": "4 bits",
+"sh": "16 niveles",
+"t": "Música de videojuego en 4 bits",
+"h": "16 valores posibles por muestra, unos 26 dB de relación señal/ruido. Es la precisión del canal triangular de la NES y de las muestras del canal «wave» de la Game Boy: parte del grano de la música de consolas viene de ahí.",
+"l": "Las notas destacan, pero un velo de ruido sigue visible entre ellas y en todo el ancho. El ruido sigue al volumen: desaparece en los silencios."
+},
+"bit8": {
+"nm": "8 bits",
+"sh": "256 niveles",
+"t": "Música de videojuego en 8 bits",
+"h": "256 valores, unos 50 dB de relación señal/ruido: la calidad de los primeros samplers y de los sonidos de los ordenadores antiguos. Ojo: una consola «de 8 bits» como la NES debe ese nombre a su procesador, no a su sonido, que salía de osciladores sencillos (dos pulsos, un triángulo, un ruido).",
+"l": "El ruido de fondo ya solo es un ligero velo, visible únicamente gracias a la escala de 110 dB de esta sección. Al oído, un pequeño soplido en los pasajes suaves."
+},
+"bit16": {
+"nm": "16 bits",
+"sh": "65 536 niveles",
+"t": "Música de videojuego en 16 bits",
+"h": "65 536 valores, unos 98 dB de relación señal/ruido: la precisión del CD de audio (44,1 kHz, 16 bits) y de la salida de sonido de la Super Nintendo (32 kHz). El ruido de redondeo es más débil que todo lo que el oído percibe a volumen normal.",
+"l": "Ningún ruido visible: solo las notas, sus armónicos y la percusión. Es también la calidad de toda esta página, muestreada a 12 kHz."
+},
+"bit32": {
+"nm": "32 bits",
+"sh": "coma flotante",
+"t": "Música de videojuego en 32 bits",
+"h": "32 bits en coma flotante: la precisión del software de estudio, que permite mezclar y amplificar decenas de pistas sin pérdida. Al oído, ninguna diferencia con 16 bits. La PlayStation, consola «de 32 bits», reproducía de hecho su sonido en 16 bits a 44,1 kHz.",
+"l": "Idéntico a 16 bits, a la vista y al oído: por encima de 16 bits la ganancia solo sirve para el trabajo de estudio."
+},
+"sr3k": {
+"nm": "3 kHz",
+"sh": "muestreo",
+"t": "La misma música muestreada a 3 kHz",
+"h": "El número de muestras por segundo fija la frecuencia más aguda posible: la mitad (teorema de Shannon), aquí 1,5 kHz. Antes de muestrear, un filtro corta todo lo que está por encima; sin él, esas frecuencias se replegarían en sonidos parásitos. Solo quedan las notas graves y los medios: la música suena apagada.",
+"l": "El espectro se corta en seco hacia 1,5 kHz: por encima, nada. El teléfono clásico muestrea a 8 kHz (voz hasta 3,4 kHz), el CD a 44,1 kHz; esta página está limitada a 12 kHz."
+},
+"sr6k": {
+"nm": "6 kHz",
+"sh": "muestreo",
+"t": "La misma música muestreada a 6 kHz",
+"h": "A 6 kHz, las frecuencias llegan hasta 3 kHz: pasan las notas y el cuerpo de la percusión, pero desaparece el brillo de los armónicos agudos y de los platillos.",
+"l": "Espectro lleno hasta 3 kHz y nada por encima. Compara con 16 bits (todo el ancho, hasta 6 kHz) y con 3 kHz."
 }
 }
 }

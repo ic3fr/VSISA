@@ -59,7 +59,8 @@
 "Bónus: sons do espaço",
 "Bónus: curiosidades da onda curta",
 "Bónus: sons subaquáticos",
-"Bónus: sons da Terra"
+"Bónus: sons da Terra",
+"Bónus: som digital (bits e kHz)"
 ],
 "modes": {
 "am": {
@@ -1019,6 +1020,55 @@
 "h": "Depois de um sismo muito grande, como o de Samatra em 2004, a Terra inteira vibra como um sino durante dias ou mesmo meses: cada modo próprio tem a sua nota. O mais grave, 0S2, tem um período de 54 minutos; o modo «respiratório» 0S0, de 20,5 minutos, é o que dura mais tempo.",
 "l": "Depois do choque, uma fila de traços verticais fixos, as notas da Terra; os mais agudos apagam-se depressa e no fim só resta um traço isolado, o modo 0S0. A escala está em milihertz; cerca de quatro semanas reduzidas a 12 s.",
 "n": "acelerado 200 000 vezes"
+},
+"bit2": {
+"nm": "2 bits",
+"sh": "4 níveis",
+"t": "Música de videojogo em 2 bits",
+"h": "Um som digital é uma série de medições (as amostras). Com 2 bits, cada amostra só pode tomar 4 valores: a forma de onda torna-se uma escada grosseira. O erro de arredondamento ouve-se como um sopro granuloso e uma distorção muito forte; a relação sinal/ruído é de apenas cerca de 14 dB (6 dB por bit).",
+"l": "A música afoga-se num tapete de ruído em toda a largura que acompanha as notas. Compara com 4, 8 e 16 bits: é a mesma melodia, só muda o número de bits. Melodia original composta para esta página, ao estilo de uma consola."
+},
+"bit4": {
+"nm": "4 bits",
+"sh": "16 níveis",
+"t": "Música de videojogo em 4 bits",
+"h": "16 valores possíveis por amostra, cerca de 26 dB de relação sinal/ruído. É a precisão do canal triangular da NES e das amostras do canal «wave» do Game Boy: parte do grão da música das consolas vem daí.",
+"l": "As notas destacam-se, mas um véu de ruído continua visível entre elas e em toda a largura. O ruído acompanha o volume: desaparece nos silêncios."
+},
+"bit8": {
+"nm": "8 bits",
+"sh": "256 níveis",
+"t": "Música de videojogo em 8 bits",
+"h": "256 valores, cerca de 50 dB de relação sinal/ruído: a qualidade dos primeiros samplers e dos sons dos computadores antigos. Atenção: uma consola «de 8 bits» como a NES deve esse nome ao processador, não ao som, que saía de osciladores simples (dois impulsos, um triângulo, um ruído).",
+"l": "O ruído de fundo é só um véu ligeiro, visível apenas graças à escala de 110 dB desta rubrica. Ao ouvido, um pequeno sopro nas passagens suaves."
+},
+"bit16": {
+"nm": "16 bits",
+"sh": "65 536 níveis",
+"t": "Música de videojogo em 16 bits",
+"h": "65 536 valores, cerca de 98 dB de relação sinal/ruído: a precisão do CD áudio (44,1 kHz, 16 bits) e da saída de som da Super Nintendo (32 kHz). O ruído de arredondamento é mais fraco do que tudo o que o ouvido nota a volume normal.",
+"l": "Nenhum ruído visível: só as notas, os seus harmónicos e a percussão. É também a qualidade de toda esta página, amostrada a 12 kHz."
+},
+"bit32": {
+"nm": "32 bits",
+"sh": "vírgula flutuante",
+"t": "Música de videojogo em 32 bits",
+"h": "32 bits em vírgula flutuante: a precisão do software de estúdio, que permite misturar e amplificar dezenas de pistas sem perdas. Ao ouvido, nenhuma diferença em relação a 16 bits. A PlayStation, consola «de 32 bits», tocava aliás o som em 16 bits a 44,1 kHz.",
+"l": "Idêntico a 16 bits, à vista e ao ouvido: acima de 16 bits o ganho só serve para o trabalho em estúdio."
+},
+"sr3k": {
+"nm": "3 kHz",
+"sh": "amostragem",
+"t": "A mesma música amostrada a 3 kHz",
+"h": "O número de amostras por segundo fixa a frequência mais aguda possível: metade (teorema de Shannon), aqui 1,5 kHz. Antes da amostragem, um filtro corta tudo o que está acima; sem ele, essas frequências dobrar-se-iam em sons parasitas. Ficam só as notas graves e os médios: a música soa abafada.",
+"l": "O espetro para de repente perto de 1,5 kHz: acima, nada. O telefone clássico amostra a 8 kHz (voz até 3,4 kHz), o CD a 44,1 kHz; esta página está limitada a 12 kHz."
+},
+"sr6k": {
+"nm": "6 kHz",
+"sh": "amostragem",
+"t": "A mesma música amostrada a 6 kHz",
+"h": "A 6 kHz, as frequências vão até 3 kHz: as notas e o corpo da percussão passam, mas desaparece o brilho dos harmónicos agudos e dos pratos.",
+"l": "Espetro cheio até 3 kHz e nada acima. Compara com 16 bits (toda a largura, até 6 kHz) e com 3 kHz."
 }
 }
 }

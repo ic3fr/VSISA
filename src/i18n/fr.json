@@ -59,7 +59,8 @@
 "Bonus : sons de l'espace",
 "Bonus : curiosités des ondes courtes",
 "Bonus : sons sous-marins",
-"Bonus : sons de la Terre"
+"Bonus : sons de la Terre",
+"Bonus : son numérique (bits et kHz)"
 ],
 "modes": {
 "406": {
@@ -1085,6 +1086,55 @@
 "h": "Après un très grand séisme, comme celui de Sumatra en 2004, la Terre entière vibre comme une cloche pendant des jours, voire des mois : chaque mode propre a sa note. Le plus grave, 0S2, a une période de 54 minutes ; le mode « respiratoire » 0S0, de 20,5 minutes, est celui qui dure le plus longtemps.",
 "l": "Après le choc, une rangée de traits verticaux fixes, les notes de la Terre ; les plus aigus s'éteignent vite, et il ne reste à la fin qu'un trait isolé, le mode 0S0. La règle est en millihertz ; environ quatre semaines ramenées à 12 s.",
 "n": "accéléré 200 000 fois"
+},
+"bit2": {
+"nm": "2 bits",
+"sh": "4 niveaux",
+"t": "Musique de jeu vidéo en 2 bits",
+"h": "Un son numérique est une suite de mesures (les échantillons). Avec 2 bits, chaque mesure ne peut prendre que 4 valeurs : la forme de l'onde devient un escalier grossier. L'erreur d'arrondi s'entend comme un souffle granuleux et une distorsion très forte ; le rapport signal/bruit n'est que d'environ 14 dB (6 dB par bit).",
+"l": "La musique est noyée dans un tapis de bruit qui couvre toute la largeur et suit les notes. Compare avec 4, 8 et 16 bits : c'est le même air, seul le nombre de bits change. Air original composé pour la page, façon console de jeu."
+},
+"bit4": {
+"nm": "4 bits",
+"sh": "16 niveaux",
+"t": "Musique de jeu vidéo en 4 bits",
+"h": "16 valeurs possibles par échantillon, soit environ 26 dB de rapport signal/bruit. C'est la précision du canal triangle de la NES et des échantillons du canal « wave » de la Game Boy : une partie du grain des musiques de consoles vient de là.",
+"l": "Les notes ressortent, mais un voile de bruit reste visible entre elles et sur toute la largeur. Le bruit suit le volume : il disparaît dans les silences."
+},
+"bit8": {
+"nm": "8 bits",
+"sh": "256 niveaux",
+"t": "Musique de jeu vidéo en 8 bits",
+"h": "256 valeurs, environ 50 dB de rapport signal/bruit : la qualité des premiers échantillonneurs et des sons des vieux ordinateurs. Attention : une console « 8 bits » comme la NES doit ce nom à son processeur, pas à son son, fabriqué par des oscillateurs simples (deux impulsions, un triangle, un bruit).",
+"l": "Le bruit de fond n'est plus qu'un léger voile, visible seulement grâce à l'échelle de 110 dB de cette rubrique. À l'oreille, un petit souffle dans les passages doux."
+},
+"bit16": {
+"nm": "16 bits",
+"sh": "65 536 niveaux",
+"t": "Musique de jeu vidéo en 16 bits",
+"h": "65 536 valeurs, environ 98 dB de rapport signal/bruit : c'est la précision du CD audio (44,1 kHz, 16 bits) et de la sortie son de la Super Nintendo (32 kHz). Le bruit d'arrondi est plus faible que tout ce que l'oreille perçoit à volume normal.",
+"l": "Plus aucun bruit visible : seulement les notes, leurs harmoniques et les percussions. C'est aussi la qualité de toute cette page, échantillonnée à 12 kHz."
+},
+"bit32": {
+"nm": "32 bits",
+"sh": "virgule flottante",
+"t": "Musique de jeu vidéo en 32 bits",
+"h": "32 bits en virgule flottante : la précision des logiciels de studio, qui permet de mélanger et d'amplifier des dizaines de pistes sans perte. À l'écoute, aucune différence avec 16 bits. La PlayStation, console « 32 bits », jouait d'ailleurs son son en 16 bits à 44,1 kHz.",
+"l": "Identique au 16 bits, à l'œil comme à l'oreille : au-delà de 16 bits, le gain ne sert qu'au travail en studio."
+},
+"sr3k": {
+"nm": "3 kHz",
+"sh": "échantillonnage",
+"t": "La même musique échantillonnée à 3 kHz",
+"h": "Le nombre d'échantillons par seconde fixe la fréquence la plus aiguë possible : la moitié (théorème de Shannon), ici 1,5 kHz. Avant d'échantillonner, un filtre coupe tout ce qui est au-dessus ; sans lui, ces fréquences se replieraient en sons parasites. Il ne reste que les notes graves et le milieu : la musique devient sourde.",
+"l": "Le spectre s'arrête net vers 1,5 kHz : au-dessus, plus rien. Le téléphone classique échantillonne à 8 kHz (voix jusqu'à 3,4 kHz), le CD à 44,1 kHz ; cette page est limitée à 12 kHz."
+},
+"sr6k": {
+"nm": "6 kHz",
+"sh": "échantillonnage",
+"t": "La même musique échantillonnée à 6 kHz",
+"h": "À 6 kHz, les fréquences montent jusqu'à 3 kHz : les notes et le corps des percussions passent, mais le brillant des harmoniques aiguës et des cymbales disparaît.",
+"l": "Le spectre plein jusqu'à 3 kHz, puis plus rien au-dessus. Compare avec 16 bits (toute la largeur, jusqu'à 6 kHz) et avec 3 kHz."
 }
 }
 }

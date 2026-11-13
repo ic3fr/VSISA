@@ -59,7 +59,8 @@
 "Bonus: sounds from space",
 "Bonus: shortwave curiosities",
 "Bonus: underwater sounds",
-"Bonus: sounds of the Earth"
+"Bonus: sounds of the Earth",
+"Bonus: digital sound (bits and kHz)"
 ],
 "modes": {
 "am": {
@@ -1019,6 +1020,55 @@
 "h": "After a very large earthquake, such as Sumatra in 2004, the whole Earth vibrates like a bell for days or even months: each normal mode has its own note. The lowest, 0S2, has a period of 54 minutes; the “breathing” mode 0S0, at 20.5 minutes, is the one that lasts longest.",
 "l": "After the shock, a row of fixed vertical lines, the Earth's notes; the highest die away quickly, and at the end only one isolated line is left, mode 0S0. The scale is in millihertz; about four weeks squeezed into 12 s.",
 "n": "sped up 200,000×"
+},
+"bit2": {
+"nm": "2 bits",
+"sh": "4 levels",
+"t": "Video game music in 2 bits",
+"h": "Digital sound is a series of measurements (samples). With 2 bits, each sample can take only 4 values: the waveform becomes a coarse staircase. The rounding error is heard as a grainy hiss and very strong distortion; the signal-to-noise ratio is only about 14 dB (6 dB per bit).",
+"l": "The music is drowned in a carpet of noise across the full width that follows the notes. Compare with 4, 8 and 16 bits: it is the same tune, only the number of bits changes. An original tune written for this page, in a game console style."
+},
+"bit4": {
+"nm": "4 bits",
+"sh": "16 levels",
+"t": "Video game music in 4 bits",
+"h": "16 possible values per sample, about 26 dB signal-to-noise ratio. That is the precision of the NES triangle channel and of the Game Boy's “wave” channel samples: part of the grain of console music comes from there.",
+"l": "The notes stand out, but a veil of noise remains visible between them and across the full width. The noise follows the volume: it vanishes in the silences."
+},
+"bit8": {
+"nm": "8 bits",
+"sh": "256 levels",
+"t": "Video game music in 8 bits",
+"h": "256 values, about 50 dB signal-to-noise ratio: the quality of the first samplers and of old computers' sounds. Note: an “8-bit” console such as the NES owes that name to its processor, not its sound, which came from simple oscillators (two pulse waves, a triangle, a noise).",
+"l": "The background noise is just a light veil, visible only thanks to the 110 dB scale of this section. To the ear, a slight hiss in the quiet passages."
+},
+"bit16": {
+"nm": "16 bits",
+"sh": "65,536 levels",
+"t": "Video game music in 16 bits",
+"h": "65,536 values, about 98 dB signal-to-noise ratio: the precision of audio CD (44.1 kHz, 16 bits) and of the Super Nintendo's sound output (32 kHz). The rounding noise is lower than anything the ear notices at normal volume.",
+"l": "No visible noise at all: only the notes, their harmonics and the drums. It is also the quality of this whole page, sampled at 12 kHz."
+},
+"bit32": {
+"nm": "32 bits",
+"sh": "floating point",
+"t": "Video game music in 32 bits",
+"h": "32-bit floating point: the precision of studio software, which lets dozens of tracks be mixed and amplified without loss. To the ear, no difference from 16 bits. The PlayStation, a “32-bit” console, actually played its sound in 16 bits at 44.1 kHz.",
+"l": "Identical to 16 bits, to the eye and to the ear: beyond 16 bits the gain is only useful for studio work."
+},
+"sr3k": {
+"nm": "3 kHz",
+"sh": "sample rate",
+"t": "The same music sampled at 3 kHz",
+"h": "The number of samples per second sets the highest possible frequency: half of it (the Shannon theorem), here 1.5 kHz. Before sampling, a filter removes everything above; without it those frequencies would fold back as spurious sounds. Only the low notes and the middle remain: the music sounds muffled.",
+"l": "The spectrum stops dead around 1.5 kHz: nothing above. Classic telephony samples at 8 kHz (voice up to 3.4 kHz), CD at 44.1 kHz; this page is limited to 12 kHz."
+},
+"sr6k": {
+"nm": "6 kHz",
+"sh": "sample rate",
+"t": "The same music sampled at 6 kHz",
+"h": "At 6 kHz, frequencies go up to 3 kHz: the notes and the body of the drums get through, but the sparkle of the high harmonics and cymbals disappears.",
+"l": "A full spectrum up to 3 kHz, then nothing above. Compare with 16 bits (the full width, up to 6 kHz) and with 3 kHz."
 }
 }
 }

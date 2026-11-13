@@ -59,7 +59,8 @@
 "Bonus: zvuky z vesmíru",
 "Bonus: kuriozity krátkých vln",
 "Bonus: podvodní zvuky",
-"Bonus: zvuky Země"
+"Bonus: zvuky Země",
+"Bonus: digitální zvuk (bity a kHz)"
 ],
 "modes": {
 "am": {
@@ -1018,6 +1019,55 @@
 "h": "Po velmi silném zemětřesení, jako u Sumatry v roce 2004, se celá Země chvěje jako zvon celé dny, ba měsíce: každý vlastní kmit má svůj tón. Nejhlubší, 0S2, má periodu 54 minut; „dýchací“ kmit 0S0 s periodou 20,5 minuty trvá nejdéle.",
 "l": "Po otřesu řada pevných svislých čar, tóny Země; nejvyšší rychle zaniknou a na konci zbude jediná osamocená čára, kmit 0S0. Stupnice je v milihertzích; asi čtyři týdny stlačené do 12 s.",
 "n": "zrychleno 200 000×"
+},
+"bit2": {
+"nm": "2 bity",
+"sh": "4 úrovně",
+"t": "Hudba z videohry ve 2 bitech",
+"h": "Digitální zvuk je řada měření (vzorků). Se 2 bity může každý vzorek nabývat jen 4 hodnot: tvar vlny se změní v hrubé schodiště. Chyba zaokrouhlení zní jako zrnitý šum a velmi silné zkreslení; odstup signálu od šumu je jen asi 14 dB (6 dB na bit).",
+"l": "Hudba se topí v koberci šumu přes celou šířku, který sleduje tóny. Porovnej se 4, 8 a 16 bity: je to stejná melodie, mění se jen počet bitů. Původní melodie složená pro tuto stránku ve stylu herní konzole."
+},
+"bit4": {
+"nm": "4 bity",
+"sh": "16 úrovní",
+"t": "Hudba z videohry ve 4 bitech",
+"h": "16 možných hodnot na vzorek, odstup signálu od šumu asi 26 dB. To je přesnost trojúhelníkového kanálu NES a vzorků kanálu „wave“ v Game Boyi: odtud pochází část zrnitosti konzolové hudby.",
+"l": "Tóny vystupují, ale mezi nimi a přes celou šířku zůstává viditelný závoj šumu. Šum sleduje hlasitost: v tichých místech zmizí."
+},
+"bit8": {
+"nm": "8 bitů",
+"sh": "256 úrovní",
+"t": "Hudba z videohry v 8 bitech",
+"h": "256 hodnot, odstup signálu od šumu asi 50 dB: kvalita prvních samplerů a zvuků starých počítačů. Pozor: „8bitová“ konzole jako NES vděčí za své jméno procesoru, ne zvuku, který vytvářely jednoduché oscilátory (dvě pulzní vlny, trojúhelník, šum).",
+"l": "Šum pozadí je už jen lehký závoj, viditelný jen díky stupnici 110 dB v této rubrice. Pro ucho slabý šum v tichých pasážích."
+},
+"bit16": {
+"nm": "16 bitů",
+"sh": "65 536 úrovní",
+"t": "Hudba z videohry v 16 bitech",
+"h": "65 536 hodnot, odstup signálu od šumu asi 98 dB: přesnost zvukového CD (44,1 kHz, 16 bitů) a zvukového výstupu Super Nintenda (32 kHz). Šum zaokrouhlení je slabší než cokoli, co ucho při běžné hlasitosti postřehne.",
+"l": "Žádný viditelný šum: jen tóny, jejich harmonické a bicí. To je také kvalita celé této stránky, vzorkované na 12 kHz."
+},
+"bit32": {
+"nm": "32 bitů",
+"sh": "plovoucí čárka",
+"t": "Hudba z videohry ve 32 bitech",
+"h": "32 bitů v plovoucí čárce: přesnost studiového softwaru, která umožňuje mixovat a zesilovat desítky stop bez ztrát. Při poslechu žádný rozdíl oproti 16 bitům. PlayStation, „32bitová“ konzole, ostatně přehrávala zvuk v 16 bitech na 44,1 kHz.",
+"l": "Stejné jako 16 bitů, pro oko i ucho: nad 16 bitů má zisk smysl jen při práci ve studiu."
+},
+"sr3k": {
+"nm": "3 kHz",
+"sh": "vzorkování",
+"t": "Stejná hudba vzorkovaná na 3 kHz",
+"h": "Počet vzorků za sekundu určuje nejvyšší možný kmitočet: polovinu (Shannonova věta), zde 1,5 kHz. Před vzorkováním filtr odstraní vše nad ním; bez něj by se tyto kmitočty zrcadlily jako rušivé tóny. Zůstanou jen hluboké tóny a středy: hudba zní tlumeně.",
+"l": "Spektrum náhle končí kolem 1,5 kHz: nad tím nic. Klasický telefon vzorkuje na 8 kHz (hlas do 3,4 kHz), CD na 44,1 kHz; tato stránka je omezena na 12 kHz."
+},
+"sr6k": {
+"nm": "6 kHz",
+"sh": "vzorkování",
+"t": "Stejná hudba vzorkovaná na 6 kHz",
+"h": "Při 6 kHz sahají kmitočty do 3 kHz: tóny a jádro bicích projdou, ale lesk vysokých harmonických a činelů zmizí.",
+"l": "Plné spektrum do 3 kHz, nad tím nic. Porovnej s 16 bity (celá šířka, do 6 kHz) a s 3 kHz."
 }
 }
 }

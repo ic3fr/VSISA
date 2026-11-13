@@ -4,7 +4,7 @@
 
 [![Visits](https://abacus.jasoncameron.dev/get/ic3fr-vsisa/visits/shield?text=visits)](https://ic3fr.github.io/VSISA/) [![Plays](https://abacus.jasoncameron.dev/get/ic3fr-vsisa/plays/shield?text=plays)](https://ic3fr.github.io/VSISA/)
 
-Identificateur de modes radio : **120 signaux simulés** (dont 18 sons de l'espace, 7 curiosités des ondes courtes, 13 sons sous-marins et 7 sons de la Terre en bonus), avec cinq **modes d'affichage** (jour, nuit en nuances de rouge, et phosphore vert, bleu ou orange comme les vieux ordinateurs) pour apprendre à reconnaître ce qu'on entend et ce qu'on voit sur un récepteur ou un SDR.
+Identificateur de modes radio : **127 signaux simulés** (dont 18 sons de l'espace, 7 curiosités des ondes courtes, 13 sons sous-marins, 7 sons de la Terre et une comparaison de son numérique en bonus), avec cinq **modes d'affichage** (jour, nuit en nuances de rouge, et phosphore vert, bleu ou orange comme les vieux ordinateurs) pour apprendre à reconnaître ce qu'on entend et ce qu'on voit sur un récepteur ou un SDR.
 
 **Ouvrir la page : https://ic3fr.github.io/VSISA/** · **[📥 Télécharger le livre OpenBookRadio](https://github.com/ic3fr/OpenBookRadio/releases)** (gratuit, PDF et EPUB) · 13 langues : menu en haut de la page, ou lien direct avec `#en`, `#es`, `#de`… à la fin de l'adresse.
 
@@ -31,25 +31,26 @@ Identificateur de modes radio : **120 signaux simulés** (dont 18 sons de l'espa
 - **Bonus : curiosités des ondes courtes** : UVB-76 « The Buzzer », « The Pip », « Squeaky Wheel », balises à une lettre, CODAR, STANAG 4285, Link-11, station de nombres (voix imitée)
 - **Bonus : sons sous-marins** : baleine à bosse, rorquals bleu et commun, clics du cachalot, dauphin, orque, phoque barbu, crevettes-pistolets, ping de sonar, hélice de navire, téléphone sous-marin (UQC), radio des sous-marins ZEVS à 82 Hz, le « Bloop »
 - **Bonus : sons de la Terre** (ondes sismiques et infrasons, accélérés pour être entendus) : séismes proche et lointain, essaim sismique, trémor harmonique du Redoubt, infrasons du Stromboli, microséisme de la houle, modes propres de la Terre
+- **Bonus : son numérique (bits et kHz)** : le même air original façon jeu vidéo en 2, 4, 8, 16 et 32 bits, puis échantillonné à 3 et 6 kHz, pour voir et entendre le bruit de quantification et la perte des aigus
 
 Les signaux radio (AM, FM, AIS, LoRa…) sont montrés comme sur l'écran d'un SDR, autour d'une fréquence intermédiaire simulée ; certains sont à échelle réduite ou accélérée (c'est indiqué en haut de l'écran).
 
 ## 13 langues / 13 languages
 | | |
 |---|---|
-| 🇫🇷 Français | Identificateur de modes radio : 120 signaux simulés, son, spectre, waterfall, quiz. `#fr` |
-| 🇬🇧 English | Radio mode identifier: 120 simulated signals, sound, spectrum, waterfall, quiz. `#en` |
-| 🇪🇸 Español | Identificador de modos de radio: 120 señales simuladas, sonido, espectro, cascada, test. `#es` |
-| 🇩🇪 Deutsch | Funkbetriebsarten-Erkenner: 120 simulierte Signale, Ton, Spektrum, Wasserfall, Quiz. `#de` |
-| 🇳🇱 Nederlands | Radiomodus-herkenner: 120 gesimuleerde signalen, geluid, spectrum, waterval, quiz. `#nl` |
-| 🇨🇿 Čeština | Rozpoznávač rádiových druhů provozu: 120 simulovaných signálů, zvuk, spektrum, vodopád, kvíz. `#cs` |
-| 🇵🇹 Português | Identificador de modos de rádio: 120 sinais simulados, som, espetro, cascata, quiz. `#pt` |
-| 🇮🇹 Italiano | Identificatore di modi radio: 120 segnali simulati, suono, spettro, cascata, quiz. `#it` |
-| 🇵🇱 Polski | Rozpoznawacz emisji radiowych: 120 symulowanych sygnałów, dźwięk, widmo, wodospad, quiz. `#pl` |
-| 🇷🇺 Русский | Определитель видов радиосигналов: 120 смоделированных сигналов, звук, спектр, водопад, викторина. `#ru` |
-| 🇺🇦 Українська | Визначник видів радіосигналів: 120 змодельованих сигналів, звук, спектр, водоспад, вікторина. `#uk` |
-| 🇨🇳 中文 | 无线电模式识别器：120 种模拟信号，声音、频谱、瀑布图、测验。`#zh` |
-| 🇯🇵 日本語 | 無線モード識別器：120 種類のシミュレーション信号、音、スペクトラム、ウォーターフォール、クイズ。`#ja` |
+| 🇫🇷 Français | Identificateur de modes radio : 127 signaux simulés, son, spectre, waterfall, quiz. `#fr` |
+| 🇬🇧 English | Radio mode identifier: 127 simulated signals, sound, spectrum, waterfall, quiz. `#en` |
+| 🇪🇸 Español | Identificador de modos de radio: 127 señales simuladas, sonido, espectro, cascada, test. `#es` |
+| 🇩🇪 Deutsch | Funkbetriebsarten-Erkenner: 127 simulierte Signale, Ton, Spektrum, Wasserfall, Quiz. `#de` |
+| 🇳🇱 Nederlands | Radiomodus-herkenner: 127 gesimuleerde signalen, geluid, spectrum, waterval, quiz. `#nl` |
+| 🇨🇿 Čeština | Rozpoznávač rádiových druhů provozu: 127 simulovaných signálů, zvuk, spektrum, vodopád, kvíz. `#cs` |
+| 🇵🇹 Português | Identificador de modos de rádio: 127 sinais simulados, som, espetro, cascata, quiz. `#pt` |
+| 🇮🇹 Italiano | Identificatore di modi radio: 127 segnali simulati, suono, spettro, cascata, quiz. `#it` |
+| 🇵🇱 Polski | Rozpoznawacz emisji radiowych: 127 symulowanych sygnałów, dźwięk, widmo, wodospad, quiz. `#pl` |
+| 🇷🇺 Русский | Определитель видов радиосигналов: 127 смоделированных сигналов, звук, спектр, водопад, викторина. `#ru` |
+| 🇺🇦 Українська | Визначник видів радіосигналів: 127 змодельованих сигналів, звук, спектр, водоспад, вікторина. `#uk` |
+| 🇨🇳 中文 | 无线电模式识别器：127 种模拟信号，声音、频谱、瀑布图、测验。`#zh` |
+| 🇯🇵 日本語 | 無線モード識別器：127 種類のシミュレーション信号、音、スペクトラム、ウォーターフォール、クイズ。`#ja` |
 
 La langue est choisie automatiquement d'après les réglages du navigateur (toutes les langues préférées sont regardées : un visiteur de Chine, de Taïwan ou du Brésil arrive directement en chinois ou en portugais ; sinon en anglais) ; le menu permet d'en changer. L'adresse ne prend une fin `#langue` que si quelqu'un choisit une langue dans le menu : un lien simple s'ouvre donc toujours dans la langue de chaque visiteur. Le menu **Affichage** propose jour, **nuit** (nuances de rouge, pour garder la vision de nuit) et **phosphore vert, bleu ou orange** (comme les vieux terminaux, avec des lignes de balayage) ; le choix est retenu.
 

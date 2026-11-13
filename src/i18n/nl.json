@@ -59,7 +59,8 @@
 "Bonus: geluiden uit de ruimte",
 "Bonus: curiosa op kortegolf",
 "Bonus: onderwatergeluiden",
-"Bonus: geluiden van de aarde"
+"Bonus: geluiden van de aarde",
+"Bonus: digitaal geluid (bits en kHz)"
 ],
 "modes": {
 "am": {
@@ -1019,6 +1020,55 @@
 "h": "Na een heel zware beving, zoals bij Sumatra in 2004, trilt de hele aarde dagen- of zelfs maandenlang als een klok: elke eigentrilling heeft haar eigen toon. De laagste, 0S2, heeft een periode van 54 minuten; de „ademende” modus 0S0, van 20,5 minuten, houdt het langst aan.",
 "l": "Na de schok een rij vaste verticale lijnen, de tonen van de aarde; de hoogste doven snel uit, en aan het eind blijft één losse lijn over, de modus 0S0. De schaal is in millihertz; ongeveer vier weken samengeperst in 12 s.",
 "n": "200.000× versneld"
+},
+"bit2": {
+"nm": "2 bits",
+"sh": "4 niveaus",
+"t": "Gamemuziek in 2 bits",
+"h": "Digitaal geluid is een reeks metingen (samples). Met 2 bits kan elke sample maar 4 waarden aannemen: de golfvorm wordt een grove trap. De afrondingsfout klinkt als korrelig geruis en zeer sterke vervorming; de signaal-ruisverhouding is maar zo'n 14 dB (6 dB per bit).",
+"l": "De muziek verdrinkt in een tapijt van ruis over de hele breedte dat de noten volgt. Vergelijk met 4, 8 en 16 bits: het is dezelfde melodie, alleen het aantal bits verandert. Een eigen melodie, voor deze pagina geschreven in de stijl van een spelconsole."
+},
+"bit4": {
+"nm": "4 bits",
+"sh": "16 niveaus",
+"t": "Gamemuziek in 4 bits",
+"h": "16 mogelijke waarden per sample, ongeveer 26 dB signaal-ruisverhouding. Dat is de precisie van het driehoekskanaal van de NES en van de samples in het „wave”-kanaal van de Game Boy: een deel van de korrel van consolemuziek komt daarvandaan.",
+"l": "De noten springen eruit, maar een waas van ruis blijft zichtbaar ertussen en over de hele breedte. De ruis volgt het volume: in de stiltes verdwijnt hij."
+},
+"bit8": {
+"nm": "8 bits",
+"sh": "256 niveaus",
+"t": "Gamemuziek in 8 bits",
+"h": "256 waarden, ongeveer 50 dB signaal-ruisverhouding: de kwaliteit van de eerste samplers en van de geluiden van oude computers. Let op: een „8-bit”-console zoals de NES dankt die naam aan zijn processor, niet aan zijn geluid, dat uit eenvoudige oscillatoren kwam (twee pulsgolven, een driehoek, een ruis).",
+"l": "De achtergrondruis is nog maar een lichte waas, alleen zichtbaar dankzij de schaal van 110 dB in deze rubriek. Voor het oor een licht geruis in de zachte passages."
+},
+"bit16": {
+"nm": "16 bits",
+"sh": "65.536 niveaus",
+"t": "Gamemuziek in 16 bits",
+"h": "65.536 waarden, ongeveer 98 dB signaal-ruisverhouding: de precisie van de audio-cd (44,1 kHz, 16 bits) en van de geluidsuitgang van de Super Nintendo (32 kHz). De afrondingsruis is zwakker dan alles wat het oor bij normaal volume opmerkt.",
+"l": "Geen zichtbare ruis meer: alleen de noten, hun harmonischen en het slagwerk. Het is ook de kwaliteit van deze hele pagina, bemonsterd op 12 kHz."
+},
+"bit32": {
+"nm": "32 bits",
+"sh": "drijvende komma",
+"t": "Gamemuziek in 32 bits",
+"h": "32 bits met drijvende komma: de precisie van studiosoftware, waarmee tientallen sporen zonder verlies gemengd en versterkt kunnen worden. Voor het oor geen verschil met 16 bits. De PlayStation, een „32-bit”-console, speelde zijn geluid trouwens in 16 bits op 44,1 kHz.",
+"l": "Gelijk aan 16 bits, voor oog en oor: boven 16 bits is de winst alleen nuttig voor studiowerk."
+},
+"sr3k": {
+"nm": "3 kHz",
+"sh": "bemonstering",
+"t": "Dezelfde muziek bemonsterd op 3 kHz",
+"h": "Het aantal samples per seconde bepaalt de hoogst mogelijke frequentie: de helft (stelling van Shannon), hier 1,5 kHz. Voor het bemonsteren haalt een filter alles erboven weg; zonder dat filter zouden die frequenties terugvouwen als storende tonen. Alleen de lage noten en het midden blijven over: de muziek klinkt dof.",
+"l": "Het spectrum houdt abrupt op rond 1,5 kHz: daarboven niets. De klassieke telefoon bemonstert op 8 kHz (spraak tot 3,4 kHz), de cd op 44,1 kHz; deze pagina is beperkt tot 12 kHz."
+},
+"sr6k": {
+"nm": "6 kHz",
+"sh": "bemonstering",
+"t": "Dezelfde muziek bemonsterd op 6 kHz",
+"h": "Op 6 kHz gaan de frequenties tot 3 kHz: de noten en de kern van het slagwerk komen erdoor, maar de glans van de hoge harmonischen en de bekkens verdwijnt.",
+"l": "Een vol spectrum tot 3 kHz, daarboven niets. Vergelijk met 16 bits (de hele breedte, tot 6 kHz) en met 3 kHz."
 }
 }
 }

@@ -59,7 +59,8 @@
 "Bonus: suoni dallo spazio",
 "Bonus: curiosità delle onde corte",
 "Bonus: suoni sottomarini",
-"Bonus: suoni della Terra"
+"Bonus: suoni della Terra",
+"Bonus: suono digitale (bit e kHz)"
 ],
 "modes": {
 "am": {
@@ -1018,6 +1019,55 @@
 "h": "Dopo un terremoto molto grande, come quello di Sumatra del 2004, tutta la Terra vibra come una campana per giorni o persino mesi: ogni modo proprio ha la sua nota. Il più grave, 0S2, ha un periodo di 54 minuti; il modo «respiratorio» 0S0, di 20,5 minuti, è quello che dura più a lungo.",
 "l": "Dopo il colpo, una fila di tratti verticali fissi, le note della Terra; i più acuti si spengono presto e alla fine resta un solo tratto isolato, il modo 0S0. La scala è in millihertz; circa quattro settimane ridotte a 12 s.",
 "n": "accelerato 200 000 volte"
+},
+"bit2": {
+"nm": "2 bit",
+"sh": "4 livelli",
+"t": "Musica da videogioco a 2 bit",
+"h": "Un suono digitale è una serie di misure (i campioni). Con 2 bit ogni campione può assumere solo 4 valori: la forma d'onda diventa una scala grossolana. L'errore di arrotondamento si sente come un fruscio granuloso e una distorsione fortissima; il rapporto segnale/rumore è di appena 14 dB circa (6 dB per bit).",
+"l": "La musica annega in un tappeto di rumore su tutta la larghezza che segue le note. Confronta con 4, 8 e 16 bit: è la stessa melodia, cambia solo il numero di bit. Melodia originale composta per questa pagina, in stile console."
+},
+"bit4": {
+"nm": "4 bit",
+"sh": "16 livelli",
+"t": "Musica da videogioco a 4 bit",
+"h": "16 valori possibili per campione, circa 26 dB di rapporto segnale/rumore. È la precisione del canale triangolare del NES e dei campioni del canale «wave» del Game Boy: parte della grana della musica delle console viene da lì.",
+"l": "Le note emergono, ma un velo di rumore resta visibile tra di esse e su tutta la larghezza. Il rumore segue il volume: sparisce nei silenzi."
+},
+"bit8": {
+"nm": "8 bit",
+"sh": "256 livelli",
+"t": "Musica da videogioco a 8 bit",
+"h": "256 valori, circa 50 dB di rapporto segnale/rumore: la qualità dei primi campionatori e dei suoni dei vecchi computer. Attenzione: una console «a 8 bit» come il NES deve il nome al processore, non al suono, prodotto da oscillatori semplici (due onde a impulsi, un triangolo, un rumore).",
+"l": "Il rumore di fondo è solo un leggero velo, visibile solo grazie alla scala di 110 dB di questa rubrica. All'orecchio, un lieve fruscio nei passaggi tranquilli."
+},
+"bit16": {
+"nm": "16 bit",
+"sh": "65 536 livelli",
+"t": "Musica da videogioco a 16 bit",
+"h": "65 536 valori, circa 98 dB di rapporto segnale/rumore: la precisione del CD audio (44,1 kHz, 16 bit) e dell'uscita audio del Super Nintendo (32 kHz). Il rumore di arrotondamento è più debole di qualsiasi cosa l'orecchio percepisca a volume normale.",
+"l": "Nessun rumore visibile: solo le note, le loro armoniche e la batteria. È anche la qualità di tutta questa pagina, campionata a 12 kHz."
+},
+"bit32": {
+"nm": "32 bit",
+"sh": "virgola mobile",
+"t": "Musica da videogioco a 32 bit",
+"h": "32 bit in virgola mobile: la precisione dei software da studio, che permette di mixare e amplificare decine di tracce senza perdite. All'ascolto, nessuna differenza rispetto ai 16 bit. La PlayStation, console «a 32 bit», riproduceva infatti il suono a 16 bit a 44,1 kHz.",
+"l": "Identico ai 16 bit, all'occhio e all'orecchio: oltre i 16 bit il guadagno serve solo al lavoro in studio."
+},
+"sr3k": {
+"nm": "3 kHz",
+"sh": "campionamento",
+"t": "La stessa musica campionata a 3 kHz",
+"h": "Il numero di campioni al secondo fissa la frequenza più acuta possibile: la metà (teorema di Shannon), qui 1,5 kHz. Prima del campionamento un filtro taglia tutto ciò che sta sopra; senza di esso, quelle frequenze si ripiegherebbero in suoni parassiti. Restano solo le note gravi e i medi: la musica suona ovattata.",
+"l": "Lo spettro si ferma di colpo verso 1,5 kHz: sopra, più niente. Il telefono classico campiona a 8 kHz (voce fino a 3,4 kHz), il CD a 44,1 kHz; questa pagina è limitata a 12 kHz."
+},
+"sr6k": {
+"nm": "6 kHz",
+"sh": "campionamento",
+"t": "La stessa musica campionata a 6 kHz",
+"h": "A 6 kHz le frequenze arrivano fino a 3 kHz: passano le note e il corpo della batteria, ma sparisce la brillantezza delle armoniche acute e dei piatti.",
+"l": "Spettro pieno fino a 3 kHz, poi niente sopra. Confronta con 16 bit (tutta la larghezza, fino a 6 kHz) e con 3 kHz."
 }
 }
 }

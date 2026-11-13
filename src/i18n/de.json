@@ -59,7 +59,8 @@
 "Bonus: Klänge aus dem All",
 "Bonus: Kuriositäten der Kurzwelle",
 "Bonus: Unterwassergeräusche",
-"Bonus: Klänge der Erde"
+"Bonus: Klänge der Erde",
+"Bonus: digitaler Klang (Bits und kHz)"
 ],
 "modes": {
 "am": {
@@ -1019,6 +1020,55 @@
 "h": "Nach einem sehr großen Beben wie 2004 vor Sumatra schwingt die ganze Erde tage- oder sogar monatelang wie eine Glocke: Jede Eigenschwingung hat ihren Ton. Die tiefste, 0S2, hat eine Periode von 54 Minuten; der „Atem“-Modus 0S0 mit 20,5 Minuten hält am längsten an.",
 "l": "Nach dem Stoß eine Reihe fester senkrechter Linien, die Töne der Erde; die höchsten verklingen schnell, und am Ende bleibt nur eine einzelne Linie, der Modus 0S0. Die Skala ist in Millihertz; etwa vier Wochen auf 12 s verdichtet.",
 "n": "200 000-fach beschleunigt"
+},
+"bit2": {
+"nm": "2 Bit",
+"sh": "4 Stufen",
+"t": "Videospielmusik mit 2 Bit",
+"h": "Digitaler Klang ist eine Folge von Messwerten (Abtastwerten). Mit 2 Bit kann jeder Wert nur 4 Stufen annehmen: Die Wellenform wird zu einer groben Treppe. Der Rundungsfehler ist als körniges Rauschen und sehr starke Verzerrung zu hören; der Störabstand beträgt nur etwa 14 dB (6 dB pro Bit).",
+"l": "Die Musik geht in einem Rauschteppich über die ganze Breite unter, der den Tönen folgt. Vergleiche mit 4, 8 und 16 Bit: Es ist dieselbe Melodie, nur die Bitzahl ändert sich. Eine eigens für diese Seite komponierte Melodie im Stil einer Spielkonsole."
+},
+"bit4": {
+"nm": "4 Bit",
+"sh": "16 Stufen",
+"t": "Videospielmusik mit 4 Bit",
+"h": "16 mögliche Werte pro Abtastwert, etwa 26 dB Störabstand. Das ist die Genauigkeit des Dreieckskanals des NES und der Samples im „Wave“-Kanal des Game Boy: Ein Teil des Körnigen der Konsolenmusik kommt daher.",
+"l": "Die Töne treten hervor, aber ein Rauschschleier bleibt zwischen ihnen und über die ganze Breite sichtbar. Das Rauschen folgt der Lautstärke: In den Pausen verschwindet es."
+},
+"bit8": {
+"nm": "8 Bit",
+"sh": "256 Stufen",
+"t": "Videospielmusik mit 8 Bit",
+"h": "256 Werte, etwa 50 dB Störabstand: die Qualität der ersten Sampler und der Klänge alter Computer. Achtung: Eine „8-Bit“-Konsole wie das NES verdankt den Namen ihrem Prozessor, nicht ihrem Klang, der aus einfachen Oszillatoren kam (zwei Pulswellen, ein Dreieck, ein Rauschen).",
+"l": "Das Grundrauschen ist nur noch ein leichter Schleier, sichtbar nur dank der 110-dB-Skala dieser Rubrik. Für das Ohr ein leises Rauschen in den ruhigen Stellen."
+},
+"bit16": {
+"nm": "16 Bit",
+"sh": "65 536 Stufen",
+"t": "Videospielmusik mit 16 Bit",
+"h": "65 536 Werte, etwa 98 dB Störabstand: die Genauigkeit der Audio-CD (44,1 kHz, 16 Bit) und der Tonausgabe des Super Nintendo (32 kHz). Das Rundungsrauschen liegt unter allem, was das Ohr bei normaler Lautstärke wahrnimmt.",
+"l": "Kein sichtbares Rauschen mehr: nur die Töne, ihre Oberwellen und das Schlagzeug. Das ist auch die Qualität dieser ganzen Seite, mit 12 kHz abgetastet."
+},
+"bit32": {
+"nm": "32 Bit",
+"sh": "Gleitkomma",
+"t": "Videospielmusik mit 32 Bit",
+"h": "32 Bit Gleitkomma: die Genauigkeit von Studiosoftware, mit der sich Dutzende Spuren verlustfrei mischen und verstärken lassen. Beim Hören kein Unterschied zu 16 Bit. Die PlayStation, eine „32-Bit“-Konsole, spielte ihren Ton übrigens mit 16 Bit bei 44,1 kHz.",
+"l": "Gleich wie 16 Bit, für Auge und Ohr: Über 16 Bit nützt der Gewinn nur bei der Studioarbeit."
+},
+"sr3k": {
+"nm": "3 kHz",
+"sh": "Abtastrate",
+"t": "Dieselbe Musik mit 3 kHz abgetastet",
+"h": "Die Zahl der Abtastwerte pro Sekunde legt die höchste mögliche Frequenz fest: die Hälfte davon (Abtasttheorem nach Shannon), hier 1,5 kHz. Vor dem Abtasten entfernt ein Filter alles darüber; ohne ihn würden diese Frequenzen als Störtöne zurückgefaltet. Es bleiben nur die tiefen Töne und die Mitte: Die Musik klingt dumpf.",
+"l": "Das Spektrum endet abrupt bei etwa 1,5 kHz: darüber nichts. Das klassische Telefon tastet mit 8 kHz ab (Sprache bis 3,4 kHz), die CD mit 44,1 kHz; diese Seite ist auf 12 kHz begrenzt."
+},
+"sr6k": {
+"nm": "6 kHz",
+"sh": "Abtastrate",
+"t": "Dieselbe Musik mit 6 kHz abgetastet",
+"h": "Bei 6 kHz reichen die Frequenzen bis 3 kHz: Töne und der Körper des Schlagzeugs kommen durch, aber der Glanz der hohen Oberwellen und Becken verschwindet.",
+"l": "Ein volles Spektrum bis 3 kHz, darüber nichts. Vergleiche mit 16 Bit (ganze Breite, bis 6 kHz) und mit 3 kHz."
 }
 }
 }

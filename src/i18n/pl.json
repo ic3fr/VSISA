@@ -59,7 +59,8 @@
 "Bonus: dźwięki z kosmosu",
 "Bonus: ciekawostki fal krótkich",
 "Bonus: dźwięki podwodne",
-"Bonus: dźwięki Ziemi"
+"Bonus: dźwięki Ziemi",
+"Bonus: dźwięk cyfrowy (bity i kHz)"
 ],
 "modes": {
 "am": {
@@ -1018,6 +1019,55 @@
 "h": "Po bardzo silnym trzęsieniu, jak u wybrzeży Sumatry w 2004 roku, cała Ziemia drga jak dzwon przez dni, a nawet miesiące: każde drganie własne ma swoją nutę. Najniższe, 0S2, ma okres 54 minut; „oddechowe” 0S0, o okresie 20,5 minuty, trwa najdłużej.",
 "l": "Po wstrząsie rząd nieruchomych pionowych kresek, nut Ziemi; najwyższe szybko gasną, a na końcu zostaje jedna samotna kreska, drganie 0S0. Skala jest w milihercach; około czterech tygodni ściśniętych do 12 s.",
 "n": "przyspieszone 200 000×"
+},
+"bit2": {
+"nm": "2 bity",
+"sh": "4 poziomy",
+"t": "Muzyka z gry wideo w 2 bitach",
+"h": "Dźwięk cyfrowy to ciąg pomiarów (próbek). Przy 2 bitach każda próbka może przyjąć tylko 4 wartości: przebieg zamienia się w toporne schodki. Błąd zaokrąglenia słychać jako ziarnisty szum i bardzo silne zniekształcenia; stosunek sygnału do szumu to tylko około 14 dB (6 dB na bit).",
+"l": "Muzyka tonie w dywanie szumu na całej szerokości, który podąża za nutami. Porównaj z 4, 8 i 16 bitami: to ta sama melodia, zmienia się tylko liczba bitów. Oryginalna melodia skomponowana dla tej strony w stylu konsoli do gier."
+},
+"bit4": {
+"nm": "4 bity",
+"sh": "16 poziomów",
+"t": "Muzyka z gry wideo w 4 bitach",
+"h": "16 możliwych wartości na próbkę, około 26 dB stosunku sygnału do szumu. To precyzja kanału trójkątnego NES i próbek kanału „wave” w Game Boyu: stąd bierze się część ziarna muzyki z konsol.",
+"l": "Nuty się wyróżniają, ale między nimi i na całej szerokości wciąż widać zasłonę szumu. Szum podąża za głośnością: znika w ciszy."
+},
+"bit8": {
+"nm": "8 bitów",
+"sh": "256 poziomów",
+"t": "Muzyka z gry wideo w 8 bitach",
+"h": "256 wartości, około 50 dB stosunku sygnału do szumu: jakość pierwszych samplerów i dźwięków starych komputerów. Uwaga: „8-bitowa” konsola, jak NES, zawdzięcza tę nazwę procesorowi, a nie dźwiękowi, który pochodził z prostych oscylatorów (dwie fale prostokątne, trójkąt, szum).",
+"l": "Szum tła to już tylko lekka mgiełka, widoczna jedynie dzięki skali 110 dB w tej rubryce. Dla ucha delikatny szum w cichych fragmentach."
+},
+"bit16": {
+"nm": "16 bitów",
+"sh": "65 536 poziomów",
+"t": "Muzyka z gry wideo w 16 bitach",
+"h": "65 536 wartości, około 98 dB stosunku sygnału do szumu: precyzja płyty CD (44,1 kHz, 16 bitów) i wyjścia dźwięku Super Nintendo (32 kHz). Szum zaokrąglenia jest słabszy niż wszystko, co ucho zauważa przy normalnej głośności.",
+"l": "Brak widocznego szumu: tylko nuty, ich harmoniczne i perkusja. To także jakość całej tej strony, próbkowanej z częstotliwością 12 kHz."
+},
+"bit32": {
+"nm": "32 bity",
+"sh": "zmiennoprzecinkowo",
+"t": "Muzyka z gry wideo w 32 bitach",
+"h": "32 bity zmiennoprzecinkowe: precyzja oprogramowania studyjnego, która pozwala miksować i wzmacniać dziesiątki ścieżek bez strat. Dla ucha żadnej różnicy względem 16 bitów. PlayStation, „32-bitowa” konsola, odtwarzała zresztą dźwięk w 16 bitach przy 44,1 kHz.",
+"l": "Tak samo jak 16 bitów, dla oka i ucha: powyżej 16 bitów zysk przydaje się tylko w pracy studyjnej."
+},
+"sr3k": {
+"nm": "3 kHz",
+"sh": "próbkowanie",
+"t": "Ta sama muzyka próbkowana z 3 kHz",
+"h": "Liczba próbek na sekundę wyznacza najwyższą możliwą częstotliwość: połowę (twierdzenie Shannona), tu 1,5 kHz. Przed próbkowaniem filtr usuwa wszystko powyżej; bez niego te częstotliwości złożyłyby się w pasożytnicze tony. Zostają tylko niskie nuty i środek: muzyka brzmi głucho.",
+"l": "Widmo urywa się nagle około 1,5 kHz: powyżej nic. Klasyczny telefon próbkuje z 8 kHz (głos do 3,4 kHz), płyta CD z 44,1 kHz; ta strona jest ograniczona do 12 kHz."
+},
+"sr6k": {
+"nm": "6 kHz",
+"sh": "próbkowanie",
+"t": "Ta sama muzyka próbkowana z 6 kHz",
+"h": "Przy 6 kHz częstotliwości sięgają 3 kHz: nuty i rdzeń perkusji przechodzą, ale znika blask wysokich harmonicznych i talerzy.",
+"l": "Pełne widmo do 3 kHz, powyżej nic. Porównaj z 16 bitami (cała szerokość, do 6 kHz) i z 3 kHz."
 }
 }
 }
