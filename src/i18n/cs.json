@@ -45,7 +45,9 @@
 "w3d": "3D vodopád",
 "w3dHint": "tažením otočíte",
 "audio_retry": "Prohlížeč přerušil zvuk: stiskni znovu ▶ Poslouchat.",
-"nsig": "{n} signálů"
+"nsig": "{n} signálů",
+"real": "Skutečná nahrávka",
+"realPD": "volné dílo"
 },
 "groups": [
 "Analogový hlas",

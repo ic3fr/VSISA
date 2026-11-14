@@ -45,7 +45,9 @@
 "w3d": "3D waterfall",
 "w3dHint": "drag to rotate",
 "audio_retry": "The browser cut the sound: press ▶ Listen again.",
-"nsig": "{n} signals"
+"nsig": "{n} signals",
+"real": "Real recording",
+"realPD": "public domain"
 },
 "groups": [
 "Analogue voice",

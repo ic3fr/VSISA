@@ -45,7 +45,9 @@
 "w3d": "Cascadă 3D",
 "w3dHint": "trage pentru a roti",
 "audio_retry": "Browserul a oprit sunetul: apasă din nou ▶ Ascultă.",
-"nsig": "{n} de semnale"
+"nsig": "{n} de semnale",
+"real": "Înregistrare reală",
+"realPD": "domeniu public"
 },
 "groups": [
 "Voce analogică",

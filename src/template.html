@@ -102,6 +102,11 @@ canvas{display:block;width:100%;height:auto;image-rendering:pixelated;cursor:cro
 dl{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:6px 14px;margin:0;font-size:.9rem}
 dt{font:500 .72rem var(--f-mono);text-transform:uppercase;letter-spacing:.08em;color:var(--muted);padding-top:3px}
 dd{margin:0;min-width:0}
+.real{margin-top:12px;padding:8px 10px;border:1px solid var(--line);border-radius:6px}
+.real b{display:block;font:600 .75rem var(--f-mono);color:var(--accent);margin-bottom:6px}
+.real audio{width:100%;height:34px}
+.real small{display:block;margin-top:4px;font-size:.72rem;opacity:.8}
+.real small a{color:inherit}
 .ref{display:inline-block;margin-top:12px;font:500 .75rem var(--f-mono);color:var(--accent);border:1px solid var(--line);border-radius:4px;padding:2px 8px}
 .quiz{display:flex;flex-direction:column;gap:10px}
 .quiz .choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
@@ -1165,12 +1170,30 @@ function select(m,hidden){
 function setNow(m,hidden){ const x=tx(m);
   document.getElementById("nowName").textContent=hidden?t("myst"):x.title;
   document.getElementById("nowTags").textContent=hidden?t("mystTags"):x.group+(m.ref?" · "+t("sheet")+" "+m.ref:""); }
+/* vrais enregistrements : uniquement des fichiers libres de Wikimedia Commons, lus en ligne (rien n'est copié dans la page) */
+const REAL={
+  buzzer:["UVB-76.ogg","2/26","Mysid · 4625 kHz, 2002",""],
+  navtex:["NMC_8425.ogg","4/4f","US Coast Guard NMC · 8425 kHz","pd"],
+  numbers:["Gong_numbers_station.ogg","1/15","The Gong · ~1988","pd"],
+  wwv:["WWV_time_signal_-_20090904.ogg","5/55","NIST WWV · 15 MHz, 2009","pd"],
+  bluewhale:["Blue_Whale_NE_Pacific.ogg","3/3b","NOAA","pd"],
+  humpback:["Humpback_whale_wheezeblow.ogg","d/d4","NPS Glacier Bay","pd"],
+  orca:["Killer_whale.ogg","7/79","NPS Glacier Bay","pd"],
+  bloop:["Bloop.ogg","2/25","NOAA 1997 · ×16","pd"],
+  squeaky:["S32_sample.ogg","3/38","Priyom / SomeWhatLife","CC BY-SA 4.0"]};
+function realHTML(id){ const r=REAL[id]; if(!r) return ""; const [f,h,who,lic]=r, e=encodeURIComponent(f);
+  return `<div class="real"><b>${esc(t("real"))}</b><audio controls preload="none">`+
+    `<source src="https://upload.wikimedia.org/wikipedia/commons/transcoded/${h}/${e}/${e}.mp3" type="audio/mpeg">`+
+    `<source src="https://commons.wikimedia.org/wiki/Special:FilePath/${e}" type="audio/ogg"></audio>`+
+    `<small>${esc(who)}${lic?" · "+esc(lic==="pd"?t("realPD"):lic):""} · <a href="https://commons.wikimedia.org/wiki/File:${e}" target="_blank" rel="noopener">Wikimedia Commons</a></small></div>`; }
 let lastPrefix="";
 function renderInfo(m,prefix){ lastPrefix=prefix||""; const x=tx(m);
   const rows=[[t("principle"),x.how],[t("screen"),x.look]].concat(x.rows).filter(r=>r[1]);
-  document.getElementById("info").innerHTML=lastPrefix+`<h3>${esc(x.title)}</h3><dl>${rows.map(r=>`<dt>${esc(r[0])}</dt><dd>${esc(r[1])}</dd>`).join("")}</dl>`+
+  document.getElementById("info").innerHTML=lastPrefix+`<h3>${esc(x.title)}</h3><dl>${rows.map(r=>`<dt>${esc(r[0])}</dt><dd>${esc(r[1])}</dd>`).join("")}</dl>`+realHTML(m.id)+
     (m.ref?`<a class="ref" href="https://github.com/ic3fr/OpenBookRadio/releases" target="_blank" rel="noopener">${esc(t("book").replace("{r}",m.ref))}</a>`:"");
   const ag=document.getElementById("again"); if(ag) ag.addEventListener("click",mystery);
+  const au=document.querySelector("#info .real audio"); if(au){ au.addEventListener("play",()=>{ if(playing) stop(); });
+    const ls=au.querySelector("source:last-child"); ls.addEventListener("error",()=>{ const b=au.closest(".real"); if(b) b.hidden=true; }); }
 }
 function renderQuiz(){ const el=document.getElementById("info");
   el.innerHTML=`<div class="quiz"><h3>${esc(t("quizH"))}</h3><p class="lead">${esc(t("quizLead"))}</p>
@@ -1195,7 +1218,7 @@ function audioCtx(){ const AC=window.AudioContext||window.webkitAudioContext; if
 if(document.addEventListener) ["pointerdown","keydown","touchend"].forEach(ev=>document.addEventListener(ev,()=>{ if(ctx&&ctx.state!=="running"&&ctx.state!=="closed"){ try{ ctx.resume().catch(()=>{}); }catch(e){} } },{capture:true,passive:true}));
 if(document.addEventListener) document.addEventListener("visibilitychange",()=>{ if(!document.hidden&&ctx&&ctx.state!=="running"&&ctx.state!=="closed"){ try{ ctx.resume().catch(()=>{}); }catch(e){} } });
 function audioWatch(me){ setTimeout(()=>{ if(src!==me||!playing||!ctx) return; if(ctx.state!=="running"){ ctxDead=true; stop(); const h=document.getElementById("audioHint"); if(h){ h.textContent=t("audio_retry"); h.hidden=false; } } },900); }
-function play(){ const h=document.getElementById("audioHint"); if(h) h.hidden=true;
+function play(){ const h=document.getElementById("audioHint"); if(h) h.hidden=true; document.querySelectorAll("#info audio").forEach(a=>a.pause());
   if(!signal) return; stop();
   if(!audioCtx()) return;
   const chans=AUD?(AUD.R?[AUD.L,AUD.R]:[AUD.L]):[signal], n=chans[0].length; let buf;

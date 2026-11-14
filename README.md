@@ -32,6 +32,7 @@ Radio mode identifier: **127 simulated signals** (including 18 sounds from space
 - **Bonus: shortwave curiosities**: UVB-76 "The Buzzer", "The Pip", "Squeaky Wheel", single-letter beacons, CODAR, STANAG 4285, Link-11, numbers station (imitated voice)
 - **Bonus: underwater sounds**: humpback, blue and fin whales, sperm whale clicks, dolphin, orca, bearded seal, snapping shrimp, active sonar ping, ship propeller, underwater telephone (UQC), ZEVS submarine radio at 82 Hz, the "Bloop"
 - **Bonus: sounds of the Earth** (seismic waves and infrasound, sped up to be heard): nearby and distant earthquakes, earthquake swarm, Redoubt harmonic tremor, Stromboli infrasound, ocean microseism, the Earth's normal modes
+- **Real recordings**: for 9 signals (UVB-76, Squeaky Wheel, "The Gong" numbers station, NAVTEX, WWV, blue and humpback whales, orca, Bloop) the info card also offers a real recording, streamed from Wikimedia Commons (public domain or free licence, author and link shown). Needs an Internet connection; offline the player is hidden.
 - **Bonus: digital sound (bits and kHz)**: the same original video game style tune in 2, 4, 8, 16 and 32 bits, then sampled at 3 and 6 kHz, to see and hear quantization noise and the loss of high frequencies
 
 Radio signals (AM, FM, AIS, LoRa…) are shown as on an SDR screen, around a simulated intermediate frequency; some are scaled down or sped up, which is stated at the top of the screen. A few space signals are deliberately exaggerated so that you can see them.

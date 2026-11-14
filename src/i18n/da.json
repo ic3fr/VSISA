@@ -45,7 +45,9 @@
 "w3d": "3D-vandfald",
 "w3dHint": "træk for at dreje",
 "audio_retry": "Browseren afbrød lyden: tryk på ▶ Lyt igen.",
-"nsig": "{n} signaler"
+"nsig": "{n} signaler",
+"real": "Ægte optagelse",
+"realPD": "offentligt domæne"
 },
 "groups": [
 "Analog tale",

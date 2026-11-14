@@ -45,7 +45,9 @@
 "w3d": "3D-vattenfall",
 "w3dHint": "dra för att vrida",
 "audio_retry": "Webbläsaren stängde av ljudet: tryck på ▶ Lyssna igen.",
-"nsig": "{n} signaler"
+"nsig": "{n} signaler",
+"real": "Riktig inspelning",
+"realPD": "allmän egendom"
 },
 "groups": [
 "Analog röst",

@@ -45,7 +45,9 @@
 "w3d": "3D-waterval",
 "w3dHint": "sleep om te draaien",
 "audio_retry": "De browser heeft het geluid onderbroken: druk nog eens op ▶ Luisteren.",
-"nsig": "{n} signalen"
+"nsig": "{n} signalen",
+"real": "Echte opname",
+"realPD": "publiek domein"
 },
 "groups": [
 "Analoge spraak",

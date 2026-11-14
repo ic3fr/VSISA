@@ -45,7 +45,9 @@
 "w3d": "Wodospad 3D",
 "w3dHint": "przeciągnij, aby obrócić",
 "audio_retry": "Przeglądarka przerwała dźwięk: naciśnij ponownie ▶ Słuchaj.",
-"nsig": "{n} sygnałów"
+"nsig": "{n} sygnałów",
+"real": "Prawdziwe nagranie",
+"realPD": "domena publiczna"
 },
 "groups": [
 "Głos analogowy",

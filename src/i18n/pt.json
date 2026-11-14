@@ -45,7 +45,9 @@
 "w3d": "Cascata 3D",
 "w3dHint": "arraste para girar",
 "audio_retry": "O navegador cortou o som: carrega outra vez em ▶ Ouvir.",
-"nsig": "{n} sinais"
+"nsig": "{n} sinais",
+"real": "Gravação real",
+"realPD": "domínio público"
 },
 "groups": [
 "Voz analógica",

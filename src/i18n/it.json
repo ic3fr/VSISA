@@ -45,7 +45,9 @@
 "w3d": "Waterfall 3D",
 "w3dHint": "trascina per ruotare",
 "audio_retry": "Il browser ha interrotto l'audio: premi di nuovo ▶ Ascolta.",
-"nsig": "{n} segnali"
+"nsig": "{n} segnali",
+"real": "Registrazione reale",
+"realPD": "pubblico dominio"
 },
 "groups": [
 "Voce analogica",

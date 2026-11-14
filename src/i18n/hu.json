@@ -45,7 +45,9 @@
 "w3d": "3D vízesés",
 "w3dHint": "húzd a forgatáshoz",
 "audio_retry": "A böngésző megszakította a hangot: nyomd meg újra a ▶ Meghallgatás gombot.",
-"nsig": "{n} jel"
+"nsig": "{n} jel",
+"real": "Valódi felvétel",
+"realPD": "közkincs"
 },
 "groups": [
 "Analóg beszéd",

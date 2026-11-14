@@ -45,7 +45,9 @@
 "w3d": "3D-foss",
 "w3dHint": "dra for å snu",
 "audio_retry": "Nettleseren kuttet lyden: trykk på ▶ Lytt igjen.",
-"nsig": "{n} signaler"
+"nsig": "{n} signaler",
+"real": "Ekte opptak",
+"realPD": "offentlig eiendom"
 },
 "groups": [
 "Analog tale",

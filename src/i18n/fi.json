@@ -45,7 +45,9 @@
 "w3d": "3D-vesiputous",
 "w3dHint": "vedä kääntääksesi",
 "audio_retry": "Selain katkaisi äänen: paina uudelleen ▶ Kuuntele.",
-"nsig": "{n} signaalia"
+"nsig": "{n} signaalia",
+"real": "Aito tallenne",
+"realPD": "public domain"
 },
 "groups": [
 "Analoginen puhe",

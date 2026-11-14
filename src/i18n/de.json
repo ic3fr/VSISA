@@ -45,7 +45,9 @@
 "w3d": "3D-Wasserfall",
 "w3dHint": "zum Drehen ziehen",
 "audio_retry": "Der Browser hat den Ton unterbrochen: Drücke noch einmal auf ▶ Anhören.",
-"nsig": "{n} Signale"
+"nsig": "{n} Signale",
+"real": "Echte Aufnahme",
+"realPD": "gemeinfrei"
 },
 "groups": [
 "Analoge Sprache",
