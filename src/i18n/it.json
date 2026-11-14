@@ -47,7 +47,10 @@
 "audio_retry": "Il browser ha interrotto l'audio: premi di nuovo ▶ Ascolta.",
 "nsig": "{n} segnali",
 "real": "Registrazione reale",
-"realPD": "pubblico dominio"
+"realPD": "pubblico dominio",
+"realPlay": "Ascolta la registrazione reale",
+"realPause": "Pausa",
+"realOpen": "Apri su Wikimedia Commons"
 },
 "groups": [
 "Voce analogica",

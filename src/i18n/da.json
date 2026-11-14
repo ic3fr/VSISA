@@ -47,7 +47,10 @@
 "audio_retry": "Browseren afbrød lyden: tryk på ▶ Lyt igen.",
 "nsig": "{n} signaler",
 "real": "Ægte optagelse",
-"realPD": "offentligt domæne"
+"realPD": "offentligt domæne",
+"realPlay": "Afspil den ægte optagelse",
+"realPause": "Pause",
+"realOpen": "Åbn på Wikimedia Commons"
 },
 "groups": [
 "Analog tale",

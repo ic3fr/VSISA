@@ -47,7 +47,10 @@
 "audio_retry": "Prohlížeč přerušil zvuk: stiskni znovu ▶ Poslouchat.",
 "nsig": "{n} signálů",
 "real": "Skutečná nahrávka",
-"realPD": "volné dílo"
+"realPD": "volné dílo",
+"realPlay": "Přehrát skutečnou nahrávku",
+"realPause": "Pauza",
+"realOpen": "Otevřít na Wikimedia Commons"
 },
 "groups": [
 "Analogový hlas",

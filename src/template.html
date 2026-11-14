@@ -102,9 +102,12 @@ canvas{display:block;width:100%;height:auto;image-rendering:pixelated;cursor:cro
 dl{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:6px 14px;margin:0;font-size:.9rem}
 dt{font:500 .72rem var(--f-mono);text-transform:uppercase;letter-spacing:.08em;color:var(--muted);padding-top:3px}
 dd{margin:0;min-width:0}
-.real{margin-top:12px;padding:8px 10px;border:1px solid var(--line);border-radius:6px}
+.real{margin:4px 0 12px;padding:8px 10px;border:1px solid var(--line);border-radius:6px}
 .real b{display:block;font:600 .75rem var(--f-mono);color:var(--accent);margin-bottom:6px}
-.real audio{width:100%;height:34px}
+.real audio{display:none}
+.real .rbtn{display:inline-flex;align-items:center;gap:6px;font:600 .85rem var(--f-body);color:var(--bg);background:var(--accent);border:0;border-radius:6px;padding:7px 14px;cursor:pointer;text-decoration:none}
+.real .rbtn:focus-visible{outline:2px solid var(--fg);outline-offset:2px}
+.rl{font-style:normal;font-size:.8em;margin-left:4px}
 .real small{display:block;margin-top:4px;font-size:.72rem;opacity:.8}
 .real small a{color:inherit}
 .ref{display:inline-block;margin-top:12px;font:500 .75rem var(--f-mono);color:var(--accent);border:1px solid var(--line);border-radius:4px;padding:2px 8px}
@@ -1181,19 +1184,24 @@ const REAL={
   orca:["Killer_whale.ogg","7/79","NPS Glacier Bay","pd"],
   bloop:["Bloop.ogg","2/25","NOAA 1997 · ×16","pd"],
   squeaky:["S32_sample.ogg","3/38","Priyom / SomeWhatLife","CC BY-SA 4.0"]};
-function realHTML(id){ const r=REAL[id]; if(!r) return ""; const [f,h,who,lic]=r, e=encodeURIComponent(f);
-  return `<div class="real"><b>${esc(t("real"))}</b><audio controls preload="none">`+
+function realHTML(id){ const r=REAL[id]; if(!r) return ""; const [f,h,who,lic]=r, e=encodeURIComponent(f), pg=`https://commons.wikimedia.org/wiki/File:${e}`;
+  return `<div class="real"><b>🎧 ${esc(t("real"))}</b><audio preload="none">`+
     `<source src="https://upload.wikimedia.org/wikipedia/commons/transcoded/${h}/${e}/${e}.mp3" type="audio/mpeg">`+
     `<source src="https://commons.wikimedia.org/wiki/Special:FilePath/${e}" type="audio/ogg"></audio>`+
-    `<small>${esc(who)}${lic?" · "+esc(lic==="pd"?t("realPD"):lic):""} · <a href="https://commons.wikimedia.org/wiki/File:${e}" target="_blank" rel="noopener">Wikimedia Commons</a></small></div>`; }
+    `<a class="rbtn" href="${pg}" target="_blank" rel="noopener" role="button">▶ ${esc(t("realPlay"))}</a>`+
+    `<small>${esc(who)}${lic?" · "+esc(lic==="pd"?t("realPD"):lic):""} · <a href="${pg}" target="_blank" rel="noopener">Wikimedia Commons</a></small></div>`; }
 let lastPrefix="";
 function renderInfo(m,prefix){ lastPrefix=prefix||""; const x=tx(m);
   const rows=[[t("principle"),x.how],[t("screen"),x.look]].concat(x.rows).filter(r=>r[1]);
-  document.getElementById("info").innerHTML=lastPrefix+`<h3>${esc(x.title)}</h3><dl>${rows.map(r=>`<dt>${esc(r[0])}</dt><dd>${esc(r[1])}</dd>`).join("")}</dl>`+realHTML(m.id)+
+  document.getElementById("info").innerHTML=lastPrefix+`<h3>${esc(x.title)}</h3>`+realHTML(m.id)+`<dl>${rows.map(r=>`<dt>${esc(r[0])}</dt><dd>${esc(r[1])}</dd>`).join("")}</dl>`+
     (m.ref?`<a class="ref" href="https://github.com/ic3fr/OpenBookRadio/releases" target="_blank" rel="noopener">${esc(t("book").replace("{r}",m.ref))}</a>`:"");
   const ag=document.getElementById("again"); if(ag) ag.addEventListener("click",mystery);
-  const au=document.querySelector("#info .real audio"); if(au){ au.addEventListener("play",()=>{ if(playing) stop(); });
-    const ls=au.querySelector("source:last-child"); ls.addEventListener("error",()=>{ const b=au.closest(".real"); if(b) b.hidden=true; }); }
+  const au=document.querySelector("#info .real audio"), rb=document.querySelector("#info .real .rbtn");
+  if(au&&rb){ let broken=false; const lbl=()=>{ rb.textContent=(au.paused?"▶ ":"⏸ ")+t(au.paused?"realPlay":"realPause"); };
+    au.addEventListener("play",()=>{ if(playing) stop(); lbl(); }); au.addEventListener("pause",lbl); au.addEventListener("ended",lbl);
+    au.querySelector("source:last-child").addEventListener("error",()=>{ broken=true; rb.textContent="↗ "+t("realOpen"); });
+    rb.addEventListener("click",ev=>{ if(broken) return; ev.preventDefault(); // lecture ici ; si impossible, ouverture de la page Commons
+      if(!au.paused){ au.pause(); return; } const pr=au.play(); if(pr&&pr.catch) pr.catch(()=>{ broken=true; rb.textContent="↗ "+t("realOpen"); window.open(rb.href,"_blank","noopener"); }); }); }
 }
 function renderQuiz(){ const el=document.getElementById("info");
   el.innerHTML=`<div class="quiz"><h3>${esc(t("quizH"))}</h3><p class="lead">${esc(t("quizLead"))}</p>
@@ -1269,7 +1277,7 @@ function buildAside(){ aside.textContent=""; aside.setAttribute("aria-label",t("
       if(!was) setTimeout(()=>{ const r=d.getBoundingClientRect(), a=aside.getBoundingClientRect(); if(r.top<a.top||r.top>a.bottom-60) aside.scrollTop+=r.top-a.top-4; },260); });
     d.dataset.gi=gi;
     ms.forEach(m=>{ const x=tx(m), li=document.createElement("li");
-      li.innerHTML=`<button class="mode" type="button" data-id="${m.id}" aria-pressed="${String(!quiz&&current===m)}">${esc(x.name)}<span>${esc(x.short)}</span></button>`;
+      li.innerHTML=`<button class="mode" type="button" data-id="${m.id}" aria-pressed="${String(!quiz&&current===m)}">${esc(x.name)}${REAL[m.id]?` <i class="rl" title="${esc(t("real"))}">🎧</i>`:""}<span>${esc(x.short)}</span></button>`;
       li.firstChild.addEventListener("click",()=>{ quiz=null; select(m); play(); }); d.querySelector("ul").appendChild(li); });
     aside.appendChild(d); }); }
 function setLang(l,user){ if(!I18N[l]) l="fr"; LG=l; LOC=(LANGS.find(x=>x[0]===l)||["fr","","fr-FR"])[2]; document.documentElement.lang=l;

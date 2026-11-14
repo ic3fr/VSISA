@@ -47,7 +47,10 @@
 "audio_retry": "A böngésző megszakította a hangot: nyomd meg újra a ▶ Meghallgatás gombot.",
 "nsig": "{n} jel",
 "real": "Valódi felvétel",
-"realPD": "közkincs"
+"realPD": "közkincs",
+"realPlay": "Valódi felvétel lejátszása",
+"realPause": "Szünet",
+"realOpen": "Megnyitás a Wikimedia Commonson"
 },
 "groups": [
 "Analóg beszéd",

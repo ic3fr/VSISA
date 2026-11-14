@@ -47,7 +47,10 @@
 "audio_retry": "El navegador ha cortado el sonido: pulsa otra vez ▶ Escuchar.",
 "nsig": "{n} señales",
 "real": "Grabación real",
-"realPD": "dominio público"
+"realPD": "dominio público",
+"realPlay": "Escuchar la grabación real",
+"realPause": "Pausa",
+"realOpen": "Abrir en Wikimedia Commons"
 },
 "groups": [
 "Voz analógica",

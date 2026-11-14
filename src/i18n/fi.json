@@ -47,7 +47,10 @@
 "audio_retry": "Selain katkaisi äänen: paina uudelleen ▶ Kuuntele.",
 "nsig": "{n} signaalia",
 "real": "Aito tallenne",
-"realPD": "public domain"
+"realPD": "public domain",
+"realPlay": "Kuuntele aito tallenne",
+"realPause": "Tauko",
+"realOpen": "Avaa Wikimedia Commonsissa"
 },
 "groups": [
 "Analoginen puhe",

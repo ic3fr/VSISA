@@ -47,7 +47,10 @@
 "audio_retry": "Nettleseren kuttet lyden: trykk på ▶ Lytt igjen.",
 "nsig": "{n} signaler",
 "real": "Ekte opptak",
-"realPD": "offentlig eiendom"
+"realPD": "offentlig eiendom",
+"realPlay": "Spill av ekte opptak",
+"realPause": "Pause",
+"realOpen": "Åpne på Wikimedia Commons"
 },
 "groups": [
 "Analog tale",

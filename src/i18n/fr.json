@@ -47,7 +47,10 @@
 "audio_retry": "Le son a été coupé par le navigateur : appuie encore sur ▶ Écouter.",
 "nsig": "{n} signaux",
 "real": "Son réel (enregistrement)",
-"realPD": "domaine public"
+"realPD": "domaine public",
+"realPlay": "Écouter le son réel",
+"realPause": "Pause",
+"realOpen": "Ouvrir sur Wikimedia Commons"
 },
 "groups": [
 "Voix analogique",

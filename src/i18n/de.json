@@ -47,7 +47,10 @@
 "audio_retry": "Der Browser hat den Ton unterbrochen: Drücke noch einmal auf ▶ Anhören.",
 "nsig": "{n} Signale",
 "real": "Echte Aufnahme",
-"realPD": "gemeinfrei"
+"realPD": "gemeinfrei",
+"realPlay": "Echte Aufnahme anhören",
+"realPause": "Pause",
+"realOpen": "Auf Wikimedia Commons öffnen"
 },
 "groups": [
 "Analoge Sprache",

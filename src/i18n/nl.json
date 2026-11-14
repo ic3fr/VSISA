@@ -47,7 +47,10 @@
 "audio_retry": "De browser heeft het geluid onderbroken: druk nog eens op ▶ Luisteren.",
 "nsig": "{n} signalen",
 "real": "Echte opname",
-"realPD": "publiek domein"
+"realPD": "publiek domein",
+"realPlay": "Echte opname afspelen",
+"realPause": "Pauze",
+"realOpen": "Openen op Wikimedia Commons"
 },
 "groups": [
 "Analoge spraak",

@@ -47,7 +47,10 @@
 "audio_retry": "Browserul a oprit sunetul: apasă din nou ▶ Ascultă.",
 "nsig": "{n} de semnale",
 "real": "Înregistrare reală",
-"realPD": "domeniu public"
+"realPD": "domeniu public",
+"realPlay": "Ascultă înregistrarea reală",
+"realPause": "Pauză",
+"realOpen": "Deschide pe Wikimedia Commons"
 },
 "groups": [
 "Voce analogică",

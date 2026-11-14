@@ -47,7 +47,10 @@
 "audio_retry": "The browser cut the sound: press ▶ Listen again.",
 "nsig": "{n} signals",
 "real": "Real recording",
-"realPD": "public domain"
+"realPD": "public domain",
+"realPlay": "Play the real recording",
+"realPause": "Pause",
+"realOpen": "Open on Wikimedia Commons"
 },
 "groups": [
 "Analogue voice",

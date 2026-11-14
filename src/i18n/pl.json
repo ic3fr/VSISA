@@ -47,7 +47,10 @@
 "audio_retry": "Przeglądarka przerwała dźwięk: naciśnij ponownie ▶ Słuchaj.",
 "nsig": "{n} sygnałów",
 "real": "Prawdziwe nagranie",
-"realPD": "domena publiczna"
+"realPD": "domena publiczna",
+"realPlay": "Odtwórz prawdziwe nagranie",
+"realPause": "Pauza",
+"realOpen": "Otwórz w Wikimedia Commons"
 },
 "groups": [
 "Głos analogowy",

@@ -47,7 +47,10 @@
 "audio_retry": "Webbläsaren stängde av ljudet: tryck på ▶ Lyssna igen.",
 "nsig": "{n} signaler",
 "real": "Riktig inspelning",
-"realPD": "allmän egendom"
+"realPD": "allmän egendom",
+"realPlay": "Spela den riktiga inspelningen",
+"realPause": "Paus",
+"realOpen": "Öppna på Wikimedia Commons"
 },
 "groups": [
 "Analog röst",

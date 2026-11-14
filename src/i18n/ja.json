@@ -47,7 +47,10 @@
 "audio_retry": "ブラウザが音を止めました。もう一度 ▶ を押してください。",
 "nsig": "{n} 種類の信号",
 "real": "実際の録音",
-"realPD": "パブリックドメイン"
+"realPD": "パブリックドメイン",
+"realPlay": "実際の録音を再生",
+"realPause": "一時停止",
+"realOpen": "Wikimedia Commons で開く"
 },
 "groups": [
 "アナログ音声",
