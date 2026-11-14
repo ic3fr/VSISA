@@ -660,16 +660,16 @@
 "nm": "UVB-76 «The Buzzer»",
 "sh": "4625 kHz",
 "t": "UVB-76, «The Buzzer» (4625 kHz)",
-"h": "En russisk militærstasjon som i tiår har sendt en summing på omtrent ett sekund, rundt 25 ganger i minuttet, noen ganger avbrutt av en talemelding.",
-"l": "En fast bærebølge og, ved hver summing, en kolonne av tette linjer ovenfra og ned. Lett å finne på 4625 kHz i USB (ark 44)."
+"h": "En russisk militærstasjon som i tiår har sendt en hes summing på omtrent 1,2 s, gjentatt rundt 25 ganger i minuttet (én hvert 2,2. til 2,5. sekund), noen ganger avbrutt av en talemelding. Bak kan man noen ganger høre rommet: mikrofonen er åpen.",
+"l": "Ved hver summing en blokk av svært tette loddrette linjer (overtoner omtrent 32 Hz fra hverandre) som når langt over 3 kHz, med en tonehøyde som stiger litt; imellom bare støy og fading. Et svakt morsesignal rundt 3,1 kHz skinner ofte gjennom. På 4625 kHz i USB (ark 44)."
 },
 "pip": {
 "nm": "«The Pip»",
 "sh": "3756 / 5448 kHz",
 "t": "«The Pip»: pip uten slutt",
-"h": "Et annet russisk militært kortbølgefyr som dag og natt gjentar små korte pip, noen ganger avbrutt av meldinger.",
-"l": "En fast linje som brytes av et kort pip omtrent 50 ganger i minuttet; for øret et jevnt «pip… pip…» som aldri stopper (ark 44).",
-"n": "omtrentlig rytme"
+"h": "Enda et russisk militært kortbølgefyr: korte pip rike på overtoner, omtrent 50 i minuttet, dag og natt, noen ganger avbrutt av talemeldinger. Signalet endret seg i februar 2024 (dypere tone), og siden slutten av 2025 blir det noen ganger erstattet av et signal i stil med «Squeaky Wheel».",
+"l": "Små prikker med overtonene stablet over, hvert 1,2. sekund; innimellom mangler en. For øret et jevnt «pip… pip…» som aldri stopper. 5448 kHz om dagen, 3756 kHz om natta (ark 44).",
+"n": "omtrentlig etterligning"
 },
 "squeaky": {
 "nm": "«Squeaky Wheel»",

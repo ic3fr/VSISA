@@ -659,16 +659,16 @@
 "nm": "UVB-76 «The Buzzer»",
 "sh": "4625 kHz",
 "t": "UVB-76, «The Buzzer» (4625 kHz)",
-"h": "Una stazione militare russa che da decenni trasmette un ronzio di circa un secondo, circa 25 volte al minuto, a volte interrotto da un messaggio vocale.",
-"l": "Una portante fissa e, a ogni ronzio, una colonna di righe fitte dall'alto in basso. Facile da trovare su 4625 kHz in USB (scheda 44)."
+"h": "Una stazione militare russa che da decenni trasmette un ronzio ruvido di circa 1,2 s, ripetuto circa 25 volte al minuto (uno ogni 2,2–2,5 s), a volte interrotto da un messaggio vocale. Dietro si sente talvolta la stanza: il microfono è aperto.",
+"l": "A ogni ronzio, un blocco di righe verticali fittissime (armoniche distanti circa 32 Hz) che salgono ben oltre i 3 kHz, con un'altezza che sale un poco; in mezzo, solo fruscio e fading. Spesso traspare un debole segnale Morse verso 3,1 kHz. Su 4625 kHz in USB (scheda 44)."
 },
 "pip": {
 "nm": "«The Pip»",
 "sh": "3756 / 5448 kHz",
 "t": "«The Pip»: bip senza fine",
-"h": "Un altro radiofaro militare russo in onde corte, che ripete piccoli bip brevi giorno e notte, a volte interrotti da messaggi.",
-"l": "Una riga fissa interrotta da un bip breve circa 50 volte al minuto; all'orecchio, un «pip… pip…» regolare che non si ferma mai (scheda 44).",
-"n": "ritmo approssimato"
+"h": "Un altro radiofaro militare russo delle onde corte: brevi bip ricchi di armoniche, circa 50 al minuto, giorno e notte, a volte interrotti da messaggi vocali. Il segnale è cambiato nel febbraio 2024 (suono più grave) e dalla fine del 2025 è talvolta sostituito da un segnale in stile «Squeaky Wheel».",
+"l": "Piccoli punti con le armoniche impilate sopra, ogni 1,2 s; ogni tanto ne manca uno. All'orecchio, un «pip… pip…» regolare che non si ferma mai. 5448 kHz di giorno, 3756 kHz di notte (scheda 44).",
+"n": "imitazione approssimativa"
 },
 "squeaky": {
 "nm": "«Squeaky Wheel»",

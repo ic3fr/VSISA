@@ -660,16 +660,16 @@
 "nm": "UVB-76 „The Buzzer”",
 "sh": "4625 kHz",
 "t": "UVB-76, „The Buzzer” (4625 kHz)",
-"h": "Een Russische militaire zender die al tientallen jaren een gezoem van ongeveer een seconde uitzendt, zo'n 25 keer per minuut, soms onderbroken door een gesproken bericht.",
-"l": "Een vaste draaggolf en bij elk gezoem een kolom dichte lijnen van boven naar beneden. Makkelijk te vinden op 4625 kHz in USB (blad 44)."
+"h": "Een Russisch militair station dat al tientallen jaren een rauw zoemen van ongeveer 1,2 s uitzendt, zo'n 25 keer per minuut (één per 2,2 tot 2,5 s), soms onderbroken door een gesproken bericht. Erachter hoor je soms de ruimte: de microfoon staat open.",
+"l": "Bij elk zoemen een blok van heel dicht opeenstaande verticale lijnen (harmonischen zo'n 32 Hz uit elkaar) die tot ver boven 3 kHz reiken, met een toonhoogte die licht stijgt; ertussen alleen ruis en fading. Een zwak morsesignaal rond 3,1 kHz schemert vaak door. Op 4625 kHz in USB (blad 44)."
 },
 "pip": {
 "nm": "„The Pip”",
 "sh": "3756 / 5448 kHz",
 "t": "„The Pip”: eindeloze piepjes",
-"h": "Nog een Russisch militair kortegolfbaken, dat dag en nacht korte piepjes herhaalt, soms onderbroken door berichten.",
-"l": "Een vaste streep die ongeveer 50 keer per minuut door een korte piep onderbroken wordt; in het oor een regelmatig „pip… pip…” dat nooit stopt (blad 44).",
-"n": "ritme benaderd"
+"h": "Nog een Russisch militair kortgolfbaken: korte piepjes vol harmonischen, zo'n 50 per minuut, dag en nacht, soms onderbroken door gesproken berichten. Het signaal veranderde in februari 2024 (lagere toon) en wordt sinds eind 2025 soms vervangen door een signaal in de stijl van „Squeaky Wheel”.",
+"l": "Kleine stippen met hun harmonischen erboven gestapeld, elke 1,2 s; af en toe ontbreekt er één. Voor het oor een regelmatig „piep… piep…” dat nooit stopt. 5448 kHz overdag, 3756 kHz 's nachts (blad 44).",
+"n": "benaderende nabootsing"
 },
 "squeaky": {
 "nm": "„Squeaky Wheel”",

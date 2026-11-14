@@ -660,16 +660,16 @@
 "nm": "UVB-76 «The Buzzer»",
 "sh": "4625 kHz",
 "t": "UVB-76, «The Buzzer» (4625 kHz)",
-"h": "Uma estação militar russa que emite há décadas um zumbido de cerca de um segundo, umas 25 vezes por minuto, por vezes interrompido por uma mensagem de voz.",
-"l": "Uma portadora fixa e, em cada zumbido, uma coluna de riscas apertadas de cima a baixo. Fácil de encontrar em 4625 kHz em USB (ficha 44)."
+"h": "Uma estação militar russa que emite há décadas um zumbido áspero de cerca de 1,2 s, repetido cerca de 25 vezes por minuto (um a cada 2,2 a 2,5 s), por vezes interrompido por uma mensagem de voz. Por trás ouve-se às vezes a sala: o microfone está aberto.",
+"l": "Em cada zumbido, um bloco de riscas verticais muito apertadas (harmónicos a cerca de 32 Hz uns dos outros) que sobem muito acima dos 3 kHz, com uma altura que sobe um pouco; entre eles, só sopro e desvanecimento. Muitas vezes transparece um fraco sinal Morse perto dos 3,1 kHz. Em 4625 kHz em USB (ficha 44)."
 },
 "pip": {
 "nm": "«The Pip»",
 "sh": "3756 / 5448 kHz",
 "t": "«The Pip»: bips sem fim",
-"h": "Outra baliza militar russa de onda curta, que repete pequenos bips curtos dia e noite, por vezes interrompidos por mensagens.",
-"l": "Um traço fixo cortado por um bip curto cerca de 50 vezes por minuto; ao ouvido, um «pip… pip…» regular que nunca para (ficha 44).",
-"n": "ritmo aproximado"
+"h": "Outra baliza militar russa de onda curta: bipes curtos ricos em harmónicos, cerca de 50 por minuto, dia e noite, por vezes interrompidos por mensagens de voz. O sinal mudou em fevereiro de 2024 (tom mais grave) e, desde o final de 2025, é por vezes substituído por um sinal ao estilo do «Squeaky Wheel».",
+"l": "Pequenos pontos com os harmónicos empilhados por cima, a cada 1,2 s; de vez em quando falta um. Ao ouvido, um «pip… pip…» regular que nunca para. 5448 kHz de dia, 3756 kHz de noite (ficha 44).",
+"n": "imitação aproximada"
 },
 "squeaky": {
 "nm": "«Squeaky Wheel»",

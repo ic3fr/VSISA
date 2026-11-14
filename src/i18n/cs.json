@@ -659,16 +659,16 @@
 "nm": "UVB-76 „The Buzzer“",
 "sh": "4625 kHz",
 "t": "UVB-76, „The Buzzer“ (4625 kHz)",
-"h": "Ruská vojenská stanice, která už desítky let vysílá asi sekundové bzučení, zhruba 25krát za minutu, někdy přerušené hlasovou zprávou.",
-"l": "Pevná nosná a při každém bzučení sloupec hustých čar shora dolů. Snadno ji najdeš na 4625 kHz v USB (list 44)."
+"h": "Ruská vojenská stanice, která už desítky let vysílá drsné bzučení asi 1,2 s, opakované asi 25krát za minutu (jedno každých 2,2 až 2,5 s), občas přerušené hlasovou zprávou. V pozadí je někdy slyšet místnost: mikrofon je zapnutý.",
+"l": "Při každém bzučení blok velmi hustých svislých čar (harmonické asi 32 Hz od sebe), které sahají vysoko nad 3 kHz, s výškou, která mírně stoupá; mezi nimi jen šum a únik. Často prosvítá slabý signál Morse kolem 3,1 kHz. Na 4625 kHz v USB (list 44)."
 },
 "pip": {
 "nm": "„The Pip“",
 "sh": "3756 / 5448 kHz",
 "t": "„The Pip“: nekonečná pípnutí",
-"h": "Další ruský vojenský krátkovlnný maják, který dnem i nocí opakuje krátká pípnutí, někdy přerušená zprávami.",
-"l": "Pevná čára přerušovaná krátkým pípnutím asi 50krát za minutu; v uchu pravidelné „píp… píp…“, které nikdy nepřestane (list 44).",
-"n": "přibližný rytmus"
+"h": "Další ruský vojenský maják na krátkých vlnách: krátká pípnutí bohatá na harmonické, asi 50 za minutu, ve dne i v noci, občas přerušená hlasovými zprávami. Signál se změnil v únoru 2024 (hlubší tón) a od konce roku 2025 ho někdy nahrazuje signál ve stylu „Squeaky Wheel“.",
+"l": "Malé tečky s harmonickými nad sebou, každých 1,2 s; občas jedna chybí. Pro ucho pravidelné „píp… píp…“, které nikdy nepřestane. 5448 kHz ve dne, 3756 kHz v noci (list 44).",
+"n": "přibližná napodobenina"
 },
 "squeaky": {
 "nm": "„Squeaky Wheel“",

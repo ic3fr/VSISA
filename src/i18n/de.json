@@ -660,16 +660,16 @@
 "nm": "UVB-76 „The Buzzer“",
 "sh": "4625 kHz",
 "t": "UVB-76, „The Buzzer“ (4625 kHz)",
-"h": "Ein russischer Militärsender, der seit Jahrzehnten ein etwa einsekündiges Summen sendet, etwa 25-mal pro Minute, manchmal unterbrochen von einer Sprachnachricht.",
-"l": "Ein fester Träger und bei jedem Summen eine Säule dichter Linien von oben nach unten. Leicht auf 4625 kHz in USB zu finden (Blatt 44)."
+"h": "Ein russischer Militärsender, der seit Jahrzehnten ein raues Summen von etwa 1,2 s sendet, etwa 25-mal pro Minute (alle 2,2 bis 2,5 s), manchmal von einer Sprachmeldung unterbrochen. Dahinter hört man manchmal den Raum: Das Mikrofon ist offen.",
+"l": "Bei jedem Summen ein Block sehr dichter senkrechter Linien (Oberwellen im Abstand von etwa 32 Hz), die weit über 3 kHz reichen, mit leicht steigender Tonhöhe; dazwischen nur Rauschen und Schwund. Ein schwaches Morsesignal etwa 3,1 kHz daneben scheint oft durch. Auf 4625 kHz in USB (Blatt 44)."
 },
 "pip": {
 "nm": "„The Pip“",
 "sh": "3756 / 5448 kHz",
 "t": "„The Pip“: endlose Pieptöne",
-"h": "Eine weitere russische Militärbake auf Kurzwelle, die Tag und Nacht kurze Pieptöne wiederholt, manchmal von Nachrichten unterbrochen.",
-"l": "Ein fester Strich, etwa 50-mal pro Minute von einem kurzen Piep unterbrochen; im Ohr ein gleichmäßiges „Pip… pip…“, das nie aufhört (Blatt 44).",
-"n": "Rhythmus angenähert"
+"h": "Ein weiterer russischer militärischer Kurzwellenfunkfeuer: kurze, obertonreiche Pieptöne, etwa 50 pro Minute, Tag und Nacht, manchmal von Sprachmeldungen unterbrochen. Das Signal änderte sich im Februar 2024 (tieferer Ton), und seit Ende 2025 wird es manchmal durch ein Signal im Stil des „Squeaky Wheel“ ersetzt.",
+"l": "Kleine Punkte mit darüber gestapelten Oberwellen, alle 1,2 s; ab und zu fehlt einer. Für das Ohr ein gleichmäßiges „Piep… Piep…“, das nie aufhört. 5448 kHz am Tag, 3756 kHz in der Nacht (Blatt 44).",
+"n": "ungefähre Nachahmung"
 },
 "squeaky": {
 "nm": "„Squeaky Wheel“",

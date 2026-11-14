@@ -660,16 +660,16 @@
 "nm": "UVB-76 ”The Buzzer”",
 "sh": "4625 kHz",
 "t": "UVB-76, ”The Buzzer” (4625 kHz)",
-"h": "Venäläinen sotilasasema, joka on vuosikymmeniä lähettänyt noin sekunnin surinaa noin 25 kertaa minuutissa, joskus puheviestin keskeyttämänä.",
-"l": "Kiinteä kantoaalto ja jokaisen surinan kohdalla sarake tiheitä viivoja ylhäältä alas. Helppo löytää 4625 kHz:ltä USB:llä (lehti 44)."
+"h": "Venäläinen sotilasasema, joka on vuosikymmeniä lähettänyt noin 1,2 s:n karheaa surinaa noin 25 kertaa minuutissa (yksi 2,2–2,5 s:n välein), joskus puheviestin keskeyttämänä. Taustalla kuuluu joskus huone: mikrofoni on auki.",
+"l": "Jokaisen surinan kohdalla lohko hyvin tiheitä pystyviivoja (harmoniset noin 32 Hz:n välein), jotka ulottuvat reilusti yli 3 kHz:n ja joiden korkeus nousee hieman; välissä vain kohinaa ja häipymistä. Heikko sähkötyssignaali noin 3,1 kHz:llä kuultaa usein läpi. 4625 kHz:llä USB:llä (lehti 44)."
 },
 "pip": {
 "nm": "”The Pip”",
 "sh": "3756 / 5448 kHz",
 "t": "”The Pip”: loputtomia piippauksia",
-"h": "Toinen venäläinen lyhytaaltojen sotilasmajakka, joka toistaa päivin ja öin pieniä lyhyitä piippauksia, joskus viestien keskeyttämänä.",
-"l": "Kiinteä viiva, jonka lyhyt piippaus katkaisee noin 50 kertaa minuutissa; korvalle tasainen ”piip… piip…”, joka ei lopu koskaan (lehti 44).",
-"n": "likimääräinen rytmi"
+"h": "Toinen venäläinen lyhytaaltojen sotilasmajakka: lyhyitä, harmonisia täynnä olevia piippauksia, noin 50 minuutissa, päivin ja öin, joskus puheviestien keskeyttäminä. Signaali muuttui helmikuussa 2024 (matalampi ääni), ja vuoden 2025 lopusta lähtien sen tilalla on joskus ”Squeaky Wheel” -tyylinen signaali.",
+"l": "Pieniä pisteitä, joiden harmoniset ovat pinossa yläpuolella, 1,2 s:n välein; aika ajoin yksi puuttuu. Korvalle tasainen ”piip… piip…”, joka ei lopu koskaan. Päivällä 5448 kHz, yöllä 3756 kHz (lehti 44).",
+"n": "likimääräinen jäljitelmä"
 },
 "squeaky": {
 "nm": "”Squeaky Wheel”",

@@ -660,16 +660,16 @@
 "nm": "UVB-76 „The Buzzer”",
 "sh": "4625 kHz",
 "t": "UVB-76, „The Buzzer” (4625 kHz)",
-"h": "Orosz katonai állomás, amely évtizedek óta kb. egy másodperces zümmögést ad, percenként mintegy 25-ször, néha hangüzenettel megszakítva.",
-"l": "Álló vivő, és minden zümmögésnél sűrű vonalakból álló oszlop fentről lefelé. Könnyen megtalálható 4625 kHz-en USB-ben (44. lap)."
+"h": "Orosz katonai állomás, amely évtizedek óta kb. 1,2 s-os, érdes zümmögést ad, percenként mintegy 25-ször (2,2–2,5 másodpercenként egyet), néha hangüzenettel megszakítva. Mögötte néha hallani a termet: a mikrofon nyitva van.",
+"l": "Minden zümmögésnél nagyon sűrű függőleges vonalakból álló blokk (kb. 32 Hz-enként felharmonikusok), amely jóval 3 kHz fölé ér, kissé emelkedő hangmagassággal; köztük csak zaj és fading. Gyakran átszűrődik egy gyenge morzejel 3,1 kHz körül. 4625 kHz-en USB-ben (44. lap)."
 },
 "pip": {
 "nm": "„The Pip”",
 "sh": "3756 / 5448 kHz",
 "t": "„The Pip”: véget nem érő sípolás",
-"h": "Egy másik orosz katonai rövidhullámú jeladó, amely éjjel-nappal apró rövid sípjeleket ismétel, néha üzenetekkel megszakítva.",
-"l": "Álló vonal, amelyet percenként kb. 50-szer megszakít egy rövid sípjel; fülre egyenletes „pip… pip…”, amely sosem áll meg (44. lap).",
-"n": "hozzávetőleges ritmus"
+"h": "Egy másik orosz katonai rövidhullámú jeladó: rövid, felharmonikusokban gazdag sípjelek, percenként kb. 50, éjjel-nappal, néha hangüzenetekkel megszakítva. A jel 2024 februárjában megváltozott (mélyebb hang), 2025 vége óta pedig néha egy „Squeaky Wheel” stílusú jel váltja fel.",
+"l": "Kis pontok, fölöttük a felharmonikusaikkal, 1,2 másodpercenként; időnként egy kimarad. Fülre egyenletes „pip… pip…”, amely sosem áll meg. Nappal 5448 kHz, éjjel 3756 kHz (44. lap).",
+"n": "hozzávetőleges utánzat"
 },
 "squeaky": {
 "nm": "„Squeaky Wheel”",

@@ -659,16 +659,16 @@
 "nm": "UVB-76 „The Buzzer”",
 "sh": "4625 kHz",
 "t": "UVB-76, „The Buzzer” (4625 kHz)",
-"h": "Rosyjska stacja wojskowa, która od dziesięcioleci nadaje około sekundowe brzęczenie, mniej więcej 25 razy na minutę, czasem przerywane komunikatem głosowym.",
-"l": "Stała nośna, a przy każdym brzęczeniu kolumna gęstych prążków z góry na dół. Łatwo ją znaleźć na 4625 kHz w USB (karta 44)."
+"h": "Rosyjska stacja wojskowa, która od dziesięcioleci nadaje chrapliwe brzęczenie trwające około 1,2 s, powtarzane około 25 razy na minutę (jedno co 2,2–2,5 s), czasem przerywane komunikatem głosowym. W tle słychać niekiedy pomieszczenie: mikrofon jest włączony.",
+"l": "Przy każdym brzęczeniu blok bardzo gęstych pionowych prążków (harmoniczne co około 32 Hz) sięgających daleko powyżej 3 kHz, z wysokością, która lekko rośnie; pomiędzy tylko szum i zaniki. Często prześwituje słaby sygnał Morse'a w okolicy 3,1 kHz. Na 4625 kHz w USB (karta 44)."
 },
 "pip": {
 "nm": "„The Pip”",
 "sh": "3756 / 5448 kHz",
 "t": "„The Pip”: niekończące się piknięcia",
-"h": "Kolejna rosyjska wojskowa radiolatarnia krótkofalowa, która dzień i noc powtarza krótkie piknięcia, czasem przerywane komunikatami.",
-"l": "Stała kreska przerywana krótkim piknięciem około 50 razy na minutę; na słuch równe „pip… pip…”, które nigdy nie milknie (karta 44).",
-"n": "rytm przybliżony"
+"h": "Kolejna rosyjska wojskowa radiolatarnia krótkofalowa: krótkie piski bogate w harmoniczne, około 50 na minutę, dniem i nocą, czasem przerywane komunikatami głosowymi. Sygnał zmienił się w lutym 2024 roku (niższy ton), a od końca 2025 roku bywa zastępowany sygnałem w stylu „Squeaky Wheel”.",
+"l": "Małe kropki z harmonicznymi ułożonymi nad nimi, co 1,2 s; od czasu do czasu jednej brakuje. Dla ucha równe „pip… pip…”, które nigdy nie milknie. 5448 kHz w dzień, 3756 kHz w nocy (karta 44).",
+"n": "przybliżona imitacja"
 },
 "squeaky": {
 "nm": "„Squeaky Wheel”",

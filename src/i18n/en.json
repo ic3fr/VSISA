@@ -660,16 +660,16 @@
 "nm": "UVB-76 \"The Buzzer\"",
 "sh": "4625 kHz",
 "t": "UVB-76, \"The Buzzer\" (4625 kHz)",
-"h": "A Russian military station that has sent, for decades, a buzz of about one second repeated about 25 times a minute, sometimes interrupted by a voice message.",
-"l": "A fixed carrier and, at each buzz, a column of tight lines from top to bottom. Easy to find on 4625 kHz in USB (sheet 44)."
+"h": "A Russian military station that has sent, for decades, a harsh buzz of about 1.2 s repeated about 25 times a minute (one every 2.2 to 2.5 s), sometimes interrupted by a voice message. Behind it you can sometimes hear the room: the microphone is live.",
+"l": "At each buzz, a block of very tight vertical lines (harmonics about 32 Hz apart) climbing well above 3 kHz, rising slightly in pitch; between buzzes, only static and fading. A faint Morse signal about 3.1 kHz away often shows through. On 4625 kHz in USB (sheet 44)."
 },
 "pip": {
 "nm": "\"The Pip\"",
 "sh": "3756 / 5448 kHz",
 "t": "\"The Pip\": endless beeps",
-"h": "Another Russian military shortwave beacon, repeating short little beeps day and night, sometimes interrupted by messages.",
-"l": "A fixed line cut by a short beep about 50 times a minute; to the ear, a steady \"pip… pip…\" that never stops (sheet 44).",
-"n": "approximate rhythm"
+"h": "Another Russian military shortwave beacon: short beeps rich in harmonics, about 50 a minute, day and night, sometimes interrupted by voice messages. The marker changed in February 2024 (lower tone), and since late 2025 it has sometimes been replaced by a Squeaky-Wheel-style marker.",
+"l": "Short dots, with their harmonics stacked above, every 1.2 s; now and then one is missing. To the ear, a steady \"pip… pip…\" that never stops. 5448 kHz by day, 3756 kHz at night (sheet 44).",
+"n": "approximate imitation"
 },
 "squeaky": {
 "nm": "\"Squeaky Wheel\"",

@@ -660,16 +660,16 @@
 "nm": "UVB-76 „The Buzzer”",
 "sh": "4625 kHz",
 "t": "UVB-76, „The Buzzer” (4625 kHz)",
-"h": "O stație militară rusă care emite de decenii un bâzâit de circa o secundă, repetat de vreo 25 de ori pe minut, întrerupt uneori de un mesaj vocal.",
-"l": "O purtătoare fixă și, la fiecare bâzâit, o coloană de linii strânse de sus până jos. Ușor de găsit pe 4625 kHz în USB (fișa 44)."
+"h": "O stație militară rusă care emite de decenii un bâzâit aspru de circa 1,2 s, repetat de vreo 25 de ori pe minut (unul la fiecare 2,2–2,5 s), întrerupt uneori de un mesaj vocal. În spate se aude uneori camera: microfonul e deschis.",
+"l": "La fiecare bâzâit, un bloc de linii verticale foarte strânse (armonice la circa 32 Hz una de alta) care urcă mult peste 3 kHz, cu o înălțime care crește puțin; între ele, doar suflu și fading. Adesea răzbate un semnal Morse slab în jur de 3,1 kHz. Pe 4625 kHz în USB (fișa 44)."
 },
 "pip": {
 "nm": "„The Pip”",
 "sh": "3756 / 5448 kHz",
 "t": "„The Pip”: bipuri fără sfârșit",
-"h": "O altă baliză militară rusă pe unde scurte, care repetă zi și noapte mici bipuri scurte, întrerupte uneori de mesaje.",
-"l": "O linie fixă tăiată de un bip scurt de circa 50 de ori pe minut; pentru ureche, un „pip… pip…” regulat care nu se oprește niciodată (fișa 44).",
-"n": "ritm aproximativ"
+"h": "O altă baliză militară rusă pe unde scurte: bipuri scurte bogate în armonice, circa 50 pe minut, zi și noapte, întrerupte uneori de mesaje vocale. Semnalul s-a schimbat în februarie 2024 (ton mai grav), iar de la sfârșitul lui 2025 este uneori înlocuit de un semnal în stilul „Squeaky Wheel”.",
+"l": "Puncte mici, cu armonicele stivuite deasupra, la fiecare 1,2 s; din când în când lipsește unul. Pentru ureche, un „pip… pip…” regulat care nu se oprește niciodată. 5448 kHz ziua, 3756 kHz noaptea (fișa 44).",
+"n": "imitație aproximativă"
 },
 "squeaky": {
 "nm": "„Squeaky Wheel”",

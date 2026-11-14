@@ -726,16 +726,16 @@
 "nm": "UVB-76 « The Buzzer »",
 "sh": "4625 kHz",
 "t": "UVB-76, « The Buzzer » (4625 kHz)",
-"h": "Une station militaire russe qui émet depuis des décennies un bourdonnement d'environ une seconde, répété environ 25 fois par minute, parfois interrompu par un message vocal.",
-"l": "Une porteuse fixe et, à chaque bourdonnement, une colonne de raies serrées de haut en bas. Facile à trouver sur 4625 kHz en USB (fiche 44)."
+"h": "Une station militaire russe qui émet depuis des décennies un bourdonnement rauque d'environ 1,2 s, répété environ 25 fois par minute (un toutes les 2,2 à 2,5 s), parfois interrompu par un message vocal. Derrière, on entend parfois la salle : le micro est ouvert.",
+"l": "À chaque bourdonnement, un bloc de raies verticales très serrées (harmoniques espacées d'environ 32 Hz) qui montent bien au-delà de 3 kHz, avec une hauteur qui monte un peu ; entre deux, seulement du souffle et du fading. Un faible signal Morse, vers 3,1 kHz, transparaît souvent. Sur 4625 kHz en USB (fiche 44)."
 },
 "pip": {
 "nm": "« The Pip »",
 "sh": "3756 / 5448 kHz",
 "t": "« The Pip » : bips sans fin",
-"h": "Une autre balise militaire russe des ondes courtes, qui répète de petits bips brefs, jour et nuit, parfois interrompus par des messages.",
-"l": "Un trait fixe coupé par un bip bref environ 50 fois par minute ; à l'oreille, un « pip… pip… » régulier qui ne s'arrête jamais (fiche 44).",
-"n": "rythme approché"
+"h": "Une autre balise militaire russe des ondes courtes : des bips brefs riches en harmoniques, environ 50 par minute, jour et nuit, parfois interrompus par des messages vocaux. Le signal a changé en février 2024 (son plus grave) et, depuis fin 2025, il est parfois remplacé par un signal du genre « Squeaky Wheel ».",
+"l": "De petits points, avec leurs harmoniques empilées au-dessus, toutes les 1,2 s ; de temps en temps, il en manque un. À l'oreille, un « pip… pip… » régulier qui ne s'arrête jamais. 5448 kHz le jour, 3756 kHz la nuit (fiche 44).",
+"n": "imitation approchée"
 },
 "squeaky": {
 "nm": "« Squeaky Wheel »",
